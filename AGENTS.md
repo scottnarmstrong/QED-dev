@@ -2,8 +2,9 @@
 
 ## Purpose and current scope
 
-Read [campaign HQ](README.md) and the [project outline](docs/PROJECT-OUTLINE.md)
-before starting work. The priority is experimentally relevant QED computation,
+Read [campaign HQ](README.md), the [project outline](docs/PROJECT-OUTLINE.md),
+and [what a proof certifies](docs/WHAT-IS-PROVED.md) before starting work.
+The priority is experimentally relevant QED computation,
 beginning with the complete one-loop electron magnetic anomaly. Develop reusable
 infrastructure in service of that target.
 

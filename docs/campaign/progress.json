@@ -5,6 +5,10 @@
     {
       "date": "2026-11-07",
       "change": "Initial milestone lists. Setup is separate from mathematical completion. Later phases are provisional and will be refined with their sources and statements."
+    },
+    {
+      "date": "2026-11-07",
+      "change": "Added the reader-facing account of models, computational rules, and what a QED proof certifies, linked from HQ and the outline. Exact declarations and the regulator route remain open; no mathematical milestone status changed."
     }
   ],
   "tracks": [

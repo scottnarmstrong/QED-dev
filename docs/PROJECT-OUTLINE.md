@@ -1,11 +1,16 @@
 # Project outline: verified QED calculations
 
-[Campaign HQ](../README.md) · [Progress ledger](campaign/progress.json)
+[Campaign HQ](../README.md) · [What does "proved" mean?](WHAT-IS-PROVED.md) ·
+[Progress ledger](campaign/progress.json)
 
 **Established:** 2026-11-07. **Status:** initial outline; no exact Lean
 declarations or regulator prescription have been approved or frozen.
 
 ## 1. Purpose and first target
+
+The [reader-facing guide](WHAT-IS-PROVED.md) explains what the model and
+computational rules must specify, and what each kind of proof certifies. This
+outline describes the work needed to obtain those results.
 
 Build a Lean 4 development that helps physicists calculate experimentally
 testable quantities. The initial observable is the electron's anomalous magnetic

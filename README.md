@@ -14,7 +14,8 @@ should produce reusable tools for real physics calculations.
 **Current state:** campaign documentation and progress tooling are initialized.
 There is no Lean implementation, pinned toolchain, or proved physics result yet.
 
-**Start here:** [Project outline](docs/PROJECT-OUTLINE.md) ·
+**Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
+[Project outline](docs/PROJECT-OUTLINE.md) ·
 [Immediate next steps](#next-steps) · [Progress data](docs/campaign/progress.json) ·
 [Working rules](AGENTS.md)
 
@@ -88,6 +89,9 @@ none is an approved or frozen Lean declaration yet.
 
 ## What a result certifies
 
+The reader-facing guide [What does it mean to prove a QED calculation?](docs/WHAT-IS-PROVED.md)
+explains the model, computational rules, and the meaning of each kind of claim.
+
 We distinguish exact perturbative coefficients, certified numerical enclosures,
 analytic bounds for omitted terms, and comparison with experimental data.
 Agreement at a finite perturbative order does not supply a remainder bound.
@@ -119,6 +123,7 @@ first bounded proof tasks. See [Phase 1](docs/PROJECT-OUTLINE.md#phase-1--fix-th
 | Path | Role |
 | --- | --- |
 | [README.md](README.md) | Campaign HQ: purpose, current state, progress, and next actions |
+| [docs/WHAT-IS-PROVED.md](docs/WHAT-IS-PROVED.md) | What a proved QED calculation certifies, from model and rules to experimental comparison |
 | [docs/PROJECT-OUTLINE.md](docs/PROJECT-OUTLINE.md) | Scientific and implementation outline |
 | [docs/campaign/progress.json](docs/campaign/progress.json) | Milestones, statuses, and completion evidence |
 | [scripts/update_hq.py](scripts/update_hq.py) | Render or check the progress meters |
