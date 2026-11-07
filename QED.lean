@@ -7,6 +7,7 @@ module
 
 public import QED.Algebra.Minkowski
 public import QED.Algebra.Dirac
+public import QED.Algebra.Gordon
 
 /-!
 # QED
@@ -20,7 +21,9 @@ are proved infrastructure:
 
 * `QED.Algebra.Minkowski`: four-vectors and the mostly-plus Minkowski form;
 * `QED.Algebra.Dirac`: Weyl-representation gamma matrices with the Clifford
-  relation, the Dirac-adjoint matrix, slash, and Lorentz generators.
+  relation, the Dirac-adjoint matrix, slash, and Lorentz generators;
+* `QED.Algebra.Gordon`: gamma-matrix products, eqs. (38.19)–(38.20), and the
+  Gordon identity (38.18).
 
 No source-facing declaration has been approved or frozen. See `README.md` and
 `docs/campaign/STATUS.md` for the campaign state.

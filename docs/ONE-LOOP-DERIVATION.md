@@ -307,7 +307,7 @@ infrastructure, and the source-facing work it unblocks is:
 | --- | --- | --- |
 | Minkowski vectors with the mostly-plus form; on-shell momenta | infrastructure definition | form proved (`QED/Algebra/Minkowski.lean`); on-shell momenta missing |
 | Weyl gamma matrices with the Clifford relation (36.9), $S^{\mu\nu}$, Dirac adjoint | infrastructure, meaning-carrying | proved (`QED/Algebra/Dirac.lean`); contraction identities (47.18)–(47.21) missing |
-| On-shell spinors $u_s(p)$, normalization (38.17), Gordon identity | infrastructure, meaning-carrying | missing (1.10) |
+| On-shell spinors $u_s(p)$, normalization (38.17), Gordon identity | infrastructure, meaning-carrying | Gordon identity (38.18), with (38.19)–(38.20), proved for any solutions of the Dirac equations (`QED/Algebra/Gordon.lean`); explicit spinors and (38.17) missing |
 | Regulated propagators; the Minkowski integral of prescription M1 with explicit integrability (no silent zero for non-integrable data) | source-facing definitions | design open |
 | Regulated one-loop vertex $V^\mu_{1\,\mathrm{loop}}(p',p;m_\gamma,\Lambda)$ (62.40) | source-facing literal definition | depends on the rows above |
 | Wick expansion at order $e^3$ with fermionic signs, from momentum-space propagators (D-8) | source-facing definition; meaning-carrying | missing; needs Wick and Grassmann-sign infrastructure (inventory 8.4) |

@@ -12,6 +12,7 @@ Milestones (see the [ledger](progress.json)):
 | SPEC.SOURCE, SPEC.ROUTE, SPEC.ENV | done, on the evidence below |
 | SPEC.STATEMENTS | planned: no exact declaration exists yet |
 | L1.MODEL | in progress: algebra infrastructure only |
+| L1.PROJECTION | in progress: Gordon identity only |
 
 ## Reporting fields
 
@@ -73,6 +74,12 @@ SEALED_THIS_TURN: 0
     relation `gamma_anticomm` (36.9), `β` (38.8) with
     `beta_mul_conjTranspose_gamma_mul_beta`, `slash` with `slash_mul_slash`,
     and `lorentzGen` (40.3).
+  - `QED/Algebra/Gordon.lean` (milestone L1.PROJECTION, in progress):
+    `gamma_mul_gamma` ($\gamma^\mu\gamma^\nu=-g^{\mu\nu}-2iS^{\mu\nu}$),
+    `gamma_mul_slash` (38.19), `slash_mul_gamma` (38.20), and the Gordon
+    identity `gordon` (38.18). The identity is stated for any column vector $u$
+    with $(\not p+m)u=0$ and any row vector $w$ with $w(\not p'+m)=0$ (obligation
+    O-14).
 - **Administration** (D-1, D-10). The repository was made public at the
   author's instruction, and `jaumededios` was invited with write access. It is
   now licensed under Apache-2.0: `LICENSE`, plus the header line in every Lean
@@ -88,9 +95,9 @@ SEALED_THIS_TURN: 0
 | --- | --- | --- |
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
-| Project build | `nice -n 5 lake build` | success; 1278 jobs, about 12 s wall time for the project modules |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (4 Lean files) |
-| Axioms | `#print axioms` on all 10 theorems of `QED.Minkowski` and `QED.Dirac` (transient file, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
+| Project build | `nice -n 5 lake build` | success; 1321 jobs |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (5 Lean files) |
+| Axioms | `#print axioms` on all 16 theorems in `QED/Algebra/` (transient file, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |
 | Numerical sanity (not proofs) | `python3 scripts/numerics/one_loop_sanity.py` | all eight checks pass |
@@ -103,7 +110,9 @@ proof.
 ## Remaining obligations and next bounded tasks
 
 1. **Carriers.**
-   - On-shell spinors (38.6), (38.12), (38.17), and the Gordon identity (38.18).
+   - Explicit on-shell spinors (38.6), (38.12), their normalization (38.17),
+     and the Dirac equation for $\bar u$ (38.16) from that for $u$. The
+     Gordon identity itself is proved.
    - The contraction identities (47.18)–(47.21) needed by O-4.
    - The energy-first Minkowski loop integral (prescription M1), with explicit
      integrability, so that no definition depends on Lean's zero value for
