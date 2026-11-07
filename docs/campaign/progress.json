@@ -17,6 +17,10 @@
     {
       "date": "2026-11-07",
       "change": "Phase 1 preparation began. Pinned the primary source (Srednicki draft, chs. 58 and 62-64) and the secondary source by SHA-256 with an untracked cache. Adopted the source's conventions, selected the one-loop route (Pauli-Villars photon, photon mass, Feynman gauge, on-shell scheme, energy-first Minkowski integral), mapped the derivation with numbered obligations, and recorded findings F-1 to F-10. Took the Mathlib inventory, pinned Lean/Mathlib v4.35.0, and initialized the package. Proved the first infrastructure: the Minkowski form and the Weyl gamma matrices with the Clifford relation. An independent refute-first review of the four Phase 1 documents was addressed before landing; SPEC.SOURCE and SPEC.ROUTE are marked done on that evidence. No declaration is approved or frozen; author rulings P-1 and P-2 are pending."
+    },
+    {
+      "date": "2026-11-07",
+      "change": "Recorded the author's rulings: the model starts from a momentum-space Wick expansion at order e^3 (D-8); both magnetic-moment definitions (the source's wave-packet definition and the vertex response) are to be formalized and proved equivalent (D-9, new obligation O-24); the repository is licensed under Apache-2.0 (D-10). No milestone status changed."
     }
   ],
   "tracks": [

@@ -118,13 +118,14 @@ Done in Phase 1 so far: [sources](docs/SOURCES.md), [conventions](docs/CONVENTIO
 the [Mathlib inventory](docs/MATHLIB-INVENTORY.md), the pinned Lean package, and
 the first algebra infrastructure.
 
-1. Obtain the author's rulings P-1 (where the formal model starts) and P-2 (the
-   formal definition of the magnetic moment); see the
-   [decision log](docs/campaign/DECISIONS.md#pending-author-rulings).
-2. Continue building the missing carriers as proved infrastructure: on-shell
+1. Continue building the missing carriers as proved infrastructure: on-shell
    spinors and the Gordon identity, the contraction identities, and the
    energy-first Minkowski loop integral. The Minkowski form and the gamma
    matrices with the Clifford relation are done.
+2. Build the infrastructure the author's rulings require: Wick contractions
+   with fermionic signs for the order-$e^3$ expansion (D-8), and one-particle
+   states, wave packets, and current matrix elements for the source definition
+   of the magnetic moment (D-9).
 3. Prepare the exact source-facing declarations, starting with the regulated
    one-loop vertex and the existence-and-uniqueness theorem for the form
    factors. Bring them for independent review and author approval before
@@ -156,6 +157,7 @@ See [Phase 1](docs/PROJECT-OUTLINE.md#phase-1--fix-the-one-loop-calculation).
 | [scripts/fetch_sources.py](scripts/fetch_sources.py) | Fetch and verify the pinned source bytes |
 | [scripts/numerics/one_loop_sanity.py](scripts/numerics/one_loop_sanity.py) | Floating-point sanity checks of the one-loop algebra (not proofs) |
 | [AGENTS.md](AGENTS.md) | Scope, integrity rules, and shared-machine conventions |
+| [LICENSE](LICENSE) | Apache License, Version 2.0 |
 
 Certificate datasets will be added when their first concrete contents are
 ready.
@@ -174,3 +176,10 @@ Every regular `.lean` file must be a Lean module. Landings run the
 shared machine, use niced, focused builds, and never `lake clean`. The Mathlib
 dependency tree must come from the cache or a local copy, never a rebuild; see
 decision D-3 in the [decision log](docs/campaign/DECISIONS.md).
+
+## License
+
+The project's own files are licensed under the
+[Apache License, Version 2.0](LICENSE) (decision D-10). The pinned
+third-party source documents listed in [docs/SOURCES.md](docs/SOURCES.md) are
+not part of the repository; their own terms apply.

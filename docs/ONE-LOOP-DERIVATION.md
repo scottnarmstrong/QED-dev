@@ -41,9 +41,9 @@ its exact Lean form.
 | Propagators and vertex | rule 9, p. 349; free electron propagator after (62.12), p. 371; (62.29) | photon propagator regulated as in [REGULARIZATION.md, section 3](REGULARIZATION.md#3-the-regulated-model-ingredients) |
 | Loop integral | (62.40); chapter 14 | prescription M1 ([REGULARIZATION.md, section 4](REGULARIZATION.md#4-what-the-minkowski-loop-integral-means)) |
 | Renormalization conditions | (62.11), (62.27), (63.1) | as source |
-| Observable | (64.7) | **pending author ruling P-2** |
+| Observable | (64.4)–(64.7) | both the source definition and the vertex-response definition, proved equivalent (author ruling D-9) |
 
-**Where the formal model starts (pending author ruling P-1).** The source
+**Where the formal model starts (author ruling D-8: option 2).** The source
 derives its Feynman rules from a fermionic path integral, (58.17)–(58.21). A
 Lean development cannot use an oscillatory infinite-dimensional path integral
 as an ordinary integral ([WHAT-IS-PROVED.md, section 2](WHAT-IS-PROVED.md#2-what-must-be-specified-about-the-model)).
@@ -53,7 +53,7 @@ The candidate starting points are:
    diagram sum are taken as the model. The combinatorial derivation from the
    interaction is not formalized. This is the smallest option, but stage 1
    then becomes a modeling statement rather than a theorem.
-2. **Formal interaction expansion, momentum space** (recommended). The order-$e^3$
+2. **Formal interaction expansion, momentum space** (approved, D-8). The order-$e^3$
    amputated electron–electron–photon function is defined as the finite sum
    over Wick contractions of three interaction vertices (or two plus the
    external field), with fermionic signs, using the momentum-space free
@@ -66,7 +66,9 @@ The candidate starting points are:
    pilot.
 
 The choice determines what "derived from the interaction" means in the headline
-theorem, so it belongs to the author.
+theorem, so it was put to the author. On 2026-11-07 the author approved option 2
+(D-8). Stage 1 is therefore a finite combinatorial theorem about the Wick
+expansion, and the Wick and Grassmann-sign infrastructure is in scope.
 
 ## Stage 1 — From the interaction to the vertex function
 
@@ -86,7 +88,7 @@ amplitude (Fig. 63.1).
 - **O-1 (diagram content of $V^\mu$).** At order $e^3$, the 1PI
   electron–electron–photon function consists of exactly two pieces: the
   counterterm-corrected tree vertex $iZ_1e\gamma^\mu$, and the one-loop diagram
-  of Fig. 62.3. Under P-1 option 2 this is a theorem about the 1PI part of the
+  of Fig. 62.3. Under D-8 this is a theorem about the 1PI part of the
   Wick expansion. It also needs the statements that tadpoles vanish (Furry's
   theorem, problem 58.2) and that disconnected and vacuum terms cancel by the
   normalization $Z(0,0,0)=1$ (58.21).
@@ -258,34 +260,42 @@ that the source does not prove (F-8).
   (63.18), sandwiched between spinors, equal an exact multiple of
   $\epsilon^{ijk}q^j\,\xi'^\dagger\sigma^k\xi\,(F_1+F_2)$, the magnetic Sachs form
   factor. A numerical check in the mostly-minus convention is check 8 of the
-  sanity script. This is a candidate route to O-21 and a candidate
-  observable-side definition (P-2).
+  sanity script. It is the core of the response definition below, and a
+  route to O-21.
 - **O-23 (conclusion).** $g=2[F_1(0)+F_2(0)]$, with $F_1(0)=1$, gives
   $a_e=(g-2)/2=F_2(0)=\alpha/2\pi+O(\alpha^2)$.
 
-**Observable definition (pending author ruling P-2).** The options are:
+**Observable definitions (author ruling D-9: both, proved equivalent).**
 
-- **(a)** The source's definition (64.7). It needs one-particle Fock states,
-  wave packets, and a field-theoretic $H_1$. This is the most faithful option,
-  and the heaviest.
-- **(b)** The zero-recoil magnetic response of the vertex function: $\mu$ read
-  off from the spin-dependent, linear-in-$q$ part of the static-field matrix
-  element. By O-22 this is $\mu=\frac{e}{2m}G_M(0)$ with $G_M=F_1+F_2$, so
-  option (b) is close to defining $g$ as $2[F_1(0)+F_2(0)]$. Its
-  magnetic-moment meaning rests on identifying that matrix element with the
-  Born amplitude of a nonrelativistic spin in a field, $-\vec\mu\cdot\vec B$,
-  as in `liu-mit-8324-l15` (3)–(11). That identification is a modeling step,
-  not a theorem of the field theory, and it does not close F-8. Option (b) is
-  much lighter than (a); the author should choose it knowing this.
-- **(c)** Option (b) now, with option (a) as a later theorem showing that the
-  two definitions agree.
+- **Source definition.** This follows (64.4)–(64.7): $\mu B\equiv-\langle e|H_1|e\rangle$
+  for a normalized, rotationally invariant one-electron wave packet at rest
+  with spin up, in the limit of sharply peaked packets. Here $H_1$ is the
+  linear-in-$B$ interaction with the constant field $A=(0,Bx,0)$. To avoid
+  circularity (F-8), the one-electron matrix elements of $H_1$ must come from
+  the model's current matrix elements via O-3. The source instead inserts the
+  values $F_1(0)$ and $F_2(0)$ in (64.6), and the project may not. This
+  definition needs one-particle states with the normalization (41.5), wave
+  packets, and an explicit limit of sharply peaked packets; see candidate
+  finding F-11 on the source's width condition.
+- **Response definition.** $\mu$ is read off from the spin-dependent,
+  linear-in-$q$ part of the static-field matrix element of the vertex
+  function (O-22). By O-22 it equals $\frac{e}{2m}G_M(0)$ with $G_M=F_1+F_2$.
+  Its magnetic-moment meaning on its own would rest on matching to the Born
+  amplitude of a nonrelativistic spin, as in `liu-mit-8324-l15` (3)–(11). That
+  matching is a modeling identification, not a theorem; the equivalence
+  theorem below is what ties this definition to the source's.
+- **O-24 (equivalence).** The two definitions give the same $\mu$, at the
+  perturbative order computed and in the stated limits: the sharply peaked
+  packet, $\epsilon\to0^+$, and the regulator limits, in an order to be fixed
+  with the exact declarations. With O-21 and O-22 this gives
+  $\mu=\frac{e}{2m}[F_1(0)+F_2(0)]$ for both definitions, and with
+  $F_1(0)=1$ it gives $g=2[1+F_2(0)]$.
 
 Defining $g$ outright as $2[F_1(0)+F_2(0)]$ would name a scalar after the
 observable, which the [outline](PROJECT-OUTLINE.md#3-first-complete-theorem)
-rules out. It is not offered. Option (b) differs in two ways: $\mu$ is defined
-from a response of the vertex function, and its equality with
-$\frac{e}{2m}(F_1+F_2)$ is a theorem (O-22). The physical meaning of option
-(b) still rests on the matching step described above.
+rules out, so the project does not do it. Both definitions above define $\mu$
+from a response computed in the model. Their relation to $F_1+F_2$ is proved
+(O-21, O-22, O-24), not assumed.
 
 ## Toward exact declarations
 
@@ -300,10 +310,12 @@ infrastructure, and the source-facing work it unblocks is:
 | On-shell spinors $u_s(p)$, normalization (38.17), Gordon identity | infrastructure, meaning-carrying | missing (1.10) |
 | Regulated propagators; the Minkowski integral of prescription M1 with explicit integrability (no silent zero for non-integrable data) | source-facing definitions | design open |
 | Regulated one-loop vertex $V^\mu_{1\,\mathrm{loop}}(p',p;m_\gamma,\Lambda)$ (62.40) | source-facing literal definition | depends on the rows above |
-| Renormalized order-$e^3$ vertex with the charge condition | source-facing definition | depends on P-1 and O-17 |
+| Wick expansion at order $e^3$ with fermionic signs, from momentum-space propagators (D-8) | source-facing definition; meaning-carrying | missing; needs Wick and Grassmann-sign infrastructure (inventory 8.4) |
+| Renormalized order-$e^3$ vertex with the charge condition | source-facing definition | depends on the Wick expansion and O-17 |
 | Existence and uniqueness of $(F_1,F_2)$ (O-15), then the form factors from it | theorem, then definition | depends on the rows above |
 | Headline: $C_1(m_\gamma,\Lambda)\to\tfrac12$, with $C_1$ the $e^2$ coefficient of $F_2(0)$ | theorem | depends on all of the above |
-| Magnetic moment (P-2) and $g=2[F_1(0)+F_2(0)]$ | definition and theorem | depends on P-2 |
+| One-particle states (41.5), wave packets, and one-particle current matrix elements | infrastructure, meaning-carrying | missing; needed by the source definition of $\mu$ (D-9) |
+| Source and response definitions of $\mu$; equivalence O-24; $g=2[1+F_2(0)]$ | definitions and theorems | depend on the rows above |
 
 Lean's Bochner integral returns $0$ for non-integrable integrands, and
 `limUnder` returns a junk value when the limit fails to exist. A source-facing

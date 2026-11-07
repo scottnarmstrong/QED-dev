@@ -24,10 +24,10 @@ SEALED_THIS_TURN: 0
 
 | Field | Value |
 | --- | --- |
-| Model / prescription | Perturbative QED in Feynman gauge with the on-shell scheme. The one-loop pilot uses a Pauli–Villars photon (mass $\Lambda$) and a photon mass $m_\gamma$, with Minkowski loop integrals defined by the energy-first prescription M1 ([REGULARIZATION.md](../REGULARIZATION.md); D-5). Where the formal model starts is pending ruling P-1. |
+| Model / prescription | Perturbative QED in Feynman gauge with the on-shell scheme, starting from a momentum-space Wick expansion at order $e^3$ (D-8). The one-loop pilot uses a Pauli–Villars photon (mass $\Lambda$) and a photon mass $m_\gamma$, with Minkowski loop integrals defined by the energy-first prescription M1 ([REGULARIZATION.md](../REGULARIZATION.md); D-5). The magnetic moment has two definitions, the source's wave-packet definition and the vertex response, proved equivalent (D-9). |
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
-| Pending author decisions | P-1 (model starting point) and P-2 (formal definition of the magnetic moment); see [DECISIONS.md](DECISIONS.md#pending-author-rulings). |
+| Pending author decisions | none. Rulings received on 2026-11-07: D-8 (model starting point), D-9 (both magnetic-moment definitions, proved equivalent), D-10 (Apache-2.0); see [DECISIONS.md](DECISIONS.md). |
 
 ## Work completed
 
@@ -73,8 +73,14 @@ SEALED_THIS_TURN: 0
     relation `gamma_anticomm` (36.9), `β` (38.8) with
     `beta_mul_conjTranspose_gamma_mul_beta`, `slash` with `slash_mul_slash`,
     and `lorentzGen` (40.3).
-- **Administration** (D-1). The repository was made public at the author's
-  instruction, and `jaumededios` was invited with write access.
+- **Administration** (D-1, D-10). The repository was made public at the
+  author's instruction, and `jaumededios` was invited with write access. It is
+  now licensed under Apache-2.0: `LICENSE`, plus the header line in every Lean
+  file.
+- **Author rulings recorded** (D-8, D-9). The model starts from a
+  momentum-space Wick expansion. Both magnetic-moment definitions will be
+  formalized and proved equivalent. The derivation's stages 0 and 5 and its
+  carrier table are updated, and obligation O-24 (equivalence) is added.
 
 ## Validation
 
@@ -96,15 +102,17 @@ proof.
 
 ## Remaining obligations and next bounded tasks
 
-1. **Author rulings P-1 and P-2.** These determine what the headline theorem's
-   model and observable mean.
-2. **Carriers (independent of P-1 and P-2).**
+1. **Carriers.**
    - On-shell spinors (38.6), (38.12), (38.17), and the Gordon identity (38.18).
    - The contraction identities (47.18)–(47.21) needed by O-4.
    - The energy-first Minkowski loop integral (prescription M1), with explicit
      integrability, so that no definition depends on Lean's zero value for
      non-integrable integrands.
    - The energy-integral continuation lemma O-7.
+2. **Infrastructure the rulings add.**
+   - Wick contractions with fermionic signs for the order-$e^3$ expansion (D-8).
+   - One-particle states, wave packets, and one-particle current matrix
+     elements for the source definition of the magnetic moment (D-9).
 3. **Exact declarations.** Once the carriers exist, prepare the regulated
    one-loop vertex (62.40) and the existence-and-uniqueness theorem for the form
    factors (O-15) as transient, elaborated commands. Obtain an independent

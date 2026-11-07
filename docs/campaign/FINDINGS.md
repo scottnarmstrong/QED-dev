@@ -31,9 +31,10 @@ the PDF page.
 | F-5 | Source erratum | `srednicki-draft` p. 380: "$p^2=-p'^2=-m^2$" should be "$p^2=p'^2=-m^2$" | verified |
 | F-6 | Source erratum | `srednicki-draft` (63.21): denominator sign | verified |
 | F-7 | Source gaps | Steps the primary source leaves to exercises or to "the usual manipulations" | open; each gap is a project obligation |
-| F-8 | Modeling gap | The source's magnetic-moment argument passes through an asserted quantum action | open; pending author ruling P-2 |
+| F-8 | Modeling gap | The source's magnetic-moment argument passes through an asserted quantum action | open; handled by D-9 (both definitions, no inserted form-factor values) and obligations O-21 and O-24 |
 | F-9 | Secondary-source misprints | `kaplunovsky-vertex` K(25) index and "q² = 1" on p. 8 | verified |
 | F-10 | Candidate normalization issue | `ahkn-2012` projector (4.4) returns $F_2/m$; it is correct only in units $m=1$ | open |
+| F-11 | Candidate source misprint | `srednicki-draft` p. 383: wave-packet width "$a\ll1/m$" should apparently be $a\gg1/m$ | open; needs an independent check |
 
 ## F-1. Minkowski loop integrals are not absolutely convergent
 
@@ -134,9 +135,13 @@ then defined by $\mu B\equiv-\langle e|H_1|e\rangle$ (64.7), and its evaluation
 (64.8)–(64.15) uses $H_1$, not the vertex function directly.
 
 **Consequence.** Linking the vertex function to the measured magnetic moment
-needs either a proof that the static-field response is given by the vertex at
-$q\to0$ (obligation O-21) or an author-approved observable definition (ruling
-P-2). See [ONE-LOOP-DERIVATION.md, stage 5](../ONE-LOOP-DERIVATION.md#stage-5--magnetic-interpretation).
+requires a proof that the static-field response is given by the vertex at
+$q\to0$ (obligation O-21). Ruling D-9 adopts both the source's definition and
+the vertex-response definition, to be proved equivalent (O-24). The project's
+version of the source definition must obtain the matrix elements of $H_1$ from
+the model's current matrix elements. Inserting $F_1(0)$ and $F_2(0)$ as (64.6)
+does would make the equivalence circular. See
+[ONE-LOOP-DERIVATION.md, stage 5](../ONE-LOOP-DERIVATION.md#stage-5--magnetic-interpretation).
 
 ## F-9. Misprints in the secondary source
 
@@ -158,3 +163,20 @@ only in units $m=1$. The paper appears to use such units implicitly (cf. (7.2),
 p. 31), but no explicit statement was found. The source worker checked this
 numerically. Nobody else has checked it, and the project does not currently
 rely on this projector.
+
+## F-11. Wave-packet width condition in the magnetic-moment chapter
+
+**Claim (candidate).** On p. 383, after (64.5), the source says that the wave
+packet $f(\mathbf p)\sim\exp(-a^2\mathbf p^2/2)$ is "sharply peaked at
+$\mathbf p=0$" and gives the condition "with $a\ll1/m$". The orchestrator
+confirmed this text on the rendered page. The momentum spread of this packet
+is of order $1/a$. Being sharply peaked relative to $m$, which is what the
+linear-order expansion "since the wave packet is sharply peaked at
+$\mathbf p=0$" (pp. 384–385) needs, means $1/a\ll m$, that is $a\gg1/m$: a
+packet spatially larger than the Compton wavelength. No entry for chapter 64
+was found in the snapshot of the author's errata list taken during source
+selection.
+
+**Status.** Open. The orchestrator found it and has not had it independently
+checked. It matters because D-9 requires the formal source definition of $\mu$
+to state the limit of sharply peaked packets explicitly.

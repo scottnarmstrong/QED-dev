@@ -15,17 +15,14 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-5 | 2026-11-07 | One-loop pilot route: Pauli–Villars photon, photon mass, Feynman gauge, on-shell scheme, energy-first Minkowski integral | Orchestrator |
 | D-6 | 2026-11-07 | Primary source: Srednicki's draft, chs. 58 and 62–64; secondary: Kaplunovsky's vertex notes | Orchestrator |
 | D-7 | 2026-11-07 | Adopt the primary source's conventions (mostly-plus metric, Weyl representation, $e<0$) | Orchestrator |
+| D-8 | 2026-11-07 | The formal model starts from a momentum-space Wick expansion at order $e^3$ (ruling on P-1) | Author |
+| D-9 | 2026-11-07 | Both magnetic-moment definitions, proved equivalent (ruling on P-2) | Author |
+| D-10 | 2026-11-07 | The repository is licensed under Apache-2.0 | Author |
 
 ## Pending author rulings
 
-These questions change scientific scope or physical meaning, so the
-orchestrator does not decide them. Work that does not depend on them
-continues.
-
-| ID | Question | Recommendation | Detail |
-| --- | --- | --- | --- |
-| P-1 | Where does the formal model start: Feynman rules as definitions, a momentum-space Wick expansion, or position-space time-ordered products? | Momentum-space Wick expansion at order $e^3$ | [Derivation, stage 0](../ONE-LOOP-DERIVATION.md#stage-0--model-data) |
-| P-2 | Which formal definition of the magnetic moment: the source's wave-packet definition (64.7), the zero-recoil magnetic response of the vertex with a proved nonrelativistic matching, or the latter now and the former later? | Option (c): the zero-recoil response now, with its matching step labeled as a modeling identification; the source's definition later, as an equivalence theorem | [Derivation, stage 5](../ONE-LOOP-DERIVATION.md#stage-5--magnetic-interpretation) |
+None open. P-1 was resolved by D-8 and P-2 by D-9; both rulings were made on
+2026-11-07.
 
 ## D-1. Repository visibility (author ruling)
 
@@ -159,3 +156,82 @@ in both.
 **Scope.** This governs the one-loop pilot's Lean infrastructure. Later phases
 that use mostly-minus sources (for example `ahkn-2012`) translate through the
 dictionary rather than change the base convention.
+
+## D-8. Where the formal model starts (author ruling on P-1)
+
+**Ruling.** The author approved option 2 of
+[ONE-LOOP-DERIVATION.md, stage 0](../ONE-LOOP-DERIVATION.md#stage-0--model-data).
+The order-$e^3$ electron–electron–photon function is defined as the finite sum
+over Wick contractions of the interaction vertices, with fermionic signs,
+using the momentum-space free propagators of the regulated model (D-5).
+
+**Consequences.**
+
+- Obligations O-1 and O-2 (the diagram content and the coefficient and sign of
+  the one-loop 1PI diagram) become theorems about that expansion. They are no
+  longer modeling statements.
+- The pilot needs Wick-contraction and Grassmann-sign infrastructure, which
+  Mathlib lacks ([inventory, section 8](../MATHLIB-INVENTORY.md#8-fermionic-and-combinatorial-structures)).
+- The path integral (58.17)–(58.21) and position-space time-ordered products
+  remain background motivation and are not formalized.
+
+**Scope.** The ruling approves a starting level, not any Lean declaration. The
+exact definitions of the expansion are meaning-carrying and go through the
+review and approval gate.
+
+## D-9. The magnetic moment: both definitions, proved equivalent (author ruling on P-2)
+
+**Ruling.** The project formalizes both candidate definitions of the magnetic
+moment and proves that they agree:
+
+- **Source definition** (`srednicki-draft` (64.4)–(64.7)): $\mu B\equiv-\langle e|H_1|e\rangle$.
+  Here $|e\rangle$ is a normalized, rotationally invariant one-electron wave
+  packet at rest with spin up along $\vec B$, and $H_1$ is the linear-in-$B$
+  interaction with the constant field $A=(0,Bx,0)$.
+- **Response definition**: the zero-recoil magnetic response of the vertex
+  function, read off from the spin-dependent, linear-in-$q$ part of the
+  static-field matrix element (obligation O-22).
+- **Equivalence theorem**: the two definitions give the same $\mu$ (obligation
+  O-24 of the [derivation](../ONE-LOOP-DERIVATION.md#stage-5--magnetic-interpretation)).
+  Together with $\mu=\frac{e}{2m}[F_1(0)+F_2(0)]$ (O-21, O-22), this gives
+  $g=2[1+F_2(0)]$.
+
+**Design constraints that follow.**
+
+1. *No circularity.* The source writes $H_1$ in (64.6) with the computed
+   form-factor values already inserted, via the asserted quantum action (64.3)
+   (F-8). If the project's source definition were built the same way, the
+   equivalence would hold by construction. Instead, the one-electron matrix
+   elements of $H_1$ must come from the model. They are the matrix elements of
+   the electromagnetic current at the computed order, related to $V^\mu$ through
+   the LSZ and amputation convention of O-3. The values $F_1(0)$ and $F_2(0)$
+   must not be inserted.
+2. *The wave-packet limit must be explicit.* The expectation value in (64.7)
+   depends on the packet. The source expands to linear order "since the wave
+   packet is sharply peaked at $\mathbf p=0$" (pp. 384–385). The formal
+   definition must state the limit of sharply peaked packets, with its order
+   relative to the regulator limits. The source's stated width condition
+   appears to be misprinted (candidate finding F-11).
+3. *Constant field.* The vector potential $A=(0,Bx,0)$ does not decay. The
+   source handles the factor $x$ by differentiating in momentum and integrating
+   by parts against the packet ((64.9)–(64.10)). This needs the current matrix
+   element to be differentiable in the momenta near $\mathbf p=\mathbf p'=0$,
+   not merely continuous in $q^2$.
+4. *Infrastructure.* The source definition needs one-particle states with the
+   normalization (41.5), wave packets, and the one-particle matrix elements of
+   the current. These are new infrastructure.
+
+**Scope.** As with D-8, the exact definitions and the equivalence statement go
+through the review and approval gate.
+
+## D-10. License (author ruling)
+
+**Ruling.** The repository is licensed under the Apache License, Version 2.0.
+`LICENSE` holds the unmodified Apache-2.0 text, the same file Mathlib ships
+(SHA-256 `b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1`).
+Lean files carry the Mathlib-style header line "Released under Apache 2.0
+license as described in the file LICENSE."
+
+**Scope.** The license covers the project's own files. It does not cover the
+third-party source documents listed in [SOURCES.md](../SOURCES.md). Their bytes
+are not committed, and their own terms apply (D-2).
