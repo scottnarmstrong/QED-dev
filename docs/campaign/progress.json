@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "updated": "2026-11-07",
+  "history": [
+    {
+      "date": "2026-11-07",
+      "change": "Initial milestone lists. Setup is separate from mathematical completion. Later phases are provisional and will be refined with their sources and statements."
+    }
+  ],
+  "tracks": [
+    {
+      "id": "HQ",
+      "title": "Campaign setup",
+      "kind": "setup",
+      "items": [
+        {"id": "HQ.README", "title": "Campaign HQ", "status": "done", "evidence": ["README.md"]},
+        {"id": "HQ.OUTLINE", "title": "Linked project outline", "status": "done", "evidence": ["docs/PROJECT-OUTLINE.md"]},
+        {"id": "HQ.METERS", "title": "Evidence ledger and reproducible meters", "status": "done", "evidence": ["docs/campaign/progress.json", "scripts/update_hq.py"]},
+        {"id": "HQ.RULES", "title": "Working and integrity rules", "status": "done", "evidence": ["AGENTS.md"]}
+      ]
+    },
+    {
+      "id": "SPEC",
+      "title": "Sources and exact specification",
+      "kind": "preparation",
+      "items": [
+        {"id": "SPEC.SOURCE", "title": "Pin full one-loop derivation and convention sheet", "status": "planned", "evidence": []},
+        {"id": "SPEC.ROUTE", "title": "Select and justify regulator and renormalization route", "status": "planned", "evidence": []},
+        {"id": "SPEC.ENV", "title": "Inventory Mathlib and pin a working Lean environment", "status": "planned", "evidence": []},
+        {"id": "SPEC.STATEMENTS", "title": "Review and approve exact Lean declarations and dependency plan", "status": "planned", "evidence": []}
+      ]
+    },
+    {
+      "id": "L1",
+      "title": "Complete one-loop calculation",
+      "kind": "formal",
+      "items": [
+        {"id": "L1.MODEL", "title": "Concrete regularized perturbative model and algebra", "status": "planned", "evidence": []},
+        {"id": "L1.VERTEX", "title": "Vertex expansion, diagram coefficient, and signs", "status": "planned", "evidence": []},
+        {"id": "L1.PROJECTION", "title": "On-shell Dirac reduction and form-factor extraction", "status": "planned", "evidence": []},
+        {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "planned", "evidence": []},
+        {"id": "L1.LIMITS", "title": "Finiteness and required regulator limits", "status": "planned", "evidence": []},
+        {"id": "L1.COEFFICIENT", "title": "Exact first coefficient C1 = 1/2", "status": "planned", "evidence": []},
+        {"id": "L1.OBSERVABLE", "title": "Magnetic-coupling interpretation of F2(0)", "status": "planned", "evidence": []},
+        {"id": "L1.ASSEMBLY", "title": "Complete theorem assembled, audited, and reproducible", "status": "planned", "evidence": []}
+      ]
+    },
+    {
+      "id": "NUM",
+      "title": "Numerical certification pilot",
+      "kind": "formal",
+      "items": [
+        {"id": "NUM.ARITHMETIC", "title": "Sound exact or rigorously rounded enclosure arithmetic", "status": "planned", "evidence": []},
+        {"id": "NUM.INTEGRATION", "title": "Integral-enclosure theorem for the pilot", "status": "planned", "evidence": []},
+        {"id": "NUM.CERTIFICATE", "title": "Reproducible coefficient certificate and contribution bound", "status": "planned", "evidence": []},
+        {"id": "NUM.VALIDATION", "title": "Checker soundness and invalid-certificate rejection", "status": "planned", "evidence": []}
+      ]
+    },
+    {
+      "id": "L2",
+      "title": "Complete two-loop calculation",
+      "kind": "formal",
+      "items": [
+        {"id": "L2.ENUMERATION", "title": "Complete two-loop contribution enumeration", "status": "planned", "evidence": []},
+        {"id": "L2.RENORMALIZATION", "title": "Subtractions, counterterms, and cancellations", "status": "planned", "evidence": []},
+        {"id": "L2.COEFFICIENT", "title": "Complete coefficient and certified evaluation", "status": "planned", "evidence": []},
+        {"id": "L2.ASSEMBLY", "title": "Complete theorem assembled, audited, and reproducible", "status": "planned", "evidence": []}
+      ]
+    },
+    {
+      "id": "HIGH",
+      "title": "Higher loops toward five-loop QED",
+      "kind": "formal",
+      "items": [
+        {"id": "HIGH.PILOT", "title": "First published higher-loop family certified", "status": "planned", "evidence": []},
+        {"id": "HIGH.SYMBOLIC", "title": "Reusable higher-loop symbolic and renormalization checks", "status": "planned", "evidence": []},
+        {"id": "HIGH.NUMERICAL", "title": "Certified higher-dimensional integration for selected families", "status": "planned", "evidence": []},
+        {"id": "HIGH.COMPLETE", "title": "Complete five-loop QED coverage with lepton-mass dependence", "status": "planned", "evidence": []}
+      ]
+    },
+    {
+      "id": "EXP",
+      "title": "Experimental comparison",
+      "kind": "comparison",
+      "items": [
+        {"id": "EXP.INPUTS", "title": "Versioned independent physical inputs and experimental data", "status": "planned", "evidence": []},
+        {"id": "EXP.PROPAGATION", "title": "Proved propagation of inputs and coefficient bounds", "status": "planned", "evidence": []},
+        {"id": "EXP.BUDGET", "title": "Assembled prediction with non-QED and omitted-order budget", "status": "planned", "evidence": []},
+        {"id": "EXP.COMPARISON", "title": "Reproducible experimental comparison at stated precision", "status": "planned", "evidence": []}
+      ]
+    }
+  ]
+}

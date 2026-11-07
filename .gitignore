@@ -1,0 +1,19 @@
+# Lean/Lake build artifacts, once the Lean package is introduced.
+.lake/
+*.olean
+*.ilean
+*.olean.server
+*.olean.private
+*.trace
+
+# Local scratch work and Python artifacts.
+.scratch/
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+
+# Local credentials and configuration.
+.env
+.env.*
+!.env.example
