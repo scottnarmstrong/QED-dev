@@ -3,6 +3,9 @@
 [Campaign HQ](../README.md) · [What does "proved" mean?](WHAT-IS-PROVED.md) ·
 [Progress ledger](campaign/progress.json)
 
+For the initial working assignment and operating instructions, see the
+[orchestrator launch brief](ORCHESTRATOR-LAUNCH.md).
+
 **Established:** 2026-11-07. **Status:** initial outline; no exact Lean
 declarations or regulator prescription have been approved or frozen.
 

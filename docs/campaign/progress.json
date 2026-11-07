@@ -9,6 +9,10 @@
     {
       "date": "2026-11-07",
       "change": "Added the reader-facing account of models, computational rules, and what a QED proof certifies, linked from HQ and the outline. Exact declarations and the regulator route remain open; no mathematical milestone status changed."
+    },
+    {
+      "date": "2026-11-07",
+      "change": "Added a reusable orchestrator launch brief for Phase 1, including bounded delegation, exact-statement approval and freezing, resource discipline, and evidence-based reporting. No orchestrator was launched and no mathematical milestone status changed."
     }
   ],
   "tracks": [
