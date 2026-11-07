@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "note": "Pinned source bytes. The PDFs themselves are not committed (decision D-2); run python3 scripts/fetch_sources.py --fetch to populate sources/cache/ and verify hashes.",
+  "sources": [
+    {
+      "id": "srednicki-draft",
+      "role": "primary",
+      "citation": "M. Srednicki, Quantum Field Theory, prepublication draft (PDF created 2006-10-13); published edition Cambridge University Press 2007, ISBN 0521864496",
+      "url": "https://web.physics.ucsb.edu/~mark/ms-qft-DRAFT.pdf",
+      "landing_page": "https://web.physics.ucsb.edu/~mark/qft.html",
+      "retrieved_utc": "2026-11-07T17:38:08Z",
+      "bytes": 3452472,
+      "sha256": "7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+      "license": "All rights reserved; the file says 'Please DO NOT DISTRIBUTE this document. Instead, link to .../qft.html'. Not redistributable.",
+      "stability": "Server Last-Modified 2007-10-29; unchanged since then."
+    },
+    {
+      "id": "kaplunovsky-vertex",
+      "role": "secondary",
+      "citation": "[V. Kaplunovsky], 'QED Vertex Correction', course notes, University of Texas at Austin, Fall 2012 (no author or date printed; attribution from URL)",
+      "url": "https://web2.ph.utexas.edu/~vadim/Classes/2012f/vertex.pdf",
+      "retrieved_utc": "2026-11-07T17:39:46Z",
+      "bytes": 146868,
+      "sha256": "701e6894bfc50ba5ddfc051f12ae000f20a3283e5fb87e00110a4370ceeffa59",
+      "license": "No license stated; treated as not redistributable.",
+      "stability": "PDF regenerated 2024-09-10; bytes may change on the server."
+    },
+    {
+      "id": "ahkn-2012",
+      "role": "background (magnetic projection; higher-loop architecture)",
+      "citation": "T. Aoyama, M. Hayakawa, T. Kinoshita, M. Nio, Prog. Theor. Exp. Phys. 2012, 01A107, doi:10.1093/ptep/pts030",
+      "url": "https://inspirehep.net/files/1a745a26886d3376d64b6755173d859e",
+      "retrieved_utc": "2026-11-07T17:39:26Z",
+      "bytes": 1102124,
+      "sha256": "0a2e1df91a8390a25783982dd5435d17804bb7a26609cc044c59d00bff57fa91",
+      "license": "CC BY 3.0 (article). This INSPIRE copy carries a per-page library download stamp, so it is not the clean publisher file.",
+      "stability": "INSPIRE file store; replace with clean publisher bytes before relying on page images."
+    },
+    {
+      "id": "knecht-2003",
+      "role": "background (trace projectors; gauge-parameter independence of F2)",
+      "citation": "M. Knecht, 'The anomalous magnetic moments of the electron and the muon', Lect. Notes Phys. 629 (2004) 37-84, arXiv:hep-ph/0307239v1",
+      "url": "https://arxiv.org/pdf/hep-ph/0307239v1",
+      "retrieved_utc": "2026-11-07T17:39:44Z",
+      "bytes": 423162,
+      "sha256": "0b82943d67eb0354267ac5fa5dfa81374a9a702ef648da5edf00a9b4b9d48c56",
+      "license": "arXiv non-exclusive distribution license; not redistributable.",
+      "stability": "arXiv regenerates PDFs from source; pin the source tarball if this becomes load-bearing."
+    },
+    {
+      "id": "liu-mit-8324-l15",
+      "role": "background (nonrelativistic reduction g = 2 + 2 F2(0))",
+      "citation": "H. Liu, MIT OCW 8.324 Relativistic Quantum Field Theory II (Fall 2010), Lecture 15",
+      "url": "https://ocw.mit.edu/courses/8-324-relativistic-quantum-field-theory-ii-fall-2010/cd08ba6a583ac6f2ef806347b2541199_MIT8_324F10_Lecture15.pdf",
+      "retrieved_utc": "2026-11-07T17:39:46Z",
+      "bytes": 170260,
+      "sha256": "4bf21df5c5e65c7ff8b1b5e901b1d24d7e154ca505f8fbb79d6053b1df8b045b",
+      "license": "CC BY-NC-SA 4.0 (course page).",
+      "stability": "OCW asset URL."
+    }
+  ]
+}

@@ -11,14 +11,20 @@ $a_e^{(1)}=\alpha/(2\pi)$. The longer route runs through two loops and selected
 higher-loop contributions toward a verified five-loop QED prediction. Each stage
 should produce reusable tools for real physics calculations.
 
-**Current state:** campaign documentation and progress tooling are initialized.
-There is no Lean implementation, pinned toolchain, or proved physics result yet.
+**Current state (Phase 1, preparation):** the primary derivation is pinned
+(Srednicki, chapters 62–64). The conventions are fixed, and the one-loop
+regulator route is chosen. The derivation is mapped step by step with its proof
+obligations exposed. A Lean package is pinned to Lean and Mathlib `v4.35.0`.
+Its only content so far is proved algebra infrastructure: the Minkowski form
+and the Weyl gamma matrices with the Clifford relation. No exact declaration
+has been approved or frozen, and no physics result is proved. See the
+[campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
 [Project outline](docs/PROJECT-OUTLINE.md) ·
 [Orchestrator launch](docs/ORCHESTRATOR-LAUNCH.md) ·
-[Immediate next steps](#next-steps) · [Progress data](docs/campaign/progress.json) ·
-[Working rules](AGENTS.md)
+[Campaign status](docs/campaign/STATUS.md) · [Immediate next steps](#next-steps) ·
+[Progress data](docs/campaign/progress.json) · [Working rules](AGENTS.md)
 
 ## Progress
 
@@ -34,8 +40,8 @@ become precise; changes to their scope must be recorded.
 | Workstream | Complete | Milestone meter | State |
 | --- | ---: | --- | --- |
 | Campaign setup | 4/4 | `██████████` 100% | Complete |
-| Sources and exact specification | 0/4 | `░░░░░░░░░░` 0% | Planned |
-| Complete one-loop calculation | 0/8 | `░░░░░░░░░░` 0% | Planned |
+| Sources and exact specification | 3/4 | `███████░░░` 75% | In progress |
+| Complete one-loop calculation | 0/8 | `░░░░░░░░░░` 0% | In progress |
 | Numerical certification pilot | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Complete two-loop calculation | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
@@ -107,17 +113,24 @@ observable, input dataset, and uncertainty budget.
 
 ## Next steps
 
-1. Select and pin a full modern derivation of the one-loop magnetic moment;
-   record conventions and any gaps in its textbook manipulations.
-2. Compare regulator and renormalization routes, choose one for the pilot, and
-   write the mathematical derivation with all required conditions exposed.
-3. Inventory Mathlib, choose compatible Lean/Mathlib revisions, and initialize
-   the Lean package. PhysLib is a design reference, not a project dependency.
-4. Develop the exact source-facing Lean definitions and theorem statements for
-   review before freezing them and constructing the proof dependency graph.
+Done in Phase 1 so far: [sources](docs/SOURCES.md), [conventions](docs/CONVENTIONS.md),
+[regulator route](docs/REGULARIZATION.md), [derivation and obligations](docs/ONE-LOOP-DERIVATION.md),
+the [Mathlib inventory](docs/MATHLIB-INVENTORY.md), the pinned Lean package, and
+the first algebra infrastructure.
 
-The immediate task is **source and semantic specification**, followed by the
-first bounded proof tasks. See [Phase 1](docs/PROJECT-OUTLINE.md#phase-1--fix-the-one-loop-calculation).
+1. Obtain the author's rulings P-1 (where the formal model starts) and P-2 (the
+   formal definition of the magnetic moment); see the
+   [decision log](docs/campaign/DECISIONS.md#pending-author-rulings).
+2. Continue building the missing carriers as proved infrastructure: on-shell
+   spinors and the Gordon identity, the contraction identities, and the
+   energy-first Minkowski loop integral. The Minkowski form and the gamma
+   matrices with the Clifford relation are done.
+3. Prepare the exact source-facing declarations, starting with the regulated
+   one-loop vertex and the existence-and-uniqueness theorem for the form
+   factors. Bring them for independent review and author approval before
+   freezing them and building the proof dependency graph.
+
+See [Phase 1](docs/PROJECT-OUTLINE.md#phase-1--fix-the-one-loop-calculation).
 
 ## Repository map
 
@@ -127,10 +140,37 @@ first bounded proof tasks. See [Phase 1](docs/PROJECT-OUTLINE.md#phase-1--fix-th
 | [docs/WHAT-IS-PROVED.md](docs/WHAT-IS-PROVED.md) | What a proved QED calculation certifies, from model and rules to experimental comparison |
 | [docs/PROJECT-OUTLINE.md](docs/PROJECT-OUTLINE.md) | Scientific and implementation outline |
 | [docs/ORCHESTRATOR-LAUNCH.md](docs/ORCHESTRATOR-LAUNCH.md) | Reusable launch prompt, first assignment, delegation, review gates, and reporting |
+| [docs/SOURCES.md](docs/SOURCES.md) | Pinned primary, secondary, and background sources, with hashes and coverage |
+| [docs/CONVENTIONS.md](docs/CONVENTIONS.md) | Metric, units, Dirac algebra, spinors, Feynman rules, form factors, and the mostly-minus dictionary |
+| [docs/REGULARIZATION.md](docs/REGULARIZATION.md) | Regulator comparison and choice, the Minkowski-integral prescription, renormalization, and order of limits |
+| [docs/ONE-LOOP-DERIVATION.md](docs/ONE-LOOP-DERIVATION.md) | Source-linked derivation from the interaction to the magnetic moment, with numbered proof obligations |
+| [docs/MATHLIB-INVENTORY.md](docs/MATHLIB-INVENTORY.md) | What Mathlib `v4.35.0` provides and what the pilot must build |
+| [docs/campaign/STATUS.md](docs/campaign/STATUS.md) | Current state, validation, and next work |
+| [docs/campaign/DECISIONS.md](docs/campaign/DECISIONS.md) | Decisions, author rulings, and pending questions |
+| [docs/campaign/FINDINGS.md](docs/campaign/FINDINGS.md) | Source errata, gaps, and deviations with evidence |
 | [docs/campaign/progress.json](docs/campaign/progress.json) | Milestones, statuses, and completion evidence |
+| [sources/manifest.json](sources/manifest.json) | URLs, sizes, SHA-256 hashes, and licenses of pinned sources (bytes not committed) |
+| [lakefile.lean](lakefile.lean), [lean-toolchain](lean-toolchain), [QED.lean](QED.lean) | Lean package `qed`, pinned to Lean and Mathlib `v4.35.0` |
+| [QED/Algebra/](QED/Algebra) | Proved infrastructure: the mostly-plus Minkowski form (`Minkowski.lean`) and the Weyl Dirac matrices (`Dirac.lean`) |
 | [scripts/update_hq.py](scripts/update_hq.py) | Render or check the progress meters |
+| [scripts/fetch_sources.py](scripts/fetch_sources.py) | Fetch and verify the pinned source bytes |
+| [scripts/numerics/one_loop_sanity.py](scripts/numerics/one_loop_sanity.py) | Floating-point sanity checks of the one-loop algebra (not proofs) |
 | [AGENTS.md](AGENTS.md) | Scope, integrity rules, and shared-machine conventions |
 
-Lean source directories, source archives, and certificate datasets will be added
-when their first concrete contents are ready. They are not present in this
-documentation bootstrap.
+Certificate datasets will be added when their first concrete contents are
+ready.
+
+## Build and validation
+
+```bash
+lake build                                  # every module under QED/; reuses cached Mathlib
+python3 scripts/update_hq.py --check        # HQ consistency (not a proof check)
+python3 scripts/fetch_sources.py            # verify pinned source bytes
+python3 scripts/numerics/one_loop_sanity.py # numerical sanity checks (not proofs)
+```
+
+Every regular `.lean` file must be a Lean module. Landings run the
+`lean-project-architecture` skill's `check_lean_modules.py --root .`. On this
+shared machine, use niced, focused builds, and never `lake clean`. The Mathlib
+dependency tree must come from the cache or a local copy, never a rebuild; see
+decision D-3 in the [decision log](docs/campaign/DECISIONS.md).

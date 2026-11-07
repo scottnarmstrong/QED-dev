@@ -13,6 +13,10 @@
     {
       "date": "2026-11-07",
       "change": "Added a reusable orchestrator launch brief for Phase 1, including bounded delegation, exact-statement approval and freezing, resource discipline, and evidence-based reporting. No orchestrator was launched and no mathematical milestone status changed."
+    },
+    {
+      "date": "2026-11-07",
+      "change": "Phase 1 preparation began. Pinned the primary source (Srednicki draft, chs. 58 and 62-64) and the secondary source by SHA-256 with an untracked cache. Adopted the source's conventions, selected the one-loop route (Pauli-Villars photon, photon mass, Feynman gauge, on-shell scheme, energy-first Minkowski integral), mapped the derivation with numbered obligations, and recorded findings F-1 to F-10. Took the Mathlib inventory, pinned Lean/Mathlib v4.35.0, and initialized the package. Proved the first infrastructure: the Minkowski form and the Weyl gamma matrices with the Clifford relation. An independent refute-first review of the four Phase 1 documents was addressed before landing; SPEC.SOURCE and SPEC.ROUTE are marked done on that evidence. No declaration is approved or frozen; author rulings P-1 and P-2 are pending."
     }
   ],
   "tracks": [
@@ -32,9 +36,9 @@
       "title": "Sources and exact specification",
       "kind": "preparation",
       "items": [
-        {"id": "SPEC.SOURCE", "title": "Pin full one-loop derivation and convention sheet", "status": "planned", "evidence": []},
-        {"id": "SPEC.ROUTE", "title": "Select and justify regulator and renormalization route", "status": "planned", "evidence": []},
-        {"id": "SPEC.ENV", "title": "Inventory Mathlib and pin a working Lean environment", "status": "planned", "evidence": []},
+        {"id": "SPEC.SOURCE", "title": "Pin full one-loop derivation and convention sheet", "status": "done", "evidence": ["docs/SOURCES.md", "docs/CONVENTIONS.md", "sources/manifest.json", "docs/campaign/FINDINGS.md", "docs/campaign/STATUS.md"]},
+        {"id": "SPEC.ROUTE", "title": "Select and justify regulator and renormalization route", "status": "done", "evidence": ["docs/REGULARIZATION.md", "docs/ONE-LOOP-DERIVATION.md", "docs/campaign/DECISIONS.md", "docs/campaign/STATUS.md"]},
+        {"id": "SPEC.ENV", "title": "Inventory Mathlib and pin a working Lean environment", "status": "done", "evidence": ["docs/MATHLIB-INVENTORY.md", "lean-toolchain", "lakefile.lean", "lake-manifest.json", "docs/campaign/STATUS.md"]},
         {"id": "SPEC.STATEMENTS", "title": "Review and approve exact Lean declarations and dependency plan", "status": "planned", "evidence": []}
       ]
     },
@@ -43,7 +47,7 @@
       "title": "Complete one-loop calculation",
       "kind": "formal",
       "items": [
-        {"id": "L1.MODEL", "title": "Concrete regularized perturbative model and algebra", "status": "planned", "evidence": []},
+        {"id": "L1.MODEL", "title": "Concrete regularized perturbative model and algebra", "status": "in_progress", "evidence": ["QED/Algebra/Minkowski.lean", "QED/Algebra/Dirac.lean"]},
         {"id": "L1.VERTEX", "title": "Vertex expansion, diagram coefficient, and signs", "status": "planned", "evidence": []},
         {"id": "L1.PROJECTION", "title": "On-shell Dirac reduction and form-factor extraction", "status": "planned", "evidence": []},
         {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "planned", "evidence": []},

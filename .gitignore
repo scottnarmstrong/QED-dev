@@ -17,3 +17,6 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Pinned source bytes (decision D-2): hashes in sources/manifest.json.
+sources/cache/
