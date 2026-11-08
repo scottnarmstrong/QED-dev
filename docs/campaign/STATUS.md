@@ -32,7 +32,7 @@ SEALED_THIS_TURN: 1 — QED.OneLoop.vertexLimit_existsUnique (packet 1, (E)), se
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
 | Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. For every $\epsilon>0$ both integration stages of M1 are integrable, and the limit $\epsilon\to0^+$ exists and is unique. It does not identify the limit's value. |
-| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11 (packet 1 approved and frozen), and D-12 (packet 1b approved and frozen, closing [F-12](FINDINGS.md)). The next author decision is packet 2, which is being drafted. |
+| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11 (packet 1 approved and frozen), and D-12 (packet 1b approved and frozen, closing [F-12](FINDINGS.md)). **Packet 2** awaits approval. It contains: the one-loop vertex defined from (E) with its characterization; the form-factor predicate (63.18); the ∃! decomposition goal; the headline goal, F₂ → e²/8π² jointly as q², m_γ → 0⁺ and Λ → ∞; and the freezing of `lorentzGen`. It passed an independent refute-first review (no blocker, no error), and its suggestions were adopted. |
 
 ## Work completed
 
@@ -135,6 +135,24 @@ SEALED_THIS_TURN: 1 — QED.OneLoop.vertexLimit_existsUnique (packet 1, (E)), se
   - that only the standard axioms are used, including a `leanchecker` replay;
   - that every helper premise is discharged;
   - that the mathematics holds when checked by hand.
+- **Infrastructure toward packet 2** (2026-11-08). This is proved infrastructure,
+  not source-facing results.
+  - `QED/OneLoop/VertexEnergyFirst.lean`: the analysis of (E), moved out of
+    the provider (which is now a short assembly), together with:
+    - the limit representation `∫ v, spatialG 0 v`;
+    - the boundary values $(-W)^{-3/2}=iW^{-3/2}$ and $(-W)^{-5/2}=-iW^{-5/2}$;
+    - the uniform bound at $\epsilon=0$.
+  - `QED/OneLoop/VertexClosedForm.lean`: the Fubini swap at $\epsilon=0$, and the
+    $x\leftrightarrow1-x$ symmetry of the Feynman measure.
+  - `QED/Integration/SpatialIntegral.lean`:
+    $\int d^3v\,(v^2+D)^{-5/2}=4\pi/(3D)$; the Pauli–Villars log integral
+    $2\pi\ln(D_2/D_1)$; vanishing odd moments; isotropy of second moments.
+  - `QED/OneLoop/NumeratorReduction.lean`: the $d=4$ contraction of the
+    numerator, and its on-shell reduction (63.14)–(63.17). The $(p'-p)^\mu$
+    coefficient is odd under $x\leftrightarrow1-x$.
+  - `QED/Algebra/FormFactorIndependence.lean`: gamma traces, and the
+    independence of $\bar u'\gamma^\mu u$ and $\bar u'S^{\mu\nu}q_\nu u$ for
+    $q^2>0$ (the uniqueness half of O-15).
 - **Frozen declarations** (D-11, D-12; [`QED/Frozen/manifest.json`](../../QED/Frozen/manifest.json)).
   - Packet 1: the regulated propagators, the (62.40) integrand, the
     energy-first integral, and the theorem (E), now sealed and proved.
@@ -157,7 +175,7 @@ SEALED_THIS_TURN: 1 — QED.OneLoop.vertexLimit_existsUnique (packet 1, (E)), se
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
 | Project build | `nice -n 5 lake build` | success; 2918 jobs; no warnings |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (24 Lean files) |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (29 Lean files) |
 | Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` at the earlier landing; on 2026-11-08 on `QED.OneLoop.vertexLimit_existsUnique`, its provider, and every exported theorem of the five new modules (transient files, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |

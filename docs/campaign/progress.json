@@ -45,6 +45,10 @@
     {
       "date": "2026-11-08",
       "change": "Proved packet 1's theorem (E) QED.OneLoop.vertexLimit_existsUnique: Feynman parameters (O-5), Fubini and closed-form energy integrals (O-6), a uniform (1 + |l|)^-5 Pauli-Villars bound from D >= 3/4 min(M^2, m^2) on shell, and dominated convergence (O-10). New modules: QED/Integration/{FeynmanParameter,ShiftedEnergyIntegral,LoopBounds}.lean, QED/OneLoop/VertexAlgebra.lean, QED/Algebra/OnShell.lean, and the provider. Sealed the frozen anchor with the provider (D-13: implicit data binders and by-assumption auto-params). An independent refute-first audit found no defect; standard axioms only. L1.MODEL and L1.INTEGRAL remain in_progress."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Infrastructure toward packet 2 (no source-facing declaration): moved the analysis of (E) into QED/OneLoop/VertexEnergyFirst.lean (the provider is now a short assembly) with the limit representation and the eps = 0 boundary values; Fubini at eps = 0 and the x <-> 1-x symmetry (VertexClosedForm); 3D spatial integrals and isotropy (Integration/SpatialIntegral); the numerator contraction and on-shell reduction (63.14)-(63.17) (OneLoop/NumeratorReduction); gamma traces and the independence of the two on-shell vertex structures (Algebra/FormFactorIndependence). Packet 2 drafted, independently reviewed, and submitted for author approval."
     }
   ],
   "tracks": [
@@ -77,8 +81,8 @@
       "items": [
         {"id": "L1.MODEL", "title": "Concrete regularized perturbative model and algebra", "status": "in_progress", "evidence": ["QED/Algebra/Minkowski.lean", "QED/Algebra/Dirac.lean", "QED/Algebra/Contraction.lean", "QED/OneLoop/VertexAlgebra.lean"]},
         {"id": "L1.VERTEX", "title": "Vertex expansion, diagram coefficient, and signs", "status": "planned", "evidence": []},
-        {"id": "L1.PROJECTION", "title": "On-shell Dirac reduction and form-factor extraction", "status": "in_progress", "evidence": ["QED/Algebra/Gordon.lean", "QED/Algebra/Spinor.lean"]},
-        {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "in_progress", "evidence": ["QED/Integration/EnergyIntegral.lean", "QED/Integration/FeynmanParameter.lean", "QED/Integration/ShiftedEnergyIntegral.lean", "QED/Integration/LoopBounds.lean", "QED/Provider/OneLoop/VertexLimitExists.lean"]},
+        {"id": "L1.PROJECTION", "title": "On-shell Dirac reduction and form-factor extraction", "status": "in_progress", "evidence": ["QED/Algebra/Gordon.lean", "QED/Algebra/Spinor.lean", "QED/OneLoop/NumeratorReduction.lean", "QED/Algebra/FormFactorIndependence.lean"]},
+        {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "in_progress", "evidence": ["QED/Integration/EnergyIntegral.lean", "QED/Integration/FeynmanParameter.lean", "QED/Integration/ShiftedEnergyIntegral.lean", "QED/Integration/LoopBounds.lean", "QED/Integration/SpatialIntegral.lean", "QED/OneLoop/VertexEnergyFirst.lean", "QED/OneLoop/VertexClosedForm.lean", "QED/Provider/OneLoop/VertexLimitExists.lean"]},
         {"id": "L1.LIMITS", "title": "Finiteness and required regulator limits", "status": "planned", "evidence": []},
         {"id": "L1.COEFFICIENT", "title": "Exact first coefficient C1 = 1/2", "status": "planned", "evidence": []},
         {"id": "L1.OBSERVABLE", "title": "Magnetic-coupling interpretation of F2(0)", "status": "planned", "evidence": []},

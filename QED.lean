@@ -16,6 +16,11 @@ public import QED.Integration.ShiftedEnergyIntegral
 public import QED.Integration.FeynmanParameter
 public import QED.Integration.LoopBounds
 public import QED.OneLoop.VertexAlgebra
+public import QED.OneLoop.VertexEnergyFirst
+public import QED.OneLoop.VertexClosedForm
+public import QED.OneLoop.NumeratorReduction
+public import QED.Integration.SpatialIntegral
+public import QED.Algebra.FormFactorIndependence
 public import QED.Frozen.OneLoop.ElectronPropagator
 public import QED.Frozen.OneLoop.PhotonPropagator
 public import QED.Frozen.OneLoop.VertexIntegrand
@@ -56,6 +61,15 @@ are proved infrastructure:
 * `QED.OneLoop.VertexAlgebra`: the entrywise factorization of the frozen
   vertex integrand, its numerator's structure, and the Feynman combination of
   its denominators.
+* `QED.OneLoop.VertexEnergyFirst`: the analysis behind theorem (E) and the
+  representation of its limit;
+* `QED.OneLoop.VertexClosedForm`: the Fubini swap at `ε = 0` and the reflection
+  symmetry of the Feynman measure;
+* `QED.OneLoop.NumeratorReduction`: the contraction of the numerator and its
+  on-shell reduction (63.14)–(63.17);
+* `QED.Integration.SpatialIntegral`: three-dimensional loop integrals;
+* `QED.Algebra.FormFactorIndependence`: gamma-matrix traces and the linear
+  independence of the two on-shell vertex structures.
 
 Author-approved frozen declarations live under `QED/Frozen/` and are bound by
 `QED/Frozen/manifest.json` (checked by `scripts/check_frozen_anchors.py`). The
