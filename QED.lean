@@ -29,6 +29,10 @@ public import QED.Frozen.OneLoop.PhotonPropagator
 public import QED.Frozen.OneLoop.VertexIntegrand
 public import QED.Frozen.OneLoop.EnergyFirstIntegral
 public import QED.Frozen.OneLoop.VertexLimitExists
+public import QED.Frozen.OneLoop.VertexOneLoop
+public import QED.Frozen.OneLoop.VertexOneLoopSpec
+public import QED.Frozen.OneLoop.IsFormFactorPair
+public import QED.OneLoop.FormFactorPair
 
 /-!
 # QED
@@ -83,7 +87,9 @@ Author-approved frozen declarations live under `QED/Frozen/` and are bound by
 `QED/Frozen/manifest.json` (checked by `scripts/check_frozen_anchors.py`). The
 Minkowski and Dirac definitions (`metric`, `dot`, `lower`, `gamma`, `slash`) are
 frozen in `QED/Frozen/Algebra/` and re-exported by `QED.Algebra.Minkowski` and
-`QED.Algebra.Dirac`. The root imports every frozen anchor. The theorem anchor
+`QED.Algebra.Dirac`, together with `lorentzGen`. The root imports every frozen anchor except
+the `DRAFT_SORRY` goals of packet 2, (G) `QED.Frozen.OneLoop.FormFactorExistsUnique` and (I)
+`QED.Frozen.OneLoop.PauliFormFactorLimit`, and their quarantined providers. The theorem anchor
 `QED.Frozen.OneLoop.VertexLimitExists` is sealed: its proof is
 `QED.Provider.OneLoop.vertexLimit_existsUnique`. See `README.md` and
 `docs/campaign/STATUS.md` for the campaign state.

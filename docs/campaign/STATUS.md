@@ -10,7 +10,7 @@ Milestones (see the [ledger](progress.json)):
 | Milestone | Status |
 | --- | --- |
 | SPEC.SOURCE, SPEC.ROUTE, SPEC.ENV | done, on the evidence below |
-| SPEC.STATEMENTS | in progress: packets 1 and 1b approved and frozen (D-11, D-12); packet 2 pending |
+| SPEC.STATEMENTS | in progress: packets 1, 1b, and 2 approved and frozen (D-11, D-12, D-14) |
 | L1.MODEL | in progress: algebra infrastructure and the entrywise algebra of the frozen vertex integrand |
 | L1.PROJECTION | in progress: spinors, normalization, and the Gordon identity |
 | L1.INTEGRAL | in progress: O-5, O-6, O-7, and O-10 proved for the vertex; packet 1's theorem (E) proved. The closed forms (O-9, O-11) are open |
@@ -18,12 +18,12 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 0
+DRAFT_ANCHORS: 2 — QED/Frozen/OneLoop/FormFactorExistsUnique.lean (G) and
+               QED/Frozen/OneLoop/PauliFormFactorLimit.lean (I); providers quarantined
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 1 — QED.OneLoop.vertexLimit_existsUnique (packet 1, (E)), sealed by
-               QED.Provider.OneLoop.vertexLimit_existsUnique; PROVED (checker, build,
-               standard axioms, independent refute-first audit)
+SEALED_THIS_TURN: 1 theorem — QED.OneLoop.tendsto_energyFirstIntegral_iff_vertexOneLoop (F′),
+               landed with its definition (F); audit pending
 ```
 
 | Field | Value |
@@ -32,7 +32,7 @@ SEALED_THIS_TURN: 1 — QED.OneLoop.vertexLimit_existsUnique (packet 1, (E)), se
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
 | Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. For every $\epsilon>0$ both integration stages of M1 are integrable, and the limit $\epsilon\to0^+$ exists and is unique. It does not identify the limit's value. |
-| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11 (packet 1 approved and frozen), and D-12 (packet 1b approved and frozen, closing [F-12](FINDINGS.md)). **Packet 2** awaits approval. It contains: the one-loop vertex defined from (E) with its characterization; the form-factor predicate (63.18); the ∃! decomposition goal; the headline goal, F₂ → e²/8π² jointly as q², m_γ → 0⁺ and Λ → ∞; and the freezing of `lorentzGen`. It passed an independent refute-first review (no blocker, no error), and its suggestions were adopted. |
+| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11 (packet 1), D-12 (packet 1b), and D-14 (packet 2, approved 2026-11-08). |
 
 ## Work completed
 
@@ -190,7 +190,7 @@ SEALED_THIS_TURN: 1 — QED.OneLoop.vertexLimit_existsUnique (packet 1, (E)), se
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
 | Project build | `nice -n 5 lake build` | success; 2918 jobs; no warnings |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (32 Lean files) |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (42 Lean files) |
 | Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` at the earlier landing; on 2026-11-08 on `QED.OneLoop.vertexLimit_existsUnique`, its provider, and every exported theorem of the five new modules (transient files, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |

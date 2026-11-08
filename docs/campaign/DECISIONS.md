@@ -21,6 +21,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-11 | 2026-11-08 | Packet 1 (regulated one-loop vertex integrand and its well-definedness) approved as written and frozen | Author |
 | D-12 | 2026-11-08 | Packet 1b (the Minkowski and Dirac definitions in packet 1's closure) approved as written and frozen | Author |
 | D-13 | 2026-11-08 | Provider binder convention for sealing theorem anchors whose binders precede the colon | Orchestrator |
+| D-14 | 2026-11-08 | Packet 2 (one-loop vertex, form-factor decomposition, and the one-loop anomaly headline) approved as written and frozen | Author |
 
 ## Pending author rulings
 
@@ -384,3 +385,44 @@ reducible transparency.
 
 **First use.** `QED.Provider.OneLoop.vertexLimit_existsUnique` seals packet 1's
 theorem (E) (D-11), on 2026-11-08.
+
+## D-14. Packet 2 approved (author ruling)
+
+**Ruling.** On 2026-11-08 the author approved packet 2, `lorentzGen`
+included. The approved text was the exact Lean shown to the author, in an
+untracked scratch file with SHA-256
+`7e1b18e093acd3207c61b96202745a46c792cf8bfae5e42981dfb40f68403fc5`. Before
+approval, an independent refute-first reviewer checked it against (40.3),
+(62.39)–(62.40), (63.16)–(63.22), and decisions D-5 and D-13. The review
+found no blocker and no error, and judged (G) and (I) true. Its two weak
+findings and its nits were applied to the text the author saw: (I) was made
+self-contained, and the docstrings were corrected.
+
+**Frozen anchors** (bound by [`QED/Frozen/manifest.json`](../../QED/Frozen/manifest.json)):
+
+| Anchor | Export | Kind and state |
+| --- | --- | --- |
+| `QED/Frozen/Algebra/LorentzGen.lean` | `QED.Dirac.lorentzGen` | definition, `SEALED`; moved from `QED/Algebra/Dirac.lean`, with `pp.all` output unchanged |
+| (F) `QED/Frozen/OneLoop/VertexOneLoop.lean` | `QED.OneLoop.vertexOneLoop` | definition from theorem (E), `SEALED` |
+| (F′) `QED/Frozen/OneLoop/VertexOneLoopSpec.lean` | `QED.OneLoop.tendsto_energyFirstIntegral_iff_vertexOneLoop` | theorem, `SEALED`, landed together with (F) |
+| (G₀) `QED/Frozen/OneLoop/IsFormFactorPair.lean` | `QED.OneLoop.IsFormFactorPair` | definition (literal predicate (63.18)), `SEALED` |
+| (G) `QED/Frozen/OneLoop/FormFactorExistsUnique.lean` | `QED.OneLoop.existsUnique_isFormFactorPair_vertexOneLoop` | theorem, `DRAFT_SORRY`, quarantined |
+| (I) `QED/Frozen/OneLoop/PauliFormFactorLimit.lean` | `QED.OneLoop.isFormFactorPair_vertexOneLoop_pauli_limit` | theorem, `DRAFT_SORRY`, quarantined |
+
+**Packaging, as announced.**
+
+- One declaration per file, each with its own imports.
+- (F′)'s proof moved to the provider
+  `QED.Provider.OneLoop.tendsto_energyFirstIntegral_iff_vertexOneLoop`, under
+  the binder convention of D-13.
+- (G) and (I) have the bodies `by sorry` and quarantined providers.
+- A script confirmed that every frozen docstring and declaration is
+  byte-identical to the approved text.
+
+**Scope** (stated to the author with the packet):
+
+- The packet concerns the (62.40) diagram under D-5's regulators. The link to
+  the Wick expansion (D-8, O-1, O-2) is a later packet.
+- That the counterterm only shifts A (O-8) is the source's interpretation,
+  not a theorem here.
+- F₂(0) is replaced by the joint limit.

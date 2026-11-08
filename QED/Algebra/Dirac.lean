@@ -8,6 +8,7 @@ module
 public import QED.Algebra.Minkowski
 public import QED.Frozen.Algebra.Gamma
 public import QED.Frozen.Algebra.Slash
+public import QED.Frozen.Algebra.LorentzGen
 public import Mathlib.Basic.Complex.Basic
 public import Mathlib.LinearAlgebra.Matrix.ConjTranspose
 public import Mathlib.LinearAlgebra.Matrix.Notation
@@ -28,9 +29,9 @@ decision D-7), following the primary source:
   (eq. (38.8));
 * the Lorentz generators `S^{μν} = (i/4) [γ^μ, γ^ν]` (eq. (40.3)).
 
-The gamma matrices `QED.Dirac.gamma` and the slash `QED.Dirac.slash` are
-author-approved frozen definitions (decision D-12) in `QED/Frozen/Algebra/`; this
-module re-exports them. The slash follows the source's definition (37.24).
+The gamma matrices `QED.Dirac.gamma` and the slash `QED.Dirac.slash` (decision D-12) and
+the Lorentz generators `QED.Dirac.lorentzGen` (decision D-14) are author-approved frozen
+definitions in `QED/Frozen/Algebra/`; this module re-exports them. The slash follows the source's definition (37.24).
 
 ## Main statements
 
@@ -61,10 +62,6 @@ theorem slash_smul (c : ℝ) (a : Fin 4 → ℝ) : slash (c • a) = (c : ℂ) �
     simp only [Minkowski.lower, Pi.smul_apply, smul_eq_mul, Finset.mul_sum]
     exact Finset.sum_congr rfl fun ν _ => by ring
   simp only [slash, h, Complex.ofReal_mul, Finset.smul_sum, smul_smul]
-
-/-- The Lorentz generators `S^{μν} = (i/4) [γ^μ, γ^ν]` (eq. (40.3)). -/
-noncomputable def lorentzGen (μ ν : Fin 4) : Matrix (Fin 4) (Fin 4) ℂ :=
-  (I / 4) • (gamma μ * gamma ν - gamma ν * gamma μ)
 
 /-- The Clifford relation `{γ^μ, γ^ν} = -2 g^{μν}` (eq. (36.9)). -/
 theorem gamma_anticomm (μ ν : Fin 4) :
