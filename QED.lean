@@ -43,6 +43,9 @@ public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization
 public import QED.Algebra.SpinorBoost
+public import QED.Algebra.BreitFrame
+public import QED.OneLoop.MagneticMoment
+public import QED.OneLoop.MagneticResponse
 
 /-!
 # QED

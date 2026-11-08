@@ -73,6 +73,10 @@
     {
       "date": "2026-11-08",
       "change": "Sealed packet 3's (K), (N), (M); an independent refute-first audit found them PROVED. O-8 (the counterterm shifts only F1) is now a theorem, and F1(0) = 1 holds at fixed regulators."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Infrastructure for the response definition of the magnetic moment (D-9): exact Breit-frame spinor identities for the y-current with momentum transfer along x and spin up (Algebra/BreitFrame, obligation O-22); the Breit sandwich of the vertex function, i e q (Z1 + A + B), and its unique linear-in-q coefficient mu = e(Z1 + A(0) + B(0))/(2m) (OneLoop/MagneticResponse); the joint regulator limit of B at q^2 = 0 and its continuity at fixed regulators (OneLoop/MagneticMoment). Packet 4a (response definition and the Lande factor) drafted and proved transiently against its exact text; independent review in progress."
     }
   ],
   "tracks": [
