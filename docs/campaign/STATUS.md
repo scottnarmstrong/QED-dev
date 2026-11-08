@@ -3,7 +3,7 @@
 [Campaign HQ](../../README.md) · [Decisions](DECISIONS.md) · [Findings](FINDINGS.md) ·
 [Progress ledger](progress.json)
 
-**As of 2026-11-07.** Phase 1 (fix the one-loop calculation), preparation stage.
+**As of 2026-11-08.** Phase 1 (fix the one-loop calculation), preparation stage.
 
 Milestones (see the [ledger](progress.json)):
 
@@ -12,7 +12,7 @@ Milestones (see the [ledger](progress.json)):
 | SPEC.SOURCE, SPEC.ROUTE, SPEC.ENV | done, on the evidence below |
 | SPEC.STATEMENTS | planned: no exact declaration exists yet |
 | L1.MODEL | in progress: algebra infrastructure only |
-| L1.PROJECTION | in progress: Gordon identity only |
+| L1.PROJECTION | in progress: spinors, normalization, and the Gordon identity |
 
 ## Reporting fields
 
@@ -80,6 +80,14 @@ SEALED_THIS_TURN: 0
     identity `gordon` (38.18). The identity is stated for any column vector $u$
     with $(\not p+m)u=0$ and any row vector $w$ with $w(\not p'+m)=0$ (obligation
     O-14).
+  - `QED/Algebra/Contraction.lean`: `gammaLower`, the anticommutators
+    $\{\gamma_\mu,\not a\}=-2a_\mu$ and $\{\not a,\not b\}=-2(a\cdot b)$, the
+    recursion `contract_mul_slash`, and the contraction identities (47.18)–(47.21)
+    at $d=4$. These are the identities obligation O-4 uses.
+  - `QED/Algebra/Spinor.lean`: the Dirac adjoint `bar` (38.7), the rest spinors
+    (38.6), the closed-form spinors $u_s(p)=(m-\not p)u_s(0)/\sqrt{2m(m+p^0)}$, the
+    Dirac equations (38.1) and (38.16), the normalization
+    $\bar u_{s'}(p)u_s(p)=2m\delta_{s's}$ (38.17), and `gordon_spinor`.
 - **Administration** (D-1, D-10). The repository was made public at the
   author's instruction, and `jaumededios` was invited with write access. It is
   now licensed under Apache-2.0: `LICENSE`, plus the header line in every Lean
@@ -95,9 +103,9 @@ SEALED_THIS_TURN: 0
 | --- | --- | --- |
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
-| Project build | `nice -n 5 lake build` | success; 1321 jobs |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (5 Lean files) |
-| Axioms | `#print axioms` on all 16 theorems in `QED/Algebra/` (transient file, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
+| Project build | `nice -n 5 lake build` | success; 1648 jobs |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (7 Lean files) |
+| Axioms | `#print axioms` on all 39 theorems in `QED/Algebra/` (transient file, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |
 | Numerical sanity (not proofs) | `python3 scripts/numerics/one_loop_sanity.py` | all eight checks pass |
@@ -110,10 +118,12 @@ proof.
 ## Remaining obligations and next bounded tasks
 
 1. **Carriers.**
-   - Explicit on-shell spinors (38.6), (38.12), their normalization (38.17),
-     and the Dirac equation for $\bar u$ (38.16) from that for $u$. The
-     Gordon identity itself is proved.
-   - The contraction identities (47.18)–(47.21) needed by O-4.
+   - Equality of the closed-form spinors with the source's boost definition
+     (38.12). This is needed before the source definition of the magnetic
+     moment, which uses (64.11)–(64.12).
+   - On-shell momenta as a carrier, and the on-shell sandwich structure:
+     independence of the bilinears $\bar u'\gamma^\mu u$ and
+     $\bar u'S^{\mu\nu}q_\nu u$ for $q\neq0$, the uniqueness half of O-15.
    - The energy-first Minkowski loop integral (prescription M1), with explicit
      integrability, so that no definition depends on Lean's zero value for
      non-integrable integrands.

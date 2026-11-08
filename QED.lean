@@ -8,6 +8,8 @@ module
 public import QED.Algebra.Minkowski
 public import QED.Algebra.Dirac
 public import QED.Algebra.Gordon
+public import QED.Algebra.Contraction
+public import QED.Algebra.Spinor
 
 /-!
 # QED
@@ -23,7 +25,11 @@ are proved infrastructure:
 * `QED.Algebra.Dirac`: Weyl-representation gamma matrices with the Clifford
   relation, the Dirac-adjoint matrix, slash, and Lorentz generators;
 * `QED.Algebra.Gordon`: gamma-matrix products, eqs. (38.19)–(38.20), and the
-  Gordon identity (38.18).
+  Gordon identity (38.18);
+* `QED.Algebra.Contraction`: the contraction identities (47.18)–(47.21) at
+  `d = 4`;
+* `QED.Algebra.Spinor`: the Dirac adjoint, on-shell spinors with the Dirac
+  equation and normalization (38.17), and the Gordon identity for spinors.
 
 No source-facing declaration has been approved or frozen. See `README.md` and
 `docs/campaign/STATUS.md` for the campaign state.

@@ -306,8 +306,8 @@ infrastructure, and the source-facing work it unblocks is:
 | Needed carrier or definition | Kind | Status |
 | --- | --- | --- |
 | Minkowski vectors with the mostly-plus form; on-shell momenta | infrastructure definition | form proved (`QED/Algebra/Minkowski.lean`); on-shell momenta missing |
-| Weyl gamma matrices with the Clifford relation (36.9), $S^{\mu\nu}$, Dirac adjoint | infrastructure, meaning-carrying | proved (`QED/Algebra/Dirac.lean`); contraction identities (47.18)–(47.21) missing |
-| On-shell spinors $u_s(p)$, normalization (38.17), Gordon identity | infrastructure, meaning-carrying | Gordon identity (38.18), with (38.19)–(38.20), proved for any solutions of the Dirac equations (`QED/Algebra/Gordon.lean`); explicit spinors and (38.17) missing |
+| Weyl gamma matrices with the Clifford relation (36.9), $S^{\mu\nu}$, Dirac adjoint | infrastructure, meaning-carrying | proved (`QED/Algebra/Dirac.lean`), with the contraction identities (47.18)–(47.21) at $d=4$ (`QED/Algebra/Contraction.lean`) |
+| On-shell spinors $u_s(p)$, normalization (38.17), Gordon identity | infrastructure, meaning-carrying | proved for the closed-form spinors: Dirac equations (38.1) and (38.16), normalization (38.17), and Gordon (38.18) (`QED/Algebra/Gordon.lean`, `QED/Algebra/Spinor.lean`). Equality with the source's boost definition (38.12) is pending. |
 | Regulated propagators; the Minkowski integral of prescription M1 with explicit integrability (no silent zero for non-integrable data) | source-facing definitions | design open |
 | Regulated one-loop vertex $V^\mu_{1\,\mathrm{loop}}(p',p;m_\gamma,\Lambda)$ (62.40) | source-facing literal definition | depends on the rows above |
 | Wick expansion at order $e^3$ with fermionic signs, from momentum-space propagators (D-8) | source-facing definition; meaning-carrying | missing; needs Wick and Grassmann-sign infrastructure (inventory 8.4) |
