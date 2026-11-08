@@ -49,6 +49,7 @@ public import QED.Frozen.OneLoop.SourceMagneticMoment
 public import QED.OneLoop.OneParticle
 public import QED.Integration.ParametricSmooth
 public import QED.OneLoop.FormFactorSmooth
+public import QED.OneLoop.PacketAmplitude
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization
@@ -109,6 +110,8 @@ are proved infrastructure:
   a compact set;
 * `QED.OneLoop.FormFactorSmooth`: the form factors `A(q²)` and `B(q²)` are
   `C^∞` on `(-4m², ∞)` at fixed regulators.
+* `QED.OneLoop.PacketAmplitude`: the packet weight, matrix element, and amplitude
+  of the frozen wave-packet current density.
 
 Author-approved frozen declarations live under `QED/Frozen/` and are bound by
 `QED/Frozen/manifest.json` (checked by `scripts/check_frozen_anchors.py`). The
