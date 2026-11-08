@@ -35,6 +35,8 @@ public import QED.Frozen.OneLoop.IsFormFactorPair
 public import QED.Frozen.OneLoop.FormFactorExistsUnique
 public import QED.Frozen.OneLoop.PauliFormFactorLimit
 public import QED.OneLoop.FormFactorPair
+public import QED.OneLoop.ChargeRenormalization
+public import QED.Algebra.SpinorBoost
 
 /-!
 # QED

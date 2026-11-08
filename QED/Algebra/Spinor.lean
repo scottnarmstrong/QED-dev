@@ -39,12 +39,11 @@ Spinor technology of the primary source's section 38, in the conventions of
 ## Relation to the source's definition
 
 The source defines `u_s(p)` by a boost, `u_s(p) = exp(iη p̂·K) u_s(0)`
-(eq. (38.12)). This module uses the closed form instead. The two agree (the
-independent review checked this numerically), but the equality is not yet
-proved in Lean. It is a pending lemma that must be proved before any result
-relies on the boost form, for example the source's magnetic-moment computation
-(64.11)–(64.12). No physical statement depends on the spinor basis, because
-form factors are defined for all spin labels.
+(eq. (38.12)). This module uses the closed form instead. The two agree:
+`QED.Dirac.spinor_eq_exp_boost` (`QED/Algebra/SpinorBoost.lean`) proves the equality for
+`p⃗ ≠ 0`, as the source's magnetic-moment computation (64.11)–(64.12) needs. No physical
+statement depends on the spinor basis, because form factors are defined for all spin
+labels.
 -/
 
 @[expose] public section

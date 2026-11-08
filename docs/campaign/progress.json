@@ -61,6 +61,10 @@
     {
       "date": "2026-11-08",
       "change": "Sealed packet 2's (G) and (I) with their providers; an independent refute-first audit found (F'), (G), (I) PROVED. (I) gives F2 -> e^2/8pi^2 = alpha/2pi (C1 = 1/2) for the (62.40) diagram under D-5, jointly as q^2, m_gamma -> 0+, Lambda -> oo. L1.PROJECTION, L1.INTEGRAL, L1.LIMITS, and L1.COEFFICIENT are marked done with that scope; L1.VERTEX (Wick derivation with counterterm), L1.OBSERVABLE (magnetic moment, D-9), and L1.ASSEMBLY remain planned."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Proved the equality of the closed-form spinors with the source's boost construction (38.12) (Algebra/SpinorBoost), and the analytic facts for charge renormalization (OneLoop/ChargeRenormalization: the loop's A depends only on q^2 on shell, the loop sandwich at p' = p is e A(0) u'gamma u, and A(q^2) is continuous at 0+). Packet 3 (charge condition (63.1), counterterm shift O-8, and F1(0) = 1) drafted, independently reviewed, and proved transiently against its exact text."
     }
   ],
   "tracks": [

@@ -110,6 +110,16 @@ SEALED_THIS_TURN: 3 theorems — QED.OneLoop.tendsto_energyFirstIntegral_iff_ver
   author's instruction, and `jaumededios` was invited with write access. It is
   now licensed under Apache-2.0: `LICENSE`, plus the header line in every Lean
   file.
+- **More infrastructure** (2026-11-08):
+  - `QED/Algebra/SpinorBoost.lean`: the closed-form spinors equal the source's
+    boosted rest spinors exp(iη p̂·K)u_s(0) (38.12), for p⃗ ≠ 0.
+  - `QED/OneLoop/ChargeRenormalization.lean`:
+    - on shell, the loop's γ^μ coefficient depends only on q²;
+    - at p′ = p the loop sandwich is e·A(0)·ū′γ^μu;
+    - A(q²) is continuous at q² = 0⁺ at fixed regulators.
+
+    These are the analytic facts behind packet 3 (charge renormalization),
+    which is drafted and independently reviewed.
 - **Packet 1's theorem (E) proved** (2026-11-08). The proof is in
   [`QED/Provider/OneLoop/VertexLimitExists.lean`](../../QED/Provider/OneLoop/VertexLimitExists.lean),
   and the frozen anchor is sealed by it (D-13 records the provider's binder
@@ -193,7 +203,7 @@ SEALED_THIS_TURN: 3 theorems — QED.OneLoop.tendsto_energyFirstIntegral_iff_ver
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
 | Project build | `nice -n 5 lake build` | success; 2918 jobs; no warnings |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (42 Lean files) |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (44 Lean files) |
 | Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` at the earlier landing; on 2026-11-08 on `QED.OneLoop.vertexLimit_existsUnique`, its provider, and every exported theorem of the five new modules (transient files, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |
@@ -211,9 +221,6 @@ proof.
 ## Remaining obligations and next bounded tasks
 
 1. **Carriers.**
-   - Equality of the closed-form spinors with the source's boost definition
-     (38.12). This is needed before the source definition of the magnetic
-     moment, which uses (64.11)–(64.12).
    - On-shell momenta as a carrier, and the on-shell sandwich structure:
      independence of the bilinears $\bar u'\gamma^\mu u$ and
      $\bar u'S^{\mu\nu}q_\nu u$ for $q\neq0$, the uniqueness half of O-15.
