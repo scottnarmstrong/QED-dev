@@ -90,9 +90,11 @@ def render(data: dict) -> str:
         ["git", "ls-files", "-z", "--", "*.lean"], cwd=ROOT,
         check=True, capture_output=True, text=True,
     ).stdout
-    lean_count = sum(bool(path) for path in tracked.split("\0"))
-    lines.extend(["", f"**Tracked Lean source files:** {lean_count}. "
-                  "Documentation milestones do not count as proved physics."])
+    lean_paths = [path for path in tracked.split("\0") if path]
+    lean_lines = sum(len((ROOT / path).read_text(encoding="utf-8").splitlines())
+                     for path in lean_paths)
+    lines.extend(["", f"**Tracked Lean source files:** {len(lean_paths)}. "
+                  f"**Total lines of Lean code:** {lean_lines:,}."])
     return "\n".join(lines)
 
 

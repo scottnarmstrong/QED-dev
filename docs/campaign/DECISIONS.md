@@ -24,6 +24,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-14 | 2026-11-08 | Packet 2 (one-loop vertex, form-factor decomposition, and the one-loop anomaly headline) approved as written and frozen | Author |
 | D-15 | 2026-11-08 | Packet 3 (vertex function, charge condition, counterterm shift, and F₁(0) = 1) approved as written and frozen | Author |
 | D-16 | 2026-11-08 | Packet 4a (response magnetic moment and the one-loop Landé factor; spinor definitions) approved as written and frozen | Author |
+| D-17 | 2026-11-08 | Design of packet 4b (source definition of the magnetic moment): next milestone; absolute convergence of the position integral; real compact rotationally invariant packets | Author |
 
 ## Pending author rulings
 
@@ -531,3 +532,28 @@ refute-first audit found both PROVED. It confirmed:
 - The response is read from the amputated vertex with on-shell spinors.
 - The order of limits is q → 0⁺ first, at fixed regulators, then
   m_γ → 0⁺ and Λ → ∞ jointly (D-5).
+
+## D-17. Design of packet 4b (author ruling)
+
+**Ruling.** On 2026-11-08 the author decided three design questions for the
+source's wave-packet definition of the magnetic moment ((64.4)–(64.7);
+ruling D-9):
+
+1. **Order.** Packet 4b comes before L1.VERTEX (the Wick-expansion
+   derivation of the vertex, D-8).
+2. **The position integral.** The source's
+   μ = ∫d³x x¹⟨e|J²(x)|e⟩ / ⟨e|e⟩ comes from the non-decaying vector
+   potential A = (0, Bx, 0). The formal definition uses the undamped integral
+   and requires its **absolute convergence**. The proof must therefore show
+   that the packet's current density decays fast enough that
+   ∫|x||⟨e|J²(x)|e⟩| < ∞. No damping of the field and no momentum-space
+   shortcut is used. This needs smoothness of the vertex in the momenta near
+   the packet's support, and Fourier decay estimates.
+3. **Wave packets.** Real, rotationally invariant packets
+   f(p⃗) = φ(|p⃗|²/λ²), with φ real, smooth, compactly supported, and not
+   identically zero. "Sharply peaked" means λ → 0⁺. The expectation value is
+   normalized by ⟨e|e⟩, so no normalization constant is needed. Real φ has no
+   orbital part, as the source intends.
+
+**Scope.** These are design rulings. The exact declarations of packet 4b go
+through the usual review and approval.
