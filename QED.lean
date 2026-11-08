@@ -52,6 +52,8 @@ public import QED.OneLoop.FormFactorSmooth
 public import QED.OneLoop.PacketAmplitude
 public import QED.OneLoop.SourceLandeFactor
 public import QED.Integration.PacketMoment
+public import QED.Algebra.SpinorSmooth
+public import QED.OneLoop.PacketAmplitudeSmooth
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization
@@ -119,6 +121,8 @@ are proved infrastructure:
 * `QED.Integration.PacketMoment`: absolute convergence and the value of the first
   position moment of a two-momentum Fourier integral of a smooth compactly supported
   amplitude (Fourier inversion at the origin in `QED.Integration.PacketMomentInversion`).
+* `QED.Algebra.SpinorSmooth`: smoothness of on-shell spinors and their adjoints;
+* `QED.OneLoop.PacketAmplitudeSmooth`: the packet amplitude is `C^∞` with compact support.
 
 Author-approved frozen declarations live under `QED/Frozen/` and are bound by
 `QED/Frozen/manifest.json` (checked by `scripts/check_frozen_anchors.py`). The
