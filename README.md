@@ -31,9 +31,11 @@ condition (63.1), the counterterm shift (O-8), and $F_1(0)=1$. Packet 4a
 and proves the one-loop Landé factor $g\to2(1+\alpha/2\pi)$ (64.17). All are
 sealed and independently audited.
 
-Remaining one-loop work: the source's wave-packet definition of the magnetic
-moment, with its equivalence to the response definition (packet 4b), and the
-derivation of the vertex from the order-$e^3$ Wick expansion (L1.VERTEX). See the
+Packet 4b (D-18) fixes the source's own wave-packet definition of the magnetic
+moment. Its theorems are stated and frozen, and their proofs are in progress:
+the equivalence of the two definitions, and $g\to2(1+\alpha/2\pi)$ for the
+source definition. The derivation of the vertex from the order-$e^3$ Wick
+expansion (L1.VERTEX) also remains. See the
 [campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
@@ -63,7 +65,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 65. **Total lines of Lean code:** 7,698.
+**Tracked Lean source files:** 74. **Total lines of Lean code:** 8,007.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.

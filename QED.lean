@@ -42,6 +42,11 @@ public import QED.Frozen.OneLoop.ChargeNormalizationLimit
 public import QED.Frozen.OneLoop.IsResponseMagneticMoment
 public import QED.Frozen.OneLoop.ResponseMagneticMomentExistsUnique
 public import QED.Frozen.OneLoop.LandeFactorLimit
+public import QED.Frozen.OneLoop.OneParticleMomentum
+public import QED.Frozen.OneLoop.PacketCurrentDensity
+public import QED.Frozen.OneLoop.PacketNormSq
+public import QED.Frozen.OneLoop.SourceMagneticMoment
+public import QED.OneLoop.OneParticle
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization

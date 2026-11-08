@@ -85,6 +85,10 @@
     {
       "date": "2026-11-08",
       "change": "Sealed packet 4a's (R) and (R'); an independent refute-first audit found them PROVED. The one-loop Lande factor g = 4 m mu / e of the response magnetic moment tends to 2(1 + alpha/2pi) with the charge-normalized counterterm, jointly as m_gamma -> 0+ and Lambda -> oo. L1.OBSERVABLE is in_progress: the source's wave-packet definition and the equivalence O-24 (packet 4b) remain."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Author approved packet 4b as written (D-18). Froze (W0) oneParticleMomentum, (W1) packetCurrentDensity, (W2) packetNormSq, and (W3) sourceMagneticMoment, the source's wave-packet definition of the magnetic moment (64.4)-(64.9) with the packets of D-17, and the theorem goals (W4) O-24 (absolute convergence of the position integral and the packet limit equals the response moment) and (W5) the source Lande factor g -> 2(1 + alpha/2pi), as DRAFT_SORRY with quarantined placeholder providers."
     }
   ],
   "tracks": [
@@ -121,7 +125,7 @@
         {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "done", "evidence": ["QED/Integration/FeynmanParameter.lean", "QED/Integration/SpatialIntegral.lean", "QED/OneLoop/VertexEnergyFirst.lean", "QED/OneLoop/VertexSpatial.lean", "QED/Frozen/OneLoop/VertexLimitExists.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.LIMITS", "title": "Finiteness and required regulator limits", "status": "done", "evidence": ["QED/OneLoop/PauliLimit.lean", "QED/Frozen/OneLoop/PauliFormFactorLimit.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.COEFFICIENT", "title": "Exact first coefficient C1 = 1/2", "status": "done", "evidence": ["QED/Frozen/OneLoop/PauliFormFactorLimit.lean", "QED/Provider/OneLoop/PauliFormFactorLimit.lean", "docs/campaign/DECISIONS.md", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
-        {"id": "L1.OBSERVABLE", "title": "Magnetic-coupling interpretation of F2(0)", "status": "in_progress", "evidence": ["QED/Frozen/OneLoop/LandeFactorLimit.lean", "QED/OneLoop/MagneticResponse.lean", "docs/campaign/STATUS.md"]},
+        {"id": "L1.OBSERVABLE", "title": "Magnetic-coupling interpretation of F2(0)", "status": "in_progress", "evidence": ["QED/Frozen/OneLoop/LandeFactorLimit.lean", "QED/OneLoop/MagneticResponse.lean", "QED/Frozen/OneLoop/SourceMagneticMoment.lean", "QED/Frozen/OneLoop/SourceMagneticMomentLimit.lean", "docs/campaign/STATUS.md"]},
         {"id": "L1.ASSEMBLY", "title": "Complete theorem assembled, audited, and reproducible", "status": "planned", "evidence": []}
       ]
     },

@@ -25,6 +25,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-15 | 2026-11-08 | Packet 3 (vertex function, charge condition, counterterm shift, and F₁(0) = 1) approved as written and frozen | Author |
 | D-16 | 2026-11-08 | Packet 4a (response magnetic moment and the one-loop Landé factor; spinor definitions) approved as written and frozen | Author |
 | D-17 | 2026-11-08 | Design of packet 4b (source definition of the magnetic moment): next milestone; absolute convergence of the position integral; real compact rotationally invariant packets | Author |
+| D-18 | 2026-11-08 | Packet 4b (wave-packet current density, source magnetic moment, equivalence O-24, and the source Landé factor) approved as written and frozen | Author |
 
 ## Pending author rulings
 
@@ -557,3 +558,57 @@ ruling D-9):
 
 **Scope.** These are design rulings. The exact declarations of packet 4b go
 through the usual review and approval.
+
+## D-18. Packet 4b approved (author ruling)
+
+**Ruling.** On 2026-11-08 the author approved packet 4b. The approved text
+was the exact Lean shown to the author, in one untracked scratch file with
+SHA-256 `ec2af13ba6062a3c8e308423fa1b600041f2f598dbf01f53456e14bbfdc51231`.
+
+Before approval, an independent refute-first reviewer checked the packet
+against (64.4)–(64.9), (3.11), (3.18), (41.5), D-9 and D-17. It found no
+blocker and no error. Its numerical checks confirmed:
+
+- the tree vertex gives g → 2 as λ → 0⁺, with an O(λ²) approach;
+- the position integral, computed directly, agrees with the reduced formula
+  to about 10⁻⁶;
+- the phase, the (2π)³ factors, and the cancellation of the derivative terms
+  on the packet profile.
+
+Its two recommended fixes were applied to the text the author saw: the O-3
+identification is stated in (W₁)'s docstring, and (W₅) carries an existence
+conjunct, as (R′) does. Four smaller suggestions were also applied: the
+names `packetNormSq` and `integrable_and_tendsto_sourceMagneticMoment`, and
+the docstring citations of (3.11) and D-17.
+
+**Frozen anchors** (bound by [`QED/Frozen/manifest.json`](../../QED/Frozen/manifest.json)):
+
+| Anchor | Export | Kind |
+| --- | --- | --- |
+| (W₀) `QED/Frozen/OneLoop/OneParticleMomentum.lean` | `QED.OneLoop.oneParticleMomentum` | definition, (ω, k⃗) with ω from (3.11) |
+| (W₁) `QED/Frozen/OneLoop/PacketCurrentDensity.lean` | `QED.OneLoop.packetCurrentDensity` | definition, ⟨e\|J²(x)\|e⟩ from (64.4), (64.8)–(64.9) |
+| (W₂) `QED/Frozen/OneLoop/PacketNormSq.lean` | `QED.OneLoop.packetNormSq` | definition, ⟨e\|e⟩ with (41.5) |
+| (W₃) `QED/Frozen/OneLoop/SourceMagneticMoment.lean` | `QED.OneLoop.sourceMagneticMoment` | definition, the source definition (64.4)–(64.7) |
+| (W₄) `QED/Frozen/OneLoop/SourceMagneticMomentLimit.lean` | `QED.OneLoop.integrable_and_tendsto_sourceMagneticMoment` | theorem (O-24), `DRAFT_SORRY` |
+| (W₅) `QED/Frozen/OneLoop/SourceLandeFactorLimit.lean` | `QED.OneLoop.landeFactor_sourceMagneticMoment_limit` | theorem (g → 2(1 + α/2π)), `DRAFT_SORRY` |
+
+Each file holds its declaration byte for byte as approved. The `pp.all`
+output of all six equals that of the approved scratch file, up to the names
+of compiler-generated auxiliary proofs. The lemmas `dot_oneParticleMomentum`
+and `oneParticleMomentum_pos` are in the ordinary module
+`QED/OneLoop/OneParticle.lean`, as the author was told. (W₁) passes their
+proofs to the vertex function. Proofs are irrelevant, and the lemma
+statements are fixed by the vertex function's binders.
+
+**Points stated to the author with the packet:**
+
+- The current matrix element is ū₊(k′)V^μ(k′,k)u₊(k), with unit electron
+  residues and no photon-leg factor (O-3), as for the response definition.
+  The reviewer found that any photon-leg factor c(q²) with c(0) = 1 leaves
+  the source μ unchanged at every λ.
+- (W₄) requires absolute convergence of ∫x¹⟨J²⟩, the integral that
+  defines μ. The stronger ∫|x||⟨J²⟩| < ∞ displayed in D-17 also holds, but is
+  not part of the statement.
+- The profile condition is that φ is nonzero somewhere on [0, ∞), since only
+  those values enter.
+- The packet limit comes first, so λ₀ may depend on m_γ, Λ and Z₁.
