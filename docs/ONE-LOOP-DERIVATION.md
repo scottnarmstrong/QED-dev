@@ -329,3 +329,69 @@ the parameter domain where integrability and the limits are proved (for
 example $m_\gamma,\Lambda,\epsilon>0$ and $q^2\ge0$), or state results as
 `Tendsto`/`HasSum`-style relations. Choosing between these is part of preparing
 the review packet.
+
+### Proposed anchor surface for the first review packets
+
+This is a plan, not a set of declarations; nothing here can be approved as
+written. It fixes the **order** in which exact declarations are prepared. The
+freezing rules require an existence-and-uniqueness theorem to be proved before
+any object the source defines by a characterization is introduced
+([launch brief](ORCHESTRATOR-LAUNCH.md#exact-declarations-and-the-approval-gate)).
+Three objects in the chain are of that kind:
+
+- the Minkowski loop integral under M1, a limit as $\epsilon\to0^+$;
+- the form factors (63.18), the unique coefficients of a decomposition;
+- the finite part of $Z_1$, fixed by the condition (63.1).
+
+**Packet 1: the regulated one-loop vertex.**
+
+| Step | Declaration (planned) | Kind |
+| --- | --- | --- |
+| 1a | The regulated propagators: $\tilde S(\not p)=(-\not p+m)/(p^2+m^2-i\epsilon)$, and the Pauli–Villars photon factor $\frac{1}{k^2+m_\gamma^2-i\epsilon}-\frac{1}{k^2+\Lambda^2-i\epsilon}$ | literal definitions (source formulas with the D-5 regulator) |
+| 1b | The integrand of (62.40), as a $4\times4$ complex matrix for each $\mu$, per unit $e^3$ | literal definition |
+| 1c | The energy-first iterated integral over $\mathbb R\times\mathbb R^3$ | definition of a generic operation; used only inside statements that assert integrability |
+| 1d | **Well-definedness (frozen theorem goal):** for $m>0$, $0<m_\gamma<\Lambda$, and on-shell positive-energy $p,p'$ with $q^2\ge0$, the inner and outer integrals are integrable for every small $\epsilon>0$, and the iterated integral has a unique limit as $\epsilon\to0^+$ | $\exists!$ theorem |
+| 1e | After 1d is proved and audited: $V^\mu_{1\,\mathrm{loop}}(p',p;m_\gamma,\Lambda)$ as that limit, landed with its characterization theorem | definition and theorem |
+
+**Packet 2: the Pauli form factor and the headline.**
+
+| Step | Declaration (planned) | Kind |
+| --- | --- | --- |
+| 2a | **Decomposition (frozen theorem goal):** for on-shell $p\neq p'$ with $q^2>0$, there is a unique pair $(A,B)$ with $\bar u_{s'}(p')V^\mu_{1\,\mathrm{loop}}u_s(p)=\bar u_{s'}(p')[A\gamma^\mu-\tfrac{i}{m}BS^{\mu\nu}q_\nu]u_s(p)$ for all $\mu,s,s'$. This is O-15 for the loop. The counterterm only shifts $A$ (O-8), so $F_2$ is the $B$ of the loop. | $\exists!$ theorem |
+| 2b | After 2a: $F_2^{(1)}(p',p;m_\gamma,\Lambda)$ as the coefficient of $e^2$, with its characterization | definition and theorem |
+| 2c | **Headline (frozen theorem goal):** $F_2^{(1)}\to\frac{1}{8\pi^2}$ jointly as $q^2\to0^+$ over on-shell pairs, $m_\gamma\to0^+$, and $\Lambda\to\infty$. Since $r=e^2/4\pi^2$, this is $[r]F_2(0)=\tfrac12$. | theorem |
+
+The joint limit avoids defining $F_2(0)$ as another limit object. It also
+avoids presupposing that $F_2^{(1)}$ depends on $(p,p')$ only through $q^2$.
+The joint limit holds by the dominated bound of
+[REGULARIZATION.md, section 6](REGULARIZATION.md#6-regulator-dependence-of-the-target-and-bounded-feasibility).
+
+**Later packets.**
+
+- **Wick derivation (D-8):** a theorem that the 1PI order-$e^3$ part of the
+  Wick expansion is exactly the vertex of packet 1, together with the
+  counterterm (O-1, O-2).
+- **Charge condition and $Z_1$:** an $\exists!$ theorem, then a definition (O-17).
+- **Magnetic moment (D-9):** the source and response definitions, O-21, O-22,
+  and the equivalence O-24.
+
+**Carrier choices still to settle in the packet.**
+
+- Parameters: $\epsilon$, $m_\gamma$, $\Lambda$, and $m$ are either positive-real
+  subtypes or reals with hypotheses. Subtypes avoid off-source values in the
+  literal definitions, where Lean's $x/0=0$ would apply.
+- On-shell pairs as a subtype of $(\mathbb R^4)^2$.
+- The filter for the joint limit in 2c.
+- Matrix-valued integrals entrywise. `Matrix (Fin 4) (Fin 4) ℂ` has no default
+  normed-space instance in Mathlib, and integrating entry by entry avoids
+  choosing a matrix norm.
+
+A transient feasibility probe (untracked and deleted, 2026-11-08) elaborated
+these shapes against the current carriers: steps 1a–1c, and the statement form
+of 1d with entrywise integrability and an $\exists!$ limit along
+$\epsilon\to0^+$. The probe is not a candidate declaration. Its only role was
+to confirm that the packet can be written with the existing infrastructure.
+
+Each candidate command is elaborated in a transient file and reviewed
+independently against (62.40), (63.18), and (63.20) before it is shown to the
+author.

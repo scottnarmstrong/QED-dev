@@ -143,9 +143,12 @@ proof.
    - Wick contractions with fermionic signs for the order-$e^3$ expansion (D-8).
    - One-particle states, wave packets, and one-particle current matrix
      elements for the source definition of the magnetic moment (D-9).
-3. **Exact declarations.** Once the carriers exist, prepare the regulated
-   one-loop vertex (62.40) and the existence-and-uniqueness theorem for the form
-   factors (O-15) as transient, elaborated commands. Obtain an independent
+3. **Exact declarations.** Prepare packet 1 as planned in
+   [ONE-LOOP-DERIVATION.md](../ONE-LOOP-DERIVATION.md#proposed-anchor-surface-for-the-first-review-packets):
+   the regulated propagators, the (62.40) integrand, the energy-first integral,
+   and the well-definedness theorem for the $\epsilon\to0^+$ limit. Then
+   prepare packet 2: the form-factor decomposition (O-15) and the headline, both
+   as transient, elaborated commands. Obtain an independent
    source/binder review, then bring the author a review packet. Nothing is
    frozen before approval.
 
