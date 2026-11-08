@@ -36,7 +36,7 @@ theorem integrable_and_tendsto_sourceMagneticMoment (e Z₁ m mγ Λ : ℝ) (hm 
       Tendsto (fun lam => sourceMagneticMoment e Z₁ m mγ Λ hm hmγ hΛ φ lam) (𝓝[>] 0)
         (𝓝 (μ : ℂ)) :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.OneLoop.integrable_and_tendsto_sourceMagneticMoment
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

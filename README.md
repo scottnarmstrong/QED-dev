@@ -31,11 +31,12 @@ condition (63.1), the counterterm shift (O-8), and $F_1(0)=1$. Packet 4a
 and proves the one-loop Landé factor $g\to2(1+\alpha/2\pi)$ (64.17). All are
 sealed and independently audited.
 
-Packet 4b (D-18) fixes the source's own wave-packet definition of the magnetic
-moment. Its theorems are stated and frozen, and their proofs are in progress:
-the equivalence of the two definitions, and $g\to2(1+\alpha/2\pi)$ for the
-source definition. The derivation of the vertex from the order-$e^3$ Wick
-expansion (L1.VERTEX) also remains. See the
+Packet 4b (D-18) adds the source's own wave-packet definition of the magnetic
+moment, $\mu=\int d^3x\,x^1\langle e|J^2(x)|e\rangle/\langle e|e\rangle$, and
+proves that its position integral converges absolutely, that it agrees with the
+response definition as the packet narrows, and so that $g\to2(1+\alpha/2\pi)$
+for the source definition too. Remaining one-loop work: the derivation of the
+vertex from the order-$e^3$ Wick expansion (L1.VERTEX). See the
 [campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
@@ -59,13 +60,13 @@ become precise; changes to their scope must be recorded.
 | --- | ---: | --- | --- |
 | Campaign setup | 4/4 | `██████████` 100% | Complete |
 | Sources and exact specification | 3/4 | `███████░░░` 75% | In progress |
-| Complete one-loop calculation | 4/8 | `█████░░░░░` 50% | In progress |
+| Complete one-loop calculation | 5/8 | `██████░░░░` 62% | In progress |
 | Numerical certification pilot | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Complete two-loop calculation | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 82. **Total lines of Lean code:** 9,353.
+**Tracked Lean source files:** 83. **Total lines of Lean code:** 9,903.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.

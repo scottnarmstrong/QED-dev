@@ -2068,7 +2068,7 @@
         "module": "QED.Provider.OneLoop.SourceMagneticMomentLimit",
         "export": "QED.Provider.OneLoop.integrable_and_tendsto_sourceMagneticMoment"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "5d30211f19dc98879967112ae99450d4953609154d5a40f9f9dec3f17fb52813",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {
@@ -2191,7 +2191,7 @@
         "module": "QED.Provider.OneLoop.SourceLandeFactorLimit",
         "export": "QED.Provider.OneLoop.landeFactor_sourceMagneticMoment_limit"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "0b00120dc16ca81c1384b614384b718a25018df904503b600582f8d9235b3eb3",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {

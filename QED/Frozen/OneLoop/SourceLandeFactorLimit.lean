@@ -36,7 +36,7 @@ theorem landeFactor_sourceMagneticMoment_limit (e m : ℝ) (he : e ≠ 0) (hm : 
           ‖4 * (m : ℂ) * sourceMagneticMoment e Z₁ m mγ Λ hm hmγ hΛ φ lam / e
             - 2 * (1 + e ^ 2 / (8 * Real.pi ^ 2))‖ < η :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.OneLoop.landeFactor_sourceMagneticMoment_limit
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

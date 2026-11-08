@@ -612,3 +612,30 @@ statements are fixed by the vertex function's binders.
 - The profile condition is that φ is nonzero somewhere on [0, ∞), since only
   those values enter.
 - The packet limit comes first, so λ₀ may depend on m_γ, Λ and Z₁.
+
+**Sealed.** (W₄) and (W₅) were frozen as `DRAFT_SORRY` in `d1d4688` and then
+sealed by their providers. The (W₄) proof writes the current density as the
+two-momentum Fourier integral of the packet amplitude
+F(k, k′) = w(k′) w(k) M(k′, k). It then uses these facts:
+
+- F is smooth with compact support;
+- the first position moment converges absolutely (decay like (1 + |x|)⁻⁴,
+  with no damping of the field) and equals (2π)³ (i/2) ∫ (∂ₖ − ∂ₖ′)F on the
+  diagonal (Fourier inversion at the origin);
+- the derivatives of the weights cancel on the diagonal;
+- the narrow-packet limit of the resulting weighted average;
+- the Breit-frame response gives (∂ₖ − ∂ₖ′)M = −4imμ at rest.
+
+(W₅) applies the sealed (W₄) to the sealed (R) and (R′).
+
+An independent refute-first audit found both PROVED. It confirmed:
+
+- the frozen bytes against the approved scratch file, and unchanged ABI
+  hashes;
+- that the provider binders match the frozen statements, with no excess
+  hypotheses;
+- that the proof consumes the intended steps, with no vacuous route;
+- non-vacuity by Lean witnesses (a `ContDiffBump` profile, μ from (R));
+- the sign and constant of the moment formula and D(0) = −4imμ,
+  numerically;
+- standard axioms only.
