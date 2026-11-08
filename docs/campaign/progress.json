@@ -65,6 +65,10 @@
     {
       "date": "2026-11-08",
       "change": "Proved the equality of the closed-form spinors with the source's boost construction (38.12) (Algebra/SpinorBoost), and the analytic facts for charge renormalization (OneLoop/ChargeRenormalization: the loop's A depends only on q^2 on shell, the loop sandwich at p' = p is e A(0) u'gamma u, and A(q^2) is continuous at 0+). Packet 3 (charge condition (63.1), counterterm shift O-8, and F1(0) = 1) drafted, independently reviewed, and proved transiently against its exact text."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Author approved packet 3 as written (D-15). Froze (J) vertexFunction (62.39), (K0) IsChargeNormalized (63.1)-(63.2), and the theorem goals (K) exists-unique Z1, (N) counterterm shift (O-8), and (M) F1(0) = 1 at fixed regulators as DRAFT_SORRY, with quarantined providers using QED/OneLoop/ChargeCondition.lean."
     }
   ],
   "tracks": [

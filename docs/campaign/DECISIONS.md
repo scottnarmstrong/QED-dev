@@ -22,6 +22,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-12 | 2026-11-08 | Packet 1b (the Minkowski and Dirac definitions in packet 1's closure) approved as written and frozen | Author |
 | D-13 | 2026-11-08 | Provider binder convention for sealing theorem anchors whose binders precede the colon | Orchestrator |
 | D-14 | 2026-11-08 | Packet 2 (one-loop vertex, form-factor decomposition, and the one-loop anomaly headline) approved as written and frozen | Author |
+| D-15 | 2026-11-08 | Packet 3 (vertex function, charge condition, counterterm shift, and F₁(0) = 1) approved as written and frozen | Author |
 
 ## Pending author rulings
 
@@ -439,3 +440,33 @@ no defect in (F′), (G), or (I). It confirmed:
 - That the counterterm only shifts A (O-8) is the source's interpretation,
   not a theorem here.
 - F₂(0) is replaced by the joint limit.
+
+## D-15. Packet 3 approved (author ruling)
+
+**Ruling.** On 2026-11-08 the author approved packet 3. The approved text was
+the exact Lean shown to the author, in an untracked scratch file with SHA-256
+`9b5be9259ed1d44de2ca1b8460354a60d4958f5b4b880c9c1821622ebb600b7a`.
+
+Before approval, an independent refute-first reviewer checked the packet
+against (62.39), (63.1)–(63.3), (64.2), and decision D-5. It found no blocker
+and no error, and it proved (K), (N), and (M) itself. Its docstring findings
+and its suggested name for (N) were applied to the text the author saw. Its
+numerics confirmed the necessity of the order of limits in (M): the slope of
+F₁ at q² = 0 grows like ln(m/m_γ), so a joint limit would be false.
+
+**Frozen anchors** (bound by [`QED/Frozen/manifest.json`](../../QED/Frozen/manifest.json)):
+
+| Anchor | Export | Kind |
+| --- | --- | --- |
+| (J) `QED/Frozen/OneLoop/VertexFunction.lean` | `QED.OneLoop.vertexFunction` | definition, literal (62.39) through order e³ |
+| (K₀) `QED/Frozen/OneLoop/IsChargeNormalized.lean` | `QED.OneLoop.IsChargeNormalized` | definition, literal predicate (63.1)–(63.2) |
+| (K) `QED/Frozen/OneLoop/ChargeConditionExistsUnique.lean` | `QED.OneLoop.existsUnique_isChargeNormalized` | theorem |
+| (N) `QED/Frozen/OneLoop/CountertermShift.lean` | `QED.OneLoop.isFormFactorPair_vertexOneLoop_iff_vertexFunction` | theorem (obligation O-8) |
+| (M) `QED/Frozen/OneLoop/ChargeNormalizationLimit.lean` | `QED.OneLoop.isFormFactorPair_vertexFunction_dirac_limit` | theorem (F₁(0) = 1, (64.2)) |
+
+The theorems were frozen as `DRAFT_SORRY`, with providers that use the shared
+facts in `QED/OneLoop/ChargeCondition.lean`. A script confirmed that every
+frozen docstring and declaration is byte-identical to the approved text.
+
+**Consequence.** (N) proves O-8, so packet 2's scope limit "the counterterm
+only shifts A is an interpretation" no longer applies.
