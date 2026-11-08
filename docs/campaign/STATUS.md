@@ -150,6 +150,21 @@ SEALED_THIS_TURN: 1 — QED.OneLoop.vertexLimit_existsUnique (packet 1, (E)), se
   - `QED/OneLoop/NumeratorReduction.lean`: the $d=4$ contraction of the
     numerator, and its on-shell reduction (63.14)–(63.17). The $(p'-p)^\mu$
     coefficient is odd under $x\leftrightarrow1-x$.
+  - `QED/OneLoop/VertexSpatial.lean`, `VertexFormFactors.lean`, and
+    `PauliLimit.lean`:
+    - the closed form
+      $(1/i)\lim=\frac{e^3}{16\pi^2}\int dF_3\,[\ln(D_\Lambda/D_{m_\gamma})\gamma^\mu+\tilde N^\mu/(2D_{m_\gamma})-\tilde N^\mu/(2D_\Lambda)]$;
+    - its sandwich between on-shell Dirac solutions, which equals
+      $e\,\bar u'[A\gamma^\mu-\frac im BS^{\mu\nu}q_\nu]u$ with explicit $A$ and
+      $B=\frac{e^2}{8\pi^2}\int dF_3\,(x_3-x_3^2)m^2(1/D_{m_\gamma}-1/D_\Lambda)$
+      (`sandwich_vertexLimit`);
+    - the joint limit of the normalized $B$, which is $1$ as $m_\gamma\to0^+$,
+      $\Lambda\to\infty$, $q^2\to0^+$ (`tendsto_integral_pauliIntegrand`),
+      also in $\epsilon$–$\delta$ form.
+
+    These are the analytic contents of packet 2's goals (G) (existence) and
+    (I). The proofs of (G) and (I) remain to be assembled once packet 2 is
+    approved and frozen.
   - `QED/Algebra/FormFactorIndependence.lean`: gamma traces, and the
     independence of $\bar u'\gamma^\mu u$ and $\bar u'S^{\mu\nu}q_\nu u$ for
     $q^2>0$ (the uniqueness half of O-15).
@@ -175,7 +190,7 @@ SEALED_THIS_TURN: 1 — QED.OneLoop.vertexLimit_existsUnique (packet 1, (E)), se
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
 | Project build | `nice -n 5 lake build` | success; 2918 jobs; no warnings |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (29 Lean files) |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (32 Lean files) |
 | Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` at the earlier landing; on 2026-11-08 on `QED.OneLoop.vertexLimit_existsUnique`, its provider, and every exported theorem of the five new modules (transient files, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |

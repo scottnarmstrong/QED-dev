@@ -19,6 +19,9 @@ public import QED.OneLoop.VertexAlgebra
 public import QED.OneLoop.VertexEnergyFirst
 public import QED.OneLoop.VertexClosedForm
 public import QED.OneLoop.NumeratorReduction
+public import QED.OneLoop.VertexSpatial
+public import QED.OneLoop.VertexFormFactors
+public import QED.OneLoop.PauliLimit
 public import QED.Integration.SpatialIntegral
 public import QED.Algebra.FormFactorIndependence
 public import QED.Frozen.OneLoop.ElectronPropagator
@@ -67,6 +70,11 @@ are proved infrastructure:
   symmetry of the Feynman measure;
 * `QED.OneLoop.NumeratorReduction`: the contraction of the numerator and its
   on-shell reduction (63.14)–(63.17);
+* `QED.OneLoop.VertexSpatial`: the spatial integral at fixed Feynman
+  parameters;
+* `QED.OneLoop.VertexFormFactors`: the closed form of the vertex, its on-shell
+  sandwich, and the explicit coefficients `A` and `B`;
+* `QED.OneLoop.PauliLimit`: the joint limit of the Pauli coefficient;
 * `QED.Integration.SpatialIntegral`: three-dimensional loop integrals;
 * `QED.Algebra.FormFactorIndependence`: gamma-matrix traces and the linear
   independence of the two on-shell vertex structures.
