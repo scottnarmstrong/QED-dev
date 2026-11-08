@@ -20,6 +20,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-10 | 2026-11-07 | The repository is licensed under Apache-2.0 | Author |
 | D-11 | 2026-11-08 | Packet 1 (regulated one-loop vertex integrand and its well-definedness) approved as written and frozen | Author |
 | D-12 | 2026-11-08 | Packet 1b (the Minkowski and Dirac definitions in packet 1's closure) approved as written and frozen | Author |
+| D-13 | 2026-11-08 | Provider binder convention for sealing theorem anchors whose binders precede the colon | Orchestrator |
 
 ## Pending author rulings
 
@@ -361,3 +362,25 @@ are rejected too.
 **Scope.** This closes [F-12](FINDINGS.md). Packet 1's meaning is now
 protected down to Mathlib. The definitions are immutable; a change requires an
 author-approved, versioned successor.
+
+## D-13. Provider binder convention for sealing
+
+**Decision.** A provider theorem for a frozen theorem anchor whose binders
+precede the colon states the same proposition with the same binders in the
+same order, with two changes:
+
+- the data binders are implicit;
+- the hypotheses are `:= by assumption` auto-parameters.
+
+**Reason.** The frozen-anchor guard accepts a `SEALED` body only of the form
+`by exact <export>` (or `by simpa using <export>`), with no arguments. Inside
+the anchor's proof the binders are local hypotheses, so a provider with
+explicit binders does not close the goal. With implicit data binders, Lean
+infers the data from the goal and discharges each hypothesis by `assumption`.
+`autoParam T _` is reducibly `T`, so the proposition is unchanged. The
+independent audit of (E) confirmed this: after erasing `autoParam`, the
+provider's type is `Expr.eqv` to the frozen type, and `isDefEq` holds at
+reducible transparency.
+
+**First use.** `QED.Provider.OneLoop.vertexLimit_existsUnique` seals packet 1's
+theorem (E) (D-11), on 2026-11-08.

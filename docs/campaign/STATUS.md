@@ -3,7 +3,7 @@
 [Campaign HQ](../../README.md) · [Decisions](DECISIONS.md) · [Findings](FINDINGS.md) ·
 [Progress ledger](progress.json)
 
-**As of 2026-11-08.** Phase 1 (fix the one-loop calculation), preparation stage.
+**As of 2026-11-08.** Phase 1 (fix the one-loop calculation). Packet 1's well-definedness theorem (E) is proved.
 
 Milestones (see the [ledger](progress.json)):
 
@@ -11,20 +11,19 @@ Milestones (see the [ledger](progress.json)):
 | --- | --- |
 | SPEC.SOURCE, SPEC.ROUTE, SPEC.ENV | done, on the evidence below |
 | SPEC.STATEMENTS | in progress: packets 1 and 1b approved and frozen (D-11, D-12); packet 2 pending |
-| L1.MODEL | in progress: algebra infrastructure only |
+| L1.MODEL | in progress: algebra infrastructure and the entrywise algebra of the frozen vertex integrand |
 | L1.PROJECTION | in progress: spinors, normalization, and the Gordon identity |
-| L1.INTEGRAL | in progress: energy integrals (O-7) only |
+| L1.INTEGRAL | in progress: O-5, O-6, O-7, and O-10 proved for the vertex; packet 1's theorem (E) proved. The closed forms (O-9, O-11) are open |
 
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 1 — QED/Frozen/OneLoop/VertexLimitExists.lean (QED.OneLoop.vertexLimit_existsUnique;
-               provider QED.Provider.OneLoop.VertexLimitExists, empty so far)
+DRAFT_ANCHORS: 0
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 0 theorems. Packet 1b's five definitions (metric, dot, lower,
-               gamma, slash) were frozen as SEALED definition anchors; they are
-               definitions, not proofs.
+SEALED_THIS_TURN: 1 — QED.OneLoop.vertexLimit_existsUnique (packet 1, (E)), sealed by
+               QED.Provider.OneLoop.vertexLimit_existsUnique; PROVED (checker, build,
+               standard axioms, independent refute-first audit)
 ```
 
 | Field | Value |
@@ -32,7 +31,8 @@ SEALED_THIS_TURN: 0 theorems. Packet 1b's five definitions (metric, dot, lower,
 | Model / prescription | Perturbative QED in Feynman gauge with the on-shell scheme, starting from a momentum-space Wick expansion at order $e^3$ (D-8). The one-loop pilot uses a Pauli–Villars photon (mass $\Lambda$) and a photon mass $m_\gamma$, with Minkowski loop integrals defined by the energy-first prescription M1 ([REGULARIZATION.md](../REGULARIZATION.md); D-5). The magnetic moment has two definitions, the source's wave-packet definition and the vertex response, proved equivalent (D-9). |
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
-| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11 (packet 1 approved and frozen), and D-12 (packet 1b approved and frozen, closing [F-12](FINDINGS.md)). |
+| Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. For every $\epsilon>0$ both integration stages of M1 are integrable, and the limit $\epsilon\to0^+$ exists and is unique. It does not identify the limit's value. |
+| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11 (packet 1 approved and frozen), and D-12 (packet 1b approved and frozen, closing [F-12](FINDINGS.md)). The next author decision is packet 2, which is being drafted. |
 
 ## Work completed
 
@@ -107,10 +107,37 @@ SEALED_THIS_TURN: 0 theorems. Packet 1b's five definitions (metric, dot, lower,
   author's instruction, and `jaumededios` was invited with write access. It is
   now licensed under Apache-2.0: `LICENSE`, plus the header line in every Lean
   file.
+- **Packet 1's theorem (E) proved** (2026-11-08). The proof is in
+  [`QED/Provider/OneLoop/VertexLimitExists.lean`](../../QED/Provider/OneLoop/VertexLimitExists.lean),
+  and the frozen anchor is sealed by it (D-13 records the provider's binder
+  convention). Route, for each fixed $\epsilon>0$:
+  - the four denominators are combined with Feynman parameters over the unit
+    square (O-5, `QED/Integration/FeynmanParameter.lean`);
+  - Fubini is applied on $\mathbb R\times[0,1]^2$, and the energy integral is
+    evaluated in closed form (O-6, `QED/Integration/ShiftedEnergyIntegral.lean`);
+  - the Pauli–Villars difference is bounded by $C(1+\|\vec\ell\|)^{-5}$,
+    uniformly in $\epsilon$.
+
+  The bound holds because the Feynman mass term satisfies
+  $D\ge\frac34\min(M^2,m^2)$, using $m_\gamma>0$ and $q^2\ge0$ on shell
+  (`QED/OneLoop/VertexAlgebra.lean`, `QED/Algebra/OnShell.lean`). Dominated
+  convergence, applied twice, gives the limit (O-10).
+
+  The supporting modules were written by three parallel workers with exact
+  target statements; the uniform bounds (`QED/Integration/LoopBounds.lean`) and
+  the assembly were written by the orchestrator. An independent refute-first
+  audit found no defect. It confirmed:
+  - the frozen bytes and the ABI hash;
+  - that the statement elaborates identically with only the frozen
+    definitions imported;
+  - that the provider's type is `Expr.eqv` to the frozen type after erasing
+    `autoParam`;
+  - that only the standard axioms are used, including a `leanchecker` replay;
+  - that every helper premise is discharged;
+  - that the mathematics holds when checked by hand.
 - **Frozen declarations** (D-11, D-12; [`QED/Frozen/manifest.json`](../../QED/Frozen/manifest.json)).
   - Packet 1: the regulated propagators, the (62.40) integrand, the
-    energy-first integral, and the theorem goal (E). (E) is `DRAFT_SORRY` with
-    an empty, quarantined provider.
+    energy-first integral, and the theorem (E), now sealed and proved.
   - Packet 1b: `metric`, `dot`, `lower`, `gamma`, and `slash`, moved into
     frozen files with unchanged names and unchanged elaborated meaning.
   - Every definition closure is transitive over frozen files. The guard
@@ -129,15 +156,16 @@ SEALED_THIS_TURN: 0 theorems. Packet 1b's five definitions (metric, dot, lower,
 | --- | --- | --- |
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
-| Project build | `nice -n 5 lake build` | success; 2912 jobs; the only warning is the registered `sorry` of (E) at `QED/Frozen/OneLoop/VertexLimitExists.lean:27:8` |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (19 Lean files) |
-| Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` (transient file, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
-| Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | one `sorry`: the registered `DRAFT_SORRY` body of (E), authorized by the manifest; nothing else |
+| Project build | `nice -n 5 lake build` | success; 2918 jobs; no warnings |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (24 Lean files) |
+| Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` at the earlier landing; on 2026-11-08 on `QED.OneLoop.vertexLimit_existsUnique`, its provider, and every exported theorem of the five new modules (transient files, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
+| Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |
 | Numerical sanity (not proofs) | `python3 scripts/numerics/one_loop_sanity.py` | all eight checks pass |
 | HQ consistency (not a proof check) | `python3 scripts/update_hq.py --check` | run at each landing |
 | Frozen-anchor guard | `python3 scripts/check_frozen_anchors.py --root . --manifest QED/Frozen/manifest.json` | `FROZEN-ANCHOR GUARD OK` (10 anchors); rejected all eight negative tests: at packet 1, a statement edit, a body edit, an unregistered `sorry`, a draft import, and a provider import; at packet 1b, a `metric` body edit (also reported as closure drift downstream), a whitespace-only docstring edit, and a second declaration in a frozen file |
 | Frozen ABI hashes | `python3 scripts/frozen_abi.py --check` | 10/10 OK. For packet 1b, `pp.all` output of each definition was byte-identical before and after the move. |
+| Independent audit of (E) | refute-first auditor, not the prover | PROVED: frozen bytes and ABI hash unchanged; the statement elaborates identically with only the frozen definitions imported; standard axioms (also replayed with `leanchecker`); no smuggled premise; the mathematics checked by hand. Its nits were addressed before landing (docstring, line length, lemma placement) |
 | Independent document review | refute-first reviewer (not the writer). It checked SOURCES, CONVENTIONS, REGULARIZATION, and ONE-LOOP-DERIVATION against the pinned PDFs: about 45 Srednicki citations, the dictionary and conventions numerically, and the integrals, bounds, and limits | No wrong source citation and no sign or normalization error in the load-bearing chain. 16 findings, all addressed before landing: 3 errors (an asymptotic stated for $n=1$; the remainder term of the photon-mass deficit; leg corrections listed as parts of the 1PI $V^\mu$), 5 weak claims, 8 nits |
 
 A documentation check is not a Lean build. A floating-point check is not a
@@ -152,20 +180,15 @@ proof.
    - On-shell momenta as a carrier, and the on-shell sandwich structure:
      independence of the bilinears $\bar u'\gamma^\mu u$ and
      $\bar u'S^{\mu\nu}q_\nu u$ for $q\neq0$, the uniqueness half of O-15.
-   - The energy-first Minkowski loop integral (prescription M1), with explicit
-     integrability, so that no definition depends on Lean's zero value for
-     non-integrable integrands.
 2. **Infrastructure the rulings add.**
    - Wick contractions with fermionic signs for the order-$e^3$ expansion (D-8).
    - One-particle states, wave packets, and one-particle current matrix
      elements for the source definition of the magnetic moment (D-9).
-3. **Packet 1 follow-up.** Prove (E) in the provider `QED.Provider.OneLoop.VertexLimitExists`, then seal
-   and audit it.
-4. **Exact declarations.** Prepare packet 2 as planned in
+3. **Exact declarations.** Prepare packet 2 as planned in
    [ONE-LOOP-DERIVATION.md](../ONE-LOOP-DERIVATION.md#proposed-anchor-surface-for-the-first-review-packets):
-   the form-factor decomposition (O-15) and the headline, as transient,
-   elaborated commands. They depend on the one-loop vertex of step 1e, which can
-   be defined only after (E) is proved. Obtain an independent
+   the one-loop vertex of step 1e defined from (E), now that (E) is proved,
+   with its characterization theorem; the form-factor decomposition (O-15); and
+   the headline. Each is drafted as a transient, elaborated command. Obtain an independent
    source/binder review, then bring the author a review packet. Nothing is
    frozen before approval.
 

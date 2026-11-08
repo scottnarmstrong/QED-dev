@@ -10,11 +10,17 @@ public import QED.Algebra.Dirac
 public import QED.Algebra.Gordon
 public import QED.Algebra.Contraction
 public import QED.Algebra.Spinor
+public import QED.Algebra.OnShell
 public import QED.Integration.EnergyIntegral
+public import QED.Integration.ShiftedEnergyIntegral
+public import QED.Integration.FeynmanParameter
+public import QED.Integration.LoopBounds
+public import QED.OneLoop.VertexAlgebra
 public import QED.Frozen.OneLoop.ElectronPropagator
 public import QED.Frozen.OneLoop.PhotonPropagator
 public import QED.Frozen.OneLoop.VertexIntegrand
 public import QED.Frozen.OneLoop.EnergyFirstIntegral
+public import QED.Frozen.OneLoop.VertexLimitExists
 
 /-!
 # QED
@@ -35,18 +41,28 @@ are proved infrastructure:
   `d = 4`;
 * `QED.Algebra.Spinor`: the Dirac adjoint, on-shell spinors with the Dirac
   equation and normalization (38.17), and the Gordon identity for spinors;
+* `QED.Algebra.OnShell`: reverse Cauchy–Schwarz for future-pointing vectors
+  on one mass shell, so `q² ≥ 0`;
 * `QED.Integration.EnergyIntegral`: the loop-energy integrals evaluated by
   analytic continuation to the slit plane, which replaces Wick rotation
-  (obligation O-7).
+  (obligation O-7);
+* `QED.Integration.ShiftedEnergyIntegral`: shifted quadratic-numerator energy
+  integrals, boundary values from the upper half plane, and Lipschitz bounds
+  for complex powers;
+* `QED.Integration.FeynmanParameter`: Feynman parameters for two and three
+  denominators (obligation O-5);
+* `QED.Integration.LoopBounds`: uniform lower bounds for regulated
+  denominators;
+* `QED.OneLoop.VertexAlgebra`: the entrywise factorization of the frozen
+  vertex integrand, its numerator's structure, and the Feynman combination of
+  its denominators.
 
 Author-approved frozen declarations live under `QED/Frozen/` and are bound by
 `QED/Frozen/manifest.json` (checked by `scripts/check_frozen_anchors.py`). The
 Minkowski and Dirac definitions (`metric`, `dot`, `lower`, `gamma`, `slash`) are
 frozen in `QED/Frozen/Algebra/` and re-exported by `QED.Algebra.Minkowski` and
-`QED.Algebra.Dirac`. The root imports the sealed frozen definitions. It
-deliberately does **not** import the `DRAFT_SORRY` theorem anchor
-`QED.Frozen.OneLoop.VertexLimitExists` or its quarantined provider
-`QED.Provider.OneLoop.VertexLimitExists`; `lake build` still compiles both
-through the library globs. See `README.md` and
+`QED.Algebra.Dirac`. The root imports every frozen anchor. The theorem anchor
+`QED.Frozen.OneLoop.VertexLimitExists` is sealed: its proof is
+`QED.Provider.OneLoop.vertexLimit_existsUnique`. See `README.md` and
 `docs/campaign/STATUS.md` for the campaign state.
 -/

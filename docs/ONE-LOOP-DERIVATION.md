@@ -132,11 +132,22 @@ integrated in the outer integral.
   with $\int dF_3$ as in (62.42) and $D_M$ as in (62.44), with $m_\gamma\to M$.
   The source states the formula as (14.9)–(14.11) and leaves its proof to
   problem 14.1. K(8)–K(15), pp. 2–4, display the parametrization and the
-  shift.
+  shift. **Proved in Lean** (2026-11-08) in `QED/Integration/FeynmanParameter.lean`.
+  - It is parametrized by the unit square: $x_1=yx$, $x_2=y(1-x)$, $x_3=1-y$,
+    with weight $2y$.
+  - It is proved for any three denominators in the open lower half plane, as
+    `inv_mul_mul_eq_integral_feynmanMeasure`.
+  - Completing the square is `QED.OneLoop.feynman_combination` and
+    `dot_cons_add` (`QED/OneLoop/VertexAlgebra.lean`).
 - **O-6 (prescription M1, inner steps).** For fixed $\vec\ell$ and $\epsilon>0$:
   - the energy integral converges absolutely;
   - Fubini holds on (simplex) $\times\ \mathbb R_{\ell^0}$;
   - the real energy shift is valid.
+
+  **Proved in Lean** (2026-11-08) for the one-loop vertex, inside the provider
+  of packet 1's theorem (E): `integrable_jointF` and
+  `integral_vertexIntegrand_time` in `QED/Provider/OneLoop/VertexLimitExists.lean`,
+  with the shifted closed forms of `QED/Integration/ShiftedEnergyIntegral.lean`.
 - **O-7 (energy integrals; the Wick rotation).** For $w\in\mathbb C\setminus[0,\infty)$:
   $$\int_{\mathbb R}\frac{dt}{(-t^2+w)^3}=-\frac{3\pi}{8}(-w)^{-5/2},\qquad
   \int_{\mathbb R}\frac{t^2\,dt}{(-t^2+w)^3}=-\frac{\pi}{8}(-w)^{-3/2},$$
@@ -161,6 +172,15 @@ integrated in the outer integral.
 - **O-10 ($\epsilon\to0^+$).** All limits exist by dominated convergence, using
   $D_M\ge m^2M^2/(m^2+M^2)>0$ for on-shell $p,p'$ and $q^2\ge0$
   ([REGULARIZATION.md, section 5](REGULARIZATION.md#5-renormalization-conditions-gauge-and-order-of-limits)).
+  **Proved in Lean** (2026-11-08) for the existence of the vertex limit, as
+  packet 1's theorem (E), sealed by `QED.Provider.OneLoop.vertexLimit_existsUnique`.
+  - The Lean bound is $D_M\ge(1-y)M^2+y^2m^2\ge\frac34\min(M^2,m^2)$
+    (`QED.OneLoop.feynmanMass_ge`, `feynmanMass_pos`). $q^2\ge0$ comes from
+    reverse Cauchy–Schwarz (`QED.Minkowski.dot_le_neg_sq_of_onShell`).
+  - The Pauli–Villars difference is bounded by $C(1+\|\vec\ell\|)^{-5}$,
+    uniformly in $\epsilon>0$ (`norm_timeT_sub_le`).
+  - The spatial shift and the tensor reduction of O-9 were not needed for
+    existence. They remain open for the closed forms (O-11).
 - **O-11 (closed forms).** As $\epsilon\to0^+$,
   $$\int_M\frac{d^4\tilde\ell}{(2\pi)^4}\frac{1}{(\tilde\ell^2+D-i\epsilon)^3}=\frac{i}{32\pi^2D},\qquad
   \int_M\frac{d^4\tilde\ell}{(2\pi)^4}\left[\frac{\tilde\ell^2}{(\tilde\ell^2+D_{m_\gamma})^3}-\frac{\tilde\ell^2}{(\tilde\ell^2+D_\Lambda)^3}\right]=\frac{i}{16\pi^2}\ln\frac{D_\Lambda}{D_{m_\gamma}}.$$
@@ -345,8 +365,9 @@ Three objects in the chain are of that kind:
 
 **Packet 1: the regulated one-loop vertex.** Approved as written and frozen on
 2026-11-08 (decision D-11). Steps 1a–1c are the frozen definitions (A)–(C), the
-operation is (D), and 1d is the frozen theorem goal (E), which is `DRAFT_SORRY`.
-Step 1e follows once (E) is proved and audited. The infrastructure definitions
+operation is (D), and 1d is the frozen theorem (E). (E) was proved on
+2026-11-08: it is sealed by `QED.Provider.OneLoop.vertexLimit_existsUnique` and passed an
+independent audit. Step 1e is therefore next. The infrastructure definitions
 in its closure (`metric`, `dot`, `lower`, `gamma`, `slash`) were approved as
 packet 1b and frozen the same day (decision D-12).
 

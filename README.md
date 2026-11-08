@@ -20,8 +20,9 @@ evaluation that replaces Wick rotation, and the **first author-approved frozen
 declarations** (packets 1 and 1b, D-11 and D-12): the regulated propagators,
 the one-loop vertex integrand (62.40), the energy-first integral, the Minkowski
 and Dirac definitions they are built from, and the theorem goal that the
-regulated vertex is well defined. That theorem goal is frozen and not yet
-proved (`DRAFT_SORRY`). No physics result is proved. See the
+regulated vertex is well defined. **That theorem is now proved** (sealed and
+independently audited). It establishes that the regulated one-loop vertex
+exists; the value of $F_2$ is not yet proved. See the
 [campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
@@ -51,7 +52,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 19. Documentation milestones do not count as proved physics.
+**Tracked Lean source files:** 24. Documentation milestones do not count as proved physics.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.
@@ -184,10 +185,10 @@ python3 scripts/check_frozen_anchors.py --root . --manifest QED/Frozen/manifest.
 python3 scripts/frozen_abi.py --check        # elaborated ABI hashes of frozen exports
 ```
 
-`lake build` prints one expected warning: the registered `by sorry` of the
-frozen theorem goal `QED.OneLoop.vertexLimit_existsUnique` (`DRAFT_SORRY`). The
-frozen-anchor guard fails on any other `sorry`, on any change to frozen bytes,
-and on any import of the draft anchor or its provider outside the allowlist.
+`lake build` prints no warnings. The frozen-anchor guard fails on any `sorry`
+not registered as a `DRAFT_SORRY` body (none is registered at present), on any
+change to frozen bytes, on a sealed body other than `by exact <provider export>`,
+and on any import of a draft anchor or its provider outside the allowlist.
 
 Every regular `.lean` file must be a Lean module. Landings run the
 `lean-project-architecture` skill's `check_lean_modules.py --root .`. On this

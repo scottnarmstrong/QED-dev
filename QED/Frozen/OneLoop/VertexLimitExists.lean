@@ -35,7 +35,7 @@ theorem vertexLimit_existsUnique (e m mγ Λ : ℝ) (hm : 0 < m) (hmγ : 0 < mγ
     ∃! V : ℂ, Tendsto (fun ε : ℝ => energyFirstIntegral fun ℓ => vertexIntegrand e m mγ Λ ε p' p μ ℓ i j)
       (𝓝[>] 0) (𝓝 V) :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.OneLoop.vertexLimit_existsUnique
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

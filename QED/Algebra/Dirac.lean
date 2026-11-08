@@ -50,6 +50,18 @@ namespace QED.Dirac
 def beta : Matrix (Fin 4) (Fin 4) ℂ :=
   !![0, 0, 1, 0; 0, 0, 0, 1; 1, 0, 0, 0; 0, 1, 0, 0]
 
+/-- The slash is additive: `(a + b)̸ = a̸ + b̸`. -/
+theorem slash_add (a b : Fin 4 → ℝ) : slash (a + b) = slash a + slash b := by
+  simp only [slash, Minkowski.lower, Pi.add_apply, mul_add, Finset.sum_add_distrib,
+    Complex.ofReal_add, add_smul]
+
+/-- The slash is homogeneous: `(c a)̸ = c a̸` for real `c`. -/
+theorem slash_smul (c : ℝ) (a : Fin 4 → ℝ) : slash (c • a) = (c : ℂ) • slash a := by
+  have h : ∀ μ, Minkowski.lower (c • a) μ = c * Minkowski.lower a μ := fun μ => by
+    simp only [Minkowski.lower, Pi.smul_apply, smul_eq_mul, Finset.mul_sum]
+    exact Finset.sum_congr rfl fun ν _ => by ring
+  simp only [slash, h, Complex.ofReal_mul, Finset.smul_sum, smul_smul]
+
 /-- The Lorentz generators `S^{μν} = (i/4) [γ^μ, γ^ν]` (eq. (40.3)). -/
 noncomputable def lorentzGen (μ ν : Fin 4) : Matrix (Fin 4) (Fin 4) ℂ :=
   (I / 4) • (gamma μ * gamma ν - gamma ν * gamma μ)

@@ -41,6 +41,10 @@
     {
       "date": "2026-11-08",
       "change": "Author approved packet 1b as written (D-12). Froze the five infrastructure definitions in packet 1's closure (QED.Minkowski.metric, dot, lower; QED.Dirac.gamma, slash) one per file under QED/Frozen/Algebra/ with unchanged export names; pp.all output unchanged by the move, packet 1 bytes and ABI hashes unchanged. All manifest closures are now transitive over frozen files. F-12 resolved. Corrected the slash citation in CONVENTIONS.md to (37.24). SPEC.STATEMENTS remains in_progress (packet 2 pending)."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Proved packet 1's theorem (E) QED.OneLoop.vertexLimit_existsUnique: Feynman parameters (O-5), Fubini and closed-form energy integrals (O-6), a uniform (1 + |l|)^-5 Pauli-Villars bound from D >= 3/4 min(M^2, m^2) on shell, and dominated convergence (O-10). New modules: QED/Integration/{FeynmanParameter,ShiftedEnergyIntegral,LoopBounds}.lean, QED/OneLoop/VertexAlgebra.lean, QED/Algebra/OnShell.lean, and the provider. Sealed the frozen anchor with the provider (D-13: implicit data binders and by-assumption auto-params). An independent refute-first audit found no defect; standard axioms only. L1.MODEL and L1.INTEGRAL remain in_progress."
     }
   ],
   "tracks": [
@@ -71,10 +75,10 @@
       "title": "Complete one-loop calculation",
       "kind": "formal",
       "items": [
-        {"id": "L1.MODEL", "title": "Concrete regularized perturbative model and algebra", "status": "in_progress", "evidence": ["QED/Algebra/Minkowski.lean", "QED/Algebra/Dirac.lean", "QED/Algebra/Contraction.lean"]},
+        {"id": "L1.MODEL", "title": "Concrete regularized perturbative model and algebra", "status": "in_progress", "evidence": ["QED/Algebra/Minkowski.lean", "QED/Algebra/Dirac.lean", "QED/Algebra/Contraction.lean", "QED/OneLoop/VertexAlgebra.lean"]},
         {"id": "L1.VERTEX", "title": "Vertex expansion, diagram coefficient, and signs", "status": "planned", "evidence": []},
         {"id": "L1.PROJECTION", "title": "On-shell Dirac reduction and form-factor extraction", "status": "in_progress", "evidence": ["QED/Algebra/Gordon.lean", "QED/Algebra/Spinor.lean"]},
-        {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "in_progress", "evidence": ["QED/Integration/EnergyIntegral.lean"]},
+        {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "in_progress", "evidence": ["QED/Integration/EnergyIntegral.lean", "QED/Integration/FeynmanParameter.lean", "QED/Integration/ShiftedEnergyIntegral.lean", "QED/Integration/LoopBounds.lean", "QED/Provider/OneLoop/VertexLimitExists.lean"]},
         {"id": "L1.LIMITS", "title": "Finiteness and required regulator limits", "status": "planned", "evidence": []},
         {"id": "L1.COEFFICIENT", "title": "Exact first coefficient C1 = 1/2", "status": "planned", "evidence": []},
         {"id": "L1.OBSERVABLE", "title": "Magnetic-coupling interpretation of F2(0)", "status": "planned", "evidence": []},
