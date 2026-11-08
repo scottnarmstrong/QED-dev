@@ -33,7 +33,7 @@ theorem landeFactor_isResponseMagneticMoment_limit (e m : ℝ) (he : e ≠ 0) (h
         IsResponseMagneticMoment e Z₁ m mγ Λ hm hmγ hΛ μ →
         |4 * m * μ / e - 2 * (1 + e ^ 2 / (8 * Real.pi ^ 2))| < η :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.OneLoop.landeFactor_isResponseMagneticMoment_limit
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

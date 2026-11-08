@@ -22,7 +22,7 @@ theorem existsUnique_isResponseMagneticMoment (e Z₁ m mγ Λ : ℝ) (hm : 0 < 
     (hmγ : 0 < mγ) (hΛ : 0 < Λ) :
     ∃! μ : ℝ, IsResponseMagneticMoment e Z₁ m mγ Λ hm hmγ hΛ μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.OneLoop.existsUnique_isResponseMagneticMoment
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

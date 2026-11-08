@@ -512,8 +512,16 @@ its docstring findings were applied to the text the author saw.
 | (R′) `QED/Frozen/OneLoop/LandeFactorLimit.lean` | `QED.OneLoop.landeFactor_isResponseMagneticMoment_limit` | theorem (g → 2(1 + α/2π)) |
 
 The `pp.all` output of each moved definition is unchanged. (R) and (R′)
-were frozen as `DRAFT_SORRY`, with providers that use
-`QED/OneLoop/MagneticResponse.lean`.
+were frozen as `DRAFT_SORRY` in `3c630c5`, with providers that use
+`QED/OneLoop/MagneticResponse.lean`, and were then sealed. An independent
+refute-first audit found both PROVED. It confirmed:
+
+- the frozen bytes, and `pp.all` equality of the moved definitions;
+- statement equality;
+- standard axioms only;
+- that μ = e(Z₁ + A(0) + B(0))/(2m) and Z₁ = 1 − A(0) are derived;
+- the e = 0 case, and non-vacuity, by Lean witnesses;
+- the Breit identities numerically.
 
 **Scope** (stated to the author with the packet):
 

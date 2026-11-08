@@ -40,6 +40,8 @@ public import QED.Frozen.OneLoop.ChargeConditionExistsUnique
 public import QED.Frozen.OneLoop.CountertermShift
 public import QED.Frozen.OneLoop.ChargeNormalizationLimit
 public import QED.Frozen.OneLoop.IsResponseMagneticMoment
+public import QED.Frozen.OneLoop.ResponseMagneticMomentExistsUnique
+public import QED.Frozen.OneLoop.LandeFactorLimit
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization
@@ -99,8 +101,8 @@ are proved infrastructure:
 
 Author-approved frozen declarations live under `QED/Frozen/` and are bound by
 `QED/Frozen/manifest.json` (checked by `scripts/check_frozen_anchors.py`). The
-Minkowski and Dirac definitions (`metric`, `dot`, `lower`, `gamma`, `slash`) are
-frozen in `QED/Frozen/Algebra/` and re-exported by `QED.Algebra.Minkowski` and
+Minkowski, Dirac, and spinor definitions (`metric`, `dot`, `lower`, `gamma`, `slash`,
+`lorentzGen`, `beta`, `bar`, `restSpinor`, `spinor`) are frozen in `QED/Frozen/Algebra/` and re-exported by `QED.Algebra.Minkowski` and
 `QED.Algebra.Dirac`, together with `lorentzGen`. The root imports every sealed frozen anchor;
 it does not import `DRAFT_SORRY` anchors or their quarantined providers. The theorem anchor
 `QED.Frozen.OneLoop.VertexLimitExists` is sealed: its proof is

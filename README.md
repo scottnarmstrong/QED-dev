@@ -23,11 +23,17 @@ and Dirac definitions they are built from, and the theorem goal that the
 regulated vertex is well defined. Both that theorem and **packet 2** (D-14) are
 now proved, sealed, and independently audited. Packet 2 defines the one-loop
 vertex, proves that its form-factor decomposition (63.18) exists and is
-unique, and proves the headline: the one-loop Pauli form factor tends to
+unique, and proves the Pauli form-factor limit: the one-loop Pauli form factor tends to
 $e^2/8\pi^2=\alpha/2\pi$ ($C_1=1/2$) jointly as $q^2\to0^+$, $m_\gamma\to0^+$, and
-$\Lambda\to\infty$. Scope: this is the (62.40) diagram under the project's
-regulators. The Wick-expansion derivation with the counterterm and the
-magnetic-moment interpretation are the remaining one-loop milestones. See the
+$\Lambda\to\infty$. Packet 3 (D-15) adds the charge
+condition (63.1), the counterterm shift (O-8), and $F_1(0)=1$. Packet 4a
+(D-16) defines the magnetic moment from the vertex's static magnetic response
+and proves the one-loop Landé factor $g\to2(1+\alpha/2\pi)$ (64.17). All are
+sealed and independently audited.
+
+Remaining one-loop work: the source's wave-packet definition of the magnetic
+moment, with its equivalence to the response definition (packet 4b), and the
+derivation of the vertex from the order-$e^3$ Wick expansion (L1.VERTEX). See the
 [campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·

@@ -16,8 +16,8 @@ Proves packet 4a's headline goal (R′) (decision D-16) as
 `QED.Provider.OneLoop.landeFactor_isResponseMagneticMoment_limit`, with the binder convention of
 decision D-13. Under the charge condition `Z₁ = 1 - A(0)`, the response magnetic moment is
 `μ = e (1 + B(0)) / (2m)`, so `g = 4 m μ / e = 2 (1 + B(0))`, and `B(0) → e²/(8π²)` jointly in the
-regulators. Until the frozen anchor is sealed, this module is quarantined; it must never import
-the frozen anchor.
+regulators. The frozen anchor is sealed with this theorem (2026-11-08).
+This module must never import the frozen anchor.
 -/
 
 @[expose] public section

@@ -1571,7 +1571,7 @@
         "module": "QED.Provider.OneLoop.ResponseMagneticMomentExistsUnique",
         "export": "QED.Provider.OneLoop.existsUnique_isResponseMagneticMoment"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "9ce5452241a6dd4eb25cd85e7013b01c8fd4c15adb739835b4d5c1da10a663cb",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {
@@ -1678,7 +1678,7 @@
         "module": "QED.Provider.OneLoop.LandeFactorLimit",
         "export": "QED.Provider.OneLoop.landeFactor_isResponseMagneticMoment_limit"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "d08ff4f9ee3160bb7a37360e49af868bac1701dc0f6d9874695bdceb07ca7433",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {
