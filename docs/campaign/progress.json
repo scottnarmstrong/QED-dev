@@ -89,6 +89,10 @@
     {
       "date": "2026-11-08",
       "change": "Author approved packet 4b as written (D-18). Froze (W0) oneParticleMomentum, (W1) packetCurrentDensity, (W2) packetNormSq, and (W3) sourceMagneticMoment, the source's wave-packet definition of the magnetic moment (64.4)-(64.9) with the packets of D-17, and the theorem goals (W4) O-24 (absolute convergence of the position integral and the packet limit equals the response moment) and (W5) the source Lande factor g -> 2(1 + alpha/2pi), as DRAFT_SORRY with quarantined placeholder providers."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Infrastructure for packet 4b's (W4): smoothness of parametric integrals over a compact set (Integration/ParametricSmooth), and C-infinity smoothness of the form factors A(q^2) and B(q^2) on (-4m^2, oo) at fixed regulators (OneLoop/FormFactorSmooth)."
     }
   ],
   "tracks": [

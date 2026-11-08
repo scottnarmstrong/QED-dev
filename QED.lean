@@ -47,6 +47,8 @@ public import QED.Frozen.OneLoop.PacketCurrentDensity
 public import QED.Frozen.OneLoop.PacketNormSq
 public import QED.Frozen.OneLoop.SourceMagneticMoment
 public import QED.OneLoop.OneParticle
+public import QED.Integration.ParametricSmooth
+public import QED.OneLoop.FormFactorSmooth
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization
@@ -103,6 +105,10 @@ are proved infrastructure:
 * `QED.Integration.SpatialIntegral`: three-dimensional loop integrals;
 * `QED.Algebra.FormFactorIndependence`: gamma-matrix traces and the linear
   independence of the two on-shell vertex structures.
+* `QED.Integration.ParametricSmooth`: smoothness of parametric integrals over
+  a compact set;
+* `QED.OneLoop.FormFactorSmooth`: the form factors `A(q²)` and `B(q²)` are
+  `C^∞` on `(-4m², ∞)` at fixed regulators.
 
 Author-approved frozen declarations live under `QED/Frozen/` and are bound by
 `QED/Frozen/manifest.json` (checked by `scripts/check_frozen_anchors.py`). The
