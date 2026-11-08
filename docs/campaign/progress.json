@@ -33,6 +33,10 @@
     {
       "date": "2026-11-08",
       "change": "Proved obligation O-7: the loop-energy integrals evaluated on the slit plane by analytic continuation from the real axis, which replaces Wick rotation (QED/Integration/EnergyIntegral.lean). L1.INTEGRAL is marked in_progress; the M1 integral definition itself is still open."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Author approved packet 1 as written (D-11). Froze four definitions (electron and Pauli-Villars photon propagators, the (62.40) integrand, the energy-first integral) and one theorem goal (well-definedness of the epsilon -> 0+ limit, DRAFT_SORRY, quarantined with an empty provider), bound by QED/Frozen/manifest.json. Installed the frozen-anchor guard and ABI hashes. Recorded process gap F-12 (unfrozen infrastructure in the closure; packet 1b proposed). SPEC.STATEMENTS is in_progress."
     }
   ],
   "tracks": [
@@ -55,7 +59,7 @@
         {"id": "SPEC.SOURCE", "title": "Pin full one-loop derivation and convention sheet", "status": "done", "evidence": ["docs/SOURCES.md", "docs/CONVENTIONS.md", "sources/manifest.json", "docs/campaign/FINDINGS.md", "docs/campaign/STATUS.md"]},
         {"id": "SPEC.ROUTE", "title": "Select and justify regulator and renormalization route", "status": "done", "evidence": ["docs/REGULARIZATION.md", "docs/ONE-LOOP-DERIVATION.md", "docs/campaign/DECISIONS.md", "docs/campaign/STATUS.md"]},
         {"id": "SPEC.ENV", "title": "Inventory Mathlib and pin a working Lean environment", "status": "done", "evidence": ["docs/MATHLIB-INVENTORY.md", "lean-toolchain", "lakefile.lean", "lake-manifest.json", "docs/campaign/STATUS.md"]},
-        {"id": "SPEC.STATEMENTS", "title": "Review and approve exact Lean declarations and dependency plan", "status": "planned", "evidence": []}
+        {"id": "SPEC.STATEMENTS", "title": "Review and approve exact Lean declarations and dependency plan", "status": "in_progress", "evidence": ["QED/Frozen/manifest.json", "docs/campaign/DECISIONS.md"]}
       ]
     },
     {

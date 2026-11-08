@@ -18,6 +18,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-8 | 2026-11-07 | The formal model starts from a momentum-space Wick expansion at order $e^3$ (ruling on P-1) | Author |
 | D-9 | 2026-11-07 | Both magnetic-moment definitions, proved equivalent (ruling on P-2) | Author |
 | D-10 | 2026-11-07 | The repository is licensed under Apache-2.0 | Author |
+| D-11 | 2026-11-08 | Packet 1 (regulated one-loop vertex integrand and its well-definedness) approved as written and frozen | Author |
 
 ## Pending author rulings
 
@@ -235,3 +236,67 @@ license as described in the file LICENSE."
 **Scope.** The license covers the project's own files. It does not cover the
 third-party source documents listed in [SOURCES.md](../SOURCES.md). Their bytes
 are not committed, and their own terms apply (D-2).
+
+## D-11. Packet 1 approved (author ruling)
+
+**Ruling.** On 2026-11-08 the author approved packet 1 "as written". The
+approved text was the complete Lean source shown to the author, five
+declarations with their imports and docstrings, in an untracked scratch file
+with SHA-256 `86b49730af675b5e83913e14ff4139649f6ea9180c40e3eff5e092819b6b44de`.
+Before approval, an independent refute-first reviewer had checked the
+declarations against rule 9, (62.12), (62.29), and (62.40), together with
+decision D-5. The review found no blockers and no errors and judged (E) true.
+Its one weak finding and four nits were applied to the text the author saw.
+
+**Frozen anchors** (bound by [`QED/Frozen/manifest.json`](../../QED/Frozen/manifest.json)):
+
+| Anchor | Export | Kind and state |
+| --- | --- | --- |
+| (A) `QED/Frozen/OneLoop/ElectronPropagator.lean` | `QED.OneLoop.electronPropagator` | definition, `SEALED` |
+| (B) `QED/Frozen/OneLoop/PhotonPropagator.lean` | `QED.OneLoop.photonPropagator` | definition, `SEALED` |
+| (C) `QED/Frozen/OneLoop/VertexIntegrand.lean` | `QED.OneLoop.vertexIntegrand` | definition, `SEALED` |
+| (D) `QED/Frozen/OneLoop/EnergyFirstIntegral.lean` | `QED.OneLoop.energyFirstIntegral` | definition, `SEALED` |
+| (E) `QED/Frozen/OneLoop/VertexLimitExists.lean` | `QED.OneLoop.vertexLimit_existsUnique` | theorem, `DRAFT_SORRY`, quarantined; provider `QED.Provider.OneLoop.vertexLimit_existsUnique` |
+
+**Packaging, as announced in the packet.**
+
+- Each declaration is the only public declaration of its own module file.
+- Each file imports what it needs. File (C) imports
+  `Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic` for `Real.pi`; the
+  combined packet file had obtained it transitively.
+- The proof body of (E) is placed between the guard's marker comments as
+  `by sorry`.
+
+A script confirmed that every docstring and declaration is byte-identical to
+the approved text, apart from that marker placement.
+
+**Guards.**
+
+- [`scripts/check_frozen_anchors.py`](../../scripts/check_frozen_anchors.py)
+  is a verbatim copy of the lean-orchestrator skill's checker. It checks:
+  - file, prefix, and suffix hashes;
+  - definition-closure hashes;
+  - one declaration per file;
+  - the module header;
+  - that the `DRAFT_SORRY` body is exactly `by sorry`;
+  - that nothing outside the allowlists imports or names the draft anchor or
+    its provider;
+  - that there are no other `sorry`s and no `axiom`s.
+- [`scripts/frozen_abi.py`](../../scripts/frozen_abi.py) recomputes the
+  elaborated ABI hashes. It uses `pp.all` printing: type and body for
+  definitions, statement only for theorems.
+- The guard was shown to reject five violations:
+  - an edited frozen statement;
+  - an edited definition body;
+  - an unregistered `sorry`;
+  - an import of the draft anchor;
+  - an import of the provider.
+
+**Scope.** Freezing makes these declarations immutable. A defect requires an
+author-approved, versioned successor and invalidates dependent evidence. (E)
+is `FROZEN_UNPROVED` until its provider proves it, it is sealed with
+`by exact QED.Provider.OneLoop.vertexLimit_existsUnique`, and a fresh audit
+passes. The definitions (A)–(C) depend on infrastructure definitions
+(`QED.Minkowski.metric`, `dot`, `lower`, `QED.Dirac.gamma`, `slash`) whose
+bodies were not displayed in packet 1. That gap is finding
+[F-12](FINDINGS.md); it is to be closed by packet 1b.

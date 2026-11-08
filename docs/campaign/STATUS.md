@@ -10,7 +10,7 @@ Milestones (see the [ledger](progress.json)):
 | Milestone | Status |
 | --- | --- |
 | SPEC.SOURCE, SPEC.ROUTE, SPEC.ENV | done, on the evidence below |
-| SPEC.STATEMENTS | planned: no exact declaration exists yet |
+| SPEC.STATEMENTS | in progress: packet 1 approved and frozen (D-11); packets 1b and 2 pending |
 | L1.MODEL | in progress: algebra infrastructure only |
 | L1.PROJECTION | in progress: spinors, normalization, and the Gordon identity |
 | L1.INTEGRAL | in progress: energy integrals (O-7) only |
@@ -18,10 +18,12 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 0 / none after inspection (no frozen files, no manifest)
-UNREGISTERED_SORRIES: 0 / none after inspection (grep for sorry/admit over QED/ and QED.lean)
-DRAFT_IMPORT_VIOLATIONS: 0 / none (no draft anchors exist)
-SEALED_THIS_TURN: 0
+DRAFT_ANCHORS: 1 — QED/Frozen/OneLoop/VertexLimitExists.lean (QED.OneLoop.vertexLimit_existsUnique;
+               provider QED.Provider.OneLoop.VertexLimitExists, empty so far)
+UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
+DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
+SEALED_THIS_TURN: 0 theorems. Packet 1 definitions (A)–(D) were frozen as SEALED
+               definition anchors; they are definitions, not proofs.
 ```
 
 | Field | Value |
@@ -29,7 +31,7 @@ SEALED_THIS_TURN: 0
 | Model / prescription | Perturbative QED in Feynman gauge with the on-shell scheme, starting from a momentum-space Wick expansion at order $e^3$ (D-8). The one-loop pilot uses a Pauli–Villars photon (mass $\Lambda$) and a photon mass $m_\gamma$, with Minkowski loop integrals defined by the energy-first prescription M1 ([REGULARIZATION.md](../REGULARIZATION.md); D-5). The magnetic moment has two definitions, the source's wave-packet definition and the vertex response, proved equivalent (D-9). |
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
-| Pending author decisions | none. Rulings received on 2026-11-07: D-8 (model starting point), D-9 (both magnetic-moment definitions, proved equivalent), D-10 (Apache-2.0); see [DECISIONS.md](DECISIONS.md). |
+| Pending author decisions | **Packet 1b**: approval of the exact bodies of `QED.Minkowski.metric`, `dot`, `lower`, `QED.Dirac.gamma`, and `slash`, to freeze packet 1's closure ([F-12](FINDINGS.md)). Earlier rulings: D-8, D-9, D-10, and D-11 (packet 1 approved and frozen, 2026-11-08). |
 
 ## Work completed
 
@@ -118,10 +120,12 @@ SEALED_THIS_TURN: 0
 | Project build | `nice -n 5 lake build` | success; 2901 jobs, no warnings |
 | Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (8 Lean files) |
 | Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` (transient file, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
-| Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
+| Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | one `sorry`: the registered `DRAFT_SORRY` body of (E), authorized by the manifest; nothing else |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |
 | Numerical sanity (not proofs) | `python3 scripts/numerics/one_loop_sanity.py` | all eight checks pass |
 | HQ consistency (not a proof check) | `python3 scripts/update_hq.py --check` | run at each landing |
+| Frozen-anchor guard | `python3 scripts/check_frozen_anchors.py --root . --manifest QED/Frozen/manifest.json` | `FROZEN-ANCHOR GUARD OK`; rejected all five negative tests (statement edit, body edit, unregistered `sorry`, draft import, provider import) |
+| Frozen ABI hashes | `python3 scripts/frozen_abi.py --check` | 5/5 OK |
 | Independent document review | refute-first reviewer (not the writer). It checked SOURCES, CONVENTIONS, REGULARIZATION, and ONE-LOOP-DERIVATION against the pinned PDFs: about 45 Srednicki citations, the dictionary and conventions numerically, and the integrals, bounds, and limits | No wrong source citation and no sign or normalization error in the load-bearing chain. 16 findings, all addressed before landing: 3 errors (an asymptotic stated for $n=1$; the remainder term of the photon-mass deficit; leg corrections listed as parts of the 1PI $V^\mu$), 5 weak claims, 8 nits |
 
 A documentation check is not a Lean build. A floating-point check is not a
@@ -143,12 +147,14 @@ proof.
    - Wick contractions with fermionic signs for the order-$e^3$ expansion (D-8).
    - One-particle states, wave packets, and one-particle current matrix
      elements for the source definition of the magnetic moment (D-9).
-3. **Exact declarations.** Prepare packet 1 as planned in
+3. **Packet 1 follow-ups.** Obtain approval of packet 1b ([F-12](FINDINGS.md)).
+   Prove (E) in the provider `QED.Provider.OneLoop.VertexLimitExists`, then seal
+   and audit it.
+4. **Exact declarations.** Prepare packet 2 as planned in
    [ONE-LOOP-DERIVATION.md](../ONE-LOOP-DERIVATION.md#proposed-anchor-surface-for-the-first-review-packets):
-   the regulated propagators, the (62.40) integrand, the energy-first integral,
-   and the well-definedness theorem for the $\epsilon\to0^+$ limit. Then
-   prepare packet 2: the form-factor decomposition (O-15) and the headline, both
-   as transient, elaborated commands. Obtain an independent
+   the form-factor decomposition (O-15) and the headline, as transient,
+   elaborated commands. They depend on the one-loop vertex of step 1e, which can
+   be defined only after (E) is proved. Obtain an independent
    source/binder review, then bring the author a review packet. Nothing is
    frozen before approval.
 

@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "manifest_state": "AUTHOR_APPROVED",
+  "seal_limits": {
+    "max_body_lines": 3,
+    "max_body_bytes": 240
+  },
+  "anchors": [
+    {
+      "id": "oneloop.electron_propagator_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-08",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-11-packet-1-approved-author-ruling",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+        "range": "rule 9 p.349; free propagator stated after (62.12) p.371"
+      },
+      "contract": {
+        "id": "srednicki.free_electron_propagator",
+        "version": "1"
+      },
+      "path": "QED/Frozen/OneLoop/ElectronPropagator.lean",
+      "export": "QED.OneLoop.electronPropagator",
+      "split_policy": {
+        "source_group": "srednicki.free_electron_propagator",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-11-packet-1-approved-author-ruling"
+      },
+      "abi_sha256": "282435e5136bbdc026baf2099f0ec3db403279e59d44e4c56f258432ce56784e",
+      "definition_closure": [],
+      "state": "SEALED",
+      "full_file_sha256": "3795db2b6a768cad363c54e526e879e4579f3f369bdc1bc620d703d34475ee58"
+    },
+    {
+      "id": "oneloop.photon_propagator_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-08",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-11-packet-1-approved-author-ruling",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+        "range": "(62.29) p.374 with the Pauli-Villars term of decision D-5"
+      },
+      "contract": {
+        "id": "srednicki.62.29.regulated_D5",
+        "version": "1"
+      },
+      "path": "QED/Frozen/OneLoop/PhotonPropagator.lean",
+      "export": "QED.OneLoop.photonPropagator",
+      "split_policy": {
+        "source_group": "srednicki.62.29.regulated_D5",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-11-packet-1-approved-author-ruling"
+      },
+      "abi_sha256": "bbacbbc416dfbacc33d8ad2aaedfb7ef3840c397324a17d2383b05b110efa782",
+      "definition_closure": [],
+      "state": "SEALED",
+      "full_file_sha256": "30ef99bc24e236e4a59ad6dc39fa97a7d71adf997ebb7fee6c7ba4a981c154fb"
+    },
+    {
+      "id": "oneloop.vertex_integrand_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-08",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-11-packet-1-approved-author-ruling",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+        "range": "(62.40) p.376"
+      },
+      "contract": {
+        "id": "srednicki.62.40.integrand",
+        "version": "1"
+      },
+      "path": "QED/Frozen/OneLoop/VertexIntegrand.lean",
+      "export": "QED.OneLoop.vertexIntegrand",
+      "split_policy": {
+        "source_group": "srednicki.62.40.integrand",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-11-packet-1-approved-author-ruling"
+      },
+      "abi_sha256": "35e2d180fd71e457bce314e63c791d0a64d5bd1163d70be12d0b425fc6a1ac67",
+      "definition_closure": [
+        {
+          "path": "QED/Frozen/OneLoop/ElectronPropagator.lean",
+          "sha256": "3795db2b6a768cad363c54e526e879e4579f3f369bdc1bc620d703d34475ee58"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/PhotonPropagator.lean",
+          "sha256": "30ef99bc24e236e4a59ad6dc39fa97a7d71adf997ebb7fee6c7ba4a981c154fb"
+        }
+      ],
+      "state": "SEALED",
+      "full_file_sha256": "e111289653263805020fb81483c0faeeeb189bb6ef5671232115d5fdc2fc5238"
+    },
+    {
+      "id": "oneloop.energy_first_integral_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-08",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-11-packet-1-approved-author-ruling",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+        "range": "prescription M1, docs/REGULARIZATION.md section 4 (decision D-5); loop measure of (62.40)"
+      },
+      "contract": {
+        "id": "qed_dev.prescription_M1",
+        "version": "1"
+      },
+      "path": "QED/Frozen/OneLoop/EnergyFirstIntegral.lean",
+      "export": "QED.OneLoop.energyFirstIntegral",
+      "split_policy": {
+        "source_group": "qed_dev.prescription_M1",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-11-packet-1-approved-author-ruling"
+      },
+      "abi_sha256": "576141f809de11f8a8fbacf9bbad26cb383ae80de749ad621011677d8b4549a7",
+      "definition_closure": [],
+      "state": "SEALED",
+      "full_file_sha256": "b6b24499ef053928d1d2e6ea17fb29561e7b1f93dc94888389479b02d637a9e9"
+    },
+    {
+      "id": "oneloop.vertex_limit_exists_unique_v1",
+      "kind": "theorem",
+      "author_approval": {
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-08",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-11-packet-1-approved-author-ruling",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+        "range": "(62.39)-(62.40) pp.375-376; well-definedness of the epsilon -> 0+ limit under prescription M1 (packet 1 step 1d)"
+      },
+      "contract": {
+        "id": "qed_dev.packet1.vertex_limit_exists_unique",
+        "version": "1"
+      },
+      "path": "QED/Frozen/OneLoop/VertexLimitExists.lean",
+      "export": "QED.OneLoop.vertexLimit_existsUnique",
+      "implementation": {
+        "module": "QED.Provider.OneLoop.VertexLimitExists",
+        "export": "QED.Provider.OneLoop.vertexLimit_existsUnique"
+      },
+      "split_policy": {
+        "source_group": "qed_dev.packet1.vertex_limit_exists_unique",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-11-packet-1-approved-author-ruling"
+      },
+      "abi_sha256": "dc4f6d0346ca84d721c88827a4ce4cf40e9884c0eeebfe1a512b14477d574a9f",
+      "definition_closure": [
+        {
+          "path": "QED/Frozen/OneLoop/ElectronPropagator.lean",
+          "sha256": "3795db2b6a768cad363c54e526e879e4579f3f369bdc1bc620d703d34475ee58"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/PhotonPropagator.lean",
+          "sha256": "30ef99bc24e236e4a59ad6dc39fa97a7d71adf997ebb7fee6c7ba4a981c154fb"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/VertexIntegrand.lean",
+          "sha256": "e111289653263805020fb81483c0faeeeb189bb6ef5671232115d5fdc2fc5238"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/EnergyFirstIntegral.lean",
+          "sha256": "b6b24499ef053928d1d2e6ea17fb29561e7b1f93dc94888389479b02d637a9e9"
+        }
+      ],
+      "state": "DRAFT_SORRY",
+      "prefix_sha256": "c9b7a45702b44766b825c8f489da1848f2ad8193d96eac3b5695c9793ec0a507",
+      "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
+      "draft_allowlist": {
+        "frozen_paths": [],
+        "audit_paths": []
+      }
+    }
+  ]
+}

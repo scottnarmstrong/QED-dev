@@ -343,7 +343,10 @@ Three objects in the chain are of that kind:
 - the form factors (63.18), the unique coefficients of a decomposition;
 - the finite part of $Z_1$, fixed by the condition (63.1).
 
-**Packet 1: the regulated one-loop vertex.**
+**Packet 1: the regulated one-loop vertex.** Approved as written and frozen on
+2026-11-08 (decision D-11). Steps 1a–1c are the frozen definitions (A)–(C), the
+operation is (D), and 1d is the frozen theorem goal (E), which is `DRAFT_SORRY`.
+Step 1e follows once (E) is proved and audited.
 
 | Step | Declaration (planned) | Kind |
 | --- | --- | --- |

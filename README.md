@@ -15,12 +15,12 @@ should produce reusable tools for real physics calculations.
 (Srednicki, chapters 62–64). The conventions are fixed, and the one-loop
 regulator route is chosen. The derivation is mapped step by step with its proof
 obligations exposed. A Lean package is pinned to Lean and Mathlib `v4.35.0`.
-Its only content so far is proved Dirac-algebra infrastructure: the Minkowski
-form, the Weyl gamma matrices with the Clifford relation, the contraction
-identities, on-shell spinors with their normalization, and the Gordon identity.
-There is also the loop-energy integral evaluation that replaces Wick rotation.
-No exact declaration
-has been approved or frozen, and no physics result is proved. See the
+It contains proved Dirac-algebra infrastructure, the loop-energy integral
+evaluation that replaces Wick rotation, and the **first author-approved frozen
+declarations** (packet 1, D-11): the regulated propagators, the one-loop vertex
+integrand (62.40), the energy-first integral, and the theorem goal that the
+regulated vertex is well defined. That theorem goal is frozen and not yet
+proved (`DRAFT_SORRY`). No physics result is proved. See the
 [campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
@@ -50,7 +50,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 8. Documentation milestones do not count as proved physics.
+**Tracked Lean source files:** 14. Documentation milestones do not count as proved physics.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.
@@ -157,10 +157,14 @@ See [Phase 1](docs/PROJECT-OUTLINE.md#phase-1--fix-the-one-loop-calculation).
 | [docs/campaign/progress.json](docs/campaign/progress.json) | Milestones, statuses, and completion evidence |
 | [sources/manifest.json](sources/manifest.json) | URLs, sizes, SHA-256 hashes, and licenses of pinned sources (bytes not committed) |
 | [lakefile.lean](lakefile.lean), [lean-toolchain](lean-toolchain), [QED.lean](QED.lean) | Lean package `qed`, pinned to Lean and Mathlib `v4.35.0` |
+| [QED/Frozen/](QED/Frozen) | Author-approved frozen declarations and their [manifest](QED/Frozen/manifest.json); immutable, checked by the frozen-anchor guard |
+| [QED/Provider/](QED/Provider) | Proof providers for frozen theorem goals; quarantined until the goal is sealed |
 | [QED/Integration/](QED/Integration) | Proved analysis: the loop-energy integrals by analytic continuation to the slit plane, which replaces Wick rotation (`EnergyIntegral.lean`) |
 | [QED/Algebra/](QED/Algebra) | Proved infrastructure: the mostly-plus Minkowski form (`Minkowski.lean`), the Weyl Dirac matrices (`Dirac.lean`), gamma-matrix products and the Gordon identity (`Gordon.lean`), the contraction identities (`Contraction.lean`), and on-shell spinors (`Spinor.lean`) |
 | [scripts/update_hq.py](scripts/update_hq.py) | Render or check the progress meters |
 | [scripts/fetch_sources.py](scripts/fetch_sources.py) | Fetch and verify the pinned source bytes |
+| [scripts/check_frozen_anchors.py](scripts/check_frozen_anchors.py) | Frozen-anchor guard (verbatim from the lean-orchestrator skill) |
+| [scripts/frozen_abi.py](scripts/frozen_abi.py) | Recompute and check elaborated ABI hashes of frozen exports |
 | [scripts/numerics/one_loop_sanity.py](scripts/numerics/one_loop_sanity.py) | Floating-point sanity checks of the one-loop algebra (not proofs) |
 | [AGENTS.md](AGENTS.md) | Scope, integrity rules, and shared-machine conventions |
 | [LICENSE](LICENSE) | Apache License, Version 2.0 |
@@ -175,7 +179,14 @@ lake build                                  # every module under QED/; reuses ca
 python3 scripts/update_hq.py --check        # HQ consistency (not a proof check)
 python3 scripts/fetch_sources.py            # verify pinned source bytes
 python3 scripts/numerics/one_loop_sanity.py # numerical sanity checks (not proofs)
+python3 scripts/check_frozen_anchors.py --root . --manifest QED/Frozen/manifest.json
+python3 scripts/frozen_abi.py --check        # elaborated ABI hashes of frozen exports
 ```
+
+`lake build` prints one expected warning: the registered `by sorry` of the
+frozen theorem goal `QED.OneLoop.vertexLimit_existsUnique` (`DRAFT_SORRY`). The
+frozen-anchor guard fails on any other `sorry`, on any change to frozen bytes,
+and on any import of the draft anchor or its provider outside the allowlist.
 
 Every regular `.lean` file must be a Lean module. Landings run the
 `lean-project-architecture` skill's `check_lean_modules.py --root .`. On this

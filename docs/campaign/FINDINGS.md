@@ -35,6 +35,7 @@ the PDF page.
 | F-9 | Secondary-source misprints | `kaplunovsky-vertex` K(25) index and "q² = 1" on p. 8 | verified |
 | F-10 | Candidate normalization issue | `ahkn-2012` projector (4.4) returns $F_2/m$; it is correct only in units $m=1$ | open |
 | F-11 | Candidate source misprint | `srednicki-draft` p. 383: wave-packet width "$a\ll1/m$" should apparently be $a\gg1/m$ | open; needs an independent check |
+| F-12 | Process gap | Packet 1's frozen definitions depend on infrastructure definitions whose bodies were not shown to the author and are not frozen | open; packet 1b proposed |
 
 ## F-1. Minkowski loop integrals are not absolutely convergent
 
@@ -180,3 +181,28 @@ selection.
 **Status.** Open. The orchestrator found it and has not had it independently
 checked. It matters because D-9 requires the formal source definition of $\mu$
 to state the limit of sharply peaked packets explicitly.
+
+## F-12. Infrastructure definitions in packet 1's closure were not shown or frozen
+
+**Kind.** Process gap, found by the orchestrator while freezing packet 1. It is
+not a source issue.
+
+**Evidence.** The frozen definitions use these infrastructure definitions:
+
+- (A) `electronPropagator` uses `QED.Minkowski.dot` and `QED.Dirac.slash`;
+- (B) `photonPropagator` uses `QED.Minkowski.metric` and `QED.Minkowski.dot`;
+- (C) `vertexIntegrand` uses `QED.Dirac.gamma`;
+- `slash` uses `QED.Minkowski.lower`, which uses `metric`.
+
+These definitions carry meaning and are committed with proved properties
+(Clifford relation, `dot_eq`, `lower_eq`). But their bodies were not displayed
+in the packet-1 review, and they live in ordinary modules. The frozen-anchor
+guard therefore does not detect a change to them, which would silently change
+the meaning of (A)–(C) and (E). The skill requires the author to see "a
+definition's whole body" for meaning-carrying definitions.
+
+**Resolution (proposed).** Packet 1b shows the exact committed bodies of
+`metric`, `dot`, `lower`, `gamma`, and `slash` for approval. It then moves each
+into its own frozen file with unchanged export names, so the bytes of (A)–(E)
+and their ABI hashes stay the same, and adds the files to the closures. Until
+then, no change to those five definitions may land.

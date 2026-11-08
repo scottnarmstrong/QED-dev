@@ -11,6 +11,10 @@ public import QED.Algebra.Gordon
 public import QED.Algebra.Contraction
 public import QED.Algebra.Spinor
 public import QED.Integration.EnergyIntegral
+public import QED.Frozen.OneLoop.ElectronPropagator
+public import QED.Frozen.OneLoop.PhotonPropagator
+public import QED.Frozen.OneLoop.VertexIntegrand
+public import QED.Frozen.OneLoop.EnergyFirstIntegral
 
 /-!
 # QED
@@ -35,6 +39,11 @@ are proved infrastructure:
   analytic continuation to the slit plane, which replaces Wick rotation
   (obligation O-7).
 
-No source-facing declaration has been approved or frozen. See `README.md` and
+Author-approved frozen declarations live under `QED/Frozen/` and are bound by
+`QED/Frozen/manifest.json` (checked by `scripts/check_frozen_anchors.py`). The
+root imports the sealed frozen definitions. It deliberately does **not** import
+the `DRAFT_SORRY` theorem anchor `QED.Frozen.OneLoop.VertexLimitExists` or its
+quarantined provider `QED.Provider.OneLoop.VertexLimitExists`; `lake build` still
+compiles both through the library globs. See `README.md` and
 `docs/campaign/STATUS.md` for the campaign state.
 -/
