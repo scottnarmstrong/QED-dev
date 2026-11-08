@@ -15,8 +15,8 @@ import QED.OneLoop.FormFactorPair
 Proves packet 2's theorem goal (G) (decision D-14) as
 `QED.Provider.OneLoop.existsUnique_isFormFactorPair_vertexOneLoop`, with the binder convention of
 decision D-13. Existence is the closed-form sandwich of the one-loop vertex; uniqueness is the
-independence of the two on-shell structures. Until the frozen anchor is sealed, this module is
-quarantined; it must never import the frozen anchor.
+independence of the two on-shell structures. The frozen anchor is sealed with this theorem (2026-11-08) and passed an
+independent refute-first audit. This module must never import the frozen anchor.
 -/
 
 @[expose] public section

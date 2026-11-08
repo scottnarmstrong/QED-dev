@@ -28,7 +28,7 @@ theorem existsUnique_isFormFactorPair_vertexOneLoop (e m mγ Λ : ℝ) (he : e �
     ∃! F : ℂ × ℂ,
       IsFormFactorPair e m p' p (vertexOneLoop e m mγ Λ hm hmγ hΛ p' p hp' hp hp0' hp0) F :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.OneLoop.existsUnique_isFormFactorPair_vertexOneLoop
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

@@ -57,6 +57,10 @@
     {
       "date": "2026-11-08",
       "change": "Author approved packet 2 as written (D-14). Froze lorentzGen (moved, pp.all unchanged), (F) vertexOneLoop with its characterization (F') sealed by its provider, (G0) IsFormFactorPair, and the theorem goals (G) decomposition exists-unique and (I) the one-loop anomaly headline as DRAFT_SORRY with quarantined providers. Shared facts are in QED/OneLoop/FormFactorPair.lean."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Sealed packet 2's (G) and (I) with their providers; an independent refute-first audit found (F'), (G), (I) PROVED. (I) gives F2 -> e^2/8pi^2 = alpha/2pi (C1 = 1/2) for the (62.40) diagram under D-5, jointly as q^2, m_gamma -> 0+, Lambda -> oo. L1.PROJECTION, L1.INTEGRAL, L1.LIMITS, and L1.COEFFICIENT are marked done with that scope; L1.VERTEX (Wick derivation with counterterm), L1.OBSERVABLE (magnetic moment, D-9), and L1.ASSEMBLY remain planned."
     }
   ],
   "tracks": [
@@ -89,10 +93,10 @@
       "items": [
         {"id": "L1.MODEL", "title": "Concrete regularized perturbative model and algebra", "status": "in_progress", "evidence": ["QED/Algebra/Minkowski.lean", "QED/Algebra/Dirac.lean", "QED/Algebra/Contraction.lean", "QED/OneLoop/VertexAlgebra.lean"]},
         {"id": "L1.VERTEX", "title": "Vertex expansion, diagram coefficient, and signs", "status": "planned", "evidence": []},
-        {"id": "L1.PROJECTION", "title": "On-shell Dirac reduction and form-factor extraction", "status": "in_progress", "evidence": ["QED/Algebra/Gordon.lean", "QED/Algebra/Spinor.lean", "QED/OneLoop/NumeratorReduction.lean", "QED/Algebra/FormFactorIndependence.lean", "QED/OneLoop/VertexFormFactors.lean", "QED/OneLoop/PauliLimit.lean"]},
-        {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "in_progress", "evidence": ["QED/Integration/EnergyIntegral.lean", "QED/Integration/FeynmanParameter.lean", "QED/Integration/ShiftedEnergyIntegral.lean", "QED/Integration/LoopBounds.lean", "QED/Integration/SpatialIntegral.lean", "QED/OneLoop/VertexEnergyFirst.lean", "QED/OneLoop/VertexClosedForm.lean", "QED/OneLoop/VertexSpatial.lean", "QED/Provider/OneLoop/VertexLimitExists.lean"]},
-        {"id": "L1.LIMITS", "title": "Finiteness and required regulator limits", "status": "planned", "evidence": []},
-        {"id": "L1.COEFFICIENT", "title": "Exact first coefficient C1 = 1/2", "status": "planned", "evidence": []},
+        {"id": "L1.PROJECTION", "title": "On-shell Dirac reduction and form-factor extraction", "status": "done", "evidence": ["QED/OneLoop/NumeratorReduction.lean", "QED/Algebra/FormFactorIndependence.lean", "QED/OneLoop/VertexFormFactors.lean", "QED/Frozen/OneLoop/FormFactorExistsUnique.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
+        {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "done", "evidence": ["QED/Integration/FeynmanParameter.lean", "QED/Integration/SpatialIntegral.lean", "QED/OneLoop/VertexEnergyFirst.lean", "QED/OneLoop/VertexSpatial.lean", "QED/Frozen/OneLoop/VertexLimitExists.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
+        {"id": "L1.LIMITS", "title": "Finiteness and required regulator limits", "status": "done", "evidence": ["QED/OneLoop/PauliLimit.lean", "QED/Frozen/OneLoop/PauliFormFactorLimit.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
+        {"id": "L1.COEFFICIENT", "title": "Exact first coefficient C1 = 1/2", "status": "done", "evidence": ["QED/Frozen/OneLoop/PauliFormFactorLimit.lean", "QED/Provider/OneLoop/PauliFormFactorLimit.lean", "docs/campaign/DECISIONS.md", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.OBSERVABLE", "title": "Magnetic-coupling interpretation of F2(0)", "status": "planned", "evidence": []},
         {"id": "L1.ASSEMBLY", "title": "Complete theorem assembled, audited, and reproducible", "status": "planned", "evidence": []}
       ]

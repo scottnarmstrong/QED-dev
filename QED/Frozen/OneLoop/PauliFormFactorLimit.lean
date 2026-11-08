@@ -37,7 +37,7 @@ theorem isFormFactorPair_vertexOneLoop_pauli_limit (e m : ℝ) (he : e ≠ 0) (h
         IsFormFactorPair e m p' p (vertexOneLoop e m mγ Λ hm hmγ hΛ p' p hp' hp hp0' hp0) F →
         ‖F.2 - ((e ^ 2 / (8 * Real.pi ^ 2) : ℝ) : ℂ)‖ < η :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.OneLoop.isFormFactorPair_vertexOneLoop_pauli_limit
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

@@ -404,10 +404,10 @@ self-contained, and the docstrings were corrected.
 | --- | --- | --- |
 | `QED/Frozen/Algebra/LorentzGen.lean` | `QED.Dirac.lorentzGen` | definition, `SEALED`; moved from `QED/Algebra/Dirac.lean`, with `pp.all` output unchanged |
 | (F) `QED/Frozen/OneLoop/VertexOneLoop.lean` | `QED.OneLoop.vertexOneLoop` | definition from theorem (E), `SEALED` |
-| (F′) `QED/Frozen/OneLoop/VertexOneLoopSpec.lean` | `QED.OneLoop.tendsto_energyFirstIntegral_iff_vertexOneLoop` | theorem, `SEALED`, landed together with (F) |
+| (F′) `QED/Frozen/OneLoop/VertexOneLoopSpec.lean` | `QED.OneLoop.tendsto_energyFirstIntegral_iff_vertexOneLoop` | theorem, `SEALED`, landed together with (F); audited |
 | (G₀) `QED/Frozen/OneLoop/IsFormFactorPair.lean` | `QED.OneLoop.IsFormFactorPair` | definition (literal predicate (63.18)), `SEALED` |
-| (G) `QED/Frozen/OneLoop/FormFactorExistsUnique.lean` | `QED.OneLoop.existsUnique_isFormFactorPair_vertexOneLoop` | theorem, `DRAFT_SORRY`, quarantined |
-| (I) `QED/Frozen/OneLoop/PauliFormFactorLimit.lean` | `QED.OneLoop.isFormFactorPair_vertexOneLoop_pauli_limit` | theorem, `DRAFT_SORRY`, quarantined |
+| (G) `QED/Frozen/OneLoop/FormFactorExistsUnique.lean` | `QED.OneLoop.existsUnique_isFormFactorPair_vertexOneLoop` | theorem; frozen `DRAFT_SORRY`, then `SEALED` and audited the same day |
+| (I) `QED/Frozen/OneLoop/PauliFormFactorLimit.lean` | `QED.OneLoop.isFormFactorPair_vertexOneLoop_pauli_limit` | theorem; frozen `DRAFT_SORRY`, then `SEALED` and audited the same day |
 
 **Packaging, as announced.**
 
@@ -418,6 +418,19 @@ self-contained, and the docstrings were corrected.
 - (G) and (I) have the bodies `by sorry` and quarantined providers.
 - A script confirmed that every frozen docstring and declaration is
   byte-identical to the approved text.
+
+**Sealing.** (G) and (I) were frozen as `DRAFT_SORRY` in `3ae8cd2`. They were
+then sealed by their providers, which use the shared facts in
+`QED/OneLoop/FormFactorPair.lean`. An independent refute-first audit found
+no defect in (F′), (G), or (I). It confirmed:
+
+- the frozen bytes against the approved text;
+- `pp.all` statement equality with only the frozen definitions imported;
+- provider types `Expr.eqv` to the frozen types after erasing `autoParam`;
+- standard axioms only;
+- no smuggled premise;
+- the form factors against (63.17)–(63.20). Numerically, B at m_γ = 0 and
+  Λ = ∞ equals (63.20) to 8 digits.
 
 **Scope** (stated to the author with the packet):
 

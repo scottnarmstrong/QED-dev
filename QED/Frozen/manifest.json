@@ -732,7 +732,7 @@
         "module": "QED.Provider.OneLoop.FormFactorExistsUnique",
         "export": "QED.Provider.OneLoop.existsUnique_isFormFactorPair_vertexOneLoop"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "a6fa5fdfd4031ad191d653c3804ce16dcf7c8cdda49bb9c4c68fcdfc4fe341f5",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {
@@ -819,7 +819,7 @@
         "module": "QED.Provider.OneLoop.PauliFormFactorLimit",
         "export": "QED.Provider.OneLoop.isFormFactorPair_vertexOneLoop_pauli_limit"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "bbe296582980045c65d7f3f1c392a2973ed2eebf5c446140cb1d639f98615956",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {

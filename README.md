@@ -20,9 +20,14 @@ evaluation that replaces Wick rotation, and the **first author-approved frozen
 declarations** (packets 1 and 1b, D-11 and D-12): the regulated propagators,
 the one-loop vertex integrand (62.40), the energy-first integral, the Minkowski
 and Dirac definitions they are built from, and the theorem goal that the
-regulated vertex is well defined. **That theorem is now proved** (sealed and
-independently audited). It establishes that the regulated one-loop vertex
-exists; the value of $F_2$ is not yet proved. See the
+regulated vertex is well defined. Both that theorem and **packet 2** (D-14) are
+now proved, sealed, and independently audited. Packet 2 defines the one-loop
+vertex, proves that its form-factor decomposition (63.18) exists and is
+unique, and proves the headline: the one-loop Pauli form factor tends to
+$e^2/8\pi^2=\alpha/2\pi$ ($C_1=1/2$) jointly as $q^2\to0^+$, $m_\gamma\to0^+$, and
+$\Lambda\to\infty$. Scope: this is the (62.40) diagram under the project's
+regulators. The Wick-expansion derivation with the counterterm and the
+magnetic-moment interpretation are the remaining one-loop milestones. See the
 [campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
@@ -46,7 +51,7 @@ become precise; changes to their scope must be recorded.
 | --- | ---: | --- | --- |
 | Campaign setup | 4/4 | `██████████` 100% | Complete |
 | Sources and exact specification | 3/4 | `███████░░░` 75% | In progress |
-| Complete one-loop calculation | 0/8 | `░░░░░░░░░░` 0% | In progress |
+| Complete one-loop calculation | 4/8 | `█████░░░░░` 50% | In progress |
 | Numerical certification pilot | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Complete two-loop calculation | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |

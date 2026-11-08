@@ -12,18 +12,21 @@ Milestones (see the [ledger](progress.json)):
 | SPEC.SOURCE, SPEC.ROUTE, SPEC.ENV | done, on the evidence below |
 | SPEC.STATEMENTS | in progress: packets 1, 1b, and 2 approved and frozen (D-11, D-12, D-14) |
 | L1.MODEL | in progress: algebra infrastructure and the entrywise algebra of the frozen vertex integrand |
-| L1.PROJECTION | in progress: spinors, normalization, and the Gordon identity |
-| L1.INTEGRAL | in progress: O-5, O-6, O-7, and O-10 proved for the vertex; packet 1's theorem (E) proved. The closed forms (O-9, O-11) are open |
+| L1.PROJECTION | done: the decomposition (63.18) of the one-loop vertex exists and is unique (packet 2, (G)) |
+| L1.INTEGRAL | done: the closed form of the one-loop vertex, and its well-definedness (E) |
+| L1.LIMITS, L1.COEFFICIENT | done for the (62.40) diagram under D-5: F₂ → e²/8π² = α/2π, so C₁ = 1/2, jointly as q², m_γ → 0⁺ and Λ → ∞ (packet 2, (I)) |
+| L1.VERTEX, L1.OBSERVABLE, L1.ASSEMBLY | planned: the Wick-expansion derivation with the counterterm (D-8, O-1, O-2, O-8); the magnetic-moment definitions and their equivalence (D-9); the assembled one-loop theorem |
 
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 2 — QED/Frozen/OneLoop/FormFactorExistsUnique.lean (G) and
-               QED/Frozen/OneLoop/PauliFormFactorLimit.lean (I); providers quarantined
+DRAFT_ANCHORS: 0
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 1 theorem — QED.OneLoop.tendsto_energyFirstIntegral_iff_vertexOneLoop (F′),
-               landed with its definition (F); audit pending
+SEALED_THIS_TURN: 3 theorems — QED.OneLoop.tendsto_energyFirstIntegral_iff_vertexOneLoop (F′),
+               QED.OneLoop.existsUnique_isFormFactorPair_vertexOneLoop (G),
+               QED.OneLoop.isFormFactorPair_vertexOneLoop_pauli_limit (I); PROVED (checker, build,
+               standard axioms, independent refute-first audit)
 ```
 
 | Field | Value |
@@ -31,7 +34,7 @@ SEALED_THIS_TURN: 1 theorem — QED.OneLoop.tendsto_energyFirstIntegral_iff_vert
 | Model / prescription | Perturbative QED in Feynman gauge with the on-shell scheme, starting from a momentum-space Wick expansion at order $e^3$ (D-8). The one-loop pilot uses a Pauli–Villars photon (mass $\Lambda$) and a photon mass $m_\gamma$, with Minkowski loop integrals defined by the energy-first prescription M1 ([REGULARIZATION.md](../REGULARIZATION.md); D-5). The magnetic moment has two definitions, the source's wave-packet definition and the vertex response, proved equivalent (D-9). |
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
-| Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. For every $\epsilon>0$ both integration stages of M1 are integrable, and the limit $\epsilon\to0^+$ exists and is unique. It does not identify the limit's value. |
+| Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. (F′) the characterization of the one-loop vertex `QED.OneLoop.vertexOneLoop`. (G) `existsUnique_isFormFactorPair_vertexOneLoop`: for e ≠ 0 and q² > 0 the decomposition (63.18) exists and is unique. (I) `isFormFactorPair_vertexOneLoop_pauli_limit`: near q², m_γ → 0⁺ and Λ → ∞, every form-factor pair has F₂ within η of e²/8π² = α/2π, uniformly over the momenta. Scope: the (62.40) diagram under D-5. The Wick-expansion link, the counterterm (O-8), and the magnetic interpretation are later milestones. |
 | Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11 (packet 1), D-12 (packet 1b), and D-14 (packet 2, approved 2026-11-08). |
 
 ## Work completed
@@ -198,6 +201,7 @@ SEALED_THIS_TURN: 1 theorem — QED.OneLoop.tendsto_energyFirstIntegral_iff_vert
 | HQ consistency (not a proof check) | `python3 scripts/update_hq.py --check` | run at each landing |
 | Frozen-anchor guard | `python3 scripts/check_frozen_anchors.py --root . --manifest QED/Frozen/manifest.json` | `FROZEN-ANCHOR GUARD OK` (10 anchors); rejected all eight negative tests: at packet 1, a statement edit, a body edit, an unregistered `sorry`, a draft import, and a provider import; at packet 1b, a `metric` body edit (also reported as closure drift downstream), a whitespace-only docstring edit, and a second declaration in a frozen file |
 | Frozen ABI hashes | `python3 scripts/frozen_abi.py --check` | 10/10 OK. For packet 1b, `pp.all` output of each definition was byte-identical before and after the move. |
+| Independent audit of packet 2 | refute-first auditor, not the prover | (F′), (G), (I) PROVED. Frozen bytes match the approved text; `pp.all` statements are equal with only the frozen definitions imported; provider types are equal up to `autoParam`; standard axioms only; no smuggled premise. B at m_γ = 0, Λ = ∞ matches (63.20) to 8 digits. Only documentation-lag nits, addressed before landing |
 | Independent audit of (E) | refute-first auditor, not the prover | PROVED: frozen bytes and ABI hash unchanged; the statement elaborates identically with only the frozen definitions imported; standard axioms (also replayed with `leanchecker`); no smuggled premise; the mathematics checked by hand. Its nits were addressed before landing (docstring, line length, lemma placement) |
 | Independent document review | refute-first reviewer (not the writer). It checked SOURCES, CONVENTIONS, REGULARIZATION, and ONE-LOOP-DERIVATION against the pinned PDFs: about 45 Srednicki citations, the dictionary and conventions numerically, and the integrals, bounds, and limits | No wrong source citation and no sign or normalization error in the load-bearing chain. 16 findings, all addressed before landing: 3 errors (an asymptotic stated for $n=1$; the remainder term of the photon-mass deficit; leg corrections listed as parts of the 1PI $V^\mu$), 5 weak claims, 8 nits |
 

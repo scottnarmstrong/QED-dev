@@ -18,8 +18,8 @@ Proves packet 2's headline goal (I) (decision D-14) as
 decision D-13. The unique form-factor pair is `(A, B)` with
 `B = (e²/8π²) ∫ dF₃ (x₃ - x₃²) m² (1/D_{m_γ} - 1/D_Λ)`, and the normalized integral tends to `1`
 jointly in the regulators and `q²` (`QED.OneLoop.VertexLimit.tendsto_integral_pauliIntegrand`).
-Until the frozen anchor is sealed, this module is quarantined; it must never import the frozen
-anchor.
+The frozen anchor is sealed with this theorem (2026-11-08) and passed an
+independent refute-first audit. This module must never import the frozen anchor.
 -/
 
 @[expose] public section
