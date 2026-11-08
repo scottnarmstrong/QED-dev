@@ -16,7 +16,8 @@ Milestones (see the [ledger](progress.json)):
 | L1.INTEGRAL | done: the closed form of the one-loop vertex, and its well-definedness (E) |
 | L1.LIMITS, L1.COEFFICIENT | done for the (62.40) diagram under D-5: F₂ → e²/8π² = α/2π, so C₁ = 1/2, jointly as q², m_γ → 0⁺ and Λ → ∞ (packet 2, (I)) |
 | L1.OBSERVABLE | done: both magnetic-moment definitions of D-9, their equivalence O-24, and g → 2(1 + α/2π) for each (packets 4a and 4b) |
-| L1.VERTEX, L1.ASSEMBLY | planned: the Wick-expansion derivation with the counterterm (D-8, O-1, O-2, O-8); the magnetic-moment definitions and their equivalence (D-9); the assembled one-loop theorem |
+| L1.VERTEX | in progress: design decided (D-19); the exact declarations of packet 5 are in review |
+| L1.ASSEMBLY | planned: the assembled one-loop theorem |
 
 ## Reporting fields
 
@@ -35,7 +36,7 @@ SEALED_THIS_TURN: 2 theorems — QED.OneLoop.integrable_and_tendsto_sourceMagnet
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
 | Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. (F′) the characterization of the one-loop vertex `QED.OneLoop.vertexOneLoop`. (G) `existsUnique_isFormFactorPair_vertexOneLoop`: for e ≠ 0 and q² > 0 the decomposition (63.18) exists and is unique. (I) `isFormFactorPair_vertexOneLoop_pauli_limit`: near q², m_γ → 0⁺ and Λ → ∞, every form-factor pair has F₂ within η of e²/8π² = α/2π, uniformly over the momenta. Packet 3: (K) the charge condition (63.1) fixes a unique counterterm Z₁; (N) the counterterm shifts only F₁ (O-8); (M) F₁(0) = 1 (64.2) at fixed regulators. Packet 4a: (R) the response magnetic moment exists and is unique; (R′) with the charge-normalized counterterm, g = 4mμ/e → 2(1 + α/2π) (64.17) jointly as m_γ → 0⁺ and Λ → ∞. Packet 4b: (W₄) for the source's wave-packet definition (64.4)–(64.9), the undamped position integral converges absolutely and, as the packet narrows, the source μ tends to the response μ (O-24); (W₅) g → 2(1 + α/2π) for the source definition. Scope: the (62.39) vertex function under D-5, with current matrix elements read from the amputated vertex (O-3). The Wick-expansion link (L1.VERTEX) remains. |
-| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, and D-18 (packet 4b, approved 2026-11-08). |
+| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, D-18, and D-19 (design of L1.VERTEX, 2026-11-08). |
 
 ## Work completed
 

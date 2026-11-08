@@ -26,6 +26,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-16 | 2026-11-08 | Packet 4a (response magnetic moment and the one-loop Landé factor; spinor definitions) approved as written and frozen | Author |
 | D-17 | 2026-11-08 | Design of packet 4b (source definition of the magnetic moment): next milestone; absolute convergence of the position integral; real compact rotationally invariant packets | Author |
 | D-18 | 2026-11-08 | Packet 4b (wave-packet current density, source magnetic moment, equivalence O-24, and the source Landé factor) approved as written and frozen | Author |
+| D-19 | 2026-11-08 | Design of L1.VERTEX (Wick derivation of the vertex): the 1PI vertex; the full counterterm set; canonical one-loop routing; general contraction combinatorics | Author |
 
 ## Pending author rulings
 
@@ -639,3 +640,32 @@ An independent refute-first audit found both PROVED. It confirmed:
 - the sign and constant of the moment formula and D(0) = −4imμ,
   numerically;
 - standard axioms only.
+
+## D-19. Design of L1.VERTEX (author ruling)
+
+**Ruling.** On 2026-11-08 the author decided four design questions for the
+Wick derivation of the vertex (L1.VERTEX; ruling D-8, obligations O-1, O-2):
+
+1. **Scope.** The object defined from the Wick contractions is the 1PI vertex,
+   as in the source's (62.39): iV^μ is the sum of the 1PI contractions of the
+   interaction terms through order e³. The theorem is that it equals the
+   frozen Z₁eγ^μ + V^μ_1loop. The 1PI selection excludes vacuum, disconnected
+   and leg-correction terms, so Furry's theorem and the normalization
+   Z(0, 0, 0) = 1 are not needed.
+2. **Counterterms.** The expansion uses the full counterterm Lagrangian
+   (62.2)–(62.3) with free coefficients: the vertex counterterm δ₁ = Z₁ − 1
+   and the two-point counterterms δ₂, δ_m, δ₃, each counted as order e². The
+   theorem must hold for all values of δ₂, δ_m, δ₃, which shows that only δ₁
+   reaches the 1PI vertex at order e³.
+3. **Loop momenta.** Momentum is conserved at each vertex. For a one-loop
+   graph the loop momentum flows on the lowest-labelled line of the unique
+   cycle, and the value is integrated with packet 1's energy-first
+   prescription (M1) at fixed ε > 0, then compared with the frozen vertex. A
+   lemma proves that every connected contraction at this order has at most
+   one loop, and that the routing choice does not matter.
+4. **Generality.** Contractions, fermionic signs and the 1PI predicate are
+   defined for any number of vertices of each kind, for reuse at two loops.
+   The momentum-space values and the theorem cover only order ≤ e³.
+
+**Scope.** These are design rulings. The exact declarations go through the
+usual review and approval.
