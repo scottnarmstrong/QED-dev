@@ -1050,7 +1050,7 @@
         "module": "QED.Provider.OneLoop.ChargeConditionExistsUnique",
         "export": "QED.Provider.OneLoop.existsUnique_isChargeNormalized"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "f18523014f672341bebb4d52e2dff1eba35374c1a532981496ab114705adc8c0",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {
@@ -1141,7 +1141,7 @@
         "module": "QED.Provider.OneLoop.CountertermShift",
         "export": "QED.Provider.OneLoop.isFormFactorPair_vertexOneLoop_iff_vertexFunction"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "2ce2c5b67862a1449abdf7317671704796748f7db4d5b8c98ec2f5e2133a4212",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {
@@ -1236,7 +1236,7 @@
         "module": "QED.Provider.OneLoop.ChargeNormalizationLimit",
         "export": "QED.Provider.OneLoop.isFormFactorPair_vertexFunction_dirac_limit"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "f7a92cb871f22d4312253d56b094cc577fddd9602a74e6321c16bd9bd217a4e8",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {

@@ -26,7 +26,7 @@ theorem isFormFactorPair_vertexOneLoop_iff_vertexFunction (e Z₁ m mγ Λ : ℝ
       IsFormFactorPair e m p' p (vertexFunction e Z₁ m mγ Λ hm hmγ hΛ p' p hp' hp hp0' hp0)
         ((Z₁ : ℂ) + F.1, F.2) :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.OneLoop.isFormFactorPair_vertexOneLoop_iff_vertexFunction
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

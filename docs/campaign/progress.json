@@ -69,6 +69,10 @@
     {
       "date": "2026-11-08",
       "change": "Author approved packet 3 as written (D-15). Froze (J) vertexFunction (62.39), (K0) IsChargeNormalized (63.1)-(63.2), and the theorem goals (K) exists-unique Z1, (N) counterterm shift (O-8), and (M) F1(0) = 1 at fixed regulators as DRAFT_SORRY, with quarantined providers using QED/OneLoop/ChargeCondition.lean."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Sealed packet 3's (K), (N), (M); an independent refute-first audit found them PROVED. O-8 (the counterterm shifts only F1) is now a theorem, and F1(0) = 1 holds at fixed regulators."
     }
   ],
   "tracks": [

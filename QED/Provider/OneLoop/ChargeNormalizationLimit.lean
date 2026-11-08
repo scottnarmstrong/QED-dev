@@ -15,8 +15,8 @@ import QED.OneLoop.ChargeCondition
 
 Proves packet 3's theorem goal (M) (decision D-15) as
 `QED.Provider.OneLoop.isFormFactorPair_vertexFunction_dirac_limit`, with the binder convention of
-decision D-13. Until the frozen anchor is sealed, this module is quarantined; it must never import
-the frozen anchor.
+decision D-13. The frozen anchor is sealed with this theorem (2026-11-08).
+This module must never import the frozen anchor.
 -/
 
 @[expose] public section

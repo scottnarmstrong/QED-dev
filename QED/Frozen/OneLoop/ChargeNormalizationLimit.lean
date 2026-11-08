@@ -36,7 +36,7 @@ theorem isFormFactorPair_vertexFunction_dirac_limit (e Z₁ m mγ Λ : ℝ) (he 
           (vertexFunction e Z₁ m mγ Λ hm hmγ hΛ p' p hp' hp hp0' hp0) F →
         ‖F.1 - 1‖ < η :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.OneLoop.isFormFactorPair_vertexFunction_dirac_limit
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

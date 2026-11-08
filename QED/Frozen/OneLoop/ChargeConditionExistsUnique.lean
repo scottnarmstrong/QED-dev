@@ -20,7 +20,7 @@ namespace QED.OneLoop
 theorem existsUnique_isChargeNormalized (e m mγ Λ : ℝ) (he : e ≠ 0) (hm : 0 < m) (hmγ : 0 < mγ)
     (hΛ : 0 < Λ) : ∃! Z₁ : ℝ, IsChargeNormalized e Z₁ m mγ Λ hm hmγ hΛ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.OneLoop.existsUnique_isChargeNormalized
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

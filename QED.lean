@@ -36,6 +36,9 @@ public import QED.Frozen.OneLoop.FormFactorExistsUnique
 public import QED.Frozen.OneLoop.PauliFormFactorLimit
 public import QED.Frozen.OneLoop.VertexFunction
 public import QED.Frozen.OneLoop.IsChargeNormalized
+public import QED.Frozen.OneLoop.ChargeConditionExistsUnique
+public import QED.Frozen.OneLoop.CountertermShift
+public import QED.Frozen.OneLoop.ChargeNormalizationLimit
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization

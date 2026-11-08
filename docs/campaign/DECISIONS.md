@@ -464,8 +464,18 @@ F₁ at q² = 0 grows like ln(m/m_γ), so a joint limit would be false.
 | (N) `QED/Frozen/OneLoop/CountertermShift.lean` | `QED.OneLoop.isFormFactorPair_vertexOneLoop_iff_vertexFunction` | theorem (obligation O-8) |
 | (M) `QED/Frozen/OneLoop/ChargeNormalizationLimit.lean` | `QED.OneLoop.isFormFactorPair_vertexFunction_dirac_limit` | theorem (F₁(0) = 1, (64.2)) |
 
-The theorems were frozen as `DRAFT_SORRY`, with providers that use the shared
-facts in `QED/OneLoop/ChargeCondition.lean`. A script confirmed that every
+The theorems were frozen as `DRAFT_SORRY` in `eae88a8`, with providers that use
+the shared facts in `QED/OneLoop/ChargeCondition.lean`. They were then sealed.
+An independent refute-first audit found (K), (N), and (M) PROVED. It
+confirmed:
+
+- the frozen bytes;
+- `pp.all` statement equality;
+- provider types equal up to `autoParam`;
+- standard axioms only;
+- Z₁ = 1 − A(0) derived, not assumed;
+- the non-vacuity of (M), by a Lean proof exhibiting an actual pair;
+- the logarithmic slope numerically. A script confirmed that every
 frozen docstring and declaration is byte-identical to the approved text.
 
 **Consequence.** (N) proves O-8, so packet 2's scope limit "the counterterm
