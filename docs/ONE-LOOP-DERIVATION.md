@@ -350,7 +350,7 @@ Three objects in the chain are of that kind:
 | 1a | The regulated propagators: $\tilde S(\not p)=(-\not p+m)/(p^2+m^2-i\epsilon)$, and the Pauli–Villars photon factor $\frac{1}{k^2+m_\gamma^2-i\epsilon}-\frac{1}{k^2+\Lambda^2-i\epsilon}$ | literal definitions (source formulas with the D-5 regulator) |
 | 1b | The integrand of (62.40), as a $4\times4$ complex matrix for each $\mu$, per unit $e^3$ | literal definition |
 | 1c | The energy-first iterated integral over $\mathbb R\times\mathbb R^3$ | definition of a generic operation; used only inside statements that assert integrability |
-| 1d | **Well-definedness (frozen theorem goal):** for $m>0$, $0<m_\gamma<\Lambda$, and on-shell positive-energy $p,p'$ with $q^2\ge0$, the inner and outer integrals are integrable for every small $\epsilon>0$, and the iterated integral has a unique limit as $\epsilon\to0^+$ | $\exists!$ theorem |
+| 1d | **Well-definedness (frozen theorem goal):** for $m>0$, $m_\gamma>0$, $\Lambda>0$, and on-shell positive-energy $p',p$, the inner and outer integrals are integrable for every $\epsilon>0$, and the iterated integral has a unique limit as $\epsilon\to0^+$. Here $q^2\ge0$ follows from the premises, so it is not assumed. | $\exists!$ theorem |
 | 1e | After 1d is proved and audited: $V^\mu_{1\,\mathrm{loop}}(p',p;m_\gamma,\Lambda)$ as that limit, landed with its characterization theorem | definition and theorem |
 
 **Packet 2: the Pauli form factor and the headline.**

@@ -106,7 +106,10 @@ built so that it does not depend on route B where avoidable.
 ## 3. The regulated model ingredients
 
 All quantities depend on the photon mass $m_\gamma>0$, the Pauli–Villars mass
-$\Lambda>m_\gamma$, and $\epsilon>0$.
+$\Lambda>0$, and $\epsilon>0$. Taking $\Lambda>m_\gamma$ is a convention, not a
+premise. At $\Lambda=m_\gamma$ the regulated photon propagator vanishes, and for
+$\Lambda<m_\gamma$ it changes sign. The packet-1 review confirmed that
+well-definedness needs only $m_\gamma,\Lambda>0$.
 
 - Electron propagator: $\frac1i\tilde S(\not p)$ with
   $\tilde S(\not p)=\frac{-\not p+m}{p^2+m^2-i\epsilon}$ (rule 9; the free propagator stated after (62.12), p. 371).
