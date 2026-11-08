@@ -39,6 +39,7 @@ public import QED.Frozen.OneLoop.IsChargeNormalized
 public import QED.Frozen.OneLoop.ChargeConditionExistsUnique
 public import QED.Frozen.OneLoop.CountertermShift
 public import QED.Frozen.OneLoop.ChargeNormalizationLimit
+public import QED.Frozen.OneLoop.IsResponseMagneticMoment
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization

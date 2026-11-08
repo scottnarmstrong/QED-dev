@@ -23,6 +23,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-13 | 2026-11-08 | Provider binder convention for sealing theorem anchors whose binders precede the colon | Orchestrator |
 | D-14 | 2026-11-08 | Packet 2 (one-loop vertex, form-factor decomposition, and the one-loop anomaly headline) approved as written and frozen | Author |
 | D-15 | 2026-11-08 | Packet 3 (vertex function, charge condition, counterterm shift, and F₁(0) = 1) approved as written and frozen | Author |
+| D-16 | 2026-11-08 | Packet 4a (response magnetic moment and the one-loop Landé factor; spinor definitions) approved as written and frozen | Author |
 
 ## Pending author rulings
 
@@ -480,3 +481,45 @@ frozen docstring and declaration is byte-identical to the approved text.
 
 **Consequence.** (N) proves O-8, so packet 2's scope limit "the counterterm
 only shifts A is an interpretation" no longer applies.
+
+## D-16. Packet 4a approved (author ruling)
+
+**Ruling.** On 2026-11-08 the author approved packet 4a, the four spinor
+definitions included. The approved text was the exact Lean shown to the
+author, in two untracked scratch files with these SHA-256 hashes:
+
+- the declarations:
+  `7ffc893fb717c4d3adb315897961d72cbface6a3ec44b30f93c05d71f58a1ca6`;
+- the closure definitions:
+  `97597951f350595183c51a6a003ab38a0203c74c87a17eb0fd3a793f4d81250e`.
+
+Before approval, an independent refute-first reviewer checked the packet. It
+compared the field geometry against p. 383, (64.6)–(64.7), and (64.15)–(64.17),
+and checked the closure definitions against (38.3) and (38.6)–(38.12). It
+found no blocker and no error. Its rename (`IsResponseMagneticMoment`) and
+its docstring findings were applied to the text the author saw.
+
+**Frozen anchors** (bound by [`QED/Frozen/manifest.json`](../../QED/Frozen/manifest.json)):
+
+| Anchor | Export | Kind |
+| --- | --- | --- |
+| `QED/Frozen/Algebra/Beta.lean` | `QED.Dirac.beta` | definition (38.8); moved from `QED/Algebra/Dirac.lean` |
+| `QED/Frozen/Algebra/Bar.lean` | `QED.Dirac.bar` | definition (38.7); moved from `QED/Algebra/Spinor.lean` |
+| `QED/Frozen/Algebra/RestSpinor.lean` | `QED.Dirac.restSpinor` | definition (38.6); moved |
+| `QED/Frozen/Algebra/Spinor.lean` | `QED.Dirac.spinor` | definition, closed form of (38.12); moved, with `𝟙` written out |
+| (R₀) `QED/Frozen/OneLoop/IsResponseMagneticMoment.lean` | `QED.OneLoop.IsResponseMagneticMoment` | definition (response definition of D-9) |
+| (R) `QED/Frozen/OneLoop/ResponseMagneticMomentExistsUnique.lean` | `QED.OneLoop.existsUnique_isResponseMagneticMoment` | theorem |
+| (R′) `QED/Frozen/OneLoop/LandeFactorLimit.lean` | `QED.OneLoop.landeFactor_isResponseMagneticMoment_limit` | theorem (g → 2(1 + α/2π)) |
+
+The `pp.all` output of each moved definition is unchanged. (R) and (R′)
+were frozen as `DRAFT_SORRY`, with providers that use
+`QED/OneLoop/MagneticResponse.lean`.
+
+**Scope** (stated to the author with the packet):
+
+- g → 2(1 + α/2π) is proved for the *response* definition. The source's
+  wave-packet definition, and its equivalence with this one (O-24), are
+  packet 4b.
+- The response is read from the amputated vertex with on-shell spinors.
+- The order of limits is q → 0⁺ first, at fixed regulators, then
+  m_γ → 0⁺ and Λ → ∞ jointly (D-5).

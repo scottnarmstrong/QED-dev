@@ -6,6 +6,8 @@ Authors: Scott Armstrong
 module
 
 public import QED.Algebra.Gordon
+public import QED.Frozen.Algebra.Bar
+public import QED.Frozen.Algebra.Spinor
 public import Mathlib.Analysis.Real.Sqrt
 import Mathlib.Algebra.Module.BigOperators
 import Mathlib.Basic.Complex.BigOperators
@@ -54,9 +56,6 @@ namespace QED.Dirac
 
 local notation "𝟙" => (1 : Matrix (Fin 4) (Fin 4) ℂ)
 
-/-- The Dirac adjoint `ū = u† β` of a column spinor, as a row vector (eq. (38.7)). -/
-def bar (u : Fin 4 → ℂ) : Fin 4 → ℂ := star u ᵥ* beta
-
 /-- `β² = 1`. -/
 theorem beta_mul_beta : beta * beta = 𝟙 := by
   ext i j; fin_cases i <;> fin_cases j <;> simp [beta, Matrix.mul_apply, Fin.sum_univ_four]
@@ -93,15 +92,6 @@ theorem bar_vecMul_slash (m : ℝ) (p : Fin 4 → ℝ) (u : Fin 4 → ℂ)
   rw [beta_mul_conjTranspose_slash_mul_beta, hu] at this
   rw [← this, show -((m : ℂ) • u) = ((-m : ℝ) : ℂ) • u by push_cast; module, bar_smul]
   push_cast; module
-
-/-- Rest spinors `u_±(0)` of eq. (38.6); spin label `0 ↦ +`, `1 ↦ -`. -/
-noncomputable def restSpinor (m : ℝ) : Fin 2 → Fin 4 → ℂ
-  | 0 => ![(Real.sqrt m : ℂ), 0, (Real.sqrt m : ℂ), 0]
-  | 1 => ![0, (Real.sqrt m : ℂ), 0, (Real.sqrt m : ℂ)]
-
-/-- On-shell spinor in closed form, `u_s(p) = (m - p̸) u_s(0) / √(2m(m + p⁰))`. -/
-noncomputable def spinor (m : ℝ) (p : Fin 4 → ℝ) (s : Fin 2) : Fin 4 → ℂ :=
-  (((Real.sqrt (2 * m * (m + p 0)))⁻¹ : ℝ) : ℂ) • ((((m : ℂ) • 𝟙) - slash p) *ᵥ restSpinor m s)
 
 /-- `p̸ (m - p̸) = -m (m - p̸)` on shell. -/
 theorem slash_mul_mass_sub_slash (m : ℝ) (p : Fin 4 → ℝ) (hp : Minkowski.dot p p = -m ^ 2) :

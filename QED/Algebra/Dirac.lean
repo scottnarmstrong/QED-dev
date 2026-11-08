@@ -9,6 +9,7 @@ public import QED.Algebra.Minkowski
 public import QED.Frozen.Algebra.Gamma
 public import QED.Frozen.Algebra.Slash
 public import QED.Frozen.Algebra.LorentzGen
+public import QED.Frozen.Algebra.Beta
 public import Mathlib.Basic.Complex.Basic
 public import Mathlib.LinearAlgebra.Matrix.ConjTranspose
 public import Mathlib.LinearAlgebra.Matrix.Notation
@@ -46,10 +47,6 @@ definitions in `QED/Frozen/Algebra/`; this module re-exports them. The slash fol
 open Matrix Complex
 
 namespace QED.Dirac
-
-/-- The matrix `β` of the Dirac adjoint `Ψ̄ = Ψ† β` (eq. (38.8)). -/
-def beta : Matrix (Fin 4) (Fin 4) ℂ :=
-  !![0, 0, 1, 0; 0, 0, 0, 1; 1, 0, 0, 0; 0, 1, 0, 0]
 
 /-- The slash is additive: `(a + b)̸ = a̸ + b̸`. -/
 theorem slash_add (a b : Fin 4 → ℝ) : slash (a + b) = slash a + slash b := by

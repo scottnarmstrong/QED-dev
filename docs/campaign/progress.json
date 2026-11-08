@@ -77,6 +77,10 @@
     {
       "date": "2026-11-08",
       "change": "Infrastructure for the response definition of the magnetic moment (D-9): exact Breit-frame spinor identities for the y-current with momentum transfer along x and spin up (Algebra/BreitFrame, obligation O-22); the Breit sandwich of the vertex function, i e q (Z1 + A + B), and its unique linear-in-q coefficient mu = e(Z1 + A(0) + B(0))/(2m) (OneLoop/MagneticResponse); the joint regulator limit of B at q^2 = 0 and its continuity at fixed regulators (OneLoop/MagneticMoment). Packet 4a (response definition and the Lande factor) drafted and proved transiently against its exact text; independent review in progress."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Author approved packet 4a as written (D-16). Froze the spinor definitions beta, bar, restSpinor, spinor (moved, pp.all unchanged), (R0) IsResponseMagneticMoment, and the theorem goals (R) exists-unique mu and (R') the Lande factor g -> 2(1 + alpha/2pi) as DRAFT_SORRY with quarantined providers."
     }
   ],
   "tracks": [

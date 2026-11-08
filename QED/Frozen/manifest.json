@@ -1243,6 +1243,448 @@
         "frozen_paths": [],
         "audit_paths": []
       }
+    },
+    {
+      "id": "algebra.dirac_beta_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-08",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+        "range": "(38.8) p.240"
+      },
+      "contract": {
+        "id": "srednicki.38.8.beta",
+        "version": "1"
+      },
+      "path": "QED/Frozen/Algebra/Beta.lean",
+      "export": "QED.Dirac.beta",
+      "split_policy": {
+        "source_group": "srednicki.38.8.beta",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling"
+      },
+      "abi_sha256": "9c5d462e0ad764b5dde0cf5d76abc051fa1c2324ebe6fc4081efee3a6f25b9c3",
+      "definition_closure": [],
+      "state": "SEALED",
+      "full_file_sha256": "8151d1f41e962c315b44113101838d0332871051a3caac38308db73eeeb1ea8f"
+    },
+    {
+      "id": "algebra.dirac_bar_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-08",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+        "range": "(38.7) p.240"
+      },
+      "contract": {
+        "id": "srednicki.38.7.dirac_adjoint",
+        "version": "1"
+      },
+      "path": "QED/Frozen/Algebra/Bar.lean",
+      "export": "QED.Dirac.bar",
+      "split_policy": {
+        "source_group": "srednicki.38.7.dirac_adjoint",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling"
+      },
+      "abi_sha256": "c5f9c2ba92aadfedd1710ff6d8a5ddbdcd7235138ae3df5e798f1c9c1e0fa5e4",
+      "definition_closure": [
+        {
+          "path": "QED/Frozen/Algebra/Beta.lean",
+          "sha256": "8151d1f41e962c315b44113101838d0332871051a3caac38308db73eeeb1ea8f"
+        }
+      ],
+      "state": "SEALED",
+      "full_file_sha256": "459dfdac377f1e3c03627cbe2003080b3d4c28e093a4719403ff5e60f0d1ed56"
+    },
+    {
+      "id": "algebra.rest_spinor_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-08",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+        "range": "(38.6) p.240; (38.3)"
+      },
+      "contract": {
+        "id": "srednicki.38.6.rest_spinors",
+        "version": "1"
+      },
+      "path": "QED/Frozen/Algebra/RestSpinor.lean",
+      "export": "QED.Dirac.restSpinor",
+      "split_policy": {
+        "source_group": "srednicki.38.6.rest_spinors",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling"
+      },
+      "abi_sha256": "a13f3442d222ed1f32ccfa9cc2cda0ae1f3c201c51691509cfd5696dbb3ba424",
+      "definition_closure": [],
+      "state": "SEALED",
+      "full_file_sha256": "16ef058c1ea5b3862e017204bd598badd9c5197bcb9311e41dc4990d5b44a034"
+    },
+    {
+      "id": "algebra.spinor_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-08",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+        "range": "(38.12) p.241 (closed form)"
+      },
+      "contract": {
+        "id": "srednicki.38.12.spinor",
+        "version": "1"
+      },
+      "path": "QED/Frozen/Algebra/Spinor.lean",
+      "export": "QED.Dirac.spinor",
+      "split_policy": {
+        "source_group": "srednicki.38.12.spinor",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling"
+      },
+      "abi_sha256": "83eaa43d869b1c164388013539c0ed09ae53a87649797fc076455a937ab63b86",
+      "definition_closure": [
+        {
+          "path": "QED/Frozen/Algebra/Metric.lean",
+          "sha256": "200d7b9d255ce2dc5e936ecdeebcec40bcac0cbb42c78cb2e0d782c8b22c6a64"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Lower.lean",
+          "sha256": "fbef13d182bd38c9bd39cdc4e13738800fb25feb443a6726963d1c42c21a8e0c"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Gamma.lean",
+          "sha256": "b3f35f90f3108b6d7f065194ee3388b2fce773f00f1e07ce05f5ef1c658fc9f8"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Slash.lean",
+          "sha256": "4f3b64e27e7ff4d3b0ea9b69916c136099d045cc615dc402fd9fc98f53016676"
+        },
+        {
+          "path": "QED/Frozen/Algebra/RestSpinor.lean",
+          "sha256": "16ef058c1ea5b3862e017204bd598badd9c5197bcb9311e41dc4990d5b44a034"
+        }
+      ],
+      "state": "SEALED",
+      "full_file_sha256": "13137be759bb8bf64c1dec1b88ba268e912dfc2bd52abcb52c166a2d9b3e4e83"
+    },
+    {
+      "id": "oneloop.is_response_magnetic_moment_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-08",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+        "range": "field of p.383 used in (64.6)-(64.7); (64.16); response definition of decision D-9"
+      },
+      "contract": {
+        "id": "qed_dev.packet4a.response_magnetic_moment",
+        "version": "1"
+      },
+      "path": "QED/Frozen/OneLoop/IsResponseMagneticMoment.lean",
+      "export": "QED.OneLoop.IsResponseMagneticMoment",
+      "split_policy": {
+        "source_group": "qed_dev.packet4a.response_magnetic_moment",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling"
+      },
+      "abi_sha256": "718f376517595617ec0772ba5af998772cfc4a271b5b44d10daa6acf0c4f20de",
+      "definition_closure": [
+        {
+          "path": "QED/Frozen/Algebra/Metric.lean",
+          "sha256": "200d7b9d255ce2dc5e936ecdeebcec40bcac0cbb42c78cb2e0d782c8b22c6a64"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Dot.lean",
+          "sha256": "9342fb96c1584ed7461544f18f20680f98e081829e040c38ef37dc18e68d46a3"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Lower.lean",
+          "sha256": "fbef13d182bd38c9bd39cdc4e13738800fb25feb443a6726963d1c42c21a8e0c"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Gamma.lean",
+          "sha256": "b3f35f90f3108b6d7f065194ee3388b2fce773f00f1e07ce05f5ef1c658fc9f8"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Slash.lean",
+          "sha256": "4f3b64e27e7ff4d3b0ea9b69916c136099d045cc615dc402fd9fc98f53016676"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/ElectronPropagator.lean",
+          "sha256": "3795db2b6a768cad363c54e526e879e4579f3f369bdc1bc620d703d34475ee58"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/PhotonPropagator.lean",
+          "sha256": "30ef99bc24e236e4a59ad6dc39fa97a7d71adf997ebb7fee6c7ba4a981c154fb"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/VertexIntegrand.lean",
+          "sha256": "e111289653263805020fb81483c0faeeeb189bb6ef5671232115d5fdc2fc5238"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/EnergyFirstIntegral.lean",
+          "sha256": "b6b24499ef053928d1d2e6ea17fb29561e7b1f93dc94888389479b02d637a9e9"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/VertexOneLoop.lean",
+          "sha256": "f0c30629bdca55805298f1c4bcb96dcd517122f234273ad1195db4fd894d31fe"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/VertexFunction.lean",
+          "sha256": "3701be129bd3ef9b6f72573bded1fc3a48121ea7ca767721a0ecea295e96ddd2"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Beta.lean",
+          "sha256": "8151d1f41e962c315b44113101838d0332871051a3caac38308db73eeeb1ea8f"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Bar.lean",
+          "sha256": "459dfdac377f1e3c03627cbe2003080b3d4c28e093a4719403ff5e60f0d1ed56"
+        },
+        {
+          "path": "QED/Frozen/Algebra/RestSpinor.lean",
+          "sha256": "16ef058c1ea5b3862e017204bd598badd9c5197bcb9311e41dc4990d5b44a034"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Spinor.lean",
+          "sha256": "13137be759bb8bf64c1dec1b88ba268e912dfc2bd52abcb52c166a2d9b3e4e83"
+        }
+      ],
+      "state": "SEALED",
+      "full_file_sha256": "27cc631dfe5fa20ce13589adb5619cc9ab7b452edbfcdf1f73febe6850fbb00f"
+    },
+    {
+      "id": "oneloop.response_magnetic_moment_exists_unique_v1",
+      "kind": "theorem",
+      "author_approval": {
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-08",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+        "range": "response definition of decision D-9; obligation O-22"
+      },
+      "contract": {
+        "id": "qed_dev.packet4a.response_magnetic_moment_exists_unique",
+        "version": "1"
+      },
+      "path": "QED/Frozen/OneLoop/ResponseMagneticMomentExistsUnique.lean",
+      "export": "QED.OneLoop.existsUnique_isResponseMagneticMoment",
+      "split_policy": {
+        "source_group": "qed_dev.packet4a.response_magnetic_moment_exists_unique",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling"
+      },
+      "abi_sha256": "be7f4065d5f75abf7e5b48c78d1cd6bcb6b50ce58132d9519054554de9527796",
+      "definition_closure": [
+        {
+          "path": "QED/Frozen/Algebra/Metric.lean",
+          "sha256": "200d7b9d255ce2dc5e936ecdeebcec40bcac0cbb42c78cb2e0d782c8b22c6a64"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Dot.lean",
+          "sha256": "9342fb96c1584ed7461544f18f20680f98e081829e040c38ef37dc18e68d46a3"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Lower.lean",
+          "sha256": "fbef13d182bd38c9bd39cdc4e13738800fb25feb443a6726963d1c42c21a8e0c"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Gamma.lean",
+          "sha256": "b3f35f90f3108b6d7f065194ee3388b2fce773f00f1e07ce05f5ef1c658fc9f8"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Slash.lean",
+          "sha256": "4f3b64e27e7ff4d3b0ea9b69916c136099d045cc615dc402fd9fc98f53016676"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/ElectronPropagator.lean",
+          "sha256": "3795db2b6a768cad363c54e526e879e4579f3f369bdc1bc620d703d34475ee58"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/PhotonPropagator.lean",
+          "sha256": "30ef99bc24e236e4a59ad6dc39fa97a7d71adf997ebb7fee6c7ba4a981c154fb"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/VertexIntegrand.lean",
+          "sha256": "e111289653263805020fb81483c0faeeeb189bb6ef5671232115d5fdc2fc5238"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/EnergyFirstIntegral.lean",
+          "sha256": "b6b24499ef053928d1d2e6ea17fb29561e7b1f93dc94888389479b02d637a9e9"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/VertexOneLoop.lean",
+          "sha256": "f0c30629bdca55805298f1c4bcb96dcd517122f234273ad1195db4fd894d31fe"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/VertexFunction.lean",
+          "sha256": "3701be129bd3ef9b6f72573bded1fc3a48121ea7ca767721a0ecea295e96ddd2"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Beta.lean",
+          "sha256": "8151d1f41e962c315b44113101838d0332871051a3caac38308db73eeeb1ea8f"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Bar.lean",
+          "sha256": "459dfdac377f1e3c03627cbe2003080b3d4c28e093a4719403ff5e60f0d1ed56"
+        },
+        {
+          "path": "QED/Frozen/Algebra/RestSpinor.lean",
+          "sha256": "16ef058c1ea5b3862e017204bd598badd9c5197bcb9311e41dc4990d5b44a034"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Spinor.lean",
+          "sha256": "13137be759bb8bf64c1dec1b88ba268e912dfc2bd52abcb52c166a2d9b3e4e83"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/IsResponseMagneticMoment.lean",
+          "sha256": "27cc631dfe5fa20ce13589adb5619cc9ab7b452edbfcdf1f73febe6850fbb00f"
+        }
+      ],
+      "implementation": {
+        "module": "QED.Provider.OneLoop.ResponseMagneticMomentExistsUnique",
+        "export": "QED.Provider.OneLoop.existsUnique_isResponseMagneticMoment"
+      },
+      "state": "DRAFT_SORRY",
+      "prefix_sha256": "9ce5452241a6dd4eb25cd85e7013b01c8fd4c15adb739835b4d5c1da10a663cb",
+      "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
+      "draft_allowlist": {
+        "frozen_paths": [],
+        "audit_paths": []
+      }
+    },
+    {
+      "id": "oneloop.lande_factor_limit_v1",
+      "kind": "theorem",
+      "author_approval": {
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-08",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling",
+        "approval_version": "1"
+      },
+      "source": {
+        "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
+        "range": "(64.16)-(64.17) pp.384-385; joint limit of decision D-5"
+      },
+      "contract": {
+        "id": "qed_dev.packet4a.lande_factor_limit",
+        "version": "1"
+      },
+      "path": "QED/Frozen/OneLoop/LandeFactorLimit.lean",
+      "export": "QED.OneLoop.landeFactor_isResponseMagneticMoment_limit",
+      "split_policy": {
+        "source_group": "qed_dev.packet4a.lande_factor_limit",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-16-packet-4a-approved-author-ruling"
+      },
+      "abi_sha256": "c2c936f4f843b11ba0cf22b8e320e5804e1dafac1b3d05b39b6da4c4099590b0",
+      "definition_closure": [
+        {
+          "path": "QED/Frozen/Algebra/Metric.lean",
+          "sha256": "200d7b9d255ce2dc5e936ecdeebcec40bcac0cbb42c78cb2e0d782c8b22c6a64"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Dot.lean",
+          "sha256": "9342fb96c1584ed7461544f18f20680f98e081829e040c38ef37dc18e68d46a3"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Lower.lean",
+          "sha256": "fbef13d182bd38c9bd39cdc4e13738800fb25feb443a6726963d1c42c21a8e0c"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Gamma.lean",
+          "sha256": "b3f35f90f3108b6d7f065194ee3388b2fce773f00f1e07ce05f5ef1c658fc9f8"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Slash.lean",
+          "sha256": "4f3b64e27e7ff4d3b0ea9b69916c136099d045cc615dc402fd9fc98f53016676"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/ElectronPropagator.lean",
+          "sha256": "3795db2b6a768cad363c54e526e879e4579f3f369bdc1bc620d703d34475ee58"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/PhotonPropagator.lean",
+          "sha256": "30ef99bc24e236e4a59ad6dc39fa97a7d71adf997ebb7fee6c7ba4a981c154fb"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/VertexIntegrand.lean",
+          "sha256": "e111289653263805020fb81483c0faeeeb189bb6ef5671232115d5fdc2fc5238"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/EnergyFirstIntegral.lean",
+          "sha256": "b6b24499ef053928d1d2e6ea17fb29561e7b1f93dc94888389479b02d637a9e9"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/VertexOneLoop.lean",
+          "sha256": "f0c30629bdca55805298f1c4bcb96dcd517122f234273ad1195db4fd894d31fe"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/VertexFunction.lean",
+          "sha256": "3701be129bd3ef9b6f72573bded1fc3a48121ea7ca767721a0ecea295e96ddd2"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Beta.lean",
+          "sha256": "8151d1f41e962c315b44113101838d0332871051a3caac38308db73eeeb1ea8f"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Bar.lean",
+          "sha256": "459dfdac377f1e3c03627cbe2003080b3d4c28e093a4719403ff5e60f0d1ed56"
+        },
+        {
+          "path": "QED/Frozen/Algebra/RestSpinor.lean",
+          "sha256": "16ef058c1ea5b3862e017204bd598badd9c5197bcb9311e41dc4990d5b44a034"
+        },
+        {
+          "path": "QED/Frozen/Algebra/Spinor.lean",
+          "sha256": "13137be759bb8bf64c1dec1b88ba268e912dfc2bd52abcb52c166a2d9b3e4e83"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/IsResponseMagneticMoment.lean",
+          "sha256": "27cc631dfe5fa20ce13589adb5619cc9ab7b452edbfcdf1f73febe6850fbb00f"
+        },
+        {
+          "path": "QED/Frozen/OneLoop/IsChargeNormalized.lean",
+          "sha256": "84fdafce41e872459b8299ebe14e28c019a0a83bbc64131fa64e0052eef139b1"
+        }
+      ],
+      "implementation": {
+        "module": "QED.Provider.OneLoop.LandeFactorLimit",
+        "export": "QED.Provider.OneLoop.landeFactor_isResponseMagneticMoment_limit"
+      },
+      "state": "DRAFT_SORRY",
+      "prefix_sha256": "d08ff4f9ee3160bb7a37360e49af868bac1701dc0f6d9874695bdceb07ca7433",
+      "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
+      "draft_allowlist": {
+        "frozen_paths": [],
+        "audit_paths": []
+      }
     }
   ]
 }
