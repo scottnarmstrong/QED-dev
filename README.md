@@ -18,6 +18,7 @@ obligations exposed. A Lean package is pinned to Lean and Mathlib `v4.35.0`.
 Its only content so far is proved Dirac-algebra infrastructure: the Minkowski
 form, the Weyl gamma matrices with the Clifford relation, the contraction
 identities, on-shell spinors with their normalization, and the Gordon identity.
+There is also the loop-energy integral evaluation that replaces Wick rotation.
 No exact declaration
 has been approved or frozen, and no physics result is proved. See the
 [campaign status](docs/campaign/STATUS.md).
@@ -49,7 +50,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 7. Documentation milestones do not count as proved physics.
+**Tracked Lean source files:** 8. Documentation milestones do not count as proved physics.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.
@@ -121,8 +122,9 @@ the [Mathlib inventory](docs/MATHLIB-INVENTORY.md), the pinned Lean package, and
 the first algebra infrastructure.
 
 1. Continue building the missing carriers as proved infrastructure: the
-   energy-first Minkowski loop integral, on-shell momenta and the uniqueness of
-   the form-factor decomposition, and the boost form of the spinors. The Dirac
+   definition of the energy-first Minkowski loop integral, on-shell momenta and
+   the uniqueness of the form-factor decomposition, and the boost form of the
+   spinors. The energy-integral evaluation (O-7) is done. The Dirac
    algebra is done: Clifford relation, contraction identities, spinors with
    normalization, and the Gordon identity.
 2. Build the infrastructure the author's rulings require: Wick contractions
@@ -155,6 +157,7 @@ See [Phase 1](docs/PROJECT-OUTLINE.md#phase-1--fix-the-one-loop-calculation).
 | [docs/campaign/progress.json](docs/campaign/progress.json) | Milestones, statuses, and completion evidence |
 | [sources/manifest.json](sources/manifest.json) | URLs, sizes, SHA-256 hashes, and licenses of pinned sources (bytes not committed) |
 | [lakefile.lean](lakefile.lean), [lean-toolchain](lean-toolchain), [QED.lean](QED.lean) | Lean package `qed`, pinned to Lean and Mathlib `v4.35.0` |
+| [QED/Integration/](QED/Integration) | Proved analysis: the loop-energy integrals by analytic continuation to the slit plane, which replaces Wick rotation (`EnergyIntegral.lean`) |
 | [QED/Algebra/](QED/Algebra) | Proved infrastructure: the mostly-plus Minkowski form (`Minkowski.lean`), the Weyl Dirac matrices (`Dirac.lean`), gamma-matrix products and the Gordon identity (`Gordon.lean`), the contraction identities (`Contraction.lean`), and on-shell spinors (`Spinor.lean`) |
 | [scripts/update_hq.py](scripts/update_hq.py) | Render or check the progress meters |
 | [scripts/fetch_sources.py](scripts/fetch_sources.py) | Fetch and verify the pinned source bytes |

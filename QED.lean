@@ -10,6 +10,7 @@ public import QED.Algebra.Dirac
 public import QED.Algebra.Gordon
 public import QED.Algebra.Contraction
 public import QED.Algebra.Spinor
+public import QED.Integration.EnergyIntegral
 
 /-!
 # QED
@@ -29,7 +30,10 @@ are proved infrastructure:
 * `QED.Algebra.Contraction`: the contraction identities (47.18)–(47.21) at
   `d = 4`;
 * `QED.Algebra.Spinor`: the Dirac adjoint, on-shell spinors with the Dirac
-  equation and normalization (38.17), and the Gordon identity for spinors.
+  equation and normalization (38.17), and the Gordon identity for spinors;
+* `QED.Integration.EnergyIntegral`: the loop-energy integrals evaluated by
+  analytic continuation to the slit plane, which replaces Wick rotation
+  (obligation O-7).
 
 No source-facing declaration has been approved or frozen. See `README.md` and
 `docs/campaign/STATUS.md` for the campaign state.

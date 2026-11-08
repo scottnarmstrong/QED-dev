@@ -13,6 +13,7 @@ Milestones (see the [ledger](progress.json)):
 | SPEC.STATEMENTS | planned: no exact declaration exists yet |
 | L1.MODEL | in progress: algebra infrastructure only |
 | L1.PROJECTION | in progress: spinors, normalization, and the Gordon identity |
+| L1.INTEGRAL | in progress: energy integrals (O-7) only |
 
 ## Reporting fields
 
@@ -88,6 +89,17 @@ SEALED_THIS_TURN: 0
     (38.6), the closed-form spinors $u_s(p)=(m-\not p)u_s(0)/\sqrt{2m(m+p^0)}$, the
     Dirac equations (38.1) and (38.16), the normalization
     $\bar u_{s'}(p)u_s(p)=2m\delta_{s's}$ (38.17), and `gordon_spinor`.
+  - `QED/Integration/EnergyIntegral.lean` (milestone L1.INTEGRAL, in progress):
+    obligation O-7, the loop-energy integrals with Wick rotation replaced by
+    analytic continuation.
+    - Real integrals: $\int(1+t^2)^{-2}=\pi/2$ and $\int(1+t^2)^{-3}=3\pi/8$.
+    - A locally uniform lower bound near the slit plane.
+    - The continuation principle `integral_sq_add_zpow_of_real`.
+    - On the slit plane: $\int(t^2+z)^{-2}=\frac{\pi}{2}z^{-3/2}$,
+      $\int(t^2+z)^{-3}=\frac{3\pi}{8}z^{-5/2}$, and
+      $\int t^2(t^2+z)^{-3}=\frac{\pi}{8}z^{-3/2}$.
+    - The mostly-plus forms $\int(-t^2+w)^{-3}=-\frac{3\pi}{8}(-w)^{-5/2}$ and
+      $\int t^2(-t^2+w)^{-3}=-\frac{\pi}{8}(-w)^{-3/2}$.
 - **Administration** (D-1, D-10). The repository was made public at the
   author's instruction, and `jaumededios` was invited with write access. It is
   now licensed under Apache-2.0: `LICENSE`, plus the header line in every Lean
@@ -103,9 +115,9 @@ SEALED_THIS_TURN: 0
 | --- | --- | --- |
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
-| Project build | `nice -n 5 lake build` | success; 1648 jobs |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (7 Lean files) |
-| Axioms | `#print axioms` on all 39 theorems in `QED/Algebra/` (transient file, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
+| Project build | `nice -n 5 lake build` | success; 2901 jobs, no warnings |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (8 Lean files) |
+| Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` (transient file, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |
 | Numerical sanity (not proofs) | `python3 scripts/numerics/one_loop_sanity.py` | all eight checks pass |
@@ -127,7 +139,6 @@ proof.
    - The energy-first Minkowski loop integral (prescription M1), with explicit
      integrability, so that no definition depends on Lean's zero value for
      non-integrable integrands.
-   - The energy-integral continuation lemma O-7.
 2. **Infrastructure the rulings add.**
    - Wick contractions with fermionic signs for the order-$e^3$ expansion (D-8).
    - One-particle states, wave packets, and one-particle current matrix

@@ -287,7 +287,7 @@ available building blocks.
 | --- | --- | --- |
 | Dirac algebra | explicit Weyl-representation $4\times4$ complex matrices; Clifford relation (36.9); contraction identities (47.18)–(47.21); on-shell spinors and the Gordon identity (38.18) | bookkeeping; decidable by computation (`norm_matmul`) |
 | Feynman parameters | $\frac{1}{ABC}=2\int_{\text{simplex}}\frac{1}{(x_1A+x_2B+x_3C)^3}$ for $A,B,C$ in an open half-plane whose boundary line passes through $0$ (here the lower half-plane) | simplex integral as iterated interval integrals; missing from Mathlib |
-| Energy integral | holomorphy of $w\mapsto\int_{\mathbb R}(-t^2+w)^{-3}dt$ on $\mathbb C\setminus[0,\infty)$, the explicit value $-\tfrac{3\pi}{8}(-w)^{-5/2}$ for $w<0$, and the identity theorem | parametric holomorphy (assembled from differentiation under the integral); principal branch of $(-w)^{5/2}$ |
+| Energy integral | holomorphy of $w\mapsto\int_{\mathbb R}(-t^2+w)^{-3}dt$ on $\mathbb C\setminus[0,\infty)$, the explicit value $-\tfrac{3\pi}{8}(-w)^{-5/2}$ for $w<0$, and the identity theorem | **proved** (`QED/Integration/EnergyIntegral.lean`, 2026-11-08) |
 | Spatial integral | $\int_{\mathbb R^3}(|\vec\ell|^2+D)^{-5/2}d^3\ell=\frac{4\pi}{3D}$ and the Pauli–Villars-paired $\tilde\ell^2$ terms | radial integration in $\mathbb R^3$ (`integral_fun_norm_addHaar`) |
 | Integrability and Fubini | uniform bounds on the inner integrals; joint integrability on simplex $\times\,\mathbb R^3$ | estimates near the light-cone shell at fixed $\epsilon$ |
 | Limits | dominated convergence in $\epsilon$, $q^2$, $m_\gamma$, $\Lambda$ | uniform positivity of $D$ |

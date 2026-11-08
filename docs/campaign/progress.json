@@ -29,6 +29,10 @@
     {
       "date": "2026-11-08",
       "change": "Proved the contraction identities (47.18)-(47.21) at d = 4 from the anticommutators (QED/Algebra/Contraction.lean). Defined the Dirac adjoint and closed-form on-shell spinors, and proved the Dirac equations (38.1), (38.16), the normalization (38.17), and the Gordon identity for spinors (QED/Algebra/Spinor.lean). Equality with the boost definition (38.12) is pending. No milestone is complete."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Proved obligation O-7: the loop-energy integrals evaluated on the slit plane by analytic continuation from the real axis, which replaces Wick rotation (QED/Integration/EnergyIntegral.lean). L1.INTEGRAL is marked in_progress; the M1 integral definition itself is still open."
     }
   ],
   "tracks": [
@@ -62,7 +66,7 @@
         {"id": "L1.MODEL", "title": "Concrete regularized perturbative model and algebra", "status": "in_progress", "evidence": ["QED/Algebra/Minkowski.lean", "QED/Algebra/Dirac.lean", "QED/Algebra/Contraction.lean"]},
         {"id": "L1.VERTEX", "title": "Vertex expansion, diagram coefficient, and signs", "status": "planned", "evidence": []},
         {"id": "L1.PROJECTION", "title": "On-shell Dirac reduction and form-factor extraction", "status": "in_progress", "evidence": ["QED/Algebra/Gordon.lean", "QED/Algebra/Spinor.lean"]},
-        {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "planned", "evidence": []},
+        {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "in_progress", "evidence": ["QED/Integration/EnergyIntegral.lean"]},
         {"id": "L1.LIMITS", "title": "Finiteness and required regulator limits", "status": "planned", "evidence": []},
         {"id": "L1.COEFFICIENT", "title": "Exact first coefficient C1 = 1/2", "status": "planned", "evidence": []},
         {"id": "L1.OBSERVABLE", "title": "Magnetic-coupling interpretation of F2(0)", "status": "planned", "evidence": []},
