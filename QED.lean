@@ -51,6 +51,7 @@ public import QED.Integration.ParametricSmooth
 public import QED.OneLoop.FormFactorSmooth
 public import QED.OneLoop.PacketAmplitude
 public import QED.OneLoop.SourceLandeFactor
+public import QED.Integration.PacketMoment
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization
@@ -115,6 +116,9 @@ are proved infrastructure:
   of the frozen wave-packet current density.
 * `QED.OneLoop.SourceLandeFactor`: the regulator limit of the source Landé factor
   from the packet limit (a conditional helper for packet 4b's (W₅)).
+* `QED.Integration.PacketMoment`: absolute convergence and the value of the first
+  position moment of a two-momentum Fourier integral of a smooth compactly supported
+  amplitude (Fourier inversion at the origin in `QED.Integration.PacketMomentInversion`).
 
 Author-approved frozen declarations live under `QED/Frozen/` and are bound by
 `QED/Frozen/manifest.json` (checked by `scripts/check_frozen_anchors.py`). The

@@ -93,6 +93,10 @@
     {
       "date": "2026-11-08",
       "change": "Infrastructure for packet 4b's (W4): smoothness of parametric integrals over a compact set (Integration/ParametricSmooth), and C-infinity smoothness of the form factors A(q^2) and B(q^2) on (-4m^2, oo) at fixed regulators (OneLoop/FormFactorSmooth)."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Infrastructure for (W4) and (W5): the packet amplitude F(k, k') = w(k') w(k) M(k', k) of the frozen current density (OneLoop/PacketAmplitude); the first position moment of a two-momentum Fourier integral of a smooth compactly supported amplitude converges absolutely and equals (2 pi)^3 (i/2) int (d_k - d_k')F on the diagonal (Integration/PacketMoment, with Fourier inversion at the origin); and a conditional helper deriving (W5) from the packet limit of (W4) and the sealed (R), (R') (OneLoop/SourceLandeFactor)."
     }
   ],
   "tracks": [
