@@ -346,7 +346,9 @@ Three objects in the chain are of that kind:
 **Packet 1: the regulated one-loop vertex.** Approved as written and frozen on
 2026-11-08 (decision D-11). Steps 1a–1c are the frozen definitions (A)–(C), the
 operation is (D), and 1d is the frozen theorem goal (E), which is `DRAFT_SORRY`.
-Step 1e follows once (E) is proved and audited.
+Step 1e follows once (E) is proved and audited. The infrastructure definitions
+in its closure (`metric`, `dot`, `lower`, `gamma`, `slash`) were approved as
+packet 1b and frozen the same day (decision D-12).
 
 | Step | Declaration (planned) | Kind |
 | --- | --- | --- |

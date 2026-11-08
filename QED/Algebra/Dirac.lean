@@ -6,6 +6,8 @@ Authors: Scott Armstrong
 module
 
 public import QED.Algebra.Minkowski
+public import QED.Frozen.Algebra.Gamma
+public import QED.Frozen.Algebra.Slash
 public import Mathlib.Basic.Complex.Basic
 public import Mathlib.LinearAlgebra.Matrix.ConjTranspose
 public import Mathlib.LinearAlgebra.Matrix.Notation
@@ -26,6 +28,10 @@ decision D-7), following the primary source:
   (eq. (38.8));
 * the Lorentz generators `S^{μν} = (i/4) [γ^μ, γ^ν]` (eq. (40.3)).
 
+The gamma matrices `QED.Dirac.gamma` and the slash `QED.Dirac.slash` are
+author-approved frozen definitions (decision D-12) in `QED/Frozen/Algebra/`; this
+module re-exports them. The slash follows the source's definition (37.24).
+
 ## Main statements
 
 * `QED.Dirac.gamma_anticomm`: the Clifford relation.
@@ -40,22 +46,9 @@ open Matrix Complex
 
 namespace QED.Dirac
 
-/-- The gamma matrices `γ^μ` (upper index) in the Weyl representation of the primary
-source's eq. (36.7). -/
-def gamma : Fin 4 → Matrix (Fin 4) (Fin 4) ℂ
-  | 0 => !![0, 0, 1, 0; 0, 0, 0, 1; 1, 0, 0, 0; 0, 1, 0, 0]
-  | 1 => !![0, 0, 0, 1; 0, 0, 1, 0; 0, -1, 0, 0; -1, 0, 0, 0]
-  | 2 => !![0, 0, 0, -I; 0, 0, I, 0; 0, I, 0, 0; -I, 0, 0, 0]
-  | 3 => !![0, 0, 1, 0; 0, 0, 0, -1; -1, 0, 0, 0; 0, 1, 0, 0]
-
 /-- The matrix `β` of the Dirac adjoint `Ψ̄ = Ψ† β` (eq. (38.8)). -/
 def beta : Matrix (Fin 4) (Fin 4) ℂ :=
   !![0, 0, 1, 0; 0, 0, 0, 1; 1, 0, 0, 0; 0, 1, 0, 0]
-
-/-- Feynman slash `p̸ = γ^μ p_μ` of a real four-vector, with `p_μ` the covariant
-components for the mostly-plus metric. -/
-def slash (p : Fin 4 → ℝ) : Matrix (Fin 4) (Fin 4) ℂ :=
-  ∑ μ, ((Minkowski.lower p μ : ℝ) : ℂ) • gamma μ
 
 /-- The Lorentz generators `S^{μν} = (i/4) [γ^μ, γ^ν]` (eq. (40.3)). -/
 noncomputable def lorentzGen (μ ν : Fin 4) : Matrix (Fin 4) (Fin 4) ℂ :=

@@ -19,6 +19,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-9 | 2026-11-07 | Both magnetic-moment definitions, proved equivalent (ruling on P-2) | Author |
 | D-10 | 2026-11-07 | The repository is licensed under Apache-2.0 | Author |
 | D-11 | 2026-11-08 | Packet 1 (regulated one-loop vertex integrand and its well-definedness) approved as written and frozen | Author |
+| D-12 | 2026-11-08 | Packet 1b (the Minkowski and Dirac definitions in packet 1's closure) approved as written and frozen | Author |
 
 ## Pending author rulings
 
@@ -299,4 +300,64 @@ is `FROZEN_UNPROVED` until its provider proves it, it is sealed with
 passes. The definitions (A)–(C) depend on infrastructure definitions
 (`QED.Minkowski.metric`, `dot`, `lower`, `QED.Dirac.gamma`, `slash`) whose
 bodies were not displayed in packet 1. That gap is finding
-[F-12](FINDINGS.md); it is to be closed by packet 1b.
+[F-12](FINDINGS.md); it is to be closed by packet 1b. (Closed by D-12.)
+
+## D-12. Packet 1b approved (author ruling)
+
+**Ruling.** On 2026-11-08 the author approved packet 1b "as written". The
+packet showed the exact committed text, docstrings included, of the five
+infrastructure definitions in packet 1's closure. It also stated the evidence
+for them:
+
+- the Lean theorems `dot_eq`, `lower_eq`, `gamma_anticomm` (36.9), and
+  `slash_mul_slash`;
+- an entry-by-entry comparison of `gamma` with (36.7);
+- the packet-1 reviewer's checks of `dot`, `slash`, and the gamma matrices.
+
+No dedicated independent review of packet 1b was run. The author was told this
+and approved without one.
+
+**Frozen anchors** (bound by [`QED/Frozen/manifest.json`](../../QED/Frozen/manifest.json)):
+
+| Anchor | Export | Source |
+| --- | --- | --- |
+| `QED/Frozen/Algebra/Metric.lean` | `QED.Minkowski.metric` | (2.2)–(2.4), p. 30 |
+| `QED/Frozen/Algebra/Dot.lean` | `QED.Minkowski.dot` | (2.2), p. 30 |
+| `QED/Frozen/Algebra/Lower.lean` | `QED.Minkowski.lower` | index lowering with $g_{\mu\nu}$, p. 217 (before (34.22)) |
+| `QED/Frozen/Algebra/Gamma.lean` | `QED.Dirac.gamma` | (36.7)–(36.8), p. 227 |
+| `QED/Frozen/Algebra/Slash.lean` | `QED.Dirac.slash` | (37.24), p. 238 |
+
+All five are definitions in state `SEALED`.
+
+**Packaging.**
+
+- Each definition moved out of `QED/Algebra/Minkowski.lean` or
+  `QED/Algebra/Dirac.lean` into its own frozen file, with its export name
+  unchanged. Those two modules now `public import` the frozen files and keep
+  only the proved properties.
+- A script confirmed that each frozen docstring and declaration is
+  byte-identical to the text committed at `f0f51d5`, which is the text shown to
+  the author.
+- `pp.all` printing of each definition gave byte-identical output before and
+  after the move. Its elaborated meaning is therefore unchanged.
+- The bytes of packet 1's files (A)–(E) did not change, and neither did their
+  ABI hashes.
+
+**Closures.** Every definition closure in the manifest is now transitive over
+frozen files:
+
+- `dot` and `lower` close over `metric`;
+- `slash` closes over `metric`, `lower`, and `gamma`;
+- (A) closes over all five;
+- (B) closes over `metric` and `dot`;
+- (C) closes over all five together with (A) and (B);
+- (E) closes over all five together with (A)–(D).
+
+The guard was shown to reject three more violations. An edited `metric` body
+is reported as drift in `metric`, `dot`, `lower`, `slash`, and (A). A
+whitespace-only docstring change and a second declaration in a frozen file
+are rejected too.
+
+**Scope.** This closes [F-12](FINDINGS.md). Packet 1's meaning is now
+protected down to Mathlib. The definitions are immutable; a change requires an
+author-approved, versioned successor.

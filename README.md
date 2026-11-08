@@ -17,8 +17,9 @@ regulator route is chosen. The derivation is mapped step by step with its proof
 obligations exposed. A Lean package is pinned to Lean and Mathlib `v4.35.0`.
 It contains proved Dirac-algebra infrastructure, the loop-energy integral
 evaluation that replaces Wick rotation, and the **first author-approved frozen
-declarations** (packet 1, D-11): the regulated propagators, the one-loop vertex
-integrand (62.40), the energy-first integral, and the theorem goal that the
+declarations** (packets 1 and 1b, D-11 and D-12): the regulated propagators,
+the one-loop vertex integrand (62.40), the energy-first integral, the Minkowski
+and Dirac definitions they are built from, and the theorem goal that the
 regulated vertex is well defined. That theorem goal is frozen and not yet
 proved (`DRAFT_SORRY`). No physics result is proved. See the
 [campaign status](docs/campaign/STATUS.md).
@@ -50,7 +51,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 14. Documentation milestones do not count as proved physics.
+**Tracked Lean source files:** 19. Documentation milestones do not count as proved physics.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.

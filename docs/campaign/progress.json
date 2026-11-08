@@ -37,6 +37,10 @@
     {
       "date": "2026-11-08",
       "change": "Author approved packet 1 as written (D-11). Froze four definitions (electron and Pauli-Villars photon propagators, the (62.40) integrand, the energy-first integral) and one theorem goal (well-definedness of the epsilon -> 0+ limit, DRAFT_SORRY, quarantined with an empty provider), bound by QED/Frozen/manifest.json. Installed the frozen-anchor guard and ABI hashes. Recorded process gap F-12 (unfrozen infrastructure in the closure; packet 1b proposed). SPEC.STATEMENTS is in_progress."
+    },
+    {
+      "date": "2026-11-08",
+      "change": "Author approved packet 1b as written (D-12). Froze the five infrastructure definitions in packet 1's closure (QED.Minkowski.metric, dot, lower; QED.Dirac.gamma, slash) one per file under QED/Frozen/Algebra/ with unchanged export names; pp.all output unchanged by the move, packet 1 bytes and ABI hashes unchanged. All manifest closures are now transitive over frozen files. F-12 resolved. Corrected the slash citation in CONVENTIONS.md to (37.24). SPEC.STATEMENTS remains in_progress (packet 2 pending)."
     }
   ],
   "tracks": [

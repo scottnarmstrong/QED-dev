@@ -5,6 +5,9 @@ Authors: Scott Armstrong
 -/
 module
 
+public import QED.Frozen.Algebra.Metric
+public import QED.Frozen.Algebra.Dot
+public import QED.Frozen.Algebra.Lower
 public import Mathlib.Algebra.BigOperators.Fin
 public import Mathlib.Basic.Real.Basic
 import Mathlib.Tactic.FinCases
@@ -20,6 +23,10 @@ source's eq. (2.4).
 
 ## Main definitions
 
+These are author-approved frozen definitions (decision D-12), one per file under
+`QED/Frozen/Algebra/`. This module re-exports them and proves their basic
+properties.
+
 * `QED.Minkowski.metric`: the components `g_{μν}`. Numerically these are also
   the inverse metric `g^{μν}`.
 * `QED.Minkowski.dot`: the bilinear form `p·k = g_{μν} p^μ k^ν`.
@@ -34,18 +41,6 @@ source's eq. (2.4).
 @[expose] public section
 
 namespace QED.Minkowski
-
-/-- The Minkowski metric `g_{μν} = diag(-1, 1, 1, 1)` (mostly plus). -/
-def metric (μ ν : Fin 4) : ℝ :=
-  if μ = ν then (if μ = 0 then -1 else 1) else 0
-
-/-- The Minkowski bilinear form `p·k = g_{μν} p^μ k^ν`. -/
-def dot (p k : Fin 4 → ℝ) : ℝ :=
-  ∑ μ, ∑ ν, metric μ ν * p μ * k ν
-
-/-- Covariant components `p_μ = g_{μν} p^ν`. -/
-def lower (p : Fin 4 → ℝ) (μ : Fin 4) : ℝ :=
-  ∑ ν, metric μ ν * p ν
 
 theorem metric_symm (μ ν : Fin 4) : metric μ ν = metric ν μ := by
   unfold metric

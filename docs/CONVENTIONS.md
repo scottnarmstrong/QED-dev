@@ -46,7 +46,7 @@ momentum.
 | --- | --- | --- |
 | Representation | Weyl: $\gamma^\mu=\begin{pmatrix}0&\sigma^\mu\\ \bar\sigma^\mu&0\end{pmatrix}$, $\sigma^\mu=(I,\vec\sigma)$, $\bar\sigma^\mu=(I,-\vec\sigma)$ | (36.7)–(36.8), p. 227 |
 | Clifford relation | $\{\gamma^\mu,\gamma^\nu\}=-2g^{\mu\nu}$, so $(\gamma^0)^2=1$, $(\gamma^j)^2=-1$ | (36.9), p. 227 |
-| Slash | $\not p=\gamma^\mu p_\mu$, hence $\not p\not p=-p^2$ | (36.9) |
+| Slash | $\not p=\gamma^\mu p_\mu$, hence $\not p\not p=-p^2$ by (36.9) | (37.24), p. 238 |
 | Dirac adjoint | $\bar\Psi=\Psi^\dagger\beta$ with $\beta=\begin{pmatrix}0&I\\ I&0\end{pmatrix}$, numerically equal to $\gamma^0$ | (38.5), (38.7)–(38.9), pp. 240–241 |
 | Lorentz generators | $S^{\mu\nu}=\tfrac{i}{4}[\gamma^\mu,\gamma^\nu]$; boost $K^j=S^{j0}$ | (40.3), p. 254; (64.11), p. 384 |
 | Contraction identities | $\gamma_\rho\gamma^\mu\gamma^\rho=2\gamma^\mu$ in four dimensions, etc. | (47.18)–(47.21), p. 297 |

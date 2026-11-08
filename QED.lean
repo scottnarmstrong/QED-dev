@@ -41,9 +41,12 @@ are proved infrastructure:
 
 Author-approved frozen declarations live under `QED/Frozen/` and are bound by
 `QED/Frozen/manifest.json` (checked by `scripts/check_frozen_anchors.py`). The
-root imports the sealed frozen definitions. It deliberately does **not** import
-the `DRAFT_SORRY` theorem anchor `QED.Frozen.OneLoop.VertexLimitExists` or its
-quarantined provider `QED.Provider.OneLoop.VertexLimitExists`; `lake build` still
-compiles both through the library globs. See `README.md` and
+Minkowski and Dirac definitions (`metric`, `dot`, `lower`, `gamma`, `slash`) are
+frozen in `QED/Frozen/Algebra/` and re-exported by `QED.Algebra.Minkowski` and
+`QED.Algebra.Dirac`. The root imports the sealed frozen definitions. It
+deliberately does **not** import the `DRAFT_SORRY` theorem anchor
+`QED.Frozen.OneLoop.VertexLimitExists` or its quarantined provider
+`QED.Provider.OneLoop.VertexLimitExists`; `lake build` still compiles both
+through the library globs. See `README.md` and
 `docs/campaign/STATUS.md` for the campaign state.
 -/
