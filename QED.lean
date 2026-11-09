@@ -70,6 +70,14 @@ public import QED.WickModel.CompatibilityLines
 public import QED.WickModel.Compatibility
 public import QED.Frozen.WickModel.WickVertexEqOnePIFunction
 public import QED.WickModel.TwoPoint
+public import QED.WickModel.SelfEnergyEnergyFirst
+public import QED.WickModel.SelfEnergyLimit
+public import QED.WickModel.TwoPointClassificationBasic
+public import QED.WickModel.TwoPointClassificationTree
+public import QED.WickModel.TwoPointClassificationGauge2
+public import QED.WickModel.TwoPointClassificationSelfEnergy
+public import QED.WickModel.TwoPointClassificationPolarization
+public import QED.WickModel.TwoPointClassification
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization
