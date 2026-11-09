@@ -3961,7 +3961,7 @@
         "module": "QED.Provider.Wick.WickVertexEq",
         "export": "QED.Provider.Wick.wickVertex_eq"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "2f6548737b80fd49c4a6cc68080db1a62a18e3ba82df88ef0fff1bc9b54343c3",
       "suffix_sha256": "17ed271f0024a08a5f0b7cb67e6655cc0c82510b58a3e244bfd2c7e02c0f884f",
       "draft_allowlist": {
@@ -4148,7 +4148,7 @@
         "module": "QED.Provider.Wick.WickVertexLimit",
         "export": "QED.Provider.Wick.tendsto_wickVertex"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "f79e03cd3df2493bf5762f6ee7548e3f5f00fe8f22c8edbf8a8396fd34040335",
       "suffix_sha256": "17ed271f0024a08a5f0b7cb67e6655cc0c82510b58a3e244bfd2c7e02c0f884f",
       "draft_allowlist": {

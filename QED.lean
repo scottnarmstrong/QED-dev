@@ -59,6 +59,11 @@ public import QED.OneLoop.PacketAmplitudeSmooth
 public import QED.OneLoop.PacketLimit
 public import QED.Frozen.Wick.WickVertex
 public import QED.Wick.Gauge3
+public import QED.Integration.EnergyFirstShift
+public import QED.Wick.ChainValue
+public import QED.Wick.Classification
+public import QED.Frozen.Wick.WickVertexEq
+public import QED.Frozen.Wick.WickVertexLimit
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization

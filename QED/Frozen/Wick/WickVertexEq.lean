@@ -34,7 +34,7 @@ theorem wickVertex_eq (e δ₁ δ₂ δm δ₃ m mγ Λ ε : ℝ) (p' p : Fin 4 
         Matrix.of fun i j => QED.OneLoop.energyFirstIntegral fun ℓ =>
           QED.OneLoop.vertexIntegrand e m mγ Λ ε p' p μ ℓ i j :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Wick.wickVertex_eq
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

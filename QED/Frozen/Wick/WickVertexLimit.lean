@@ -34,7 +34,7 @@ theorem tendsto_wickVertex (e δ₁ δ₂ δm δ₃ m mγ Λ : ℝ) (hm : 0 < m)
     Tendsto (fun ε => (1 / I) * wickVertex e δ₁ δ₂ δm δ₃ m mγ Λ ε p' p μ i j) (𝓝[>] 0)
       (𝓝 (QED.OneLoop.vertexFunction e (1 + δ₁) m mγ Λ hm hmγ hΛ p' p hp' hp hp0' hp0 μ i j)) :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Wick.tendsto_wickVertex
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

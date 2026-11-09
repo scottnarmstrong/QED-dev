@@ -113,6 +113,14 @@
     {
       "date": "2026-11-09",
       "change": "Author approved packet 5 as written (D-20). Froze 24 definitions of the Wick derivation of the vertex (vertex kinds, contractions, fermionic sign, 1PI, routing, vertex factors, amplitude, value, wickVertex) in QED/Frozen/Wick/, and the theorem goals (W1) wickVertex_eq (O-1, O-2) and (W2) tendsto_wickVertex as DRAFT_SORRY with quarantined placeholder providers. The frozen-anchor guard now accepts abbrev, inductive, structure and instance as definitional keywords."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Infrastructure for (W1): the energy-first integral is invariant under translations and reflection of the loop momentum, with no integrability assumption (Integration/EnergyFirstShift); each of the six vertex-correction contractions has value equal to the energy-first integral of the frozen (62.40) integrand, with the routing, the index contraction to gamma^rho S gamma^mu S gamma^nu, and the shift (Wick/ChainValue). Author decided the design of L1.ASSEMBLY (D-21): one headline theorem from the Wick vertex; prove both sides of O-3 (residues; the photon side needs a fermion-loop regulator ruling); fresh-checkout audit, Comparator challenge and errata ledger."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Sealed packet 5's (W1) wickVertex_eq and (W2) tendsto_wickVertex; an independent refute-first audit found them PROVED. The order-e^3 1PI part of the Wick expansion with all counterterms is i Z1 e gamma^mu + the regulated one-loop diagram (62.40) with coefficient one, the fermion-line ordering and no closed-loop sign (O-1, O-2), and its epsilon -> 0+ limit is the vertex function. L1.VERTEX is done. Author chose Pauli-Villars regulator fermions in the Wick model for the photon side of O-3 (D-22)."
     }
   ],
   "tracks": [
@@ -144,7 +152,7 @@
       "kind": "formal",
       "items": [
         {"id": "L1.MODEL", "title": "Concrete regularized perturbative model and algebra", "status": "in_progress", "evidence": ["QED/Algebra/Minkowski.lean", "QED/Algebra/Dirac.lean", "QED/Algebra/Contraction.lean", "QED/OneLoop/VertexAlgebra.lean"]},
-        {"id": "L1.VERTEX", "title": "Vertex expansion, diagram coefficient, and signs", "status": "in_progress", "evidence": ["docs/campaign/DECISIONS.md", "QED/Frozen/Wick/WickVertex.lean", "QED/Frozen/Wick/WickVertexEq.lean"]},
+        {"id": "L1.VERTEX", "title": "Vertex expansion, diagram coefficient, and signs", "status": "done", "evidence": ["QED/Frozen/Wick/WickVertex.lean", "QED/Frozen/Wick/WickVertexEq.lean", "QED/Frozen/Wick/WickVertexLimit.lean", "QED/Provider/Wick/WickVertexEq.lean", "docs/campaign/DECISIONS.md", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.PROJECTION", "title": "On-shell Dirac reduction and form-factor extraction", "status": "done", "evidence": ["QED/OneLoop/NumeratorReduction.lean", "QED/Algebra/FormFactorIndependence.lean", "QED/OneLoop/VertexFormFactors.lean", "QED/Frozen/OneLoop/FormFactorExistsUnique.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "done", "evidence": ["QED/Integration/FeynmanParameter.lean", "QED/Integration/SpatialIntegral.lean", "QED/OneLoop/VertexEnergyFirst.lean", "QED/OneLoop/VertexSpatial.lean", "QED/Frozen/OneLoop/VertexLimitExists.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.LIMITS", "title": "Finiteness and required regulator limits", "status": "done", "evidence": ["QED/OneLoop/PauliLimit.lean", "QED/Frozen/OneLoop/PauliFormFactorLimit.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},

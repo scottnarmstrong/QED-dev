@@ -35,10 +35,11 @@ Packet 4b (D-18) adds the source's own wave-packet definition of the magnetic
 moment, $\mu=\int d^3x\,x^1\langle e|J^2(x)|e\rangle/\langle e|e\rangle$, and
 proves that its position integral converges absolutely, that it agrees with the
 response definition as the packet narrows, and so that $g\to2(1+\alpha/2\pi)$
-for the source definition too. Packet 5 (D-20) defines the vertex from the
-order-$e^3$ Wick expansion of the interaction with all counterterms. Its
-theorems, that this reproduces the vertex function above, are stated and
-frozen, and their proofs are in progress (L1.VERTEX). See the
+for the source definition too. Packet 5 (D-20) derives the vertex from the
+order-$e^3$ Wick expansion of the interaction with all counterterms: the 1PI
+part is the counterterm-corrected tree vertex plus the one-loop diagram, with
+coefficient one and no closed-loop sign. Remaining one-loop work: the on-shell
+residues (O-3) and the assembled headline theorem (L1.ASSEMBLY). See the
 [campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
@@ -62,13 +63,13 @@ become precise; changes to their scope must be recorded.
 | --- | ---: | --- | --- |
 | Campaign setup | 4/4 | `██████████` 100% | Complete |
 | Sources and exact specification | 3/4 | `███████░░░` 75% | In progress |
-| Complete one-loop calculation | 5/8 | `██████░░░░` 62% | In progress |
+| Complete one-loop calculation | 6/8 | `███████░░░` 75% | In progress |
 | Numerical certification pilot | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Complete two-loop calculation | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 112. **Total lines of Lean code:** 10,829.
+**Tracked Lean source files:** 118. **Total lines of Lean code:** 12,479.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.

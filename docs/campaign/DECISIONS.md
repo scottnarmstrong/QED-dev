@@ -28,6 +28,8 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-18 | 2026-11-08 | Packet 4b (wave-packet current density, source magnetic moment, equivalence O-24, and the source Landé factor) approved as written and frozen | Author |
 | D-19 | 2026-11-08 | Design of L1.VERTEX (Wick derivation of the vertex): the 1PI vertex; the full counterterm set; canonical one-loop routing; general contraction combinatorics | Author |
 | D-20 | 2026-11-09 | Packet 5 (the Wick derivation of the vertex) approved as written and frozen; the frozen-anchor guard accepts the definitional keywords `abbrev`, `inductive`, `structure` and `instance` | Author; guard change by the orchestrator |
+| D-21 | 2026-11-09 | Design of L1.ASSEMBLY: one headline theorem from the Wick vertex; prove both sides of O-3 (residues); fresh-checkout audit, Comparator challenge and errata ledger | Author |
+| D-22 | 2026-11-09 | Fermion-loop regulator for the photon side of O-3: Pauli–Villars regulator fermions as new fields of the Wick model | Author |
 
 ## Pending author rulings
 
@@ -721,6 +723,34 @@ compiler-generated auxiliary proofs and matchers.
 - The labelled photon-counterterm factor is half the Feynman rule (62.12).
 - (W₁) has no hypotheses. It covers O-1 and O-2, not the residues of O-3.
 
+**Sealed.** (W₁) and (W₂) were frozen as `DRAFT_SORRY` in `6d5c700` and then
+sealed by their providers.
+
+(W₁) combines two results:
+
+- **The classification of the 1PI contractions** of every vertex sequence of
+  order ≤ 3 (`QED/Wick/Classification*.lean`):
+  - the empty, single-counterterm and two-vertex cases contribute nothing;
+  - the two trees give i(1 + δ₁)eγ^μ;
+  - for three gauge vertices the 1PI contractions are exactly the six
+    vertex-correction chains, each of sign +1.
+- **The evaluation of each chain** (`QED/Wick/ChainValue.lean`): the routing,
+  the index contraction to γ^ρ S̃(p′+ℓ) γ^μ S̃(p+ℓ) γ^ν, and translation
+  invariance of the energy-first integral, which needs no integrability.
+
+(W₂) applies the sealed (W₁) and the frozen characterization (F′).
+
+An independent refute-first audit found both PROVED. It confirmed:
+
+- the frozen bytes and all 26 ABI hashes;
+- that the provider statements equal the frozen ones up to the D-13
+  convention;
+- that the proofs consume the full classification, with non-vacuity shown by
+  a Lean witness (`chainContraction 0 1 2`);
+- a Python brute force with explicit Grassmann reordering;
+- standard axioms only;
+- that the guard change is sound.
+
 **Guard change (orchestrator).** `scripts/check_frozen_anchors.py` required
 every definition anchor to use a literal `def`. Packet 5 is the first to
 freeze an `inductive`, `abbrev`s and an `instance`. Rather than rewrite the
@@ -728,3 +758,60 @@ approved text, the guard now accepts the definitional keywords `def`,
 `abbrev`, `inductive`, `structure` and `instance`. It still rejects `axiom`,
 `opaque`, `constant` and every other keyword. None of the accepted keywords
 can carry an unproved claim.
+
+## D-21. Design of L1.ASSEMBLY (author ruling)
+
+**Ruling.** On 2026-11-09 the author decided three design questions for the
+assembled one-loop result (L1.ASSEMBLY):
+
+1. **Form.** One new headline theorem whose statement starts from the Wick
+   vertex (packet 5). Near the regulator limit a charge-normalizing δ₁ exists.
+   For each such δ₁:
+   - the ε → 0⁺ limit of the Wick vertex is the vertex function;
+   - F₂ is within η of α/2π;
+   - both magnetic-moment definitions give g within η of 2(1 + α/2π).
+
+   It is proved by combining sealed theorems, and its exact declaration goes
+   through the usual review and approval.
+2. **Residues (O-3): prove both sides.**
+   - The electron side: derive the one-loop self-energy Σ from the Wick
+     expansion, and prove that the on-shell conditions Σ(−m) = Σ′(−m) = 0
+     ((62.27), (62.36)–(62.38)) fix δ₂ and δ_m and give unit electron
+     residues.
+   - The photon side: vacuum polarization with Π(0) = 0 (62.11). The fermion
+     loop of Π is not regulated by the photon Pauli–Villars term of D-5, so
+     this needs a fermion-loop regulator, to be put to the author as a
+     separate regulator ruling before any declaration is drafted.
+
+   The current matrix elements used by the magnetic-moment definitions (O-3
+   in (W₁) of packet 4b and in (R₀)) are then tied to the model's full
+   amplitude, not taken as a modeling identification.
+3. **Evidence.**
+   - A rebuild in a fresh clone at the recorded commit, with an axiom report
+     for every sealed theorem and an independent end-to-end refute-first
+     audit of the whole chain.
+   - A Palomar-style Comparator challenge for the headline theorem.
+   - `docs/ERRATA-AND-DEVIATIONS.md`, written from the findings ledger, with
+     each erratum verified against the pinned PDF.
+
+**Scope.** These are design rulings. The regulator for Π, and every exact
+declaration, go through the usual review and approval.
+
+## D-22. Fermion-loop regulator for the photon side of O-3 (author ruling)
+
+**Ruling.** On 2026-11-09 the author chose the regulator for the vacuum
+polarization Π (the photon side of O-3, D-21): **Pauli–Villars regulator
+fermions as new fields of the Wick model.**
+
+- **Masses and coefficients.** The regulator fermions have masses M₁, M₂ and
+  coefficients c₁, c₂, with c₀ = 1 for the electron, Σcᵢ = 0 and
+  Σcᵢ Mᵢ² = 0.
+- **Effect.** Closed fermion loops become absolutely convergent and gauge
+  invariant. They are integrated by M1 at fixed ε, like the rest of the model.
+- **Versioning.** The extended model is a versioned successor of packet 5's
+  vertex kinds. Packet 5's theorems carry over, because the 1PI vertex has no
+  closed fermion loop at this order.
+
+**Scope.** The exact successor declarations, the order of the regulator-mass
+limit relative to the D-5 limits, and the statement of Π(0) = 0 go through
+the usual review and approval.
