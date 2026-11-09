@@ -149,6 +149,10 @@
     {
       "date": "2026-11-09",
       "change": "Sealed packet 6b-1's (Z2) vacuumPolarization_existsUnique; an independent refute-first audit found it PROVED. Under the Pauli-Villars conditions the one-loop vacuum polarization from the Wick expansion is transverse in the epsilon -> 0+ limit, Pi(k^2)(k^2 g - k k) with Pi(s) = -delta3 + (e^2/2pi^2) int x(1-x) sum_f c_f log(M_f^2 + x(1-x)s); integrability fails if either condition is dropped."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Author approved the electron half of packet 6b-2 (D-27): froze selfEnergyAB (Z3) with its characterization (Z3', sealed), selfEnergySlash (Z4, Sigma(pslash) = A(-pslash^2) pslash + B(-pslash^2) m), IsElectronOnShell (Z5, Sigma(-m) = Sigma'(-m) = 0), and the theorem goal (Z6) that these fix delta2, delta_m uniquely, as DRAFT_SORRY with its proof in the provider."
     }
   ],
   "tracks": [

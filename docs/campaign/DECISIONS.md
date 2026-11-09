@@ -34,6 +34,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-24 | 2026-11-09 | Packet 6a (the general Wick model) approved as written and frozen; the regulator fermions enter as a flavoring summed inside the loop integrand | Author |
 | D-25 | 2026-11-09 | The on-shell conditions (62.27) and (62.11) are formalized in the literal covariant form, with the decompositions of Σ and Π proved | Author |
 | D-26 | 2026-11-09 | Packet 6b-1 (self-energy and vacuum-polarization existence and covariant forms) approved as written and frozen; regulator masses M₁, M₂ > m | Author |
+| D-27 | 2026-11-09 | Packet 6b-2, electron half (self-energy form factors, Σ(p̸), the on-shell conditions (62.27), and the unique δ₂, δ_m) approved as written and frozen | Author |
 
 ## Pending author rulings
 
@@ -1024,3 +1025,44 @@ because of both Pauli–Villars conditions. The audit confirmed:
 - (62.25) recovered as the regulator masses grow;
 - non-vacuity, by Lean witnesses;
 - standard axioms only.
+
+## D-27. Packet 6b-2, electron half, approved (author ruling)
+
+**Ruling.** On 2026-11-09 the author approved the electron half of packet
+6b-2 as written. The approved text was the untracked scratch file with
+SHA-256 `c128f91154d408e21dbf12c7bd7b856860917d5182f8e49aca5533f830712da6`.
+
+- **(Z₃)** `selfEnergyAB`: the unique (A, B) of the sealed (Z₁).
+- **(Z₃′)** `selfEnergyAB_spec`: its characterization.
+- **(Z₄)** `selfEnergySlash`: Σ(z) = A(−z²)z + B(−z²)m, the source's Σ(p̸) with
+  p² = −p̸².
+- **(Z₅)** `IsElectronOnShell`: Σ(−m) = 0 and Σ′(−m) = 0. The derivative is
+  taken through a clamp onto an interval around −m inside the domain, which
+  does not change it.
+- **(Z₆)** `electronCounterterms_existsUnique`: these conditions fix (δ₂, δ_m)
+  uniquely.
+
+**Review.** An independent refute-first review found no statement blockers.
+The reviewer and a separate proof worker both proved (Z₃′) and (Z₆) with
+standard axioms only. The unique pair, with a = A_loop and b = B_loop at
+s = −m², is:
+
+- δ₂ = a − 2m²a′ + 2m²b′;
+- δ_m = b − 2m²a′ + 2m²b′.
+
+δ₂ agrees with Peskin's Pauli–Villars δZ₂ up to O(1/Λ²). The renormalized Σ
+agrees with Srednicki's (62.36) to 1e-11. A boosted-frame check confirmed
+that the electron-leg factor needed by LSZ vanishes on shell with these
+counterterms. The review's naming and docstring findings
+(`selfEnergySlash`, a lighter domain proof) were applied to the text the
+author saw.
+
+**Frozen anchors.** All five are in `QED/Frozen/WickModel/`, and their
+`pp.all` output equals the approved file's:
+
+- (Z₃), (Z₄) and (Z₅) are definitions, sealed when frozen.
+- (Z₃′) lands sealed in the same commit as (Z₃), by its provider (three lines
+  from (Z₁)). A definition chosen from an existence-and-uniqueness theorem
+  lands with its proved characterization.
+- (Z₆) is `DRAFT_SORRY`. Its provider already carries the proof, from
+  `QED/WickModel/ElectronOnShell.lean`.

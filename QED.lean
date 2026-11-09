@@ -88,6 +88,10 @@ public import QED.WickModel.VacuumPolarizationRadial
 public import QED.WickModel.VacuumPolarizationLimit
 public import QED.WickModel.VacuumPolarizationExistsUnique
 public import QED.Frozen.WickModel.VacuumPolarizationExistsUnique
+public import QED.Frozen.WickModel.SelfEnergyAB
+public import QED.Frozen.WickModel.SelfEnergyABSpec
+public import QED.Frozen.WickModel.SelfEnergySlash
+public import QED.Frozen.WickModel.IsElectronOnShell
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization
