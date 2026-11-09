@@ -202,7 +202,7 @@ SEALED_THIS_TURN: 0 theorems; packet 5's 24 definitions were frozen as approved 
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
 | Project build | `nice -n 5 lake build` | success; 2918 jobs; no warnings |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (111 Lean files) |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (112 Lean files) |
 | Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` at the earlier landing; on 2026-11-08 on `QED.OneLoop.vertexLimit_existsUnique`, its provider, and every exported theorem of the five new modules (transient files, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |
