@@ -22,11 +22,11 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 2 — QED/Frozen/WickModel/SelfEnergyExistsUnique.lean (Z₁),
-               QED/Frozen/WickModel/VacuumPolarizationExistsUnique.lean (Z₂)
+DRAFT_ANCHORS: 1 — QED/Frozen/WickModel/VacuumPolarizationExistsUnique.lean (Z₂)
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 0 theorems; packet 6b-1 frozen as approved (D-26)
+SEALED_THIS_TURN: 1 theorem — QED.WickModel.selfEnergy_existsUnique (Z₁); PROVED (checker,
+               build, standard axioms, independent refute-first audit)
 ```
 
 | Field | Value |

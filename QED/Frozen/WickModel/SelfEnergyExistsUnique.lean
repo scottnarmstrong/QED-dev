@@ -53,7 +53,7 @@ theorem selfEnergy_existsUnique (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (
           (𝓝 (((AB ⟨_, hp⟩).1 • Dirac.slash p
             + ((AB ⟨_, hp⟩).2 * P.m) • (1 : Matrix (Fin 4) (Fin 4) ℂ)) α β)) :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.WickModel.selfEnergy_existsUnique
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

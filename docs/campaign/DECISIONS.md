@@ -993,3 +993,16 @@ statements equal to the approved file's. The (Z₁) provider already carries
 the proof `QED.WickModel.selfEnergy_existsUnique_of_twoPoint`
 (`QED/WickModel/SelfEnergyExistsUnique.lean`). The (Z₂) provider is a
 placeholder.
+
+**(Z₁) sealed.** (Z₁) was sealed by its provider after an independent
+refute-first audit found it PROVED. The audit confirmed:
+
+- the frozen bytes and the ABI hash, and statement equality up to the D-13
+  convention, with no excess binders;
+- integrability for every p and ε > 0;
+- the limit A = A_loop − δ₂ and B = B_loop − δ_m, with the Feynman-parameter
+  forms matching (62.33) with the Pauli–Villars logarithm, signs included;
+- an independent numerical check that converges linearly in ε to a nonzero
+  limit;
+- non-vacuity, by Lean witnesses;
+- standard axioms only.

@@ -7429,7 +7429,7 @@
         "module": "QED.Provider.WickModel.SelfEnergyExistsUnique",
         "export": "QED.Provider.WickModel.selfEnergy_existsUnique"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "af32aa8cd816797d896c34fc2b7f2f4c37421632c84c32c925886fa2b8b87eae",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {

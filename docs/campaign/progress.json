@@ -141,6 +141,10 @@
     {
       "date": "2026-11-09",
       "change": "Author approved packet 6b-1 (D-26): froze (Z1) selfEnergy_existsUnique and (Z2) vacuumPolarization_existsUnique (limits with the covariant decompositions, integrability conjuncts, regulator masses M1, M2 > m) as DRAFT_SORRY. The (Z1) provider carries the landed proof; the (Z2) proof is in progress."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Sealed packet 6b-1's (Z1) selfEnergy_existsUnique; an independent refute-first audit found it PROVED. The one-loop self-energy from the Wick expansion has the covariant form A(p^2) pslash + B(p^2) m below both photon thresholds, with A, B the Pauli-Villars form of (62.33) minus the counterterms."
     }
   ],
   "tracks": [
