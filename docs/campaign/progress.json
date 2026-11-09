@@ -109,6 +109,10 @@
     {
       "date": "2026-11-08",
       "change": "Author decided the design of L1.VERTEX (D-19): the 1PI vertex is defined from the Wick contractions of the full counterterm Lagrangian (62.2)-(62.3), counterterms counted as order e^2; canonical one-loop routing with the M1 integral at fixed epsilon; general contraction combinatorics. L1.VERTEX is in_progress (statement preparation)."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Author approved packet 5 as written (D-20). Froze 24 definitions of the Wick derivation of the vertex (vertex kinds, contractions, fermionic sign, 1PI, routing, vertex factors, amplitude, value, wickVertex) in QED/Frozen/Wick/, and the theorem goals (W1) wickVertex_eq (O-1, O-2) and (W2) tendsto_wickVertex as DRAFT_SORRY with quarantined placeholder providers. The frozen-anchor guard now accepts abbrev, inductive, structure and instance as definitional keywords."
     }
   ],
   "tracks": [
@@ -140,7 +144,7 @@
       "kind": "formal",
       "items": [
         {"id": "L1.MODEL", "title": "Concrete regularized perturbative model and algebra", "status": "in_progress", "evidence": ["QED/Algebra/Minkowski.lean", "QED/Algebra/Dirac.lean", "QED/Algebra/Contraction.lean", "QED/OneLoop/VertexAlgebra.lean"]},
-        {"id": "L1.VERTEX", "title": "Vertex expansion, diagram coefficient, and signs", "status": "in_progress", "evidence": ["docs/campaign/DECISIONS.md"]},
+        {"id": "L1.VERTEX", "title": "Vertex expansion, diagram coefficient, and signs", "status": "in_progress", "evidence": ["docs/campaign/DECISIONS.md", "QED/Frozen/Wick/WickVertex.lean", "QED/Frozen/Wick/WickVertexEq.lean"]},
         {"id": "L1.PROJECTION", "title": "On-shell Dirac reduction and form-factor extraction", "status": "done", "evidence": ["QED/OneLoop/NumeratorReduction.lean", "QED/Algebra/FormFactorIndependence.lean", "QED/OneLoop/VertexFormFactors.lean", "QED/Frozen/OneLoop/FormFactorExistsUnique.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "done", "evidence": ["QED/Integration/FeynmanParameter.lean", "QED/Integration/SpatialIntegral.lean", "QED/OneLoop/VertexEnergyFirst.lean", "QED/OneLoop/VertexSpatial.lean", "QED/Frozen/OneLoop/VertexLimitExists.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.LIMITS", "title": "Finiteness and required regulator limits", "status": "done", "evidence": ["QED/OneLoop/PauliLimit.lean", "QED/Frozen/OneLoop/PauliFormFactorLimit.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},

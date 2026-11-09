@@ -57,6 +57,7 @@ public import QED.Integration.PacketMoment
 public import QED.Algebra.SpinorSmooth
 public import QED.OneLoop.PacketAmplitudeSmooth
 public import QED.OneLoop.PacketLimit
+public import QED.Frozen.Wick.WickVertex
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization

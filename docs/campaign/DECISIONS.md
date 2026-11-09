@@ -27,6 +27,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-17 | 2026-11-08 | Design of packet 4b (source definition of the magnetic moment): next milestone; absolute convergence of the position integral; real compact rotationally invariant packets | Author |
 | D-18 | 2026-11-08 | Packet 4b (wave-packet current density, source magnetic moment, equivalence O-24, and the source Landé factor) approved as written and frozen | Author |
 | D-19 | 2026-11-08 | Design of L1.VERTEX (Wick derivation of the vertex): the 1PI vertex; the full counterterm set; canonical one-loop routing; general contraction combinatorics | Author |
+| D-20 | 2026-11-09 | Packet 5 (the Wick derivation of the vertex) approved as written and frozen; the frozen-anchor guard accepts the definitional keywords `abbrev`, `inductive`, `structure` and `instance` | Author; guard change by the orchestrator |
 
 ## Pending author rulings
 
@@ -669,3 +670,61 @@ Wick derivation of the vertex (L1.VERTEX; ruling D-8, obligations O-1, O-2):
 
 **Scope.** These are design rulings. The exact declarations go through the
 usual review and approval.
+
+## D-20. Packet 5 approved (author ruling)
+
+**Ruling.** On 2026-11-09 the author approved packet 5, the Wick derivation
+of the vertex. The approved text was the exact Lean shown to the author, in
+one untracked scratch file with SHA-256
+`6933d7da4abc57dfb10cb4bf15cd5d2d8b80fa25e96e7a71be5eca4f7a71c206`.
+
+Before approval, an independent refute-first reviewer checked the packet
+against D-8, D-19 and the source's (58.17)–(58.21), rules 8–10, (62.2)–(62.3),
+(62.12), (62.28) and (62.39)–(62.40). It found no blocker. Its checks:
+
+- a literal Python transcription of all the definitions shows (W₁) holds,
+  with nonzero δ₂, δ_m, δ₃. Only the bare and δ₁ trees and the 6 labelled
+  vertex-correction contractions (all of sign +1) are 1PI, and each loop
+  contraction equals the frozen integrand after a translation of ℓ;
+- the fermionic sign agrees with an explicit Grassmann-algebra computation;
+- (W₂) follows from (W₁) and the frozen characterization of the one-loop
+  vertex (checked in Lean).
+
+Its findings (out-of-domain docstrings, an equivalent form of `IsOnePI`,
+names, style) were applied to the text the author saw.
+
+**Frozen anchors.** All 26 declarations are in `QED/Frozen/Wick/`, one per
+file, and bound by [`QED/Frozen/manifest.json`](../../QED/Frozen/manifest.json):
+
+- 24 definitions, sealed when frozen: `VertexKind`, its `Fintype` instance,
+  `VertexKind.order`, `VertexKind.photonSlots`, `FermionVertex`, `PhotonSlot`,
+  `Contraction`, `fermionSign`, `FermionLine`, `photonKey`, `PhotonLine`,
+  `Line`, `Line.ends`, `Joined`, `IsOnePI`, `externalMomentum`, `IsLoopLine`,
+  `lineMomentum`, `psiMomentum`, `photonMomentum`, `vertexFactor`,
+  `contractionAmplitude`, `contractionValue`, `wickVertex`;
+- (W₁) `QED.Wick.wickVertex_eq` (O-1, O-2) and (W₂)
+  `QED.Wick.tendsto_wickVertex`, frozen as `DRAFT_SORRY` with quarantined
+  placeholder providers.
+
+Each file holds its declaration byte for byte as approved. Each file's
+imports include the candidate's `Fintype` and `Perm` imports, so that
+instance resolution matches. The `pp.all` output of all 26 equals that of the
+approved scratch file, up to attribute markers and the names of
+compiler-generated auxiliary proofs and matchers.
+
+**Points stated to the author with the packet:**
+
+- Values off the source domain are not meaningful, and the docstrings say
+  so. That domain is the 1PI contractions at order ≤ e³ with ε > 0.
+- The lemma promised in D-19.3 (at most one loop, and the routing choice does
+  not matter) is internal to the proof of (W₁).
+- The labelled photon-counterterm factor is half the Feynman rule (62.12).
+- (W₁) has no hypotheses. It covers O-1 and O-2, not the residues of O-3.
+
+**Guard change (orchestrator).** `scripts/check_frozen_anchors.py` required
+every definition anchor to use a literal `def`. Packet 5 is the first to
+freeze an `inductive`, `abbrev`s and an `instance`. Rather than rewrite the
+approved text, the guard now accepts the definitional keywords `def`,
+`abbrev`, `inductive`, `structure` and `instance`. It still rejects `axiom`,
+`opaque`, `constant` and every other keyword. None of the accepted keywords
+can carry an unproved claim.

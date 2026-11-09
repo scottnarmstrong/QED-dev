@@ -447,7 +447,8 @@ class Guard:
     def check_declaration(self, anchor: dict[str, Any], label: str, text: str, kind: str) -> None:
         declarations = self.declarations(text)
         expected_export = anchor.get("export", "")
-        expected_kind = "def" if kind == "definition" else None
+        # Definitional keywords only: never `axiom`, `opaque` or `constant` (decision D-20).
+        definition_kinds = {"def", "abbrev", "inductive", "structure", "instance"}
         if len(declarations) != 1:
             self.fail(f"{label}: frozen file must contain exactly one top-level declaration total")
             return
@@ -460,8 +461,9 @@ class Guard:
             return
         if actual_export != expected_export:
             self.fail(f"{label}: lexically resolved declaration name does not match fully qualified export")
-        if expected_kind and actual_kind != expected_kind:
-            self.fail(f"{label}: definition anchor must use literal `def`")
+        if kind == "definition" and actual_kind not in definition_kinds:
+            self.fail(f"{label}: definition anchor must use `def`, `abbrev`, `inductive`, "
+                      "`structure` or `instance`")
         if kind == "theorem" and actual_kind not in {"theorem", "lemma"}:
             self.fail(f"{label}: theorem anchor must declare theorem or lemma")
 

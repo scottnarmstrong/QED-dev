@@ -10,24 +10,22 @@ Milestones (see the [ledger](progress.json)):
 | Milestone | Status |
 | --- | --- |
 | SPEC.SOURCE, SPEC.ROUTE, SPEC.ENV | done, on the evidence below |
-| SPEC.STATEMENTS | in progress: packets 1, 1b, 2, 3, 4a, and 4b approved and frozen (D-11, D-12, D-14, D-15, D-16, D-18) |
+| SPEC.STATEMENTS | in progress: packets 1, 1b, 2, 3, 4a, 4b, and 5 approved and frozen (D-11, D-12, D-14, D-15, D-16, D-18, D-20) |
 | L1.MODEL | in progress: algebra infrastructure and the entrywise algebra of the frozen vertex integrand |
 | L1.PROJECTION | done: the decomposition (63.18) of the one-loop vertex exists and is unique (packet 2, (G)) |
 | L1.INTEGRAL | done: the closed form of the one-loop vertex, and its well-definedness (E) |
 | L1.LIMITS, L1.COEFFICIENT | done for the (62.40) diagram under D-5: F₂ → e²/8π² = α/2π, so C₁ = 1/2, jointly as q², m_γ → 0⁺ and Λ → ∞ (packet 2, (I)) |
 | L1.OBSERVABLE | done: both magnetic-moment definitions of D-9, their equivalence O-24, and g → 2(1 + α/2π) for each (packets 4a and 4b) |
-| L1.VERTEX | in progress: design decided (D-19); the exact declarations of packet 5 are in review |
+| L1.VERTEX | in progress: packet 5 frozen (D-20): the Wick-contraction definition of the vertex; (W₁) O-1/O-2 and (W₂) are frozen theorem goals |
 | L1.ASSEMBLY | planned: the assembled one-loop theorem |
 
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 0
+DRAFT_ANCHORS: 2 — QED/Frozen/Wick/WickVertexEq.lean (W₁), QED/Frozen/Wick/WickVertexLimit.lean (W₂)
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 2 theorems — QED.OneLoop.integrable_and_tendsto_sourceMagneticMoment (W₄),
-               QED.OneLoop.landeFactor_sourceMagneticMoment_limit (W₅); PROVED (checker, build,
-               standard axioms, independent refute-first audit)
+SEALED_THIS_TURN: 0 theorems; packet 5's 24 definitions were frozen as approved (D-20)
 ```
 
 | Field | Value |
@@ -36,7 +34,7 @@ SEALED_THIS_TURN: 2 theorems — QED.OneLoop.integrable_and_tendsto_sourceMagnet
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
 | Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. (F′) the characterization of the one-loop vertex `QED.OneLoop.vertexOneLoop`. (G) `existsUnique_isFormFactorPair_vertexOneLoop`: for e ≠ 0 and q² > 0 the decomposition (63.18) exists and is unique. (I) `isFormFactorPair_vertexOneLoop_pauli_limit`: near q², m_γ → 0⁺ and Λ → ∞, every form-factor pair has F₂ within η of e²/8π² = α/2π, uniformly over the momenta. Packet 3: (K) the charge condition (63.1) fixes a unique counterterm Z₁; (N) the counterterm shifts only F₁ (O-8); (M) F₁(0) = 1 (64.2) at fixed regulators. Packet 4a: (R) the response magnetic moment exists and is unique; (R′) with the charge-normalized counterterm, g = 4mμ/e → 2(1 + α/2π) (64.17) jointly as m_γ → 0⁺ and Λ → ∞. Packet 4b: (W₄) for the source's wave-packet definition (64.4)–(64.9), the undamped position integral converges absolutely and, as the packet narrows, the source μ tends to the response μ (O-24); (W₅) g → 2(1 + α/2π) for the source definition. Scope: the (62.39) vertex function under D-5, with current matrix elements read from the amputated vertex (O-3). The Wick-expansion link (L1.VERTEX) remains. |
-| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, D-18, and D-19 (design of L1.VERTEX, 2026-11-08). |
+| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, D-18, D-19, and D-20 (packet 5, approved 2026-11-09). |
 
 ## Work completed
 
@@ -204,7 +202,7 @@ SEALED_THIS_TURN: 2 theorems — QED.OneLoop.integrable_and_tendsto_sourceMagnet
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
 | Project build | `nice -n 5 lake build` | success; 2918 jobs; no warnings |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (83 Lean files) |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (111 Lean files) |
 | Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` at the earlier landing; on 2026-11-08 on `QED.OneLoop.vertexLimit_existsUnique`, its provider, and every exported theorem of the five new modules (transient files, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |
