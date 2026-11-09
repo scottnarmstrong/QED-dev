@@ -901,6 +901,32 @@ approved scratch file, up to attribute markers and auxiliary names.
 source-facing domain of the values, and the intended evaluations of iΣ and
 iΠ^{μν}.
 
+**Sealed.** (Y₁) was frozen as `DRAFT_SORRY` in `f3bdc57` and then sealed by
+its provider. The proof (`QED/WickModel/Compatibility*.lean`) transports packet
+5's contractions to the general model along `Option ≃ Fin 1 ⊕ ·`, which
+preserves:
+
+- the sign;
+- the lines with their ends and labels;
+- the 1PI property;
+- the loop line;
+- the routing;
+- the amplitudes.
+
+Packet 5's classification then shows that the only flavoring a 1PI
+contraction of order ≤ 3 preserves is the all-electron one, with weight 1.
+
+An independent refute-first audit found (Y₁) PROVED. It confirmed:
+
+- the frozen bytes and the ABI hash; the guard also failed on four deliberate
+  mutations, as it should;
+- statement equality;
+- that the proof consumes the transport, the flavor collapse and the
+  classification;
+- non-vacuity, shown by a nonzero value proved in Lean;
+- a brute-force check that the collapse genuinely depends on 1PI;
+- standard axioms only.
+
 ## D-25. Covariant form of the on-shell conditions (author ruling)
 
 **Ruling.** On 2026-11-09 the author chose the literal covariant form for the

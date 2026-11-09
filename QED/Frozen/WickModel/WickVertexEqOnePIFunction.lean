@@ -38,7 +38,7 @@ theorem wickVertex_eq_onePIFunction (P : Params) (p' p : Fin 4 → ℝ) (μ i j 
       onePIFunction P 1 1 3 (fun _ => p') (fun _ => p) (fun _ => p' - p) (fun _ => i)
         (fun _ => j) (fun _ => μ) :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.WickModel.wickVertex_eq_onePIFunction
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

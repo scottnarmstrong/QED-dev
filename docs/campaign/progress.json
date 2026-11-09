@@ -129,6 +129,10 @@
     {
       "date": "2026-11-09",
       "change": "Published docs/ERRATA-AND-DEVIATIONS.md (five Srednicki misprints, two Kaplunovsky, twelve deviations; each erratum checked twice). Author approved packet 6a (D-24): froze the general Wick model in QED/Frozen/WickModel/ (32 definitions: arbitrary external fields, Pauli-Villars regulator fermions as a flavoring summed inside the loop integrand, 1PI and connected n-point functions) and the theorem goal (Y1) that packet 5's vertex is the special case, as DRAFT_SORRY."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Sealed packet 6a's (Y1) wickVertex_eq_onePIFunction; an independent refute-first audit found it PROVED. Packet 5's vertex is the (1,1), order-3 1PI function of the general Wick model, for all regulator-fermion parameters. Author chose the literal covariant form of the on-shell conditions (D-25); packet 6b-1 (the self-energy and vacuum-polarization existence-and-uniqueness goals) is in review."
     }
   ],
   "tracks": [

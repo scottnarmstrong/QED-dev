@@ -7126,7 +7126,7 @@
         "module": "QED.Provider.WickModel.WickVertexEqOnePIFunction",
         "export": "QED.Provider.WickModel.wickVertex_eq_onePIFunction"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "68bfc905fa10fd125dcf2b20290d8fa8a0dc18890a30c09b63e1f3d5e9c931d2",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {
