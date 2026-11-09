@@ -1006,3 +1006,21 @@ refute-first audit found it PROVED. The audit confirmed:
   limit;
 - non-vacuity, by Lean witnesses;
 - standard axioms only.
+
+**(Z₂) sealed.** (Z₂) was sealed by its provider after an independent
+refute-first audit found it PROVED. The proof
+(`QED/WickModel/VacuumPolarization*.lean`) gives the closed form
+Π(s) = −δ₃ + (e²/2π²)∫x(1−x)Σ_f c_f log(M_f² + x(1−x)s). The non-transverse
+terms cancel pointwise in x, and the covariance boundary term vanishes only
+because of both Pauli–Villars conditions. The audit confirmed:
+
+- the frozen bytes, with the guard rejecting five deliberate mutations, and
+  the ABI hash;
+- statement equality with no excess binders;
+- that integrability fails if either Pauli–Villars condition is dropped;
+- an independent computation of Π from the regulated integrand, which
+  matches the closed form to 3×10⁻⁵ and is frame-independent;
+- transversality only in the limit, as stated;
+- (62.25) recovered as the regulator masses grow;
+- non-vacuity, by Lean witnesses;
+- standard axioms only.

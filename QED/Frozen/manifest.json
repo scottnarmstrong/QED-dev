@@ -7664,7 +7664,7 @@
         "module": "QED.Provider.WickModel.VacuumPolarizationExistsUnique",
         "export": "QED.Provider.WickModel.vacuumPolarization_existsUnique"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "482016e6809c85c72b7b8f07493a60e3b80bfe5e4a330e11d0ec3ea357bb0b3f",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {

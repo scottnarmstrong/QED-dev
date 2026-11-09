@@ -81,6 +81,13 @@ public import QED.WickModel.TwoPointClassification
 public import QED.WickModel.SelfEnergyExistsUnique
 public import QED.Frozen.WickModel.SelfEnergyExistsUnique
 public import QED.WickModel.ElectronOnShell
+public import QED.WickModel.VacuumPolarizationAlgebra
+public import QED.WickModel.VacuumPolarizationBounds
+public import QED.WickModel.VacuumPolarizationEnergyFirst
+public import QED.WickModel.VacuumPolarizationRadial
+public import QED.WickModel.VacuumPolarizationLimit
+public import QED.WickModel.VacuumPolarizationExistsUnique
+public import QED.Frozen.WickModel.VacuumPolarizationExistsUnique
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization

@@ -145,6 +145,10 @@
     {
       "date": "2026-11-09",
       "change": "Sealed packet 6b-1's (Z1) selfEnergy_existsUnique; an independent refute-first audit found it PROVED. The one-loop self-energy from the Wick expansion has the covariant form A(p^2) pslash + B(p^2) m below both photon thresholds, with A, B the Pauli-Villars form of (62.33) minus the counterterms."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Sealed packet 6b-1's (Z2) vacuumPolarization_existsUnique; an independent refute-first audit found it PROVED. Under the Pauli-Villars conditions the one-loop vacuum polarization from the Wick expansion is transverse in the epsilon -> 0+ limit, Pi(k^2)(k^2 g - k k) with Pi(s) = -delta3 + (e^2/2pi^2) int x(1-x) sum_f c_f log(M_f^2 + x(1-x)s); integrability fails if either condition is dropped."
     }
   ],
   "tracks": [
