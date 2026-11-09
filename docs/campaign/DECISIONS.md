@@ -32,6 +32,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-22 | 2026-11-09 | Fermion-loop regulator for the photon side of O-3: Pauli–Villars regulator fermions as new fields of the Wick model | Author |
 | D-23 | 2026-11-09 | Design of O-3: the full LSZ amplitude; a general successor of the Wick model with arbitrary external fields and the regulator fermions | Author |
 | D-24 | 2026-11-09 | Packet 6a (the general Wick model) approved as written and frozen; the regulator fermions enter as a flavoring summed inside the loop integrand | Author |
+| D-25 | 2026-11-09 | The on-shell conditions (62.27) and (62.11) are formalized in the literal covariant form, with the decompositions of Σ and Π proved | Author |
 
 ## Pending author rulings
 
@@ -899,3 +900,28 @@ approved scratch file, up to attribute markers and auxiliary names.
 **Points stated to the author:** the Pauli–Villars sign convention, the
 source-facing domain of the values, and the intended evaluations of iΣ and
 iΠ^{μν}.
+
+## D-25. Covariant form of the on-shell conditions (author ruling)
+
+**Ruling.** On 2026-11-09 the author chose the literal covariant form for the
+on-shell conditions of packet 6b (O-3; D-21, D-23):
+
+- **Decompositions.** Prove, as existence-and-uniqueness theorems on the ε → 0⁺
+  limit:
+  - Σ(p) = A(p²)p̸ + B(p²)m, Lorentz invariance included;
+  - Π^{μν}(k) = Π(k²)(k²g^{μν} − k^μk^ν), the transversality (62.6)–(62.7),
+    from the Pauli–Villars conditions.
+- **Definitions.** Define Σ(p̸) = A(−p̸²)p̸ + B(−p̸²)m and Π(k²) from these.
+- **Conditions.** State Σ(−m) = Σ′(−m) = 0 (62.27) and Π(0) = 0 (62.11)
+  literally.
+
+The covariance is needed anyway for the LSZ amplitude in moving frames.
+
+**Consequence for the packet structure.** Each decomposition is an
+existence-and-uniqueness theorem whose objects are then defined from it. So
+packet 6b is staged:
+
+- **6b-1:** the two frozen ∃! theorem goals (limit plus decomposition).
+- **6b-2:** after they are proved, the definitions of A, B, Σ(p̸) and Π(k²); the
+  on-shell predicates; and the theorems that the conditions fix δ₂, δ_m and
+  δ₃ uniquely.
