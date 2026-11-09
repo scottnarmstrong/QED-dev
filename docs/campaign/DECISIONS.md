@@ -39,6 +39,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-29 | 2026-11-09 | Packet 6c design: background-field photon leg with the vacuum-polarization insertion; iterated LSZ limit along any approach; magnetic moments restated with the LSZ amplitude | Author |
 | D-30 | 2026-11-09 | Packet 6c-1 (existence and uniqueness of the LSZ amplitude of the electron current) approved as written and frozen | Author |
 | D-31 | 2026-11-09 | Packet 6c-2 (the LSZ amplitude, its closed form, and the charge condition and magnetic moments restated with it) approved as written and frozen | Author |
+| D-32 | 2026-11-09 | Headline design, LSZ form: general Wick model with on-shell counterterms; no photon condition (holds for every δ₃); F₂ and both Landé factors in one statement; fixed regulator fermions | Author |
 
 ## Pending author rulings
 
@@ -1309,3 +1310,27 @@ The audit confirmed:
 Packet 6c is complete: the magnetic moments of packets 4a and 4b are now
 restated with the model's own LSZ amplitude, and they agree with the original
 ones.
+
+## D-32. Design of the headline theorem, LSZ form (author ruling)
+
+**Ruling.** On 2026-11-09 the author decided four design questions for the
+L1.ASSEMBLY headline (D-21), now that packet 6c gives the model's own LSZ
+amplitude:
+
+1. **Form.** The headline quantifies over the general Wick model's parameters
+   with fixed e ≠ 0, m > 0 and regulator fermions. Near the regulator limit
+   (m_γ → 0⁺, Λ → ∞), counterterms exist with the electron on shell (Z₅) and
+   the LSZ charge condition (L₄); for every such choice the conclusions below
+   hold. It is proved by combining sealed theorems.
+2. **Photon condition.** Π(0) = 0 (Z₈) does not appear: the headline holds
+   for every δ₃. At fixed regulators the photon-leg term carries the factor
+   q²/(q² + m_γ²), so g does not depend on δ₃. The photon side (Z₈), (Z₉)
+   stays proved but separate from the g chain.
+3. **Contents.** One statement bundles F₂ within η of α/2π and both
+   magnetic-moment definitions (response and wave-packet source, LSZ form)
+   giving g within η of 2(1 + α/2π).
+4. **Regulator fermions.** M₁, M₂ > m and the two Pauli–Villars conditions
+   are hypotheses on fixed values; the limits are m_γ → 0⁺ and Λ → ∞ only.
+
+**Scope.** These are design rulings. The exact declarations go through the
+usual review and approval.

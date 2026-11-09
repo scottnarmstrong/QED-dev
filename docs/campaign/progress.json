@@ -185,6 +185,10 @@
     {
       "date": "2026-11-09",
       "change": "Sealed (L3), (L4'), (L5') and (L7'); an independent refute-first audit found them and (L2') PROVED. The LSZ amplitude is ubar' V u + e q^2 D(q^2) Pi(q^2) ubar' gamma u; the LSZ charge condition and both LSZ magnetic-moment definitions are equivalent to packets 3, 4a and 4b, and the LSZ source moment equals packet 4b's at every packet width. Packet 6c is complete."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Author ruled on the headline design (D-32): stated from the general Wick model with on-shell counterterms and the LSZ amplitude; no photon on-shell condition (holds for every delta3); F2 and both Lande factors in one statement; fixed Pauli-Villars regulator fermions."
     }
   ],
   "tracks": [
