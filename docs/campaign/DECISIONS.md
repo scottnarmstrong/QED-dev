@@ -33,6 +33,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-23 | 2026-11-09 | Design of O-3: the full LSZ amplitude; a general successor of the Wick model with arbitrary external fields and the regulator fermions | Author |
 | D-24 | 2026-11-09 | Packet 6a (the general Wick model) approved as written and frozen; the regulator fermions enter as a flavoring summed inside the loop integrand | Author |
 | D-25 | 2026-11-09 | The on-shell conditions (62.27) and (62.11) are formalized in the literal covariant form, with the decompositions of Σ and Π proved | Author |
+| D-26 | 2026-11-09 | Packet 6b-1 (self-energy and vacuum-polarization existence and covariant forms) approved as written and frozen; regulator masses M₁, M₂ > m | Author |
 
 ## Pending author rulings
 
@@ -951,3 +952,44 @@ packet 6b is staged:
 - **6b-2:** after they are proved, the definitions of A, B, Σ(p̸) and Π(k²); the
   on-shell predicates; and the theorems that the conditions fix δ₂, δ_m and
   δ₃ uniquely.
+
+## D-26. Packet 6b-1 approved (author ruling)
+
+**Ruling.** On 2026-11-09 the author approved packet 6b-1 as written. The
+approved text was the untracked scratch file with SHA-256
+`a321cbc104285d9c6983d881d9b381004d2ce1e285004477fca249901696a9c0`.
+
+- **(Z₁)** `QED.WickModel.selfEnergy_existsUnique`. For m, m_γ, Λ > 0:
+  - the one-loop self-energy integrands are integrable in both M1 stages for
+    every ε > 0;
+  - Σ_ε(p) = (1/i)[iΣ_ε(p)] tends, as ε → 0⁺, to A(p²)p̸ + B(p²)m for a unique
+    pair of functions on p² > −(m + min(m_γ, Λ))². That region lies below both
+    photon thresholds; it was narrowed from the first draft so that A and B
+    stay real.
+- **(Z₂)** `QED.WickModel.vacuumPolarization_existsUnique`. Under the
+  Pauli–Villars conditions:
+  - the regulated loop integrands are integrable for every ε > 0;
+  - Π^{μν}_ε tends to the transverse form Π(k²)(k²g^{μν} − k^μk^ν) for a
+    unique Π on k² > −4m².
+- **Regulator masses.** The author explicitly ruled that the regulator
+  fermions are heavier than the electron, M₁, M₂ > m. This keeps the electron
+  pair threshold the lowest and Π real on the domain. It costs nothing later,
+  since the regulator masses go to infinity anyway.
+
+**Review.** An independent refute-first reviewer found both statements true,
+with numerical evidence:
+
+- the limit exists;
+- the form A p̸ + B m holds exactly;
+- A and B are frame-independent;
+- Π is exactly transverse in the limit, though not at finite ε.
+
+Its one blocker, that integrability was not asserted, so the Pauli–Villars
+hypotheses did no work, was fixed by the integrability conjuncts.
+
+**Frozen anchors.** `QED/Frozen/WickModel/SelfEnergyExistsUnique.lean` and
+`VacuumPolarizationExistsUnique.lean`, both `DRAFT_SORRY`, with `pp.all`
+statements equal to the approved file's. The (Z₁) provider already carries
+the proof `QED.WickModel.selfEnergy_existsUnique_of_twoPoint`
+(`QED/WickModel/SelfEnergyExistsUnique.lean`). The (Z₂) provider is a
+placeholder.

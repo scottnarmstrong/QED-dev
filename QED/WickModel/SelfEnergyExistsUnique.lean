@@ -38,7 +38,7 @@ import Mathlib.Tactic.Ring
 # The electron self-energy: well-definedness and covariant form
 
 A proof of the packet 6b candidate (Z₁) (decision D-25), under the name
-`QED.WickModel.selfEnergy_existsUnique'`.
+`QED.WickModel.selfEnergy_existsUnique_of_twoPoint`.
 
 ## Main statements
 
@@ -49,7 +49,7 @@ A proof of the packet 6b candidate (Z₁) (decision D-25), under the name
   positive and of order `‖v‖²`, and on the bounded remainder `ε > 0` bounds the integrand.
 * `QED.WickModel.IsSelfEnergyLoop.regulatedAmplitude_eq`: the regulated amplitude of a
   self-energy loop is `(2π)⁴` times the self-energy integrand at the loop momentum `ℓ - p`.
-* `QED.WickModel.selfEnergy_existsUnique'`: the candidate (Z₁). The integrability conjunct
+* `QED.WickModel.selfEnergy_existsUnique_of_twoPoint`: the candidate (Z₁). The integrability conjunct
   follows from the classification of the one-loop 1PI contractions (only the two self-energy
   loops have a loop line) and the translation invariance of the two Lebesgue integrals. The
   coefficients are `A = selfEnergyLoopA - δ₂` and `B = selfEnergyLoopB - δ_m`. They are unique
@@ -395,7 +395,7 @@ every `p` with `p²` in that region,
 order `e²` with the outgoing index `α` as row and the incoming index `β` as column
 ((62.27)–(62.28)), tends as `ε → 0⁺` to `A(p²) p̸ + B(p²) m`, entry by entry. The self-energy
 has no closed fermion loop at this order, so it does not depend on the regulator fermions. -/
-theorem selfEnergy_existsUnique' (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (hΛ : 0 < P.Λ) :
+theorem selfEnergy_existsUnique_of_twoPoint (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (hΛ : 0 < P.Λ) :
     (∀ ε > 0, ∀ (N : ℕ) (κ : Fin N → Wick.VertexKind), ∑ t, (κ t).order ≤ 2 →
       ∀ C : Contraction 1 0 κ, IsOnePI C → (∃ f : Line C, IsLoopLine f) →
       ∀ (p : Fin 4 → ℝ) (α β : Fin 4),

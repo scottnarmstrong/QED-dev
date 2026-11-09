@@ -137,6 +137,10 @@
     {
       "date": "2026-11-09",
       "change": "Infrastructure for packet 6b: the one-loop two-point integrands (WickModel/TwoPoint); the general model's self-energy and vacuum-polarization functions at order e^2 equal the counterterm trees plus the energy-first integrals of these loop integrands, with the closed-loop sign and the Pauli-Villars flavor sum (WickModel/TwoPointClassification*); and the epsilon -> 0+ limit of the self-energy loop is i(A(p^2) pslash + B(p^2) m) below both photon thresholds, with explicit Pauli-Villars Feynman-parameter forms of A and B, smooth in p^2 (WickModel/SelfEnergyEnergyFirst, SelfEnergyLimit)."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Author approved packet 6b-1 (D-26): froze (Z1) selfEnergy_existsUnique and (Z2) vacuumPolarization_existsUnique (limits with the covariant decompositions, integrability conjuncts, regulator masses M1, M2 > m) as DRAFT_SORRY. The (Z1) provider carries the landed proof; the (Z2) proof is in progress."
     }
   ],
   "tracks": [
