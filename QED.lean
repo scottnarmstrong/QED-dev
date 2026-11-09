@@ -69,6 +69,7 @@ public import QED.Frozen.WickModel.ConnectedFunction
 public import QED.WickModel.CompatibilityLines
 public import QED.WickModel.Compatibility
 public import QED.Frozen.WickModel.WickVertexEqOnePIFunction
+public import QED.WickModel.TwoPoint
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization
