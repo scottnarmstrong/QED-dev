@@ -38,6 +38,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-28 | 2026-11-09 | Packet 6b-2, photon half (the vacuum polarization function, Π(0) = 0 (62.11), and the unique δ₃) approved as written and frozen | Author |
 | D-29 | 2026-11-09 | Packet 6c design: background-field photon leg with the vacuum-polarization insertion; iterated LSZ limit along any approach; magnetic moments restated with the LSZ amplitude | Author |
 | D-30 | 2026-11-09 | Packet 6c-1 (existence and uniqueness of the LSZ amplitude of the electron current) approved as written and frozen | Author |
+| D-31 | 2026-11-09 | Packet 6c-2 (the LSZ amplitude, its closed form, and the charge condition and magnetic moments restated with it) approved as written and frozen | Author |
 
 ## Pending author rulings
 
@@ -1231,3 +1232,51 @@ The audit confirmed:
 - non-vacuity, Lean-checked at concrete parameters with counterterms from
   (Z₆);
 - a kernel replay of the new modules, and standard axioms only.
+
+## D-31. Packet 6c-2 approved (author ruling)
+
+**Ruling.** On 2026-11-09 the author approved packet 6c-2 as written. The
+approved text was the untracked scratch file with SHA-256
+`089503a751fe97934836d6ef7ed41f73188b58657cd7fe9cb0284d65206687fe`.
+
+- **(L₂)** `lszAmplitude`: the LSZ amplitude M^μ_{s′s}(p′, p), the unique
+  iterated limit of the sealed (L₁).
+- **(L₂′)** `lszAmplitude_spec`: its characterization.
+- **(L₃)** `lszAmplitude_eq`: M = ū′V^μu + e·q²·D(q²)·Π(q²)·ū′γ^μu, with
+  D(q²) = 1/(q²+m_γ²) − 1/(q²+Λ²), for every δ₃.
+- **(L₄)** `IsLSZChargeNormalized` and **(L₄′)** the theorem that it is
+  packet 3's charge condition (K₀) at Z₁ = 1 + δ₁.
+- **(L₅)** `IsLSZResponseMagneticMoment` and **(L₅′)** the theorem that it is
+  packet 4a's (R₀) at Z₁ = 1 + δ₁.
+- **(L₆)** `lszPacketCurrentDensity`, **(L₇)** `lszSourceMagneticMoment`, and
+  **(L₇′)** the theorem that, as in (W₄), the position integral converges
+  absolutely and the source moment tends to the response moment.
+
+These restate the magnetic-moment definitions with the model's own LSZ
+amplitude as the one-electron current matrix element, replacing the modeling
+identification O-3 (D-21, D-29).
+
+**Review.** An independent refute-first review found no blocker. It compared
+(L₄), (L₅), (L₆) and (L₇) line by line with (K₀), (R₀), (W₁) and (W₃): the
+only differences are the parameter binders and the LSZ amplitude in place of
+ū′V^μu. No theorem has an excess hypothesis. It proved (L₂′), (L₃), (L₄′) and
+(L₅′) in scratch, and sketched (L₇′), finding that the LSZ source moment equals
+the packet-4b one at every packet width. Its docstring nits and two renames
+were applied to the text the author saw. It also noted that, in the D-5 order
+of limits, the photon-leg term vanishes at q → 0 through the factor q²D(q²),
+not through Π(0) = 0, so (Z₈)/(Z₉) are not used in the g-factor chain; an
+optional theorem for the headline packet could show that under Π(0) = 0 the
+photon-leg term is O(q³) uniformly in m_γ and Λ.
+
+**Frozen anchors.** All ten are in `QED/Frozen/WickModel/`. Their `pp.all`
+output equals the approved file's up to the names of auto-generated auxiliary
+proofs.
+
+- (L₂), (L₄), (L₅), (L₆) and (L₇) are definitions, sealed when frozen.
+- (L₂′) lands sealed with (L₂), by a two-line provider from (L₁).
+- (L₃), (L₄′), (L₅′) and (L₇′) are `DRAFT_SORRY`. The provider of (L₃)
+  already carries its proof, from `QED.WickModel.lszLimit_closedForm`; the
+  others are stubs until their proofs land.
+- The subtype proof in (L₃) names `QED.Minkowski.dot_sub_self_nonneg_of_onShell`
+  from the non-frozen module `QED.Algebra.OnShell`; renaming that lemma would
+  break the anchor.

@@ -177,6 +177,10 @@
     {
       "date": "2026-11-09",
       "change": "Sealed (L1) lszAmplitude_existsUnique; an independent refute-first audit found it PROVED. The LSZ amplitude of the electron current exists and is unique, and equals ubar' V u + e q^2 D(q^2) Pi(q^2) ubar' gamma u: the electron legs drop out by the on-shell conditions, and the photon leg is the vacuum-polarization insertion. 25 helper modules: the decomposition of the connected three-point function, the off-shell vertex limit, the leg limits and the integrability of every connected one-loop contraction."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Author approved packet 6c-2 (D-31): froze lszAmplitude (L2) with its characterization (L2', sealed), the closed form (L3), the LSZ charge condition (L4) and its equivalence with (K0) (L4'), the LSZ response magnetic moment (L5) and its equivalence with (R0) (L5'), the LSZ packet current density (L6) and source magnetic moment (L7), and the analogue (L7') of (W4); the four theorem goals as DRAFT_SORRY."
     }
   ],
   "tracks": [

@@ -124,6 +124,12 @@ public import QED.WickModel.LszLimitOffShell
 public import QED.WickModel.LszLimitShell
 public import QED.WickModel.LszLimit
 public import QED.Frozen.WickModel.LszAmplitudeExistsUnique
+public import QED.Frozen.WickModel.LszAmplitude
+public import QED.Frozen.WickModel.LszAmplitudeSpec
+public import QED.Frozen.WickModel.IsLSZChargeNormalized
+public import QED.Frozen.WickModel.IsLSZResponseMagneticMoment
+public import QED.Frozen.WickModel.LszPacketCurrentDensity
+public import QED.Frozen.WickModel.LszSourceMagneticMoment
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization

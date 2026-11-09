@@ -10,7 +10,7 @@ Milestones (see the [ledger](progress.json)):
 | Milestone | Status |
 | --- | --- |
 | SPEC.SOURCE, SPEC.ROUTE, SPEC.ENV | done, on the evidence below |
-| SPEC.STATEMENTS | in progress: packets 1, 1b, 2, 3, 4a, 4b, 5, 6a, 6b-1, 6b-2, and 6c-1 approved and frozen (D-11, D-12, D-14, D-15, D-16, D-18, D-20, D-24, D-26, D-27, D-28, D-30) |
+| SPEC.STATEMENTS | in progress: packets 1, 1b, 2, 3, 4a, 4b, 5, 6a, 6b-1, 6b-2, 6c-1, and 6c-2 approved and frozen (D-11, D-12, D-14, D-15, D-16, D-18, D-20, D-24, D-26, D-27, D-28, D-30, D-31) |
 | L1.MODEL | in progress: algebra infrastructure and the entrywise algebra of the frozen vertex integrand |
 | L1.PROJECTION | done: the decomposition (63.18) of the one-loop vertex exists and is unique (packet 2, (G)) |
 | L1.INTEGRAL | done: the closed form of the one-loop vertex, and its well-definedness (E) |
@@ -22,11 +22,11 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 0
+DRAFT_ANCHORS: 4 — QED/Frozen/WickModel/{LszAmplitudeEq (L₃), IsLSZChargeNormalizedIff (L₄′),
+               IsLSZResponseMagneticMomentIff (L₅′), LszSourceMagneticMomentLimit (L₇′)}.lean
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 1 theorem — QED.WickModel.lszAmplitude_existsUnique (L₁); PROVED (checker,
-               build, standard axioms, kernel replay, independent refute-first audit)
+SEALED_THIS_TURN: 1 characterization — QED.WickModel.lszAmplitude_spec (L₂′), landed with (L₂)
 ```
 
 | Field | Value |
@@ -35,7 +35,7 @@ SEALED_THIS_TURN: 1 theorem — QED.WickModel.lszAmplitude_existsUnique (L₁); 
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
 | Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. (F′) the characterization of the one-loop vertex `QED.OneLoop.vertexOneLoop`. (G) `existsUnique_isFormFactorPair_vertexOneLoop`: for e ≠ 0 and q² > 0 the decomposition (63.18) exists and is unique. (I) `isFormFactorPair_vertexOneLoop_pauli_limit`: near q², m_γ → 0⁺ and Λ → ∞, every form-factor pair has F₂ within η of e²/8π² = α/2π, uniformly over the momenta. Packet 3: (K) the charge condition (63.1) fixes a unique counterterm Z₁; (N) the counterterm shifts only F₁ (O-8); (M) F₁(0) = 1 (64.2) at fixed regulators. Packet 4a: (R) the response magnetic moment exists and is unique; (R′) with the charge-normalized counterterm, g = 4mμ/e → 2(1 + α/2π) (64.17) jointly as m_γ → 0⁺ and Λ → ∞. Packet 4b: (W₄) for the source's wave-packet definition (64.4)–(64.9), the undamped position integral converges absolutely and, as the packet narrows, the source μ tends to the response μ (O-24); (W₅) g → 2(1 + α/2π) for the source definition. Scope: the (62.39) vertex function under D-5, with current matrix elements read from the amputated vertex (O-3). Packet 5: (W₁) the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram, with coefficient one and no closed-loop sign (O-1, O-2); (W₂) its ε → 0⁺ limit is the vertex function. Packet 6a: (Y₁) packet 5 is a special case of the general Wick model with Pauli–Villars regulator fermions. Packet 6b: (Z₁), (Z₂) the one-loop self-energy and vacuum polarization exist in covariant form; (Z₆), (Z₉) the on-shell conditions (62.27) and (62.11) fix δ₂, δ_m and δ₃ uniquely. Packet 6c-1: (L₁) the LSZ amplitude of the electron current exists and is unique; it equals ū′V^μu plus a photon-leg term. The restated magnetic moments (packet 6c-2) and the assembled theorem (L1.ASSEMBLY) remain. |
-| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, D-18, D-19, D-20, D-21, D-22, D-23, D-24, D-25, D-26, D-27, D-28, D-29, and D-30 (packet 6c-1, approved 2026-11-09). |
+| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, D-18, D-19, D-20, D-21, D-22, D-23, D-24, D-25, D-26, D-27, D-28, D-29, D-30, and D-31 (packet 6c-2, approved 2026-11-09). |
 
 ## Work completed
 
@@ -204,7 +204,7 @@ SEALED_THIS_TURN: 1 theorem — QED.WickModel.lszAmplitude_existsUnique (L₁); 
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
 | Project build | `nice -n 5 lake build` | success; 2918 jobs; no warnings |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (216 Lean files) |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (231 Lean files) |
 | Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` at the earlier landing; on 2026-11-08 on `QED.OneLoop.vertexLimit_existsUnique`, its provider, and every exported theorem of the five new modules (transient files, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |
@@ -223,12 +223,8 @@ proof.
 
 ## Remaining obligations and next bounded tasks
 
-1. **Packet 6c-2 (D-29, D-30).** (L₁) is sealed. Next: the amplitude defined
-   from (L₁) with its characterization, the closed form
-   ū′V^μu + e·q²D(q²)Π(q²)ū′γ^μu, the LSZ charge condition, and the magnetic
-   moments restated with the LSZ amplitude, with theorems tying them to
-   packets 3, 4a and 4b. Drafted and independently reviewed; awaiting author
-   approval.
+1. **Packet 6c-2 (D-29, D-31).** Frozen. Seal (L₃) (its provider carries the
+   proof) and prove (L₄′), (L₅′) and (L₇′), then audit and seal them.
 2. **L1.ASSEMBLY (D-21).** The headline theorem from the Wick model to
    g → 2(1 + α/2π), the Comparator challenge, and the fresh-checkout audit.
 3. **Cleanups.** Land the closed form δ₃ = (e²/12π²)Σ_f c_f log M_f² as a
