@@ -31,6 +31,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-21 | 2026-11-09 | Design of L1.ASSEMBLY: one headline theorem from the Wick vertex; prove both sides of O-3 (residues); fresh-checkout audit, Comparator challenge and errata ledger | Author |
 | D-22 | 2026-11-09 | Fermion-loop regulator for the photon side of O-3: Pauli–Villars regulator fermions as new fields of the Wick model | Author |
 | D-23 | 2026-11-09 | Design of O-3: the full LSZ amplitude; a general successor of the Wick model with arbitrary external fields and the regulator fermions | Author |
+| D-24 | 2026-11-09 | Packet 6a (the general Wick model) approved as written and frozen; the regulator fermions enter as a flavoring summed inside the loop integrand | Author |
 
 ## Pending author rulings
 
@@ -844,3 +845,57 @@ residues (O-3; D-21, D-22):
 **Scope.** These are design rulings. The exact declarations, including the
 form of the LSZ limit, the ordering of the regulator limits, and the
 treatment of on-shell legs, go through the usual review and approval.
+
+## D-24. Packet 6a approved (author ruling)
+
+**Ruling.** On 2026-11-09 the author approved packet 6a, the general Wick
+model. The approved text was the exact Lean shown to the author, in one
+untracked scratch file with SHA-256
+`540dc04cb5ba096ad22707023ffd190895529aa7b14eba636cd71f0086bde0ad`.
+
+**How the regulator fermions enter.** The author explicitly approved this
+reading of D-22. The regulator fermions are fields of the Wick model, but
+they are carried as a flavoring of the gauge vertices: each gauge vertex is
+`e Ψ̄_f A̸ Ψ_f` for some flavor f. The flavorings that a contraction preserves
+are summed, with the closed-loop coefficients c_f, inside the loop
+integrand. This is the same Wick sum, regrouped. It is needed because, for a
+single flavor, the vacuum polarization is not integrable under M1, so
+integrating flavor by flavor would give 0. Packet 5's vertex kinds, fields,
+photon key and vertex factor are reused unchanged.
+
+**Review.** An independent refute-first reviewer found one blocker in the
+first draft: the flavors were integrated separately. The fix above resolved
+it. The reviewer confirmed:
+
+- (Y₁) is true;
+- the fermionic sign agrees with an explicit Grassmann reordering in 4934
+  cases;
+- the routing is conserved and unique on every connected contraction with at
+  most one loop in the relevant functions;
+- the bound K ≤ 2nf + nA + 1 ensures at most one loop;
+- the regrouping preserves every contraction count and symmetry factor;
+- the regulated integrand decays like λ⁻⁶;
+- the definitions reproduce Σ (62.28) and Π (62.12), as values as well as
+  integrands.
+
+**Frozen anchors.** All 33 declarations are in `QED/Frozen/WickModel/`, one
+per file, bound by [`QED/Frozen/manifest.json`](../../QED/Frozen/manifest.json):
+
+- 32 definitions, sealed when frozen: `Params`, `Params.mass`,
+  `Params.loopCoeff`, `Flavoring`, `fermionFlavor`, `Contraction`,
+  `Preserves`, `fermionSign`, `ClosedLoop`, `loopWeight`, the line
+  definitions, `IsBridge`, `ExternalsAttached`, `VerticesConnected`,
+  `IsOnePI`, `externalMomentum`, `Line.label`, `IsLoopLine`, `lineMomentum`,
+  `psiMomentum`, `photonMomentum`, `contractionAmplitude`,
+  `regulatedAmplitude`, `contractionValue`, `onePIFunction`,
+  `connectedFunction`;
+- (Y₁) `QED.WickModel.wickVertex_eq_onePIFunction` (packet 5 is the special
+  case), frozen as `DRAFT_SORRY` with a quarantined placeholder provider.
+
+Each file holds its declaration byte for byte as approved, with the
+candidate's Mathlib imports. The `pp.all` output of all 33 equals that of the
+approved scratch file, up to attribute markers and auxiliary names.
+
+**Points stated to the author:** the Pauli–Villars sign convention, the
+source-facing domain of the values, and the intended evaluations of iΣ and
+iΠ^{μν}.

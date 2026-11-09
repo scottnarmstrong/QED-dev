@@ -125,6 +125,10 @@
     {
       "date": "2026-11-09",
       "change": "Author decided the design of O-3 (D-23): the full LSZ amplitude of the connected order-e^3 three-point function (leg corrections included), equal to u'-bar V u epsilon under the on-shell conditions, which fix delta2, delta_m, delta3 uniquely; and a general successor of the Wick model with arbitrary external fields and the regulator fermions."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Published docs/ERRATA-AND-DEVIATIONS.md (five Srednicki misprints, two Kaplunovsky, twelve deviations; each erratum checked twice). Author approved packet 6a (D-24): froze the general Wick model in QED/Frozen/WickModel/ (32 definitions: arbitrary external fields, Pauli-Villars regulator fermions as a flavoring summed inside the loop integrand, 1PI and connected n-point functions) and the theorem goal (Y1) that packet 5's vertex is the special case, as DRAFT_SORRY."
     }
   ],
   "tracks": [

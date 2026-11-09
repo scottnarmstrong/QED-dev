@@ -64,6 +64,8 @@ public import QED.Wick.ChainValue
 public import QED.Wick.Classification
 public import QED.Frozen.Wick.WickVertexEq
 public import QED.Frozen.Wick.WickVertexLimit
+public import QED.Frozen.WickModel.OnePIFunction
+public import QED.Frozen.WickModel.ConnectedFunction
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization
