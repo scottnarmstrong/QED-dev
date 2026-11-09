@@ -84,8 +84,10 @@ after translation (CONVENTIONS.md, section 7).
 
 **Known limitations** (details in the [findings ledger](campaign/FINDINGS.md)):
 
-- Four misprints in or near the chain: (56.6), (63.6), p. 380, and (63.21).
-  All appear in the author's published errata (F-3 to F-6).
+- Five misprints in or near the chain: (56.6), (63.6), p. 380, and (63.21),
+  which appear in the author's published errata (F-3 to F-6), and the
+  wave-packet width condition on p. 383, which does not (F-11). See
+  [ERRATA-AND-DEVIATIONS.md](ERRATA-AND-DEVIATIONS.md).
 - The UV regulator is dimensional; the project uses Pauli–Villars (F-2).
 - Several steps are left to exercises or to "the usual manipulations" (F-7).
 - The magnetic-moment step passes through an asserted quantum-action form

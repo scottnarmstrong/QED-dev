@@ -133,6 +133,18 @@ Completed formal results require source review, a build at the recorded revision
 and an axiom audit. Empirical accuracy is always attached to a specified
 observable, input dataset, and uncertainty budget.
 
+## Errata and deviations
+
+Checking the calculation formally turned up five misprints in the primary
+source. The most visible are a sign in the denominator of the Pauli form
+factor (63.21) and a reversed wave-packet width condition on p. 383; the
+formal definitions use the corrected forms. The formal route also departs
+deliberately from the source in a few places: Pauli–Villars regularization
+with energy-first loop integrals instead of dimensional regularization, and
+two magnetic-moment definitions proved equivalent instead of an asserted
+quantum action. Each item is documented with its evidence in
+[ERRATA-AND-DEVIATIONS.md](docs/ERRATA-AND-DEVIATIONS.md).
+
 ## Next steps
 
 Done in Phase 1 so far: [sources](docs/SOURCES.md), [conventions](docs/CONVENTIONS.md),
@@ -172,6 +184,7 @@ See [Phase 1](docs/PROJECT-OUTLINE.md#phase-1--fix-the-one-loop-calculation).
 | [docs/MATHLIB-INVENTORY.md](docs/MATHLIB-INVENTORY.md) | What Mathlib `v4.35.0` provides and what the pilot must build |
 | [docs/campaign/STATUS.md](docs/campaign/STATUS.md) | Current state, validation, and next work |
 | [docs/campaign/DECISIONS.md](docs/campaign/DECISIONS.md) | Decisions, author rulings, and pending questions |
+| [docs/ERRATA-AND-DEVIATIONS.md](docs/ERRATA-AND-DEVIATIONS.md) | Errors found in the sources and how the formal route departs from them |
 | [docs/campaign/FINDINGS.md](docs/campaign/FINDINGS.md) | Source errata, gaps, and deviations with evidence |
 | [docs/campaign/progress.json](docs/campaign/progress.json) | Milestones, statuses, and completion evidence |
 | [sources/manifest.json](sources/manifest.json) | URLs, sizes, SHA-256 hashes, and licenses of pinned sources (bytes not committed) |

@@ -24,17 +24,17 @@ the PDF page.
 
 | ID | Kind | Summary | Status |
 | --- | --- | --- | --- |
-| F-1 | Gap in the standard treatment | A Feynman-$i\epsilon$ Minkowski loop integral is not a Lebesgue integral over $\mathbb R^4$ | resolved by D-5 (prescription M1); independent review pending |
+| F-1 | Gap in the standard treatment | A Feynman-$i\epsilon$ Minkowski loop integral is not a Lebesgue integral over $\mathbb R^4$ | resolved by D-5 (prescription M1); analytic argument independently checked (near-shell window gives the $c_n/(\omega\epsilon^{n-1})$ bound) |
 | F-2 | Deliberate deviation | The project regulates the UV with Pauli–Villars; the primary source uses dimensional regularization | resolved by D-5 |
-| F-3 | Source erratum | `srednicki-draft` (56.6): $e^{ikx}$ should be $e^{-ikx}$ | verified |
-| F-4 | Source erratum | `srednicki-draft` (63.6): missing "+" before the final $m$ | verified |
-| F-5 | Source erratum | `srednicki-draft` p. 380: "$p^2=-p'^2=-m^2$" should be "$p^2=p'^2=-m^2$" | verified |
-| F-6 | Source erratum | `srednicki-draft` (63.21): denominator sign | verified |
+| F-3 | Source erratum | `srednicki-draft` (56.6): $e^{ikx}$ should be $e^{-ikx}$ | verified; rechecked on rendered p. 339, correction follows from (55.11) |
+| F-4 | Source erratum | `srednicki-draft` (63.6): missing "+" before the final $m$ | verified; rechecked on rendered p. 379 against (62.46) and (63.8)–(63.9) |
+| F-5 | Source erratum | `srednicki-draft` p. 380: "$p^2=-p'^2=-m^2$" should be "$p^2=p'^2=-m^2$" | verified; rechecked on rendered p. 380 against p. 378 and (63.15) |
+| F-6 | Source erratum | `srednicki-draft` (63.21): denominator sign | verified; rechecked on rendered p. 382, substitution rederived, (63.20) at $q^2/m^2=0.7$ gives 0.8975456 (printed form 1.1359) |
 | F-7 | Source gaps | Steps the primary source leaves to exercises or to "the usual manipulations" | open; each gap is a project obligation |
-| F-8 | Modeling gap | The source's magnetic-moment argument passes through an asserted quantum action | open; handled by D-9 (both definitions, no inserted form-factor values) and obligations O-21 and O-24 |
-| F-9 | Secondary-source misprints | `kaplunovsky-vertex` K(25) index and "q² = 1" on p. 8 | verified |
-| F-10 | Candidate normalization issue | `ahkn-2012` projector (4.4) returns $F_2/m$; it is correct only in units $m=1$ | open |
-| F-11 | Candidate source misprint | `srednicki-draft` p. 383: wave-packet width "$a\ll1/m$" should apparently be $a\gg1/m$ | open; needs an independent check |
+| F-8 | Modeling gap | The source's magnetic-moment argument passes through an asserted quantum action | verified (quoted text on pp. 383–384 confirmed); handled by D-9 (both definitions, no inserted form-factor values) and obligations O-21 and O-24 |
+| F-9 | Secondary-source misprints | `kaplunovsky-vertex` K(25) index and "q² = 1" on p. 8 | verified; rechecked on rendered pp. 6 and 8, against (22) and (37) |
+| F-10 | Units convention (not an erratum) | `ahkn-2012` projector (4.4) returns $F_2/m$; it gives $F_2$ in the paper's implicit units $m=1$ | verified as a units convention, not an erratum: trace check gives $F_2/m$ and kills $F_1$ (m = 0.5, 1, 2); the paper sets the lepton mass to 1 implicitly, e.g. (7.2) |
+| F-11 | Source erratum | `srednicki-draft` p. 383: wave-packet width "$a\ll1/m$" should be $a\gg1/m$ | verified: rendered p. 383 prints $a\ll1/m$; (64.12) and (64.14) need $\vert\mathbf p\vert\ll m$ on the packet, i.e. $a\gg1/m$ |
 | F-12 | Process gap | Packet 1's frozen definitions depend on infrastructure definitions whose bodies were not shown to the author and are not frozen | resolved by D-12 (packet 1b approved and frozen) |
 
 ## F-1. Minkowski loop integrals are not absolutely convergent
@@ -121,7 +121,7 @@ not a defect of the source:
 | p. 376 | "terms linear in $q$ integrate to zero"; "Performing the usual manipulations" (62.49) | O-9, O-11 |
 | (63.10), problem 47.2 | contraction identities | O-4 |
 | (63.13) | on-shell reduction, stated rather than displayed | O-12 |
-| (63.16), problem 38.4 | Gordon identity, derivation sketched | O-14 |
+| (63.16), (38.19)–(38.20) | Gordon identity (38.18), derivation sketched | O-14 |
 | problem 63.1 | general vertex structure and current conservation | O-15 (existence obtained from the explicit computation instead) |
 | p. 373 / (62.29) | Feynman gauge with a massive photon, not justified | [REGULARIZATION.md, section 3](../REGULARIZATION.md#3-the-regulated-model-ingredients) |
 
@@ -158,16 +158,18 @@ bytes. They do not affect any result the project uses.
 
 ## F-10. Possible normalization of the AHKN magnetic projector
 
-**Claim (open, from source selection).** As printed, the projector (4.4) of
-`ahkn-2012`, p. 12, gives $\mathrm{Tr}(P_\nu\Gamma^\nu)=F_2/m$, so it yields $F_2$
-only in units $m=1$. The paper appears to use such units implicitly (cf. (7.2),
-p. 31), but no explicit statement was found. The source worker checked this
-numerically. Nobody else has checked it, and the project does not currently
-rely on this projector.
+**Claim.** As printed, the projector (4.4) of `ahkn-2012`, p. 12, gives
+$\mathrm{Tr}(P_\nu\Gamma^\nu)=F_2/m$, so it yields $F_2$ only in units $m=1$.
+The paper uses such units implicitly: in (7.2), p. 31, $V=z_1-G$ is the general
+$V$ of (4.10) with lepton mass 1. No explicit statement was found.
+
+**Status.** Verified as a units convention, not an erratum. Two independent
+numerical trace checks (m = 0.5, 1, 2) give exactly $F_2/m$ and remove $F_1$.
+The project does not rely on this projector.
 
 ## F-11. Wave-packet width condition in the magnetic-moment chapter
 
-**Claim (candidate).** On p. 383, after (64.5), the source says that the wave
+**Claim.** On p. 383, after (64.5), the source says that the wave
 packet $f(\mathbf p)\sim\exp(-a^2\mathbf p^2/2)$ is "sharply peaked at
 $\mathbf p=0$" and gives the condition "with $a\ll1/m$". The orchestrator
 confirmed this text on the rendered page. The momentum spread of this packet
@@ -178,9 +180,14 @@ packet spatially larger than the Compton wavelength. No entry for chapter 64
 was found in the snapshot of the author's errata list taken during source
 selection.
 
-**Status.** Open. The orchestrator found it and has not had it independently
-checked. It matters because D-9 requires the formal source definition of $\mu$
-to state the limit of sharply peaked packets explicitly.
+**Status.** Verified erratum. Two independent checks of the rendered p. 383
+confirmed the printed text and the correction. (64.12) linearizes the boost,
+and (64.14) replaces the packet average of $1/2\omega$ by $1/2m$; both need
+$|\mathbf p|\ll m$ on the packet. No other reading rescues the printed
+condition: (64.5) and problem 64.1 both write the packet as
+$\exp(-a^2\mathbf p^2/2)$, so $a$ is a length, and a momentum-width reading
+would make the comparison with $1/m$ dimensionally inconsistent. The formal
+source definition (packet 4b, D-17) uses the corrected regime.
 
 ## F-12. Infrastructure definitions in packet 1's closure were not shown or frozen
 

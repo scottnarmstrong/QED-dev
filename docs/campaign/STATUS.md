@@ -67,7 +67,8 @@ SEALED_THIS_TURN: 2 theorems — QED.Wick.wickVertex_eq (W₁), QED.Wick.tendsto
     the author's errata.
   - F-7 and F-8: source gaps.
   - F-9: secondary-source misprints.
-  - F-10: a candidate issue in a background source.
+  - F-10: a units convention in a background source (not an erratum).
+  - F-11: a source erratum (the wave-packet width on p. 383), verified twice.
 - **Mathlib inventory** ([MATHLIB-INVENTORY.md](../MATHLIB-INVENTORY.md)).
   61 topics: 44 available, 8 partial, 9 missing. The worker verified the names
   by grep; 26 sampled names were then elaborated in Lean.
