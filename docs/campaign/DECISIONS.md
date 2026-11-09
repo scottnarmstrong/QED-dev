@@ -37,6 +37,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-27 | 2026-11-09 | Packet 6b-2, electron half (self-energy form factors, Σ(p̸), the on-shell conditions (62.27), and the unique δ₂, δ_m) approved as written and frozen | Author |
 | D-28 | 2026-11-09 | Packet 6b-2, photon half (the vacuum polarization function, Π(0) = 0 (62.11), and the unique δ₃) approved as written and frozen | Author |
 | D-29 | 2026-11-09 | Packet 6c design: background-field photon leg with the vacuum-polarization insertion; iterated LSZ limit along any approach; magnetic moments restated with the LSZ amplitude | Author |
+| D-30 | 2026-11-09 | Packet 6c-1 (existence and uniqueness of the LSZ amplitude of the electron current) approved as written and frozen | Author |
 
 ## Pending author rulings
 
@@ -1159,3 +1160,47 @@ amplitude of D-23):
 **Background.** A free electron cannot absorb an on-shell photon except at
 q = 0, so in the magnetic-moment problem the photon is an external field, not
 an asymptotic particle.
+
+## D-30. Packet 6c-1 approved (author ruling)
+
+**Ruling.** On 2026-11-09 the author approved packet 6c-1 as written. The
+approved text was the untracked scratch file with SHA-256
+`6b255afb74b2d4e8f79b77767f2e128bb83afde46ab9413a506ae92163a58d68`.
+
+- **(L₁)** `lszAmplitude_existsUnique`: for m, m_γ, Λ > 0, regulator fermions
+  as in (Z₂) and electron counterterms on shell (Z₅), two things hold.
+  - Every one-loop connected contraction of the order-e³ function with one
+    external fermion pair and one external photon has an integrable loop
+    integrand, at every ε > 0 and all momenta.
+  - The LSZ amplitude exists and is unique. It is the iterated limit of
+    (1/i) ū_{s′}(p′) G^μ_ε(r′, r) u_s(p), where G is the connected function
+    (X₂₉), amputated by the free external propagators. First ε → 0⁺ at
+    off-shell r′, r, then (r′, r) → (p′, p) through off-shell momenta along
+    every approach.
+
+**Review.** An independent refute-first review found no blocker in the
+statement. It confirmed:
+
+- the binder classification, with no excess hypothesis. The electron on-shell
+  conditions are not excess: with Σ(−m) = 0 alone the limit exists but has the
+  wrong residue, (1 + 2Σ′(−m)) times the tree term. A photon on-shell condition
+  would be excess, since the photon is a background field;
+- the index, momentum and 1/i conventions;
+- by enumeration, that the connected function contains exactly the tree and
+  δ₁ terms, δ₂/δ_m and Σ on each electron leg, δ₃ and Π on the photon leg, the
+  1PI loop, and tadpoles;
+- that the tadpoles vanish exactly by oddness, and that the leg corrections
+  tend to 0 on every approach (60-digit check, generic and tangent);
+- non-vacuity and the uniqueness lemma, both in Lean.
+
+Its one required fix was applied to the text the author saw: the Dirac-field
+normalization is (41.25), not the Majorana (41.29). The photon-leg term at
+fixed regulators is e·q²·[1/(q²+m_γ²) − 1/(q²+Λ²)]·Π(q²)·ū′γ^μu; it becomes
+D-29's eΠ(q²)ū′γ^μu only in the regulator limit. Because m_γ > 0 it vanishes
+as q → 0 for every δ₃, so the magnetic moment does not depend on δ₃.
+
+**Frozen anchor.** (L₁) is in `QED/Frozen/WickModel/`, as `DRAFT_SORRY`, and
+its `pp.all` output equals the approved file's. Its provider is a stub until
+the proof lands. The definition `lszAmplitude` and its characterization,
+the closed form and the restated magnetic moments follow in packet 6c-2,
+after (L₁) is sealed.
