@@ -121,6 +121,10 @@
     {
       "date": "2026-11-09",
       "change": "Sealed packet 5's (W1) wickVertex_eq and (W2) tendsto_wickVertex; an independent refute-first audit found them PROVED. The order-e^3 1PI part of the Wick expansion with all counterterms is i Z1 e gamma^mu + the regulated one-loop diagram (62.40) with coefficient one, the fermion-line ordering and no closed-loop sign (O-1, O-2), and its epsilon -> 0+ limit is the vertex function. L1.VERTEX is done. Author chose Pauli-Villars regulator fermions in the Wick model for the photon side of O-3 (D-22)."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Author decided the design of O-3 (D-23): the full LSZ amplitude of the connected order-e^3 three-point function (leg corrections included), equal to u'-bar V u epsilon under the on-shell conditions, which fix delta2, delta_m, delta3 uniquely; and a general successor of the Wick model with arbitrary external fields and the regulator fermions."
     }
   ],
   "tracks": [

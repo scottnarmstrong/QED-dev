@@ -30,6 +30,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-20 | 2026-11-09 | Packet 5 (the Wick derivation of the vertex) approved as written and frozen; the frozen-anchor guard accepts the definitional keywords `abbrev`, `inductive`, `structure` and `instance` | Author; guard change by the orchestrator |
 | D-21 | 2026-11-09 | Design of L1.ASSEMBLY: one headline theorem from the Wick vertex; prove both sides of O-3 (residues); fresh-checkout audit, Comparator challenge and errata ledger | Author |
 | D-22 | 2026-11-09 | Fermion-loop regulator for the photon side of O-3: Pauli–Villars regulator fermions as new fields of the Wick model | Author |
+| D-23 | 2026-11-09 | Design of O-3: the full LSZ amplitude; a general successor of the Wick model with arbitrary external fields and the regulator fermions | Author |
 
 ## Pending author rulings
 
@@ -815,3 +816,31 @@ fermions as new fields of the Wick model.**
 **Scope.** The exact successor declarations, the order of the regulator-mass
 limit relative to the D-5 limits, and the statement of Π(0) = 0 go through
 the usual review and approval.
+
+## D-23. Design of O-3 (author ruling)
+
+**Ruling.** On 2026-11-09 the author decided two design questions for the
+residues (O-3; D-21, D-22):
+
+1. **Full LSZ amplitude.**
+   - Define the whole connected order-e³ three-point function from the Wick
+     expansion, leg corrections included, and its LSZ on-shell amplitude as
+     a limit with inverse propagators.
+   - Prove that it equals ū(p′)V^μ(p′, p)u(p) ε_μ when the counterterms
+     satisfy the on-shell conditions. These are (62.27) and (62.36)–(62.38)
+     for the electron, with Σ derived from the Wick two-point function
+     ⟨ΨΨ̄⟩, and (62.11) for the photon, with Π derived from ⟨AA⟩ and the
+     regulator fermions of D-22.
+   - Prove that the on-shell conditions fix δ₂, δ_m and δ₃ uniquely.
+
+   The current matrix elements used by the magnetic-moment definitions are
+   then the model's LSZ amplitude, not a modeling identification.
+2. **General successor of the Wick model.** A versioned successor of packet 5
+   allows arbitrary external field content (external Ψ, Ψ̄ and A fields) and
+   includes the regulator-fermion fields. A theorem shows that packet 5's
+   three-point objects are a special case, so its sealed results carry over.
+   The machinery is reusable at two loops.
+
+**Scope.** These are design rulings. The exact declarations, including the
+form of the LSZ limit, the ordering of the regulator limits, and the
+treatment of on-shell legs, go through the usual review and approval.
