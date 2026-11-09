@@ -36,6 +36,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-26 | 2026-11-09 | Packet 6b-1 (self-energy and vacuum-polarization existence and covariant forms) approved as written and frozen; regulator masses M₁, M₂ > m | Author |
 | D-27 | 2026-11-09 | Packet 6b-2, electron half (self-energy form factors, Σ(p̸), the on-shell conditions (62.27), and the unique δ₂, δ_m) approved as written and frozen | Author |
 | D-28 | 2026-11-09 | Packet 6b-2, photon half (the vacuum polarization function, Π(0) = 0 (62.11), and the unique δ₃) approved as written and frozen | Author |
+| D-29 | 2026-11-09 | Packet 6c design: background-field photon leg with the vacuum-polarization insertion; iterated LSZ limit along any approach; magnetic moments restated with the LSZ amplitude | Author |
 
 ## Pending author rulings
 
@@ -1113,3 +1114,48 @@ name is `vacuumPolarization`. It also noted points for 6c: the continuity of
 - (Z₇′) lands sealed with (Z₇), by a two-line provider from (Z₂).
 - (Z₉) is `DRAFT_SORRY`. Its provider carries the proof, from
   `QED/WickModel/PhotonOnShell.lean`.
+
+**(Z₉) sealed.** (Z₉) was sealed by its provider after an independent
+refute-first audit found (Z₇′) and (Z₉) PROVED. The audit confirmed:
+
+- the frozen bytes, with the guard rejecting three deliberate mutations, and
+  all four ABI hashes;
+- statement equality with no excess binders;
+- that the proof goes through (Z₇′), the explicit form Π = −δ₃ + Π_loop and
+  the explicit solution δ₃ = Π_loop(0);
+- the closed form Π_loop(0) = (e²/12π²)Σ_f c_f log M_f², proved in Lean in
+  scratch and checked numerically at 30 digits;
+- agreement with (62.23)–(62.25), with the 1/ε pole replaced by the regulator
+  sum, and an independent Wick-rotated four-dimensional computation of
+  Π_loop that agrees to 5e-7;
+- non-vacuity, Lean-checked at a concrete point where δ₃ = 0 is not on shell;
+- standard axioms only.
+
+One audit note is a wording correction: for (Z₈) the `pp.all` output equals
+the approved file's up to the names of auto-generated auxiliary proofs.
+
+## D-29. Packet 6c design: the LSZ amplitude (author ruling)
+
+**Ruling.** On 2026-11-09 the author chose, for packet 6c (the full LSZ
+amplitude of D-23):
+
+- **Photon leg.** The photon is a background-field leg. Its line is amputated
+  by the free photon propagator and the one-loop vacuum-polarization insertion
+  is kept. At order e³ the amplitude is then ū′V^μu + eΠ(q²)ū′γ^μu. Since
+  Π(0) = 0, the extra term vanishes as q → 0 and does not change the magnetic
+  moment.
+- **LSZ limit.** The limit is iterated. First ε → 0⁺ at off-shell external
+  momenta. Then the electron momenta approach the mass shell along any path,
+  and the limit exists and is the same for every path. The leg corrections
+  vanish because Σ(−m) = Σ′(−m) = 0, and the external spinors sit at the limit
+  momenta.
+- **Connection.** The response and source magnetic moments are restated with
+  the LSZ amplitude as the one-electron current matrix element. These are new
+  definitions, successors of packets 4a and 4b. A theorem then shows that they
+  give the same μ as the frozen ū′V^μu versions, so g → 2(1 + α/2π) holds for
+  the model's own amplitude. This replaces the modeling identification O-3, as
+  D-21 asked.
+
+**Background.** A free electron cannot absorb an on-shell photon except at
+q = 0, so in the magnetic-moment problem the photon is an external field, not
+an asymptotic particle.

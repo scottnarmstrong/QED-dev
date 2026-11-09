@@ -26,7 +26,7 @@ theorem photonCounterterm_existsUnique (P : Params) (hm : 0 < P.m) (hM₁ : P.m 
     (hPV₂ : P.m ^ 2 + P.c₁ * P.M₁ ^ 2 + P.c₂ * P.M₂ ^ 2 = 0) :
     ∃! d : ℝ, IsPhotonOnShell { P with δ₃ := d } hm hM₁ hM₂ hPV₁ hPV₂ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.WickModel.photonCounterterm_existsUnique
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

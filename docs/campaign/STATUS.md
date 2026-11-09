@@ -3,7 +3,7 @@
 [Campaign HQ](../../README.md) · [Decisions](DECISIONS.md) · [Findings](FINDINGS.md) ·
 [Progress ledger](progress.json)
 
-**As of 2026-11-08.** Phase 1 (fix the one-loop calculation). Packets 1–5 are proved and audited: the vertex is derived from the order-e³ Wick expansion, and g → 2(1 + α/2π) for both magnetic-moment definitions. L1.ASSEMBLY (D-21, D-22) remains.
+**As of 2026-11-09.** Phase 1 (fix the one-loop calculation). Packets 1–5, 6a and 6b are proved and audited: the vertex is derived from the order-e³ Wick expansion, g → 2(1 + α/2π) for both magnetic-moment definitions, and the general Wick model fixes the counterterms δ₂, δ_m and δ₃ by the on-shell conditions. Packet 6c (the LSZ amplitude, D-29) and the headline theorem (L1.ASSEMBLY, D-21) remain.
 
 Milestones (see the [ledger](progress.json)):
 
@@ -22,10 +22,12 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 1 — QED/Frozen/WickModel/PhotonCountertermExistsUnique.lean (Z₉)
+DRAFT_ANCHORS: 0
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 1 characterization — QED.WickModel.vacuumPolarization_spec (Z₇′), landed with (Z₇)
+SEALED_THIS_TURN: 2 theorems — QED.WickModel.vacuumPolarization_spec (Z₇′),
+               QED.WickModel.photonCounterterm_existsUnique (Z₉); PROVED (checker, build,
+               standard axioms, independent refute-first audit)
 ```
 
 | Field | Value |
@@ -34,7 +36,7 @@ SEALED_THIS_TURN: 1 characterization — QED.WickModel.vacuumPolarization_spec (
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
 | Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. (F′) the characterization of the one-loop vertex `QED.OneLoop.vertexOneLoop`. (G) `existsUnique_isFormFactorPair_vertexOneLoop`: for e ≠ 0 and q² > 0 the decomposition (63.18) exists and is unique. (I) `isFormFactorPair_vertexOneLoop_pauli_limit`: near q², m_γ → 0⁺ and Λ → ∞, every form-factor pair has F₂ within η of e²/8π² = α/2π, uniformly over the momenta. Packet 3: (K) the charge condition (63.1) fixes a unique counterterm Z₁; (N) the counterterm shifts only F₁ (O-8); (M) F₁(0) = 1 (64.2) at fixed regulators. Packet 4a: (R) the response magnetic moment exists and is unique; (R′) with the charge-normalized counterterm, g = 4mμ/e → 2(1 + α/2π) (64.17) jointly as m_γ → 0⁺ and Λ → ∞. Packet 4b: (W₄) for the source's wave-packet definition (64.4)–(64.9), the undamped position integral converges absolutely and, as the packet narrows, the source μ tends to the response μ (O-24); (W₅) g → 2(1 + α/2π) for the source definition. Scope: the (62.39) vertex function under D-5, with current matrix elements read from the amputated vertex (O-3). Packet 5: (W₁) the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram, with coefficient one and no closed-loop sign (O-1, O-2); (W₂) its ε → 0⁺ limit is the vertex function. The residues (O-3) and the assembled theorem (L1.ASSEMBLY) remain. |
-| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, D-18, D-19, D-20, D-21, D-22, D-23, D-24, D-25, D-26, D-27, and D-28 (packet 6b-2 photon half, approved 2026-11-09). |
+| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, D-18, D-19, D-20, D-21, D-22, D-23, D-24, D-25, D-26, D-27, D-28, and D-29 (packet 6c design, 2026-11-09). |
 
 ## Work completed
 
@@ -222,20 +224,15 @@ proof.
 
 ## Remaining obligations and next bounded tasks
 
-1. **Carriers.**
-   - On-shell momenta as a carrier, and the on-shell sandwich structure:
-     independence of the bilinears $\bar u'\gamma^\mu u$ and
-     $\bar u'S^{\mu\nu}q_\nu u$ for $q\neq0$, the uniqueness half of O-15.
-2. **Infrastructure the rulings add.**
-   - Wick contractions with fermionic signs for the order-$e^3$ expansion (D-8).
-   - One-particle states, wave packets, and one-particle current matrix
-     elements for the source definition of the magnetic moment (D-9).
-3. **Exact declarations.** Prepare packet 2 as planned in
-   [ONE-LOOP-DERIVATION.md](../ONE-LOOP-DERIVATION.md#proposed-anchor-surface-for-the-first-review-packets):
-   the one-loop vertex of step 1e defined from (E), now that (E) is proved,
-   with its characterization theorem; the form-factor decomposition (O-15); and
-   the headline. Each is drafted as a transient, elaborated command. Obtain an independent
-   source/binder review, then bring the author a review packet. Nothing is
-   frozen before approval.
-
-No exact declaration is ready for approval: the carriers above do not exist yet.
+1. **Packet 6c, the LSZ amplitude (D-23, D-29).** Draft the exact
+   declarations: the amputated order-e³ three-point function of the Wick
+   model with a background-field photon leg, its iterated limit (ε → 0⁺, then
+   the electrons on shell along any approach), and the theorem that it equals
+   ū′V^μu + eΠ(q²)ū′γ^μu. Then the magnetic moments restated with the LSZ
+   amplitude, and the theorem that they give the same μ as packets 4a and 4b.
+   Each declaration is drafted as a transient, elaborated command, reviewed
+   independently, and shown to the author. Nothing is frozen before approval.
+2. **L1.ASSEMBLY (D-21).** The headline theorem from the Wick model to
+   g → 2(1 + α/2π), the Comparator challenge, and the fresh-checkout audit.
+3. **Cleanups.** Land the closed form δ₃ = (e²/12π²)Σ_f c_f log M_f² as a
+   lemma; remove unused helpers and duplicated lemmas noted in audits.

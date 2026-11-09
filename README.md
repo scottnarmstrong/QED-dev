@@ -38,9 +38,14 @@ response definition as the packet narrows, and so that $g\to2(1+\alpha/2\pi)$
 for the source definition too. Packet 5 (D-20) derives the vertex from the
 order-$e^3$ Wick expansion of the interaction with all counterterms: the 1PI
 part is the counterterm-corrected tree vertex plus the one-loop diagram, with
-coefficient one and no closed-loop sign. Remaining one-loop work: the on-shell
-residues (O-3) and the assembled headline theorem (L1.ASSEMBLY). See the
-[campaign status](docs/campaign/STATUS.md).
+coefficient one and no closed-loop sign. Packets 6a and 6b (D-24, D-26–D-28)
+extend the Wick expansion to a general model with Pauli–Villars regulator
+fermions. They prove the covariant forms of the one-loop self-energy and vacuum
+polarization, and show that the on-shell conditions (62.27) and (62.11) fix the
+counterterms $\delta_2$, $\delta_m$ and $\delta_3$ uniquely. Remaining one-loop
+work: the LSZ amplitude, which replaces reading current matrix elements from
+the amputated vertex (O-3), and the assembled headline theorem (L1.ASSEMBLY).
+See the [campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
 [Project outline](docs/PROJECT-OUTLINE.md) ·
@@ -57,7 +62,7 @@ The longer-term milestone lists will be refined as their sources and statements
 become precise; changes to their scope must be recorded.
 
 <!-- HQ:progress:start -->
-**Ledger updated:** 2026-11-08. Only milestones marked `done` contribute to the meters.
+**Ledger updated:** 2026-11-09. Only milestones marked `done` contribute to the meters.
 
 | Workstream | Complete | Milestone meter | State |
 | --- | ---: | --- | --- |
@@ -69,7 +74,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 189. **Total lines of Lean code:** 21,904.
+**Tracked Lean source files:** 189. **Total lines of Lean code:** 21,905.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.

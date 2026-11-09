@@ -10438,7 +10438,7 @@
         "module": "QED.Provider.WickModel.PhotonCountertermExistsUnique",
         "export": "QED.Provider.WickModel.photonCounterterm_existsUnique"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "c011d9e81c750cbb11f576b69dadc03eeca9dc2f94f4642ca4d5e8f848523d87",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {

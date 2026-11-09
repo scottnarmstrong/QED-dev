@@ -97,6 +97,7 @@ public import QED.WickModel.PhotonOnShell
 public import QED.Frozen.WickModel.VacuumPolarization
 public import QED.Frozen.WickModel.VacuumPolarizationSpec
 public import QED.Frozen.WickModel.IsPhotonOnShell
+public import QED.Frozen.WickModel.PhotonCountertermExistsUnique
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization

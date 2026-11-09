@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "history": [
     {
       "date": "2026-11-07",
@@ -161,6 +161,14 @@
     {
       "date": "2026-11-09",
       "change": "Author approved the photon half of packet 6b-2 (D-28): froze vacuumPolarization (Z7) with its characterization (Z7', sealed), IsPhotonOnShell (Z8, Pi(0) = 0), and the theorem goal (Z9) that it fixes delta3 uniquely (delta3 = Pi_loop(0)), as DRAFT_SORRY with its proof in the provider."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Sealed (Z9) photonCounterterm_existsUnique; an independent refute-first audit found (Z7') and (Z9) PROVED. Pi(0) = 0 fixes delta3 = Pi_loop(0) = (e^2/12 pi^2) sum_f c_f log M_f^2 uniquely, the regulated analogue of (62.24). Packet 6b is complete."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Author ruled on the packet 6c design (D-29): background-field photon leg with the vacuum-polarization insertion, iterated LSZ limit along any approach to the mass shell, and the magnetic moments restated with the LSZ amplitude."
     }
   ],
   "tracks": [
