@@ -71,7 +71,7 @@ theorem lszAmplitude_existsUnique (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ)
                 ![r' - r] ![α] ![β] ![μ]) *ᵥ Dirac.spinor P.m p s)))
           (𝓝[>] 0) (𝓝 G) ∧ ‖G - M‖ < η :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.WickModel.lszAmplitude_existsUnique
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

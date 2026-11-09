@@ -10769,7 +10769,7 @@
         "module": "QED.Provider.WickModel.LszAmplitudeExistsUnique",
         "export": "QED.Provider.WickModel.lszAmplitude_existsUnique"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "4cbf06926969bad58bbcfd8d3ece00ec2a6496129fbfae1feced3a507de00a5b",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {

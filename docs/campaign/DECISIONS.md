@@ -1204,3 +1204,30 @@ its `pp.all` output equals the approved file's. Its provider is a stub until
 the proof lands. The definition `lszAmplitude` and its characterization,
 the closed form and the restated magnetic moments follow in packet 6c-2,
 after (L₁) is sealed.
+
+**(L₁) sealed.** (L₁) was sealed by its provider after an independent
+refute-first audit found it PROVED. The proof combines two helper theorems:
+
+- every one-loop connected contraction is integrable at every ε > 0 and all
+  momenta, by a case split over the classified contractions (1PI vertex loop,
+  Σ on either electron leg, Π on the photon leg, tadpoles, whose decay comes
+  from the Pauli–Villars conditions);
+- the iterated limit exists, is unique, and equals
+  ū′V^μu + e·q²·[1/(q²+m_γ²) − 1/(q²+Λ²)]·Π(q²)·ū′γ^μu. Its ingredients are
+  the decomposition of the connected function into its 1PI part and the leg
+  insertions, the off-shell vertex limit and its continuity up to the shell,
+  the vanishing of the electron-leg insertions under Σ(−m) = Σ′(−m) = 0, and
+  the continuity of the photon-leg insertion.
+
+The audit confirmed:
+
+- the frozen bytes, with the guard rejecting twelve deliberate mutations, and
+  the ABI hash;
+- statement equality with no excess binders;
+- that the proof goes through the sealed (Y₁), (W₁), (Z₃′), (Z₇′) and (F′),
+  and unpacks (Z₅) as the sealed (Z₆) provider does;
+- the decomposition against an independent enumeration, and numerical checks
+  of the photon-leg contraction and of the electron legs (double precision);
+- non-vacuity, Lean-checked at concrete parameters with counterterms from
+  (Z₆);
+- a kernel replay of the new modules, and standard axioms only.
