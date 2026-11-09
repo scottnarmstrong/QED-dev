@@ -78,6 +78,7 @@ public import QED.WickModel.TwoPointClassificationGauge2
 public import QED.WickModel.TwoPointClassificationSelfEnergy
 public import QED.WickModel.TwoPointClassificationPolarization
 public import QED.WickModel.TwoPointClassification
+public import QED.WickModel.SelfEnergyExistsUnique
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization
