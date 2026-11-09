@@ -44,7 +44,7 @@ theorem integrable_and_tendsto_lszSourceMagneticMoment (P : Params) (hm : 0 < P.
       Tendsto (fun lam => lszSourceMagneticMoment P hm hmγ hΛ hM₁ hM₂ hPV₁ hPV₂ hon φ lam) (𝓝[>] 0)
         (𝓝 (μ : ℂ)) :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.WickModel.integrable_and_tendsto_lszSourceMagneticMoment
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

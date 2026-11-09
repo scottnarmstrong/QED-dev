@@ -11845,7 +11845,7 @@
         "module": "QED.Provider.WickModel.LszAmplitudeEq",
         "export": "QED.Provider.WickModel.lszAmplitude_eq"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "a6681d6a84ba4dd02be3f5b45fd13829f20b99cf309e7ba503071917c8d9e857",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {
@@ -12566,7 +12566,7 @@
         "module": "QED.Provider.WickModel.IsLSZChargeNormalizedIff",
         "export": "QED.Provider.WickModel.isLSZChargeNormalized_iff_isChargeNormalized"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "e3e0c3cda354745291044d4fde0ba971f12740575f45be3e99031c4ddafdac8c",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {
@@ -13287,7 +13287,7 @@
         "module": "QED.Provider.WickModel.IsLSZResponseMagneticMomentIff",
         "export": "QED.Provider.WickModel.isLSZResponseMagneticMoment_iff_isResponseMagneticMoment"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "6d2f90a6549d86cd7d48432e428b002aae15f4f11081b3ea9ca31ee004eb2417",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {
@@ -14374,7 +14374,7 @@
         "module": "QED.Provider.WickModel.LszSourceMagneticMomentLimit",
         "export": "QED.Provider.WickModel.integrable_and_tendsto_lszSourceMagneticMoment"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "92925bcee5a6823a7e78f5efebdfea0b89c92a0af48e5326c559a3db9a4a00e9",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {

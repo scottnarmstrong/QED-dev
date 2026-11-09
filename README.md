@@ -42,10 +42,14 @@ coefficient one and no closed-loop sign. Packets 6a and 6b (D-24, D-26–D-28)
 extend the Wick expansion to a general model with Pauli–Villars regulator
 fermions. They prove the covariant forms of the one-loop self-energy and vacuum
 polarization, and show that the on-shell conditions (62.27) and (62.11) fix the
-counterterms $\delta_2$, $\delta_m$ and $\delta_3$ uniquely. Remaining one-loop
-work: the LSZ amplitude, which replaces reading current matrix elements from
-the amputated vertex (O-3), and the assembled headline theorem (L1.ASSEMBLY).
-See the [campaign status](docs/campaign/STATUS.md).
+counterterms $\delta_2$, $\delta_m$ and $\delta_3$ uniquely. Packet 6c (D-30,
+D-31) defines the LSZ amplitude of the electron current from the model's
+connected three-point function, proves that it is
+$\bar u'V^\mu u$ plus a photon-leg term, and restates the charge condition and
+both magnetic-moment definitions with it; they agree with the earlier ones, so
+the current matrix elements are no longer a modeling identification (O-3).
+Remaining one-loop work: the assembled headline theorem (L1.ASSEMBLY). See the
+[campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
 [Project outline](docs/PROJECT-OUTLINE.md) ·
@@ -74,7 +78,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 231. **Total lines of Lean code:** 31,083.
+**Tracked Lean source files:** 236. **Total lines of Lean code:** 32,013.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.

@@ -181,6 +181,10 @@
     {
       "date": "2026-11-09",
       "change": "Author approved packet 6c-2 (D-31): froze lszAmplitude (L2) with its characterization (L2', sealed), the closed form (L3), the LSZ charge condition (L4) and its equivalence with (K0) (L4'), the LSZ response magnetic moment (L5) and its equivalence with (R0) (L5'), the LSZ packet current density (L6) and source magnetic moment (L7), and the analogue (L7') of (W4); the four theorem goals as DRAFT_SORRY."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Sealed (L3), (L4'), (L5') and (L7'); an independent refute-first audit found them and (L2') PROVED. The LSZ amplitude is ubar' V u + e q^2 D(q^2) Pi(q^2) ubar' gamma u; the LSZ charge condition and both LSZ magnetic-moment definitions are equivalent to packets 3, 4a and 4b, and the LSZ source moment equals packet 4b's at every packet width. Packet 6c is complete."
     }
   ],
   "tracks": [

@@ -36,7 +36,7 @@ theorem isLSZChargeNormalized_iff_isChargeNormalized (P : Params) (hm : 0 < P.m)
     IsLSZChargeNormalized P hm hmγ hΛ hM₁ hM₂ hPV₁ hPV₂ hon ↔
       QED.OneLoop.IsChargeNormalized P.e (1 + P.δ₁) P.m P.mγ P.Λ hm hmγ hΛ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.WickModel.isLSZChargeNormalized_iff_isChargeNormalized
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

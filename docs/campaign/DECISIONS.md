@@ -1280,3 +1280,32 @@ proofs.
 - The subtype proof in (L₃) names `QED.Minkowski.dot_sub_self_nonneg_of_onShell`
   from the non-frozen module `QED.Algebra.OnShell`; renaming that lemma would
   break the anchor.
+
+**(L₃), (L₄′), (L₅′), (L₇′) sealed.** All four were sealed by their providers
+after an independent refute-first audit found them, and (L₂′), PROVED. The
+proofs:
+
+- (L₃): the uniqueness in (L₁) applied to the closed form's limit property.
+- (L₄′): at p′ = p the photon-leg term carries q² = 0; only the factor
+  2p⁰ ≠ 0 is cancelled, so it holds for every e, including e = 0.
+- (L₅′): in the Breit frame the photon-leg term is i·e·q³·D(q²)·Π(q²),
+  bounded by C·q³.
+- (L₇′): the LSZ source magnetic moment equals packet 4b's (W₃) at
+  Z₁ = 1 + δ₁ for every packet width, because the photon-leg term's factor q²
+  has vanishing gradient on the diagonal k′ = k; then the sealed (W₄) applies.
+
+The audit confirmed:
+
+- the frozen bytes, with the guard rejecting fifteen deliberate mutations, and
+  all 115 ABI hashes;
+- statement equality with no excess binders, and that no helper names or
+  imports a draft anchor or its provider;
+- the proof routes through the sealed predecessors, the photon-leg algebra
+  and the moment argument, with numerical checks at double precision;
+- non-vacuity in Lean at concrete parameters, and that (L₄) and (L₅) are not
+  trivially true;
+- standard axioms only.
+
+Packet 6c is complete: the magnetic moments of packets 4a and 4b are now
+restated with the model's own LSZ amplitude, and they agree with the original
+ones.

@@ -38,7 +38,7 @@ theorem isLSZResponseMagneticMoment_iff_isResponseMagneticMoment (P : Params) (h
     IsLSZResponseMagneticMoment P hm hmγ hΛ hM₁ hM₂ hPV₁ hPV₂ hon μ ↔
       QED.OneLoop.IsResponseMagneticMoment P.e (1 + P.δ₁) P.m P.mγ P.Λ hm hmγ hΛ μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.WickModel.isLSZResponseMagneticMoment_iff_isResponseMagneticMoment
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 
