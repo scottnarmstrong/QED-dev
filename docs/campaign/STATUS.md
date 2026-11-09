@@ -22,10 +22,12 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 1 — QED/Frozen/WickModel/ElectronCountertermsExistsUnique.lean (Z₆)
+DRAFT_ANCHORS: 0
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 1 characterization — QED.WickModel.selfEnergyAB_spec (Z₃′), landed with (Z₃)
+SEALED_THIS_TURN: 2 theorems — QED.WickModel.selfEnergyAB_spec (Z₃′),
+               QED.WickModel.electronCounterterms_existsUnique (Z₆); PROVED (checker, build,
+               standard axioms, independent refute-first audit)
 ```
 
 | Field | Value |

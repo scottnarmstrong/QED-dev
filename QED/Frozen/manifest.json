@@ -9180,7 +9180,7 @@
         "module": "QED.Provider.WickModel.ElectronCountertermsExistsUnique",
         "export": "QED.Provider.WickModel.electronCounterterms_existsUnique"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "2e8467f40b52afdafacfc613a61643ffd9e2cd503baf781a65198a8c3528d9a7",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {

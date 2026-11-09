@@ -1066,3 +1066,17 @@ author saw.
   lands with its proved characterization.
 - (Z₆) is `DRAFT_SORRY`. Its provider already carries the proof, from
   `QED/WickModel/ElectronOnShell.lean`.
+
+**(Z₆) sealed.** (Z₆) was sealed by its provider after an independent
+refute-first audit found (Z₃′) and (Z₆) PROVED. The audit confirmed:
+
+- the frozen bytes, with the guard rejecting five deliberate mutations, and
+  all five ABI hashes;
+- statement equality with no excess binders;
+- that the proof goes through (Z₃′), the explicit form A = A_loop − δ₂ and
+  B = B_loop − δ_m, the explicit solution and the clamp lemma;
+- a numerical check at 40 digits that Σ(−m) and Σ′(−m) vanish for the
+  solution, including when Λ < m_γ;
+- agreement with the Pauli–Villars analogue of (62.34)–(62.38), to O(1/Λ²);
+- non-vacuity, Lean-checked at a concrete point;
+- standard axioms only.

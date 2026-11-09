@@ -92,6 +92,7 @@ public import QED.Frozen.WickModel.SelfEnergyAB
 public import QED.Frozen.WickModel.SelfEnergyABSpec
 public import QED.Frozen.WickModel.SelfEnergySlash
 public import QED.Frozen.WickModel.IsElectronOnShell
+public import QED.Frozen.WickModel.ElectronCountertermsExistsUnique
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization

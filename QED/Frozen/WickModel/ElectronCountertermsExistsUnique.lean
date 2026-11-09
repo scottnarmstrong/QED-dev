@@ -27,7 +27,7 @@ theorem electronCounterterms_existsUnique (P : Params) (hm : 0 < P.m) (hmγ : 0 
     (hΛ : 0 < P.Λ) :
     ∃! d : ℝ × ℝ, IsElectronOnShell { P with δ₂ := d.1, δm := d.2 } hm hmγ hΛ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.WickModel.electronCounterterms_existsUnique
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

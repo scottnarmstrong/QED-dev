@@ -153,6 +153,10 @@
     {
       "date": "2026-11-09",
       "change": "Author approved the electron half of packet 6b-2 (D-27): froze selfEnergyAB (Z3) with its characterization (Z3', sealed), selfEnergySlash (Z4, Sigma(pslash) = A(-pslash^2) pslash + B(-pslash^2) m), IsElectronOnShell (Z5, Sigma(-m) = Sigma'(-m) = 0), and the theorem goal (Z6) that these fix delta2, delta_m uniquely, as DRAFT_SORRY with its proof in the provider."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Sealed (Z6) electronCounterterms_existsUnique; an independent refute-first audit found (Z3') and (Z6) PROVED. The on-shell conditions Sigma(-m) = Sigma'(-m) = 0 fix delta2 = a - 2m^2 a' + 2m^2 b' and delta_m = b - 2m^2 a' + 2m^2 b' uniquely (a, b the loop form factors at -m^2), matching the Pauli-Villars analogue of (62.34)-(62.38)."
     }
   ],
   "tracks": [
