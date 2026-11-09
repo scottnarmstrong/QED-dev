@@ -157,6 +157,10 @@
     {
       "date": "2026-11-09",
       "change": "Sealed (Z6) electronCounterterms_existsUnique; an independent refute-first audit found (Z3') and (Z6) PROVED. The on-shell conditions Sigma(-m) = Sigma'(-m) = 0 fix delta2 = a - 2m^2 a' + 2m^2 b' and delta_m = b - 2m^2 a' + 2m^2 b' uniquely (a, b the loop form factors at -m^2), matching the Pauli-Villars analogue of (62.34)-(62.38)."
+    },
+    {
+      "date": "2026-11-09",
+      "change": "Author approved the photon half of packet 6b-2 (D-28): froze vacuumPolarization (Z7) with its characterization (Z7', sealed), IsPhotonOnShell (Z8, Pi(0) = 0), and the theorem goal (Z9) that it fixes delta3 uniquely (delta3 = Pi_loop(0)), as DRAFT_SORRY with its proof in the provider."
     }
   ],
   "tracks": [

@@ -35,6 +35,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-25 | 2026-11-09 | The on-shell conditions (62.27) and (62.11) are formalized in the literal covariant form, with the decompositions of Σ and Π proved | Author |
 | D-26 | 2026-11-09 | Packet 6b-1 (self-energy and vacuum-polarization existence and covariant forms) approved as written and frozen; regulator masses M₁, M₂ > m | Author |
 | D-27 | 2026-11-09 | Packet 6b-2, electron half (self-energy form factors, Σ(p̸), the on-shell conditions (62.27), and the unique δ₂, δ_m) approved as written and frozen | Author |
+| D-28 | 2026-11-09 | Packet 6b-2, photon half (the vacuum polarization function, Π(0) = 0 (62.11), and the unique δ₃) approved as written and frozen | Author |
 
 ## Pending author rulings
 
@@ -1080,3 +1081,35 @@ refute-first audit found (Z₃′) and (Z₆) PROVED. The audit confirmed:
 - agreement with the Pauli–Villars analogue of (62.34)–(62.38), to O(1/Λ²);
 - non-vacuity, Lean-checked at a concrete point;
 - standard axioms only.
+
+## D-28. Packet 6b-2, photon half, approved (author ruling)
+
+**Ruling.** On 2026-11-09 the author approved the photon half of packet 6b-2
+as written. The approved text was the untracked scratch file with SHA-256
+`a999b172c97f234189babf3f84c57f1b2a83aefe5ebf3c2afc67b3e4b0e5ad1f`.
+
+- **(Z₇)** `vacuumPolarization`: the unique Π of the sealed (Z₂).
+- **(Z₇′)** `vacuumPolarization_spec`: its characterization.
+- **(Z₈)** `IsPhotonOnShell`: Π(0) = 0 (62.11).
+- **(Z₉)** `photonCounterterm_existsUnique`: this fixes δ₃ uniquely.
+
+**Review.** An independent refute-first review found no blockers, and the
+reviewer proved (Z₇′) and (Z₉) in scratch. It confirmed:
+
+- the unique counterterm is δ₃ = Π_loop(0) = (e²/12π²)Σ_f c_f log M_f², the
+  regulated analogue of (62.24);
+- Π(0) is determined through lightlike k ≠ 0;
+- non-vacuity, with explicit regulator values.
+
+Its findings were applied to the text the author saw: by (62.10) the residue
+is the projector P^{μν}, not 1; a term proof replaced `nlinarith`; and the
+name is `vacuumPolarization`. It also noted points for 6c: the continuity of
+Π at 0, taking ε → 0⁺ before q → 0, and that the photon leg touches only F₁.
+
+**Frozen anchors.** All four are in `QED/Frozen/WickModel/`, and their
+`pp.all` output equals the approved file's:
+
+- (Z₇) and (Z₈) are definitions, sealed when frozen.
+- (Z₇′) lands sealed with (Z₇), by a two-line provider from (Z₂).
+- (Z₉) is `DRAFT_SORRY`. Its provider carries the proof, from
+  `QED/WickModel/PhotonOnShell.lean`.
