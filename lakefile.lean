@@ -24,3 +24,14 @@ the root `QED.lean`. -/
 lean_lib «QED» where
   globs := #[.andSubmodules `QED]
   leanOptions := projectLeanOptions
+
+/-- The Comparator Challenge: a Mathlib-only statement of the headline theorem, with one
+intentional `sorry` per theorem. -/
+lean_lib «QEDChallenge» where
+  roots := #[`QEDChallenge]
+  leanOptions := projectLeanOptions
+
+/-- The Comparator Solution: the Challenge theorems, proved by the library. -/
+lean_lib «QEDSolution» where
+  roots := #[`QEDSolution]
+  leanOptions := projectLeanOptions

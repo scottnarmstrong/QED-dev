@@ -231,7 +231,11 @@ proof.
 2. **L1.ASSEMBLY (D-21, D-32).** The headline theorem, stated from the
    general Wick model with on-shell counterterms and the LSZ amplitude: F₂
    within η of α/2π and both Landé factors within η of 2(1 + α/2π) near the
-   regulator limit. Proved and audited (D-33). Remaining: the Comparator
-   challenge and the fresh-checkout audit.
+   regulator limit. Proved and audited (D-33). The Comparator challenge is
+   prepared (`QEDChallenge.lean`, `QEDSolution.lean`, `comparator.json`): a
+   Mathlib-only Challenge with 64 copied definitions under the `QEDChallenge`
+   prefix and five theorems, and a Solution proving them from the library;
+   the full `lake comparator` run with independent kernels is pending.
+   Remaining: that run and the fresh-checkout audit.
 3. **Cleanups.** Land the closed form δ₃ = (e²/12π²)Σ_f c_f log M_f² as a
    lemma; remove unused helpers and duplicated lemmas noted in audits.

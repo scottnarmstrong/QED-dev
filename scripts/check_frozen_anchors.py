@@ -3,6 +3,12 @@
 
 This tool verifies supplied baselines only.  It deliberately has no update,
 accept, or rebaseline command: an author-approved successor is external work.
+
+Comparator Challenges: the `challenge_module` named by a `comparator.json` at the root states
+its theorems with one intentional `sorry` each, by design; `lake comparator` checks it against
+its Solution.  This guard therefore accepts the word `sorry` in that one file and nowhere else
+outside DRAFT proof regions; every other check (`admit`, axioms, module form) still applies to
+it, and no other project file may import it.
 """
 from __future__ import annotations
 
@@ -69,6 +75,21 @@ class Guard:
         self.allow_non_module = allow_non_module
         self.errors: list[str] = []
         self.allowed_sorry: dict[Path, set[tuple[int, int]]] = {}
+        self.challenge_modules = self.comparator_challenges()
+
+    def comparator_challenges(self) -> dict[Path, str]:
+        """Challenge files named by `comparator.json` files at the root, by resolved path."""
+        found: dict[Path, str] = {}
+        config = self.root / "comparator.json"
+        if config.is_file():
+            try:
+                module = json.loads(config.read_text(encoding="utf-8")).get("challenge_module")
+            except (OSError, json.JSONDecodeError, AttributeError):
+                module = None
+            if isinstance(module, str) and re.fullmatch(
+                    r"[A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)*", module):
+                found[(self.root / (module.replace(".", "/") + ".lean")).resolve()] = module
+        return found
 
     def fail(self, message: str) -> None:
         self.errors.append(message)
@@ -262,6 +283,17 @@ class Guard:
         self.check_draft_quarantine(parsed)
         self.check_all_sorries()
         self.check_forbidden_axioms_constants()
+        self.check_challenge_quarantine()
+
+    def check_challenge_quarantine(self) -> None:
+        """No project file other than a Comparator Challenge itself may import it."""
+        for path in self.project_files():
+            if path.resolve() in self.challenge_modules:
+                continue
+            imported = self.imports(path)
+            for module in self.challenge_modules.values():
+                if module in imported:
+                    self.fail(f"comparator Challenge {module} imported by {path.relative_to(self.root)}")
 
     def check_entry(self, anchor: dict[str, Any], number: int, paths: set[str],
                     exports: set[str], ids: set[str], limits: dict[str, int]) -> Path | None:
@@ -576,8 +608,10 @@ class Guard:
         for path in self.project_files():
             code = self.code_mask(self.read_utf8(path))
             allowed = self.allowed_sorry.get(path.resolve(), set())
+            challenge = path.resolve() in self.challenge_modules
             for match in PLACEHOLDER.finditer(code):
-                authorized = match.group() == "sorry" and (match.start(), match.end()) in allowed
+                authorized = match.group() == "sorry" and (
+                    challenge or (match.start(), match.end()) in allowed)
                 if not authorized:
                     self.fail(f"unauthorized `{match.group()}` outside manifest-listed DRAFT proof region: {path.relative_to(self.root)}")
 

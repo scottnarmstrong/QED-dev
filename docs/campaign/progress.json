@@ -197,6 +197,10 @@
     {
       "date": "2026-11-10",
       "change": "Sealed the headline theorem (H) lszAmplitude_pauli_landeFactor_limit and (H0'); an independent refute-first audit found both PROVED. From the general Wick model with on-shell counterterms and the model's own LSZ amplitude: near m_gamma -> 0+, Lambda -> oo, F2 is within eta of alpha/2pi and both magnetic-moment definitions give g within eta of 2(1 + alpha/2pi), for every delta3. L1.MODEL done (the regularized order-e^3 Wick model with Pauli-Villars regulator fermions, sealed and audited); L1.ASSEMBLY in progress (remaining: Comparator challenge and fresh-checkout audit, D-21)."
+    },
+    {
+      "date": "2026-11-10",
+      "change": "Prepared the Comparator challenge for the headline (D-21): QEDChallenge.lean (Mathlib only; 64 definitions copied verbatim from the frozen declarations under the QEDChallenge prefix, with Params and VertexKind keeping their library names; five theorems), QEDSolution.lean (the same copies, bridge lemmas to the library, proofs of the five theorems), comparator.json. Constant-by-constant comparison: 128 of 128 match. The frozen-anchor guard accepts sorry only in the Challenge named by comparator.json and forbids importing it."
     }
   ],
   "tracks": [

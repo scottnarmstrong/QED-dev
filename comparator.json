@@ -1,0 +1,14 @@
+{
+  "challenge_module": "QEDChallenge",
+  "solution_module": "QEDSolution",
+  "theorem_names": [
+    "QEDChallenge.QED.WickModel.lszAmplitude_pauli_landeFactor_limit",
+    "QEDChallenge.QED.WickModel.lszAmplitude_existsUnique",
+    "QEDChallenge.QED.WickModel.selfEnergy_existsUnique",
+    "QEDChallenge.QED.OneLoop.dot_oneParticleMomentum",
+    "QEDChallenge.QED.OneLoop.oneParticleMomentum_pos"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}
