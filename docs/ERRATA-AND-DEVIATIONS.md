@@ -506,8 +506,9 @@ Each of these theorems depends only on the axioms `propext`,
     $$\Pi_{\mathrm{loop}}(s)=\frac{e^2}{2\pi^2}\int_0^1dx\ x(1-x)\sum_fc_f\log\bigl(M_f^2+x(1-x)s\bigr).$$
     Since $\int_0^1x(1-x)\,dx=1/6$, this gives
     $$\delta_3=\frac{e^2}{12\pi^2}\sum_fc_f\log M_f^2,$$
-    the regulated analogue of (62.24). This last evaluation is not a Lean
-    theorem. The regulator fermions do not enter the vertex function at this
+    the regulated analogue of (62.24) (`vacuumPolarizationLoop_zero` in
+    [PhotonCounterterm.lean](../QED/WickModel/PhotonCounterterm.lean)). The
+    regulator fermions do not enter the vertex function at this
     order, since a one-particle-irreducible contraction of the vertex has no
     closed fermion loop, and they do not enter the one-loop self-energy. In
     the LSZ amplitude they enter only through $\Pi$ on the photon leg, which

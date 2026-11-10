@@ -236,6 +236,8 @@ proof.
    Mathlib-only Challenge with 64 copied definitions under the `QEDChallenge`
    prefix and five theorems, and a Solution proving them from the library;
    the full `lake comparator` run with independent kernels is pending.
-   Remaining: that run and the fresh-checkout audit.
-3. **Cleanups.** Land the closed form δ₃ = (e²/12π²)Σ_f c_f log M_f² as a
-   lemma; remove unused helpers and duplicated lemmas noted in audits.
+   Remaining: that run and the fresh-checkout audit, both deferred by the
+   author on 2026-11-10 until the shared machine is quieter.
+3. **Cleanups.** The closed form δ₃ = (e²/12π²)Σ_f c_f log M_f² is landed
+   (`vacuumPolarizationLoop_zero`). Remaining: remove unused helpers and the
+   duplicated lemmas noted in audits.
