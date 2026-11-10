@@ -153,34 +153,34 @@ source. The most visible are a sign in the denominator of the Pauli form
 factor (63.21) and a reversed wave-packet width condition on p. 383; the
 formal definitions use the corrected forms. The formal route also departs
 deliberately from the source in a few places: Pauli–Villars regularization
-with energy-first loop integrals instead of dimensional regularization, and
-two magnetic-moment definitions proved equivalent instead of an asserted
-quantum action. Each item is documented with its evidence in
+with energy-first loop integrals instead of dimensional regularization,
+including regulator fermions for the closed fermion loop of the vacuum
+polarization; an external photon treated as a background field, whose leg
+keeps the vacuum-polarization insertion; and two magnetic-moment definitions
+proved equivalent instead of an asserted quantum action. Each item is
+documented with its evidence in
 [ERRATA-AND-DEVIATIONS.md](docs/ERRATA-AND-DEVIATIONS.md).
 
 ## Next steps
 
-Done in Phase 1 so far: [sources](docs/SOURCES.md), [conventions](docs/CONVENTIONS.md),
-[regulator route](docs/REGULARIZATION.md), [derivation and obligations](docs/ONE-LOOP-DERIVATION.md),
-the [Mathlib inventory](docs/MATHLIB-INVENTORY.md), the pinned Lean package, and
-the first algebra infrastructure.
+The one-loop result is proved and assembled. The headline theorem,
+`lszAmplitude_pauli_landeFactor_limit`, starts from the regulated Wick
+expansion of QED with on-shell counterterms and the model's own LSZ amplitude
+of the electron current. It proves that the Pauli form factor tends to
+$\alpha/2\pi$ and that both definitions of the magnetic moment give
+$g\to2(1+\alpha/2\pi)$, jointly as $m_\gamma\to0^+$ and $\Lambda\to\infty$.
+It depends only on the standard Lean axioms.
 
-1. Continue building the missing carriers as proved infrastructure: the
-   definition of the energy-first Minkowski loop integral, on-shell momenta and
-   the uniqueness of the form-factor decomposition, and the boost form of the
-   spinors. The energy-integral evaluation (O-7) is done. The Dirac
-   algebra is done: Clifford relation, contraction identities, spinors with
-   normalization, and the Gordon identity.
-2. Build the infrastructure the author's rulings require: Wick contractions
-   with fermionic signs for the order-$e^3$ expansion (D-8), and one-particle
-   states, wave packets, and current matrix elements for the source definition
-   of the magnetic moment (D-9).
-3. Prepare the exact source-facing declarations, starting with the regulated
-   one-loop vertex and the existence-and-uniqueness theorem for the form
-   factors. Bring them for independent review and author approval before
-   freezing them and building the proof dependency graph.
-
-See [Phase 1](docs/PROJECT-OUTLINE.md#phase-1--fix-the-one-loop-calculation).
+1. Finish the one-loop evidence: a Comparator challenge for the headline
+   theorem, and a rebuild with an independent end-to-end audit in a fresh
+   checkout at the recorded commit
+   ([Phase 2](docs/PROJECT-OUTLINE.md#phase-2--complete-one-loop)).
+2. Certify the numerical evaluation of the one-loop pilot: sound enclosure
+   arithmetic, an integral-enclosure theorem, and a checkable coefficient
+   certificate ([Phase 3](docs/PROJECT-OUTLINE.md#phase-3--certify-numerical-evaluation)).
+3. Then the later phases of the [outline](docs/PROJECT-OUTLINE.md#4-campaign-phases):
+   the complete two-loop calculation, selected higher-loop families toward
+   five-loop QED, and an experimental comparison.
 
 ## Repository map
 

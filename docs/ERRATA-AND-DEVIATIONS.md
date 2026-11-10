@@ -30,7 +30,30 @@ hashes identify the bytes that were checked.
 **Effect on the main results.** No erratum changes a formal statement. Four
 of them, at (63.6), the kinematics on p. 380, (63.21) and the wave-packet
 width on p. 383, lie on the route from the vertex function to the magnetic
-moment; in each case the formal statements agree with the corrected reading. The main theorems are
+moment; in each case the formal statements agree with the corrected reading.
+
+The headline theorem is `lszAmplitude_pauli_landeFactor_limit`. It starts
+from the general Wick model, with Pauli–Villars regulator fermions, and from
+the model's own LSZ amplitude of the electron current. For every $\eta\gt0$
+there are $\delta\gt0$ and $R$ such that, whenever $m_\gamma\lt\delta$ and
+$\Lambda\gt R$, counterterms exist that put the electron on shell and satisfy
+the charge condition for that amplitude. For every such choice, the Pauli
+form factor of the amplitude is within $\eta$ of $e^2/8\pi^2=\alpha/2\pi$ for
+$0\lt q^2\lt\delta$, and both definitions of the magnetic moment give a Landé
+factor within $\eta$ of $2(1+\alpha/2\pi)$, the source definition for every
+sufficiently narrow packet. This holds for every value of $\delta_3$. The LSZ
+results it is built from are
+`lszAmplitude_existsUnique` and `lszAmplitude_eq` (the amplitude exists and is
+the vertex function between spinors plus a photon-leg term),
+`electronCounterterms_existsUnique` (the electron on-shell conditions fix
+$\delta_2$ and $\delta_m$), `existsUnique_isLSZFormFactorPair` (the form
+factors of the amplitude are well defined), and
+`isLSZChargeNormalized_iff_isChargeNormalized`,
+`isLSZResponseMagneticMoment_iff_isResponseMagneticMoment` and
+`integrable_and_tendsto_lszSourceMagneticMoment` (the charge condition and
+both magnetic-moment definitions, restated with the LSZ amplitude, are
+equivalent to the original ones). These tie it to the theorems about the
+vertex function, which remain main results:
 `isFormFactorPair_vertexOneLoop_pauli_limit` ($F_2\to\alpha/2\pi$),
 `isFormFactorPair_vertexFunction_dirac_limit` ($F_1\to1$),
 `landeFactor_isResponseMagneticMoment_limit` and
@@ -38,14 +61,14 @@ moment; in each case the formal statements agree with the corrected reading. The
 definitions of the magnetic moment), `integrable_and_tendsto_sourceMagneticMoment`
 (the two definitions agree), and `QED.Wick.wickVertex_eq` and
 `QED.Wick.tendsto_wickVertex` (the vertex function from the Wick expansion).
-Each depends only on the axioms `propext`, `Classical.choice` and
-`Quot.sound`.
+Each of these theorems depends only on the axioms `propext`,
+`Classical.choice` and `Quot.sound`.
 
 | Source | Errata | Deviations |
 |---|---:|---:|
-| Srednicki, *Quantum Field Theory* (draft) | 5 | 12 |
+| Srednicki, *Quantum Field Theory* (draft) | 5 | 15 |
 | "QED Vertex Correction" notes | 2 | 0 |
-| Total | 7 | 12 |
+| Total | 7 | 15 |
 
 ## Srednicki, *Quantum Field Theory* (draft)
 
@@ -137,15 +160,18 @@ Each depends only on the axioms `propext`, `Classical.choice` and
 | 1 | (62.29), (62.47)–(62.50), pp. 371–377 | Pauli–Villars photon in four dimensions instead of dimensional regularization | `photonPropagator`, `vertexIntegrand` |
 | 2 | p. 382, after (63.20) | Photon mass kept until the final limit | `isFormFactorPair_vertexOneLoop_pauli_limit` |
 | 3 | (14.16), p. 112; (62.40) | Minkowski loop integral defined energy first | `energyFirstIntegral`, `vertexLimit_existsUnique` |
-| 4 | (58.17)–(58.21), (62.39) | Model starts from the momentum-space Wick expansion | `wickVertex`, `wickVertex_eq`, `tendsto_wickVertex` |
+| 4 | (58.17)–(58.21), (62.39) | Model starts from the momentum-space Wick expansion | `wickVertex`, `wickVertex_eq`, `tendsto_wickVertex`, `onePIFunction`, `connectedFunction` |
 | 5 | (62.39), (63.19)–(63.20), (64.17) | Vertex function truncated at order $e^3$ | `vertexFunction` |
 | 6 | (63.18)–(63.22) | Form factors by characterization; $F_2(0)$ as a joint limit | `IsFormFactorPair`, `existsUnique_isFormFactorPair_vertexOneLoop`, `isFormFactorPair_vertexOneLoop_pauli_limit` |
 | 7 | (63.1)–(63.3), (64.2) | Charge condition for all Dirac solutions; $F_1(0)=1$ at fixed regulators | `IsChargeNormalized`, `existsUnique_isChargeNormalized`, `isFormFactorPair_vertexFunction_dirac_limit` |
 | 8 | (64.3)–(64.7), pp. 383–384 | Two magnetic-moment definitions, proved equivalent, in place of the asserted quantum action | `IsResponseMagneticMoment`, `sourceMagneticMoment`, `integrable_and_tendsto_sourceMagneticMoment` |
 | 9 | (64.4)–(64.10) | Packet class, normalization and order of limits in the source definition | `packetCurrentDensity`, `packetNormSq`, `sourceMagneticMoment` |
-| 10 | Fig. 63.1, (64.8) | Current matrix elements read from the vertex function with unit residues | `packetCurrentDensity`, `IsResponseMagneticMoment` |
+| 10 | Fig. 63.1, (64.8) | Current matrix elements: the vertex function in the definitions, derived as the LSZ amplitude of the model | `lszAmplitude_eq`, `isLSZChargeNormalized_iff_isChargeNormalized`, `isLSZResponseMagneticMoment_iff_isResponseMagneticMoment`, `integrable_and_tendsto_lszSourceMagneticMoment` |
 | 11 | (38.12), (63.1), (63.18) | Closed-form spinors; conditions stated for all Dirac solutions | `spinor`, `spinor_eq_exp_boost` |
 | 12 | throughout | Lean conventions: domains, total functions, sign of $e$ | none |
+| 13 | (62.12)–(62.25), pp. 371–372 | Pauli–Villars regulator fermions for the closed fermion loop | `Params`, `regulatedAmplitude`, `vacuumPolarization_existsUnique`, `photonCounterterm_existsUnique` |
+| 14 | (64.3)–(64.7), pp. 383–384; (62.10)–(62.11) | External photon as a background field; $\Pi(0)=0$ not needed for $g$ | `lszAmplitude_existsUnique`, `lszAmplitude_eq`, `IsPhotonOnShell` |
+| 15 | (41.17), (41.25), (62.27), (62.36)–(62.38) | On-shell conditions in covariant form; LSZ amplitude as an iterated limit | `selfEnergySlash`, `IsElectronOnShell`, `electronCounterterms_existsUnique`, `lszAmplitude` |
 
 1. **pp. 371–377, (62.29) and (62.47)–(62.50): ultraviolet regulator.** The
    source continues to $d=4-\varepsilon$ dimensions for the ultraviolet and
@@ -161,9 +187,13 @@ Each depends only on the axioms `propext`, `Classical.choice` and
    (63.3), (63.7), (63.12). The Pauli form factor is the $m_\gamma\gt0$ form
    of (63.20) minus the same expression with $\Lambda$ in place of $m_\gamma$,
    and the second term vanishes as $\Lambda\to\infty$. Every statement takes
-   $\Lambda\gt0$ and removes the regulator only at the end. The source itself
-   names Pauli–Villars regularization as an alternative after (14.22),
-   p. 114. See `photonPropagator` in
+   $\Lambda\gt0$ and removes the regulator only at the end. The same
+   propagator regulates the one-loop self-energy (62.28), with the
+   Pauli–Villars logarithm in place of the pole of (62.33). The closed fermion
+   loop of the vacuum polarization has no internal photon and needs a
+   regulator of its own (Deviation 13). The source itself names Pauli–Villars
+   regularization as an alternative after (14.22), p. 114. See
+   `photonPropagator` in
    [PhotonPropagator.lean](../QED/Frozen/OneLoop/PhotonPropagator.lean) and
    `vertexIntegrand` in [VertexIntegrand.lean](../QED/Frozen/OneLoop/VertexIntegrand.lean).
 
@@ -174,8 +204,10 @@ Each depends only on the axioms `propext`, `Classical.choice` and
    together. For $F_2$ and for both Landé factors the joint limit exists; for
    $F_1$ see Deviation 7. See `isFormFactorPair_vertexOneLoop_pauli_limit`,
    `landeFactor_isResponseMagneticMoment_limit` in
-   [LandeFactorLimit.lean](../QED/Frozen/OneLoop/LandeFactorLimit.lean), and
-   `landeFactor_sourceMagneticMoment_limit`.
+   [LandeFactorLimit.lean](../QED/Frozen/OneLoop/LandeFactorLimit.lean),
+   `landeFactor_sourceMagneticMoment_limit`, and their LSZ form
+   `lszAmplitude_pauli_landeFactor_limit` in
+   [LszAmplitudePauliLandeFactorLimit.lean](../QED/Frozen/WickModel/LszAmplitudePauliLandeFactorLimit.lean).
 
 3. **(14.16), p. 112, and (62.40): the Minkowski loop integral.** The source
    treats $\int d^4\ell$ over Minkowski momenta as an ordinary integral and
@@ -220,13 +252,34 @@ Each depends only on the axioms `propext`, `Classical.choice` and
    limit is the vertex function used in all the other statements. In this
    labelled expansion the two photon fields of the photon counterterm are
    distinguishable, so its vertex factor is half the rule (62.12), which counts
-   both pairings. The path integral, position-space time-ordered products and
-   the LSZ formulas of sections 41 and 56 are not formalized. See `wickVertex`
-   in [WickVertex.lean](../QED/Frozen/Wick/WickVertex.lean), `vertexFactor` in
+   both pairings. See `wickVertex` in
+   [WickVertex.lean](../QED/Frozen/Wick/WickVertex.lean), `vertexFactor` in
    [VertexFactor.lean](../QED/Frozen/Wick/VertexFactor.lean), `wickVertex_eq`
    in [WickVertexEq.lean](../QED/Frozen/Wick/WickVertexEq.lean), and
    `tendsto_wickVertex` in
    [WickVertexLimit.lean](../QED/Frozen/Wick/WickVertexLimit.lean).
+
+   The general model extends this expansion to any number of external
+   electron and photon fields and adds the regulator fermions of Deviation 13.
+   Its 1PI function sums the one-particle-irreducible contractions; its
+   connected function sums the contractions whose external fields are
+   attached and whose vertices are connected. The connected function
+   therefore keeps the corrections on the external legs, while vacuum and
+   disconnected terms are still excluded from the start. The vertex above is
+   the 1PI function with one external fermion pair and one external photon,
+   for all values of the regulator-fermion parameters, which do not enter it
+   at this order. The self-energy (62.27)–(62.28) and the vacuum polarization
+   (62.4), (62.12) are the 1PI functions of order $e^2$ with one external
+   fermion pair and with two external photons. The current matrix element is
+   obtained from the connected three-point function by the LSZ limit of
+   Deviation 15. The path integral, position-space time-ordered products and
+   the photon LSZ formulas of section 56 are not formalized. See
+   `onePIFunction` in
+   [OnePIFunction.lean](../QED/Frozen/WickModel/OnePIFunction.lean),
+   `connectedFunction` in
+   [ConnectedFunction.lean](../QED/Frozen/WickModel/ConnectedFunction.lean),
+   and `wickVertex_eq_onePIFunction` in
+   [WickVertexEqOnePIFunction.lean](../QED/Frozen/WickModel/WickVertexEqOnePIFunction.lean).
 
 5. **(62.39), (63.19)–(63.20) and (64.17): truncation.** The source writes
    $V^\mu=Z_1e\gamma^\mu+V^\mu_{1\ \mathrm{loop}}+O(e^5)$ and states its results
@@ -235,7 +288,9 @@ Each depends only on the axioms `propext`, `Classical.choice` and
    the charge condition then determines exactly. The limits are exact
    statements about this truncated function; for example
    $g\to2(1+e^2/8\pi^2)$, with no $O(\alpha^2)$ term. They give the coefficient of
-   order $\alpha$ and say nothing about higher orders. See `vertexFunction` in
+   order $\alpha$ and say nothing about higher orders. The connected function
+   and the LSZ amplitude are truncated in the same way, at order $e^3$. See
+   `vertexFunction` in
    [VertexFunction.lean](../QED/Frozen/OneLoop/VertexFunction.lean).
 
 6. **(63.18)–(63.22): form factors.** The source obtains $F_1$ and $F_2$ as
@@ -252,12 +307,21 @@ Each depends only on the axioms `propext`, `Classical.choice` and
    one-loop vertex has second component within any $\eta\gt0$ of
    $e^2/8\pi^2=\alpha/2\pi$, uniformly in the momenta. This avoids defining
    $F_2(0)$ as a further limit object and does not presuppose that $F_2$
-   depends on the momenta only through $q^2$. See `IsFormFactorPair` in
+   depends on the momenta only through $q^2$. The form factors of the LSZ
+   amplitude are defined in the same way, on the spinor bases (Deviation 11).
+   For $e\ne0$ and $q^2\gt0$ the pair exists and is unique, and the headline
+   theorem bounds its second component in the same joint limit; the
+   photon-leg term of Deviation 14 changes only the first component. See
+   `IsFormFactorPair` in
    [IsFormFactorPair.lean](../QED/Frozen/OneLoop/IsFormFactorPair.lean),
    `existsUnique_isFormFactorPair_vertexOneLoop` in
    [FormFactorExistsUnique.lean](../QED/Frozen/OneLoop/FormFactorExistsUnique.lean),
-   and `isFormFactorPair_vertexOneLoop_pauli_limit` in
-   [PauliFormFactorLimit.lean](../QED/Frozen/OneLoop/PauliFormFactorLimit.lean).
+   `isFormFactorPair_vertexOneLoop_pauli_limit` in
+   [PauliFormFactorLimit.lean](../QED/Frozen/OneLoop/PauliFormFactorLimit.lean),
+   `IsLSZFormFactorPair` in
+   [IsLSZFormFactorPair.lean](../QED/Frozen/WickModel/IsLSZFormFactorPair.lean),
+   and `existsUnique_isLSZFormFactorPair` in
+   [LszFormFactorExistsUnique.lean](../QED/Frozen/WickModel/LszFormFactorExistsUnique.lean).
 
 7. **(63.1)–(63.3) and (64.2): charge condition.** The charge condition is
    imposed at $p'=p$ on shell, which is what $q^2=0$ forces for positive-energy
@@ -290,7 +354,8 @@ Each depends only on the axioms `propext`, `Classical.choice` and
    - **Source definition.** (64.4)–(64.7) with
      $H_1=-\int d^3x\ \mathbf J\cdot\mathbf A=-B\int d^3x\ x^1J^2(x)$, so that
      $\mu=\int d^3x\ x^1\langle e|J^2(x)|e\rangle/\langle e|e\rangle$. The
-     one-electron matrix elements of the current come from the vertex function
+     one-electron matrix elements of the current come from the vertex
+     function or, in the restated definitions, from the LSZ amplitude
      (Deviation 10), and no form-factor values are inserted.
 
    For every admissible packet profile the source definition tends to the
@@ -332,14 +397,46 @@ Each depends only on the axioms `propext`, `Classical.choice` and
 10. **Fig. 63.1 and (64.8): current matrix elements.** In the source the
     external electron lines carry "the unit residue of the pole" (caption of
     Fig. 63.1), which the on-shell conditions $\Sigma(-m)=\Sigma'(-m)=0$
-    ((62.27), (62.36)–(62.38)) secure, and the photon normalization is fixed
-    by $\Pi(0)=0$ (62.11). Both magnetic-moment definitions take the
-    one-electron matrix element of the current to be
+    ((62.27), (62.36)–(62.38)) secure, and (64.8) evaluates the one-electron
+    matrix element of the current with free spinors. Both magnetic-moment
+    definitions of Deviation 8 take this matrix element to be
     $\bar u_+(k')V^\mu(k',k)u_+(k)$: the vertex function between on-shell
     spinors, with unit electron residues and no photon-leg factor. This
-    identification is part of the definitions. The library does not yet derive
-    the electron residues or $\Pi(0)=0$ from the Wick expansion. See the
-    docstrings of `packetCurrentDensity` and `IsResponseMagneticMoment`.
+    identification remains part of those definitions, and the charge
+    condition of Deviation 7 is stated, as in (63.1), for the vertex function.
+
+    The library also derives the current matrix element from the Wick
+    expansion. It defines the LSZ amplitude $M^\mu_{s's}(p',p)$ of the
+    connected three-point function of the general model (Deviations 4 and
+    15). It proves that the electron on-shell conditions fix $\delta_2$ and
+    $\delta_m$ uniquely, and that with them the corrections on the electron
+    legs vanish at the mass shell. So the residues are one, and $M$ is
+    $\bar u_{s'}(p')V^\mu(p',p)u_s(p)$, with $Z_1=1+\delta_1$, plus the
+    photon-leg term of Deviation 14. The charge condition and both
+    magnetic-moment definitions are then restated with $M$ in place of the
+    vertex sandwich, and each restatement is proved equivalent to the
+    original. The restated charge condition holds exactly when
+    $Z_1=1+\delta_1$ satisfies the original one. A real $\mu$ is a response
+    magnetic moment for $M$ exactly when it is one for the vertex function at
+    $Z_1=1+\delta_1$. The restated source definition converges absolutely for
+    every packet width and tends to the restated response definition as the
+    packet narrows. The photon-leg term contributes to none of them
+    (Deviation 14). See `electronCounterterms_existsUnique` in
+    [ElectronCountertermsExistsUnique.lean](../QED/Frozen/WickModel/ElectronCountertermsExistsUnique.lean),
+    `lszAmplitude_eq` in
+    [LszAmplitudeEq.lean](../QED/Frozen/WickModel/LszAmplitudeEq.lean),
+    `IsLSZChargeNormalized` in
+    [IsLSZChargeNormalized.lean](../QED/Frozen/WickModel/IsLSZChargeNormalized.lean),
+    `isLSZChargeNormalized_iff_isChargeNormalized` in
+    [IsLSZChargeNormalizedIff.lean](../QED/Frozen/WickModel/IsLSZChargeNormalizedIff.lean),
+    `IsLSZResponseMagneticMoment` in
+    [IsLSZResponseMagneticMoment.lean](../QED/Frozen/WickModel/IsLSZResponseMagneticMoment.lean),
+    `isLSZResponseMagneticMoment_iff_isResponseMagneticMoment` in
+    [IsLSZResponseMagneticMomentIff.lean](../QED/Frozen/WickModel/IsLSZResponseMagneticMomentIff.lean),
+    `lszSourceMagneticMoment` in
+    [LszSourceMagneticMoment.lean](../QED/Frozen/WickModel/LszSourceMagneticMoment.lean),
+    and `integrable_and_tendsto_lszSourceMagneticMoment` in
+    [LszSourceMagneticMomentLimit.lean](../QED/Frozen/WickModel/LszSourceMagneticMomentLimit.lean).
 
 11. **(38.12), (63.1) and (63.18): spinors and spin labels.** The library's
     spinor is the closed form $u_s(p)=(m-\not p)\ u_s(0)/\sqrt{2m(m+p^0)}$, and
@@ -349,7 +446,14 @@ Each depends only on the axioms `propext`, `Classical.choice` and
     stated for all solutions $u$ of $(\not p+m)u=0$ and $\bar u'$ of
     $\bar u'(\not p'+m)=0$ instead of for spin labels $s,s'$. On shell these
     solution spaces are spanned by the $u_s(p)$ and the $\bar u_{s'}(p')$, so
-    the conditions are the printed ones for all spins. See `spinor` in
+    the conditions are the printed ones for all spins. The LSZ forms of the
+    charge condition and of the form-factor decomposition,
+    `IsLSZChargeNormalized` and `IsLSZFormFactorPair`, are stated for spin
+    labels, as printed. Their agreement with the forms for all solutions is
+    proved: for the charge condition by
+    `isLSZChargeNormalized_iff_isChargeNormalized`, and for the decomposition
+    through the completeness relation (38.23) (see the proof-route section).
+    See `spinor` in
     [Spinor.lean](../QED/Frozen/Algebra/Spinor.lean) and `spinor_eq_exp_boost`
     in [SpinorBoost.lean](../QED/Algebra/SpinorBoost.lean).
 
@@ -366,8 +470,145 @@ Each depends only on the axioms `propext`, `Classical.choice` and
     integral returns $0$ for a non-integrable integrand; the integrability of
     the one-loop integrand at every $\epsilon\gt0$ is part of
     `vertexLimit_existsUnique`, so the energy-first integrals in the statements
-    are genuine integrals on the source's domain. The coefficient is written
-    $e^2/8\pi^2=\alpha/2\pi$; no expansion parameter is introduced.
+    are genuine integrals on the source's domain. Likewise, the integrability
+    at every $\epsilon\gt0$ of each one-loop contraction that enters the
+    self-energy, the vacuum polarization and the connected three-point
+    function is part of `selfEnergy_existsUnique`,
+    `vacuumPolarization_existsUnique` and `lszAmplitude_existsUnique`. The
+    coefficient is written $e^2/8\pi^2=\alpha/2\pi$; no expansion parameter is
+    introduced.
+
+13. **(62.12)–(62.25), pp. 371–372: the closed fermion loop.** The source
+    computes the vacuum polarization (62.12)–(62.23) in $d=4-\varepsilon$
+    dimensions, and the condition $\Pi(0)=0$ (62.11) then fixes $Z_3$ (62.24).
+    The Pauli–Villars photon of Deviation 1 does not regulate this loop, which
+    has no internal photon. The library adds two Pauli–Villars regulator
+    fermions, of masses $M_1,M_2\gt m$, as fields of the model. Each couples
+    to the photon with the same charge as the electron, through a gauge
+    vertex $e\bar\Psi_f\not A\Psi_f$, and a closed loop of flavor $f$ carries
+    a coefficient $c_f$, with $c_0=1$ and $M_0=m$ for the electron and
+    $$1+c_1+c_2=0,\qquad m^2+c_1M_1^2+c_2M_2^2=0.$$
+    The counterterms act on the electron alone. In each contraction the
+    flavors of a closed loop are summed inside one loop integrand, before the
+    loop integral is taken. This is the same Wick sum, regrouped, and the
+    regrouping is needed: a single flavor's vacuum-polarization loop is not
+    integrable under the energy-first prescription of Deviation 3, so
+    integrating flavor by flavor would give the value $0$ that the Lean
+    integral assigns to a non-integrable integrand (Deviation 12). With both
+    conditions the regulated loop is integrable at every $\epsilon\gt0$, and as
+    $\epsilon\to0^+$ it tends to the transverse form (62.7),
+    $\Pi^{\mu\nu}(k)=\Pi(k^2)(k^2g^{\mu\nu}-k^\mu k^\nu)$, for a unique function
+    $\Pi$ on $k^2\gt-4m^2$, below the pair threshold. The transversality
+    (62.6), which the source takes as given and recovers at one loop in
+    (62.21), is part of this theorem. The function $\Pi$ includes the
+    counterterm $-\delta_3$, and $\Pi(0)=0$ holds for exactly one $\delta_3$.
+    The library shows that this value is $\Pi_{\mathrm{loop}}(0)$, where
+    $$\Pi_{\mathrm{loop}}(s)=\frac{e^2}{2\pi^2}\int_0^1dx\ x(1-x)\sum_fc_f\log\bigl(M_f^2+x(1-x)s\bigr).$$
+    Since $\int_0^1x(1-x)\,dx=1/6$, this gives
+    $$\delta_3=\frac{e^2}{12\pi^2}\sum_fc_f\log M_f^2,$$
+    the regulated analogue of (62.24). This last evaluation is not a Lean
+    theorem. The regulator fermions do not enter the vertex function at this
+    order, since a one-particle-irreducible contraction of the vertex has no
+    closed fermion loop, and they do not enter the one-loop self-energy. In
+    the LSZ amplitude they enter only through $\Pi$ on the photon leg, which
+    changes neither $F_2$ nor $g$ (Deviation 14). Their masses stay fixed; the
+    limit $M_f\to\infty$ is not taken. See `Params` in
+    [Params.lean](../QED/Frozen/WickModel/Params.lean), `regulatedAmplitude` in
+    [RegulatedAmplitude.lean](../QED/Frozen/WickModel/RegulatedAmplitude.lean),
+    `vacuumPolarization_existsUnique` in
+    [VacuumPolarizationExistsUnique.lean](../QED/Frozen/WickModel/VacuumPolarizationExistsUnique.lean),
+    `vacuumPolarization` in
+    [VacuumPolarization.lean](../QED/Frozen/WickModel/VacuumPolarization.lean),
+    `IsPhotonOnShell` in
+    [IsPhotonOnShell.lean](../QED/Frozen/WickModel/IsPhotonOnShell.lean), and
+    `photonCounterterm_existsUnique` in
+    [PhotonCountertermExistsUnique.lean](../QED/Frozen/WickModel/PhotonCountertermExistsUnique.lean).
+
+14. **(64.3)–(64.7), pp. 383–384, and (62.10)–(62.11): the external photon.**
+    In section 64 the photon is "a classical field", $A=(0,Bx,0)$ (p. 383),
+    not an asymptotic particle, and its coupling to the electron is read off
+    the vertex function, (64.1)–(64.3). The library treats the photon of the
+    three-point function as such a background field. Its leg is amputated by
+    the free photon propagator and keeps the one-loop vacuum-polarization
+    insertion, counterterm included; the LSZ formulas for photons
+    (56.1)–(56.8) are not used. Between on-shell spinors the term
+    $q^\rho q^\mu$ of $\Pi^{\rho\mu}(q)$ drops out, since
+    $\bar u(p')\not q\,u(p)=0$, and the LSZ amplitude is
+    $$M^\mu_{s's}(p',p)=\bar u_{s'}(p')V^\mu(p',p)u_s(p)+e\,q^2D(q^2)\,\Pi(q^2)\ \bar u_{s'}(p')\gamma^\mu u_s(p),\qquad D(q^2)=\frac{1}{q^2+m_\gamma^2}-\frac{1}{q^2+\Lambda^2},$$
+    with $q=p'-p$, $V^\mu$ the vertex function at $Z_1=1+\delta_1$, $D$ the
+    scalar part of the photon propagator of Deviation 1 at $\epsilon=0$, and
+    $\Pi$ the vacuum polarization of Deviation 13. The formula holds for every
+    value of $\delta_3$. It differs from the form
+    $e\Pi(q^2)\bar u'\gamma^\mu u$ that the source's massless, unregulated
+    photon would give, with $D(q^2)=1/q^2$, and that vanishes at $q^2=0$
+    because of $\Pi(0)=0$: here the factor $q^2D(q^2)$ tends to $1$ only in
+    the regulator limit at fixed $q^2\gt0$. The second term is a multiple of
+    $\bar u'\gamma^\mu u$, so it changes only the first form factor. In the
+    order of limits used here, $q\to0$ at fixed $m_\gamma\gt0$ (Deviation 2),
+    it drops out for every $\delta_3$. Like $q^2$, it vanishes to second order
+    in $p'-p$ at $p'=p$, so it contributes neither to the charge condition nor
+    to the source definition of the magnetic moment; in the Breit frame of
+    the response definition it is $ieq^3D(q^2)\Pi(q^2)=O(q^3)$. The photon
+    on-shell condition $\Pi(0)=0$ (62.11), although it is proved to fix
+    $\delta_3$ uniquely (Deviation 13), is therefore not used for $g$, and the
+    headline theorem holds for every $\delta_3$. The condition would matter if
+    $m_\gamma\to0$ were taken before $q\to0$, since $q^2D(q^2)$ then tends to
+    $1$. See
+    `lszAmplitude_existsUnique` in
+    [LszAmplitudeExistsUnique.lean](../QED/Frozen/WickModel/LszAmplitudeExistsUnique.lean),
+    `lszAmplitude_eq` in
+    [LszAmplitudeEq.lean](../QED/Frozen/WickModel/LszAmplitudeEq.lean), and
+    `isLSZResponseMagneticMoment_iff_isResponseMagneticMoment` in
+    [IsLSZResponseMagneticMomentIff.lean](../QED/Frozen/WickModel/IsLSZResponseMagneticMomentIff.lean).
+
+15. **(62.27), (62.36)–(62.38), (41.17) and (41.25): on-shell conditions and
+    the LSZ limit.** The source states the on-shell conditions
+    $\Sigma(-m)=\Sigma'(-m)=0$ for the self-energy as a function of $\not p$
+    (62.27), and in differentiating takes $p^2=-\not p^2$ (before (62.38)).
+    The library first proves the covariant decomposition of the regulated
+    one-loop self-energy (62.28). For $m,m_\gamma,\Lambda\gt0$ its loop
+    integrands are integrable at every $\epsilon\gt0$, and as $\epsilon\to0^+$
+    it tends to $A(p^2)\not p+B(p^2)m$ for a unique pair of functions on
+    $p^2\gt-(m+\min(m_\gamma,\Lambda))^2$, below the thresholds of the electron
+    with either photon. The library then defines
+    $\Sigma(z)=A(-z^2)z+B(-z^2)m$ for real $z$ with
+    $|z|\lt m+\min(m_\gamma,\Lambda)$, the source's $\Sigma(\not p)$ with
+    $p^2=-\not p^2$, and states both conditions literally at $z=-m$, the
+    eigenvalue of $\not p$ on the electron spinors. The derivative is that of
+    $\Sigma$ composed with the clamp of $\mathbb R$ onto
+    $[-m-\mu/2,-m+\mu/2]$, $\mu=\min(m_\gamma,\Lambda)$. This interval lies in
+    the domain and has $-m$ in its interior, so the clamp does not change the
+    derivative at $-m$. For all values of the other parameters exactly one
+    pair $(\delta_2,\delta_m)$ satisfies the two conditions, as the source
+    says after (62.27).
+
+    The source obtains amplitudes from the position-space LSZ formula
+    (41.17), with the field normalization (41.25) that the unit residue
+    secures. The library defines the LSZ amplitude of the electron current in
+    momentum space, as an iterated limit. Let $G^\mu_\epsilon(r',r)$ be the
+    connected three-point function of order $e^3$, amputated by the free
+    external propagators, with the corrections on the external legs kept.
+    First $\epsilon\to0^+$ in $(1/i)\,\bar u_{s'}(p')G^\mu_\epsilon(r',r)u_s(p)$
+    at off-shell momenta $r'$, $r$; then $(r',r)\to(p',p)$ through off-shell
+    momenta, along every approach. The spinors stay at the on-shell limit
+    momenta $p'$, $p$. For $m,m_\gamma,\Lambda\gt0$, regulator fermions as in
+    Deviation 13 and the electron on shell, the library proves that every
+    one-loop contraction of this function is integrable at every
+    $\epsilon\gt0$ and all momenta, and that the iterated limit exists and is
+    unique. In the source the external legs carry exact propagators with unit
+    residue; here the leg corrections are kept and proved to vanish at the
+    shell (see the proof-route section). See `selfEnergy_existsUnique` in
+    [SelfEnergyExistsUnique.lean](../QED/Frozen/WickModel/SelfEnergyExistsUnique.lean),
+    `selfEnergyAB` in [SelfEnergyAB.lean](../QED/Frozen/WickModel/SelfEnergyAB.lean),
+    `selfEnergySlash` in
+    [SelfEnergySlash.lean](../QED/Frozen/WickModel/SelfEnergySlash.lean),
+    `IsElectronOnShell` in
+    [IsElectronOnShell.lean](../QED/Frozen/WickModel/IsElectronOnShell.lean),
+    `electronCounterterms_existsUnique` in
+    [ElectronCountertermsExistsUnique.lean](../QED/Frozen/WickModel/ElectronCountertermsExistsUnique.lean),
+    `lszAmplitude_existsUnique` in
+    [LszAmplitudeExistsUnique.lean](../QED/Frozen/WickModel/LszAmplitudeExistsUnique.lean),
+    and `lszAmplitude` in [LszAmplitude.lean](../QED/Frozen/WickModel/LszAmplitude.lean).
 
 ## "QED Vertex Correction" notes
 
@@ -460,23 +701,80 @@ None.
   Each chain is then evaluated using the translation invariance of the
   energy-first integral ([Classification.lean](../QED/Wick/Classification.lean),
   [ChainValue.lean](../QED/Wick/ChainValue.lean)).
+- **Three-point function.** The library classifies all connected
+  contractions of order at most $e^3$ with one external fermion pair and one
+  external photon. Besides the one-particle-irreducible part, they are the
+  counterterm $-i(\delta_2\not p+\delta_mm)$ and the self-energy loop on
+  either electron leg, and the counterterm
+  $-i\delta_3(q^2g^{\mu\rho}-q^\mu q^\rho)$ and the vacuum-polarization loop
+  on the photon leg; the orderings of the vertices cancel the factor $1/N!$.
+  The tadpoles, in which the two fermion fields of one gauge vertex are
+  contracted into a closed loop attached to the electron line by a photon of
+  zero momentum, vanish exactly at every $\epsilon$. Their loop integrand,
+  a trace of $\gamma^\nu$ times one propagator, is odd in the loop momentum,
+  and the energy-first integral of an odd function is $0$. The two-point
+  functions are classified in the same way and give (62.28) and (62.12)
+  (`connectedFunction_threePoint_eq` in
+  [ThreePointClassification.lean](../QED/WickModel/ThreePointClassification.lean),
+  `contractionValue_eq_zero_of_selfLoop` in
+  [ThreePointClassificationTadpole.lean](../QED/WickModel/ThreePointClassificationTadpole.lean),
+  [TwoPointClassification.lean](../QED/WickModel/TwoPointClassification.lean)).
+- **Electron legs.** The source does not compute the corrections on the
+  external electron legs; it relies on the unit residue. After
+  $\epsilon\to0^+$ at an off-shell momentum $r$, the self-energy insertion on
+  the incoming leg, counterterm included, contributes
+  $\tilde S_0(r)\Sigma(r)u(p)$ next to the vertex factor, with
+  $\tilde S_0(r)=(m-\not r)/(r^2+m^2)$ and $\Sigma(r)=A(r^2)\not r+B(r^2)m$.
+  The identity $(m-\not r)(\not r+m)=r^2+m^2$, which on a solution of
+  $(\not p+m)u(p)=0$ reads $(m-\not r)(\not r-\not p)u(p)=(r^2+m^2)u(p)$,
+  gives
+  $$\tilde S_0(r)\Sigma(r)=A(r^2)+m\,\frac{(B-A)(r^2)}{r^2+m^2}\,(m-\not r).$$
+  The condition $\Sigma(-m)=0$ says $(B-A)(-m^2)=0$, so the quotient tends to
+  $(B-A)'(-m^2)$, while $(m-\not r)u(p)\to2mu(p)$; the limit is
+  $\Sigma'(-m)u(p)=0$. The outgoing leg is the same with the factors in the
+  other order. The vertex part is continuous up to the shell, and the photon
+  leg tends to the term of Deviation 14 because
+  $\bar u(p')(\not p'-\not p)u(p)=0$
+  (`electronPropagator_zero_mul_selfEnergyForm` and
+  `tendsto_electronLeg_in_spinor_of_isElectronOnShell` in
+  [LszLegs.lean](../QED/WickModel/LszLegs.lean), `lszLimit_closedForm` in
+  [LszLimit.lean](../QED/WickModel/LszLimit.lean)).
+- **Spin sums.** The completeness relation (38.23),
+  $\sum_su_s(p)\bar u_s(p)=m-\not p$, is proved for the library's spinors.
+  Since $(m-\not p)u=2mu$ for every solution of $(\not p+m)u=0$, and
+  $\bar u'(m-\not p')=2m\bar u'$ for every solution of
+  $\bar u'(\not p'+m)=0$, the spinors $u_s(p)$ and $\bar u_{s'}(p')$ span the
+  solution spaces, and a sandwich that vanishes on them vanishes on all
+  solutions. This identifies the form-factor decomposition of the LSZ
+  amplitude, stated for spin labels, with that of the vertex function,
+  stated for all solutions, up to the shift of the first form factor by the
+  photon-leg term (`sum_vecMulVec_spinor` and `sandwich_eq_zero_of_spinor` in
+  [HeadlineSpinor.lean](../QED/WickModel/HeadlineSpinor.lean),
+  `lszPair_iff_isFormFactorPair_vertexFunction` in
+  [HeadlinePair.lean](../QED/WickModel/HeadlinePair.lean)). For the charge
+  condition the argument is more direct: at $p'=p$ the photon-leg term
+  vanishes, the vertex sandwich is a multiple of $\bar u\gamma^\mu u$, and
+  $\bar u_s(p)\gamma^0u_s(p)=2p^0\ne0$
+  ([LszCharge.lean](../QED/WickModel/LszCharge.lean)).
 
 ## Outside the scope of the formal statements
 
-- The on-shell electron conditions $\Sigma(-m)=\Sigma'(-m)=0$, the photon
-  condition $\Pi(0)=0$, and the derivation of the unit residues of Fig. 63.1
-  from the Wick expansion (Deviation 10).
-- A single statement that runs from the Wick expansion to $g$. The results are
-  separate theorems about the same vertex function, which
-  `tendsto_wickVertex` identifies with the limit of the Wick expansion.
-- The Ward identity $Z_1=Z_2$ (68.13) and independence of the gauge parameter;
-  neither is used.
-- The dimensionally regularized intermediate results (62.47)–(62.50) and
-  (63.12), the closed forms (63.19) and (63.21) for $q^2\ne0$, and problem
-  64.1 on orbital angular momentum.
-- The path integral (58.17)–(58.21), position-space time-ordered products,
-  the LSZ formulas of sections 41 and 56, and all contributions beyond order
-  $\alpha$.
+- The Ward identity $Z_1=Z_2$ (68.13), which is not used, and independence of
+  the gauge parameter: Feynman gauge is used throughout, and the parameter
+  $\xi$ of (62.5) does not appear.
+- The limit of large regulator-fermion masses. $M_1$ and $M_2$ are fixed
+  parameters; they do not affect $F_2$ or $g$, and the vacuum polarization is
+  not shown to approach the renormalized form (62.25) as they grow.
+- The intermediate results of the dimensionally regularized route,
+  (62.13)–(62.24), (62.30)–(62.35), (62.47)–(62.50) and (63.12); the explicit
+  forms (62.36)–(62.38) of the renormalized self-energy, and (63.19) and
+  (63.21) for $q^2\ne0$; and problem 64.1 on orbital angular momentum.
+- The path integral (58.17)–(58.21) and the position-space formulas:
+  time-ordered products and the LSZ formula (41.17), which the library
+  replaces by the momentum-space limit of Deviation 15.
+- The LSZ formulas for external photons (56.1)–(56.8); the photon is a
+  background field (Deviation 14).
+- All contributions beyond order $\alpha$.
 
 ## Sources used only as references
 
