@@ -40,6 +40,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-30 | 2026-11-09 | Packet 6c-1 (existence and uniqueness of the LSZ amplitude of the electron current) approved as written and frozen | Author |
 | D-31 | 2026-11-09 | Packet 6c-2 (the LSZ amplitude, its closed form, and the charge condition and magnetic moments restated with it) approved as written and frozen | Author |
 | D-32 | 2026-11-09 | Headline design, LSZ form: general Wick model with on-shell counterterms; no photon condition (holds for every δ₃); F₂ and both Landé factors in one statement; fixed regulator fermions | Author |
+| D-33 | 2026-11-10 | Headline packet (the LSZ form factors and the headline theorem) approved as written and frozen; D-32 supersedes the first bullet of D-21 | Author |
 
 ## Pending author rulings
 
@@ -1334,3 +1335,45 @@ amplitude:
 
 **Scope.** These are design rulings. The exact declarations go through the
 usual review and approval.
+
+## D-33. Headline packet approved (author ruling)
+
+**Ruling.** On 2026-11-10 the author approved the headline packet as written.
+The approved text was the untracked scratch file with SHA-256
+`6e716aaae2a5e1706c9be27eae4221209e3efb56483cf8d837447eb47abce526`.
+
+- **(H₀)** `IsLSZFormFactorPair`: the decomposition (63.18) of the LSZ
+  amplitude, on the spinor bases.
+- **(H₀′)** `existsUnique_isLSZFormFactorPair`: for e ≠ 0 and q² > 0 the LSZ
+  amplitude has exactly one form-factor pair.
+- **(H)** `lszAmplitude_pauli_landeFactor_limit`: the headline theorem. For
+  fixed model data with e ≠ 0, m > 0 and admissible regulator fermions, and
+  a wave-packet profile, jointly as m_γ → 0⁺ and Λ → ∞: counterterms exist
+  with the electron on shell, the LSZ charge condition and an LSZ response
+  moment; and for every such choice the Pauli component of the LSZ
+  form-factor pair is within η of α/2π for small q² > 0, and both LSZ
+  magnetic-moment definitions give g within η of 2(1 + α/2π). It holds for
+  every δ₃.
+
+With the approval the author confirmed two points:
+
+1. D-32 supersedes the first bullet of D-21 ("the ε → 0⁺ limit of the Wick
+   vertex is the vertex function"). The meaning of the LSZ amplitude rests on
+   the sealed (L₁)/(L₂′), and (L₃) ties it to the vertex function, which
+   packet 5 ties to the Wick vertex.
+2. As written, δ and R may depend on all of the model data and on the
+   profile. The proof gives δ and R depending only on e, m and η; making that
+   visible would need e and m split out of the model data, which D-32 does
+   not require.
+
+**Review.** An independent refute-first review found no blocker in the Lean
+statements and no excess binders, and proved (H) as written from sealed
+theorems in scratch. Its text findings were applied to the text the author
+saw: the order of limits (q² → 0⁺ jointly with the regulator limit, as in
+(I)), the role of δ₃ (arbitrary, not irrelevant), the claim about F₂ (backed
+by the added (H₀′)), and the name.
+
+**Frozen anchors.** All three are in `QED/Frozen/WickModel/`, and their
+`pp.all` output equals the approved file's. (H₀) is a definition, sealed when
+frozen. (H₀′) and (H) are `DRAFT_SORRY`; their providers carry the proofs,
+from the helper modules `QED/WickModel/Headline{Spinor,Pair,}.lean`.

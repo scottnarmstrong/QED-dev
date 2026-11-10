@@ -139,6 +139,10 @@ public import QED.Frozen.WickModel.LszAmplitudeEq
 public import QED.Frozen.WickModel.IsLSZChargeNormalizedIff
 public import QED.Frozen.WickModel.IsLSZResponseMagneticMomentIff
 public import QED.Frozen.WickModel.LszSourceMagneticMomentLimit
+public import QED.Frozen.WickModel.IsLSZFormFactorPair
+public import QED.WickModel.HeadlineSpinor
+public import QED.WickModel.HeadlinePair
+public import QED.WickModel.Headline
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization

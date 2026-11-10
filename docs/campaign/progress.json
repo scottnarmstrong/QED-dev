@@ -189,6 +189,10 @@
     {
       "date": "2026-11-09",
       "change": "Author ruled on the headline design (D-32): stated from the general Wick model with on-shell counterterms and the LSZ amplitude; no photon on-shell condition (holds for every delta3); F2 and both Lande factors in one statement; fixed Pauli-Villars regulator fermions."
+    },
+    {
+      "date": "2026-11-10",
+      "change": "Author approved the headline packet (D-33): froze IsLSZFormFactorPair (H0, sealed), its existence and uniqueness (H0'), and the headline theorem lszAmplitude_pauli_landeFactor_limit (H): from the general Wick model with on-shell counterterms and the LSZ amplitude, F2 within eta of alpha/2pi and both Lande factors within eta of 2(1 + alpha/2pi) near the regulator limit. H0' and H as DRAFT_SORRY, with their proofs in the providers."
     }
   ],
   "tracks": [
