@@ -3,7 +3,7 @@
 [Campaign HQ](../../README.md) · [Decisions](DECISIONS.md) · [Findings](FINDINGS.md) ·
 [Progress ledger](progress.json)
 
-**As of 2026-11-09.** Phase 1 (fix the one-loop calculation). Packets 1–5, 6a and 6b are proved and audited: the vertex is derived from the order-e³ Wick expansion, g → 2(1 + α/2π) for both magnetic-moment definitions, and the general Wick model fixes the counterterms δ₂, δ_m and δ₃ by the on-shell conditions. Packet 6c (the LSZ amplitude, D-29) and the headline theorem (L1.ASSEMBLY, D-21) remain.
+**As of 2026-11-10.** Phase 1 (fix the one-loop calculation). The headline theorem (H) is proved and audited: from the general Wick model with on-shell counterterms and the model's own LSZ amplitude, F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions, jointly as m_γ → 0⁺ and Λ → ∞. Remaining for L1.ASSEMBLY (D-21): the Comparator challenge and the fresh-checkout audit.
 
 Milestones (see the [ledger](progress.json)):
 
@@ -22,11 +22,12 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 2 — QED/Frozen/WickModel/LszFormFactorExistsUnique.lean (H₀′),
-               QED/Frozen/WickModel/LszAmplitudePauliLandeFactorLimit.lean (H)
+DRAFT_ANCHORS: 0
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 0
+SEALED_THIS_TURN: 2 theorems — QED.WickModel.existsUnique_isLSZFormFactorPair (H₀′),
+               QED.WickModel.lszAmplitude_pauli_landeFactor_limit (H, the headline); PROVED
+               (checker, build, standard axioms, independent refute-first audit)
 ```
 
 | Field | Value |
@@ -34,7 +35,7 @@ SEALED_THIS_TURN: 0
 | Model / prescription | Perturbative QED in Feynman gauge with the on-shell scheme, starting from a momentum-space Wick expansion at order $e^3$ (D-8). The one-loop pilot uses a Pauli–Villars photon (mass $\Lambda$) and a photon mass $m_\gamma$, with Minkowski loop integrals defined by the energy-first prescription M1 ([REGULARIZATION.md](../REGULARIZATION.md); D-5). The magnetic moment has two definitions, the source's wave-packet definition and the vertex response, proved equivalent (D-9). |
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
-| Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. (F′) the characterization of the one-loop vertex `QED.OneLoop.vertexOneLoop`. (G) `existsUnique_isFormFactorPair_vertexOneLoop`: for e ≠ 0 and q² > 0 the decomposition (63.18) exists and is unique. (I) `isFormFactorPair_vertexOneLoop_pauli_limit`: near q², m_γ → 0⁺ and Λ → ∞, every form-factor pair has F₂ within η of e²/8π² = α/2π, uniformly over the momenta. Packet 3: (K) the charge condition (63.1) fixes a unique counterterm Z₁; (N) the counterterm shifts only F₁ (O-8); (M) F₁(0) = 1 (64.2) at fixed regulators. Packet 4a: (R) the response magnetic moment exists and is unique; (R′) with the charge-normalized counterterm, g = 4mμ/e → 2(1 + α/2π) (64.17) jointly as m_γ → 0⁺ and Λ → ∞. Packet 4b: (W₄) for the source's wave-packet definition (64.4)–(64.9), the undamped position integral converges absolutely and, as the packet narrows, the source μ tends to the response μ (O-24); (W₅) g → 2(1 + α/2π) for the source definition. Scope: the (62.39) vertex function under D-5, with current matrix elements read from the amputated vertex (O-3). Packet 5: (W₁) the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram, with coefficient one and no closed-loop sign (O-1, O-2); (W₂) its ε → 0⁺ limit is the vertex function. Packet 6a: (Y₁) packet 5 is a special case of the general Wick model with Pauli–Villars regulator fermions. Packet 6b: (Z₁), (Z₂) the one-loop self-energy and vacuum polarization exist in covariant form; (Z₆), (Z₉) the on-shell conditions (62.27) and (62.11) fix δ₂, δ_m and δ₃ uniquely. Packet 6c-1: (L₁) the LSZ amplitude of the electron current exists and is unique. Packet 6c-2: (L₃) it equals ū′V^μu plus a photon-leg term e·q²D(q²)Π(q²)ū′γ^μu; (L₄′), (L₅′), (L₇′) the charge condition and both magnetic-moment definitions restated with the LSZ amplitude are equivalent to packets 3, 4a and 4b. The assembled theorem (L1.ASSEMBLY) remains. |
+| Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. (F′) the characterization of the one-loop vertex `QED.OneLoop.vertexOneLoop`. (G) `existsUnique_isFormFactorPair_vertexOneLoop`: for e ≠ 0 and q² > 0 the decomposition (63.18) exists and is unique. (I) `isFormFactorPair_vertexOneLoop_pauli_limit`: near q², m_γ → 0⁺ and Λ → ∞, every form-factor pair has F₂ within η of e²/8π² = α/2π, uniformly over the momenta. Packet 3: (K) the charge condition (63.1) fixes a unique counterterm Z₁; (N) the counterterm shifts only F₁ (O-8); (M) F₁(0) = 1 (64.2) at fixed regulators. Packet 4a: (R) the response magnetic moment exists and is unique; (R′) with the charge-normalized counterterm, g = 4mμ/e → 2(1 + α/2π) (64.17) jointly as m_γ → 0⁺ and Λ → ∞. Packet 4b: (W₄) for the source's wave-packet definition (64.4)–(64.9), the undamped position integral converges absolutely and, as the packet narrows, the source μ tends to the response μ (O-24); (W₅) g → 2(1 + α/2π) for the source definition. Scope: the (62.39) vertex function under D-5, with current matrix elements read from the amputated vertex (O-3). Packet 5: (W₁) the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram, with coefficient one and no closed-loop sign (O-1, O-2); (W₂) its ε → 0⁺ limit is the vertex function. Packet 6a: (Y₁) packet 5 is a special case of the general Wick model with Pauli–Villars regulator fermions. Packet 6b: (Z₁), (Z₂) the one-loop self-energy and vacuum polarization exist in covariant form; (Z₆), (Z₉) the on-shell conditions (62.27) and (62.11) fix δ₂, δ_m and δ₃ uniquely. Packet 6c-1: (L₁) the LSZ amplitude of the electron current exists and is unique. Packet 6c-2: (L₃) it equals ū′V^μu plus a photon-leg term e·q²D(q²)Π(q²)ū′γ^μu; (L₄′), (L₅′), (L₇′) the charge condition and both magnetic-moment definitions restated with the LSZ amplitude are equivalent to packets 3, 4a and 4b. Headline (H): from the general Wick model with on-shell counterterms and the LSZ amplitude, F₂ within η of α/2π and both Landé factors within η of 2(1 + α/2π) near the regulator limit, for every δ₃; (H₀′) the LSZ form factors are well defined. The Comparator challenge and the fresh-checkout audit (D-21) remain. |
 | Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, D-18, D-19, D-20, D-21, D-22, D-23, D-24, D-25, D-26, D-27, D-28, D-29, D-30, D-31, D-32, and D-33 (headline packet, approved 2026-11-10). |
 
 ## Work completed
@@ -230,7 +231,7 @@ proof.
 2. **L1.ASSEMBLY (D-21, D-32).** The headline theorem, stated from the
    general Wick model with on-shell counterterms and the LSZ amplitude: F₂
    within η of α/2π and both Landé factors within η of 2(1 + α/2π) near the
-   regulator limit. Frozen (D-33); proofs ready, audit pending. Then the
-   Comparator challenge and the fresh-checkout audit.
+   regulator limit. Proved and audited (D-33). Remaining: the Comparator
+   challenge and the fresh-checkout audit.
 3. **Cleanups.** Land the closed form δ₃ = (e²/12π²)Σ_f c_f log M_f² as a
    lemma; remove unused helpers and duplicated lemmas noted in audits.

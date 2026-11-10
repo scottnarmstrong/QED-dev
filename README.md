@@ -48,7 +48,11 @@ connected three-point function, proves that it is
 $\bar u'V^\mu u$ plus a photon-leg term, and restates the charge condition and
 both magnetic-moment definitions with it; they agree with the earlier ones, so
 the current matrix elements are no longer a modeling identification (O-3).
-Remaining one-loop work: the assembled headline theorem (L1.ASSEMBLY). See the
+The headline theorem (D-33) assembles the chain: starting from the general
+model with on-shell counterterms and its own LSZ amplitude, the Pauli form
+factor tends to $\alpha/2\pi$ and both magnetic-moment definitions give
+$g\to2(1+\alpha/2\pi)$ as $m_\gamma\to0^+$ and $\Lambda\to\infty$. Remaining
+one-loop work: the Comparator challenge and a fresh-checkout audit. See the
 [campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
@@ -72,13 +76,13 @@ become precise; changes to their scope must be recorded.
 | --- | ---: | --- | --- |
 | Campaign setup | 4/4 | `██████████` 100% | Complete |
 | Sources and exact specification | 3/4 | `███████░░░` 75% | In progress |
-| Complete one-loop calculation | 6/8 | `███████░░░` 75% | In progress |
+| Complete one-loop calculation | 7/8 | `████████░░` 88% | In progress |
 | Numerical certification pilot | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Complete two-loop calculation | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 244. **Total lines of Lean code:** 32,988.
+**Tracked Lean source files:** 244. **Total lines of Lean code:** 32,990.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.

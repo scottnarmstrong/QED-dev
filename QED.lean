@@ -143,6 +143,8 @@ public import QED.Frozen.WickModel.IsLSZFormFactorPair
 public import QED.WickModel.HeadlineSpinor
 public import QED.WickModel.HeadlinePair
 public import QED.WickModel.Headline
+public import QED.Frozen.WickModel.LszFormFactorExistsUnique
+public import QED.Frozen.WickModel.LszAmplitudePauliLandeFactorLimit
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization

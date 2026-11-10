@@ -193,6 +193,10 @@
     {
       "date": "2026-11-10",
       "change": "Author approved the headline packet (D-33): froze IsLSZFormFactorPair (H0, sealed), its existence and uniqueness (H0'), and the headline theorem lszAmplitude_pauli_landeFactor_limit (H): from the general Wick model with on-shell counterterms and the LSZ amplitude, F2 within eta of alpha/2pi and both Lande factors within eta of 2(1 + alpha/2pi) near the regulator limit. H0' and H as DRAFT_SORRY, with their proofs in the providers."
+    },
+    {
+      "date": "2026-11-10",
+      "change": "Sealed the headline theorem (H) lszAmplitude_pauli_landeFactor_limit and (H0'); an independent refute-first audit found both PROVED. From the general Wick model with on-shell counterterms and the model's own LSZ amplitude: near m_gamma -> 0+, Lambda -> oo, F2 is within eta of alpha/2pi and both magnetic-moment definitions give g within eta of 2(1 + alpha/2pi), for every delta3. L1.MODEL done (the regularized order-e^3 Wick model with Pauli-Villars regulator fermions, sealed and audited); L1.ASSEMBLY in progress (remaining: Comparator challenge and fresh-checkout audit, D-21)."
     }
   ],
   "tracks": [
@@ -223,14 +227,14 @@
       "title": "Complete one-loop calculation",
       "kind": "formal",
       "items": [
-        {"id": "L1.MODEL", "title": "Concrete regularized perturbative model and algebra", "status": "in_progress", "evidence": ["QED/Algebra/Minkowski.lean", "QED/Algebra/Dirac.lean", "QED/Algebra/Contraction.lean", "QED/OneLoop/VertexAlgebra.lean"]},
+        {"id": "L1.MODEL", "title": "Concrete regularized perturbative model and algebra", "status": "done", "evidence": ["QED/Algebra/Minkowski.lean", "QED/Algebra/Dirac.lean", "QED/Frozen/WickModel/Params.lean", "QED/Frozen/WickModel/ConnectedFunction.lean", "QED/Frozen/WickModel/OnePIFunction.lean", "QED/Frozen/WickModel/WickVertexEqOnePIFunction.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.VERTEX", "title": "Vertex expansion, diagram coefficient, and signs", "status": "done", "evidence": ["QED/Frozen/Wick/WickVertex.lean", "QED/Frozen/Wick/WickVertexEq.lean", "QED/Frozen/Wick/WickVertexLimit.lean", "QED/Provider/Wick/WickVertexEq.lean", "docs/campaign/DECISIONS.md", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.PROJECTION", "title": "On-shell Dirac reduction and form-factor extraction", "status": "done", "evidence": ["QED/OneLoop/NumeratorReduction.lean", "QED/Algebra/FormFactorIndependence.lean", "QED/OneLoop/VertexFormFactors.lean", "QED/Frozen/OneLoop/FormFactorExistsUnique.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.INTEGRAL", "title": "Justified parameterization and loop integration", "status": "done", "evidence": ["QED/Integration/FeynmanParameter.lean", "QED/Integration/SpatialIntegral.lean", "QED/OneLoop/VertexEnergyFirst.lean", "QED/OneLoop/VertexSpatial.lean", "QED/Frozen/OneLoop/VertexLimitExists.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.LIMITS", "title": "Finiteness and required regulator limits", "status": "done", "evidence": ["QED/OneLoop/PauliLimit.lean", "QED/Frozen/OneLoop/PauliFormFactorLimit.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.COEFFICIENT", "title": "Exact first coefficient C1 = 1/2", "status": "done", "evidence": ["QED/Frozen/OneLoop/PauliFormFactorLimit.lean", "QED/Provider/OneLoop/PauliFormFactorLimit.lean", "docs/campaign/DECISIONS.md", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L1.OBSERVABLE", "title": "Magnetic-coupling interpretation of F2(0)", "status": "done", "evidence": ["QED/Frozen/OneLoop/LandeFactorLimit.lean", "QED/Frozen/OneLoop/SourceMagneticMoment.lean", "QED/Frozen/OneLoop/SourceMagneticMomentLimit.lean", "QED/Frozen/OneLoop/SourceLandeFactorLimit.lean", "QED/Provider/OneLoop/SourceMagneticMomentLimit.lean", "docs/campaign/DECISIONS.md", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
-        {"id": "L1.ASSEMBLY", "title": "Complete theorem assembled, audited, and reproducible", "status": "planned", "evidence": []}
+        {"id": "L1.ASSEMBLY", "title": "Complete theorem assembled, audited, and reproducible", "status": "in_progress", "evidence": ["QED/Frozen/WickModel/LszAmplitudePauliLandeFactorLimit.lean", "QED/Frozen/WickModel/LszFormFactorExistsUnique.lean", "docs/campaign/DECISIONS.md", "docs/campaign/STATUS.md"]}
       ]
     },
     {

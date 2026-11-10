@@ -1377,3 +1377,18 @@ by the added (H₀′)), and the name.
 `pp.all` output equals the approved file's. (H₀) is a definition, sealed when
 frozen. (H₀′) and (H) are `DRAFT_SORRY`; their providers carry the proofs,
 from the helper modules `QED/WickModel/Headline{Spinor,Pair,}.lean`.
+
+**(H₀′) and (H) sealed.** Both were sealed by their providers after an
+independent refute-first audit found them PROVED. The audit confirmed:
+
+- the frozen bytes, with the guard rejecting nineteen deliberate mutations,
+  and the three ABI hashes;
+- statement equality with no excess binders;
+- that the proofs go through the sealed (K), (Z₆), (L₃), (L₄′), (L₅′), (R),
+  (R′), (I), (N), (G) and (W₅), with the quantifier structure of (I), (R′)
+  and (W₅);
+- the spin sum Σ_s u_s ū_s = m − p̸ and the shift of the first form factor by
+  the photon-leg coefficient, numerically at double precision;
+- non-vacuity in Lean at concrete parameters (with δ₃ = 7): counterterms, an
+  LSZ response moment with g > 2, and an LSZ pair with F₂ ≠ 0;
+- standard axioms only.

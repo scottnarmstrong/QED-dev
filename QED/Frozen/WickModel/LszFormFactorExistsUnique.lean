@@ -37,7 +37,7 @@ theorem existsUnique_isLSZFormFactorPair (P : Params) (he : P.e ≠ 0) (hm : 0 <
     (hq : 0 < Minkowski.dot (p' - p) (p' - p)) :
     ∃! F : ℂ × ℂ, IsLSZFormFactorPair P hm hmγ hΛ hM₁ hM₂ hPV₁ hPV₂ hon p' p hp' hp hp0' hp0 F :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.WickModel.existsUnique_isLSZFormFactorPair
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

@@ -15131,7 +15131,7 @@
         "module": "QED.Provider.WickModel.LszFormFactorExistsUnique",
         "export": "QED.Provider.WickModel.existsUnique_isLSZFormFactorPair"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "2ef3318eb634e5a6e384861032462168b02fe4c09cd246cc8ae5da4814c24149",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {
@@ -15526,7 +15526,7 @@
         "module": "QED.Provider.WickModel.LszAmplitudePauliLandeFactorLimit",
         "export": "QED.Provider.WickModel.lszAmplitude_pauli_landeFactor_limit"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "62f890b3e90def1ef2e8ba3c2ae6bcf546b8ff0c7429a9c6ff3c87d07db1795e",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {
