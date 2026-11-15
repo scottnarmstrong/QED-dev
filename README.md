@@ -11,7 +11,7 @@ $a_e^{(1)}=\alpha/(2\pi)$. The longer route runs through two loops and selected
 higher-loop contributions toward a verified five-loop QED prediction. Each stage
 should produce reusable tools for real physics calculations.
 
-**Current state (Phase 1, preparation):** the primary derivation is pinned
+**Current state (the one-loop result is complete):** the primary derivation is pinned
 (Srednicki, chapters 62–64). The conventions are fixed, and the one-loop
 regulator route is chosen. The derivation is mapped step by step with its proof
 obligations exposed. A Lean package is pinned to Lean and Mathlib `v4.35.0`.
@@ -52,9 +52,9 @@ The headline theorem (D-33) assembles the chain: starting from the general
 model with on-shell counterterms and its own LSZ amplitude, the Pauli form
 factor tends to $\alpha/2\pi$ and both magnetic-moment definitions give
 $g\to2(1+\alpha/2\pi)$ as $m_\gamma\to0^+$ and $\Lambda\to\infty$. Remaining
-one-loop work: an independent end-to-end audit. A Comparator challenge for the
-headline passes with three independent kernels, and a rebuild in a fresh
-checkout is clean. See the
+one-loop work: none. A Comparator challenge for the headline passes with three
+independent kernels, a rebuild in a fresh checkout is clean, and an
+independent end-to-end audit found the headline proved as advertised. See the
 [campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
@@ -77,8 +77,8 @@ become precise; changes to their scope must be recorded.
 | Workstream | Complete | Milestone meter | State |
 | --- | ---: | --- | --- |
 | Campaign setup | 4/4 | `██████████` 100% | Complete |
-| Sources and exact specification | 3/4 | `███████░░░` 75% | In progress |
-| Complete one-loop calculation | 7/8 | `████████░░` 88% | In progress |
+| Sources and exact specification | 4/4 | `██████████` 100% | Complete |
+| Complete one-loop calculation | 8/8 | `██████████` 100% | Complete |
 | Numerical certification pilot | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Complete two-loop calculation | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
@@ -173,16 +173,10 @@ $\alpha/2\pi$ and that both definitions of the magnetic moment give
 $g\to2(1+\alpha/2\pi)$, jointly as $m_\gamma\to0^+$ and $\Lambda\to\infty$.
 It depends only on the standard Lean axioms.
 
-1. Finish the one-loop evidence: an independent end-to-end audit of the whole
-   chain. The Comparator challenge ([QEDChallenge.lean](QEDChallenge.lean),
-   [QEDSolution.lean](QEDSolution.lean), [comparator.json](comparator.json))
-   passes with con-ron, NanoDa and Lean's kernel, and a rebuild in a fresh
-   checkout is clean
-   ([Phase 2](docs/PROJECT-OUTLINE.md#phase-2--complete-one-loop)).
-2. Certify the numerical evaluation of the one-loop pilot: sound enclosure
+1. Certify the numerical evaluation of the one-loop pilot: sound enclosure
    arithmetic, an integral-enclosure theorem, and a checkable coefficient
    certificate ([Phase 3](docs/PROJECT-OUTLINE.md#phase-3--certify-numerical-evaluation)).
-3. Then the later phases of the [outline](docs/PROJECT-OUTLINE.md#4-campaign-phases):
+2. Then the later phases of the [outline](docs/PROJECT-OUTLINE.md#4-campaign-phases):
    the complete two-loop calculation, selected higher-loop families toward
    five-loop QED, and an experimental comparison.
 

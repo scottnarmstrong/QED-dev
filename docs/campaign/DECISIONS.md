@@ -808,6 +808,27 @@ assembled one-loop result (L1.ASSEMBLY):
 **Scope.** These are design rulings. The regulator for Π, and every exact
 declaration, go through the usual review and approval.
 
+**Evidence completed (2026-11-15).** The headline was settled by D-32 and
+D-33 and sealed after its audit. The evidence of item 3 is complete:
+
+- **Fresh checkout.** A clone of `82c5dfd` from GitHub, built from the Mathlib
+  cache, builds with no warnings. The guard passes (118 anchors, none
+  draft), the module check passes, all 118 ABI hashes match, and an axiom
+  report for the 28 theorem anchors and the five Comparator theorems shows
+  only the standard axioms.
+- **End-to-end audit.** An independent refute-first audit of the whole
+  chain found the headline proved as advertised, with no FAIL or CONCERN.
+  Its WEAK items are scope limits already documented as deviations: the
+  model is its momentum-space Wick expansion, truncated at order e³, in
+  Feynman gauge with fixed regulator fermions, and the independence of δ₃
+  relies on taking q → 0 at fixed m_γ. Its own numerics reproduce
+  F₂ → α/2π and the sign of g − 2.
+- **Comparator challenge.** `lake comparator`, with con-ron, NanoDa and
+  Lean's kernel registered as Palomar does, accepts the Solution at
+  `fdfb568`. An editorial review of the Challenge found no blocker.
+- **Errata record.** `docs/ERRATA-AND-DEVIATIONS.md` covers the LSZ amplitude
+  and the headline: 7 errata, 15 deviations.
+
 ## D-22. Fermion-loop regulator for the photon side of O-3 (author ruling)
 
 **Ruling.** On 2026-11-09 the author chose the regulator for the vacuum

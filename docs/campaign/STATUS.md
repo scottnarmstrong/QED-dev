@@ -3,21 +3,21 @@
 [Campaign HQ](../../README.md) · [Decisions](DECISIONS.md) · [Findings](FINDINGS.md) ·
 [Progress ledger](progress.json)
 
-**As of 2026-11-15.** Phase 1 (fix the one-loop calculation). The headline theorem (H) is proved and audited: from the general Wick model with on-shell counterterms and the model's own LSZ amplitude, F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions, jointly as m_γ → 0⁺ and Λ → ∞. The Comparator challenge passes with three independent kernels and a fresh-checkout rebuild is clean; the independent end-to-end audit (D-21) is in progress.
+**As of 2026-11-15.** The one-loop result is complete (Phases 1 and 2 of the outline). The headline theorem (H), from the general Wick model with on-shell counterterms and the model's own LSZ amplitude, proves F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions, jointly as m_γ → 0⁺ and Λ → ∞. It is sealed and audited, a fresh-checkout rebuild is clean, the Comparator challenge passes with three independent kernels, and an independent end-to-end audit found it proved as advertised (D-21).
 
 Milestones (see the [ledger](progress.json)):
 
 | Milestone | Status |
 | --- | --- |
 | SPEC.SOURCE, SPEC.ROUTE, SPEC.ENV | done, on the evidence below |
-| SPEC.STATEMENTS | in progress: packets 1, 1b, 2, 3, 4a, 4b, 5, 6a, 6b-1, 6b-2, 6c-1, 6c-2, and the headline packet approved and frozen (D-11, D-12, D-14, D-15, D-16, D-18, D-20, D-24, D-26, D-27, D-28, D-30, D-31, D-33) |
+| SPEC.STATEMENTS | done for the one-loop result: every source-facing declaration of packets 1–6c and the headline packet reviewed, approved and frozen (D-11, D-12, D-14, D-15, D-16, D-18, D-20, D-24, D-26, D-27, D-28, D-30, D-31, D-33) |
 | L1.MODEL | done: the regulated order-e³ Wick model with Pauli–Villars regulator fermions (packets 5, 6a), sealed and audited |
 | L1.PROJECTION | done: the decomposition (63.18) of the one-loop vertex exists and is unique (packet 2, (G)) |
 | L1.INTEGRAL | done: the closed form of the one-loop vertex, and its well-definedness (E) |
 | L1.LIMITS, L1.COEFFICIENT | done for the (62.40) diagram under D-5: F₂ → e²/8π² = α/2π, so C₁ = 1/2, jointly as q², m_γ → 0⁺ and Λ → ∞ (packet 2, (I)) |
 | L1.OBSERVABLE | done: both magnetic-moment definitions of D-9, their equivalence O-24, and g → 2(1 + α/2π) for each (packets 4a and 4b) |
 | L1.VERTEX | done: the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram (O-1, O-2), and its ε → 0⁺ limit is the vertex function (packet 5) |
-| L1.ASSEMBLY | in progress: the headline theorem (H) is proved and audited (D-33); the Comparator challenge passes (con-ron, NanoDa, Lean kernel); the fresh-checkout rebuild is clean; the errata record is updated; the independent end-to-end audit remains |
+| L1.ASSEMBLY | done: the headline theorem (H) is proved and audited (D-33); fresh-checkout rebuild clean; Comparator challenge passes (con-ron, NanoDa, Lean kernel); independent end-to-end audit: proved as advertised; errata record updated (D-21) |
 
 ## Reporting fields
 
@@ -208,8 +208,9 @@ SEALED_THIS_TURN: 2 theorems — QED.WickModel.existsUnique_isLSZFormFactorPair 
 | Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (247 Lean files, 1 comparator configuration; the Challenge is above the 300-line review threshold) |
 | Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` at the earlier landing; on 2026-11-08 on `QED.OneLoop.vertexLimit_existsUnique`, its provider, and every exported theorem of the five new modules (transient files, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Axiom report (fresh clone) | `#print axioms` on every theorem anchor of the manifest (28) and the five Comparator theorems of `QEDSolution` | 33 reports, all `[propext, Classical.choice, Quot.sound]` |
-| Comparator challenge | `lake comparator` with NanoDa and con-ron registered as external kernels, as Palomar does (2026-11-15; rerun after the Challenge docstring edits) | "Your solution is okay!": con-ron (56061 declarations), NanoDa and Lean's kernel accept; about 2 minutes, under 1 GB |
+| Comparator challenge | `lake comparator` with NanoDa and con-ron registered as external kernels, as Palomar does; rerun at `fdfb568` (clean tree; Challenge SHA-256 `1c6bdc45…`, Solution `34a8c4d6…`) | "Your solution is okay!": con-ron (56061 declarations), NanoDa and Lean's kernel accept; about 2 minutes, under 1 GB |
 | Editorial review of the Challenge | refute-first reviewer, not the writer | No blocker: all 64 definitions and the five statements match the frozen originals; the headline is faithful and non-vacuous. Docstring findings applied (self-contained headline docstring, the photon-counterterm factor, process language removed) |
+| Independent end-to-end audit (D-21) | refute-first auditor, not a prover, on the fresh clone of `82c5dfd` | HEADLINE PROVED AS ADVERTISED. No FAIL or CONCERN. Read all 87 frozen definitions in the closure; every chosen object comes from a sealed ∃!; no junk value can satisfy the conclusions; the full 57,225-constant closure uses only the standard axioms; independent numerics reproduce F₂/(e²/8π²) to about 1e-6 against (63.20) with regulators, and g = 2(1 + F₂); non-vacuity in Lean. WEAK: the documented scope limits |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |
 | Numerical sanity (not proofs) | `python3 scripts/numerics/one_loop_sanity.py` | all eight checks pass |
@@ -227,18 +228,13 @@ proof.
 
 ## Remaining obligations and next bounded tasks
 
-1. **Packet 6c is complete (D-29, D-30, D-31).** The LSZ amplitude is
-   defined, its closed form proved, and the charge condition and both
-   magnetic-moment definitions are restated with it and shown equivalent to
-   packets 3, 4a and 4b.
-2. **L1.ASSEMBLY (D-21, D-32).** The headline theorem, stated from the
-   general Wick model with on-shell counterterms and the LSZ amplitude: F₂
-   within η of α/2π and both Landé factors within η of 2(1 + α/2π) near the
-   regulator limit. Proved and audited (D-33). The Comparator challenge
-   (`QEDChallenge.lean`, `QEDSolution.lean`, `comparator.json`; 57 definitions
-   copied under the `QEDChallenge` prefix, seven keeping library names, five
-   theorems) passes with con-ron, NanoDa and Lean's kernel, and a fresh-checkout
-   rebuild is clean. Remaining: the independent end-to-end audit.
-3. **Cleanups.** The closed form δ₃ = (e²/12π²)Σ_f c_f log M_f² is landed
-   (`vacuumPolarizationLoop_zero`). Remaining: remove unused helpers and the
-   duplicated lemmas noted in audits.
+The one-loop result is complete. Next, per the
+[outline](../PROJECT-OUTLINE.md#4-campaign-phases):
+
+1. **Phase 3, numerical certification.** Sound enclosure arithmetic, an
+   integral-enclosure theorem, and a checkable coefficient certificate.
+2. **Later phases.** The complete two-loop calculation, selected higher-loop
+   families, and an experimental comparison.
+3. **Optional.** A public release of the one-loop result (Palomar would also
+   need a `formalization.yaml` and a scrubbed public tree); cleanups of the
+   duplicated helper lemmas noted in audits.
