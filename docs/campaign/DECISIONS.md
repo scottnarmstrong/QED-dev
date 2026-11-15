@@ -41,6 +41,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-31 | 2026-11-09 | Packet 6c-2 (the LSZ amplitude, its closed form, and the charge condition and magnetic moments restated with it) approved as written and frozen | Author |
 | D-32 | 2026-11-09 | Headline design, LSZ form: general Wick model with on-shell counterterms; no photon condition (holds for every δ₃); F₂ and both Landé factors in one statement; fixed regulator fermions | Author |
 | D-33 | 2026-11-10 | Headline packet (the LSZ form factors and the headline theorem) approved as written and frozen; D-32 supersedes the first bullet of D-21 | Author |
+| D-34 | 2026-11-15 | Phase 3 design: certified enclosures of the regulated one-loop Pauli form factor; integer interval arithmetic checked by the kernel; box-partition quadrature; CODATA 2022 α (±1σ) for the contribution bound | Author |
 
 ## Pending author rulings
 
@@ -1413,3 +1414,35 @@ independent refute-first audit found them PROVED. The audit confirmed:
 - non-vacuity in Lean at concrete parameters (with δ₃ = 7): counterterms, an
   LSZ response moment with g > 2, and an LSZ pair with F₂ ≠ 0;
 - standard axioms only.
+
+## D-34. Design of Phase 3, certified numerics for the one-loop pilot (author ruling)
+
+**Ruling.** On 2026-11-15 the author decided four design questions for Phase 3
+of the outline (milestones NUM.ARITHMETIC, NUM.INTEGRATION, NUM.CERTIFICATE,
+NUM.VALIDATION):
+
+1. **Target.** Certify interval enclosures of the regulated one-loop Pauli
+   form factor at a few fixed rational regulator points, with
+   Λ = m²/m_γ and a small fixed q² > 0. On shell the Pauli coefficient of the
+   Phase-2 vertex is (e²/8π²) times a two-dimensional integral of a rational
+   function over [0,1]². Each enclosure becomes a theorem: every form-factor
+   pair of the one-loop vertex has F₂/(e²/8π²) in a stated interval. The exact
+   limit C₁ = 1/2 stays as proved in Phase 2.
+2. **Arithmetic.** Integer (fixed-point or dyadic) interval arithmetic with
+   outward rounding, with a soundness theorem relating each operation to the
+   reals. Certificates are checked by Lean's kernel; `native_decide` stays
+   forbidden. (Measured: integer computations of 10⁵ steps check in seconds;
+   exact rationals exceed the kernel's recursion limit at a few hundred
+   operations.)
+3. **Quadrature.** An external script proposes an adaptive box partition of
+   [0,1]²; the Lean checker bounds the integrand on each box by interval
+   arithmetic and sums area × [min, max]. Its soundness theorem: if it
+   accepts, the integral lies in the stated interval. Higher-order rules can be
+   added later on the same arithmetic.
+4. **α input.** The contribution bound a_e⁽¹⁾ = C₁ α/π = α/(2π) uses the
+   CODATA 2022 value α⁻¹ = 137.035999177(21) with its standard uncertainty
+   (±1σ), as a labeled, sourced external input; π comes from Mathlib's
+   20-digit bounds.
+
+**Scope.** These are design rulings. The exact declarations go through the
+usual review and approval.

@@ -209,6 +209,10 @@
     {
       "date": "2026-11-15",
       "change": "D-21 evidence complete. The independent end-to-end refute-first audit of the whole chain at 82c5dfd found the headline proved as advertised: no FAIL or CONCERN; its WEAK items are documented scope limits (momentum-space Wick model, order-e3 truncation, the order of limits behind the delta3-independence, Feynman gauge, fixed regulator fermions); its numerics reproduce F2 -> alpha/2pi and the sign of g - 2. The comparator, rerun at fdfb568 with the commit recorded, passes with con-ron, NanoDa and Lean's kernel. L1.ASSEMBLY and SPEC.STATEMENTS done: the one-loop result (Phase 2) is complete."
+    },
+    {
+      "date": "2026-11-15",
+      "change": "Phase 3 started. Author ruled on its design (D-34): certified enclosures of the regulated one-loop Pauli form factor at fixed rational regulator points; integer interval arithmetic checked by the kernel (no native_decide); box-partition quadrature with interval bounds; CODATA 2022 alpha (1 sigma) for the contribution bound."
     }
   ],
   "tracks": [
