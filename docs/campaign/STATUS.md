@@ -22,12 +22,11 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 0
+DRAFT_ANCHORS: 4 — QED/Frozen/OneLoop/{PauliEnclosureTen (Q₁), PauliEnclosureHundred (Q₂),
+               PauliEnclosureThousand (Q₃), OneLoopAnomalyCodata2022 (Q₄)}.lean
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 2 theorems — QED.WickModel.existsUnique_isLSZFormFactorPair (H₀′),
-               QED.WickModel.lszAmplitude_pauli_landeFactor_limit (H, the headline); PROVED
-               (checker, build, standard axioms, independent refute-first audit)
+SEALED_THIS_TURN: 0
 ```
 
 | Field | Value |
@@ -36,7 +35,7 @@ SEALED_THIS_TURN: 2 theorems — QED.WickModel.existsUnique_isLSZFormFactorPair 
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
 | Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. (F′) the characterization of the one-loop vertex `QED.OneLoop.vertexOneLoop`. (G) `existsUnique_isFormFactorPair_vertexOneLoop`: for e ≠ 0 and q² > 0 the decomposition (63.18) exists and is unique. (I) `isFormFactorPair_vertexOneLoop_pauli_limit`: near q², m_γ → 0⁺ and Λ → ∞, every form-factor pair has F₂ within η of e²/8π² = α/2π, uniformly over the momenta. Packet 3: (K) the charge condition (63.1) fixes a unique counterterm Z₁; (N) the counterterm shifts only F₁ (O-8); (M) F₁(0) = 1 (64.2) at fixed regulators. Packet 4a: (R) the response magnetic moment exists and is unique; (R′) with the charge-normalized counterterm, g = 4mμ/e → 2(1 + α/2π) (64.17) jointly as m_γ → 0⁺ and Λ → ∞. Packet 4b: (W₄) for the source's wave-packet definition (64.4)–(64.9), the undamped position integral converges absolutely and, as the packet narrows, the source μ tends to the response μ (O-24); (W₅) g → 2(1 + α/2π) for the source definition. Scope: the (62.39) vertex function under D-5, with current matrix elements read from the amputated vertex (O-3). Packet 5: (W₁) the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram, with coefficient one and no closed-loop sign (O-1, O-2); (W₂) its ε → 0⁺ limit is the vertex function. Packet 6a: (Y₁) packet 5 is a special case of the general Wick model with Pauli–Villars regulator fermions. Packet 6b: (Z₁), (Z₂) the one-loop self-energy and vacuum polarization exist in covariant form; (Z₆), (Z₉) the on-shell conditions (62.27) and (62.11) fix δ₂, δ_m and δ₃ uniquely. Packet 6c-1: (L₁) the LSZ amplitude of the electron current exists and is unique. Packet 6c-2: (L₃) it equals ū′V^μu plus a photon-leg term e·q²D(q²)Π(q²)ū′γ^μu; (L₄′), (L₅′), (L₇′) the charge condition and both magnetic-moment definitions restated with the LSZ amplitude are equivalent to packets 3, 4a and 4b. Headline (H): from the general Wick model with on-shell counterterms and the LSZ amplitude, F₂ within η of α/2π and both Landé factors within η of 2(1 + α/2π) near the regulator limit, for every δ₃; (H₀′) the LSZ form factors are well defined. The Comparator challenge and the fresh-checkout audit (D-21) remain. |
-| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, D-18, D-19, D-20, D-21, D-22, D-23, D-24, D-25, D-26, D-27, D-28, D-29, D-30, D-31, D-32, D-33, and D-34 (Phase 3 design, 2026-11-15). |
+| Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, D-18, D-19, D-20, D-21, D-22, D-23, D-24, D-25, D-26, D-27, D-28, D-29, D-30, D-31, D-32, D-33, D-34, and D-35 (packet Q, approved 2026-11-15). |
 
 ## Work completed
 
@@ -205,7 +204,7 @@ SEALED_THIS_TURN: 2 theorems — QED.WickModel.existsUnique_isLSZFormFactorPair 
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
 | Project build | `nice -n 10 lake build` in a fresh clone of `82c5dfd` from GitHub, Mathlib from the cache (2026-11-15) | success; 3169 jobs; no warnings |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (247 Lean files, 1 comparator configuration; the Challenge is above the 300-line review threshold) |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (258 Lean files, 1 comparator configuration; the Challenge is above the 300-line review threshold) |
 | Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` at the earlier landing; on 2026-11-08 on `QED.OneLoop.vertexLimit_existsUnique`, its provider, and every exported theorem of the five new modules (transient files, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Axiom report (fresh clone) | `#print axioms` on every theorem anchor of the manifest (28) and the five Comparator theorems of `QEDSolution` | 33 reports, all `[propext, Classical.choice, Quot.sound]` |
 | Comparator challenge | `lake comparator` with NanoDa and con-ron registered as external kernels, as Palomar does; rerun at `fdfb568` (clean tree; Challenge SHA-256 `1c6bdc45…`, Solution `34a8c4d6…`) | "Your solution is okay!": con-ron (56061 declarations), NanoDa and Lean's kernel accept; about 2 minutes, under 1 GB |
@@ -231,11 +230,12 @@ proof.
 The one-loop result is complete. Next, per the
 [outline](../PROJECT-OUTLINE.md#4-campaign-phases):
 
-1. **Phase 3, numerical certification (D-34).** Design decided: certified
-   enclosures of the regulated one-loop Pauli form factor at three regulator
-   points, integer interval arithmetic checked by the kernel, box-partition
-   quadrature, and the CODATA 2022 contribution bound. Exact statements drafted
-   and under review; infrastructure in progress.
+1. **Phase 3, numerical certification (D-34, D-35).** Packet Q is frozen:
+   three certified enclosures of the regulated one-loop Pauli form factor and
+   the CODATA 2022 contribution bound. The certificate infrastructure is
+   landed (`QED/Numerics/`). Next: the Pauli-integrand interval extension, the
+   three certificates (generated data with provenance), the proofs, and their
+   audit.
 2. **Later phases.** The complete two-loop calculation, selected higher-loop
    families, and an experimental comparison.
 3. **Optional.** A public release of the one-loop result (Palomar would also

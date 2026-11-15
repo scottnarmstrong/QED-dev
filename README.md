@@ -79,12 +79,12 @@ become precise; changes to their scope must be recorded.
 | Campaign setup | 4/4 | `██████████` 100% | Complete |
 | Sources and exact specification | 4/4 | `██████████` 100% | Complete |
 | Complete one-loop calculation | 8/8 | `██████████` 100% | Complete |
-| Numerical certification pilot | 0/4 | `░░░░░░░░░░` 0% | Planned |
+| Numerical certification pilot | 0/4 | `░░░░░░░░░░` 0% | In progress |
 | Complete two-loop calculation | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 247. **Total lines of Lean code:** 34,672.
+**Tracked Lean source files:** 258. **Total lines of Lean code:** 36,234.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.

@@ -42,6 +42,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-32 | 2026-11-09 | Headline design, LSZ form: general Wick model with on-shell counterterms; no photon condition (holds for every δ₃); F₂ and both Landé factors in one statement; fixed regulator fermions | Author |
 | D-33 | 2026-11-10 | Headline packet (the LSZ form factors and the headline theorem) approved as written and frozen; D-32 supersedes the first bullet of D-21 | Author |
 | D-34 | 2026-11-15 | Phase 3 design: certified enclosures of the regulated one-loop Pauli form factor; integer interval arithmetic checked by the kernel; box-partition quadrature; CODATA 2022 α (±1σ) for the contribution bound | Author |
+| D-35 | 2026-11-15 | Packet Q (Phase 3 theorem goals: three certified Pauli form-factor enclosures and the CODATA contribution bound) approved as written and frozen, without the optional corollary | Author |
 
 ## Pending author rulings
 
@@ -1446,3 +1447,53 @@ NUM.VALIDATION):
 
 **Scope.** These are design rulings. The exact declarations go through the
 usual review and approval.
+
+## D-35. Packet Q approved (author ruling)
+
+**Ruling.** On 2026-11-15 the author approved packet Q, the Phase 3 theorem
+goals, as written. The approved text was the untracked scratch file with
+SHA-256 `411a2e71275e1241358e3679601c820c7b16d80cfd78c68fbe7b12a2764917b4`.
+
+- **(Q₁), (Q₂), (Q₃)** `isFormFactorPair_vertexOneLoop_pauli_enclosure_ten`,
+  `_hundred`, `_thousand`: at m_γ = m/10ᵏ, Λ = m²/m_γ (k = 1, 2, 3) and
+  q² = m²/10⁴, the one-loop vertex has a form-factor pair, and every such
+  pair has F₂ = (e²/8π²)·t with t in [0.7668, 0.7673], [0.9700, 0.9705] and
+  [0.9966, 0.9971] respectively.
+- **(Q₄)** `oneLoopAnomaly_mem_codata2022`: if α = e²/(4π) has α⁻¹ in the
+  CODATA 2022 one-standard-uncertainty interval [137.035999156,
+  137.035999198], then e²/(8π²) = α/(2π) lies in [0.0011614097319,
+  0.0011614097323].
+
+The author approved the packet without the optional corollary composing the
+headline theorem (H) with (Q₄). The link from (Q₄) to the Phase-2 amplitude is
+therefore by expression: e²/(8π²) is literally the limit of F₂ in (I) and of
+g/2 − 1 in (H).
+
+**Review.** An independent refute-first review recomputed the three
+integrals by two methods agreeing to 20 digits (0.767046342640042,
+0.970249461540062, 0.996867788949086). Each interval contains its value with
+at least 2.3·10⁻⁴ to spare, and (Q₄)'s bound holds with margins of about
+2·10⁻¹⁴. The review also:
+
+- proved (Q₄) in scratch;
+- reduced (Q₁), as drafted, to the integral bound at m = 1;
+- confirmed that each statement holds for every m > 0.
+
+Its findings were applied to the text the author saw:
+
+- `e ≠ 0` was dropped from (Q₄), since it follows from the α interval;
+- term proofs replace inline `by positivity`, so the statements create no
+  auxiliary constants;
+- a sentence claiming a particular proof route was removed;
+- the CODATA value was pinned in `docs/SOURCES.md`;
+- the names and labels were changed.
+
+A prototype certificate at the hardest point closed with about 4,000 boxes in
+12 seconds of kernel time.
+
+**Frozen anchors.** All four are in `QED/Frozen/OneLoop/`, as `DRAFT_SORRY`
+with stub providers, and their `pp.all` output equals the approved file's. The
+certificate infrastructure (`QED/Numerics/`) lands with them: integer interval
+arithmetic with soundness lemmas, the box-partition checker with its
+soundness theorem `integral_bounds_of_check`, and validation tests that accept
+correct certificates and reject invalid ones.

@@ -213,6 +213,10 @@
     {
       "date": "2026-11-15",
       "change": "Phase 3 started. Author ruled on its design (D-34): certified enclosures of the regulated one-loop Pauli form factor at fixed rational regulator points; integer interval arithmetic checked by the kernel (no native_decide); box-partition quadrature with interval bounds; CODATA 2022 alpha (1 sigma) for the contribution bound."
+    },
+    {
+      "date": "2026-11-15",
+      "change": "Author approved packet Q (D-35): froze the Phase 3 theorem goals (Q1)-(Q3), certified enclosures of the regulated one-loop Pauli form factor at m_gamma = m/10^k, Lambda = m^2/m_gamma, q^2 = m^2/10^4, and (Q4), the CODATA 2022 contribution bound for alpha/(2 pi), as DRAFT_SORRY. Landed the certificate infrastructure: integer interval arithmetic, the box-partition checker with its soundness theorem, and validation tests."
     }
   ],
   "tracks": [
@@ -258,10 +262,10 @@
       "title": "Numerical certification pilot",
       "kind": "formal",
       "items": [
-        {"id": "NUM.ARITHMETIC", "title": "Sound exact or rigorously rounded enclosure arithmetic", "status": "planned", "evidence": []},
-        {"id": "NUM.INTEGRATION", "title": "Integral-enclosure theorem for the pilot", "status": "planned", "evidence": []},
+        {"id": "NUM.ARITHMETIC", "title": "Sound exact or rigorously rounded enclosure arithmetic", "status": "in_progress", "evidence": ["QED/Numerics/Interval.lean"]},
+        {"id": "NUM.INTEGRATION", "title": "Integral-enclosure theorem for the pilot", "status": "in_progress", "evidence": ["QED/Numerics/BoxQuadrature.lean"]},
         {"id": "NUM.CERTIFICATE", "title": "Reproducible coefficient certificate and contribution bound", "status": "planned", "evidence": []},
-        {"id": "NUM.VALIDATION", "title": "Checker soundness and invalid-certificate rejection", "status": "planned", "evidence": []}
+        {"id": "NUM.VALIDATION", "title": "Checker soundness and invalid-certificate rejection", "status": "in_progress", "evidence": ["QED/Numerics/BoxQuadrature.lean", "QED/Numerics/Test/Validation.lean"]}
       ]
     },
     {

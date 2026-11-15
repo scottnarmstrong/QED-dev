@@ -95,6 +95,9 @@ public import QED.Frozen.WickModel.IsElectronOnShell
 public import QED.Frozen.WickModel.ElectronCountertermsExistsUnique
 public import QED.WickModel.PhotonOnShell
 public import QED.WickModel.PhotonCounterterm
+public import QED.Numerics.Interval
+public import QED.Numerics.BoxQuadrature
+public import QED.Numerics.Test.Validation
 public import QED.Frozen.WickModel.VacuumPolarization
 public import QED.Frozen.WickModel.VacuumPolarizationSpec
 public import QED.Frozen.WickModel.IsPhotonOnShell
