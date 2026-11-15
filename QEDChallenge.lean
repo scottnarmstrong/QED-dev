@@ -44,11 +44,13 @@ A standalone statement, importing only Mathlib, of the headline theorem
 Pauli–Villars-extended spinor electrodynamics truncated at order `e³`, the Pauli form factor of
 the model's own LSZ amplitude tends to `α/(2π)`, and both magnetic-moment definitions give a Landé
 factor tending to `2 (1 + α/(2π))`, as the photon mass tends to `0` and the Pauli–Villars photon
-mass to `∞`.
+mass to `∞` (for the Pauli form factor, jointly with `q² → 0⁺`). The model is its momentum-space
+Wick expansion; the path integral, the Hilbert space and the position-space LSZ formula are not
+formalized.
 
-Every definition below is copied from the author-frozen declaration of the same name in
-`QED/Frozen/`, with the same body (docstrings shortened), in dependency order. They are exactly
-the definitions that the statement reaches.
+Every definition below is copied from the declaration of the same name in the library's
+`QED/Frozen/` directory, with the same body (docstrings shortened), in dependency order. They are
+exactly the definitions that the statement reaches.
 
 * The types `QED.WickModel.Params` and `QED.Wick.VertexKind`, with the instances and functions
   `VertexKind.instFintype`, `VertexKind.order`, `VertexKind.photonSlots`, `Params.mass` and
@@ -64,7 +66,9 @@ The theorems, stated with `sorry`, are the headline and the four theorems that t
 definitions use: (Z₁) `selfEnergy_existsUnique`, from which `selfEnergyAB` is chosen; (L₁)
 `lszAmplitude_existsUnique`, from which `lszAmplitude` is chosen; and the on-shell condition and
 positive energy of the one-electron momentum, which `lszPacketCurrentDensity` passes to the LSZ
-amplitude.
+amplitude (copied from `QED/OneLoop/OneParticle.lean`). Because these theorems are compared too,
+the Solution must prove them from the standard axioms, so `selfEnergyAB` and `lszAmplitude` are
+the unique objects they characterize.
 
 Conventions: the metric is mostly plus, `diag(-1, 1, 1, 1)`; index `0` of `Fin 4` is time;
 equation numbers refer to the primary source (Srednicki, *Quantum Field Theory*).
@@ -74,7 +78,7 @@ equation numbers refer to the primary source (Srednicki, *Quantum Field Theory*)
 
 namespace QED.Wick
 
-/-- (V₀) The interaction vertices with counterterms, (62.2)–(62.3) (decision D-19): `e Ψ̄ A̸ Ψ`, its
+/-- (V₀) The interaction vertices with counterterms, (62.2)–(62.3): `e Ψ̄ A̸ Ψ`, its
 counterterm `(Z₁ - 1) e Ψ̄ A̸ Ψ`, the fermion counterterm and the photon counterterm. -/
 inductive VertexKind where
   | gauge
@@ -87,8 +91,8 @@ inductive VertexKind where
 instance VertexKind.instFintype : Fintype VertexKind :=
   ⟨{.gauge, .gaugeCt, .fermionCt, .photonCt}, fun x => by cases x <;> simp⟩
 
-/-- (V₁) The order of a vertex in the charge `e`; the counterterm coefficients count as order `e²`
-(decision D-19). -/
+/-- (V₁) The order of a vertex in the charge `e`; the counterterm coefficients count as order
+`e²`. -/
 def VertexKind.order : VertexKind → ℕ
   | .gauge => 1
   | .gaugeCt => 3
@@ -112,40 +116,41 @@ end QED.Wick
 namespace QED.WickModel
 open Complex
 
-/-- (X₀) The parameters of the regulated model (decisions D-5, D-19, D-22). -/
+/-- (X₀) The parameters of the regulated model. -/
 structure Params where
-  /-- The electron charge `e` (negative, D-7). -/
+  /-- The charge `e` (negative for the physical electron; the theorems assume only `e ≠ 0`).
+  The regulator fermions couple with the same charge. -/
   e : ℝ
-  /-- The vertex counterterm coefficient `δ₁ = Z₁ - 1` of (62.2), of order `e²` (D-19). -/
+  /-- The vertex counterterm coefficient `δ₁ = Z₁ - 1` of (62.2), of order `e²`. -/
   δ₁ : ℝ
-  /-- The counterterm coefficient `δ₂ = Z₂ - 1` of (62.3), of order `e²` (D-19). -/
+  /-- The counterterm coefficient `δ₂ = Z₂ - 1` of (62.3), of order `e²`. -/
   δ₂ : ℝ
-  /-- The counterterm coefficient `δ_m = Z_m - 1` of (62.3), of order `e²` (D-19). -/
+  /-- The counterterm coefficient `δ_m = Z_m - 1` of (62.3), of order `e²`. -/
   δm : ℝ
-  /-- The counterterm coefficient `δ₃ = Z₃ - 1` of (62.3), of order `e²` (D-19). -/
+  /-- The counterterm coefficient `δ₃ = Z₃ - 1` of (62.3), of order `e²`. -/
   δ₃ : ℝ
   /-- The electron mass `m`. -/
   m : ℝ
-  /-- The photon mass `m_γ`, the infrared regulator (D-5). -/
+  /-- The photon mass `m_γ`, the infrared regulator. -/
   mγ : ℝ
-  /-- The Pauli–Villars photon mass `Λ` (D-5). -/
+  /-- The Pauli–Villars photon mass `Λ`. -/
   Λ : ℝ
-  /-- The Feynman prescription `ε` of the propagators; only `ε > 0` is source-facing. -/
+  /-- The Feynman prescription `ε` of the propagators; only `ε > 0` is meaningful. -/
   ε : ℝ
-  /-- The mass `M₁` of the regulator fermion of flavor `1` (D-22). -/
+  /-- The mass `M₁` of the regulator fermion of flavor `1`. -/
   M₁ : ℝ
-  /-- The mass `M₂` of the regulator fermion of flavor `2` (D-22). -/
+  /-- The mass `M₂` of the regulator fermion of flavor `2`. -/
   M₂ : ℝ
-  /-- The coefficient `c₁` of a closed loop of the regulator fermion of flavor `1` (D-22). -/
+  /-- The coefficient `c₁` of a closed loop of the regulator fermion of flavor `1`. -/
   c₁ : ℝ
-  /-- The coefficient `c₂` of a closed loop of the regulator fermion of flavor `2` (D-22). -/
+  /-- The coefficient `c₂` of a closed loop of the regulator fermion of flavor `2`. -/
   c₂ : ℝ
 
-/-- (X₀′) The mass of the fermion of flavor `f` (decision D-22). -/
+/-- (X₀′) The mass of the fermion of flavor `f`. -/
 def Params.mass (P : Params) : Fin 3 → ℝ :=
   ![P.m, P.M₁, P.M₂]
 
-/-- (X₀″) The coefficient `c_f` of a closed fermion loop of flavor `f` (decision D-22). -/
+/-- (X₀″) The coefficient `c_f` of a closed fermion loop of flavor `f`. -/
 def Params.loopCoeff (P : Params) : Fin 3 → ℝ :=
   ![1, P.c₁, P.c₂]
 
@@ -187,7 +192,7 @@ namespace QEDChallenge.QED.OneLoop
 open Matrix Complex
 
 /-- (A) The free electron propagator `S̃(p̸) = (-p̸ + m) / (p² + m² - iε)` (rule 9); only `ε > 0` is
-source-facing. -/
+meaningful. -/
 noncomputable def electronPropagator (m ε : ℝ) (p : Fin 4 → ℝ) : Matrix (Fin 4) (Fin 4) ℂ :=
   (((Minkowski.dot p p + m ^ 2 : ℝ) : ℂ) - (ε : ℂ) * I)⁻¹ •
     ((m : ℂ) • (1 : Matrix (Fin 4) (Fin 4) ℂ) - Dirac.slash p)
@@ -198,7 +203,7 @@ namespace QEDChallenge.QED.OneLoop
 open Complex
 
 /-- (B) The regulated Feynman-gauge photon propagator
-`g_{μν} [1 / (k² + m_γ² - iε) - 1 / (k² + Λ² - iε)]` (decision D-5). -/
+`g_{μν} [1 / (k² + m_γ² - iε) - 1 / (k² + Λ² - iε)]`. -/
 noncomputable def photonPropagator (mγ Λ ε : ℝ) (k : Fin 4 → ℝ) (μ ν : Fin 4) : ℂ :=
   ((Minkowski.metric μ ν : ℝ) : ℂ) *
     ((((Minkowski.dot k k + mγ ^ 2 : ℝ) : ℂ) - (ε : ℂ) * I)⁻¹
@@ -266,8 +271,8 @@ end QEDChallenge.QED.OneLoop
 namespace QEDChallenge.QED.OneLoop
 open MeasureTheory
 
-/-- (W₂) The squared norm `⟨e|e⟩ = ∫ d̃k f(k⃗)²` of the wave packet (W₁), with the one-particle
-normalization (41.5). -/
+/-- (W₂) The squared norm `⟨e|e⟩ = ∫ d̃k f(k⃗)²` of the wave packet with profile
+`f(k⃗) = φ(|k⃗|²/λ²)`, with the one-particle normalization (41.5). -/
 noncomputable def packetNormSq (m : ℝ) (φ : ℝ → ℝ) (lam : ℝ) : ℝ :=
   ∫ k : Fin 3 → ℝ, φ ((∑ j, k j ^ 2) / lam ^ 2) ^ 2
     / ((2 * Real.pi) ^ 3 * (2 * oneParticleMomentum m k 0))
@@ -297,7 +302,10 @@ open Complex
 open _root_.QED.Wick
 
 /-- (V₁₉) The factor of vertex `t`, `i` times its Lagrangian term in momentum space ((62.2)–(62.3),
-(62.12), (62.28)), for spinor indices `α`, `β` and Lorentz indices `lor`. -/
+(62.12), (62.28)), for spinor indices `α`, `β` and Lorentz indices `lor`. The two photon fields of
+`photonCt` are distinguishable slots, so its factor is half the rule
+`-i (Z₃ - 1)(k² g^{μν} - k^μ k^ν)` of (62.12), which counts both pairings; `g^{μν} = g_{μν}` in the
+mostly-plus metric. -/
 noncomputable def vertexFactor (e δ₁ δ₂ δm δ₃ m : ℝ) {N : ℕ} {κ : Fin N → VertexKind}
     (α β : FermionVertex κ → Fin 4) (lor : PhotonSlot κ → Fin 4)
     (kψ : FermionVertex κ → Fin 4 → ℝ) (kA : PhotonSlot κ → Fin 4 → ℝ) (t : Fin N) : ℂ :=
@@ -323,7 +331,7 @@ open Complex
 open _root_.QED _root_.QED.WickModel
 
 /-- (X₁) A flavoring of `κ`: the flavor (`0` the electron, `1`, `2` the regulator fermions) of the
-fermion fields of each vertex; counterterm vertices have flavor `0` (decision D-22). -/
+fermion fields of each vertex; counterterm vertices have flavor `0`. -/
 abbrev Flavoring {N : ℕ} (κ : Fin N → Wick.VertexKind) : Type :=
   {φ : Wick.FermionVertex κ → Fin 3 // ∀ t, κ t.1 ≠ .gauge → φ t = 0}
 
@@ -335,13 +343,13 @@ def fermionFlavor {nf N : ℕ} {κ : Fin N → Wick.VertexKind} (φ : Flavoring 
 
 /-- (X₃) The Wick contractions of `⟨Ψ(x₁) Ψ̄(y₁) ⋯ Ψ(x_nf) Ψ̄(y_nf) A(z₁) ⋯ A(z_nA)⟩` with vertices
 `κ`: a pairing of the `Ψ` with the `Ψ̄` fields (`inl` external, `inr` vertex fields) and a
-fixed-point-free involution of the photon fields (decision D-23.2). -/
+fixed-point-free involution of the photon fields. -/
 abbrev Contraction (nf nA : ℕ) {N : ℕ} (κ : Fin N → Wick.VertexKind) : Type :=
   {c : Equiv.Perm (Fin nf ⊕ Wick.FermionVertex κ) × Equiv.Perm (Fin nA ⊕ Wick.PhotonSlot κ) //
     ∀ b, c.2 (c.2 b) = b ∧ c.2 b ≠ b}
 
-/-- (X₄) The contraction `C` preserves the flavoring `φ` (the free propagator is flavor-diagonal;
-decision D-22). -/
+/-- (X₄) The contraction `C` preserves the flavoring `φ` (the free propagator is
+flavor-diagonal). -/
 def Preserves {nf nA N : ℕ} {κ : Fin N → Wick.VertexKind} (C : Contraction nf nA κ)
     (φ : Flavoring κ) : Prop :=
   ∀ a, fermionFlavor φ (C.1.1 a) = fermionFlavor φ a
@@ -358,7 +366,7 @@ abbrev ClosedLoop {nf nA N : ℕ} {κ : Fin N → Wick.VertexKind} (C : Contract
 
 open scoped Classical in
 /-- (X₇) The regulator weight of `(C, φ)`: the product over the closed fermion loops of the
-coefficient `c_f` of the loop's flavor (decision D-22). -/
+coefficient `c_f` of the loop's flavor. -/
 noncomputable def loopWeight (P : Params) {nf nA N : ℕ} {κ : Fin N → Wick.VertexKind}
     (C : Contraction nf nA κ) (φ : Flavoring κ) : ℝ :=
   ∏ q : ClosedLoop C, P.loopCoeff (fermionFlavor φ q.1.out)
@@ -434,13 +442,13 @@ def Line.label {nf nA N : ℕ} {κ : Fin N → Wick.VertexKind} {C : Contraction
   | .inr g => N + Wick.photonKey g.1
 
 /-- (X₂₁) The loop line: the internal line that is not a bridge and has the smallest label among the
-lines that are not bridges (decision D-19). -/
+lines that are not bridges. -/
 def IsLoopLine {nf nA N : ℕ} {κ : Fin N → Wick.VertexKind} {C : Contraction nf nA κ}
     (f : Line C) : Prop :=
   ¬ IsBridge f ∧ ∀ g : Line C, ¬ IsBridge g → f.label ≤ g.label
 
 open scoped Classical in
-/-- (X₂₂) **Canonical one-loop routing** (rule 8; decision D-19): the loop line carries `ℓ`; any
+/-- (X₂₂) **Canonical one-loop routing** (rule 8): the loop line carries `ℓ`; any
 other line carries the momentum injected into the side of its tail. -/
 noncomputable def lineMomentum {nf nA N : ℕ} {κ : Fin N → Wick.VertexKind}
     (C : Contraction nf nA κ) (pOut pIn : Fin nf → Fin 4 → ℝ) (kIn : Fin nA → Fin 4 → ℝ)
@@ -494,7 +502,7 @@ noncomputable def contractionAmplitude (P : Params) {nf nA N : ℕ} {κ : Fin N 
 
 open scoped Classical in
 /-- (X₂₆) **The Pauli–Villars regulated amplitude** of a contraction at loop momentum `ℓ`: the sum
-over the flavorings it preserves of the regulator weight times the amplitude (decision D-22). -/
+over the flavorings it preserves of the regulator weight times the amplitude. -/
 noncomputable def regulatedAmplitude (P : Params) {nf nA N : ℕ} {κ : Fin N → Wick.VertexKind}
     (C : Contraction nf nA κ) (pOut pIn : Fin nf → Fin 4 → ℝ) (kIn : Fin nA → Fin 4 → ℝ)
     (ℓ : Fin 4 → ℝ) (αOut βIn : Fin nf → Fin 4) (μ : Fin nA → Fin 4) : ℂ :=
@@ -514,7 +522,7 @@ noncomputable def contractionValue (P : Params) {nf nA N : ℕ} {κ : Fin N → 
   else regulatedAmplitude P C pOut pIn kIn 0 αOut βIn μ
 
 open scoped Classical in
-/-- (X₂₈) **The 1PI function from the Wick expansion** (decisions D-8, D-19, D-22, D-23.2): the sum
+/-- (X₂₈) **The 1PI function from the Wick expansion**: the sum
 over the 1PI contractions of the terms of `exp(i ∫ L₁)` of total order at most `K` in `e`, with the
 fermionic signs and the factor `1/N!`. -/
 noncomputable def onePIFunction (P : Params) (nf nA K : ℕ) (pOut pIn : Fin nf → Fin 4 → ℝ)
@@ -526,7 +534,7 @@ noncomputable def onePIFunction (P : Params) (nf nA K : ℕ) (pOut pIn : Fin nf 
         ((fermionSign C : ℤ) : ℂ) * contractionValue P C pOut pIn kIn αOut βIn μ
 
 open scoped Classical in
-/-- (X₂₉) **The connected function from the Wick expansion** (decision D-23.1): as (X₂₈), summed
+/-- (X₂₉) **The connected function from the Wick expansion**: as (X₂₈), summed
 over the contractions whose externals are attached and whose vertices are connected. -/
 noncomputable def connectedFunction (P : Params) (nf nA K : ℕ) (pOut pIn : Fin nf → Fin 4 → ℝ)
     (kIn : Fin nA → Fin 4 → ℝ) (αOut βIn : Fin nf → Fin 4) (μ : Fin nA → Fin 4) : ℂ :=
@@ -543,7 +551,7 @@ namespace QEDChallenge.QED.WickModel
 open Complex Filter Topology MeasureTheory
 open _root_.QED _root_.QED.WickModel
 
-/-- (Z₁) **The electron self-energy is well defined and covariant** (decision D-25). For
+/-- (Z₁) **The electron self-energy is well defined and covariant**. For
 `m, m_γ, Λ > 0`, the loop integrand of every one-loop 1PI contraction of the one-electron function
 at order `e²` is integrable in both stages of prescription M1, and there is a unique pair `(A, B)`
 of functions of `s = p² > -(m + min(m_γ, Λ))²` such that `(1/i)` times the one-electron 1PI function
@@ -565,12 +573,12 @@ theorem selfEnergy_existsUnique (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (
             + ((AB ⟨_, hp⟩).2 * P.m) • (1 : Matrix (Fin 4) (Fin 4) ℂ)) α β)) :=
   sorry
 
-/-- (Z₃) **The self-energy form factors** `(A, B)` (decision D-25), chosen from (Z₁). -/
+/-- (Z₃) **The self-energy form factors** `(A, B)`, chosen from (Z₁). -/
 noncomputable def selfEnergyAB (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (hΛ : 0 < P.Λ) :
     {s : ℝ // -(P.m + min P.mγ P.Λ) ^ 2 < s} → ℂ × ℂ :=
   (selfEnergy_existsUnique P hm hmγ hΛ).2.exists.choose
 
-/-- (Z₄) **The self-energy as a function of `p̸`** ((62.27), decision D-25):
+/-- (Z₄) **The self-energy as a function of `p̸`** ((62.27)):
 `Σ(z) = A(-z²) z + B(-z²) m` for real `z` with `|z| < m + min(m_γ, Λ)`. -/
 noncomputable def selfEnergySlash (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (hΛ : 0 < P.Λ)
     (z : ℝ) (hz : |z| < P.m + min P.mγ P.Λ) : ℂ :=
@@ -602,7 +610,7 @@ namespace QEDChallenge.QED.WickModel
 open Matrix Complex Filter Topology MeasureTheory
 open _root_.QED _root_.QED.WickModel
 
-/-- (L₁) **The LSZ amplitude of the electron current exists and is unique** (decisions D-23, D-29).
+/-- (L₁) **The LSZ amplitude of the electron current exists and is unique**.
 For `m, m_γ, Λ > 0`, Pauli–Villars regulator fermions and electron counterterms on shell (Z₅): every
 one-loop connected contraction of the three-point function at order `e³` is integrable in both
 stages of M1, and for on-shell positive-energy `p'`, `p`, spins `s'`, `s` and index `μ` there is a
@@ -642,7 +650,7 @@ open Matrix Complex Filter Topology MeasureTheory
 open scoped ContDiff
 open _root_.QED _root_.QED.WickModel
 
-/-- (L₂) **The LSZ amplitude of the electron current** `M^μ_{s's}(p', p)` (decisions D-23, D-29),
+/-- (L₂) **The LSZ amplitude of the electron current** `M^μ_{s's}(p', p)`,
 chosen from (L₁). -/
 noncomputable def lszAmplitude (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (hΛ : 0 < P.Λ)
     (hM₁ : P.m < P.M₁) (hM₂ : P.m < P.M₂) (hPV₁ : 1 + P.c₁ + P.c₂ = 0)
@@ -654,7 +662,7 @@ noncomputable def lszAmplitude (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (h
   ((lszAmplitude_existsUnique P hm hmγ hΛ hM₁ hM₂ hPV₁ hPV₂ hon).2 p' p hp' hp hp0' hp0 s' s
     μ).exists.choose
 
-/-- (L₄) **The charge condition, LSZ form** ((63.1)–(63.2); decision D-29): at `p' = p`, the LSZ
+/-- (L₄) **The charge condition, LSZ form** ((63.1)–(63.2)): at `p' = p`, the LSZ
 amplitude is `e ū_{s'}(p) γ^μ u_s(p)`. -/
 def IsLSZChargeNormalized (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (hΛ : 0 < P.Λ)
     (hM₁ : P.m < P.M₁) (hM₂ : P.m < P.M₂) (hPV₁ : 1 + P.c₁ + P.c₂ = 0)
@@ -664,7 +672,7 @@ def IsLSZChargeNormalized (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (hΛ : 
     (μ : Fin 4), lszAmplitude P hm hmγ hΛ hM₁ hM₂ hPV₁ hPV₂ hon p p hp hp hp0 hp0 s' s μ
       = (P.e : ℂ) * (Dirac.bar (Dirac.spinor P.m p s') ⬝ᵥ (Dirac.gamma μ *ᵥ Dirac.spinor P.m p s))
 
-/-- (L₅) **The magnetic moment, response definition, LSZ form** (rulings D-9, D-29): for Breit-frame
+/-- (L₅) **The magnetic moment, response definition, LSZ form**: for Breit-frame
 momenta `p = (E, -q/2, 0, 0)`, `p' = (E, q/2, 0, 0)`, the spin-up LSZ amplitude `M²_{++}(p', p)` is
 `2 i m μ q + o(q)` as `q → 0⁺`. -/
 def IsLSZResponseMagneticMoment (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (hΛ : 0 < P.Λ)
@@ -679,8 +687,8 @@ def IsLSZResponseMagneticMoment (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (
       - 2 * I * P.m * μ * q‖ ≤ η * q
 
 /-- (L₆) The current density `⟨e|J²(x)|e⟩` at time `0` of the spin-up wave packet with profile
-`f(k⃗) = φ(|k⃗|²/λ²)` (decision D-17), with the LSZ amplitude `M²_{++}` as the one-electron matrix
-element (decision D-29). -/
+`f(k⃗) = φ(|k⃗|²/λ²)`, with the LSZ amplitude `M²_{++}` as the one-electron matrix
+element. -/
 noncomputable def lszPacketCurrentDensity (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ)
     (hΛ : 0 < P.Λ) (hM₁ : P.m < P.M₁) (hM₂ : P.m < P.M₂) (hPV₁ : 1 + P.c₁ + P.c₂ = 0)
     (hPV₂ : P.m ^ 2 + P.c₁ * P.M₁ ^ 2 + P.c₂ * P.M₂ ^ 2 = 0)
@@ -696,7 +704,7 @@ noncomputable def lszPacketCurrentDensity (P : Params) (hm : 0 < P.m) (hmγ : 0 
         (QED.OneLoop.dot_oneParticleMomentum P.m k) (QED.OneLoop.oneParticleMomentum_pos hm k')
         (QED.OneLoop.oneParticleMomentum_pos hm k) 0 0 2
 
-/-- (L₇) **The magnetic moment, source definition, LSZ form** (64.4)–(64.7) (rulings D-9, D-29):
+/-- (L₇) **The magnetic moment, source definition, LSZ form** (64.4)–(64.7):
 `μ = ∫ d³x x¹ ⟨e|J²(x)|e⟩ / ⟨e|e⟩`. -/
 noncomputable def lszSourceMagneticMoment (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ)
     (hΛ : 0 < P.Λ) (hM₁ : P.m < P.M₁) (hM₂ : P.m < P.M₂) (hPV₁ : 1 + P.c₁ + P.c₂ = 0)
@@ -706,9 +714,11 @@ noncomputable def lszSourceMagneticMoment (P : Params) (hm : 0 < P.m) (hmγ : 0 
   (∫ x : Fin 3 → ℝ, (x 0 : ℂ) * lszPacketCurrentDensity P hm hmγ hΛ hM₁ hM₂ hPV₁ hPV₂ hon φ lam x)
     / (QED.OneLoop.packetNormSq P.m φ lam : ℂ)
 
-/-- (H₀) **The on-shell form-factor decomposition (63.18) of the LSZ amplitude** (decisions D-29,
-D-32): `M^μ_{s's}(p', p) = e ū_{s'}(p') [A γ^μ - (i/m) B S^{μν} q_ν] u_s(p)` for all spins and every
-`μ`, with `q = p' - p`. -/
+/-- (H₀) **The on-shell form-factor decomposition (63.18) of the LSZ amplitude**:
+`M^μ_{s's}(p', p) = e ū_{s'}(p') [A γ^μ - (i/m) B S^{μν} q_ν] u_s(p)` for all spins and every
+`μ`, with `q = p' - p` and `S^{μν} = (i/4)[γ^μ, γ^ν]`. The photon-leg term of the LSZ amplitude is
+a multiple of `ū_{s'}(p') γ^μ u_s(p)`, so it shifts only `A`; for `e ≠ 0` and `q² > 0` there is
+exactly one such pair. -/
 def IsLSZFormFactorPair (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (hΛ : 0 < P.Λ)
     (hM₁ : P.m < P.M₁) (hM₂ : P.m < P.M₂) (hPV₁ : 1 + P.c₁ + P.c₂ = 0)
     (hPV₂ : P.m ^ 2 + P.c₁ * P.M₁ ^ 2 + P.c₂ * P.M₂ ^ 2 = 0)
@@ -723,24 +733,26 @@ def IsLSZFormFactorPair (P : Params) (hm : 0 < P.m) (hmγ : 0 < P.mγ) (hΛ : 0 
             Dirac.spinor P.m p s))
 
 /-- (H) **The one-loop anomalous magnetic moment of the electron, from the model's own LSZ
-amplitude (headline theorem; decisions D-21, D-32).** Fix the model data `P₀` with `e ≠ 0`,
-`m > 0`, and regulator fermions heavier than the electron satisfying the Pauli–Villars
-conditions. The photon regulators `m_γ`, `Λ` and the counterterms `δ₁`, `δ₂`, `δ_m` of `P₀` are
-replaced; its `ε` plays no role, and its `δ₃` is arbitrary: no photon on-shell condition (Z₈) is
-assumed. Fix a wave-packet profile `φ` as in (W₄) and (L₇′). Then, jointly as `m_γ → 0⁺` and
-`Λ → ∞`:
+amplitude (headline theorem).** Fix the model data `P₀` with `e ≠ 0`, `m > 0`, and regulator
+fermions heavier than the electron satisfying the Pauli–Villars conditions
+`1 + c₁ + c₂ = 0`, `m² + c₁ M₁² + c₂ M₂² = 0`; their masses stay fixed. The photon regulators
+`m_γ`, `Λ` and the counterterms `δ₁`, `δ₂`, `δ_m` of `P₀` are replaced; its `ε` plays no role,
+and its `δ₃` is arbitrary: no photon on-shell condition `Π(0) = 0` is assumed. Fix a real
+wave-packet profile `φ`, smooth, compactly supported and not identically zero on `[0, ∞)`. Then,
+jointly as `m_γ → 0⁺` and `Λ → ∞`:
 * counterterms exist with the electron on shell (Z₅), the LSZ charge condition (L₄) holding, and
   an LSZ response magnetic moment (L₅);
 * for every such choice of counterterms: at on-shell positive-energy pairs with small `q² > 0`,
   the LSZ amplitude has a form-factor pair (H₀), and every such pair has its Pauli component
   within `η` of `e²/(8π²) = α/(2π)` ((63.22), (64.2)); every LSZ response magnetic moment gives
   a Landé factor `g = 4 m μ / e` within `η` of `2 (1 + α/(2π))` (64.16)–(64.17); and the LSZ
-  source magnetic moment (L₇) of every sufficiently narrow packet does too.
-The model is truncated at order `e³`, so the limits are exact for it, with no `O(α²)` term. As in
-(I), `q² → 0⁺` is taken jointly with the regulator limit and uniformly over the pairs (one `δ`
-bounds both `q²` and `m_γ`); this implies the iterated order of decision D-5. As in (R′), the
-response definition (L₅) takes `q → 0⁺` at fixed regulators. As in (W₅), the packet limit
-`λ → 0⁺` is taken first, at fixed regulators and counterterms (decision D-17). -/
+  source magnetic moment (L₇) of every packet of sufficiently small momentum width `λ` does too.
+The model is truncated at order `e³`, so the limits are exact for it, with no `O(α²)` term. The
+limit `q² → 0⁺` is taken jointly with the regulator limit and uniformly over the pairs (one `δ`
+bounds both `q²` and `m_γ`), so it controls the iterated limit `q² → 0⁺`, then
+`(m_γ, Λ) → (0, ∞)`. The response definition (L₅) takes `q → 0⁺` at fixed regulators; the
+packet limit `λ → 0⁺` is taken first, at fixed regulators and counterterms. `δ` and `R` may
+depend on `P₀`, `φ` and `η`. -/
 theorem lszAmplitude_pauli_landeFactor_limit (P₀ : Params) (he : P₀.e ≠ 0) (hm : 0 < P₀.m)
     (hM₁ : P₀.m < P₀.M₁) (hM₂ : P₀.m < P₀.M₂) (hPV₁ : 1 + P₀.c₁ + P₀.c₂ = 0)
     (hPV₂ : P₀.m ^ 2 + P₀.c₁ * P₀.M₁ ^ 2 + P₀.c₂ * P₀.M₂ ^ 2 = 0)

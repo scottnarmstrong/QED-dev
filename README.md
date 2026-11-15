@@ -52,7 +52,9 @@ The headline theorem (D-33) assembles the chain: starting from the general
 model with on-shell counterterms and its own LSZ amplitude, the Pauli form
 factor tends to $\alpha/2\pi$ and both magnetic-moment definitions give
 $g\to2(1+\alpha/2\pi)$ as $m_\gamma\to0^+$ and $\Lambda\to\infty$. Remaining
-one-loop work: the Comparator challenge and a fresh-checkout audit. See the
+one-loop work: an independent end-to-end audit. A Comparator challenge for the
+headline passes with three independent kernels, and a rebuild in a fresh
+checkout is clean. See the
 [campaign status](docs/campaign/STATUS.md).
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
@@ -82,7 +84,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 247. **Total lines of Lean code:** 34,660.
+**Tracked Lean source files:** 247. **Total lines of Lean code:** 34,672.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.
@@ -171,9 +173,11 @@ $\alpha/2\pi$ and that both definitions of the magnetic moment give
 $g\to2(1+\alpha/2\pi)$, jointly as $m_\gamma\to0^+$ and $\Lambda\to\infty$.
 It depends only on the standard Lean axioms.
 
-1. Finish the one-loop evidence: a Comparator challenge for the headline
-   theorem, and a rebuild with an independent end-to-end audit in a fresh
-   checkout at the recorded commit
+1. Finish the one-loop evidence: an independent end-to-end audit of the whole
+   chain. The Comparator challenge ([QEDChallenge.lean](QEDChallenge.lean),
+   [QEDSolution.lean](QEDSolution.lean), [comparator.json](comparator.json))
+   passes with con-ron, NanoDa and Lean's kernel, and a rebuild in a fresh
+   checkout is clean
    ([Phase 2](docs/PROJECT-OUTLINE.md#phase-2--complete-one-loop)).
 2. Certify the numerical evaluation of the one-loop pilot: sound enclosure
    arithmetic, an integral-enclosure theorem, and a checkable coefficient
@@ -204,11 +208,13 @@ It depends only on the standard Lean axioms.
 | [lakefile.lean](lakefile.lean), [lean-toolchain](lean-toolchain), [QED.lean](QED.lean) | Lean package `qed`, pinned to Lean and Mathlib `v4.35.0` |
 | [QED/Frozen/](QED/Frozen) | Author-approved frozen declarations and their [manifest](QED/Frozen/manifest.json); immutable, checked by the frozen-anchor guard |
 | [QED/Provider/](QED/Provider) | Proof providers for frozen theorem goals; quarantined until the goal is sealed |
+| [QED/OneLoop/](QED/OneLoop), [QED/Wick/](QED/Wick), [QED/WickModel/](QED/WickModel) | Proved helper modules: the one-loop vertex, form factors and magnetic moments; the order-e³ Wick expansion; the general model with regulator fermions, the self-energy and vacuum polarization, the LSZ amplitude, and the headline assembly |
+| [QEDChallenge.lean](QEDChallenge.lean), [QEDSolution.lean](QEDSolution.lean), [comparator.json](comparator.json) | Comparator challenge: a Mathlib-only statement of the headline theorem and its proof from the library |
 | [QED/Integration/](QED/Integration) | Proved analysis: the loop-energy integrals by analytic continuation to the slit plane, which replaces Wick rotation (`EnergyIntegral.lean`) |
 | [QED/Algebra/](QED/Algebra) | Proved infrastructure: the mostly-plus Minkowski form (`Minkowski.lean`), the Weyl Dirac matrices (`Dirac.lean`), gamma-matrix products and the Gordon identity (`Gordon.lean`), the contraction identities (`Contraction.lean`), and on-shell spinors (`Spinor.lean`) |
 | [scripts/update_hq.py](scripts/update_hq.py) | Render or check the progress meters |
 | [scripts/fetch_sources.py](scripts/fetch_sources.py) | Fetch and verify the pinned source bytes |
-| [scripts/check_frozen_anchors.py](scripts/check_frozen_anchors.py) | Frozen-anchor guard (verbatim from the lean-orchestrator skill) |
+| [scripts/check_frozen_anchors.py](scripts/check_frozen_anchors.py) | Frozen-anchor guard (from the lean-orchestrator skill; accepts `sorry` only in the Comparator Challenge) |
 | [scripts/frozen_abi.py](scripts/frozen_abi.py) | Recompute and check elaborated ABI hashes of frozen exports |
 | [scripts/numerics/one_loop_sanity.py](scripts/numerics/one_loop_sanity.py) | Floating-point sanity checks of the one-loop algebra (not proofs) |
 | [AGENTS.md](AGENTS.md) | Scope, integrity rules, and shared-machine conventions |

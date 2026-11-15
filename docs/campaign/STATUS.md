@@ -3,7 +3,7 @@
 [Campaign HQ](../../README.md) · [Decisions](DECISIONS.md) · [Findings](FINDINGS.md) ·
 [Progress ledger](progress.json)
 
-**As of 2026-11-10.** Phase 1 (fix the one-loop calculation). The headline theorem (H) is proved and audited: from the general Wick model with on-shell counterterms and the model's own LSZ amplitude, F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions, jointly as m_γ → 0⁺ and Λ → ∞. Remaining for L1.ASSEMBLY (D-21): the Comparator challenge and the fresh-checkout audit.
+**As of 2026-11-15.** Phase 1 (fix the one-loop calculation). The headline theorem (H) is proved and audited: from the general Wick model with on-shell counterterms and the model's own LSZ amplitude, F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions, jointly as m_γ → 0⁺ and Λ → ∞. The Comparator challenge passes with three independent kernels and a fresh-checkout rebuild is clean; the independent end-to-end audit (D-21) is in progress.
 
 Milestones (see the [ledger](progress.json)):
 
@@ -11,13 +11,13 @@ Milestones (see the [ledger](progress.json)):
 | --- | --- |
 | SPEC.SOURCE, SPEC.ROUTE, SPEC.ENV | done, on the evidence below |
 | SPEC.STATEMENTS | in progress: packets 1, 1b, 2, 3, 4a, 4b, 5, 6a, 6b-1, 6b-2, 6c-1, 6c-2, and the headline packet approved and frozen (D-11, D-12, D-14, D-15, D-16, D-18, D-20, D-24, D-26, D-27, D-28, D-30, D-31, D-33) |
-| L1.MODEL | in progress: algebra infrastructure and the entrywise algebra of the frozen vertex integrand |
+| L1.MODEL | done: the regulated order-e³ Wick model with Pauli–Villars regulator fermions (packets 5, 6a), sealed and audited |
 | L1.PROJECTION | done: the decomposition (63.18) of the one-loop vertex exists and is unique (packet 2, (G)) |
 | L1.INTEGRAL | done: the closed form of the one-loop vertex, and its well-definedness (E) |
 | L1.LIMITS, L1.COEFFICIENT | done for the (62.40) diagram under D-5: F₂ → e²/8π² = α/2π, so C₁ = 1/2, jointly as q², m_γ → 0⁺ and Λ → ∞ (packet 2, (I)) |
 | L1.OBSERVABLE | done: both magnetic-moment definitions of D-9, their equivalence O-24, and g → 2(1 + α/2π) for each (packets 4a and 4b) |
 | L1.VERTEX | done: the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram (O-1, O-2), and its ε → 0⁺ limit is the vertex function (packet 5) |
-| L1.ASSEMBLY | planned, design decided (D-21, D-22, D-23): one headline theorem from the Wick vertex; O-3 as the full LSZ amplitude, with Σ, Π (Pauli–Villars regulator fermions) and the on-shell conditions, in a general successor of the Wick model; fresh-checkout audit, Comparator challenge, errata ledger |
+| L1.ASSEMBLY | in progress: the headline theorem (H) is proved and audited (D-33); the Comparator challenge passes (con-ron, NanoDa, Lean kernel); the fresh-checkout rebuild is clean; the errata record is updated; the independent end-to-end audit remains |
 
 ## Reporting fields
 
@@ -204,15 +204,18 @@ SEALED_THIS_TURN: 2 theorems — QED.WickModel.existsUnique_isLSZFormFactorPair 
 | --- | --- | --- |
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
-| Project build | `nice -n 5 lake build` | success; 2918 jobs; no warnings |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (244 Lean files) |
+| Project build | `nice -n 10 lake build` in a fresh clone of `82c5dfd` from GitHub, Mathlib from the cache (2026-11-15) | success; 3169 jobs; no warnings |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (247 Lean files, 1 comparator configuration; the Challenge is above the 300-line review threshold) |
 | Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` at the earlier landing; on 2026-11-08 on `QED.OneLoop.vertexLimit_existsUnique`, its provider, and every exported theorem of the five new modules (transient files, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
+| Axiom report (fresh clone) | `#print axioms` on every theorem anchor of the manifest (28) and the five Comparator theorems of `QEDSolution` | 33 reports, all `[propext, Classical.choice, Quot.sound]` |
+| Comparator challenge | `lake comparator` with NanoDa and con-ron registered as external kernels, as Palomar does (2026-11-15; rerun after the Challenge docstring edits) | "Your solution is okay!": con-ron (56061 declarations), NanoDa and Lean's kernel accept; about 2 minutes, under 1 GB |
+| Editorial review of the Challenge | refute-first reviewer, not the writer | No blocker: all 64 definitions and the five statements match the frozen originals; the headline is faithful and non-vacuous. Docstring findings applied (self-contained headline docstring, the photon-counterterm factor, process language removed) |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |
 | Numerical sanity (not proofs) | `python3 scripts/numerics/one_loop_sanity.py` | all eight checks pass |
 | HQ consistency (not a proof check) | `python3 scripts/update_hq.py --check` | run at each landing |
-| Frozen-anchor guard | `python3 scripts/check_frozen_anchors.py --root . --manifest QED/Frozen/manifest.json` | `FROZEN-ANCHOR GUARD OK` (10 anchors); rejected all eight negative tests: at packet 1, a statement edit, a body edit, an unregistered `sorry`, a draft import, and a provider import; at packet 1b, a `metric` body edit (also reported as closure drift downstream), a whitespace-only docstring edit, and a second declaration in a frozen file |
-| Frozen ABI hashes | `python3 scripts/frozen_abi.py --check` | 10/10 OK. For packet 1b, `pp.all` output of each definition was byte-identical before and after the move. |
+| Frozen-anchor guard | `python3 scripts/check_frozen_anchors.py --root . --manifest QED/Frozen/manifest.json` | `FROZEN-ANCHOR GUARD OK` (118 anchors, none draft) in the fresh clone; each seal audit also ran deliberate mutations, all rejected |
+| Frozen ABI hashes | `python3 scripts/frozen_abi.py --check` | 118/118 OK in the fresh clone |
 | Independent audit of packet 4a | refute-first auditor, not the prover | (R), (R′) PROVED. Frozen bytes and moved definitions match; statements are equal; standard axioms; μ and Z₁ derived; e = 0 and non-vacuity checked by Lean witnesses; Breit identities checked numerically |
 | Independent audit of packet 3 | refute-first auditor, not the prover | (K), (N), (M) PROVED. Frozen bytes match the approved text; statements are equal; standard axioms; Z₁ = 1 − A(0) derived; (M) shown non-vacuous by a Lean witness |
 | Independent audit of packet 2 | refute-first auditor, not the prover | (F′), (G), (I) PROVED. Frozen bytes match the approved text; `pp.all` statements are equal with only the frozen definitions imported; provider types are equal up to `autoParam`; standard axioms only; no smuggled premise. B at m_γ = 0, Λ = ∞ matches (63.20) to 8 digits. Only documentation-lag nits, addressed before landing |
@@ -231,13 +234,11 @@ proof.
 2. **L1.ASSEMBLY (D-21, D-32).** The headline theorem, stated from the
    general Wick model with on-shell counterterms and the LSZ amplitude: F₂
    within η of α/2π and both Landé factors within η of 2(1 + α/2π) near the
-   regulator limit. Proved and audited (D-33). The Comparator challenge is
-   prepared (`QEDChallenge.lean`, `QEDSolution.lean`, `comparator.json`): a
-   Mathlib-only Challenge with 64 copied definitions under the `QEDChallenge`
-   prefix and five theorems, and a Solution proving them from the library;
-   the full `lake comparator` run with independent kernels is pending.
-   Remaining: that run and the fresh-checkout audit, both deferred by the
-   author on 2026-11-10 until the shared machine is quieter.
+   regulator limit. Proved and audited (D-33). The Comparator challenge
+   (`QEDChallenge.lean`, `QEDSolution.lean`, `comparator.json`; 57 definitions
+   copied under the `QEDChallenge` prefix, seven keeping library names, five
+   theorems) passes with con-ron, NanoDa and Lean's kernel, and a fresh-checkout
+   rebuild is clean. Remaining: the independent end-to-end audit.
 3. **Cleanups.** The closed form δ₃ = (e²/12π²)Σ_f c_f log M_f² is landed
    (`vacuumPolarizationLoop_zero`). Remaining: remove unused helpers and the
    duplicated lemmas noted in audits.

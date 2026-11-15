@@ -201,6 +201,10 @@
     {
       "date": "2026-11-10",
       "change": "Prepared the Comparator challenge for the headline (D-21): QEDChallenge.lean (Mathlib only; 64 definitions copied verbatim from the frozen declarations under the QEDChallenge prefix, with Params and VertexKind keeping their library names; five theorems), QEDSolution.lean (the same copies, bridge lemmas to the library, proofs of the five theorems), comparator.json. Constant-by-constant comparison: 128 of 128 match. The frozen-anchor guard accepts sorry only in the Challenge named by comparator.json and forbids importing it."
+    },
+    {
+      "date": "2026-11-15",
+      "change": "Ran the deferred D-21 evidence checks on the quiet machine. lake comparator with con-ron, NanoDa and Lean's kernel: the Solution is accepted (con-ron 56061 declarations). Fresh clone of 82c5dfd from GitHub, Mathlib from the cache: build exit 0 with no warnings, guard OK (118 anchors), module check PASS, ABI 118/118, axiom report for 33 theorems all standard. An independent editorial review of the Challenge found no blocker; its docstring findings were applied and the comparator rerun passed."
     }
   ],
   "tracks": [
