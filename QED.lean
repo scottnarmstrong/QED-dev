@@ -98,6 +98,15 @@ public import QED.WickModel.PhotonCounterterm
 public import QED.Numerics.Interval
 public import QED.Numerics.BoxQuadrature
 public import QED.Numerics.Test.Validation
+public import QED.Numerics.PauliExtension
+public import QED.Numerics.Certificates.PauliTen
+public import QED.Numerics.Certificates.PauliHundred
+public import QED.Numerics.Certificates.PauliThousand
+public import QED.Numerics.PauliEnclosures
+public import QED.Frozen.OneLoop.PauliEnclosureTen
+public import QED.Frozen.OneLoop.PauliEnclosureHundred
+public import QED.Frozen.OneLoop.PauliEnclosureThousand
+public import QED.Frozen.OneLoop.OneLoopAnomalyCodata2022
 public import QED.Frozen.WickModel.VacuumPolarization
 public import QED.Frozen.WickModel.VacuumPolarizationSpec
 public import QED.Frozen.WickModel.IsPhotonOnShell

@@ -79,12 +79,12 @@ become precise; changes to their scope must be recorded.
 | Campaign setup | 4/4 | `██████████` 100% | Complete |
 | Sources and exact specification | 4/4 | `██████████` 100% | Complete |
 | Complete one-loop calculation | 8/8 | `██████████` 100% | Complete |
-| Numerical certification pilot | 0/4 | `░░░░░░░░░░` 0% | In progress |
+| Numerical certification pilot | 4/4 | `██████████` 100% | Complete |
 | Complete two-loop calculation | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 258. **Total lines of Lean code:** 36,234.
+**Tracked Lean source files:** 263. **Total lines of Lean code:** 38,332.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.
@@ -173,12 +173,15 @@ $\alpha/2\pi$ and that both definitions of the magnetic moment give
 $g\to2(1+\alpha/2\pi)$, jointly as $m_\gamma\to0^+$ and $\Lambda\to\infty$.
 It depends only on the standard Lean axioms.
 
-1. Certify the numerical evaluation of the one-loop pilot: sound enclosure
-   arithmetic, an integral-enclosure theorem, and a checkable coefficient
-   certificate ([Phase 3](docs/PROJECT-OUTLINE.md#phase-3--certify-numerical-evaluation)).
-2. Then the later phases of the [outline](docs/PROJECT-OUTLINE.md#4-campaign-phases):
-   the complete two-loop calculation, selected higher-loop families toward
-   five-loop QED, and an experimental comparison.
+Phase 3 for the one-loop pilot is also complete: the regulated Pauli form
+factor of the same amplitude is certified at three regulator points by
+interval quadrature checked by Lean's kernel, and for the CODATA 2022 value of
+$\alpha$ the one-loop contribution $\alpha/2\pi$ is proved to lie in
+$[0.0011614097319,\ 0.0011614097323]$ ([certificates](certificates/README.md)).
+
+Next are the later phases of the [outline](docs/PROJECT-OUTLINE.md#4-campaign-phases):
+the complete two-loop calculation, selected higher-loop families toward
+five-loop QED, and an experimental comparison.
 
 ## Repository map
 
@@ -203,6 +206,7 @@ It depends only on the standard Lean axioms.
 | [QED/Frozen/](QED/Frozen) | Author-approved frozen declarations and their [manifest](QED/Frozen/manifest.json); immutable, checked by the frozen-anchor guard |
 | [QED/Provider/](QED/Provider) | Proof providers for frozen theorem goals; quarantined until the goal is sealed |
 | [QED/OneLoop/](QED/OneLoop), [QED/Wick/](QED/Wick), [QED/WickModel/](QED/WickModel) | Proved helper modules: the one-loop vertex, form factors and magnetic moments; the order-e³ Wick expansion; the general model with regulator fermions, the self-energy and vacuum polarization, the LSZ amplitude, and the headline assembly |
+| [QED/Numerics/](QED/Numerics), [certificates/](certificates) | Certified numerics: integer interval arithmetic, the box-partition quadrature checker with its soundness theorem, the Pauli form-factor certificates, and their provenance and replay |
 | [QEDChallenge.lean](QEDChallenge.lean), [QEDSolution.lean](QEDSolution.lean), [comparator.json](comparator.json) | Comparator challenge: a Mathlib-only statement of the headline theorem and its proof from the library |
 | [QED/Integration/](QED/Integration) | Proved analysis: the loop-energy integrals by analytic continuation to the slit plane, which replaces Wick rotation (`EnergyIntegral.lean`) |
 | [QED/Algebra/](QED/Algebra) | Proved infrastructure: the mostly-plus Minkowski form (`Minkowski.lean`), the Weyl Dirac matrices (`Dirac.lean`), gamma-matrix products and the Gordon identity (`Gordon.lean`), the contraction identities (`Contraction.lean`), and on-shell spinors (`Spinor.lean`) |

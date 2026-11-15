@@ -33,7 +33,7 @@ theorem isFormFactorPair_vertexOneLoop_pauli_enclosure_ten (e m : ℝ) (he : e �
           (mul_pos Nat.ofNat_pos hm) p' p hp' hp hp0' hp0) F →
       ∃ t ∈ Set.Icc (0.7668 : ℝ) 0.7673, F.2 = ((e ^ 2 / (8 * Real.pi ^ 2) * t : ℝ) : ℂ) :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.OneLoop.isFormFactorPair_vertexOneLoop_pauli_enclosure_ten
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

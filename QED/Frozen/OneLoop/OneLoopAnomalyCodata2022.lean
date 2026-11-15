@@ -26,7 +26,7 @@ theorem oneLoopAnomaly_mem_codata2022 (e : ℝ)
     (hα : 4 * Real.pi / e ^ 2 ∈ Set.Icc (137.035999156 : ℝ) 137.035999198) :
     e ^ 2 / (8 * Real.pi ^ 2) ∈ Set.Icc (0.0011614097319 : ℝ) 0.0011614097323 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.OneLoop.oneLoopAnomaly_mem_codata2022
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

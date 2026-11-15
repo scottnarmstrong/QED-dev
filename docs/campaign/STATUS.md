@@ -3,7 +3,7 @@
 [Campaign HQ](../../README.md) · [Decisions](DECISIONS.md) · [Findings](FINDINGS.md) ·
 [Progress ledger](progress.json)
 
-**As of 2026-11-15.** The one-loop result is complete (Phases 1 and 2 of the outline). The headline theorem (H), from the general Wick model with on-shell counterterms and the model's own LSZ amplitude, proves F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions, jointly as m_γ → 0⁺ and Λ → ∞. It is sealed and audited, a fresh-checkout rebuild is clean, the Comparator challenge passes with three independent kernels, and an independent end-to-end audit found it proved as advertised (D-21).
+**As of 2026-11-15.** The one-loop result is complete (Phases 1 and 2 of the outline), and so is Phase 3 for the one-loop pilot. The headline theorem (H) proves F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions from the general Wick model with the model's own LSZ amplitude; it passes the Comparator challenge and an independent end-to-end audit (D-21). Phase 3 certifies the regulated Pauli form factor at three regulator points by kernel-checked interval quadrature and proves the CODATA 2022 contribution bound α/(2π) ∈ [0.0011614097319, 0.0011614097323] (D-34, D-35).
 
 Milestones (see the [ledger](progress.json)):
 
@@ -18,15 +18,17 @@ Milestones (see the [ledger](progress.json)):
 | L1.OBSERVABLE | done: both magnetic-moment definitions of D-9, their equivalence O-24, and g → 2(1 + α/2π) for each (packets 4a and 4b) |
 | L1.VERTEX | done: the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram (O-1, O-2), and its ε → 0⁺ limit is the vertex function (packet 5) |
 | L1.ASSEMBLY | done: the headline theorem (H) is proved and audited (D-33); fresh-checkout rebuild clean; Comparator challenge passes (con-ron, NanoDa, Lean kernel); independent end-to-end audit: proved as advertised; errata record updated (D-21) |
+| NUM.ARITHMETIC, NUM.INTEGRATION, NUM.CERTIFICATE, NUM.VALIDATION | done (Phase 3, one-loop pilot): integer interval arithmetic and the box-partition checker with soundness theorems; certified enclosures (Q₁)–(Q₃) of the regulated Pauli form factor and the CODATA contribution bound (Q₄); invalid certificates rejected (D-34, D-35) |
 
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 4 — QED/Frozen/OneLoop/{PauliEnclosureTen (Q₁), PauliEnclosureHundred (Q₂),
-               PauliEnclosureThousand (Q₃), OneLoopAnomalyCodata2022 (Q₄)}.lean
+DRAFT_ANCHORS: 0
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 0
+SEALED_THIS_TURN: 4 theorems — QED.OneLoop.isFormFactorPair_vertexOneLoop_pauli_enclosure_ten (Q₁),
+               _hundred (Q₂), _thousand (Q₃), QED.OneLoop.oneLoopAnomaly_mem_codata2022 (Q₄); PROVED
+               (checker, build, standard axioms, independent refute-first audit)
 ```
 
 | Field | Value |
@@ -204,12 +206,13 @@ SEALED_THIS_TURN: 0
 | Baseline environment | `lake build --no-build` after copying the dependency tree | Mathlib and its dependencies up to date; no rebuild |
 | Transient import probe | `lake env lean` on an untracked module importing the focused sets (file deleted) | 26/26 sampled inventory names elaborate; all loaded from cache in under 5 s |
 | Project build | `nice -n 10 lake build` in a fresh clone of `82c5dfd` from GitHub, Mathlib from the cache (2026-11-15) | success; 3169 jobs; no warnings |
-| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (258 Lean files, 1 comparator configuration; the Challenge is above the 300-line review threshold) |
+| Module system | `check_lean_modules.py --root .` (lean-project-architecture skill) | PASS (263 Lean files, 1 comparator configuration; the Challenge is above the 300-line review threshold) |
 | Axioms | `#print axioms` on all 58 theorems and lemmas in `QED/` at the earlier landing; on 2026-11-08 on `QED.OneLoop.vertexLimit_existsUnique`, its provider, and every exported theorem of the five new modules (transient files, deleted) | only `propext`, `Classical.choice`, `Quot.sound` |
 | Axiom report (fresh clone) | `#print axioms` on every theorem anchor of the manifest (28) and the five Comparator theorems of `QEDSolution` | 33 reports, all `[propext, Classical.choice, Quot.sound]` |
 | Comparator challenge | `lake comparator` with NanoDa and con-ron registered as external kernels, as Palomar does; rerun at `fdfb568` (clean tree; Challenge SHA-256 `1c6bdc45…`, Solution `34a8c4d6…`) | "Your solution is okay!": con-ron (56061 declarations), NanoDa and Lean's kernel accept; about 2 minutes, under 1 GB |
 | Editorial review of the Challenge | refute-first reviewer, not the writer | No blocker: all 64 definitions and the five statements match the frozen originals; the headline is faithful and non-vacuous. Docstring findings applied (self-contained headline docstring, the photon-counterterm factor, process language removed) |
 | Independent end-to-end audit (D-21) | refute-first auditor, not a prover, on the fresh clone of `82c5dfd` | HEADLINE PROVED AS ADVERTISED. No FAIL or CONCERN. Read all 87 frozen definitions in the closure; every chosen object comes from a sealed ∃!; no junk value can satisfy the conclusions; the full 57,225-constant closure uses only the standard axioms; independent numerics reproduce F₂/(e²/8π²) to about 1e-6 against (63.20) with regulators, and g = 2(1 + F₂); non-vacuity in Lean. WEAK: the documented scope limits |
+| Independent audit of packet Q (Phase 3) | refute-first auditor, not the prover | (Q₁)–(Q₄) PROVED. Frozen bytes and ABI unchanged; the guard rejects eleven deliberate mutations; interval operations sound (rounding direction, negatives, reciprocals near 0); the checker tiles (0,1]² exactly; the kernel rejects eight tampered certificates; the generator's `--check` reproduces the data; independent recomputation of the three integrals; standard axioms |
 | Forbidden tokens | grep for `sorry`, `admit`, `axiom`, `maxHeartbeats`, `native_decide` over `QED/` and `QED.lean` | none |
 | Source bytes | `python3 scripts/fetch_sources.py` | 5/5 OK |
 | Numerical sanity (not proofs) | `python3 scripts/numerics/one_loop_sanity.py` | all eight checks pass |
@@ -230,12 +233,9 @@ proof.
 The one-loop result is complete. Next, per the
 [outline](../PROJECT-OUTLINE.md#4-campaign-phases):
 
-1. **Phase 3, numerical certification (D-34, D-35).** Packet Q is frozen:
-   three certified enclosures of the regulated one-loop Pauli form factor and
-   the CODATA 2022 contribution bound. The certificate infrastructure is
-   landed (`QED/Numerics/`). Next: the Pauli-integrand interval extension, the
-   three certificates (generated data with provenance), the proofs, and their
-   audit.
+1. **Phase 3 is complete for the one-loop pilot (D-34, D-35).** Possible
+   extensions: higher-order quadrature rules on the same arithmetic, and a
+   machine-checked corollary composing the headline (H) with (Q₄).
 2. **Later phases.** The complete two-loop calculation, selected higher-loop
    families, and an experimental comparison.
 3. **Optional.** A public release of the one-loop result (Palomar would also

@@ -217,6 +217,10 @@
     {
       "date": "2026-11-15",
       "change": "Author approved packet Q (D-35): froze the Phase 3 theorem goals (Q1)-(Q3), certified enclosures of the regulated one-loop Pauli form factor at m_gamma = m/10^k, Lambda = m^2/m_gamma, q^2 = m^2/10^4, and (Q4), the CODATA 2022 contribution bound for alpha/(2 pi), as DRAFT_SORRY. Landed the certificate infrastructure: integer interval arithmetic, the box-partition checker with its soundness theorem, and validation tests."
+    },
+    {
+      "date": "2026-11-15",
+      "change": "Sealed (Q1)-(Q4); an independent refute-first audit found them PROVED. The regulated one-loop Pauli form factor is certified at three regulator points by kernel-checked interval quadrature (5105, 772 and 107 boxes; the generator's --check reproduces the data), and the CODATA 2022 contribution bound alpha/(2 pi) in [0.0011614097319, 0.0011614097323] is proved. NUM.ARITHMETIC, NUM.INTEGRATION, NUM.CERTIFICATE and NUM.VALIDATION done: Phase 3 for the one-loop pilot is complete."
     }
   ],
   "tracks": [
@@ -262,10 +266,10 @@
       "title": "Numerical certification pilot",
       "kind": "formal",
       "items": [
-        {"id": "NUM.ARITHMETIC", "title": "Sound exact or rigorously rounded enclosure arithmetic", "status": "in_progress", "evidence": ["QED/Numerics/Interval.lean"]},
-        {"id": "NUM.INTEGRATION", "title": "Integral-enclosure theorem for the pilot", "status": "in_progress", "evidence": ["QED/Numerics/BoxQuadrature.lean"]},
-        {"id": "NUM.CERTIFICATE", "title": "Reproducible coefficient certificate and contribution bound", "status": "planned", "evidence": []},
-        {"id": "NUM.VALIDATION", "title": "Checker soundness and invalid-certificate rejection", "status": "in_progress", "evidence": ["QED/Numerics/BoxQuadrature.lean", "QED/Numerics/Test/Validation.lean"]}
+        {"id": "NUM.ARITHMETIC", "title": "Sound exact or rigorously rounded enclosure arithmetic", "status": "done", "evidence": ["QED/Numerics/Interval.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
+        {"id": "NUM.INTEGRATION", "title": "Integral-enclosure theorem for the pilot", "status": "done", "evidence": ["QED/Numerics/BoxQuadrature.lean", "QED/Numerics/PauliExtension.lean", "QED/Numerics/PauliEnclosures.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"},
+        {"id": "NUM.CERTIFICATE", "title": "Reproducible coefficient certificate and contribution bound", "status": "done", "evidence": ["QED/Frozen/OneLoop/PauliEnclosureTen.lean", "QED/Frozen/OneLoop/PauliEnclosureHundred.lean", "QED/Frozen/OneLoop/PauliEnclosureThousand.lean", "QED/Frozen/OneLoop/OneLoopAnomalyCodata2022.lean", "certificates/README.md", "scripts/numerics/gen_pauli_certificates.py"], "validation": "docs/campaign/STATUS.md"},
+        {"id": "NUM.VALIDATION", "title": "Checker soundness and invalid-certificate rejection", "status": "done", "evidence": ["QED/Numerics/BoxQuadrature.lean", "QED/Numerics/Test/Validation.lean", "docs/campaign/STATUS.md"], "validation": "docs/campaign/STATUS.md"}
       ]
     },
     {

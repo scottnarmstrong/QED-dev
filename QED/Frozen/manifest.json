@@ -15617,7 +15617,7 @@
         "module": "QED.Provider.OneLoop.PauliEnclosureTen",
         "export": "QED.Provider.OneLoop.isFormFactorPair_vertexOneLoop_pauli_enclosure_ten"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "d876b4a9351b02c9b4b65d15b2fd0932fb24f0a57d2d9365d07d110d337bf7a9",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {
@@ -15708,7 +15708,7 @@
         "module": "QED.Provider.OneLoop.PauliEnclosureHundred",
         "export": "QED.Provider.OneLoop.isFormFactorPair_vertexOneLoop_pauli_enclosure_hundred"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "e3242392b30da89c3427fc2619e9445835a7a9de99e56177d991f605a0af9172",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {
@@ -15799,7 +15799,7 @@
         "module": "QED.Provider.OneLoop.PauliEnclosureThousand",
         "export": "QED.Provider.OneLoop.isFormFactorPair_vertexOneLoop_pauli_enclosure_thousand"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "f2ce2421e96c570589727822f01f00f64f50d237c3b0ca7a19d67c752965bd68",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {
@@ -15890,7 +15890,7 @@
         "module": "QED.Provider.OneLoop.OneLoopAnomalyCodata2022",
         "export": "QED.Provider.OneLoop.oneLoopAnomaly_mem_codata2022"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "245a648eacaa8ef5771b3a7c84d0763ff8f0f50147902c86adce00cc1c917e85",
       "suffix_sha256": "4703d73ff6734d921403659d9337496f1bea2227fc9ceca3104a236c945031cd",
       "draft_allowlist": {
