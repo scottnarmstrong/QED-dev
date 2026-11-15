@@ -118,6 +118,26 @@ at Austin, Fall 2012 (`kaplunovsky-vertex`).
 
 Two misprints are recorded as F-9.
 
+## Physical input: the fine-structure constant
+
+Used by the Phase 3 contribution bound (D-34). This is a numerical input, not
+a derivation; statements that use it say so and are conditional on it.
+
+| Field | Value |
+| --- | --- |
+| Quantity | Inverse fine-structure constant $\alpha^{-1}$ |
+| Value | $137.035\,999\,177(21)$: standard uncertainty $0.000\,000\,021$, relative standard uncertainty $1.6\times10^{-10}$ |
+| Source | 2022 CODATA recommended values (NIST) |
+| URL | `https://physics.nist.gov/cgi-bin/cuu/Value?alphinv` |
+| Retrieved | 2026-11-15T19:06Z |
+| Retrieved page | 8065 bytes, SHA-256 `43f4bdaa4db344d7e9670a5d067cd57895d55afd2515d7a3baee56c9911372a9` (the page may change; the value is the record) |
+| Interval used | one standard uncertainty: $\alpha^{-1}\in[137.035999156,\ 137.035999198]$ |
+
+Caution for a later comparison with the measured anomaly: the CODATA value of
+$\alpha$ draws on the electron $g-2$ measurement together with QED theory, so
+using it there would be circular. An $\alpha$ from atom-recoil measurements
+(Cs or Rb) is the appropriate input for that comparison.
+
 ## Background sources (pinned, not load-bearing)
 
 | ID | Citation | Use | Size / SHA-256 | License |
