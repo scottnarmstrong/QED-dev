@@ -221,6 +221,10 @@
     {
       "date": "2026-11-15",
       "change": "Sealed (Q1)-(Q4); an independent refute-first audit found them PROVED. The regulated one-loop Pauli form factor is certified at three regulator points by kernel-checked interval quadrature (5105, 772 and 107 boxes; the generator's --check reproduces the data), and the CODATA 2022 contribution bound alpha/(2 pi) in [0.0011614097319, 0.0011614097323] is proved. NUM.ARITHMETIC, NUM.INTEGRATION, NUM.CERTIFICATE and NUM.VALIDATION done: Phase 3 for the one-loop pilot is complete."
+    },
+    {
+      "date": "2026-11-16",
+      "change": "Phase 4 started. After a source and route survey, the author ruled (D-36): route A (keep the 4D Pauli-Villars regularization; two-loop Wick model; Feynman-parametric representation with subtractive renormalization), first milestone the full mass-independent A1(4) = 197/144 + pi^2/12 - (pi^2/2) ln 2 + (3/4) zeta(3), exact closed form; the paywalled sources will be acquired by the author."
     }
   ],
   "tracks": [

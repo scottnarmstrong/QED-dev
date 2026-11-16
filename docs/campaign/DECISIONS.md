@@ -43,6 +43,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-33 | 2026-11-10 | Headline packet (the LSZ form factors and the headline theorem) approved as written and frozen; D-32 supersedes the first bullet of D-21 | Author |
 | D-34 | 2026-11-15 | Phase 3 design: certified enclosures of the regulated one-loop Pauli form factor; integer interval arithmetic checked by the kernel; box-partition quadrature; CODATA 2022 α (±1σ) for the contribution bound | Author |
 | D-35 | 2026-11-15 | Packet Q (Phase 3 theorem goals: three certified Pauli form-factor enclosures and the CODATA contribution bound) approved as written and frozen, without the optional corollary | Author |
+| D-36 | 2026-11-16 | Phase 4 design: route A (4D Pauli–Villars, parametric subtraction); first milestone the full mass-independent A₁⁽⁴⁾; exact closed form; attribution unchanged | Author |
 
 ## Pending author rulings
 
@@ -1530,3 +1531,41 @@ The audit confirmed:
 - standard axioms only.
 
 Phase 3 for the one-loop pilot is complete.
+
+## D-36. Design of Phase 4, two loops (author ruling)
+
+**Ruling.** On 2026-11-16 the author decided, after a source and route survey:
+
+1. **Route A.** Keep the four-dimensional regularization of the frozen model:
+   Pauli–Villars photon (mass Λ), photon mass m_γ, Pauli–Villars regulator
+   fermions and energy-first loop integrals. The Wick model is generalized to
+   two loop momenta, the diagrams are given Feynman-parametric
+   representations, and renormalization is subtractive, with the cancellations
+   proved at fixed regulators before the limits Λ → ∞, m_γ → 0.
+   Dimensional regularization (route B) was declined. It would need new
+   foundations (meromorphic d-dimensional integrals, integration by parts,
+   symbolic-d Dirac algebra) and a break from the frozen 4D model.
+2. **First milestone.** The full mass-independent fourth-order coefficient
+   A₁⁽⁴⁾ = 197/144 + π²/12 − (π²/2) ln 2 + (3/4)ζ(3), directly: the
+   vacuum-polarization insertion together with the six diagrams without
+   fermion loops. The mass-dependent terms (μ, τ) come later.
+3. **End form.** An exact closed form, with the finite subtracted parametric
+   integrals evaluated analytically. Certified higher-dimensional numerics is
+   not the target.
+4. **Attribution.** Rulings and approvals continue to be recorded under the
+   author's name, Scott Armstrong.
+
+**Sources.** The author will acquire the paywalled sources the route needs
+(listed with verified DOIs in `docs/SOURCES.md` once pinned). Under D-2 their
+bytes stay uncommitted in `sources/cache/`, with their SHA-256 hashes recorded.
+
+**Consequences found by the survey** (to be settled in later rulings):
+
+- The one-loop Ward identity Z₁ = Z₂ and the photon condition Π(0) = 0 become
+  load-bearing at order e⁵. The "for every δ₃" of D-32 does not carry over.
+- The regulator-fermion masses must be removed by a limit M_f → ∞.
+- The counterterms need order-e⁴ parts.
+- The frozen single-loop-momentum prescription needs a two-loop successor.
+
+**Scope.** These are design rulings. Every exact declaration goes through the
+usual review and approval.
