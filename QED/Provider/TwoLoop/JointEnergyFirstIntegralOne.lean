@@ -7,27 +7,28 @@ module
 
 public import QED.Frozen.TwoLoop.JointEnergyFirstIntegral
 public import QED.Frozen.OneLoop.EnergyFirstIntegral
-public import Mathlib.MeasureTheory.Integral.Bochner.Basic
-public import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
-public import Mathlib.MeasureTheory.Constructions.Pi
-public import Mathlib.Basic.Complex.Basic
-public import Mathlib.GroupTheory.Perm.Cycle.Basic
-public import Mathlib.GroupTheory.Perm.Sign
-public import Mathlib.Logic.Relation
-public import Mathlib.Data.Fin.VecNotation
-public import Mathlib.Data.Fintype.Sigma
-public import Mathlib.Data.Fintype.Sum
-public import Mathlib.Data.Fintype.Pi
-public import Mathlib.Data.Fintype.Perm
-public import Mathlib.Data.Nat.Factorial.Basic
-public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+import QED.TwoLoop.JointIntegral
 
 /-!
 # Provider for `QED.TwoLoop.jointEnergyFirstIntegral_one`
 
-Under development. This module will prove the frozen theorem goal
-`QED.TwoLoop.jointEnergyFirstIntegral_one` (packet T1, decision D-38) as
+Proves packet T1's theorem goal (T₁₂) (decision D-38) as
 `QED.Provider.TwoLoop.jointEnergyFirstIntegral_one`, with the binder convention of decision D-13.
-Until the frozen anchor is sealed, this module is quarantined: only the frozen anchor file may
-import it (`scripts/check_frozen_anchors.py`). It must never import the frozen anchor.
+The content is `QED.TwoLoop.jointEnergyFirstIntegral_one_eq`: the measure-preserving
+identification of `Fin 1 → X` with `X` in both stages. This module must never import the frozen
+anchor.
 -/
+
+public section
+
+namespace QED.Provider.TwoLoop
+
+/-- Packet T1's (T₁₂), with implicit data binders (decision D-13). -/
+theorem jointEnergyFirstIntegral_one {F : (Fin 4 → ℝ) → ℂ} :
+    QED.TwoLoop.jointEnergyFirstIntegral 1 (fun ℓ => F (ℓ 0)) =
+      QED.OneLoop.energyFirstIntegral F :=
+  QED.TwoLoop.jointEnergyFirstIntegral_one_eq F
+
+end QED.Provider.TwoLoop
+
+end

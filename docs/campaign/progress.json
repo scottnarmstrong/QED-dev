@@ -233,6 +233,10 @@
     {
       "date": "2026-11-17",
       "change": "The route-A two-loop units were checked numerically against BMR-I (total -0.32849). The author approved packet T1, the Wick model at two loops (D-38): chords, loop count, routing with several loop momenta, the joint energy-first integral, the value of a contraction and the 1PI function. Three theorem goals are frozen as drafts: the joint integral is (D) at one loop; one-loop contractions keep their packet 6a value; through order 2nf + nA + 1 the 1PI function is packet 6a's."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "Packet T1's three theorems sealed after an independent refute-first audit (D-38): the joint integral is (D) at one loop; contractions with at most one loop keep their packet 6a value; a 1PI contraction of order at most 2nf + nA + 1 has at most one loop, so the two-loop 1PI function restricts to packet 6a's."
     }
   ],
   "tracks": [

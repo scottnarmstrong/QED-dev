@@ -1669,3 +1669,37 @@ Eight negative controls on the staged tree were all rejected: a renamed
 declaration, a changed manifest export, an import of a draft, a use of a
 draft export, a use of a provider export, an unregistered `sorry`, a seal
 without a manifest change, and a changed hypothesis.
+
+**(T₁₂)–(T₁₄) sealed.** All three were sealed by their providers after an
+independent refute-first audit found them PROVED. How each is proved:
+
+- (T₁₂) follows from the measure-preserving equivalence `Fin 1 → X ≃ X`, in
+  both stages, for every integrand (`QED/TwoLoop/JointIntegral.lean`).
+- (T₁₃) splits on the loop count (`QED/TwoLoop/OneLoopEmbedding.lean`).
+  - With at most one chord, the chords are exactly the loop lines (X₂₁)
+    (`QED/TwoLoop/ChordLoopLine.lean`), so the routing (T₄) is the one-loop
+    routing (X₂₂).
+  - With no loop, the joint integral is evaluation at the empty family.
+  - With one loop, the chord carries `ℓ 0` and (T₁₂) gives (D).
+- (T₁₄) adds the bound that a 1PI contraction of order at most
+  `2 nf + nA + 1` has at most one loop (`QED/TwoLoop/LoopBound.lean`). The
+  lines that are not chords connect the vertices, so there are at least
+  V − 1 of them, and field counting gives E ≤ V. (T₁₃) then applies term by
+  term.
+
+The audit confirmed:
+
+- that the only change to each frozen file is its proof line, and the only
+  change to the manifest is the three states, with the guard rejecting 15
+  deliberate mutations;
+- statement equality with no excess binders, checked by `Expr.eqv` after
+  erasing the D-13 binder conventions;
+- that the providers consume the intended lemmas and import no draft;
+- the soundness of the graph arguments;
+- non-vacuity: the one-loop vertex has `loopCount = 1`, is 1PI and appears
+  in the sum of (T₁₄);
+- standard axioms only.
+
+Following its nit, the helpers of `LoopBound` were moved out of the frozen
+namespace into `QED.TwoLoop.LoopBound`, so they cannot collide with a later
+frozen name.

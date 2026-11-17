@@ -3,7 +3,7 @@
 [Campaign HQ](../../README.md) · [Decisions](DECISIONS.md) · [Findings](FINDINGS.md) ·
 [Progress ledger](progress.json)
 
-**As of 2026-11-17.** The one-loop result is complete (Phases 1 and 2 of the outline), and so is Phase 3 for the one-loop pilot. The headline theorem (H) proves F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions from the general Wick model with the model's own LSZ amplitude; it passes the Comparator challenge and an independent end-to-end audit (D-21). Phase 3 certifies the regulated Pauli form factor at three regulator points by kernel-checked interval quadrature and proves the CODATA 2022 contribution bound α/(2π) ∈ [0.0011614097319, 0.0011614097323] (D-34, D-35). Phase 4 (two loops, route A) has begun: the two-loop Wick model (packet T1) is approved and frozen, with three theorem goals as drafts (D-36, D-37, D-38).
+**As of 2026-11-17.** The one-loop result is complete (Phases 1 and 2 of the outline), and so is Phase 3 for the one-loop pilot. The headline theorem (H) proves F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions from the general Wick model with the model's own LSZ amplitude; it passes the Comparator challenge and an independent end-to-end audit (D-21). Phase 3 certifies the regulated Pauli form factor at three regulator points by kernel-checked interval quadrature and proves the CODATA 2022 contribution bound α/(2π) ∈ [0.0011614097319, 0.0011614097323] (D-34, D-35). Phase 4 (two loops, route A) has begun: the two-loop Wick model (packet T1) is frozen, and its three theorems, including that packet 6a is the special case through order 2nf + nA + 1, are proved and audited (D-36, D-37, D-38).
 
 Milestones (see the [ledger](progress.json)):
 
@@ -19,17 +19,18 @@ Milestones (see the [ledger](progress.json)):
 | L1.VERTEX | done: the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram (O-1, O-2), and its ε → 0⁺ limit is the vertex function (packet 5) |
 | L1.ASSEMBLY | done: the headline theorem (H) is proved and audited (D-33); fresh-checkout rebuild clean; Comparator challenge passes (con-ron, NanoDa, Lean kernel); independent end-to-end audit: proved as advertised; errata record updated (D-21) |
 | NUM.ARITHMETIC, NUM.INTEGRATION, NUM.CERTIFICATE, NUM.VALIDATION | done (Phase 3, one-loop pilot): integer interval arithmetic and the box-partition checker with soundness theorems; certified enclosures (Q₁)–(Q₃) of the regulated Pauli form factor and the CODATA contribution bound (Q₄); invalid certificates rejected (D-34, D-35) |
-| L2.ENUMERATION | in progress: the two-loop Wick model (packet T1) frozen, with the theorem goals (T₁₂)–(T₁₄) as drafts (D-38) |
+| L2.ENUMERATION | in progress: the two-loop Wick model (packet T1) frozen; (T₁₂)–(T₁₄) proved and audited (D-38) |
 
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 3 — QED/Frozen/TwoLoop/JointEnergyFirstIntegralOne.lean (T₁₂),
-               QED/Frozen/TwoLoop/ContractionValueEqContractionValue.lean (T₁₃),
-               QED/Frozen/TwoLoop/OnePIFunctionEqOnePIFunction.lean (T₁₄)
+DRAFT_ANCHORS: 0
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 0
+SEALED_THIS_TURN: 3 theorems — QED.TwoLoop.jointEnergyFirstIntegral_one (T₁₂),
+               QED.WickModel.contractionValue₂_eq_contractionValue (T₁₃),
+               QED.WickModel.onePIFunction₂_eq_onePIFunction (T₁₄); PROVED
+               (guard, build, standard axioms, independent refute-first audit)
 ```
 
 | Field | Value |
@@ -37,7 +38,7 @@ SEALED_THIS_TURN: 0
 | Model / prescription | Perturbative QED in Feynman gauge with the on-shell scheme, starting from a momentum-space Wick expansion at order $e^3$ (D-8). The one-loop pilot uses a Pauli–Villars photon (mass $\Lambda$) and a photon mass $m_\gamma$, with Minkowski loop integrals defined by the energy-first prescription M1 ([REGULARIZATION.md](../REGULARIZATION.md); D-5). The magnetic moment has two definitions, the source's wave-packet definition and the vertex response, proved equivalent (D-9). |
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
-| Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. (F′) the characterization of the one-loop vertex `QED.OneLoop.vertexOneLoop`. (G) `existsUnique_isFormFactorPair_vertexOneLoop`: for e ≠ 0 and q² > 0 the decomposition (63.18) exists and is unique. (I) `isFormFactorPair_vertexOneLoop_pauli_limit`: near q², m_γ → 0⁺ and Λ → ∞, every form-factor pair has F₂ within η of e²/8π² = α/2π, uniformly over the momenta. Packet 3: (K) the charge condition (63.1) fixes a unique counterterm Z₁; (N) the counterterm shifts only F₁ (O-8); (M) F₁(0) = 1 (64.2) at fixed regulators. Packet 4a: (R) the response magnetic moment exists and is unique; (R′) with the charge-normalized counterterm, g = 4mμ/e → 2(1 + α/2π) (64.17) jointly as m_γ → 0⁺ and Λ → ∞. Packet 4b: (W₄) for the source's wave-packet definition (64.4)–(64.9), the undamped position integral converges absolutely and, as the packet narrows, the source μ tends to the response μ (O-24); (W₅) g → 2(1 + α/2π) for the source definition. Scope: the (62.39) vertex function under D-5, with current matrix elements read from the amputated vertex (O-3). Packet 5: (W₁) the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram, with coefficient one and no closed-loop sign (O-1, O-2); (W₂) its ε → 0⁺ limit is the vertex function. Packet 6a: (Y₁) packet 5 is a special case of the general Wick model with Pauli–Villars regulator fermions. Packet 6b: (Z₁), (Z₂) the one-loop self-energy and vacuum polarization exist in covariant form; (Z₆), (Z₉) the on-shell conditions (62.27) and (62.11) fix δ₂, δ_m and δ₃ uniquely. Packet 6c-1: (L₁) the LSZ amplitude of the electron current exists and is unique. Packet 6c-2: (L₃) it equals ū′V^μu plus a photon-leg term e·q²D(q²)Π(q²)ū′γ^μu; (L₄′), (L₅′), (L₇′) the charge condition and both magnetic-moment definitions restated with the LSZ amplitude are equivalent to packets 3, 4a and 4b. Headline (H): from the general Wick model with on-shell counterterms and the LSZ amplitude, F₂ within η of α/2π and both Landé factors within η of 2(1 + α/2π) near the regulator limit, for every δ₃; (H₀′) the LSZ form factors are well defined. The Comparator challenge and the fresh-checkout audit (D-21) remain. |
+| Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. (F′) the characterization of the one-loop vertex `QED.OneLoop.vertexOneLoop`. (G) `existsUnique_isFormFactorPair_vertexOneLoop`: for e ≠ 0 and q² > 0 the decomposition (63.18) exists and is unique. (I) `isFormFactorPair_vertexOneLoop_pauli_limit`: near q², m_γ → 0⁺ and Λ → ∞, every form-factor pair has F₂ within η of e²/8π² = α/2π, uniformly over the momenta. Packet 3: (K) the charge condition (63.1) fixes a unique counterterm Z₁; (N) the counterterm shifts only F₁ (O-8); (M) F₁(0) = 1 (64.2) at fixed regulators. Packet 4a: (R) the response magnetic moment exists and is unique; (R′) with the charge-normalized counterterm, g = 4mμ/e → 2(1 + α/2π) (64.17) jointly as m_γ → 0⁺ and Λ → ∞. Packet 4b: (W₄) for the source's wave-packet definition (64.4)–(64.9), the undamped position integral converges absolutely and, as the packet narrows, the source μ tends to the response μ (O-24); (W₅) g → 2(1 + α/2π) for the source definition. Scope: the (62.39) vertex function under D-5, with current matrix elements read from the amputated vertex (O-3). Packet 5: (W₁) the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram, with coefficient one and no closed-loop sign (O-1, O-2); (W₂) its ε → 0⁺ limit is the vertex function. Packet 6a: (Y₁) packet 5 is a special case of the general Wick model with Pauli–Villars regulator fermions. Packet 6b: (Z₁), (Z₂) the one-loop self-energy and vacuum polarization exist in covariant form; (Z₆), (Z₉) the on-shell conditions (62.27) and (62.11) fix δ₂, δ_m and δ₃ uniquely. Packet 6c-1: (L₁) the LSZ amplitude of the electron current exists and is unique. Packet 6c-2: (L₃) it equals ū′V^μu plus a photon-leg term e·q²D(q²)Π(q²)ū′γ^μu; (L₄′), (L₅′), (L₇′) the charge condition and both magnetic-moment definitions restated with the LSZ amplitude are equivalent to packets 3, 4a and 4b. Packet T1: (T₁₂) the joint energy-first integral is (D) at one loop; (T₁₃) a contraction with at most one loop has its packet 6a value; (T₁₄) through order 2nf + nA + 1 the two-loop 1PI function is packet 6a's. Headline (H): from the general Wick model with on-shell counterterms and the LSZ amplitude, F₂ within η of α/2π and both Landé factors within η of 2(1 + α/2π) near the regulator limit, for every δ₃; (H₀′) the LSZ form factors are well defined. The Comparator challenge and the fresh-checkout audit (D-21) remain. |
 | Pending author decisions | None open. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, D-18, D-19, D-20, D-21, D-22, D-23, D-24, D-25, D-26, D-27, D-28, D-29, D-30, D-31, D-32, D-33, D-34, D-35, D-36, D-37, and D-38 (packet T1, 2026-11-17). |
 
 ## Work completed
@@ -243,8 +244,9 @@ The one-loop result is complete. Next, per the
    proof obligations is written and reviewed (`docs/TWO-LOOP-DERIVATION.md`);
    follow-ups ruled (D-37); every route-A unit checked numerically against
    BMR-I (`scripts/numerics/two_loop_units.py`). Packet T1, the two-loop Wick
-   model, is approved and frozen (D-38). Next: prove and seal its theorem goals
-   (T₁₂)–(T₁₄), then the classification of the order-e⁵ contractions.
+   model, is frozen, and its theorems (T₁₂)–(T₁₄) are proved and audited (D-38).
+   Next: the classification of the order-e⁵ 1PI vertex contractions (O2-2)
+   and the one-loop Ward identity δ₁ = δ₂ (D-37.2).
 3. **Later phases.** Selected higher-loop families and an experimental
    comparison.
 3. **Optional.** A public release of the one-loop result (Palomar would also

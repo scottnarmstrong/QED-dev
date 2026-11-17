@@ -38,7 +38,7 @@ theorem contractionValue₂_eq_contractionValue (P : Params) {nf nA N : ℕ}
     contractionValue₂ P C pOut pIn kIn αOut βIn μ =
       contractionValue P C pOut pIn kIn αOut βIn μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.TwoLoop.contractionValue₂_eq_contractionValue
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

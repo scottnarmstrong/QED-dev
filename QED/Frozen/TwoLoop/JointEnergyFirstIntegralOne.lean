@@ -36,7 +36,7 @@ the frozen `energyFirstIntegral` (D). -/
 theorem jointEnergyFirstIntegral_one (F : (Fin 4 → ℝ) → ℂ) :
     jointEnergyFirstIntegral 1 (fun ℓ => F (ℓ 0)) = QED.OneLoop.energyFirstIntegral F :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.TwoLoop.jointEnergyFirstIntegral_one
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

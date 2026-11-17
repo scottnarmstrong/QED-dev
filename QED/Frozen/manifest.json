@@ -17223,7 +17223,7 @@
         "module": "QED.Provider.TwoLoop.JointEnergyFirstIntegralOne",
         "export": "QED.Provider.TwoLoop.jointEnergyFirstIntegral_one"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "9a5a46c66290cbdd83d2d868d523410524ee2457740cb72c3b9852403c7f4e0e",
       "suffix_sha256": "40068b95469d700692e1439c29833ce8c5bce83685e82400d38bfea6f5f35a83",
       "draft_allowlist": {
@@ -17470,7 +17470,7 @@
         "module": "QED.Provider.TwoLoop.ContractionValueEqContractionValue",
         "export": "QED.Provider.TwoLoop.contractionValue₂_eq_contractionValue"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "0f2c1b5b0773b317e7d460f98a5e3cade4eceb7af1498821d08fbc5433dd090a",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {
@@ -17749,7 +17749,7 @@
         "module": "QED.Provider.TwoLoop.OnePIFunctionEqOnePIFunction",
         "export": "QED.Provider.TwoLoop.onePIFunction₂_eq_onePIFunction"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "dad57add5b6dfe97f07f742bfc023f7f40758713a622efbc0f91c61dedfe8e33",
       "suffix_sha256": "23916ac867ba11b2bed7262fc77a4fa3b2cc5329c4bfc4ee9823c5cb78d9d3b1",
       "draft_allowlist": {

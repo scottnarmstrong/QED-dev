@@ -38,7 +38,7 @@ theorem onePIFunction₂_eq_onePIFunction (P : Params) (nf nA K : ℕ) (hK : K �
     onePIFunction₂ P nf nA K pOut pIn kIn αOut βIn μ =
       onePIFunction P nf nA K pOut pIn kIn αOut βIn μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.TwoLoop.onePIFunction₂_eq_onePIFunction
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 
