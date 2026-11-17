@@ -44,6 +44,7 @@ declaration: only exact Lean declarations can be approved and frozen.
 | D-34 | 2026-11-15 | Phase 3 design: certified enclosures of the regulated one-loop Pauli form factor; integer interval arithmetic checked by the kernel; box-partition quadrature; CODATA 2022 α (±1σ) for the contribution bound | Author |
 | D-35 | 2026-11-15 | Packet Q (Phase 3 theorem goals: three certified Pauli form-factor enclosures and the CODATA contribution bound) approved as written and frozen, without the optional corollary | Author |
 | D-36 | 2026-11-16 | Phase 4 design: route A (4D Pauli–Villars, parametric subtraction); first milestone the full mass-independent A₁⁽⁴⁾; exact closed form; attribution unchanged | Author |
+| D-37 | 2026-11-17 | Two-loop follow-ups: q² → 0 first (quantifier-form headline); Ward identity proved; single real counterterms, truncated; M_f → ∞ last; joint energy-first prescription; 1PI-vertex headline first | Author |
 
 ## Pending author rulings
 
@@ -1566,6 +1567,36 @@ bytes stay uncommitted in `sources/cache/`, with their SHA-256 hashes recorded.
 - The regulator-fermion masses must be removed by a limit M_f → ∞.
 - The counterterms need order-e⁴ parts.
 - The frozen single-loop-momentum prescription needs a two-loop successor.
+
+**Scope.** These are design rulings. Every exact declaration goes through the
+usual review and approval.
+
+## D-37. Two-loop design follow-ups (author ruling)
+
+**Ruling.** On 2026-11-17, after the two-loop derivation
+(`docs/TWO-LOOP-DERIVATION.md`) and its review, the author decided:
+
+1. **Order of limits and headline form.** At order e⁵ the joint limit in q²
+   and the photon mass does not exist. For q² ≠ 0 the order-e⁴ Pauli form
+   factor carries an infrared logarithm ~ q² ln m_γ (BMR-I p. 834). So
+   q² → 0⁺ is taken first at fixed regulators, uniformly over on-shell pairs,
+   as in D-5. The headline uses the quantifier form: for every η there are δ
+   and R such that, for regulators beyond the thresholds and admissible
+   counterterms, there is a q₀ > 0 (depending on the regulators) with
+   |16π⁴[e⁴]F₂ − A₁⁽⁴⁾| < η for all pairs with 0 < q² < q₀.
+2. **Ward identity.** The one-loop identity δ₁ = δ₂ (Z₁ = Z₂), needed for the
+   infrared cancellation, is proved as a theorem at fixed regulators from the
+   frozen on-shell conditions, not imposed.
+3. **Counterterms.** Each counterterm stays a single real number, and the
+   expansion is truncated. Separating the orders is a proof obligation.
+4. **Regulator fermions.** Their masses are removed last. First q² → 0⁺, then
+   m_γ → 0 and Λ → ∞, then M₁, M₂ → ∞.
+5. **Prescription.** The two-loop value is the joint energy-first integral:
+   both loop energies first, then all six spatial components. "Nested equals
+   joint" is a theorem for the insertion diagrams, where the frozen one-loop
+   Σ and Π are reused.
+6. **Amplitude.** The first two-loop headline is stated on the order-e⁵ 1PI
+   vertex. An LSZ restatement can follow later.
 
 **Scope.** These are design rulings. Every exact declaration goes through the
 usual review and approval.

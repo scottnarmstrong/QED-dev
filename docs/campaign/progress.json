@@ -225,6 +225,10 @@
     {
       "date": "2026-11-16",
       "change": "Phase 4 started. After a source and route survey, the author ruled (D-36): route A (keep the 4D Pauli-Villars regularization; two-loop Wick model; Feynman-parametric representation with subtractive renormalization), first milestone the full mass-independent A1(4) = 197/144 + pi^2/12 - (pi^2/2) ln 2 + (3/4) zeta(3), exact closed form; the paywalled sources will be acquired by the author."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "Two-loop sources pinned; docs/TWO-LOOP-DERIVATION.md written and independently reviewed (26 proof obligations; five confirmed misprints in the AHKN 2012 worked example). Author ruled on the follow-ups (D-37): q^2 -> 0 first at fixed regulators with a quantifier-form headline, Ward identity proved, single real counterterms with truncation, M_f -> oo last, joint energy-first prescription, 1PI-vertex headline first."
     }
   ],
   "tracks": [
