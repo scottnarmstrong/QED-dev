@@ -277,6 +277,10 @@
     {
       "date": "2026-11-17",
       "change": "Core of O2-10 proved: for a symmetric positive-definite 2x2 matrix A, Im w < 0 and n >= 2, the integral over R^2 of (-t^T A t + w)^(-n) is absolutely convergent and equals -(pi/(n-1)) (det A)^(-1/2) w^(1-n), via polar coordinates and a Cholesky change of variables; cross-checked numerically."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "Exact values of O2-18 proved: the vacuum-polarization unit integral over v, x in [0,1] equals 119/36 - pi^2/3 (Fubini, a closed-form v-integral, and an antiderivative involving Li2), and the spectral form of the one-loop vacuum polarization equals its Feynman-parameter form for k^2 > -4M^2."
     }
   ],
   "tracks": [

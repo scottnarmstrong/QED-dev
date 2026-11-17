@@ -556,7 +556,8 @@ source: the decision record).
   (numerics: 40 digits). The inner integral is the one-loop $F_2/r$ with photon mass
   $\lambda$, $\lambda^2/m^2=4/(1-v^2)$; it is the same function as $C_1$ in
   REGULARIZATION.md section 6. BMR-II (1.1)–(1.10), p. 868–869, derives the same value
-  dispersively (source). The exact evaluation needs only $\zeta(2)$.
+  dispersively (source). The exact evaluation needs only $\zeta(2)$. **Both the limit value and the
+  spectral identity are proved** (`QED/TwoLoop/VacuumPolarizationUnit.lean`).
 - **O2-19 (regulator-fermion decoupling).** By D-37.4 the masses $M_1,M_2$ are removed
   last, after $q^2\to0^+$ and after $m_\gamma\to0$, $\Lambda\to\infty$ at fixed $M_f$. So the
   object is the already-limited VP-unit contribution of one flavour of squared mass $\mu$,
