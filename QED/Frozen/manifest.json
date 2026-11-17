@@ -17756,6 +17756,78 @@
         "frozen_paths": [],
         "audit_paths": []
       }
+    },
+    {
+      "id": "twoloop.a1_four_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-17); statement approval pending",
+        "approved_at": "2026-11-17",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-39-packet-t2-frozen-provisionally-author-approval-pending",
+        "approval_version": "provisional"
+      },
+      "source": {
+        "revision": "passera-2007 sha256:3761261045e2fdcf7495a529e8cac31275ad8ee1e85b979c6f9fe6e1e29631f6",
+        "range": "Passera (2007) eq. (9); BMR-I (1972) eq. (1.7) p. 830; obligation O2-1; decision D-36.2"
+      },
+      "contract": {
+        "id": "qed_dev.packetT2.a1_four",
+        "version": "1"
+      },
+      "path": "QED/Frozen/TwoLoop/A1Four.lean",
+      "export": "QED.TwoLoop.a1Four",
+      "split_policy": {
+        "source_group": "qed_dev.packetT2.a1_four",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-39-packet-t2-frozen-provisionally-author-approval-pending"
+      },
+      "abi_sha256": "9ed3ca5a9a3b6a0e765b63f04f1076790fb93369ab0756be62b9ce4329298ce0",
+      "definition_closure": [],
+      "state": "SEALED",
+      "full_file_sha256": "e1ee0c497f95236b0344b53d729b4d1a021b766fb51e28f0e83b84e31de8691a"
+    },
+    {
+      "id": "twoloop.a1_four_bounds_v1",
+      "kind": "theorem",
+      "author_approval": {
+        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-17); statement approval pending",
+        "approved_at": "2026-11-17",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-39-packet-t2-frozen-provisionally-author-approval-pending",
+        "approval_version": "provisional"
+      },
+      "source": {
+        "revision": "passera-2007 sha256:3761261045e2fdcf7495a529e8cac31275ad8ee1e85b979c6f9fe6e1e29631f6",
+        "range": "Passera (2007) eq. (9) numerical value; obligation O2-1"
+      },
+      "contract": {
+        "id": "qed_dev.packetT2.a1_four_bounds",
+        "version": "1"
+      },
+      "path": "QED/Frozen/TwoLoop/A1FourBounds.lean",
+      "export": "QED.TwoLoop.a1Four_bounds",
+      "split_policy": {
+        "source_group": "qed_dev.packetT2.a1_four_bounds",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-39-packet-t2-frozen-provisionally-author-approval-pending"
+      },
+      "abi_sha256": "99484d8071b813f996c0bf085da741d77c200f6bc41e8ead6188665df8558424",
+      "definition_closure": [
+        {
+          "path": "QED/Frozen/TwoLoop/A1Four.lean",
+          "sha256": "e1ee0c497f95236b0344b53d729b4d1a021b766fb51e28f0e83b84e31de8691a"
+        }
+      ],
+      "implementation": {
+        "module": "QED.Provider.TwoLoop.A1FourBounds",
+        "export": "QED.Provider.TwoLoop.a1Four_bounds"
+      },
+      "state": "DRAFT_SORRY",
+      "prefix_sha256": "93a5452975fc61b84f30b10ee6c2f8952da6c9e2b3eb26f976c6e4fa2b07dbb4",
+      "suffix_sha256": "40068b95469d700692e1439c29833ce8c5bce83685e82400d38bfea6f5f35a83",
+      "draft_allowlist": {
+        "frozen_paths": [],
+        "audit_paths": []
+      }
     }
   ]
 }

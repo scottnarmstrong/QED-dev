@@ -1703,3 +1703,43 @@ The audit confirmed:
 Following its nit, the helpers of `LoopBound` were moved out of the frozen
 namespace into `QED.TwoLoop.LoopBound`, so they cannot collide with a later
 frozen name.
+
+## D-39. Packet T2 frozen provisionally (author approval pending)
+
+**Status.** Provisional. On 2026-11-17 the author put the campaign in
+overnight mode: "Continue and do so in overnight mode now (defer all
+approvals and proceed)", then "no you can freeze temporarily, pending
+approval in the morning". Packet T2 was frozen under that instruction **without
+the author having seen its text**. Its manifest entries record the approval
+as provisional. If the author rejects or amends it, it gets a versioned
+successor, and every result that depends on it is invalidated.
+
+The frozen text is the untracked scratch file with SHA-256
+`f99ab96d6708c2c186f10120ec4ad991f54a55130f84700c11aeb0a16caed577`:
+
+- **(U₁)** `QED.TwoLoop.a1Four`: the target constant
+  A₁⁽⁴⁾ = 197/144 + π²/12 − (π²/2) ln 2 + (3/4) ζ(3) (obligation O2-1),
+  with ζ(3) written as the series ∑ₙ 1/(n+1)³.
+- **(U₂)** `QED.TwoLoop.a1Four_bounds`, a theorem goal frozen as
+  `DRAFT_SORRY`: −0.3285 < A₁⁽⁴⁾ < −0.3284. This is a numerical check of the
+  transcription and does not feed the headline.
+
+**Review.** An independent refute-first review recommended approval. It
+checked the formula against Passera (2007) eq. (9) and BMR-I (1.7) (p. 830,
+again on p. 853), reading the rendered page images. It confirmed:
+
+- the normalization, as the coefficient of (α/π)² with α = e²/4π;
+- that the series is summable;
+- the parse of every term;
+- the vacuum-polarization and no-fermion-loop parts;
+- the enclosure.
+
+It preferred the inlined series to Mathlib's complex `riemannZeta 3`. The
+link between them is proved in `QED/Polylog/Basic.lean`. Its nits were
+applied:
+
+- a redundant import was dropped;
+- citations for the two parts and the convention α/π = e²/4π² were added;
+- the enclosure was widened from five significant digits to four decimal
+  places. Any slip in a coefficient moves the value by at least 10⁻³, and
+  the wider interval is far cheaper to prove.

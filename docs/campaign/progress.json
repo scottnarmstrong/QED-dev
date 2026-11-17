@@ -237,6 +237,10 @@
     {
       "date": "2026-11-17",
       "change": "Packet T1's three theorems sealed after an independent refute-first audit (D-38): the joint integral is (D) at one loop; contractions with at most one loop keep their packet 6a value; a 1PI contraction of order at most 2nf + nA + 1 has at most one loop, so the two-loop 1PI function restricts to packet 6a's."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "Overnight mode: packet T2 (the target constant A1(4) = 197/144 + pi^2/12 - (pi^2/2) ln 2 + (3/4) zeta(3), and a four-decimal enclosure as a theorem goal) frozen provisionally after independent review; author approval pending (D-39)."
     }
   ],
   "tracks": [
