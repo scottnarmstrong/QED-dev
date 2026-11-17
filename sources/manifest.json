@@ -57,6 +57,61 @@
       "sha256": "4bf21df5c5e65c7ff8b1b5e901b1d24d7e154ca505f8fbb79d6053b1df8b045b",
       "license": "CC BY-NC-SA 4.0 (course page).",
       "stability": "OCW asset URL."
+    },
+    {
+      "id": "bmr-1972-II",
+      "role": "primary, two loops (exact fourth-order evaluation with Pauli-Villars and photon mass; D-36)",
+      "citation": "R. Barbieri, J. A. Mignaco, E. Remiddi, 'Electron form factors up to fourth order. II', Nuovo Cimento A 11 (1972) 865-916, doi:10.1007/BF02728546",
+      "url": "https://doi.org/10.1007/BF02728546",
+      "retrieved_utc": "2026-11-17T13:53:00Z",
+      "bytes": 1887985,
+      "sha256": "754521816701f5cdc1c715eacb37f1965b9374069f1857f0210e7fa6553f0a12",
+      "license": "Copyrighted, paywalled journal article acquired by the author for private study; not redistributable and never committed (D-2). Not fetchable by the script.",
+      "stability": "Publisher scan; fixed."
+    },
+    {
+      "id": "ck-1974-rules",
+      "role": "primary, two loops (parametric representation; D-36)",
+      "citation": "P. Cvitanovic, T. Kinoshita, 'Feynman-Dyson rules in parametric space', Phys. Rev. D 10 (1974) 3978-3991, doi:10.1103/PhysRevD.10.3978",
+      "url": "https://doi.org/10.1103/PhysRevD.10.3978",
+      "retrieved_utc": "2026-11-17T13:53:00Z",
+      "bytes": 970322,
+      "sha256": "d409f88d89d7030f77b7347d6c5c274e41ad380abda512b6fec0a02f8c8d059a",
+      "license": "Copyrighted, paywalled journal article acquired by the author for private study; not redistributable and never committed (D-2). Not fetchable by the script.",
+      "stability": "Publisher file; fixed."
+    },
+    {
+      "id": "ck-1974-uvir",
+      "role": "primary, two loops (separation of UV and IR divergences; D-36)",
+      "citation": "P. Cvitanovic, T. Kinoshita, 'New approach to the separation of ultraviolet and infrared divergences of Feynman-parametric integrals', Phys. Rev. D 10 (1974) 3991-4006, doi:10.1103/PhysRevD.10.3991",
+      "url": "https://doi.org/10.1103/PhysRevD.10.3991",
+      "retrieved_utc": "2026-11-17T13:53:00Z",
+      "bytes": 1128814,
+      "sha256": "a41d3c61cb0340582de7821f9c3df30de9bfea586e80ceec833a7537a405d25e",
+      "license": "Copyrighted, paywalled journal article acquired by the author for private study; not redistributable and never committed (D-2). Not fetchable by the script.",
+      "stability": "Publisher file; fixed."
+    },
+    {
+      "id": "bmr-2004",
+      "role": "independent check of the two-loop result (dimensional regularization; D-36)",
+      "citation": "R. Bonciani, P. Mastrolia, E. Remiddi, 'QED vertex form factors at two loops', arXiv:hep-ph/0307295v1 (2003); Nucl. Phys. B 676 (2004) 399. Equation numbers may differ between arXiv v1 and the journal",
+      "url": "https://arxiv.org/pdf/hep-ph/0307295v1",
+      "retrieved_utc": "2026-11-17T13:55:43Z",
+      "bytes": 408068,
+      "sha256": "bbca5de6cc0aa3d4d76fff0cbd8230614c8b6c91ade446a315b0b8472429f6c5",
+      "license": "arXiv non-exclusive distribution licence; not redistributed here.",
+      "stability": "arXiv v1; fixed."
+    },
+    {
+      "id": "passera-2007",
+      "role": "background (mass-dependent terms and the fourth-order closed forms)",
+      "citation": "M. Passera, 'Precise mass-dependent QED contributions to leptonic g-2 at order alpha^2 and alpha^3', Phys. Rev. D 75 (2007) 013002, arXiv:hep-ph/0606174v2",
+      "url": "https://arxiv.org/pdf/hep-ph/0606174v2",
+      "retrieved_utc": "2026-11-17T13:55:35Z",
+      "bytes": 124148,
+      "sha256": "3761261045e2fdcf7495a529e8cac31275ad8ee1e85b979c6f9fe6e1e29631f6",
+      "license": "arXiv non-exclusive distribution licence; not redistributed here.",
+      "stability": "arXiv v2; fixed."
     }
   ]
 }

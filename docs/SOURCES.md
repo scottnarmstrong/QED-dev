@@ -118,6 +118,27 @@ at Austin, Fall 2012 (`kaplunovsky-vertex`).
 
 Two misprints are recorded as F-9.
 
+## Two-loop sources (Phase 4, D-36)
+
+The paywalled papers were acquired by the author; like every pinned PDF their
+bytes stay in the untracked `sources/cache/` and only their hashes are
+recorded (D-2).
+
+| Id | Citation | Role | Size / SHA-256 |
+| --- | --- | --- | --- |
+| `bmr-1972-II` | R. Barbieri, J. A. Mignaco, E. Remiddi, 'Electron form factors up to fourth order. II', Nuovo Cimento A 11 (1972) 865-916, doi:10.1007/BF02728546 | primary, two loops (exact fourth-order evaluation with Pauli-Villars and photon mass; D-36) | 1887985 / `754521816701f5cdc1c715eacb37f1965b9374069f1857f0210e7fa6553f0a12` |
+| `ck-1974-rules` | P. Cvitanovic, T. Kinoshita, 'Feynman-Dyson rules in parametric space', Phys. Rev. D 10 (1974) 3978-3991, doi:10.1103/PhysRevD.10.3978 | primary, two loops (parametric representation; D-36) | 970322 / `d409f88d89d7030f77b7347d6c5c274e41ad380abda512b6fec0a02f8c8d059a` |
+| `ck-1974-uvir` | P. Cvitanovic, T. Kinoshita, 'New approach to the separation of ultraviolet and infrared divergences of Feynman-parametric integrals', Phys. Rev. D 10 (1974) 3991-4006, doi:10.1103/PhysRevD.10.3991 | primary, two loops (separation of UV and IR divergences; D-36) | 1128814 / `a41d3c61cb0340582de7821f9c3df30de9bfea586e80ceec833a7537a405d25e` |
+| `bmr-2004` | R. Bonciani, P. Mastrolia, E. Remiddi, 'QED vertex form factors at two loops', arXiv:hep-ph/0307295v1 (2003); Nucl. Phys. B 676 (2004) 399. Equation numbers may differ between arXiv v1 and the journal | independent check of the two-loop result (dimensional regularization; D-36) | 408068 / `bbca5de6cc0aa3d4d76fff0cbd8230614c8b6c91ade446a315b0b8472429f6c5` |
+| `passera-2007` | M. Passera, 'Precise mass-dependent QED contributions to leptonic g-2 at order alpha^2 and alpha^3', Phys. Rev. D 75 (2007) 013002, arXiv:hep-ph/0606174v2 | background (mass-dependent terms and the fourth-order closed forms) | 124148 / `3761261045e2fdcf7495a529e8cac31275ad8ee1e85b979c6f9fe6e1e29631f6` |
+
+Still wanted: Barbieri–Mignaco–Remiddi I, Nuovo Cimento A 11 (1972) 824–864
+(doi:10.1007/BF02728545); Kinoshita, in *Quantum Electrodynamics* (World
+Scientific 1990), pp. 218–321 (doi:10.1142/9789814503273_0007); Petermann,
+Nucl. Phys. 5 (1958) 677 (doi:10.1016/0029-5582(58)90065-8); and the open
+Aoyama–Kinoshita–Nio, Atoms 7 (2019) 28 (doi:10.3390/atoms7010028), whose
+publisher blocks scripted downloads.
+
 ## Physical input: the fine-structure constant
 
 Used by the Phase 3 contribution bound (D-34). This is a numerical input, not
