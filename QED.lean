@@ -72,6 +72,11 @@ public import QED.Frozen.TwoLoop.JointEnergyFirstIntegralOne
 public import QED.Frozen.TwoLoop.ContractionValueEqContractionValue
 public import QED.Frozen.TwoLoop.OnePIFunctionEqOnePIFunction
 public import QED.Frozen.TwoLoop.A1Four
+public import QED.Polylog.Basic
+public import QED.Polylog.Deriv
+public import QED.Polylog.Reflection
+public import QED.Polylog.Integral
+public import QED.Polylog.Landen
 public import QED.WickModel.CompatibilityLines
 public import QED.WickModel.Compatibility
 public import QED.Frozen.WickModel.WickVertexEqOnePIFunction
