@@ -66,6 +66,8 @@ public import QED.Frozen.Wick.WickVertexEq
 public import QED.Frozen.Wick.WickVertexLimit
 public import QED.Frozen.WickModel.OnePIFunction
 public import QED.Frozen.WickModel.ConnectedFunction
+public import QED.Frozen.TwoLoop.OnePIFunction
+public import QED.Frozen.TwoLoop.JointEnergyFirstIntegrable
 public import QED.WickModel.CompatibilityLines
 public import QED.WickModel.Compatibility
 public import QED.Frozen.WickModel.WickVertexEqOnePIFunction

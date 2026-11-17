@@ -229,6 +229,10 @@
     {
       "date": "2026-11-17",
       "change": "Two-loop sources pinned; docs/TWO-LOOP-DERIVATION.md written and independently reviewed (26 proof obligations; five confirmed misprints in the AHKN 2012 worked example). Author ruled on the follow-ups (D-37): q^2 -> 0 first at fixed regulators with a quantifier-form headline, Ward identity proved, single real counterterms with truncation, M_f -> oo last, joint energy-first prescription, 1PI-vertex headline first."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "The route-A two-loop units were checked numerically against BMR-I (total -0.32849). The author approved packet T1, the Wick model at two loops (D-38): chords, loop count, routing with several loop momenta, the joint energy-first integral, the value of a contraction and the 1PI function. Three theorem goals are frozen as drafts: the joint integral is (D) at one loop; one-loop contractions keep their packet 6a value; through order 2nf + nA + 1 the 1PI function is packet 6a's."
     }
   ],
   "tracks": [
@@ -285,7 +289,7 @@
       "title": "Complete two-loop calculation",
       "kind": "formal",
       "items": [
-        {"id": "L2.ENUMERATION", "title": "Complete two-loop contribution enumeration", "status": "planned", "evidence": []},
+        {"id": "L2.ENUMERATION", "title": "Complete two-loop contribution enumeration", "status": "in_progress", "evidence": ["docs/TWO-LOOP-DERIVATION.md", "QED/Frozen/TwoLoop/OnePIFunction.lean"]},
         {"id": "L2.RENORMALIZATION", "title": "Subtractions, counterterms, and cancellations", "status": "planned", "evidence": []},
         {"id": "L2.COEFFICIENT", "title": "Complete coefficient and certified evaluation", "status": "planned", "evidence": []},
         {"id": "L2.ASSEMBLY", "title": "Complete theorem assembled, audited, and reproducible", "status": "planned", "evidence": []}

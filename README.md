@@ -80,11 +80,11 @@ become precise; changes to their scope must be recorded.
 | Sources and exact specification | 4/4 | `██████████` 100% | Complete |
 | Complete one-loop calculation | 8/8 | `██████████` 100% | Complete |
 | Numerical certification pilot | 4/4 | `██████████` 100% | Complete |
-| Complete two-loop calculation | 0/4 | `░░░░░░░░░░` 0% | Planned |
+| Complete two-loop calculation | 0/4 | `░░░░░░░░░░` 0% | In progress |
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 263. **Total lines of Lean code:** 38,332.
+**Tracked Lean source files:** 281. **Total lines of Lean code:** 39,101.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.

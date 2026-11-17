@@ -1600,3 +1600,72 @@ usual review and approval.
 
 **Scope.** These are design rulings. Every exact declaration goes through the
 usual review and approval.
+
+## D-38. Packet T1 approved (author ruling)
+
+**Ruling.** On 2026-11-17 the author approved packet T1, the Wick model at
+two loops, as written. The approved text was the untracked scratch file with
+SHA-256 `187beadd22438d5395ee6744a6e0719fde0c71a888f3971b1cd2a2edf6ea8549`.
+Packet 6a's parameters, contractions, flavorings, signs, lines, labels,
+connectivity, `IsOnePI` and external momenta are reused unchanged.
+
+Definitions, frozen in `QED/Frozen/TwoLoop/`:
+
+- **(T₉), (T₉′)** `QED.TwoLoop.jointEnergyFirstIntegral` and
+  `jointEnergyFirstIntegrable`: the joint energy-first integral of D-37.5 for
+  `L` loop momenta (all energies first, then all spatial components) and the
+  integrability of both its stages.
+- **(T₁)–(T₃)** `IsChord`, `loopCount`, `chordMomentum`: a line is a chord
+  when its ends are joined by lines of larger label (the complement of the
+  spanning forest of maximal total label, O2-5's greedy rule); the number of
+  loops is the number of chords; the chords, ordered by label, carry `ℓ 0`,
+  `ℓ 1`, ….
+- **(T₄)–(T₈)** `lineMomentum₂`, `psiMomentum₂`, `photonMomentum₂`,
+  `contractionAmplitude₂`, `regulatedAmplitude₂`: the routing with several
+  loop momenta (rule 8, CK-R (11)–(16)), and the amplitude as a function of
+  the line momenta.
+- **(T₁₀), (T₁₁)** `contractionValue₂`, `onePIFunction₂`: the value of a
+  contraction with `loopCount C` loop momenta, and the 1PI function, the
+  successor of (X₂₈).
+
+Theorem goals, frozen as `DRAFT_SORRY` with stub providers in
+`QED/Provider/TwoLoop/`:
+
+- **(T₁₂)** `QED.TwoLoop.jointEnergyFirstIntegral_one`: at one loop the joint
+  prescription is the frozen (D).
+- **(T₁₃)** `QED.WickModel.contractionValue₂_eq_contractionValue`: a
+  contraction with at most one loop has its packet 6a value.
+- **(T₁₄)** `QED.WickModel.onePIFunction₂_eq_onePIFunction`: through order
+  `K ≤ 2 nf + nA + 1` the new 1PI function is packet 6a's (O2-9).
+
+**Design choices.** The author accepted all seven presented:
+
+1. chords from the maximal-label spanning forest;
+2. loop momenta indexed by `Fin L`;
+3. the loop count computed, not capped;
+4. an amplitude that takes the line momenta as an argument;
+5. one joint integral for any number of loops;
+6. one routing for every contraction, with the one-loop agreement a theorem;
+7. the 1PI function only, with the connected function deferred to the LSZ
+   restatement.
+
+**Review.** An independent refute-first review, given the code and not the
+writer's reasoning, found the definitions faithful to rule 8, CK-R and
+D-36/D-37. It checked:
+
+- the chord rule against O2-5's greedy rule;
+- momentum conservation of the routing on 20,000 random contraction graphs;
+- that all three theorem goals are true.
+
+It proved (T₁₃) in scratch modulo one graph fact (with at most one loop the
+chord is the loop line (X₂₁)). Its findings, all in docstrings, were applied
+to the text the author saw.
+
+**Frozen anchors.** Fifteen files, one declaration each, with `pp.all` output
+equal to the approved file's.
+The frozen-anchor guard (`scripts/check_frozen_anchors.py`) now accepts
+Lean's subscript characters in declaration names, such as `lineMomentum₂`.
+Eight negative controls on the staged tree were all rejected: a renamed
+declaration, a changed manifest export, an import of a draft, a use of a
+draft export, a use of a provider export, an unregistered `sorry`, a seal
+without a manifest change, and a changed hypothesis.

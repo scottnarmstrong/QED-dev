@@ -21,7 +21,9 @@ from pathlib import Path
 from typing import Any
 
 HEX = re.compile(r"^[0-9a-f]{64}$")
-FQ = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)+$")
+# Lean identifiers may continue with subscript digits and letters (`lineMomentum₂`).
+SUB = "\u2080-\u209c\u1d62-\u1d6a"
+FQ = re.compile(rf"^[A-Za-z_][A-Za-z0-9_{SUB}]*(?:\.[A-Za-z_][A-Za-z0-9_{SUB}]*)+$")
 MARKERS = ("FROZEN_ANCHOR_PREFIX_BEGIN", "FROZEN_ANCHOR_PROOF_BEGIN",
            "FROZEN_ANCHOR_PROOF_END", "FROZEN_ANCHOR_SUFFIX_BEGIN",
            "FROZEN_ANCHOR_SUFFIX_END")
@@ -31,13 +33,13 @@ DECL = re.compile(
     r"(?m)^[ \t]*(?:@\[[^\]\n]*\][ \t]*)*"
     r"((?:(?:private|protected|public|noncomputable|unsafe|partial|nonrec|meta)\s+)*)"
     r"(theorem|lemma|def|abbrev|opaque|structure|class|inductive|axiom|constant|instance|example)\b"
-    r"(?:\s+([A-Za-z_][A-Za-z0-9_']*(?:\.[A-Za-z_][A-Za-z0-9_']*)*))?"
+    r"(?:\s+([A-Za-z_][A-Za-z0-9_'\u2080-\u209c\u1d62-\u1d6a]*(?:\.[A-Za-z_][A-Za-z0-9_'\u2080-\u209c\u1d62-\u1d6a]*)*))?"
 )
-NAMESPACE = re.compile(r"^[ \t]*namespace\s+([A-Za-z_][A-Za-z0-9_']*(?:\.[A-Za-z_][A-Za-z0-9_']*)*)\b")
+NAMESPACE = re.compile(r"^[ \t]*namespace\s+([A-Za-z_][A-Za-z0-9_'\u2080-\u209c\u1d62-\u1d6a]*(?:\.[A-Za-z_][A-Za-z0-9_'\u2080-\u209c\u1d62-\u1d6a]*)*)\b")
 SECTION = re.compile(
     r"^[ \t]*(?:@\[[^\]\n]*\][ \t]*)*((?:(?:public|private|noncomputable)\s+)*)"
-    r"section(?:\s+[A-Za-z_][A-Za-z0-9_']*(?:\.[A-Za-z_][A-Za-z0-9_']*)*)?[ \t]*$")
-END = re.compile(r"^[ \t]*end(?:\s+[A-Za-z_][A-Za-z0-9_']*(?:\.[A-Za-z_][A-Za-z0-9_']*)*)?[ \t]*$")
+    r"section(?:\s+[A-Za-z_][A-Za-z0-9_'\u2080-\u209c\u1d62-\u1d6a]*(?:\.[A-Za-z_][A-Za-z0-9_'\u2080-\u209c\u1d62-\u1d6a]*)*)?[ \t]*$")
+END = re.compile(r"^[ \t]*end(?:\s+[A-Za-z_][A-Za-z0-9_'\u2080-\u209c\u1d62-\u1d6a]*(?:\.[A-Za-z_][A-Za-z0-9_'\u2080-\u209c\u1d62-\u1d6a]*)*)?[ \t]*$")
 PLACEHOLDER = re.compile(r"\b(?:sorry|admit)\b")
 MODULE_KEYWORD = re.compile(r"module(?![\w'.!?])")
 
@@ -567,7 +569,7 @@ class Guard:
                     if isinstance(values, list):
                         approved.update((self.root / value).resolve() for value in values if isinstance(value, str))
             module, export = self.module_name(frozen), anchor.get("export", "")
-            token = re.compile(r"(?<![A-Za-z0-9_.])" + re.escape(export) + r"(?![A-Za-z0-9_.])")
+            token = re.compile(r"(?<![A-Za-z0-9_.\u2080-\u209c\u1d62-\u1d6a])" + re.escape(export) + r"(?![A-Za-z0-9_.\u2080-\u209c\u1d62-\u1d6a])")
             # A malformed implementation was already reported by implementation_path; never let it
             # crash this pass or turn an empty export into a pattern that matches every file.
             implementation_data = anchor.get("implementation")
@@ -577,7 +579,7 @@ class Guard:
             provider_export = implementation_data.get("export")
             if not isinstance(provider_module, str) or not provider_module:
                 provider_module = None
-            provider_token = (re.compile(r"(?<![A-Za-z0-9_.])" + re.escape(provider_export) + r"(?![A-Za-z0-9_.])")
+            provider_token = (re.compile(r"(?<![A-Za-z0-9_.\u2080-\u209c\u1d62-\u1d6a])" + re.escape(provider_export) + r"(?![A-Za-z0-9_.\u2080-\u209c\u1d62-\u1d6a])")
                               if isinstance(provider_export, str) and provider_export else None)
             provider_approved = {frozen.resolve()}
             if implementation is not None:
