@@ -330,11 +330,14 @@ $|t|^{-12}$ overall.
   limits in $\varepsilon$ for the subloop and the outer loop).
 - **O2-9 (embedding).** The analogue of (Y₁) for the successor model (single real
   counterterms in `Params` with the frozen order labels, D-37.3; two-loop routing; the joint
-  prescription, D-37.5; section 7 carriers): at total order at most 3 it reproduces packet
-  6a, that is the same contractions
+  prescription, D-37.5; section 7 carriers): at total order $K\le 2n_f+n_A+1$ (the frozen
+  source-facing bound, which includes the vertex at $K=3$) it reproduces packet 6a, that is
+  the same contractions
   with the same values, the order-$e^2$ counterterm data and the frozen predicates (Z₅),
   (Z₈), (K₀); and the joint prescription of O2-6, applied to one-loop data, is the frozen
-  (D). Without it the two-loop statements would not be about the frozen model. Theorem;
+  (D). (Order at most 3 alone is not enough: two-loop 1PI contractions exist with no
+  externals at order 2 and with one external photon at order 3.) Without it the two-loop
+  statements would not be about the frozen model. Theorem;
   low–moderate (mostly definitional, but the kind sequences summed over change).
 
 ### 4.4 Feynman parametrization at two loops
