@@ -1759,3 +1759,43 @@ refute-first audit found it PROVED:
 
 The seal certifies the provisional text. If the author amends (U₂), it gets a
 versioned successor.
+
+## D-40. Packet T4 frozen provisionally (author approval pending)
+
+**Status.** Provisional, under the overnight instruction recorded in D-39. It
+was frozen **without the author having seen its text**, and its manifest
+entry records the approval as provisional.
+
+The frozen text is the untracked scratch file with SHA-256
+`12ca5be0736828eaa211401f3eb0879b65ac00805001c2d9f83e4fe925a87d69`:
+
+- **(WI₁)** `QED.WickModel.δ₁_eq_δ₂`, the one-loop Ward identity Z₁ = Z₂ at
+  fixed regulators (Srednicki (68.13) and the on-shell paragraph after it,
+  p. 405; O2-15; D-37.2). For `e ≠ 0` and `m, m_γ, Λ > 0`, if the electron is
+  on shell (Z₅) and the charge condition (K₀) holds with `Z₁ = 1 + δ₁`, then
+  `δ₁ = δ₂`. It is frozen as `DRAFT_SORRY`. Its provider is already written,
+  from `QED/TwoLoop/WardIdentity.lean`, and awaits the seal audit.
+
+**Review.** An independent refute-first review recommended approval. It
+checked:
+
+- the source, and the normalization δᵢ = Zᵢ − 1;
+- that each hypothesis is necessary: Lean counterexamples without `he`,
+  without (Z₅) and without (K₀);
+- the docstring claims;
+- the choice of (K₀) over the LSZ form, which follows through (L₄′);
+- that the helper proves exactly this statement, and that its mathematics is
+  sound, with an independent quadrature giving zero to 10⁻³¹.
+
+Its nits were applied:
+
+- the citation of the on-shell paragraph on p. 405;
+- the name `δ₁_eq_δ₂` instead of `delta₁_eq_delta₂`, matching the field
+  names;
+- the remark that `ε` and `δ₃` play no role.
+
+The frozen-anchor guard now also accepts Lean identifiers that begin with a
+Greek letter (other than λ, Π, Σ), such as `δ₁_eq_δ₂`. Seven negative
+controls with Greek names were all rejected: a renamed declaration, a
+changed export, a use of the draft, a use of its provider, a `sorry`, a seal
+without a manifest change, and a changed hypothesis.

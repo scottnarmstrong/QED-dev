@@ -257,6 +257,10 @@
     {
       "date": "2026-11-17",
       "change": "(U2) sealed on its provisional text after an independent audit: -0.3285 < A1(4) < -0.3284, by a 40-term zeta(3) partial sum with telescoping tail bounds and Mathlib bounds on pi and ln 2."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "Overnight mode: packet T4, the one-loop Ward identity delta1 = delta2 as a source-facing theorem goal (O2-15, D-37.2), frozen provisionally after independent review; author approval pending (D-40)."
     }
   ],
   "tracks": [
