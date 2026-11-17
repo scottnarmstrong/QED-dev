@@ -265,6 +265,10 @@
     {
       "date": "2026-11-17",
       "change": "Order separation for single real counterterms proved (O2-27 items 1-2): at fixed regulators the on-shell and charge conditions fix delta_i = e^2 d_i with d_i the values at e = 1 (e != 0 for the charge condition), each vertex factor scales as e^order, and the order-exactly-5 part of the two-loop 1PI function is e^5 times its value at e = 1."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "(WI1), the one-loop Ward identity delta1 = delta2, sealed on its provisional text after an independent audit (D-40). The frozen-anchor guard now checks the end of declaration names and covers all Lean letter-like identifier ranges."
     }
   ],
   "tracks": [

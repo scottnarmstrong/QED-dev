@@ -24,10 +24,10 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 1 — QED/Frozen/TwoLoop/WardIdentity.lean (WI₁), frozen provisionally (D-40)
+DRAFT_ANCHORS: 0
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 1 theorem — QED.TwoLoop.a1Four_bounds (U₂), on its provisional text (D-39); PROVED
+SEALED_THIS_TURN: 1 theorem — QED.WickModel.δ₁_eq_δ₂ (WI₁), on its provisional text (D-40); PROVED
                (guard, build, standard axioms, independent refute-first audit)
 ```
 

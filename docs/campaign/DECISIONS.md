@@ -1799,3 +1799,20 @@ Greek letter (other than λ, Π, Σ), such as `δ₁_eq_δ₂`. Seven negative
 controls with Greek names were all rejected: a renamed declaration, a
 changed export, a use of the draft, a use of its provider, a `sorry`, a seal
 without a manifest change, and a changed hypothesis.
+
+**(WI₁) sealed** (on its provisional text), by its provider from the parametric
+Ward identity. An independent refute-first audit found it PROVED:
+
+- only the proof line and the manifest state changed, with about 25
+  deliberate mutations rejected, including some on Greek-letter names;
+- after erasing the D-13 conventions, the provider and frozen types are
+  `Expr.eqv`;
+- the ABI hash was recomputed;
+- no draft is in the provider's import closure;
+- standard axioms only.
+
+The audit also found a guard weakness that predates this packet: the guard
+did not check where a declaration name ends, so a name followed by further
+identifier characters (`δ₁_eq_δ₂ϊ`, `δ₁_eq_δ₂!`) was read as the shorter
+name. The guard now checks that boundary and covers all of Lean's letter-like
+ranges. Six mutations of this kind are rejected.

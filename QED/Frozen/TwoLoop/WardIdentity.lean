@@ -27,7 +27,7 @@ theorem δ₁_eq_δ₂ (P : Params) (he : P.e ≠ 0) (hm : 0 < P.m) (hmγ : 0 < 
     (hK : QED.OneLoop.IsChargeNormalized P.e (1 + P.δ₁) P.m P.mγ P.Λ hm hmγ hΛ) :
     P.δ₁ = P.δ₂ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.TwoLoop.δ₁_eq_δ₂
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 
