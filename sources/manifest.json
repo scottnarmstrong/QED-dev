@@ -60,7 +60,7 @@
     },
     {
       "id": "bmr-1972-II",
-      "role": "primary, two loops (exact fourth-order evaluation with Pauli-Villars and photon mass; D-36)",
+      "role": "primary, two loops (dispersive fourth-order form factors with a photon mass, part II; D-36)",
       "citation": "R. Barbieri, J. A. Mignaco, E. Remiddi, 'Electron form factors up to fourth order. II', Nuovo Cimento A 11 (1972) 865-916, doi:10.1007/BF02728546",
       "url": "https://doi.org/10.1007/BF02728546",
       "retrieved_utc": "2026-11-17T13:53:00Z",
@@ -115,7 +115,7 @@
     },
     {
       "id": "bmr-1972-I",
-      "role": "primary, two loops (fourth-order form factors with Pauli-Villars and photon mass, part I; D-36)",
+      "role": "primary, two loops (dispersive fourth-order form factors with a photon mass, part I; per-graph exact values; D-36)",
       "citation": "R. Barbieri, J. A. Mignaco, E. Remiddi, 'Electron form factors up to fourth order. I', Nuovo Cimento A 11 (1972) 824-864, doi:10.1007/BF02728545",
       "url": "https://doi.org/10.1007/BF02728545",
       "retrieved_utc": "2026-11-17T14:09:00Z",
@@ -126,7 +126,7 @@
     },
     {
       "id": "petermann-1958",
-      "role": "background (original exact fourth-order result)",
+      "role": "background (bounds on the fourth-order coefficient, (-0.39 +- 0.11) alpha^2/pi^2; not the exact evaluation)",
       "citation": "A. Petermann, 'Fourth order magnetic moment of the electron', Nucl. Phys. 5 (1958) 677-683, doi:10.1016/0029-5582(58)90065-8",
       "url": "https://doi.org/10.1016/0029-5582(58)90065-8",
       "retrieved_utc": "2026-11-17T14:09:00Z",

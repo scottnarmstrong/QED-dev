@@ -126,18 +126,21 @@ recorded (D-2).
 
 | Id | Citation | Role | Size / SHA-256 |
 | --- | --- | --- | --- |
-| `bmr-1972-II` | R. Barbieri, J. A. Mignaco, E. Remiddi, 'Electron form factors up to fourth order. II', Nuovo Cimento A 11 (1972) 865-916, doi:10.1007/BF02728546 | primary, two loops (exact fourth-order evaluation with Pauli-Villars and photon mass; D-36) | 1887985 / `754521816701f5cdc1c715eacb37f1965b9374069f1857f0210e7fa6553f0a12` |
+| `bmr-1972-II` | R. Barbieri, J. A. Mignaco, E. Remiddi, 'Electron form factors up to fourth order. II', Nuovo Cimento A 11 (1972) 865-916, doi:10.1007/BF02728546 | primary, two loops (dispersive fourth-order form factors with a photon mass, part II; D-36) | 1887985 / `754521816701f5cdc1c715eacb37f1965b9374069f1857f0210e7fa6553f0a12` |
 | `ck-1974-rules` | P. Cvitanovic, T. Kinoshita, 'Feynman-Dyson rules in parametric space', Phys. Rev. D 10 (1974) 3978-3991, doi:10.1103/PhysRevD.10.3978 | primary, two loops (parametric representation; D-36) | 970322 / `d409f88d89d7030f77b7347d6c5c274e41ad380abda512b6fec0a02f8c8d059a` |
 | `ck-1974-uvir` | P. Cvitanovic, T. Kinoshita, 'New approach to the separation of ultraviolet and infrared divergences of Feynman-parametric integrals', Phys. Rev. D 10 (1974) 3991-4006, doi:10.1103/PhysRevD.10.3991 | primary, two loops (separation of UV and IR divergences; D-36) | 1128814 / `a41d3c61cb0340582de7821f9c3df30de9bfea586e80ceec833a7537a405d25e` |
 | `bmr-2004` | R. Bonciani, P. Mastrolia, E. Remiddi, 'QED vertex form factors at two loops', arXiv:hep-ph/0307295v1 (2003); Nucl. Phys. B 676 (2004) 399. Equation numbers may differ between arXiv v1 and the journal | independent check of the two-loop result (dimensional regularization; D-36) | 408068 / `bbca5de6cc0aa3d4d76fff0cbd8230614c8b6c91ade446a315b0b8472429f6c5` |
 | `passera-2007` | M. Passera, 'Precise mass-dependent QED contributions to leptonic g-2 at order alpha^2 and alpha^3', Phys. Rev. D 75 (2007) 013002, arXiv:hep-ph/0606174v2 | background (mass-dependent terms and the fourth-order closed forms) | 124148 / `3761261045e2fdcf7495a529e8cac31275ad8ee1e85b979c6f9fe6e1e29631f6` |
-| `bmr-1972-I` | R. Barbieri, J. A. Mignaco, E. Remiddi, 'Electron form factors up to fourth order. I', Nuovo Cimento A 11 (1972) 824-864, doi:10.1007/BF02728545 | primary, two loops (fourth-order form factors with Pauli-Villars and photon mass, part I; D-36) | 1600862 / `7383eafdfcbea58e688df1f96d96f6ed192b8255397cfad2429fc211cec25859` |
-| `petermann-1958` | A. Petermann, 'Fourth order magnetic moment of the electron', Nucl. Phys. 5 (1958) 677-683, doi:10.1016/0029-5582(58)90065-8 | background (original exact fourth-order result) | 325677 / `687b181f00348c3a85330f67f2e2792994a5800105a6f3cf47dd63ee44390625` |
+| `bmr-1972-I` | R. Barbieri, J. A. Mignaco, E. Remiddi, 'Electron form factors up to fourth order. I', Nuovo Cimento A 11 (1972) 824-864, doi:10.1007/BF02728545 | primary, two loops (dispersive fourth-order form factors with a photon mass, part I; per-graph exact values; D-36) | 1600862 / `7383eafdfcbea58e688df1f96d96f6ed192b8255397cfad2429fc211cec25859` |
+| `petermann-1958` | A. Petermann, 'Fourth order magnetic moment of the electron', Nucl. Phys. 5 (1958) 677-683, doi:10.1016/0029-5582(58)90065-8 | background (bounds on the fourth-order coefficient, (-0.39 +- 0.11) alpha^2/pi^2; not the exact evaluation) | 325677 / `687b181f00348c3a85330f67f2e2792994a5800105a6f3cf47dd63ee44390625` |
 | `akn-2019` | T. Aoyama, T. Kinoshita, M. Nio, 'Theory of the anomalous magnetic moment of the electron', Atoms 7 (2019) 28, doi:10.3390/atoms7010028 (publisher PDF, version 2) | primary, two loops (open worked example of the parametric method; D-36) | 577052 / `3a1009f2b02501fc1592202c96a5562e1a2eb639ac4035ed384ae35583d6a438` |
 
 Still wanted: Kinoshita, "Theory of the anomalous magnetic moment of the electron –
 numerical approach", in *Quantum Electrodynamics* (World Scientific 1990), pp. 218–321
 (doi:10.1142/9789814503273_0007).
+Also wanted for the exact evaluation: Petermann, Helv. Phys. Acta 30 (1957) 407, and
+Sommerfield, Ann. Phys. 5 (1958) 26 (doi:10.1016/0003-4916(58)90003-4), the original
+exact fourth-order results.
 
 ## Physical input: the fine-structure constant
 
