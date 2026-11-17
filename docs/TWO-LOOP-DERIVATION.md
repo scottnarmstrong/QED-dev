@@ -380,7 +380,11 @@ matrix independently (section 10).
   $\sum z_i(1-A_i)$ plus photon-mass terms, with $A_i$ a current fraction. Theorem;
   **moderate–high risk**: a uniform lower bound, including at faces where $U\to0$, is
   unproved and has not been located in a pinned source. O2-22 needs it uniformly for small
-  $q^2\ge0$.
+  $q^2\ge0$. **Status:** numerically positive for all nine classes, with minimum
+  $m_\gamma^2(1-m_\gamma^2/4m^2)$ approached along edges where $U\to0$, and nondecreasing in $q^2$;
+  **proved for L and X** at every spacelike $q^2$ (`QED/Integration/SymanzikPositivity.lean`,
+  current-fraction form of CK-UV), for the loop matrices of the class representatives. The
+  other classes remain.
 
 ## 5. Stage 3 — Subtraction at fixed regulators
 

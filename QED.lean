@@ -95,6 +95,7 @@ public import QED.Integration.SpatialIntegralSix
 public import QED.Integration.TwoLoopParametric
 public import QED.Integration.SymanzikIntegrabilityParametric
 public import QED.Integration.SymanzikIntegrabilityClasses
+public import QED.Integration.SymanzikPositivity
 public import QED.WickModel.CompatibilityLines
 public import QED.WickModel.Compatibility
 public import QED.Frozen.WickModel.WickVertexEqOnePIFunction
