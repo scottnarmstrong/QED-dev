@@ -10,11 +10,16 @@ its proof obligations exposed. Nothing here is a Lean declaration, and nothing h
 approved, frozen, or proved. This is the two-loop analogue of
 [ONE-LOOP-DERIVATION.md](ONE-LOOP-DERIVATION.md). Revised after an independent refute-first
 review (2026-11-17), whose findings are folded in: the order of limits (section 5.6), new
-obligations, and the AHKN errata (section 9). Notation and conventions are the
-project's ([CONVENTIONS.md](CONVENTIONS.md)): mostly-plus metric, $e<0$, $q=p'-p$,
-$r=\alpha/\pi=e^2/4\pi^2$, a Pauli–Villars photon of mass $\Lambda$, a photon mass
-$m_\gamma$, Pauli–Villars regulator fermions of masses $M_1,M_2$ with closed-loop
-coefficients $c_1,c_2$ (D-22), and energy-first loop integrals (D-5, M1).
+obligations, and the AHKN errata (section 9). Aligned with the author's follow-up rulings
+D-37 (2026-11-17; section 8): the open design questions are now rulings, the counterterms
+stay single real numbers with the order separation as obligation O2-27, and the
+regulator-fermion masses are removed last. Section 11 records a numerical validation of the
+units at finite regulators (2026-11-17): every unit reproduces BMR-I's per-graph value.
+Notation and conventions are the project's ([CONVENTIONS.md](CONVENTIONS.md)):
+mostly-plus metric, $e<0$, $q=p'-p$, $r=\alpha/\pi=e^2/4\pi^2$, a Pauli–Villars photon
+of mass $\Lambda$, a photon mass $m_\gamma$, Pauli–Villars regulator fermions of masses
+$M_1,M_2$ with closed-loop coefficients $c_1,c_2$ (D-22), and energy-first loop integrals
+(D-5, M1).
 
 Obligations are numbered **O2-1, O2-2, …**. As at one loop, each is something the project
 must **prove**, or, where marked, **define** after author approval. None may be added as a
@@ -111,17 +116,23 @@ What is one-loop specific:
    frozen `energyFirstIntegral` (D).
 4. **Counterterms.** `Params` holds single real numbers $\delta_1,\delta_2,\delta_m,\delta_3$,
    and `VertexKind.order` fixes `gaugeCt` at order 3 and `fermionCt`, `photonCt` at order 2
-   (D-19). At $K=5$ the counterterm `gaugeCt` occurs inside one-loop graphs, so a single real
-   $\delta_1$ fixed by an exact truncated charge condition solves a rational, not a
-   polynomial, equation in $e$ and produces spurious higher-order terms. The order-$e^4$
-   parts must be separate data (section 8, question 2).
+   (D-19). At $K=5$ the counterterm `gaugeCt` occurs inside one-loop graphs. D-37.3 keeps
+   each counterterm a single real number and truncates the expansion; graded coefficients
+   were not adopted. If the conditions fixing $\delta_i$ are the frozen one-loop ones, they
+   are linear in $\delta_i$ with a source proportional to $e^2$, so $\delta_i=e^2d_i$ with
+   $d_i$ independent of $e$. If a condition were imposed on a function truncated at order 5
+   (as an order-$e^5$ charge condition or the later LSZ form would need), $\delta_1$ would
+   solve a rational, not a polynomial, equation in $e$ and the truncated vertex would carry
+   spurious higher-order terms. Either way, separating the orders is a proof obligation
+   (O2-27; section 8, ruling 3).
 5. **Regulator fermions.** D-32 keeps $M_1,M_2$ fixed. At two loops they enter $F_2$
-   through the VP insertion and must be removed by a limit $M_f\to\infty$ (D-36).
+   through the VP insertion and must be removed by a limit $M_f\to\infty$ (D-36), taken
+   last (D-37.4).
 
 ## 3. Stage 1 — Enumeration at order $e^5$
 
 The object is the 1PI electron–electron–photon function (62.39) at total order exactly 5
-(section 8, question 6), $n_f=n_A=1$.
+(D-37.6; section 8, ruling 6), $n_f=n_A=1$.
 
 ### 3.1 Contractions without counterterms (five `gauge` vertices)
 
@@ -166,12 +177,18 @@ With `gaugeCt` of order 3 and `fermionCt`, `photonCt` of order 2, order 5 allows
 | $\delta_1$ (`gaugeCt`) | any of the three vertices of the one-loop graph | 3 | $\delta_1\times$ one-loop vertex |
 | $\delta_2,\delta_m$ (`fermionCt`) | either internal electron line of the one-loop graph | 2 | see O2-13 |
 | $\delta_3$ (`photonCt`) | the internal photon line | 1 (two slot pairings, D-24) | see O2-13, O2-14 |
-| $\delta_1^{(4)}$ (order-5 `gaugeCt`, new) | tree | 1 | $\gamma^\mu$ only |
 
 Two counterterm vertices, or one counterterm with one gauge vertex, give only trees with
-bridges. Order-$e^4$ parts of $\delta_2,\delta_m,\delta_3$ cannot appear in the 1PI vertex at
-order 5 (their only contraction has a bridge). They are needed only for the LSZ form
-(section 8, question 5).
+bridges. With single real counterterms and the frozen order labels (D-37.3), no counterterm
+contraction of total order 5 is a tree: the tree `gaugeCt` vertex has order 3 and occurs
+only at total order 3. So the order-5 1PI function has no counterterm proportional to
+$\gamma^\mu$ alone, and the overall divergence of the two-loop vertex (5.2) is not subtracted
+in it. At fixed regulators that part is finite; it is expected to reach $F_1$ only (O2-16),
+which the 1PI headline does not constrain. An order-5 tree counterterm would be a new
+vertex kind, which D-37.3 does not introduce. Order-$e^4$ information on
+$\delta_2,\delta_m,\delta_3$ cannot appear in the 1PI vertex at order 5 either (their only
+contraction has a bridge). It matters only for the later LSZ restatement (D-37.6; section 8,
+ruling 6), where it must be handled within O2-27.
 
 The counterterm placements match the UV-divergent one-loop subgraphs one to one: the
 three vertex subgraphs (the inner rung of L with the external vertex, and the subvertices of
@@ -191,7 +208,7 @@ pairings are separate contractions (V₁₉). Signs: no closed loop gives $+1$ r
 tree; a closed loop gives $-1$ (X₅).
 
 - **O2-2 (enumeration).** The order-5 1PI vertex at fixed $\varepsilon>0$ equals the sum
-  of the nine contraction classes of 3.1 and the seven of 3.2, each with coefficient one and
+  of the nine contraction classes of 3.1 and the six of 3.2, each with coefficient one and
   the stated sign. This generalizes packet 5's classification and (Y₁). Theorem; finite
   combinatorics, moderate size (the review notes that the cost of deciding the
   classification in Lean at $N=5$ may push it higher). Source: Srednicki ch. 58 rules;
@@ -267,6 +284,9 @@ Write $\ell_s=(t_s,\vec v_s)$. Two prescriptions extend M1:
 - **Nested:** `energyFirstIntegral` applied twice, $\int d^3v_2\int dt_2\int d^3v_1\int dt_1
   f_\varepsilon$.
 
+D-37.5 adopts the joint prescription (section 8, ruling 5); nested values are theorems for
+the insertion classes (O2-8).
+
 **The analogue of finding F-1** (numerics, section 10). After Feynman parametrization the
 combined denominator is $-t^{\mathsf T}At+w$ with $A=(U_{st})$ positive definite and
 $w=\vec v^{\mathsf T}A\vec v+V-i\varepsilon$. At one loop, F-1 showed that the absolute
@@ -308,9 +328,10 @@ $|t|^{-12}$ overall.
   (Σ, Π at fixed $\varepsilon$, then $\varepsilon\to0^+$, as appropriate). This is needed to
   reuse the frozen self-energy and vacuum polarization. Theorem; moderate–high (exchange of
   limits in $\varepsilon$ for the subloop and the outer loop).
-- **O2-9 (embedding).** The analogue of (Y₁) for the successor model (order-labelled
-  counterterm kinds or graded `Params`, two-loop routing, the joint prescription; section 7
-  carriers): at total order at most 3 it reproduces packet 6a, that is the same contractions
+- **O2-9 (embedding).** The analogue of (Y₁) for the successor model (single real
+  counterterms in `Params` with the frozen order labels, D-37.3; two-loop routing; the joint
+  prescription, D-37.5; section 7 carriers): at total order at most 3 it reproduces packet
+  6a, that is the same contractions
   with the same values, the order-$e^2$ counterterm data and the frozen predicates (Z₅),
   (Z₈), (K₀); and the joint prescription of O2-6, applied to one-loop data, is the frozen
   (D). Without it the two-loop statements would not be about the frozen model. Theorem;
@@ -367,8 +388,10 @@ quantities. It does not mean defining new objects by subtraction.
 
 ### 5.1 Counterterm insertion identities
 
-Write $\delta_i=e^2d_i+O(e^4)$, with $d_i$ the order-$e^2$ coefficients fixed by (Z₆),
-(Z₉) and the charge condition (K₀) (or its LSZ form (L₄)). The vertex factor of
+Write $\delta_i=e^2d_i$, with $d_i$ the order-$e^2$ coefficients fixed by (Z₆),
+(Z₉) and the charge condition (K₀) (or its LSZ form (L₄)). The counterterms are single real
+numbers (D-37.3); that they have this form, and that the coefficient below is what the
+truncated vertex delivers, is obligation O2-27. The vertex factor of
 `fermionCt` is $-i(\delta_2\not k+\delta_mm)$ (V₁₉). Since
 $(\not k+m)(-\not k+m)=k^2+m^2$,
 $$\tfrac1i\tilde S\,[-i(\delta_2\not k+\delta_mm)]\,\tfrac1i\tilde S
@@ -413,9 +436,38 @@ on the mirror-closed units of 5.2 it is the Pauli component of (G₀).
   Pauli–Villars photon preserves it (REGULARIZATION.md, route B row). Theorem; moderate.
   Source: Srednicki (68.13) (statement); AKN (29)–(30) and AHKN (4.29)–(4.30) (the
   Ward–Takahashi identity used to sum vertex graphs); BMR04 section 4 ("$Z_2^{(1l)}=-Z_1^{(1l)}$
-  due to the Ward identity", their sign convention). See section 8, question 1.
+  due to the Ward identity", their sign convention). Ruling: proved, not imposed (D-37.2;
+  section 8, ruling 2).
 
 With O2-15, the $\delta$-terms reduce to $d_1F_2^{(2)}+(d_2-d_m)F_2^*-d_3F_2^{(\gamma)}$.
+
+- **O2-27 (order separation for single real counterterms; added for D-37.3).** The
+  counterterms are the single real numbers $\delta_1,\delta_2,\delta_m,\delta_3$ of `Params`,
+  fixed at fixed regulators by the frozen conditions (Z₆), (Z₉) and (K₀), and the expansion is
+  truncated: $V^{\mu,[5]}$ is the sum over contractions of total order exactly 5, with the same
+  $\delta_i$ as at order 3. Prove:
+  1. **Homogeneity.** The frozen conditions concern one-loop functions ((Z₄), (Z₇) and the
+     order-$\le3$ vertex). They are linear in the $\delta_i$, with sources proportional to
+     $e^2$ (for (K₀): $e\delta_1\gamma^\mu+e^3\Lambda^\mu(p,p)=0$ between on-shell spinors).
+     With the uniqueness in (Z₆), (Z₉) and that of the charge condition, $\delta_i=e^2d_i$
+     with $d_i$ independent of $e$ at fixed regulators.
+  2. **Extraction.** Consequently $V^{\mu,[5]}=e^5W^\mu$ with $W^\mu$ independent of $e$, and
+     its Pauli form factor in the normalization of (63.18), which carries an overall $e$, is
+     $e^4\hat F_2$. So $[e^4]F_2:=\hat F_2$ is a coefficient, exactly the order-$e^4$ quantity
+     of 5.1–5.6 with $d_i$ in place of the counterterms, and no limit in $e$ is needed.
+  3. **If a condition is truncated at order 5.** An order-$e^5$ charge condition, or the
+     on-shell conditions the later LSZ restatement needs (D-37.6), would make $\delta_i$ a
+     rational function of $e^2$ with $\delta_i=e^2d_i+O(e^4)$, and the truncated vertex would
+     carry spurious terms of order $e^7$ and beyond. Then $[e^4]F_2$ must be defined either as
+     a Taylor coefficient at $e=0$ of the truncated Pauli coefficient (after proving its
+     regularity in $e$) or as the limit $e\to0$ of its order-$e^4$ remainder quotient at fixed
+     regulators, and shown to equal that quantity.
+
+  Items 1–2 are the cleaner route and suffice for the 1PI headline; item 3 is needed only if
+  the successor model imposes a condition on an order-5 function. Which conditions it imposes
+  is a choice to be settled, with the author and the reviewers, when the declarations are
+  drafted. Theorem; low for items 1–2 (linear algebra on the frozen existence and uniqueness
+  theorems), moderate for item 3.
 
 ### 5.2 Units and their UV cancellation
 
@@ -433,13 +485,17 @@ divergent subgraphs (section 3.2):
 Each unit is closed under the mirror of 3.1, which is what O2-21 needs to give each unit a
 form-factor pair of its own.
 
-The overall divergence of the two-loop vertex is proportional to $\gamma^\mu$ and is absorbed
-by $\delta_1^{(4)}$, so it does not reach $F_2$ (CK-UV p. 3995: the overall degree;
-AKN p. 17: "it does not suffer from an overall divergence ... dropped when the anomalous
-magnetic moment contribution is projected out").
+The overall divergence of the two-loop vertex is proportional to $\gamma^\mu$, so it does not
+reach $F_2$ (CK-UV p. 3995: the overall degree; AKN p. 17: "it does not suffer from an
+overall divergence ... dropped when the anomalous magnetic moment contribution is projected
+out"). With single real counterterms (D-37.3) no order-5 tree counterterm absorbs it (3.2);
+at fixed regulators it is a finite part of $F_1$, which may grow as $\Lambda\to\infty$.
 
-- **O2-16 ($\delta_1^{(4)}$ and $F_1$).** The order-5 tree counterterm is a multiple of
-  $\gamma^\mu$ and contributes to $F_1$ only (the analogue of O-8). Theorem; trivial.
+- **O2-16 (the overall divergence and $F_1$).** The part of the order-5 1PI function that
+  carries the overall divergence of each unit contributes to $F_1$ only, so the Pauli
+  coefficient needs no order-5 tree counterterm. In route A this is the statement that the
+  $\Lambda$-growth of each unit sits in its $\gamma^\mu$ component (the analogue of O-8, now
+  without a counterterm to cite). Theorem; low, part of O2-17.
 - **O2-17 (UV cancellation per unit).** For each unit, its contribution to $[e^4]F_2$ at
   fixed $m_\gamma$ (and, for VP, fixed $M_f$) has a finite limit as $\Lambda\to\infty$. The
   standard proof is parametric: as the parameters of a divergent subgraph $S$ scale to zero,
@@ -486,6 +542,8 @@ source: the decision record).
   superposition of one-loop vertices. The superposition is exact only at $m_\gamma=0$,
   $\Lambda=\infty$; at finite regulators $k^2D^2$ is not a single propagator, and the
   difference must be shown to vanish in the regulator limit, as in the computation above.
+  Partial fractions in $k^2$ give the finite-regulator value exactly in terms of the
+  one-loop $F_2$ of a massive photon and its mass derivative (section 11.6, item 4).
   Theorem; moderate. Its limit for the electron flavour is
   $$\int_0^1dv\,\frac{v^2(1-v^2/3)}{1-v^2}\int_0^1dx\,\frac{x^2(1-x)}{x^2+(1-x)\,\frac{4}{1-v^2}}
   =\frac{119}{36}-\frac{\pi^2}{3}$$
@@ -493,23 +551,31 @@ source: the decision record).
   $\lambda$, $\lambda^2/m^2=4/(1-v^2)$; it is the same function as $C_1$ in
   REGULARIZATION.md section 6. BMR-II (1.1)–(1.10), p. 868–869, derives the same value
   dispersively (source). The exact evaluation needs only $\zeta(2)$.
-- **O2-19 (regulator-fermion decoupling).** The flavours $f=1,2$ contribute
-  $c_1g(M_1^2)+c_2g(M_2^2)$, where $g(\mu)$ is the VP-unit contribution of one flavour of
-  squared mass $\mu$. A bound on $|g|$ alone does not suffice: $M_1=M_2$ is impossible when
+- **O2-19 (regulator-fermion decoupling).** By D-37.4 the masses $M_1,M_2$ are removed
+  last, after $q^2\to0^+$ and after $m_\gamma\to0$, $\Lambda\to\infty$ at fixed $M_f$. So the
+  object is the already-limited VP-unit contribution of one flavour of squared mass $\mu$,
+  $g(\mu)=\lim_{m_\gamma\to0,\,\Lambda\to\infty}g(\mu;m_\gamma,\Lambda)$, which exists by
+  O2-18 (at $m_\gamma=0$, $\Lambda=\infty$ it is the superposition of one-loop vertices with
+  photon masses $2\sqrt\mu/\sqrt{1-v^2}$). The flavours $f=1,2$ contribute
+  $c_1g(M_1^2)+c_2g(M_2^2)$. No uniformity in $m_\gamma$ or $\Lambda$ is needed.
+  A bound on $|g|$ alone does not suffice: $M_1=M_2$ is impossible when
   $M_f>m$ (the two Pauli–Villars conditions would force $M_f=m$), and $c_1,c_2$ blow up as
   $M_2\to M_1$. Solving the conditions,
   $c_1=(M_2^2-m^2)/(M_1^2-M_2^2)$ and $c_2=(M_1^2-m^2)/(M_2^2-M_1^2)$, so with
   $h(\mu)=g(\mu)/(\mu-m^2)$
   $$c_1g(M_1^2)+c_2g(M_2^2)=(M_1^2-m^2)(M_2^2-m^2)\,h[M_1^2,M_2^2]
   =(M_1^2-m^2)(M_2^2-m^2)\int_0^1h'\bigl(M_2^2+\theta(M_1^2-M_2^2)\bigr)\,d\theta ,$$
-  a divided difference. The obligation is therefore a **derivative bound**, for example
-  $|h'(\mu)|\lesssim m^2\mu^{-3}\ln(\mu/m^2)$ for $\mu$ beyond a threshold, uniformly in
-  $m_\gamma\in(0,m]$ and $\Lambda$ (it follows from
-  $|g|\lesssim(m^2/\mu)\ln(\mu/m^2)$ together with
+  a divided difference. The obligation is therefore a **derivative bound** on the limited
+  function, for example $|h'(\mu)|\lesssim m^2\mu^{-3}\ln(\mu/m^2)$ for $\mu$ beyond a
+  threshold (it follows from $|g|\lesssim(m^2/\mu)\ln(\mu/m^2)$ together with
   $|g'|\lesssim(m^2/\mu^2)\ln(\mu/m^2)$), which makes the contribution tend to $0$ as
-  $\min M_f\to\infty$ with no constraint on $M_2/M_1$. (A heavy lepton of mass $M$
-  contributes about $\tfrac1{45}(m/M)^2$ to $A_2^{(4)}$; **recalled**, consistent with Pas.)
-  Theorem; moderate.
+  $\min M_f\to\infty$ with no constraint on $M_2/M_1$. Because $g$ is a one-variable
+  function given by an explicit double integral (O2-18), the bound can be proved on that
+  integral directly. (A heavy lepton of mass $M$ contributes about $\tfrac1{45}(m/M)^2$ to
+  $A_2^{(4)}$; **recalled**, consistent with Pas.) One more point: the $m_\gamma\to0$,
+  $\Lambda\to\infty$ limit of the whole regulated $F_2^{(4)}(0)$ at fixed $M_f$ (O2-23) must
+  split as the $M_f$-independent units plus $c_1g(M_1^2)+c_2g(M_2^2)$, so that $M_f$ enters
+  the inner limit only through the VP unit. Theorem; moderate, lower than under a joint limit.
 
 ### 5.4 Form factors at order 5
 
@@ -530,26 +596,32 @@ source: the decision record).
   Uniqueness reuses packet 2's argument. Existence and uniqueness theorem; **moderate–high**.
 - **O2-22 ($q^2\to0^+$ at fixed regulators).** At fixed $m_\gamma>0$, $\Lambda$, $M_1,M_2$
   and the on-shell order-$e^2$ counterterms, the Pauli coefficient $\hat F_2$ of the order-5
-  vertex (question 6) has a limit as $q^2\to0^+$, uniformly over the on-shell pairs: there is
+  vertex (O2-27; D-37.6) has a limit as $q^2\to0^+$, uniformly over the on-shell
+  pairs: there is
   exactly one number $a$ such that for every $\eta>0$ there is $q_0>0$ with
   $|\hat F_2-a|<\eta$ for every pair with $0<q^2<q_0$. By O2-20, $\hat F_2$ depends on the
   pair only through $q^2$, so uniformity reduces to a one-variable limit. The proof is
   continuity of the parametric representation at $q=0$ with $m_\gamma>0$, by dominated
   convergence, using O2-12 uniformly for small $q^2$. The number $a$ defines the regulated
   coefficient $F_2^{(4)}(0;m_\gamma,\Lambda,M_1,M_2)$, with a characterization theorem.
-  $\exists!$ theorem, then definition; moderate. It is needed because the regulator limit
-  must be taken after $q^2\to0^+$ (5.6).
+  $\exists!$ theorem, then definition; moderate. It is needed because the regulator limits
+  are taken after $q^2\to0^+$ (D-37.1; 5.6). The headline is in quantifier form and does not
+  mention this number, but the proof passes through it, and later phases can reuse it.
 
 ### 5.5 Infrared structure
 
 At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
 
-- **Linear divergences** ($\propto m/m_\gamma$) arise in S from the mass insertion
-  ($\tilde S^2$ on a line adjacent to an on-shell external line). They cancel inside S
-  because of $\Sigma(-m)=0$ (Z₅), between the self-energy graphs and the whole
-  $(d_2-d_m)$ mass-insertion term of 5.1, not the $\delta_m$ insertion alone. AKN (85)–(86),
-  p. 20, and AHKN section 6 (R-subtraction) describe the same mechanism in parametric form;
-  CK-UV (4.21) and the text after it (p. 4001–4002) give the power counting.
+- **Power-like divergences** ($\propto m/m_\gamma$) are expected by power counting where a
+  mass insertion ($\tilde S^2$) sits on a line adjacent to an on-shell external line. AKN
+  (85)–(86), p. 20, and AHKN section 6 (R-subtraction) remove such a divergence from the
+  integrand of the Ward-summed self-energy form, and CK-UV (4.21) with the text after it
+  (p. 4001–4002) gives the power counting. In the route-A units, after the projection to
+  $F_2$ at $q	o0$, **none is seen** (numerics, section 11.4). The mass-insertion graph tends
+  to a finite limit, and the bare S graphs show no $1/m_\gamma$ growth. So no power-like
+  cancellation inside S is needed for $F_2$. The infrared logarithm of S comes from that of
+  $\delta_2$. (Earlier versions of this bullet asserted a linear divergence that cancels via
+  $\Sigma(-m)=0$; the numerics do not support it for $F_2$.)
 - **Logarithmic divergences at $q^2=0$** (source). BMR-I p. 852 shows $+\ln(\lambda/m)$ in
   the self-mass pair and $-\ln(\lambda/m)$ in the corner pair, and no logarithm in the
   ladder or crossed graphs. BMR-I p. 834 states: a) the VP graph has no infrared divergence;
@@ -572,16 +644,23 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   be proved unit by unit, from infrared expansions (O2-23).
 - **O2-23 (infrared limit).** Plan: per-unit infrared expansions at $q^2=0$. For each unit
   $U$, its contribution to the regulated $F_2^{(4)}(0)$ of O2-22 has the form
-  $a_U\ln(m_\gamma/m)+b_U(\Lambda,M_f)+o(1)$ as $m_\gamma\to0^+$, with the $o(1)$ uniform in
-  $\Lambda,M_f$ beyond thresholds (or combined with O2-17 in the joint limit); then
+  $a_U\ln(m_\gamma/m)+b_U(\Lambda,M_f)+o(1)$ as $m_\gamma\to0^+$, at fixed $M_f$, with the
+  $o(1)$ uniform in $\Lambda$ beyond a threshold (or combined with O2-17 in the joint limit
+  of $m_\gamma\to0$, $\Lambda\to\infty$); uniformity in $M_f$ is not needed (D-37.4); then
   $a_{\mathrm L}=a_{\mathrm X}=a_{\mathrm{VP}}=0$ (BMR-I p. 834, item a), and p. 852),
-  and $a_{\mathrm S}+a_{\mathrm C}=0$ by O2-15. Conclusion: the regulated $F_2^{(4)}(0)$ has
-  a limit as $(m_\gamma,\Lambda,M_1,M_2)\to(0,\infty,\infty,\infty)$ jointly. Theorem;
+  and $a_{\mathrm S}+a_{\mathrm C}=0$ by O2-15. **Caution (numerics, 11.3 and 11.6):** at
+  finite $\Lambda$ the coefficients of S and C alone are $\pm1$ only up to terms
+  $\pm c\,m^2/\Lambda^2$ ($c\approx0.67$), which cancel in S$+$C. So the expansion with
+  $\Lambda$-independent $a_U$ holds for the groupings S$+$C, L, X, VP, not for S and C
+  separately, and a joint limit in $(m_\gamma,\Lambda)$ exists for S$+$C but not for S or C
+  alone. State the obligation on S$+$C (as O2-25 does). Conclusion: at fixed $M_1,M_2$ the regulated
+  $F_2^{(4)}(0)$ has a limit as $(m_\gamma,\Lambda)\to(0,\infty)$, and that limit converges
+  as $M_1,M_2\to\infty$ (O2-19), the order of D-37.4; its value is O2-25's. Theorem;
   **high** effort. BMR-II (1.23)–(1.33), p. 873–875, shows that for the ladder the
   $\lambda\to0$ limit does not commute with the dispersive integration (source): route A
   must keep $m_\gamma>0$ until after the parametric integrals are combined, as D-36 says.
 
-### 5.6 Order of limits and the headline (proposed, pending the author's ruling)
+### 5.6 Order of limits and the headline (ruled, D-37)
 
 **The joint limit in $q^2$ and $m_\gamma$ does not exist at order $e^5$.** The frozen
 one-loop headlines (I) and (H) take $q^2\to0^+$ jointly with the regulator limit, one $\delta$
@@ -596,30 +675,34 @@ coefficient agrees with BMR04's pole under the standard correspondence
 $1/(D-4)\leftrightarrow\ln(\lambda/m)$ (**recalled**). With $q^2=\delta m^2/2$ and
 $m_\gamma=m\,e^{-100/\delta}$ this term is about $8$, so no choice of $(\delta,R)$ works.
 
-**Proposed order.** $\varepsilon\to0^+$ at fixed everything; then $q^2\to0^+$ at fixed
-regulators, uniformly over on-shell pairs (O2-22); then
-$(m_\gamma,\Lambda,M_1,M_2)\to(0,\infty,\infty,\infty)$ jointly, with $c_1,c_2$ fixed by the
-Pauli–Villars conditions. This is D-5's iterated order. The magnetic-moment definitions
-of the frozen model (the response moments (R₀) and (L₅), and the source moment (L₇) with
-its packet limit) already take $q\to0^+$ at fixed regulators, so they are unaffected; only
-the Pauli-component clause changes shape.
-Two shapes of headline:
+**Ruled order (D-37.1, D-37.4).** $\varepsilon\to0^+$ at fixed everything; then
+$q^2\to0^+$ at fixed regulators, uniformly over on-shell pairs (O2-22); then
+$(m_\gamma,\Lambda)\to(0,\infty)$ at fixed $M_1,M_2$; then $M_1,M_2\to\infty$ last, with
+$c_1,c_2$ fixed by the Pauli–Villars conditions and no constraint on $M_2/M_1$ (O2-19). This
+refines D-5's iterated order. The magnetic-moment definitions of the frozen model (the
+response moments (R₀) and (L₅), and the source moment (L₇) with its packet limit) already
+take $q\to0^+$ at fixed regulators, so they are unaffected; only the Pauli-component clause
+changes shape.
 
-- **(a) Quantifier form.** For every $\eta>0$ there are $\delta>0$ and $R$ such that for all
-  regulators with $m_\gamma<\delta$ and $\Lambda,M_1,M_2>R$, and all admissible counterterms
-  (the order-$e^2$ data satisfying (Z₅), (Z₈), (K₀); every $d_1^{(4)}$), there is
-  $q_0>0$, depending on the regulators, such that every form-factor pair of $V^{\mu,[5]}$ at
-  every on-shell pair with $0<q^2<q_0$ has $|16\pi^4\hat F_2-A_1^{(4)}|<\eta$.
-- **(b) Recommended.** Three declarations: the $\exists!$ theorem of O2-22 (the
-  $q^2\to0^+$ limit of $\hat F_2$ exists at fixed regulators); the definition of the
-  regulated $F_2^{(4)}(0;m_\gamma,\Lambda,M_1,M_2)$ as that number, with its
-  characterization; and the regulator limit
-  $16\pi^4F_2^{(4)}(0;\cdot)\to A_1^{(4)}$ as $(m_\gamma,\Lambda,M_1,M_2)\to
-  (0,\infty,\infty,\infty)$. Shape (b) implies (a), separates the two limits, and gives the
-  regulated two-loop number a name that later phases can reuse.
+**Headline (quantifier form, D-37.1).** For every $\eta>0$ there is $R_M$ such that for all
+$M_1,M_2>R_M$ there are $\delta>0$ and $R$ (which may depend on $M_1,M_2$) such that for all
+$m_\gamma\in(0,\delta)$, $\Lambda>R$ and all admissible counterterms (single real numbers
+satisfying the order-$e^2$ conditions (Z₅), (Z₈), (K₀), D-37.3) there is $q_0>0$, depending
+on the regulators, such that every form-factor pair of the order-5 1PI vertex $V^{\mu,[5]}$
+(D-37.6) at every on-shell pair with $0<q^2<q_0$ has $|16\pi^4\hat F_2-A_1^{(4)}|<\eta$.
 
-The order of limits is a proposal; it needs the author's ruling (section 8, questions 3
-and 6).
+D-37.1 states the quantifier form with one pair of thresholds $(\delta,R)$ for "regulators
+beyond the thresholds"; read with D-37.4 (masses removed last), the threshold for $M_1,M_2$
+is chosen first and $(\delta,R)$ may depend on $M_1,M_2$, as written above. A version with
+$(\delta,R)$ independent of $M_f$ would be a joint limit in the regulators, which D-37.4 did
+not adopt; it would need the uniformity in $M_f$ that O2-19 and O2-23 no longer prove. This
+reading is to be confirmed when the exact declaration is drafted.
+
+The proof passes through the intermediate declarations of the former shape (b): the
+$\exists!$ theorem of O2-22 and the regulated $F_2^{(4)}(0;m_\gamma,\Lambda,M_1,M_2)$ it
+defines; the limit $F_2^{(4)}(0;M_1,M_2)$ as $(m_\gamma,\Lambda)\to(0,\infty)$ (O2-23); and
+its limit as $M_1,M_2\to\infty$ (O2-19, O2-25). These imply the headline and give the
+regulated two-loop number a name that later phases can reuse, but they are not the headline.
 
 ## 6. Stage 4 — Exact evaluation
 
@@ -656,13 +739,15 @@ polylogarithm or Nielsen function**, and no closed form is expected for $\zeta(3
   Theorem, one per unit. It is not yet known whether the route-A units have exactly these
   limits: BMR assign each graph its subgraphs renormalized on shell, which matches the
   units of 5.2, but they work dispersively with $\lambda$ only and without Pauli–Villars.
-  A cheap high-precision numerical check of each unit in route A form is recommended
-  before any declaration is drafted. **Infrared cost:** S and C are not separately finite
-  as $m_\gamma\to0$. Each must be evaluated at $m_\gamma>0$ in the form
-  $a\ln(m_\gamma/m)+b+o(1)$, with $b$ exact (the expansion of O2-23), and only the sum has an
-  $m_\gamma$-free limit. Splitting off the logarithm exactly before evaluating the remainder
-  is harder than evaluating a finite integral. L and X are evaluated at $q^2=0$, where they
-  are infrared finite (5.5). Method options:
+  A numerical check of each unit in route-A form (section 11) finds the limits
+  equal to these values within a few $10^{-5}$, with the counterterms of 5.1 and $\delta_1$
+  from the charge condition. The risk that remains is the analytic evaluation itself.
+  **Infrared cost:** S and C are not separately finite as $m_\gamma\to0$. Each must be
+  evaluated at $m_\gamma>0$ in the form $a\ln(m_\gamma/m)+b+o(1)$, with $b$ exact (the
+  expansion of O2-23), and only the sum has an $m_\gamma$-free limit. Splitting off the
+  logarithm exactly before evaluating the remainder is harder than evaluating a finite
+  integral. L and X are evaluated at $q^2=0$, where they are infrared finite (5.5). Method
+  options:
   1. **Parametric** (route A proper): reduce each unit to integrals over the simplex, as in
      the historical exact evaluations of Petermann and Sommerfield (BMR-I footnote 2,
      p. 825: Petermann, Helv. Phys. Acta 30 (1957) 407; Sommerfield, Ann. Phys. 5 (1958) 26).
@@ -676,13 +761,15 @@ polylogarithm or Nielsen function**, and no closed form is expected for $\zeta(3
      $\lambda\to0$ subtleties of BMR-II section 1.3. This is a different mathematical theory
      from route A; it is useful as a map of which polylogarithm identities are needed.
 - **O2-26 (assembly).** $16\pi^4F_2^{(4)}(0;m_\gamma,\Lambda,M_1,M_2)\to A_1^{(4)}$ in the
-  order of limits of 5.6 (shape (b); shape (a) follows). Since $r=e^2/4\pi^2$,
-  $[r^2]F_2=16\pi^4[e^4]F_2$. Theorem by combination; low once O2-1–O2-25 hold.
+  order of limits of D-37 (5.6: $(m_\gamma,\Lambda)\to(0,\infty)$, then $M_1,M_2\to\infty$),
+  and from it the quantifier-form headline of 5.6 via O2-22 and O2-27. Since $r=e^2/4\pi^2$,
+  $[r^2]F_2=16\pi^4[e^4]F_2$. Theorem by combination; low once O2-1–O2-25 and O2-27 hold.
 
 ## 7. Obligations, carriers and kinds
 
-The last column lists the obligations each one uses; the numbering follows the sections, and
-the proof order must respect this column.
+The last column lists the obligations each one uses; the numbering follows the sections
+(except O2-27, added for D-37.3 and stated in 5.1), and the proof order must respect this
+column.
 
 | Id | Title | Kind | Main source | Risk | Needs |
 | --- | --- | --- | --- | --- | --- |
@@ -701,93 +788,92 @@ the proof order must respect this column.
 | O2-13 | Counterterm insertion identities | theorem | CK-UV (3.24)–(3.28); CK-R (81)–(85) | low–moderate | O2-7 |
 | O2-14 | Longitudinal $k^\mu k^\nu$ terms reach $F_1$ only | theorem | — (recalled) | low–moderate | O2-7 |
 | O2-15 | One-loop Ward identity $\delta_1^{(2)}=\delta_2^{(2)}$ | theorem | (68.13); AKN (29)–(30) | moderate | O2-7 |
-| O2-16 | $\delta_1^{(4)}$ feeds $F_1$ only | theorem | O-8 | trivial | O2-21 |
+| O2-16 | The overall divergence feeds $F_1$ only (no order-5 tree counterterm, D-37.3) | theorem | O-8; CK-UV p. 3995 | low | O2-17, O2-21 |
 | O2-17 | UV cancellation per unit as $\Lambda\to\infty$ | theorem | CK-UV (2.11)–(3.40); AKN (70)–(79) | high | O2-10, O2-13, O2-15 |
 | O2-18 | VP unit: spectral form, value $\frac{119}{36}-\frac{\pi^2}3$ | theorem | Srednicki (62.25); BMR-II (1.1)–(1.10) | moderate | O2-8, O2-13, O2-14 |
-| O2-19 | Regulator-fermion decoupling $M_f\to\infty$ (derivative bound) | theorem | — | moderate | O2-18 |
+| O2-19 | Regulator-fermion decoupling $M_f\to\infty$, taken last (D-37.4; derivative bound on the limited VP function) | theorem | — | moderate | O2-18 |
 | O2-20 | Covariance of the order-5 vertex, via the parametric form | theorem | CK-R (30)–(31) | moderate–high | O2-7, O2-10 |
 | O2-21 | No $q^\mu$ term (mirror pairs or Ward identity); $\exists!$ form-factor pair at order 5 and per unit | $\exists!$ theorem | packet 2 | moderate–high | O2-11, O2-14, O2-20 |
 | O2-22 | $q^2\to0^+$ limit of the order-5 $\hat F_2$ at fixed regulators, uniform over pairs; regulated $F_2^{(4)}(0)$ | $\exists!$ theorem, then definition | BMR-I (1.20), p. 834 c); BMR04 (117) | moderate | O2-12, O2-20, O2-21 |
-| O2-23 | Infrared limit; per-unit expansions, log cancellation via O2-15 | theorem | BMR-I (1.20), p. 834–835, p. 852; AKN (85)–(95) | high | O2-15, O2-17, O2-18, O2-19, O2-22 |
+| O2-23 | Infrared limit at fixed $M_f$; per-unit expansions, log cancellation via O2-15 | theorem | BMR-I (1.20), p. 834–835, p. 852; AKN (85)–(95) | high | O2-15, O2-17, O2-18, O2-19, O2-22 |
 | O2-24 | $\mathrm{Li}_2,\mathrm{Li}_3$ and their special values | infrastructure | BMR-I App. A | moderate | — |
 | O2-25 | Exact limits of the units | theorem | BMR-I p. 852 (targets) | **highest** | O2-23, O2-24 |
-| O2-26 | Assembly: $16\pi^4F_2^{(4)}(0)\to A_1^{(4)}$ | theorem | — | low | O2-1–O2-25 |
+| O2-26 | Assembly: $16\pi^4F_2^{(4)}(0)\to A_1^{(4)}$ in the D-37 order; the quantifier-form headline | theorem | D-37.1, D-37.4 | low | O2-1–O2-25, O2-27 |
+| O2-27 | Order separation for single real counterterms: $\delta_i=e^2d_i$, $[e^4]F_2$ as a coefficient (D-37.3) | theorem | (Z₆), (Z₉), (K₀) | low (moderate if a condition is truncated at order 5) | O2-2, O2-9 |
 
 **Carriers needed for exact declarations** (none exists yet):
 
 | Carrier or definition | Kind | Notes |
 | --- | --- | --- |
-| Successor of `VertexKind` with order-labelled counterterms, or a `Params` successor with graded coefficients $d_i^{(2)},d_i^{(4)}$ | meaning-carrying definition | section 8, question 2; packet 6a's objects must embed (O2-9, as (Y₁) did for packet 5) |
+| Successor model keeping `Params` with single real counterterms and the frozen order labels (no graded coefficients, no order-5 counterterm kind) | meaning-carrying definition | D-37.3; order separation O2-27; packet 6a's objects must embed (O2-9, as (Y₁) did for packet 5) |
 | Two-loop routing (two chords) and `lineMomentum₂` | definition | O2-5 |
-| Two-loop energy-first integral on $(\mathbb R^4)^2$ | definition (generic operation) | O2-6; returns 0 off integrability, like (D), so statements assert integrability |
-| Two-loop `contractionValue` and the order-graded 1PI function $V^{\mu,[5]}$ | source-facing definitions | sum over contractions of total order exactly 5 |
-| Renormalized order-5 vertex: $d^{(2)}$ from (Z₆), (Z₉), (K₀) | definition | reuses frozen predicates; (Z₈) is now a premise |
+| Joint two-loop energy-first integral on $(\mathbb R^4)^2$ | definition (generic operation) | D-37.5; O2-6; returns 0 off integrability, like (D), so statements assert integrability |
+| Two-loop `contractionValue` and the order-5 1PI function $V^{\mu,[5]}$ | source-facing definitions | sum over contractions of total order exactly 5 |
+| Renormalized order-5 1PI vertex with $\delta_i$ from (Z₆), (Z₉), (K₀) | definition | D-37.6; reuses frozen predicates; (Z₈) is now a premise; $\delta_i=e^2d_i$ by O2-27 |
 | Projector $P_2$ | definition | O2-11; per-class $F_2[G]$ |
 | Form factors at order 5 from O2-21 | $\exists!$, then definition | as packet 2 |
-| Regulated $F_2^{(4)}(0;m_\gamma,\Lambda,M_1,M_2)$ from O2-22 | $\exists!$, then definition | with a characterization theorem |
+| Regulated $F_2^{(4)}(0;m_\gamma,\Lambda,M_1,M_2)$ from O2-22 | $\exists!$, then definition | intermediate (not in the headline), with a characterization theorem |
 | $\mathrm{Li}_2$, $\mathrm{Li}_3$, $\zeta(3)$ value | infrastructure | O2-24 |
-| Headline | theorem | shape (b) of 5.6: $q^2\to0^+$ first at fixed regulators, then the joint regulator limit (D-5's order; proposed, pending the author's ruling); section 8, questions 3, 5, 6 |
+| Headline | theorem | quantifier form of 5.6 on the order-5 1PI vertex: $q^2\to0^+$ first at fixed regulators, then $(m_\gamma,\Lambda)\to(0,\infty)$, then $M_1,M_2\to\infty$ (D-37.1, D-37.4, D-37.6; section 8) |
 
 As at one loop, Lean's integral and `limUnder` return junk values off their domains, so the
 source-facing statements must assert integrability or use `Tendsto`-style conclusions.
 
-## 8. Open design questions for the author
+## 8. Rulings (D-37)
 
-1. **Ward identity: theorem or condition?** Options: (a) prove
-   $\delta_1^{(2)}=\delta_2^{(2)}$ at fixed regulators from (Z₅) and the charge condition
-   (O2-15); (b) assume it, which would be a smuggled hypothesis and is not acceptable for a
-   source-facing theorem; (c) compute $\delta_1^{(2)}$ and $\delta_2^{(2)}$ separately in closed
-   form and use the values. **Recommendation: (a)**, which is cheap at one loop (an integrand
-   identity plus differentiation under the integral) and reusable for higher orders; (c) is
-   a cross-check.
-2. **Counterterms at order $e^4$.** Options: (a) order-graded counterterm coefficients
-   $\delta_i=e^2d_i^{(2)}+e^4d_i^{(4)}$ with separate vertex kinds of order 3/5 (`gaugeCt`)
-   and 2/4 (`fermionCt`, `photonCt`), each condition imposed order by order; (b) a formal
-   polynomial ring in $e$; (c) keep single reals and solve the truncated conditions exactly
-   (rejected: spurious higher orders, section 2). **Recommendation: (a).** For the 1PI
-   headline only $d_i^{(2)}$ matter, and $d_1^{(4)}$ is quantified over ("for every
-   $d_1^{(4)}$", the analogue of D-32's treatment of $\delta_3$).
-3. **The order of limits and the $M_f\to\infty$ limit.** In every option $q^2\to0^+$ comes
-   first, at fixed regulators and uniformly over on-shell pairs (O2-22): a joint limit in
-   $q^2$ and $m_\gamma$ does not exist at order $e^5$ (5.6). For the regulator limit that
-   follows, the options are: (a) joint in $(m_\gamma,\Lambda,M_1,M_2)$, with $c_f$ determined
-   by the Pauli–Villars conditions and no constraint on $M_2/M_1$; (b) iterated, $M_f\to\infty$
-   last; (c) $M_f\to\infty$ first at fixed $\Lambda$. The derivative bound of O2-19, if it holds
-   uniformly, makes (a) available. **Recommendation: (a)** for the regulator limit, with (b)
-   as the fallback if uniformity in $\Lambda$ proves costly. Together this is D-5's iterated
-   order ($\varepsilon$ first, then on shell, then $q^2$, then regulators). Proposed, pending
-   the author's ruling.
-4. **Two-loop prescription: joint or nested?** **Recommendation: joint** (all energies, then
-   all spatial momenta). It is invariant under change of loop momenta (O2-6), its energy
-   integral is elementary (section 4.3), and the frozen (D) is its one-loop case. Nested
-   values are then theorems for the insertion classes (O2-8), where they are needed to
-   reuse the frozen Σ and Π.
-5. **Headline at order $e^5$: LSZ amplitude or 1PI vertex?** The LSZ form additionally needs
-   the two-loop self-energy with on-shell conditions at order $e^4$ (fixing $d_2^{(4)},d_m^{(4)}$;
-   otherwise the LSZ limit fails or has the wrong residue), the two-loop photon leg, and the
-   order-$e^5$ charge condition. These order-$e^4$ data multiply the tree, so they should
-   reach $F_1$ only (to be proved). But the LSZ amplitude also contains the one-loop photon
-   leg times the one-loop vertex, an order-$e^5$ term $\Pi(q^2)\,F_2^{(2)}(q^2)$. It reaches
-   $F_2$ at $q\ne0$ and vanishes as $q\to0$ only through (Z₈) or the background-field factor
-   $q^2/(q^2+m_\gamma^2)$ of 5.3. It does not enter the 1PI vertex. **Recommendation:** the 1PI
-   vertex (62.39) for the first milestone, stated with the on-shell order-$e^2$ data
-   (Z₅), (Z₈), (K₀); the LSZ form and the Landé factors as a later packet with an equivalence
-   theorem, as packet 6c did at one loop.
-6. **Extraction of $A_1^{(4)}$.** Define $V^{\mu,[5]}$ as the sum over contractions of total
-   order exactly 5 with $\delta_i^{(2)}=e^2d_i^{(2)}$. It is then $e^5$ times an
-   $e$-independent matrix. Its Pauli form factor in the normalization of (63.18), which
-   carries an overall factor $e$, is $e^4\hat F_2$, so $[e^4]F_2:=\hat F_2$ needs no limit
-   in $e$. The headline then takes one of the two shapes of 5.6, with $q^2\to0^+$ first at
-   fixed regulators: (a) for every $\eta>0$ there are $\delta,R$ such that for all regulators
-   with $m_\gamma<\delta$ and $\Lambda,M_1,M_2>R$ and all admissible counterterms there is
-   $q_0>0$ (depending on the regulators) such that, at every on-shell pair with
-   $0<q^2<q_0$, every form-factor pair of $V^{\mu,[5]}$ has
-   $|16\pi^4\hat F_2-A_1^{(4)}|<\eta$; or (b) the $\exists!$ theorem of O2-22, the
-   regulated $F_2^{(4)}(0)$ it defines, and the regulator limit of that number.
-   **Recommendation:** this graded form, in shape (b). A limit in $e$ is unnecessary, and the
-   truncated model would make it artificial. The order of limits is proposed, pending the
-   author's ruling. The one-loop pattern of (I)/(H), one $\delta$ for both $q^2$ and
-   $m_\gamma$, cannot be used (5.6).
+The six design questions raised by the first version of this document were ruled on by the
+author on 2026-11-17 (D-37 in [DECISIONS.md](campaign/DECISIONS.md)). They are recorded here
+in D-37's numbering, with the consequences for the plan.
+
+1. **Order of limits and headline form (D-37.1; was question 6, with question 3).** At order
+   $e^5$ the joint limit in $q^2$ and $m_\gamma$ does not exist: for $q^2\ne0$ the order-$e^4$
+   Pauli form factor carries an infrared logarithm $\sim q^2\ln m_\gamma$ (BMR-I (1.20),
+   p. 834; section 5.6). So $q^2\to0^+$ is taken first at fixed regulators, uniformly over
+   on-shell pairs, as in D-5. The headline uses the quantifier form of 5.6. The one-loop
+   pattern of (I)/(H), one $\delta$ bounding both $q^2$ and $m_\gamma$, is not used.
+   *Consequence:* O2-22 is required; the regulated $F_2^{(4)}(0)$ it defines is an
+   intermediate declaration, not the headline.
+2. **Ward identity (D-37.2; was question 1).** The one-loop identity
+   $\delta_1^{(2)}=\delta_2^{(2)}$ ($Z_1=Z_2$), needed for the infrared cancellation between
+   S and C, is proved as a theorem at fixed regulators from the frozen on-shell conditions,
+   not imposed. Imposing it would be a smuggled hypothesis; a closed-form computation of
+   both constants remains a cross-check. *Consequence:* O2-15, with the route given there
+   (differential identity, differentiation under the one-loop integral, in the
+   $\varepsilon\to0^+$ limit or on the parametric closed forms).
+3. **Counterterms (D-37.3; was question 2).** Each counterterm stays a single real number,
+   and the expansion is truncated. Order-graded coefficients and a formal polynomial ring in
+   $e$ were not adopted, and no order-5 counterterm kind is introduced, so the order-5 1PI
+   function has no tree counterterm (3.2, O2-16). Separating the orders is a proof
+   obligation. *Consequence:* O2-27. With the frozen one-loop conditions (Z₆), (Z₉), (K₀),
+   homogeneity gives $\delta_i=e^2d_i$, so $V^{\mu,[5]}$ is $e^5$ times an $e$-independent
+   matrix and $[e^4]F_2:=\hat F_2$ is a coefficient, with no limit in $e$. Should a
+   condition be imposed on an order-5 function, the extraction needs the more delicate
+   item 3 of O2-27.
+4. **Regulator fermions (D-37.4; was question 3).** Their masses are removed last: first
+   $q^2\to0^+$, then $m_\gamma\to0$ and $\Lambda\to\infty$, then $M_1,M_2\to\infty$, with
+   $c_1,c_2$ fixed by the Pauli–Villars conditions and no constraint on $M_2/M_1$. A joint
+   limit in $(m_\gamma,\Lambda,M_1,M_2)$ was not adopted. *Consequence:* O2-19 bounds the
+   already-limited one-flavour VP function and needs no uniformity in $m_\gamma$ or $\Lambda$;
+   O2-23 works at fixed $M_f$ and needs no uniformity in $M_f$. In the quantifier form the
+   threshold for $M_1,M_2$ comes first and $(\delta,R)$ may depend on $M_1,M_2$ (5.6).
+5. **Prescription (D-37.5; was question 4).** The two-loop value is the joint energy-first
+   integral: both loop energies first, then all six spatial components, then
+   $\varepsilon\to0^+$. It is invariant under changes of loop momenta (O2-6), its energy
+   integral is elementary (4.3), and the frozen (D) is its one-loop case (O2-9).
+   *Consequence:* "nested equals joint" is a theorem for the insertion classes S₊, S₋ and VP
+   (O2-8), where the frozen one-loop Σ and Π are reused.
+6. **Amplitude (D-37.6; was questions 5 and 6).** The first two-loop headline is stated on
+   the order-$e^5$ 1PI vertex (62.39), the sum over contractions of total order exactly 5,
+   with the counterterms fixed by the on-shell order-$e^2$ conditions (Z₅), (Z₈), (K₀). An LSZ
+   restatement can follow later, with an equivalence theorem as packet 6c did at one loop.
+   *Consequence:* the LSZ form, when it comes, needs more than the 1PI vertex: the two-loop
+   self-energy with on-shell conditions at order $e^4$ (otherwise the LSZ limit fails or has
+   the wrong residue), the two-loop photon leg, an order-$e^5$ charge condition, and the
+   order-$e^5$ term $\Pi(q^2)F_2^{(2)}(q^2)$ from the one-loop photon leg times the one-loop
+   vertex, which reaches $F_2$ at $q\ne0$ and vanishes as $q\to0$ only through (Z₈) or the
+   background-field factor $q^2/(q^2+m_\gamma^2)$ of 5.3. With single real counterterms
+   these conditions are of the kind covered by item 3 of O2-27. Tadpoles (O2-4) also enter
+   only there.
 
 ## 9. Source assessment
 
@@ -916,3 +1002,227 @@ committed; each can be replayed from the formulas given here.
 | Spectral form of $\Pi_{R}$ against Srednicki (62.25) (O2-18) | mpmath, 20 digits, $k^2=0.3,\ 5$ | ratio $1.000\ldots$ to 20 digits ($+4.91\times10^{-4}$, $+5.77\times10^{-3}$ at $e=m=1$) |
 | Size of the $q^2\ne0$ infrared term (5.6) | arithmetic | $(q^2/6m^2)\ln(m/m_\gamma)=100/12\approx8.3$ at $q^2=\delta m^2/2$, $m_\gamma=me^{-100/\delta}$ |
 | Independent review (2026-11-17; mpmath 1.3.0, numpy 2.5.3, sympy) | replay | reproduced every row above; BMR04 (117) exactly, the per-graph sum to $2\times10^{-46}$; VP double integral to $2\times10^{-31}$; the 2D formula to 20 digits; the absolute 2D integral $628.303,\ 628.318,\ 628.3185$ against $2\pi/\varepsilon^2$; AKN (58)–(59) and $\sum z_iA_i=$ AKN (35)'s $G$ symbolically; the AHKN items of section 9 |
+
+## 11. Numerical validation of the route-A units
+
+**Status:** numerics, run 2026-11-17 (numpy 2.5.3, mpmath 1.3.0). This is a sanity check of the
+plan of sections 5.1–5.6, as O2-25 recommended before any declaration is drafted. It is
+evidence, not proof, and it supports no obligation. The script is
+[`scripts/numerics/two_loop_units.py`](../scripts/numerics/two_loop_units.py). Its docstring
+gives the modes (`checks`, `uv`, `ir`, `vp`, `fit`), the run times (minutes to about half an
+hour on 4 cores) and how to replay every table below.
+
+### 11.1 What was computed
+
+For each unit of 5.2 the script computes its contribution to $[r^2]F_2$ as $q\to0$ at fixed
+$m_\gamma$, $\Lambda$ (and $M_1,M_2$ for VP). The counterterms are those of route A:
+
+- $\delta_2,\delta_m$ from the on-shell conditions with the Pauli–Villars photon;
+- $\delta_1$ from the charge condition, in its 1PI form $F_1(0)=1$ at order $e^3$;
+- $\delta_3$ from $\Pi(0)=0$.
+
+The units are VP ($+\delta_3$), S $=$ S₊ $+$ S₋ $+$ their $(\delta_2,\delta_m)$ insertions,
+C $=$ C₊ $+$ C₋ $+2\delta_1F_2^{(2)}$, L $=$ ladder $+\delta_1F_2^{(2)}$, and X.
+
+Method:
+
+- **Representation.** Each graph is written in the covariant Feynman-parametric form of 4.4,
+  with the 8-dimensional loop integral done in closed form, including the
+  $\ell\ell\to-g\,(U^{-1})\Delta/(2(n-5))$ rule. These numerics test the **parametric values**,
+  not the energy-first prescription. O2-7, O2-8 and O2-20 are untested here.
+- **Photon lines.** Each Pauli–Villars photon is the difference of the masses $m_\gamma$ and
+  $\Lambda$, combined point by point in the integrand.
+- **Extraction of $F_2$.** The vertex is expanded to first order in $q$, and the exact
+  two-structure projector $P_2$ (O2-11) is applied as $q\to0$. The $O(q^2)$ part of the
+  vertex drops out exactly, because $(\not p+m)(\gamma_\mu-p_\mu/m)(\not p+m)=0$ on shell.
+  So this is the $q^2\to0^+$ limit at fixed regulators of D-37.1, taken exactly.
+- **Merged lines.** Lines with the same loop routing and mass are merged. The integrand is
+  affine in the split, so the split is evaluated at its midpoint.
+- **Quadrature.** Sector decomposition with sigmoidal Gauss–Legendre maps, in 3 to 4
+  dimensions. For L and C the simplex is nested around the UV subgraph, with a logarithmic
+  grid in its scale. Each graph is evaluated on two grids. The quoted error is
+  $|\text{fine}-\text{coarse}|$, which is a heuristic, not a bound.
+- **S in insertion form.** The on-shell renormalized Pauli–Villars self-energy is a mass
+  superposition,
+  $\Sigma_R(k)=\tfrac r4\int_0^1\!\frac{dx}x\int_{m_\gamma^2}^{\Lambda^2}\!d\mu\,
+  (\not k-m)^2(\alpha\not k+\beta)/(M^2-k^2)$, with $M^2=m^2/(1-x)+\mu/x$. With its two
+  adjacent propagators it becomes a single line of mass $M$. The S unit is then an outer
+  one-loop vertex integrated over $(x,\mu)$. Its integrand has no power-like cancellation.
+- **VP.** Exact partial fractions in $k^2$ of $\Pi_R k^2D^2$, with the spectral form of O2-18
+  and the one-loop $F_2$ of a massive photon and its mass derivative (mpmath, 30 digits).
+
+### 11.2 Checks of the machinery
+
+| Check | Result |
+| --- | --- |
+| $P_2$ on $\gamma^\mu$ and on $i\sigma^{\mu\nu}q_\nu/2m$ | $0$ and $1$ (to $10^{-14}$) |
+| One-loop $F_2/r$ with photon mass $\lambda=10^{-4},0.3,1$ against $\int_0^1\frac{x^2(1-x)}{x^2+(1-x)\lambda^2}dx$ | agree to 12 digits |
+| Ward identity at fixed regulators: $\delta_1=-F_1^{\rm loop}(0)$ (engine) against $\delta_2=\partial\Sigma/\partial\not p$ (closed form) at $(m_\gamma,\Lambda)=(0.1,10),(0.03,100),(0.5,3)$ | equal to 12 digits (e.g. $0.238801665709$) |
+| S insertion form against bare S± two-loop graph $+$ counterterm graphs $i(\not k\delta_2-\delta_m)$, at $(0.5,3)$ and $(0.2,10)$ | $-0.178791$ vs $-0.178793$; $-0.614740$ vs $-0.614739$ |
+| Mirror pairs at $(0.1,10)$ | C₊ $=$ C₋ to 8 digits; S₊ $=$ S₋ |
+| Overall-divergence patterns (two contractions, $\propto\gamma^\mu$) | $P_2$ gives $0$ |
+| X at $m_\gamma=0$, $\Lambda=\infty$ (UV finite, IR finite at $q=0$) | $-0.467632$; BMR $-0.467645$ |
+| VP at $m_\gamma=0$, $\Lambda=\infty$, one flavour | $\frac{119}{36}-\frac{\pi^2}3$ to $10^{-30}$ |
+
+### 11.3 Ultraviolet: no $\ln\Lambda$ after the counterterms
+
+Units and bare graphs at $m_\gamma=10^{-2}$:
+
+| $\Lambda$ | $\delta_1/r$ | L bare | L | C₊$+$C₋ bare | C | S | X | VP |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 10 | 2.342935 | −0.469920 | 0.659617 | 1.647889 | 3.906963 | −4.508029 | −0.369463 | 0.014484 |
+| 30 | 1.801887 | −0.203923 | 0.669635 | 2.178375 | 3.925490 | −4.568721 | −0.369780 | 0.015509 |
+| 100 | 1.200899 | 0.088615 | 0.671210 | 2.761561 | 3.926751 | −4.578164 | −0.369667 | 0.015665 |
+| 300 | 0.651681 | 0.355210 | 0.671381 | 3.294396 | 3.926738 | −4.579207 | −0.369622 | 0.015679 |
+| 1000 | 0.049705 | 0.647289 | 0.671404 | 3.878490 | 3.926720 | −4.579348 | −0.369610 | 0.015681 |
+
+Quadrature errors: L $3\times10^{-8}$, C $10^{-4}$, S $10^{-5}$, X $2\times10^{-6}$.
+
+- **Bare graphs.** $\delta_1$ falls by $\tfrac12\ln10$ per factor 10 in $\Lambda$
+  ($\delta_1\ni-\tfrac12r\ln\Lambda$). The bare L and C graphs grow by $0.56$ and $1.12$,
+  i.e. by $\tfrac12\ln10\,F_2^{(2)}$ and twice that, as the counterterms require.
+- **Units.** Every unit settles. Successive differences shrink by about 9 per factor 3 in
+  $\Lambda$, which is the $\Lambda^{-2}$ behaviour expected of the decoupling terms. Claim
+  (a) of the plan holds for every unit.
+- **Smaller photon mass.** At $m_\gamma=10^{-4}$ (Λ = 30, 100, 300, 1000) the same holds:
+  - S: −9.283640, −9.296159, −9.297476, −9.297649
+  - C: 8.639060, 8.643385, 8.643645, 8.643658
+  - L: 0.773189, 0.774780, 0.774952, 0.774975
+  - X: −0.465377, −0.465273, −0.465228, −0.465216
+- **A finding for O2-23.** For S and C separately, the finite-$\Lambda$ remainder depends on
+  $m_\gamma$:
+  - $S(100)-S(1000)=1.18,1.34,1.49,1.64\times10^{-3}$ at $m_\gamma=10^{-2},10^{-3},10^{-4},10^{-5}$.
+  - That is about $0.67\,(m^2/\Lambda^2)\ln(m/m_\gamma)$, and C carries the opposite term.
+  - S$+$C is free of it at every $\Lambda$.
+  - L, X and VP have $m_\gamma$-independent remainders: $1.9\times10^{-4}$,
+    $5.7\times10^{-5}$ and $1.6\times10^{-5}$ between $\Lambda=100$ and $1000$.
+
+### 11.4 Infrared and the limits, against BMR-I p. 852
+
+Units at $\Lambda=1000$, as functions of $m_\gamma$ ($m=1$; quadrature errors in brackets;
+VP has error below $10^{-9}$):
+
+| $m_\gamma$ | VP | S $-\ln m_\gamma$ | C $+\ln m_\gamma$ | S$+$C | L | X | sum |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| $10^{-2}$ | 0.015681 | 0.025822 (1e-5) | −0.678450 (1e-4) | −0.652628 | 0.671404 | −0.369610 | −0.335153 |
+| $3\cdot10^{-3}$ | 0.015687 | −0.043091 | −0.610723 (6e-5) | −0.653815 | 0.734472 | −0.427041 | −0.330698 |
+| $10^{-3}$ | 0.015687 | −0.070747 | −0.583213 (2e-5) | −0.653960 | 0.759700 | −0.450664 (2e-5) | −0.329236 |
+| $3\cdot10^{-4}$ | 0.015687 | −0.083037 (3e-5) | −0.570944 (2e-5) | −0.653981 | 0.771009 | −0.461412 (3e-5) | −0.328697 |
+| $10^{-4}$ | 0.015687 | −0.087308 (1e-4) | −0.566683 (4e-5) | −0.653991 | 0.774975 | −0.465216 (4e-5) | −0.328545 |
+| $3\cdot10^{-5}$ | 0.015687 | −0.089040 (3e-4) | −0.564940 (3e-5) | −0.653980 | 0.776612 | −0.466794 (4e-5) | −0.328475 |
+| $10^{-5}$ | 0.015687 | −0.089672 (6e-4) | −0.564368 (3e-5) | −0.654040 | 0.777153 (3e-5) | −0.467317 (4e-5) | −0.328517 |
+
+**Fits.** Each unit was fitted to $a_U\ln m_\gamma+b_U+m_\gamma(c_1\ln m_\gamma+c_0)$, with an
+optional $m_\gamma\ln^2m_\gamma$ term, on the points with $m_\gamma\le10^{-3}$, $3\cdot10^{-3}$
+and $10^{-2}$; the spread over these fits is quoted. The leading correction is
+$O(m_\gamma\ln m_\gamma)$; for X this is confirmed down to $m_\gamma=10^{-6}$. The free fits
+give $a_U$, and $b_U$ was then refitted with $a_U$ fixed to the nearest integer.
+
+| Unit | fitted $a_U$ | BMR $a$ | $b_U$ ($\Lambda=1000$) | BMR-I p. 852 | difference |
+| --- | --- | --- | --- | --- | --- |
+| VP | $0.0000$ | 0 | $0.015687$ | $0.015687$ | $-2\times10^{-7}$ |
+| S | $+1.0001\pm0.0002$ | $+1$ | $-0.089994\pm6\times10^{-5}$ | $-0.089978$ | $-2\times10^{-5}$ |
+| C | $-1.0000\pm0.0001$ | $-1$ | $-0.564030\pm8\times10^{-5}$ | $-0.564021$ | $-9\times10^{-6}$ |
+| L | $0.0000\pm0.00002$ | 0 | $0.777475\pm2\times10^{-5}$ | $0.777478$ | $-3\times10^{-6}$ |
+| X | $0.0000\pm0.00002$ | 0 | $-0.467631\pm2\times10^{-5}$ | $-0.467645$ | $+1.5\times10^{-5}$ |
+| S$+$C | $0.0001\pm0.0002$ | 0 | $-0.654020\pm8\times10^{-5}$ | $-0.653999$ | $-2\times10^{-5}$ |
+
+What the fits show:
+
+- **Logarithm coefficients.** They are $a_{\mathrm S}=+1$, $a_{\mathrm C}=-1$ and
+  $a_{\mathrm L}=a_{\mathrm X}=a_{\mathrm{VP}}=0$ to $2\times10^{-4}$, and they cancel in the
+  sum. This is claim (b).
+- **Limits.** Every limit agrees with BMR-I p. 852 to within $2\times10^{-5}$, which is
+  inside the quadrature and extrapolation uncertainty (a few $10^{-5}$). This is claim (c).
+- **Remaining $\Lambda=1000$ effect.** The remainder of 11.3 is at most about $2\times10^{-5}$.
+- **Totals.**
+  - The sum of the five limits is $-0.32849\pm9\times10^{-5}$, against
+    $A_1^{(4)}=-0.328479$.
+  - The $q$-type part, S$+$C$+$L$+$X, is $-0.344176\pm9\times10^{-5}$, against
+    $-0.344166$.
+  - The VP part is $0.0156874$, against $\frac{119}{36}-\frac{\pi^2}3=0.0156874$.
+- **AKN cross-check.** $\Delta M_{4a}$ of AKN (96) is not reproduced here. It is a
+  $K$-scheme quantity, and relating it to these units needs AKN's residual constant
+  $L_2^R$, which route A does not produce. The AKN-form check of section 9 stands as before.
+  The present engine was checked instead against BMR's per-graph values. Through AKN (92)
+  and (93) the Ward–Takahashi groupings are $a_{4a}=\mathrm X+\mathrm C$ and
+  $a_{4b}=\mathrm L+\mathrm S$, which sum to the AKN (97) total.
+- **Earlier run at $\Lambda=100$.** At $\Lambda=100$ (same $m_\gamma$ grid down to $10^{-5}$),
+  the fits gave $b_{\mathrm S}=-0.08835$ and $b_{\mathrm C}=-0.56446$. These are off by
+  $+1.6\times10^{-3}$ and $-4\times10^{-4}$. Those offsets are the finite-$\Lambda$ remainders
+  of 11.3, including the $(m^2/\Lambda^2)\ln m_\gamma$ term. They are not a discrepancy, and
+  S$+$C at $\Lambda=100$ is off by the $\Lambda$-remainder alone.
+
+**Pieces of S.** The insertion of $i\delta_m m$ on one internal line of the one-loop vertex
+(single photon mass $\lambda$, $\Lambda=\infty$) gives $-0.4084,-0.4887,-0.4988,-0.4999$ per
+unit $\delta_m$ at $\lambda=10^{-1},10^{-2},10^{-3},10^{-4}$. The $i\delta_2\not k$ insertion
+gives $-0.795,-0.974,-0.997,-0.9997$. In $F_2$ at $q\to0$, neither piece has a power-like or
+logarithmic infrared growth. The bare S₊ graph at $\Lambda=10$ is $0.522,0.622,0.684$ at
+$m_\gamma=0.2,0.1,0.05$, with no growth like $1/m_\gamma$. The $+\ln m_\gamma$ of S comes from
+the infrared logarithm of $\delta_2$ times the finite $\not k$ insertion.
+
+### 11.5 Regulator fermions last (D-37.4)
+
+- **VP limit.** With $m_\gamma\to0$ and $\Lambda\to\infty$ taken first, the VP unit with
+  flavours $f=0,1,2$ minus its limit $\frac{119}{36}-\frac{\pi^2}3$ is:
+
+  | $(M_1,M_2)$ | VP minus limit |
+  | --- | --- |
+  | $(3,5)$ | $-3.0\times10^{-3}$ |
+  | $(10,20)$ | $-2.7\times10^{-4}$ |
+  | $(30,60)$ | $-3.1\times10^{-5}$ |
+  | $(100,300)$ | $-2.5\times10^{-6}$ |
+  | $(1000,1001)$ | $-4.4\times10^{-8}$ |
+
+  This is $O(m^2/M^2)$. The nearly degenerate pair, where $|c_f|\approx500$, behaves
+  well, as the divided-difference form of O2-19 predicts.
+- **Finite $\Lambda$ and $m_\gamma$.** At fixed $(m_\gamma,\Lambda)$ the electron loop alone is
+  within $2\times10^{-5}$ of its limit for $(10^{-2},100)$ and $2\times10^{-9}$ for
+  $(10^{-4},10^4)$. It has no logarithm in $m_\gamma$ or $\Lambda$.
+- **(Z₈) is load-bearing.** Without (Z₈) the extra term $\Pi_{\rm reg}(0)F_2^{(\gamma)}$ would
+  contain $|\Pi_{\rm reg}(0)/r|=\tfrac13|\sum_fc_f\ln M_f^2|=1.38,\ 2.98,\ 4.51$ at
+  $(M_1,M_2)=(10,20),(100,300),(1000,3000)$. It grows like $\ln M_f$, as 5.3 says.
+
+### 11.6 Verdict and consequences for the plan
+
+Every unit, as defined in 5.2 with the route-A counterterms, behaves as the document claims:
+
+- it is UV finite after its counterterms;
+- its infrared logarithm has the BMR coefficient, and the logarithms cancel in S$+$C;
+- its limit is BMR's per-graph value, to a few $10^{-5}$.
+
+The Ward identity $\delta_1=\delta_2$ holds at fixed regulators, as D-37.2 requires. These are
+numerical checks of the covariant parametric values. Items for the plan:
+
+1. **O2-23 should use the infrared-finite groupings.** At finite $\Lambda$ the infrared
+   coefficients of S and C alone are not $\pm1$ exactly: they carry
+   $\pm0.67\,m^2/\Lambda^2$ (11.3). So "$a_U\ln m_\gamma+b_U(\Lambda)+o(1)$ with $a_U$
+   independent of $\Lambda$" is false for S and C, and a joint limit
+   $(m_\gamma,\Lambda)\to(0,\infty)$ of S or C alone fails along $m_\gamma=e^{-\Lambda^3}$.
+   S$+$C, L, X and VP each have $a=0$ at every $\Lambda$ tested, to within the fit
+   uncertainty of $2\times10^{-4}$. The obligation should therefore be stated for S$+$C
+   (with $\delta_1=\delta_2$) and for L, X, VP, as O2-25 already groups S$+$C. Alternatively
+   it should take $\Lambda\to\infty$ before $m_\gamma\to0$ for S and C, and D-37.4's
+   "then $m_\gamma\to0$ and $\Lambda\to\infty$" should be read accordingly when the
+   declaration is drafted.
+2. **The linear infrared divergence of 5.5 is not seen.** It was not seen in $F_2$ at
+   $q\to0$ for any piece (11.4, "Pieces of S"). The bullet has been restated. A power-like
+   divergence may still occur in integrands before integration, as in the Ward-summed
+   self-energy forms of AKN and AHKN, but none needs to cancel between S's terms after the
+   $q\to0$ projection.
+3. **The insertion form of S is a cleaner proof route** for O2-17 and O2-23 on S. Writing
+   $\Sigma_R$ as a mass superposition with the factor $(\not k-m)^2$ cancels the adjacent
+   propagators exactly and leaves a one-loop vertex with a heavy line. No subtraction between
+   separately large terms remains: the bare S graph and its counterterms each contain
+   $\ln\Lambda$, and $\delta_m\sim\ln\Lambda$.
+4. **O2-18 has an exact finite-regulator form.** By partial fractions in $k^2$, the VP unit
+   at finite $(m_\gamma,\Lambda,M_f)$ equals
+   $$\int_0^1dv\,\rho(v)\sum_fc_f\Bigl[A\,f(\mu_v^2)
+   +\sum_{c\in\{m_\gamma^2,\Lambda^2\}}\bigl(B_cf(c)-E_cf'(c)\bigr)\Bigr],$$
+   where $f$ is the one-loop $F_2$ of a massive photon and $A,B_c,E_c$ are the
+   partial-fraction coefficients of $k^4D^2/(k^2+\mu_v^2)$. The difference from the
+   superposition at $m_\gamma=0$, $\Lambda=\infty$ is then explicit.
+5. **The numerics do not touch the order-$e^5$ enumeration (O2-2).** They take the graph
+   list of 3.1–3.2 as given. Nor do they test the energy-first prescription and its
+   covariance (O2-7, O2-8, O2-20), O2-22's uniformity over on-shell pairs, or the
+   non-commutation of $q^2\to0$ with $m_\gamma\to0$ (5.6).
