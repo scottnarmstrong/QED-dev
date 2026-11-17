@@ -293,6 +293,10 @@
     {
       "date": "2026-11-17",
       "change": "Enumeration of the order-e^5 1PI vertex (O2-2, combinatorial part) kernel-checked for all 28 kind sequences: 1080 five-gauge 1PI contractions in nine classes of 120 (L, X, C+, C-, S+, S-, VP, and the two Furry orientations), and 114 counterterm contractions; the order-5 vertex equals an explicit finite sum over them. Remaining: relabelling invariance of the contraction value, which would give coefficient one per class."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "Scalar two-loop parametric representation (O2-10 assembly) proved: for N >= 5 Minkowski propagators with line momenta affine in two loop momenta, the joint energy-first integral of their product is absolutely justified stage by stage and equals -pi^4 (N-5)! times the simplex integral of U^-2 (V - i eps)^(4-N), assuming U^-2 integrable on the simplex (a property of the topology still to be proved per graph). Cross-checked by a 5D quadrature."
     }
   ],
   "tracks": [
