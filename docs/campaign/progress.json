@@ -261,6 +261,10 @@
     {
       "date": "2026-11-17",
       "change": "Overnight mode: packet T4, the one-loop Ward identity delta1 = delta2 as a source-facing theorem goal (O2-15, D-37.2), frozen provisionally after independent review; author approval pending (D-40)."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "Order separation for single real counterterms proved (O2-27 items 1-2): at fixed regulators the on-shell and charge conditions fix delta_i = e^2 d_i with d_i the values at e = 1 (e != 0 for the charge condition), each vertex factor scales as e^order, and the order-exactly-5 part of the two-loop 1PI function is e^5 times its value at e = 1."
     }
   ],
   "tracks": [
