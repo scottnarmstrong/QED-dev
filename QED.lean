@@ -88,6 +88,7 @@ public import QED.Integration.TwoLoopEnergyIntegral
 public import QED.TwoLoop.VacuumPolarizationUnit
 public import QED.TwoLoop.VacuumPolarizationUnitLimit
 public import QED.TwoLoop.EnumerationOrderFive
+public import QED.TwoLoop.RelabelInvarianceOrderFive
 public import QED.Integration.FeynmanParameterGeneral
 public import QED.Integration.SpatialIntegralSix
 public import QED.Integration.TwoLoopParametric

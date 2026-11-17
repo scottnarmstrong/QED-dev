@@ -297,6 +297,10 @@
     {
       "date": "2026-11-17",
       "change": "Scalar two-loop parametric representation (O2-10 assembly) proved: for N >= 5 Minkowski propagators with line momenta affine in two loop momenta, the joint energy-first integral of their product is absolutely justified stage by stage and equals -pi^4 (N-5)! times the simplex integral of U^-2 (V - i eps)^(4-N), assuming U^-2 integrable on the simplex (a property of the topology still to be proved per graph). Cross-checked by a 5D quadrature."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "Relabelling invariance of the two-loop contraction value proved for all-gauge contractions with conserved external momenta (O2-5 (ii): a change of chords is a unimodular integer change of loop momenta plus a shift), so the order-e^5 vertex is the sum over the nine class representatives with coefficient one plus the counterterm contractions. Momentum conservation is shown to be necessary."
     }
   ],
   "tracks": [

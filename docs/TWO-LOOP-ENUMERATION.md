@@ -148,15 +148,21 @@ addressed.
 
 ## 3. What remains
 
-1. **Relabelling invariance of the value** (the analytic half of section 3.3). The
-   coefficient one per class needs
-   `contractionValue₂ P (relabel π C) … = contractionValue₂ P C …`. Relabelling changes the
-   line labels, hence the chords and the routing (T₃, T₄): the loop momenta of the two
-   contractions differ by a unimodular integer change of variables plus a shift. The joint
-   prescription is invariant under such maps (`jointEnergyFirstIntegral_comp_matrix_add`,
-   O2-6); what is missing is the identification of the amplitudes (T₇, T₈) under the line
-   correspondence `lineEquiv` (vertex factors, propagators, flavour sums and the trace
-   order of closed loops) and of the routings. Not attempted.
+1. **Relabelling invariance of the value: proved.** For contractions of `N` gauge vertices
+   with connected vertices and conserved external momenta,
+   `contractionValue₂ P (relabel π C) … = contractionValue₂ P C …`
+   (`QED/TwoLoop/RelabelInvariance.lean`, `contractionValue₂_relabel`, and
+   `contractionValue₂_relabel_of_isOnePI` for 1PI contractions with
+   `∑ pOut = ∑ pIn + ∑ kIn`). The routings of the two contractions differ by a unimodular
+   integer change of the loop momenta plus a shift (`QED/TwoLoop/RoutingChange.lean`,
+   `LineCorr.exists_routing_change`, O2-5 (ii)); the amplitudes agree under the line
+   correspondence, including the flavour weights of closed loops; and the joint prescription
+   is invariant under such maps for every integrand. Momentum conservation is needed: without
+   it the routing is not conserved and depends on the orientation of photon lines, which
+   relabelling changes. Consequently, with momentum conservation, the order-5 vertex is
+   `∑ c, sign c * contractionValue₂ P c.rep …` plus the counterterm terms, with coefficient one
+   per class (`QED/TwoLoop/RelabelInvarianceOrderFive.lean`,
+   `onePIFunction₂_five_sub_four_eq`).
 2. **Counterterm classes by relabelling.** The counterterm sequences are presented as
    explicit lists per sequence, not as orbits of class representatives: the relabelling
    here is defined for gauge vertices only. Grouping the $4\times12$ ($\delta_{2,m}$,
