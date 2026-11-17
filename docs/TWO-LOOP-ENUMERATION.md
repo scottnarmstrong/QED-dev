@@ -169,9 +169,13 @@ addressed.
    $\delta_3$) and $3\times6$ ($\delta_1$) contractions into classes with coefficient one
    needs relabelling across sequences ($\kappa\mapsto\kappa\circ\pi^{-1}$) and the same
    value invariance.
-3. **O2-3 (Furry pair).** Not addressed: it is analytic (charge conjugation and the
-   reflection invariance of the prescription). The two orientations F₊, F₋ are separate
-   classes with sign $-1$ each, as section 3.1 states.
+3. **O2-3 (Furry pair): proved.** With momentum conservation, the two orientations of the
+   closed three-vertex loop cancel at fixed parameters, flavour by flavour
+   (`QED/TwoLoop/FurryPair.lean`, `furry_pair`), by charge conjugation with `C = γ⁰γ²`
+   (`QED/Algebra/ChargeConjugation.lean`), which acts on the frozen index sums as a signed
+   reindexing, and the reflection invariance of the joint prescription. The order-5 vertex is
+   then the sum over the seven classes L, X, C±, S±, VP with coefficient one plus the
+   counterterm contractions (`onePIFunction₂_five_sub_four_eq_furry`).
 
 ## 4. Replay and costs
 

@@ -305,6 +305,10 @@
     {
       "date": "2026-11-17",
       "change": "Symanzik integrability proved: Cauchy-Binet for U, U^-1/2 integrable on the simplex whenever two loop directions are independent, and U^-2 integrable under the no-subdivergence criterion (every direction class leaves at least three lines), removing the extra hypotheses of the parametric representation. Of the order-e^5 classes, L, X, C+-, F+- satisfy it as is, S+- once the photon Pauli-Villars pair is combined, and VP once the bubble is also in divided-difference form."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "Furry pair cancellation (O2-3) proved: with momentum conservation the two orientations of the closed three-vertex fermion loop cancel at fixed parameters, flavour by flavour, via charge conjugation C = gamma0 gamma2 and reflection invariance of the joint prescription; the order-e^5 vertex is the sum over L, X, C+-, S+-, VP with coefficient one plus the counterterm contractions."
     }
   ],
   "tracks": [
