@@ -281,6 +281,10 @@
     {
       "date": "2026-11-17",
       "change": "Exact values of O2-18 proved: the vacuum-polarization unit integral over v, x in [0,1] equals 119/36 - pi^2/3 (Fubini, a closed-form v-integral, and an antiderivative involving Li2), and the spectral form of the one-loop vacuum polarization equals its Feynman-parameter form for k^2 > -4M^2."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "More of O2-10 proved: the Feynman parametrization prod (a_i)^-1 = m! times the integral over the m-simplex of (sum z_i a_i)^-(m+1) for any number of complex factors with negative imaginary part (with integrability), and the 6D spatial formula: the integral over R^6 of (v^T A v + w)^-k is pi^3 Gamma(k-3)/Gamma(k) (det A)^-3/2 w^(3-k) for positive-definite 2x2 A, integer k >= 4 and w off the negative real axis."
     }
   ],
   "tracks": [
