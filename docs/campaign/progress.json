@@ -301,6 +301,10 @@
     {
       "date": "2026-11-17",
       "change": "Relabelling invariance of the two-loop contraction value proved for all-gauge contractions with conserved external momenta (O2-5 (ii): a change of chords is a unimodular integer change of loop momenta plus a shift), so the order-e^5 vertex is the sum over the nine class representatives with coefficient one plus the counterterm contractions. Momentum conservation is shown to be necessary."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "Symanzik integrability proved: Cauchy-Binet for U, U^-1/2 integrable on the simplex whenever two loop directions are independent, and U^-2 integrable under the no-subdivergence criterion (every direction class leaves at least three lines), removing the extra hypotheses of the parametric representation. Of the order-e^5 classes, L, X, C+-, F+- satisfy it as is, S+- once the photon Pauli-Villars pair is combined, and VP once the bubble is also in divided-difference form."
     }
   ],
   "tracks": [
