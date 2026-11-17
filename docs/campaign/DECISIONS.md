@@ -1816,3 +1816,77 @@ did not check where a declaration name ends, so a name followed by further
 identifier characters (`δ₁_eq_δ₂ϊ`, `δ₁_eq_δ₂!`) was read as the shorter
 name. The guard now checks that boundary and covers all of Lean's letter-like
 ranges. Six mutations of this kind are rejected.
+
+## D-41. Packet T3, the two-loop headline, frozen provisionally (author approval pending)
+
+**Status.** Provisional, under the overnight instruction recorded in D-39. It
+was frozen **without the author having seen its text**. The approval
+request includes the two questions below.
+
+The frozen text is the untracked scratch file with SHA-256
+`9b346ad73fb2ad6843d2e4df1937d0f6a44501e0c68fd74632afdd526f14e688`. It
+consists of:
+
+- **(HV₁)** `QED.TwoLoop.vertexOrderFive`: the order-e⁵ 1PI vertex at fixed
+  ε, `(1/i)` times `onePIFunction₂ P 1 1 5 − onePIFunction₂ P 1 1 4` at
+  `(p', p, p' − p)`. The row index is outgoing and the column index
+  incoming, as in (Y₁) and (W₂).
+- **(HV₂)** `QED.TwoLoop.IsVertexOrderFiveLimit`: its ε → 0⁺ limit,
+  entrywise.
+- **(HV₃)** `QED.TwoLoop.isFormFactorPair_vertexOrderFive_pauli_limit`, the
+  headline theorem goal, frozen as `DRAFT_SORRY`. Fix `e ≠ 0` and `m > 0`.
+  For every `η > 0` there is `R_M` such that, for all regulator fermions
+  heavier than `m` and `R_M` that satisfy the Pauli–Villars conditions,
+  there are `δ > 0` and `R` such that, for `0 < m_γ < δ` and `Λ > R`:
+  - counterterms satisfying (Z₅), (K₀) and (Z₈) exist;
+  - for every such choice there is `q₀ > 0` such that, at every on-shell
+    pair with `0 < q² < q₀`, the order-e⁵ vertex has an ε → 0⁺ limit,
+    every such limit has a form-factor pair (G₀), and every such pair has
+    `‖16π⁴ F₂/e⁴ − A₁⁽⁴⁾‖ < η`.
+
+**Questions for the author** (left open by D-37 and section 5.6):
+
+1. **Threshold order.** The headline chooses `R_M` first and lets `δ, R`
+   depend on `M₁, M₂`, reading D-37.1 with D-37.4 (masses removed last).
+   The alternative, `δ, R` independent of `M_f`, would be a joint limit in
+   all regulators, which needs uniformity in `M_f` that the plan does not
+   prove.
+2. **Joint `(m_γ, Λ)` limit.** The headline takes `m_γ → 0` and `Λ → ∞`
+   jointly, which is the stronger form. Its truth rests on the S + C unit
+   carrying no `(m²/Λ²) ln m_γ` remainder. That is supported numerically
+   (section 11.3) and plausible by the Ward identity, but not yet proved.
+   The alternative, `Λ → ∞` before `m_γ → 0`
+   (`∃ δ, ∀ m_γ < δ, ∃ R, ∀ Λ > R`), is weaker and safer.
+
+**Review.** Two independent refute-first reviews were run. The first, on the
+drafter's version, required text changes only. It confirmed that:
+
+- (HV₁) is exactly the order-5 part and misses no contraction;
+- the normalization is right;
+- `he` is necessary, since at e = 0 the conclusion is false;
+- the binders are classified correctly;
+- admissible counterterms exist.
+
+It also asked for the two questions above to go to the author. The second
+reviewed the revision. Its changes were:
+
+- the labels (HV₁)–(HV₃);
+- citing O2-27 as proved, items 1–2, for `e ≠ 0`
+  (`QED/TwoLoop/CountertermScaling.lean`);
+- the name, parallel to (I);
+- a clause asserting that admissible counterterms exist, as in (H).
+
+That review proved the existence clause true for every admissible regulator
+choice, and showed the revised headline logically equivalent to the
+drafter's version. Its nits, citing O2-27 items 1–2 and rewrapping lines
+over 100 characters, were applied.
+
+**Truth risks outside the text.** These obligations are not yet proved; if
+one fails, (HV₃) is false as frozen and needs a versioned successor:
+
+- O2-7: integrability, since a non-integrable contraction silently
+  contributes 0;
+- O2-20, O2-21: covariance and the cancellation of the q^μ term;
+- O2-22: uniformity over the pairs;
+- O2-19: decoupling of the regulator fermions;
+- the joint-limit question above.

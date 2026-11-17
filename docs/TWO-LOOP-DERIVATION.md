@@ -702,7 +702,9 @@ beyond the thresholds"; read with D-37.4 (masses removed last), the threshold fo
 is chosen first and $(\delta,R)$ may depend on $M_1,M_2$, as written above. A version with
 $(\delta,R)$ independent of $M_f$ would be a joint limit in the regulators, which D-37.4 did
 not adopt; it would need the uniformity in $M_f$ that O2-19 and O2-23 no longer prove. This
-reading is to be confirmed when the exact declaration is drafted.
+reading, with $m_\gamma\to0$ and $\Lambda\to\infty$ taken jointly, is the one frozen provisionally in
+packet T3 (D-41, `QED/Frozen/TwoLoop/VertexOrderFivePauliLimit.lean`); the author's
+confirmation of both choices is pending.
 
 The proof passes through the intermediate declarations of the former shape (b): the
 $\exists!$ theorem of O2-22 and the regulated $F_2^{(4)}(0;m_\gamma,\Lambda,M_1,M_2)$ it

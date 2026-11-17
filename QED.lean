@@ -74,6 +74,7 @@ public import QED.Frozen.TwoLoop.OnePIFunctionEqOnePIFunction
 public import QED.Frozen.TwoLoop.A1Four
 public import QED.Frozen.TwoLoop.A1FourBounds
 public import QED.Frozen.TwoLoop.WardIdentity
+public import QED.Frozen.TwoLoop.IsVertexOrderFiveLimit
 public import QED.Polylog.Basic
 public import QED.Polylog.Deriv
 public import QED.Polylog.Reflection
