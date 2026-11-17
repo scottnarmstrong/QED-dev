@@ -427,8 +427,11 @@ on the mirror-closed units of 5.2 it is the Pauli component of (G₀).
   Ward identity), but only up to $O(\varepsilon)$, since
   $\tilde S_\varepsilon^{-1}\ne\not p+m$ at $\varepsilon>0$ (compare O2-15). Theorem;
   low–moderate (**recalled** mechanism, not located in a pinned source).
-- **O2-15 (the Ward identity at one loop).** At fixed $m_\gamma,\Lambda$: if the electron is
-  on shell (Z₅) and the charge condition (K₀) holds, then $\delta_1^{(2)}=\delta_2^{(2)}$. Proof
+- **O2-15 (the Ward identity at one loop).** At fixed $m_\gamma,\Lambda$: if $e\ne0$, the electron is
+  on shell (Z₅) and the charge condition (K₀) holds, then $\delta_1^{(2)}=\delta_2^{(2)}$. (The premise
+  $e\ne0$ is needed: at $e=0$ every $Z_1$ satisfies (K₀) while $\delta_2=0$.) **Proved**
+  (`QED/TwoLoop/WardIdentity.lean`), on the $\varepsilon=0$ parametric closed forms, separately
+  for each Pauli–Villars term. Proof
   route: the differential identity $\partial\tilde S/\partial p_\mu=-\tilde S\gamma^\mu\tilde S$,
   differentiation under the one-loop integral, and the relation of the $q\to0$ vertex to
   $\partial\Sigma/\partial p$. At $\varepsilon>0$ the identity has an $O(\varepsilon)$

@@ -77,6 +77,7 @@ public import QED.Polylog.Deriv
 public import QED.Polylog.Reflection
 public import QED.Polylog.Integral
 public import QED.Polylog.Landen
+public import QED.TwoLoop.WardIdentity
 public import QED.WickModel.CompatibilityLines
 public import QED.WickModel.Compatibility
 public import QED.Frozen.WickModel.WickVertexEqOnePIFunction

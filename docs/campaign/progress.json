@@ -245,6 +245,10 @@
     {
       "date": "2026-11-17",
       "change": "Polylogarithm infrastructure (O2-24) proved in QED/Polylog: Li2, Li3 and zeta(3) as series, with the link to riemannZeta 3; continuity on [-1, 1] and derivatives; values at +-1; Euler reflection and Li2(1/2); the Landen identities and Li3(1/2) = (7/8) zeta(3) - (pi^2/12) ln 2 + (ln 2)^3/6; and the integral of ln x ln(1+x)/x over [0, 1] = -(3/4) zeta(3). Standard axioms only."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "The one-loop Ward identity (O2-15, D-37.2) proved at fixed regulators: with e != 0, the electron on shell (Z5) and the charge condition (K0), delta1 = delta2 (Srednicki (68.13), Z1 = Z2). The proof works on the epsilon = 0 parametric closed forms; the premise e != 0 is necessary (counterexample at e = 0) and was added to O2-15."
     }
   ],
   "tracks": [
