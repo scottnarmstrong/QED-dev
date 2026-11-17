@@ -112,6 +112,39 @@
       "sha256": "3761261045e2fdcf7495a529e8cac31275ad8ee1e85b979c6f9fe6e1e29631f6",
       "license": "arXiv non-exclusive distribution licence; not redistributed here.",
       "stability": "arXiv v2; fixed."
+    },
+    {
+      "id": "bmr-1972-I",
+      "role": "primary, two loops (fourth-order form factors with Pauli-Villars and photon mass, part I; D-36)",
+      "citation": "R. Barbieri, J. A. Mignaco, E. Remiddi, 'Electron form factors up to fourth order. I', Nuovo Cimento A 11 (1972) 824-864, doi:10.1007/BF02728545",
+      "url": "https://doi.org/10.1007/BF02728545",
+      "retrieved_utc": "2026-11-17T14:09:00Z",
+      "bytes": 1600862,
+      "sha256": "7383eafdfcbea58e688df1f96d96f6ed192b8255397cfad2429fc211cec25859",
+      "license": "Copyrighted, paywalled journal article acquired by the author for private study; not redistributable and never committed (D-2). Not fetchable by the script.",
+      "stability": "Publisher scan; fixed."
+    },
+    {
+      "id": "petermann-1958",
+      "role": "background (original exact fourth-order result)",
+      "citation": "A. Petermann, 'Fourth order magnetic moment of the electron', Nucl. Phys. 5 (1958) 677-683, doi:10.1016/0029-5582(58)90065-8",
+      "url": "https://doi.org/10.1016/0029-5582(58)90065-8",
+      "retrieved_utc": "2026-11-17T14:09:00Z",
+      "bytes": 325677,
+      "sha256": "687b181f00348c3a85330f67f2e2792994a5800105a6f3cf47dd63ee44390625",
+      "license": "Copyrighted, paywalled journal article acquired by the author for private study; not redistributable and never committed (D-2). Not fetchable by the script.",
+      "stability": "Publisher scan; fixed."
+    },
+    {
+      "id": "akn-2019",
+      "role": "primary, two loops (open worked example of the parametric method; D-36)",
+      "citation": "T. Aoyama, T. Kinoshita, M. Nio, 'Theory of the anomalous magnetic moment of the electron', Atoms 7 (2019) 28, doi:10.3390/atoms7010028 (publisher PDF, version 2)",
+      "url": "https://doi.org/10.3390/atoms7010028",
+      "retrieved_utc": "2026-11-17T14:09:00Z",
+      "bytes": 577052,
+      "sha256": "3a1009f2b02501fc1592202c96a5562e1a2eb639ac4035ed384ae35583d6a438",
+      "license": "CC BY 4.0 (open access). Not redistributed here; the publisher blocks scripted downloads, so the file was saved by the author.",
+      "stability": "Publisher PDF v2; fixed."
     }
   ]
 }
