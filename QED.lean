@@ -78,6 +78,8 @@ public import QED.Polylog.Reflection
 public import QED.Polylog.Integral
 public import QED.Polylog.Landen
 public import QED.TwoLoop.WardIdentity
+public import QED.TwoLoop.LoopBoundTwoExact
+public import QED.TwoLoop.JointIntegralInvariance
 public import QED.WickModel.CompatibilityLines
 public import QED.WickModel.Compatibility
 public import QED.Frozen.WickModel.WickVertexEqOnePIFunction

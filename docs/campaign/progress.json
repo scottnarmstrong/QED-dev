@@ -249,6 +249,10 @@
     {
       "date": "2026-11-17",
       "change": "The one-loop Ward identity (O2-15, D-37.2) proved at fixed regulators: with e != 0, the electron on shell (Z5) and the charge condition (K0), delta1 = delta2 (Srednicki (68.13), Z1 = Z2). The proof works on the epsilon = 0 parametric closed forms; the premise e != 0 is necessary (counterexample at e = 0) and was added to O2-15."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "Two-loop graph and prescription theorems proved (O2-5 (i), (iii); O2-6): a 1PI contraction of order at most 2nf + nA + 3 has at most two loops, with the exact formula 2 loopCount + 2nf + nA = V3 + 2 for connected contractions; the routing is the unique conserved assignment with the given chord momenta and is conserved for connected contractions with conserved external momenta; the joint energy-first integral is invariant under shifts, reflection and integer unimodular changes of the loop momenta, for every integrand."
     }
   ],
   "tracks": [
