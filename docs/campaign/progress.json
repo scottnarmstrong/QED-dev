@@ -273,6 +273,10 @@
     {
       "date": "2026-11-17",
       "change": "Overnight mode: packet T3, the two-loop headline, frozen provisionally after two independent reviews (D-41): the order-e^5 1PI vertex, its epsilon -> 0+ limit predicate, and the quantifier-form theorem goal 16 pi^4 F2/e^4 -> A1(4) with q^2 -> 0 first, then (m_gamma, Lambda), then the regulator-fermion masses. Author approval pending, with two questions on the quantifier order."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "Core of O2-10 proved: for a symmetric positive-definite 2x2 matrix A, Im w < 0 and n >= 2, the integral over R^2 of (-t^T A t + w)^(-n) is absolutely convergent and equals -(pi/(n-1)) (det A)^(-1/2) w^(1-n), via polar coordinates and a Cholesky change of variables; cross-checked numerically."
     }
   ],
   "tracks": [
