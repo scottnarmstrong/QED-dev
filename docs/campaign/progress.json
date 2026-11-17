@@ -285,6 +285,10 @@
     {
       "date": "2026-11-17",
       "change": "More of O2-10 proved: the Feynman parametrization prod (a_i)^-1 = m! times the integral over the m-simplex of (sum z_i a_i)^-(m+1) for any number of complex factors with negative imaginary part (with integrability), and the 6D spatial formula: the integral over R^6 of (v^T A v + w)^-k is pi^3 Gamma(k-3)/Gamma(k) (det A)^-3/2 w^(3-k) for positive-definite 2x2 A, integer k >= 4 and w off the negative real axis."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "VP unit at finite regulators (O2-18, O2-19, helper level): the explicit partial-fraction value with Pauli-Villars regulator fermions tends to 119/36 - pi^2/3 in the D-37.4 order, with the (m_gamma, Lambda) limit joint and the regulator-fermion limit unconstrained in M2/M1, with rate (1/M1^2 + 1/M2^2)/45 (a second-divided-difference bound). That this explicit value is the model's VP unit is O2-8/O2-10/O2-13."
     }
   ],
   "tracks": [

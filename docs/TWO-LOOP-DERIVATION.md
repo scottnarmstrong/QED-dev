@@ -586,6 +586,11 @@ source: the decision record).
 
 ### 5.4 Form factors at order 5
 
+  **Proved at helper level** for the explicit finite-regulator VP value
+  (`QED/TwoLoop/VacuumPolarizationUnitLimit.lean`): pointwise in the parameters the
+  Pauli–Villars sum is a second divided difference, which gives the bound
+  $|\cdot-(119/36-\pi^2/3)|\le(M_1^{-2}+M_2^{-2})/45$ for $M_1,M_2\ge1$ with no constraint on
+  $M_2/M_1$; no derivative bound is needed.
 - **O2-20 (covariance).** After $\varepsilon\to0^+$, at fixed regulators, the value of each
   unit at on-shell $(p,p')$ is Lorentz covariant. This is not free: the energy-first
   prescription singles out a frame, and its value at $\varepsilon>0$ is frame-dependent.

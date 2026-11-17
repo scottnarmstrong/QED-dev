@@ -86,6 +86,7 @@ public import QED.TwoLoop.JointIntegralInvariance
 public import QED.TwoLoop.CountertermScaling
 public import QED.Integration.TwoLoopEnergyIntegral
 public import QED.TwoLoop.VacuumPolarizationUnit
+public import QED.TwoLoop.VacuumPolarizationUnitLimit
 public import QED.Integration.FeynmanParameterGeneral
 public import QED.Integration.SpatialIntegralSix
 public import QED.WickModel.CompatibilityLines
