@@ -24,12 +24,10 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 1 — QED/Frozen/TwoLoop/A1FourBounds.lean (U₂), frozen provisionally (D-39)
+DRAFT_ANCHORS: 0
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 3 theorems — QED.TwoLoop.jointEnergyFirstIntegral_one (T₁₂),
-               QED.WickModel.contractionValue₂_eq_contractionValue (T₁₃),
-               QED.WickModel.onePIFunction₂_eq_onePIFunction (T₁₄); PROVED
+SEALED_THIS_TURN: 1 theorem — QED.TwoLoop.a1Four_bounds (U₂), on its provisional text (D-39); PROVED
                (guard, build, standard axioms, independent refute-first audit)
 ```
 

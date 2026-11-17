@@ -253,6 +253,10 @@
     {
       "date": "2026-11-17",
       "change": "Two-loop graph and prescription theorems proved (O2-5 (i), (iii); O2-6): a 1PI contraction of order at most 2nf + nA + 3 has at most two loops, with the exact formula 2 loopCount + 2nf + nA = V3 + 2 for connected contractions; the routing is the unique conserved assignment with the given chord momenta and is conserved for connected contractions with conserved external momenta; the joint energy-first integral is invariant under shifts, reflection and integer unimodular changes of the loop momenta, for every integrand."
+    },
+    {
+      "date": "2026-11-17",
+      "change": "(U2) sealed on its provisional text after an independent audit: -0.3285 < A1(4) < -0.3284, by a 40-term zeta(3) partial sum with telescoping tail bounds and Mathlib bounds on pi and ln 2."
     }
   ],
   "tracks": [

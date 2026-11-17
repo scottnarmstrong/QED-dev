@@ -17821,7 +17821,7 @@
         "module": "QED.Provider.TwoLoop.A1FourBounds",
         "export": "QED.Provider.TwoLoop.a1Four_bounds"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "93a5452975fc61b84f30b10ee6c2f8952da6c9e2b3eb26f976c6e4fa2b07dbb4",
       "suffix_sha256": "40068b95469d700692e1439c29833ce8c5bce83685e82400d38bfea6f5f35a83",
       "draft_allowlist": {

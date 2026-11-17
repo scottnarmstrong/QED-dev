@@ -21,7 +21,7 @@ strictly between `-0.3285` and `-0.3284`, consistent with the published value
 slip in a coefficient of (U₁) moves the value by at least `10⁻³`. -/
 theorem a1Four_bounds : -0.3285 < a1Four ∧ a1Four < -0.3284 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.TwoLoop.a1Four_bounds
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

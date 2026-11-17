@@ -1743,3 +1743,19 @@ applied:
 - the enclosure was widened from five significant digits to four decimal
   places. Any slip in a coefficient moves the value by at least 10⁻³, and
   the wider interval is far cheaper to prove.
+
+**(U₂) sealed** (on its provisional text). The provider encloses ζ(3) by the
+first 40 terms of the series plus telescoping tail bounds, and uses Mathlib's
+six-digit bounds on π and nine-digit bounds on ln 2. The proved interval is
+[−0.3284907, −0.3284778] (`QED/TwoLoop/A1FourNumerics.lean`). An independent
+refute-first audit found it PROVED:
+
+- only the proof line and the manifest state changed, and the guard rejected
+  14 deliberate mutations;
+- the provider and frozen statements are identical terms;
+- the bounds and margins were recomputed exactly with rational arithmetic and
+  with mpmath;
+- standard axioms only.
+
+The seal certifies the provisional text. If the author amends (U₂), it gets a
+versioned successor.
