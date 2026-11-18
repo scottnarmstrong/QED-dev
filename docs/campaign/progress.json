@@ -533,6 +533,10 @@
     {
       "date": "2026-11-18",
       "change": "CornerMainLimit proved: a majorant C/(Y sqrt(x) sqrt(g)) for the corner graph's main term, uniform in lambda^2 <= 1 (through bounds on the master integrals), and dominated convergence in x and on the triangle. The S + C link, and with it the headline (HV3), now waits only on CornerErrLimit."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "CornerErrLimit proved (exact cancellation of the counterterm logarithm; bounds on the inner term and on the outer-Lambda pair from the unintegrated positive b-integral; one dominating function; dominated convergence). The S + C link is proved: every input of the headline assembly pauliLimit_of_unitLimits is now a theorem."
     }
   ],
   "tracks": [

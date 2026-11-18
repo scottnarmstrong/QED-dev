@@ -113,7 +113,13 @@ the vanishing of the error terms, including the outer-$\Lambda$ pair (`CornerErr
 proved (`QED/TwoLoop/UnitSCCornerMain*.lean`, `cornerMainLimit`): each master integral is bounded
 through $M+bh\ge\sqrt{Mhb}$, giving one majorant $C/(Y\sqrt x\sqrt g)$ uniform in $\lambda^2\le1$,
 integrable on the triangle, and dominated convergence is applied in $x$ and then on the
-triangle.
+triangle. The second is proved too (`QED/TwoLoop/UnitSCCornerErr*.lean`, `cornerErrLimit`): the
+counterterm logarithm cancels exactly (`cornerErr_eq`, through `integral_cornerEll`); the inner
+term is bounded by $(10+2\log(1+\Lambda^2/g))/(\tfrac34Y^2+(1-Y)\Lambda^2)$, and the outer pair, bounded on
+the unintegrated positive $b$-integral, by an elementary function; one dominating function, uniform
+in $0<\lambda\le1\le\Lambda$, is integrable on the triangle, and the limit follows by dominated
+convergence (no explicit rate: near $y_3\to0$ the outer pair is not $O(\Lambda^{-2})$ pointwise).
+**So the S + C link is proved**, and with it every input of the headline assembly.
 
 ## 2. The common starting point
 
