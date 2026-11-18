@@ -501,6 +501,10 @@
     {
       "date": "2026-11-18",
       "change": "S + C link, stage 2: the reductions proved (explicit V, mirror identities S- = S+ and C- = C+, integrability, merging, divided differences, Cheng-Wu, matched to (5.1) and (6.2)). The joint-limit risk of D-41 is resolved: V_k + V_m + F2^(2) = 0 at every photon mass, so the (m^2/Lambda^2) ln m_gamma terms of S and C cancel exactly in S + C by delta1 = delta2."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "X unit link closed: the xi-integration hK proved (explicit antiderivative with seven dilogarithms, endpoint limits, the identities (4.6) for the real dilogarithm off [-1,1]); QED.TwoLoop.UnitXXi.xUnitLimit : XUnitLimit, standard axioms only. The headline now waits only on the S + C link."
     }
   ],
   "tracks": [

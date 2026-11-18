@@ -13,3 +13,10 @@ Numerical sanity checks (not proofs) for `QED/TwoLoop/UnitXGraph*.lean`.
   merged integrand `crossedTerm 0 0` of `UnitXGraphReduce.lean` is the engine integrand of X.
 
 Run with `nice -n 10 python3 target_check.py` from this directory (numpy, sympy; about a minute).
+
+- `xi_integration.py`: the $\xi$-integration of `QED/TwoLoop/UnitXXi*.lean` in exact sympy
+  arithmetic, rebuilt from the Lean definitions: the antiderivative's derivative equals the
+  integrand letter by letter, the endpoint coefficients are regular, $F(1^-)-F(0^+)$ after (4.6)
+  equals `crossedKernel`, the identities (4.6) at sample points, a direct quadrature at two
+  values of $Y$, and the generated blocks occur verbatim in the Lean files. Run with
+  `nice -n 10 python3 xi_integration.py --check` (about 16 s).

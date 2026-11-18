@@ -71,8 +71,11 @@ the hierarchical variables of section 2 (`QED/TwoLoop/UnitXGraph*.lean`,
 $\Lambda=\infty$ term is exactly the integrand behind (4.1)/(4.4). The joint regulator limit is
 proved by dominated convergence with a bound certified monomial by monomial (420 weighted AM–GM
 certificates, kernel-checked), and the $w$- and $b$-integrations give $\Phi_{\rm X}$ in closed form
-and (4.4) (`QED/TwoLoop/UnitXClose*.lean`). The X link now reduces to one statement, the
-$\xi$-integration of 4.5.2 (`xUnitLimit_of_kernel`).
+and (4.4) (`QED/TwoLoop/UnitXClose*.lean`). The $\xi$-integration of 4.5.2 is proved too
+(`QED/TwoLoop/UnitXXi*.lean`): an explicit antiderivative in $\xi$ (rational $\times$ logarithms and
+seven dilogarithms, checked by `HasDerivAt`), its endpoint limits with the divergent parts
+cancelling exactly, and the identities (4.6) for the real dilogarithm `dilogI` off $[-1,1]$. **The X
+link is proved** (`QED.TwoLoop.UnitXXi.xUnitLimit : XUnitLimit`, standard axioms only).
 
 **S + C link, stage 1 (2026-11-18).** The pointwise trace identities and class-value formulas
 are proved for S₊, S₋, C₊, C₋ (`QED/TwoLoop/UnitSCGraph*.lean`, `openZero_Sp_eq`, `openZero_Sm_eq`,
@@ -537,7 +540,11 @@ Proved, with integrability and only the standard axioms (`#print axioms`: `prope
   (4.10) inserted as numbers, the combination of the eight master integrals equals
   $\frac16-5\zeta(2)\ln2+\frac{13}6\zeta(2)+\frac54\zeta(3)$.
 
-**Not proved (the remaining gap for X).**
+**Not proved (the remaining gap for X).** (Update, 2026-11-18: all items are now proved, and
+the X link is closed: item 1 by `QED/TwoLoop/UnitXGraph*.lean` and `UnitXClose*.lean`, item 2 by
+`QED/TwoLoop/UnitXXi*.lean`, items 3–5 by `QED/TwoLoop/UnitXKernel*.lean` and
+`QED/Polylog/ExtraIntegralsX.lean`. The list is kept as the record of the
+plan.)
 
 1. The representation (4.4) and its link to the model (section 8, items 1–11).
 2. The step from (4.4) to (4.7): the $\xi$-integration with its finite parts, and the
