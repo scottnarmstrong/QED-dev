@@ -477,6 +477,10 @@
     {
       "date": "2026-11-18",
       "change": "VP unit link closed (m = 1): the VP class's fixed-momentum identity proved at every on-shell pair with q^2 > 0 (projection, algebraic bridge, splitting into engine pieces, Fubini in x, dominated convergence, matching), so 16 pi^4 times the model's VP unit tends to 119/36 - pi^2/3 in the D-37.4 order with no remaining hypothesis. Two of the five units (L, VP) are now linked from the model to their exact values."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Mass scaling proved: the regulated F2^(4)(0), each unit and the frozen counterterm conditions (Z5), (Z8), (K0) are dimensionless (invariant when m and all regulator masses are scaled together), so the L and VP unit links hold for every electron mass m > 0."
     }
   ],
   "tracks": [
