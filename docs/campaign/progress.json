@@ -413,6 +413,10 @@
     {
       "date": "2026-11-18",
       "change": "O2-22 reduced to one variable: the Pauli projection of the order-e^5 vertex limit depends on the on-shell pair only through q^2 (covariance under pair-moving Lorentz maps, all seven counterterm classes included), so the uniform q^2 -> 0+ limit is equivalent to the limit of a function of q^2. That limit needs the 1/q^2 cancellation of the projector, which requires the joint polynomial dependence of the numerators on the external momenta; the zeroth-order cancellation is proved."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "O2-22 proved at fixed regulators (helper level): the Pauli component of the order-e^5 vertex limit has a unique limit as q^2 -> 0+, uniformly over on-shell positive-energy pairs (the projector's 1/q^2 cancels: zeroth order pointwise, first order by reflection evenness, second-order coefficient by dominated convergence, via Lagrange interpolation in the curve parameter). This defines the regulated F2^(4)(0; m_gamma, Lambda, M1, M2) at helper level; its explicit parametric form, and the regulator limits (O2-17, O2-19, O2-23, unit link), remain."
     }
   ],
   "tracks": [

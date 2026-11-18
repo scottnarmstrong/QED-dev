@@ -876,7 +876,14 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   $+d_1F_2^{(2)}$, which contributes $-\tfrac12r^2\ln(\lambda/m)$, yet BMR's ladder has no
   logarithm, so the bare ladder must carry $+\tfrac12r^2\ln(\lambda/m)$. The cancellation must
   be proved unit by unit, from infrared expansions (O2-23).
-  **Status (2026-11-18): reduced to one variable** (`QED/TwoLoop/PauliZero*.lean`). The Pauli
+  **Status (2026-11-18): proved at fixed regulators, helper level**
+  (`QED/TwoLoop/PauliZeroLimit*.lean`, `existsUnique_isUniformPauliLimit`, `pauliZeroLimit`): for
+  $m,m_\gamma,\Lambda>0$, $M_f\ge m$ with the PV conditions and any counterterms, the Pauli component
+  of the order-5 vertex limit has a unique limit as $q^2\to0^+$, uniform over on-shell
+  positive-energy pairs; the $1/q^2$ of the projector cancels at zeroth order pointwise and at
+  first order by the evenness of the total numerator under the reflection fixing $p$, and the
+  second-order coefficient converges by dominated convergence. The explicit Feynman-parameter
+  form of the limit is not yet surfaced. Earlier step (`QED/TwoLoop/PauliZero*.lean`): The Pauli
   projection of the order-5 vertex limit depends on the on-shell pair only through $q^2$
   (covariance under Lorentz maps that move $p,p'$, reached by two reflections), so the uniform
   statement is equivalent to a one-variable limit of `pauliAt` as $q^2\to0^+$
