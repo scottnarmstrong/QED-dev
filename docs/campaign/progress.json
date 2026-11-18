@@ -333,6 +333,10 @@
     {
       "date": "2026-11-18",
       "change": "O2-8 for the VP class, conditionally: at fixed epsilon > 0 with momentum conservation, the VP class value is rewritten in the nested routing and factorized as outer chain times the one-loop vacuum-polarization integrand (unconditional), and equals the iterated energy-first integral with the frozen one-loop Pi inserted, under two explicit integrability hypotheses: O2-7 for the class and a (t2, v1) Fubini condition, both still to be proved."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Bridge from the frozen amplitude to the parametric form, for the ladder and crossed classes: frozen propagators in lineDenom form (photon Pauli-Villars pair combined for eps != 0); the frozen routings of L and X are proved equal to the class loop matrices up to integer unimodular changes, and satisfy the no-subdivergence criterion in PV form, removing the numerical-only matching caveat for these two classes; their values are joint integrals of a degree <= 4 numerator over 8 PV-form denominators. Other classes and integrability (O2-7) remain."
     }
   ],
   "tracks": [
