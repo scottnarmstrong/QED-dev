@@ -513,6 +513,10 @@
     {
       "date": "2026-11-18",
       "change": "S + C link: the delta2/delta_m half proved (sixteen_pi_pow_four_mul_sCtHalf, an exact Pauli-Villars difference 8 pi^2 [d2 Delta V_k + dm Delta V_m], evaluated directly from the parametric class values). SCUnitLimitOne now depends only on the corner graph's joint limit (CornerPartLimit); the headline waits on that one statement."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "O2-7 completed for the Furry classes: F+ and F- are individually jointly energy-first integrable at fixed epsilon under the two Pauli-Villars conditions (the triangle is linearly divergent per flavour; the flavour sum splits into nine pieces, each passing the refined criterion). Every class of the order-e^5 vertex now has a proved genuine integral value (D-44, item 2)."
     }
   ],
   "tracks": [
