@@ -98,6 +98,7 @@ public import QED.TwoLoop.ParametricBridgeVPFlavour
 public import QED.Algebra.FormFactorProjector
 public import QED.TwoLoop.CountertermInsertion
 public import QED.TwoLoop.UnitLS
+public import QED.TwoLoop.UnitX
 public import QED.TwoLoop.ClassIntegrable
 public import QED.TwoLoop.ClassIntegrableVP
 public import QED.TwoLoop.ClassLimit

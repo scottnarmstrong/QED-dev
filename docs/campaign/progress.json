@@ -373,6 +373,10 @@
     {
       "date": "2026-11-18",
       "change": "O2-7 limit proved per class: for m, m_gamma, Lambda > 0 (M_f >= m and the PV conditions for VP), on-shell p, p' with q^2 >= 0 and momentum conservation, each class value has a unique limit as epsilon -> 0+, the epsilon = 0 parametric integral, by dominated convergence using the positivity of V (O2-12). Uniformity in small q^2 (O2-22) remains."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Crossed-ladder unit X: exact value derived (docs/TWO-LOOP-UNITS.md section 4.5, every step checked numerically, final agreement with BMR-I to 6e-42): a 1D form via the xi-integration, integration by parts, and eight master integrals; the master integrals (zeta(3), zeta(2) ln 2 via Li2/Li3 at 1/2) and the final assembly are proved in Lean (QED/Polylog/ExtraIntegrals.lean, QED/TwoLoop/UnitX.lean). Remaining for X in Lean: the xi-integration, the integration-by-parts identity and the endpoint limits."
     }
   ],
   "tracks": [

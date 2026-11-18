@@ -15,6 +15,7 @@ Modes (each runs in ONE process; run niced):
   nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py selfenergy  # ~6 min
   nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py corner      # ~20 min (--level 8)
   nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py crossed     # ~5 min (levels 8, 16)
+  nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py crossedexact  # ~2 min (section 4.5)
   nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py exact       # seconds
   nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py all
 Options: --dps N (base working precision of the 2D/3D integrals; extra digits are added
@@ -486,6 +487,389 @@ def run_crossed(args):
     print('  BMR row e)  =', mp.nstr(T['X'], 22), '  difference', mp.nstr(v - T['X'], 3))
 
 
+# ====================================================================== crossed: exact evaluation (section 4.5)
+# Weight functions of the 1D kernel, as symbols (derivative rules in _CX_DERIV):
+#   L = Li2(Y), D = Li2(1-2Y) - Li2(2Y-1), a = ln Y, b = ln(1-Y), z2 = zeta(2) = pi^2/6.
+_CX_Y = sp.Symbol('Y', positive=True)
+_CX_L, _CX_D, _CX_a, _CX_b, _CX_z2 = sp.symbols('L D a b z2')
+
+
+def _cx_kernel_doc():
+    """K_X(Y) of eq. (4.7), as written in docs/TWO-LOOP-UNITS.md (partial fractions)."""
+    Y, L, D, a, b, z2 = _CX_Y, _CX_L, _CX_D, _CX_a, _CX_b, _CX_z2
+    R = sp.Rational
+    rho = R(5, 6)/(Y-1) - R(3, 4)/(Y-1)**2 - R(8, 3)/(Y-1)**3 - 1/(Y-1)**4
+    kL = -R(5, 2)*Y - R(5, 4) + 2*rho + R(5, 6)/Y - R(7, 12)/Y**2
+    kD = -R(7, 6)*Y - R(11, 12) + rho + R(5, 6)/Y - R(1, 12)/Y**2
+    kaa = Y/12 - R(7, 24) + rho/2
+    kab = -R(4, 3)*Y - R(1, 3) + R(5, 6)/Y - R(7, 12)/Y**2
+    ka = (-R(11, 12)*Y - R(5, 4) - R(1, 8)/(2*Y-1) + R(11, 12)/(Y-1) - R(2, 3)/(Y-1)**2
+          - 1/(Y-1)**3 - R(5, 12)/Y)
+    kb = (R(11, 12)*Y - R(13, 12) + R(1, 8)/(2*Y-1) - R(2, 3)/(Y-1) - 1/(Y-1)**2 + R(7, 6)/Y
+          - R(1, 24)/Y**2)
+    kz = R(23, 12)*Y + R(19, 24) - rho/2 - R(5, 4)/Y + R(1, 8)/Y**2
+    k1 = -R(17, 12)*Y + R(1, 24) + R(2, 3)/(Y-1) + 1/(Y-1)**2 + R(3, 8)/Y
+    return kL*L + kD*D + kaa*a**2 + kab*a*b + ka*a + kb*b + kz*z2 + k1
+
+
+def _cx_boundary_doc():
+    """the boundary function G(Y) of eq. (4.8)."""
+    Y, L, D, a, b, z2 = _CX_Y, _CX_L, _CX_D, _CX_a, _CX_b, _CX_z2
+    R = sp.Rational
+    gL = -R(5, 4)*Y**2 - R(5, 4)*Y + R(3, 2)/(Y-1) + R(8, 3)/(Y-1)**2 + R(2, 3)/(Y-1)**3 + R(7, 12)/Y
+    gD = -R(7, 12)*Y**2 - R(11, 12)*Y + R(3, 4)/(Y-1) + R(4, 3)/(Y-1)**2 + R(1, 3)/(Y-1)**3 + R(1, 12)/Y
+    gaa = Y**2/24 - R(7, 24)*Y + R(3, 8)/(Y-1) + R(2, 3)/(Y-1)**2 + R(1, 6)/(Y-1)**3 - R(1, 8)
+    gab = -R(2, 3)*Y**2 - R(1, 3)*Y + R(7, 12)/Y
+    ga = -R(11, 24)*Y**2 - R(7, 8)*Y + R(1, 3)/(Y-1) + R(1, 3)/(Y-1)**2 + R(5, 12)
+    gb = R(11, 24)*Y**2 - R(19, 24)*Y + R(1, 3)/(Y-1) + R(1, 24)/Y + R(23, 24)
+    g1 = -z2*(R(2, 3)/(Y-1)**2 + R(1, 6)/(Y-1)**3 + R(3, 8)/(Y-1) + R(1, 8)/Y) - R(1, 3)/(Y-1)
+    # (the constant shifts -1/8 a^2, +5/12 a, +23/24 b absorb the divergent simple-pole pieces)
+    return gL*L + gD*D + gaa*a**2 + gab*a*b + ga*a + gb*b + g1
+
+
+def _cx_masters_doc():
+    """K_m(Y) of eq. (4.9): polynomial + convergent simple-pole terms."""
+    Y, L, D, a, b, z2 = _CX_Y, _CX_L, _CX_D, _CX_a, _CX_b, _CX_z2
+    R = sp.Rational
+    return (R(5, 6)*((L + a*b)/Y + (D - R(3, 2)*z2)/Y + 2*(L - z2)/(Y-1) + (D + R(3, 2)*z2)/(Y-1))
+            + R(5, 12)*a**2/(Y-1) + R(5, 12)*a/(Y-1) + R(11, 6)*b/Y + R(4, 3)*(a - b)/(2*Y-1))
+
+
+_CX_DERIV = {_CX_L: -_CX_b/_CX_Y, _CX_D: 2*(_CX_a - _CX_b)/(1 - 2*_CX_Y),
+             _CX_a: 1/_CX_Y, _CX_b: -1/(1 - _CX_Y), _CX_z2: 0}
+
+
+def _cx_ddY(expr):
+    """total Y-derivative of an expression in Y and the weight symbols."""
+    out = sp.diff(expr, _CX_Y)
+    for s, ds in _CX_DERIV.items():
+        out += sp.diff(expr, s)*ds
+    return out
+
+
+def _cx_coeffs(expr):
+    """coefficients of expr (polynomial in L, D, a, b, z2) as cancelled rational functions of Y."""
+    P = sp.Poly(sp.expand(expr), _CX_L, _CX_D, _CX_a, _CX_b, _CX_z2)
+    return {m: sp.cancel(c) for m, c in zip(P.monoms(), P.coeffs())}
+
+
+def _cx_is_zero(expr):
+    return all(c == 0 for c in _cx_coeffs(expr).values())
+
+
+def crossed_letters():
+    """Phi_X in the variables Y = z2 + z3, xi = z2/Y, as R_1 + sum_l R_l ln(letter_l).
+    Returns ({'1'|letter: coefficient}, Phi in z-variables)."""
+    z2, z3, Phi = crossed_Phi()
+    assert not Phi.atoms(sp.polylog), 'Phi_X contains a dilogarithm'
+    Y, xi = _CX_Y, sp.Symbol('xi', positive=True)
+    letters = {'Y': Y, 'xi': xi, '1-Y*xi': 1 - Y*xi, 'xi+Y-2*Y*xi': xi + Y - 2*Y*xi, '1-Y': 1 - Y}
+    Ls = {k: sp.Symbol('ln_' + k) for k in letters}
+    pt = {Y: sp.Rational(3, 10), xi: sp.Rational(1, 5)}
+
+    def logmap(arg):
+        num, den = sp.fraction(sp.factor(sp.together(arg)))
+        res, const = 0, sp.Integer(1)
+        for part, sgn in ((num, 1), (den, -1)):
+            c0, fl = sp.factor_list(part)
+            const *= c0**sgn
+            for f, mult in fl:
+                sg = sp.sign(f.subs(pt)); f = sp.expand(sg*f); const *= sg**(mult*sgn)
+                key = [k for k, v in letters.items() if sp.expand(f - v) == 0]
+                assert len(key) == 1, f
+                res += sgn*mult*Ls[key[0]]
+        assert const > 0
+        return res + sp.log(const)
+    P = Phi.subs({z2: Y*xi, z3: Y*(1 - xi)})
+    P = P.xreplace({l: logmap(l.args[0]) for l in P.atoms(sp.log)})
+    out = {}
+    for k, s in Ls.items():
+        out[k] = sp.cancel(sp.together(sp.diff(P, s)))
+    out['1'] = sp.cancel(sp.together(P.xreplace({s: 0 for s in Ls.values()})))
+    return xi, out, (z2, z3, Phi)
+
+
+def crossed_xi_integral(xi, co):
+    """K(Y) = int_0^1 Y Phi(Y, xi) dxi in closed form (finite parts at xi = 0, 1; the 1/(2 xi - 1)
+    pole of the ln xi and ln(xi+Y-2Y xi) coefficients is integrated as one regular term).
+    Returns K in the weight symbols and the dictionary of divergent parts (all must vanish)."""
+    Y = _CX_Y
+    Li2 = lambda z: sp.polylog(2, z)
+    # letter data ln(al + be t): t = xi near xi = 0, t = 1 - xi near xi = 1
+    ab0 = {'1-Y*xi': (sp.Integer(1), -Y), 'xi+Y-2*Y*xi': (Y, 1 - 2*Y)}
+    ab1 = {'1-Y*xi': (1 - Y, Y), 'xi+Y-2*Y*xi': (1 - Y, -(1 - 2*Y)), 'xi': (sp.Integer(1), sp.Integer(-1))}
+    zeta2 = sp.pi**2/6
+
+    def tc(al, be, m):
+        return sp.log(al) if m == 0 else -(-be/al)**m/m
+
+    def conv(al, be, k):   # int_0^1 t^-k [ln(al + be t) - Taylor_{k-1}] dt
+        if sp.simplify(al + be) == 0:
+            return -zeta2 if k == 1 else -sp.harmonic(k-1)/(k-1)
+        if k == 1:
+            return -Li2(-be/al)
+        R1 = sp.log(al + be) - sum(tc(al, be, m) for m in range(k))
+        return R1/(1 - k) + (-be/al)**(k-1)*sp.log(1 + be/al)/(k - 1)
+
+    def fp_log(al, be, k):
+        fp = conv(al, be, k) + sum(tc(al, be, m)/(m - k + 1) for m in range(k - 1))
+        div = {('log',): -tc(al, be, k - 1)}
+        for m in range(k - 1):
+            div[('pow', m - k + 1)] = -tc(al, be, m)/(m - k + 1)
+        return fp, div
+
+    def fp_rat(k):
+        return (0, {('log',): -1}) if k == 1 else (sp.Rational(1, 1 - k), {('pow', 1 - k): -sp.Rational(1, 1 - k)})
+
+    def fp_lnt(k):
+        n = -k
+        if n == -1:
+            return 0, {('log2',): -sp.Rational(1, 2)}
+        return -sp.Rational(1, (n+1)**2), {('powlog', n+1): -sp.Rational(1, n+1), ('pow', n+1): sp.Rational(1, (n+1)**2)}
+
+    def poly_log(al, be, n):   # int_0^1 t^n ln(al + be t) dt
+        I = (sum((-al)**j/(be**(j+1)*(n - j + 1)) for j in range(n + 1))
+             + (-al/be)**(n+1)/be*sp.log((al + be)/al))
+        return sp.log(al + be)/(n + 1) - be/(n + 1)*I
+    assert co['1-Y'] == 0
+    rx = sp.cancel(sp.limit(co['xi']*(2*xi - 1), xi, sp.Rational(1, 2)))
+    rB = sp.cancel(sp.limit(co['xi+Y-2*Y*xi']*(2*xi - 1), xi, sp.Rational(1, 2)))
+    assert sp.cancel(rx + rB) == 0
+    pieces = {'Y': co['Y'], 'xi': sp.cancel(co['xi'] - rx/(2*xi - 1)), '1-Y*xi': co['1-Y*xi'],
+              'xi+Y-2*Y*xi': sp.cancel(co['xi+Y-2*Y*xi'] - rB/(2*xi - 1)), '1': co['1']}
+    # int_0^1 (ln xi - ln(xi+Y-2Y xi))/(2 xi - 1) dxi = (pi^2/4 - Li2(1-2Y) + Li2(2Y-1))/2
+    K = Y*rx*(sp.pi**2/4 - Li2(1 - 2*Y) + Li2(2*Y - 1))/2
+    div = {}
+    for L, coef in pieces.items():
+        fac = sp.log(Y) if L == 'Y' else 1
+        for term in sp.Add.make_args(sp.apart(sp.cancel(Y*coef), xi)):
+            A, rest = term.as_independent(xi, as_Add=False)
+            A2, rest = sp.factor(rest).as_independent(xi, as_Add=False)
+            A = A*A2*fac
+            if rest == 1:
+                n, kind = 0, 'xi'
+            elif rest == xi or (rest.is_Pow and rest.base == xi):
+                n, kind = (1 if rest == xi else int(rest.exp)), 'xi'
+            elif sp.expand(rest - (xi - 1)) == 0:
+                n, kind = 1, 'one'
+            elif rest.is_Pow and sp.expand(rest.base - (xi - 1)) == 0:
+                n, kind = int(rest.exp), 'one'
+            else:
+                raise ValueError(term)
+            if kind == 'one':
+                A = A*sp.Integer(-1)**n      # (xi - 1)^n = (-1)^n t^n, t = 1 - xi
+            free = L in ('1', 'Y')
+            if n >= 0:
+                if free:
+                    K += A/(n + 1)
+                elif kind == 'xi':
+                    K += -A/sp.Integer((n + 1)**2) if L == 'xi' else A*poly_log(*ab0[L], n)
+                else:
+                    K += -A*sp.harmonic(n + 1)/(n + 1) if L == 'xi' else A*poly_log(*ab1[L], n)
+                continue
+            k = -n
+            if free:
+                fp, d = fp_rat(k)
+            elif kind == 'xi':
+                fp, d = fp_lnt(k) if L == 'xi' else fp_log(*ab0[L], k)
+            else:
+                fp, d = fp_log(*ab1[L], k)
+            K += A*fp
+            for kk, v in d.items():
+                div[(kind,) + kk] = div.get((kind,) + kk, 0) + A*v
+    return K, {k: sp.simplify(v) for k, v in div.items()}
+
+
+def crossed_canonical(K):
+    """rewrite K in the weight symbols, using (4.6): Li2 arguments -> Li2(Y), D; logs -> ln Y, ln(1-Y)."""
+    Y, L, D, a, b, z2 = _CX_Y, _CX_L, _CX_D, _CX_a, _CX_b, _CX_z2
+    Pp, Mm = sp.symbols('Pp Mm')     # Li2(1-2Y), Li2(2Y-1); D = Pp - Mm
+    rep = {}
+    for p in K.atoms(sp.polylog):
+        arg = p.args[1]
+        table = [(Y, L), (1 - 2*Y, Pp), (2*Y - 1, Mm),
+                 ((1 - 2*Y)/(1 - Y), Pp - Mm + L - b**2/2 + a*b - z2/2),
+                 ((2*Y - 1)/Y, -Pp + Mm - L - a**2/2 + z2/2),
+                 (-Y/(1 - Y), -L - b**2/2)]
+        hit = [v for u, v in table if sp.simplify(arg - u) == 0]
+        assert len(hit) == 1, p
+        rep[p] = hit[0]
+    lrep = {}
+    for l in K.atoms(sp.log):
+        arg = l.args[0]
+        table = [(Y, a), (1 - Y, b), (1/(1 - Y), -b), ((1 - Y)/Y, b - a), (Y/(1 - Y), a - b)]
+        hit = [v for u, v in table if sp.simplify(arg - u) == 0]
+        assert len(hit) == 1, l
+        lrep[l] = hit[0]
+    K2 = sp.expand(K.xreplace(rep).xreplace(lrep).subs(sp.pi, sp.sqrt(6*z2)))
+    Pc = sp.Poly(K2, L, Pp, Mm, a, b, z2)
+    cf = {m: sp.cancel(c) for m, c in zip(Pc.monoms(), Pc.coeffs())}
+    # D enters only as Pp - Mm
+    cP = cf.pop((0, 1, 0, 0, 0, 0), 0); cM = cf.pop((0, 0, 1, 0, 0, 0), 0)
+    assert sp.cancel(cP + cM) == 0
+    out = cP*D
+    for (eL, eP, eM, ea, eb, ez), c in cf.items():
+        assert eP == 0 and eM == 0
+        out += c*L**eL*a**ea*b**eb*z2**ez
+    return out
+
+
+def _cx_numeric(expr):
+    """mpmath function of Y from an expression in the weight symbols."""
+    Y = _CX_Y
+    f = sp.lambdify((Y, _CX_L, _CX_D, _CX_a, _CX_b, _CX_z2), expr, 'mpmath')
+
+    def g(y):
+        return f(y, mp.polylog(2, y), mp.polylog(2, 1 - 2*y) - mp.polylog(2, 2*y - 1),
+                 mp.log(y), mp.log1p(-y), mp.zeta(2))
+    return g
+
+
+def _cx_series_limit(expr, end, order=7):
+    """exact limit of expr (in the weight symbols) at Y -> 0+ (end=0) or 1- (end=1); returns
+    (limit, divergent remainder), using the expansions of L, D, a, b at the endpoint."""
+    e, l = sp.symbols('eps ell')        # ell = ln(eps)
+    z2 = _CX_z2
+    t = sp.Symbol('t')
+    log1m = lambda x: -sum(x**k/sp.Integer(k) for k in range(1, order + 1))
+    Li2s = lambda x: sum(x**k/sp.Integer(k)**2 for k in range(1, order + 1))
+    geo = sum((2*t)**m for m in range(order + 1))
+    pl, pr = sp.expand(2*geo), sp.expand(-2*geo*log1m(t))
+
+    def D0(x, lx):   # D(x) = 3 z2/2 + int_0^x 2 (ln u - ln(1-u))/(1-2u) du
+        r = sp.Rational(3, 2)*z2
+        for k in range(order + 1):
+            r += pl.coeff(t, k)*x**(k+1)*(lx/(k+1) - sp.Rational(1, (k+1)**2)) + pr.coeff(t, k)*x**(k+1)/(k+1)
+        return r
+    if end == 0:
+        sub = {_CX_a: l, _CX_b: log1m(e), _CX_L: Li2s(e), _CX_D: D0(e, l)}
+        Yv = e
+    else:
+        sub = {_CX_a: log1m(e), _CX_b: l, _CX_L: z2 - l*log1m(e) - Li2s(e), _CX_D: -D0(e, l)}
+        Yv = 1 - e
+    tot = 0
+    for mono, c in _cx_coeffs(expr).items():
+        cs = sp.series(c.subs(_CX_Y, Yv), e, 0, order - 1).removeO()
+        term = cs*sp.Mul(*[s**k for s, k in zip((_CX_L, _CX_D, _CX_a, _CX_b, _CX_z2), mono)])
+        tot += sp.expand(term.xreplace(sub))
+    tot = sp.expand(tot)
+    lim = tot.coeff(e, 0).subs(l, 0)
+    div = sp.expand(sum(tot.coeff(e, -k) for k in range(1, order + 2)) + (tot.coeff(e, 0) - lim))
+    return sp.expand(lim), div
+
+
+def run_crossedexact(args):
+    T = targets()
+    Y, L, D, a, b, z2 = _CX_Y, _CX_L, _CX_D, _CX_a, _CX_b, _CX_z2
+    print('== crossed-ladder unit X: exact evaluation (section 4.5)')
+    t0 = time.time()
+    # step 1: Phi_X has no dilogarithm; letters
+    xi, co, (z2s, z3s, Phi) = crossed_letters()
+    print(f'  step 1: Phi_X = R_1 + sum R_l ln(l), letters Y, xi, 1-Y xi, xi+Y-2Y xi; no Li2 ({time.time()-t0:.0f} s)')
+    for k, v in co.items():
+        print(f'    denominator of the {k:12s} coefficient: {sp.factor(sp.fraction(v)[1])}')
+    # step 2: xi-integration
+    K, div = crossed_xi_integral(xi, co)
+    assert all(v == 0 for v in div.values()), div
+    print(f'  step 2: xi-integral in closed form; all {len(div)} endpoint divergences cancel')
+    Kc = crossed_canonical(K)
+    print('  step 3: canonical form (identities (4.6)) equals eq. (4.7):', _cx_is_zero(Kc - _cx_kernel_doc()))
+    # numerical checks of (4.6)
+    mp.mp.dps = 40
+    worst = 0
+    for y in (mp.mpf(1)/7, mp.mpf(1)/2 + mp.mpf(1)/11, mp.mpf(9)/10):
+        Dv = mp.polylog(2, 1-2*y) - mp.polylog(2, 2*y-1); Lv = mp.polylog(2, y); A, B = mp.log(y), mp.log1p(-y)
+        worst = max(worst,
+                    abs(mp.polylog(2, (1-2*y)/(1-y)) - (Dv + Lv - B**2/2 + A*B - mp.zeta(2)/2)),
+                    abs(mp.polylog(2, (2*y-1)/y) - (-Dv - Lv - A**2/2 + mp.zeta(2)/2)),
+                    abs(mp.polylog(2, -y/(1-y)) - (-Lv - B**2/2)))
+    print('    identities (4.6) at three points: max deviation', mp.nstr(worst, 3))
+    # step 2 check: K(Y) against direct xi-quadrature of Y Phi
+    fP = sp.lambdify((z2s, z3s), Phi, 'mpmath'); fK = _cx_numeric(_cx_kernel_doc())
+    mp.mp.dps = args.dps
+    xn = de_nodes(mp.mpf(1)/args.level)
+    for y in (mp.mpf('0.3'), mp.mpf('0.7')):
+        v = 0
+        for u, um, w in xn:      # xi in (0,1/2) and (1/2,1), xi = u/2 and 1 - u/2
+            for x_, xm in ((u/2, 1 - u/2), (1 - u/2, u/2)):
+                with mp.workdps(mp.mp.dps + bumped(min(x_, xm, um/2))):
+                    v += w/2*y*fP(y*x_, y*xm)
+        with mp.workdps(mp.mp.dps + 20):
+            kv = fK(y)
+        print(f'    K({mp.nstr(y, 2)}): xi-quadrature {mp.nstr(v, 22)}  eq. (4.7) {mp.nstr(kv, 22)}  diff {mp.nstr(v - kv, 3)}')
+    # step 3 check: int_0^1 K = X
+    mp.mp.dps = 35
+
+    def Kh(y):
+        if y <= 0 or y >= 1:
+            return mp.mpf(0)
+        with mp.workdps(int(5*max(0, -mp.log10(min(y, 1 - y)))) + 80):
+            return fK(y)
+    v = mp.quad(Kh, [0, 0.1, 0.2, 0.45, 0.52, 0.8, 0.95, 1])
+    print('    int_0^1 K_X =', mp.nstr(v, 32), '  BMR', mp.nstr(T['X'], 32), '  diff', mp.nstr(v - T['X'], 3))
+    # step 4: K = G' + K_m exactly
+    G, Km = _cx_boundary_doc(), _cx_masters_doc()
+    Ppoly = sp.cancel(sp.expand(_cx_kernel_doc() - _cx_ddY(G) - Km))
+    cf = _cx_coeffs(Ppoly)
+    assert set(cf) <= {(0, 0, 0, 0, 0), (0, 0, 0, 0, 1)}, cf
+    print('  step 4: K_X - G\' - K_m =', sp.factor(Ppoly), '(a polynomial: it is p(Y) of eq. (4.9))')
+    pint = sp.integrate(Ppoly, (Y, 0, 1))
+    g0, d0 = _cx_series_limit(G, 0); g1, d1 = _cx_series_limit(G, 1)
+    print(f'    G(0+) = {g0},  G(1-) = {g1}  (divergent parts: {d0}, {d1})')
+    with mp.workdps(60):
+        fG = _cx_numeric(G)
+        e_ = mp.mpf(10)**-12
+        print('    numerically G(1e-12) =', mp.nstr(fG(e_), 12), ' G(1-1e-12) =', mp.nstr(fG(1 - e_), 12))
+    # step 5: masters
+    mp.mp.dps = 40
+    Z2, Z3, LN2 = mp.zeta(2), mp.zeta(3), mp.log(2)
+    Dn = lambda y: mp.polylog(2, 1-2*y) - mp.polylog(2, 2*y-1)
+    q = lambda f, pts=(0, 0.5, 1): mp.quad(f, list(pts))
+    masters = [
+        ('M1  int Li2(Y)/Y', q(lambda y: mp.polylog(2, y)/y), Z3, 'Lean: integral_Li₂_div'),
+        ('M2  int ln Y ln(1-Y)/Y', q(lambda y: mp.log(y)*mp.log1p(-y)/y), Z3, 'Lean: integral_log_mul_log_one_sub_div'),
+        ('M3  int (D - 3z2/2)/Y', q(lambda y: (Dn(y) - 3*Z2/2)/y, (0, 0.25, 0.5, 1)), -3*Z2*LN2 - 7*Z3/4, 'Lean: UnitX; route (4.11)'),
+        ('M3\' int (D + 3z2/2)/(Y-1)', q(lambda y: (Dn(y) + 3*Z2/2)/(y-1), (0, 0.5, 0.75, 1)), -3*Z2*LN2 - 7*Z3/4, 'Lean: UnitX; = M3 (Y -> 1-Y)'),
+        ('M4  int (Li2(Y) - z2)/(Y-1)', q(lambda y: (mp.polylog(2, y) - Z2)/(y-1)), 2*Z3, 'Lean: UnitX; = -A1'),
+        ('M5  int ln^2 Y/(Y-1)', q(lambda y: mp.log(y)**2/(y-1)), -2*Z3, 'Lean: UnitX; = -J1'),
+        ('M6  int ln Y/(Y-1)', q(lambda y: mp.log(y)/(y-1)), Z2, 'Lean: UnitX'),
+        ('M7  int ln(1-Y)/Y', q(lambda y: mp.log1p(-y)/y), -Z2, 'Lean: ExtraIntegrals, UnitLS'),
+        ('M8  int (ln Y - ln(1-Y))/(2Y-1)', q(lambda y: (mp.log(y) - mp.log1p(-y))/(2*y-1), (0, 0.3, 0.7, 1)), 3*Z2/2, 'Lean: UnitX'),
+    ]
+    print('  step 5: master integrals over (0,1) (40 digits)')
+    for nm, val, ref, src in masters:
+        print(f'    {nm:30s} {mp.nstr(val, 30):>34s}  diff {mp.nstr(val - ref, 3):>9s}   [{src}]')
+    # the derivation of M3 from classical integrals (section 4.5.4)
+    xq = lambda f: mp.quad(f, [0, 1])
+    chain = [
+        ('J1  int ln^2(1-x)/x = 2 z3', xq(lambda x: mp.log1p(-x)**2/x), 2*Z3),
+        ('J2  int ln(1-x) ln(1+x)/x = -5/8 z3', xq(lambda x: mp.log1p(-x)*mp.log1p(x)/x), -5*Z3/8),
+        ('J3  int ln^2(1+x)/x = z3/4', xq(lambda x: mp.log1p(x)**2/x), Z3/4),
+        ('A1  int (Li2(x) - z2)/(1-x) = -2 z3', xq(lambda x: (mp.polylog(2, x) - Z2)/(1-x)), -2*Z3),
+        ('A2  int (Li2(-x) + z2/2)/(1-x) = 5/8 z3', xq(lambda x: (mp.polylog(2, -x) + Z2/2)/(1-x)), 5*Z3/8),
+        ('A3  int Li2(x)/(1+x) = z2 ln2 - 5/8 z3', xq(lambda x: mp.polylog(2, x)/(1+x)), Z2*LN2 - 5*Z3/8),
+        ('A4  int Li2(-x)/(1+x) = z3/4 - z2 ln2/2', xq(lambda x: mp.polylog(2, -x)/(1+x)), Z3/4 - Z2*LN2/2),
+    ]
+    for nm, val, ref in chain:
+        print(f'    {nm:42s} {mp.nstr(val, 30):>34s}  diff {mp.nstr(val - ref, 3)}')
+    A = {nm[:2]: val for nm, val, ref in chain}
+    m3n = masters[2][1]
+    print('    (4.11): (A1 - A2) - A3 + A4 - 3/2 z2 ln2 - M3 =',
+          mp.nstr(A['A1'] - A['A2'] - A['A3'] + A['A4'] - 3*Z2*LN2/2 - m3n, 3))
+    # step 6: assembly
+    z3, M3 = sp.symbols('z3 M3')
+    sp_int = (sp.Rational(5, 6)*(z3 + z3 + M3 + 2*2*z3 + M3) + sp.Rational(5, 12)*(-2*z3)
+              + sp.Rational(5, 12)*z2 + sp.Rational(11, 6)*(-z2) + sp.Rational(4, 3)*sp.Rational(3, 2)*z2)
+    total = sp.expand(g1 - g0 + pint + sp_int)
+    print('  step 6: X = G(1-) - G(0+) + int p + int (simple-pole part) =', total)
+    final = sp.expand(total.subs(M3, -3*z2*sp.log(2) - sp.Rational(7, 4)*z3))
+    print('          with M3 = -3 z2 ln2 - 7/4 z3:  X =', final)
+    with mp.workdps(40):
+        fv = sp.N(final.subs({z2: sp.pi**2/6, z3: sp.zeta(3)}), 40)
+        print('          =', mp.nstr(mp.mpf(str(fv)), 30), '  BMR', mp.nstr(T['X'], 30), '  diff',
+              mp.nstr(mp.mpf(str(fv)) - T['X'], 3))
+
+
 # ====================================================================== exact pieces
 def run_exact(args):
     """the elementary decompositions of int K_L and int K_S used in sections 3.5 and 5.5."""
@@ -505,13 +889,14 @@ def run_exact(args):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('mode', choices=['ladder', 'selfenergy', 'corner', 'crossed', 'exact', 'all'])
+    ap.add_argument('mode', choices=['ladder', 'selfenergy', 'corner', 'crossed', 'crossedexact', 'exact', 'all'])
     ap.add_argument('--dps', type=int, default=None)
     ap.add_argument('--skip-finite', action='store_true')
     ap.add_argument('--level', type=int, default=None,
                     help='inverse tanh-sinh step of the outer rules (corner default 8, crossed 8 and 16)')
     args = ap.parse_args()
-    modes = ['exact', 'ladder', 'selfenergy', 'corner', 'crossed'] if args.mode == 'all' else [args.mode]
+    modes = (['exact', 'ladder', 'selfenergy', 'corner', 'crossed', 'crossedexact'] if args.mode == 'all'
+             else [args.mode])
     bS_, bC_ = None, None
     for m in modes:
         t0 = time.time()
@@ -525,6 +910,10 @@ def main():
         elif m == 'crossed':
             args.dps = args.dps or 30; lv = args.level; args.level = lv or 8
             run_crossed(args); args.level = lv
+        elif m == 'crossedexact':
+            dps, lv = args.dps, args.level
+            args.dps = dps or 30; args.level = lv or 16
+            run_crossedexact(args); args.dps, args.level = dps, lv
         elif m == 'exact':
             run_exact(args)
         print(f'  [{m}: {time.time()-t0:.0f} s]', flush=True)
