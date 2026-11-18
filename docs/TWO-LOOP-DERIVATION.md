@@ -820,9 +820,14 @@ source: the decision record).
   to the same kind of input (`QED/TwoLoop/CountertermMirror*.lean`): the δ₁ classes are mirror
   symmetric unconditionally, from the closed form of the one-loop vertex; the δ₂/δm and δ₃ classes
   pair by charge conjugation at fixed $\varepsilon$ and need the reflection covariance of two
-  counterterm-class limits (`isMirrorSymmetric_headline_of_cov_ct`). What remains for O2-21 is
-  reflection covariance of nine limits (seven classes, two counterterm classes), which is the
-  parametric covariance step of O2-20.
+  counterterm-class limits (`isMirrorSymmetric_headline_of_cov_ct`). **The reflection covariance
+  of the nine limits is proved** (`QED/TwoLoop/ReflCovariance*.lean`, for every Lorentz map with a
+  spinor lift, proper or not), so the mirror identity of the order-5 limit holds under the
+  headline hypotheses, and **the form-factor clause of the headline is proved at fixed
+  regulators**: for $e\ne0$, $m,m_\gamma,\Lambda>0$, $M_f>m$ with the PV conditions, any
+  counterterms, on-shell positive-energy $p,p'$ with $q^2>0$, the limit of the order-5 vertex
+  has exactly one form-factor pair (`QED/TwoLoop/FormFactorClause.lean`,
+  `existsUnique_isFormFactorPair_headline`). O2-20 and O2-21 are proved for the vertex limit.
 - **O2-22 ($q^2\to0^+$ at fixed regulators).** At fixed $m_\gamma>0$, $\Lambda$, $M_1,M_2$
   and the on-shell order-$e^2$ counterterms, the Pauli coefficient $\hat F_2$ of the order-5
   vertex (O2-27; D-37.6) has a limit as $q^2\to0^+$, uniformly over the on-shell
