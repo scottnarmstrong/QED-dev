@@ -2069,3 +2069,62 @@ An independent refute-first seal audit returned PROVED:
 - no smuggled hypothesis was found; the emptiness and relabelling claims are
   proved, not assumed;
 - the guard and the build are clean.
+
+## D-46. The two-loop headline (HV₃) sealed
+
+**Status.** Record of a seal; no ruling.
+
+On 2026-11-18 the frozen two-loop headline (HV₃)
+`QED.TwoLoop.isFormFactorPair_vertexOrderFive_pauli_limit`
+(`QED/Frozen/TwoLoop/VertexOrderFivePauliLimit.lean`; frozen D-41, approved
+D-43) was sealed. The body is
+`by exact QED.Provider.TwoLoop.isFormFactorPair_vertexOrderFive_pauli_limit`,
+and the manifest state is SEALED. The frozen bytes outside the proof-body
+line, the prefix and suffix hashes and the ABI hash are those approved in
+D-43.
+
+**Proof.** The provider applies the headline assembly
+`QED.TwoLoop.HeadlineAssembly.pauliLimit_of_unitLimits` to two proved unit
+links:
+- X: `QED.TwoLoop.UnitXXi.xUnitLimit`;
+- S + C: `SCUnitLimit.of_one`, from `scUnitLimitOne_of_corner` with
+  `cornerMainLimit` and `cornerErrLimit`.
+
+The assembly itself proves the VP and L links, the Furry cancellation, the
+Ward identity (WI₁), the counterterm scaling and the sum of the five units.
+Each unit enters with multiplicity +1, and the values add to A₁⁽⁴⁾:
+
+| Unit | Value |
+| --- | --- |
+| L | 11/48 + ζ(2)/3 |
+| VP | 119/36 − 2ζ(2) |
+| S + C | −7/3 + 2ζ(2) ln 2 − ζ(3)/2 |
+| X | 1/6 − 5ζ(2) ln 2 + 13/6 ζ(2) + 5/4 ζ(3) |
+| **Sum** | 197/144 + π²/12 − (π²/2) ln 2 + (3/4) ζ(3) |
+
+**Audit.** An independent refute-first seal audit returned PROVED with no
+defects:
+- the bytes, hashes and ABI hash match the approved text;
+- the provider type equals the frozen type up to the D-13 auto-params;
+- the assembly's conclusion is the frozen proposition;
+- the transitive closure (72,556 constants, 436 modules) contains only
+  propext, Classical.choice and Quot.sound;
+- QED has no `sorryAx`, opaque, extern, `implemented_by` or `set_option`;
+- every `Prop`-valued hypothesis on the route (`XUnitLimit`,
+  `CornerMainLimit`, `CornerErrLimit`, `SCtHalfFormula`, `CrossedDom`, …) is
+  discharged by a proved theorem;
+- the unit values sum to `a1Four` within 7×10⁻³¹;
+- the provider proves exactly the approved order of limits (D-43.1, D-43.2);
+- the guard and the build are clean.
+
+The truth risks recorded in D-41 (O2-7, O2-19 to O2-22, and the joint limit)
+are thereby settled. The thresholds of L, S + C and X turn out to be uniform
+in the regulator-fermion masses; only those of VP depend on them.
+
+**Scope.** As stated in the README and in D-44 item 1, (HV₃) concerns the 1PI
+vertex at order e⁵ with one-loop on-shell counterterms. The lift to a
+two-loop LSZ or Landé-factor theorem is future work.
+
+**Remaining for L2.ASSEMBLY:**
+- the two-loop Comparator challenge, with (HV₃), (HV₀) and (U₂);
+- a fresh-checkout rebuild.

@@ -19027,7 +19027,7 @@
         "module": "QED.Provider.TwoLoop.VertexOrderFivePauliLimit",
         "export": "QED.Provider.TwoLoop.isFormFactorPair_vertexOrderFive_pauli_limit"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "8b261e8038445a9f6637df29826731183244793fcb4c22d1e8582dc3e1e575e0",
       "suffix_sha256": "40068b95469d700692e1439c29833ce8c5bce83685e82400d38bfea6f5f35a83",
       "draft_allowlist": {

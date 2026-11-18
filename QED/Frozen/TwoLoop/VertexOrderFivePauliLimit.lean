@@ -97,7 +97,7 @@ theorem isFormFactorPair_vertexOrderFive_pauli_limit (P₀ : Params) (he : P₀.
               ∀ F : ℂ × ℂ, QED.OneLoop.IsFormFactorPair P₀.e P₀.m p' p V F →
                 ‖16 * (Real.pi : ℂ) ^ 4 * F.2 / (P₀.e : ℂ) ^ 4 - (a1Four : ℂ)‖ < η :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.TwoLoop.isFormFactorPair_vertexOrderFive_pauli_limit
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

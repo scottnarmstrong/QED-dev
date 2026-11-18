@@ -23,9 +23,9 @@ Section 5.6 of `docs/TWO-LOOP-DERIVATION.md`; decisions D-37.1, D-37.4, D-41, D-
 of `pauliLimit_of_unitLimits` is, after its two hypotheses, exactly the proposition of the frozen
 headline (HV₃) `QED.TwoLoop.isFormFactorPair_vertexOrderFive_pauli_limit`
 (`QED/Frozen/TwoLoop/VertexOrderFivePauliLimit.lean`, not imported here). Its hypotheses are the
-two unit links not yet proved, `SCUnitLimit` and `XUnitLimit`
-(`QED/TwoLoop/HeadlineAssemblyUnits.lean`); with proofs `hSC`, `hX` of them the headline is
-`pauliLimit_of_unitLimits hSC hX`.
+unit links `SCUnitLimit` and `XUnitLimit` (`QED/TwoLoop/HeadlineAssemblyUnits.lean`), proved in
+`QED/TwoLoop/UnitSCCorner*.lean` and `QED/TwoLoop/UnitXXi*.lean`; the provider of (HV₃) applies
+`pauliLimit_of_unitLimits` to those proofs.
 
 ## Proof
 
@@ -100,7 +100,7 @@ theorem exists_counterterms (P₀ : Params) (he : P₀.e ≠ 0) (hm : 0 < P₀.m
   · rw [add_sub_cancel]
     exact hZ₁
 
-/-- **The two-loop headline (HV₃) from the two missing unit links.** The conclusion is, verbatim,
+/-- **The two-loop headline (HV₃) from the S + C and X unit links.** The conclusion is, verbatim,
 the proposition of the frozen `QED.TwoLoop.isFormFactorPair_vertexOrderFive_pauli_limit`. -/
 theorem pauliLimit_of_unitLimits (hSC : SCUnitLimit) (hX : XUnitLimit) (P₀ : Params)
     (he : P₀.e ≠ 0) (hm : 0 < P₀.m) (η : ℝ) (hη : 0 < η) :

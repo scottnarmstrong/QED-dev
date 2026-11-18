@@ -13,7 +13,7 @@ import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.Positivity
 
 /-!
-# The two missing unit links and the sum of the five units
+# The S + C and X unit links and the sum of the five units
 
 Section 5.6 of `docs/TWO-LOOP-DERIVATION.md` (O2-23, O2-25), for the assembly of the headline
 (HV₃). The ladder and vacuum-polarization links are proved at every mass
