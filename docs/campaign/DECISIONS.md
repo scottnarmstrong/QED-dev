@@ -1955,3 +1955,29 @@ The same corrections, and two more, are applied to the ledger entry of
 Replay scripts for the numerical cross-checks run with these commits, which
 had none in the repository, are added as
 `scripts/numerics/two_loop_crosschecks.py`.
+
+## D-43. Packets T2, T3 and T4 approved (author ruling)
+
+**Ruling.** On 2026-11-18 the author approved all the provisionally frozen
+packets: "Approved all provisionally approved packets". This covers:
+
+- **D-39, packet T2:** the target constant (U₁) `QED.TwoLoop.a1Four` and its
+  enclosure (U₂) `QED.TwoLoop.a1Four_bounds`.
+- **D-40, packet T4:** the one-loop Ward identity (WI₁) `QED.WickModel.δ₁_eq_δ₂`.
+- **D-41, packet T3:** the order-e⁵ vertex (HV₁), its ε → 0⁺ limit predicate
+  (HV₂), and the two-loop headline (HV₃)
+  `QED.TwoLoop.isFormFactorPair_vertexOrderFive_pauli_limit`.
+
+The approval is of the frozen texts as written. For (HV₃) it therefore
+settles the two questions recorded in D-41, in the drafted reading:
+
+1. **Threshold order.** The regulator-fermion threshold `R_M` comes first,
+   and the photon-mass and Pauli–Villars thresholds `δ, R` may depend on
+   `M₁, M₂`.
+2. **Photon regulators.** `m_γ → 0` and `Λ → ∞` are taken jointly.
+
+The manifest entries of the six declarations now record the approval
+(`approval_version` 1). Their frozen bytes, ABI hashes and states are
+unchanged: (U₂) and (WI₁) remain SEALED, and (HV₃) remains DRAFT_SORRY. The
+seals of (U₂) and (WI₁), made on the provisional text, now stand on approved
+text.

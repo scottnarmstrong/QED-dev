@@ -17761,10 +17761,10 @@
       "id": "twoloop.a1_four_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-17); statement approval pending",
-        "approved_at": "2026-11-17",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-39-packet-t2-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-18",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-43-packets-t2-t3-and-t4-approved-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "passera-2007 sha256:3761261045e2fdcf7495a529e8cac31275ad8ee1e85b979c6f9fe6e1e29631f6",
@@ -17779,7 +17779,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetT2.a1_four",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-39-packet-t2-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-43-packets-t2-t3-and-t4-approved-author-ruling"
       },
       "abi_sha256": "9ed3ca5a9a3b6a0e765b63f04f1076790fb93369ab0756be62b9ce4329298ce0",
       "definition_closure": [],
@@ -17790,10 +17790,10 @@
       "id": "twoloop.a1_four_bounds_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-17); statement approval pending",
-        "approved_at": "2026-11-17",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-39-packet-t2-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-18",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-43-packets-t2-t3-and-t4-approved-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "passera-2007 sha256:3761261045e2fdcf7495a529e8cac31275ad8ee1e85b979c6f9fe6e1e29631f6",
@@ -17808,7 +17808,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetT2.a1_four_bounds",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-39-packet-t2-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-43-packets-t2-t3-and-t4-approved-author-ruling"
       },
       "abi_sha256": "99484d8071b813f996c0bf085da741d77c200f6bc41e8ead6188665df8558424",
       "definition_closure": [
@@ -17833,10 +17833,10 @@
       "id": "twoloop.ward_identity_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-17); statement approval pending",
-        "approved_at": "2026-11-17",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-40-packet-t4-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-18",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-43-packets-t2-t3-and-t4-approved-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -17851,7 +17851,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetT4.ward_identity",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-40-packet-t4-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-43-packets-t2-t3-and-t4-approved-author-ruling"
       },
       "abi_sha256": "44ef5014998cdd37f143cfefe9006796aff56d6c2e431ac27930a1264e610bfe",
       "definition_closure": [
@@ -18160,10 +18160,10 @@
       "id": "twoloop.vertex_order_five_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-17); statement approval and two quantifier readings pending",
-        "approved_at": "2026-11-17",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-41-packet-t3-the-two-loop-headline-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-18",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-43-packets-t2-t3-and-t4-approved-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -18178,7 +18178,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetT3.vertex_order_five",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-41-packet-t3-the-two-loop-headline-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-43-packets-t2-t3-and-t4-approved-author-ruling"
       },
       "abi_sha256": "263befefb0536d1e718fb7bf8735c6ced5a2a5ff59ab64da7f69e7261c963c42",
       "definition_closure": [
@@ -18394,10 +18394,10 @@
       "id": "twoloop.is_vertex_order_five_limit_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-17); statement approval and two quantifier readings pending",
-        "approved_at": "2026-11-17",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-41-packet-t3-the-two-loop-headline-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-18",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-43-packets-t2-t3-and-t4-approved-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -18412,7 +18412,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetT3.is_vertex_order_five_limit",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-41-packet-t3-the-two-loop-headline-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-43-packets-t2-t3-and-t4-approved-author-ruling"
       },
       "abi_sha256": "5a9c1c0164addfe7b5fc612aa648497f81a3cf97da9ad1570e7c2381d6ed60ca",
       "definition_closure": [
@@ -18632,10 +18632,10 @@
       "id": "twoloop.vertex_order_five_pauli_limit_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-17); statement approval and two quantifier readings pending",
-        "approved_at": "2026-11-17",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-41-packet-t3-the-two-loop-headline-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-18",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-43-packets-t2-t3-and-t4-approved-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -18650,7 +18650,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetT3.vertex_order_five_pauli_limit",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-41-packet-t3-the-two-loop-headline-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-43-packets-t2-t3-and-t4-approved-author-ruling"
       },
       "abi_sha256": "e232c6593643f202675291645110432aad7fdb1ff6e7a287bad921ecab3a5c73",
       "definition_closure": [

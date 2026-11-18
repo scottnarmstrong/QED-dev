@@ -449,6 +449,10 @@
     {
       "date": "2026-11-18",
       "change": "VP unit link narrowed to one fixed-momentum identity: VPHalfSub (hence the VP unit link) follows from VPHalfSubAt along the boost curve, which is equivalent to the VP class's Pauli projection equalling an outer one-loop vertex with the one-loop Pi inserted; the q -> 0 step on the explicit side is proved. That identity (O2-8 at the epsilon -> 0 level) remains."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "The author approved packets T2, T4 and T3 as written (D-43), confirming the headline's two quantifier readings (regulator-fermion threshold first; photon-mass and Pauli-Villars limits joint). The manifest records the approval; frozen bytes and states unchanged."
     }
   ],
   "tracks": [

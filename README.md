@@ -131,8 +131,8 @@ The [outline](docs/PROJECT-OUTLINE.md) gives the scope, stages, proposed module
 areas, completion criteria, and initial sources. These are planning targets, not Lean
 declarations. The exact Lean statements are fixed stage by stage: those of the one-loop
 result are approved and frozen; for two loops, the model is approved and frozen, and the
-target constant, the one-loop Ward identity and the headline statement are frozen
-provisionally, pending the author's approval (decisions D-39 to D-41).
+target constant, the one-loop Ward identity and the headline statement are approved and
+frozen (decisions D-39 to D-41, approved in D-43).
 
 ## What a result certifies
 
@@ -240,8 +240,8 @@ python3 scripts/frozen_abi.py --check        # elaborated ABI hashes of frozen e
 not registered as a `DRAFT_SORRY` body, on any change to frozen bytes, on a sealed
 body other than `by exact <provider export>`, and on any import of a draft anchor or
 its provider outside the allowlist. One `DRAFT_SORRY` body is registered at present:
-the statement of the two-loop headline theorem, frozen provisionally pending the
-author's approval (decision D-41).
+the statement of the two-loop headline theorem, approved and frozen (decisions D-41, D-43);
+its proof is in progress.
 
 Every regular `.lean` file must be a Lean module. Landings run the
 `lean-project-architecture` skill's `check_lean_modules.py --root .`. On this
