@@ -2246,3 +2246,61 @@ working defaults:
 
 They are settled only when the author approves the exact Lean text of the
 corresponding declarations, as for every frozen statement.
+
+## D-50. Phase 5 Stage 0 packet approved (author ruling)
+
+**Ruling.** On 2026-11-18 the author approved the Stage 0 packet exactly as
+written ("Approve as written"; confirmed "Approve all"). The packet has 29
+declarations.
+
+- **Flavour-successor model** (`QED.Lepton`), twelve declarations:
+  - (F₀) `Flavors`, new;
+  - (F₁)–(F₁₀): T1's flavour-dependent definitions (T₇), (T₈), (T₁₀),
+    (T₁₁), (HV₁), (HV₂) over a general flavour type, with only the mass and
+    weight lookups substituted; named `contractionAmplitude₂`,
+    `regulatedAmplitude₂`, `contractionValue₂`, `onePIFunction₂`,
+    `vertexOrderFive`, `IsVertexOrderFiveLimit`;
+  - (F₁₁) `IsPhotonOnShell`, new: Π(0) = 0 for the vacuum polarization
+    summed over all flavours, stated as a limit at lightlike k.
+- **Lepton instance:** (L₀) `HeavyLepton` and (L₁) `leptonFlavors`. Each heavy
+  lepton is a loop flavour block (m_ℓ, M₁ℓ, M₂ℓ) with weights (1, c₁ℓ, c₂ℓ),
+  and the electron block is exactly T1's.
+- **Coefficient:**
+  - (U₃) `a2Four`: Passera eq. (10) at x = 1/y in real form, with every
+    series argument in (−1, 1);
+  - (U₃-alt) `a2FourPas` and the goal `a2FourPas_eq_a2Four`;
+  - (U₃′) the limit y → 1;
+  - (U₄) and (U₅): enclosures on the AKN Table 1 one-standard-uncertainty
+    mass-ratio intervals.
+- **Embedding:** (E₁)–(E₅). With the electron alone, the successor
+  reproduces T1's 1PI function, vertex, limit predicate and photon condition,
+  and the electron conditions do not depend on the flavours.
+- **The headline (HM₂)**
+  `QED.Lepton.isFormFactorPair_vertexOrderFive_lepton_pauli_limit`, with
+  `exists_heavyLepton_regulators`. Its structure is (HV₃)'s:
+  - one threshold R_M for every regulator pair (D-49.2);
+  - each heavy lepton's regulators lie above its mass and satisfy the two
+    Pauli–Villars conditions at that mass;
+  - the flavour-summed photon condition;
+  - the conclusion ‖16π⁴F₂/e⁴ − (a1Four + Σ_ℓ a2Four(m/m_ℓ))‖ < η.
+
+  The author thereby accepts the full multi-lepton form in place of the plan's
+  per-lepton O3-M4. With no heavy lepton the statement is (HV₃); with μ and τ
+  it is the full order-α² coefficient (Passera (13)).
+
+The working defaults of D-49 (the 1PI vertex; 16π⁴[e⁴]F₂; y = mₑ/m_ℓ) are
+confirmed by this approval.
+
+**Review.** An independent refute-first statement review returned APPROVE
+WITH NITS, and the nits were applied before approval:
+- the copied bodies are identical to T1's apart from the stated
+  substitutions;
+- (F₁₁) is equivalent to Π(0) = 0 and fixes δ₃;
+- `a2Four` matches Passera (10) term by term and numerically against
+  Passera, AHKN and AKN;
+- (HM₂) adds to (HV₃) only the heavy-lepton binders;
+- the target is physically right, and the statement holds under the D-37
+  order.
+
+**Freeze.** The definitions are SEALED. The theorem goals are DRAFT_SORRY in
+`QED/Frozen/Lepton/`, with providers in `QED/Provider/Lepton/`.

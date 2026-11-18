@@ -565,6 +565,10 @@
     {
       "date": "2026-11-18",
       "change": "Phase 5 O3-M3 done (helper level): the heavy-lepton VP insertion integral equals Passera (10) as a function of y = me/ml in (0,1), with limits at 0 and 1, monotonicity, and certified enclosures of A2^(4)(me/mmu) and A2^(4)(me/mtau) on the AKN mass-ratio intervals (QED/Chain/HeavyLepton*). The Stage 0 packet (successor model, a2Four, (HM2)) awaits the author's approval of its exact text."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Phase 5 Stage 0 packet approved and frozen (D-50): the flavour-successor model QED.Lepton (16 definitions, SEALED) and 13 theorem goals (DRAFT_SORRY), among them the two-loop headline with heavy leptons (HM2): 16 pi^4 F2 / e^4 -> A1^(4) + sum over heavy leptons of A2^(4)(me/ml)."
     }
   ],
   "tracks": [

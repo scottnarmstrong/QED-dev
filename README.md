@@ -84,7 +84,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 608. **Total lines of Lean code:** 145,850.
+**Tracked Lean source files:** 650. **Total lines of Lean code:** 147,178.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.
@@ -250,9 +250,11 @@ python3 scripts/frozen_abi.py --check        # elaborated ABI hashes of frozen e
 `lake build` prints no warnings. The frozen-anchor guard fails on any `sorry`
 not registered as a `DRAFT_SORRY` body, on any change to frozen bytes, on a sealed
 body other than `by exact <provider export>`, and on any import of a draft anchor or
-its provider outside the allowlist. No `DRAFT_SORRY` body is registered at present: every frozen theorem is sealed. The two-loop
-headline theorem (decisions D-41, D-43, D-46) and its companion (HV₀), that every term of the
-order-$e^5$ vertex is a genuine integral (decision D-45), are proved and sealed.
+its provider outside the allowlist. Thirteen `DRAFT_SORRY` bodies are registered at present: the theorem goals of the Phase 5 Stage 0
+packet (decision D-50), among them the two-loop headline with heavy leptons (HM₂); their proofs are
+in progress. The two-loop headline theorem (decisions D-41, D-43, D-46) and its companion (HV₀),
+that every term of the order-$e^5$ vertex is a genuine integral (decision D-45), are proved and
+sealed.
 
 Every regular `.lean` file must be a Lean module. Landings run the
 `lean-project-architecture` skill's `check_lean_modules.py --root .`. On this
