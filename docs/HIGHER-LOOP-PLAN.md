@@ -684,3 +684,11 @@ Script `scripts/numerics/phase5_chains.py` (record `scripts/numerics/phase5_chai
   (O3-3, O3-4).
 
 **Task T2 is done.** O3-13 and O3-14 are proved at helper level (`QED/Chain/`).
+
+**O3-M3 is done** (helper level, `QED/Chain/HeavyLepton*.lean`, `scripts/numerics/chain/heavy_lepton.py`):
+- `integral_heavy`: $\int_0^1(1-x)\hat\Pi(y^2x^2/(1-x))\,dx$ equals Passera (10) at $x=1/y$, rewritten with
+  dilogarithms of arguments in $(-1,1)$ (`a2Heavy`), for $y\in(0,1)$, with integrability;
+- the limits $y\to0^+$ (with $0\le A(y)\le y^2/45$) and $y\to1^-$ ($119/36-\pi^2/3$);
+- monotonicity;
+- certified enclosures on the AKN Table 1 mass-ratio intervals: $5.197386525\ldots5.197386998\times10^{-7}$ (muon)
+  and $1.8376481\ldots1.8381339\times10^{-9}$ (tau).

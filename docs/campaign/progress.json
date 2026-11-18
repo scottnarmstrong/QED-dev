@@ -561,6 +561,10 @@
     {
       "date": "2026-11-18",
       "change": "Phase 5 task T1 done: scripts/numerics/phase5_chains.py reproduces every pinned value of the plan's section 9; the model-level set (b) value at finite regulators converges to A_(b) in the D-37 order (regulator masses last, remainder kappa (M1^-2 + M2^-2) with no ratio constraint); Stage 0 analogue converges to Passera (10). Candidate finding: AHKN Table 1 A2^(8)(me/mtau) for I(a) is 2.7 sigma off at AHKN's own stated ratio (0.4 sigma at Passera's)."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Phase 5 O3-M3 done (helper level): the heavy-lepton VP insertion integral equals Passera (10) as a function of y = me/ml in (0,1), with limits at 0 and 1, monotonicity, and certified enclosures of A2^(4)(me/mmu) and A2^(4)(me/mtau) on the AKN mass-ratio intervals (QED/Chain/HeavyLepton*). The Stage 0 packet (successor model, a2Four, (HM2)) awaits the author's approval of its exact text."
     }
   ],
   "tracks": [
