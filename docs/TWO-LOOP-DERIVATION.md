@@ -894,6 +894,11 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   normalization $16\pi^4$, via the spectral form of the model's $\Pi$ and Fubini; hence, given
   `VPUnitNested` (that the model's VP unit equals this outer form, still open: O2-8/O2-10/O2-13
   at $q\to0$), the VP unit tends to $\frac{119}{36}-\frac{\pi^2}3$ in the D-37.4 order.
+  The δ₃ half of `VPUnitNested` is proved (`QED/TwoLoop/VPUnitNested*.lean`, `unit_d3Zero`, for
+  every δ₃: the longitudinal part of the insertion vanishes exactly on shell, partial fractions
+  with four distinct photon masses reduce the class to the frozen one-loop vertex, and continuity
+  in the masses closes it), and `VPUnitNested` is equivalent to the bubble identity `VPHalf`
+  (`vpUnitNested_iff_vpHalf`), which remains (O2-8 at the $\varepsilon\to0$ level).
   **L unit, partial link** (`QED/TwoLoop/UnitLLink*.lean`): the counterterm half is exact (δ₁
   from the frozen charge condition equals the doc's formula, and its unit contribution is
   $\delta_1(F_2^{(2)}(m_\gamma)-F_2^{(2)}(\Lambda))$); the $x$-integration of the $\lambda=0$

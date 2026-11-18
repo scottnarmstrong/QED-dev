@@ -433,6 +433,10 @@
     {
       "date": "2026-11-18",
       "change": "The lambda -> 0 limit of the ladder representation (3.4) proved unconditionally: a uniform bound |R| <= 17 (1 - log x - log Y)/max(x, Y) on the remainder via an exact decomposition, then dominated convergence twice and Fubini; the limit is 11/48 + zeta(2)/3."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "VP unit: the delta3 half of the model-to-outer-form identity proved for every delta3 (exact on-shell vanishing of the longitudinal insertion, partial fractions with four distinct photon masses reducing to the frozen one-loop vertex, continuity in the masses); the full identity is equivalent to the bubble-class identity VPHalf, which remains (O2-8 at the epsilon -> 0 level)."
     }
   ],
   "tracks": [
