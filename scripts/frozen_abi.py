@@ -35,7 +35,7 @@ def abi(module: str, export: str, kind: str) -> str:
         result = subprocess.run(["lake", "env", "lean", str(path)], cwd=ROOT,
                                 capture_output=True, text=True, check=False)
     finally:
-        shutil.rmtree(ROOT / ".scratch", ignore_errors=True)
+        shutil.rmtree(scratch, ignore_errors=True)
     if result.returncode != 0:
         raise RuntimeError(f"elaboration failed for {export}:\n{result.stdout}{result.stderr}")
     return hashlib.sha256(result.stdout.encode("utf-8")).hexdigest()

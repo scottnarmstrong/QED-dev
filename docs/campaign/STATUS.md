@@ -3,7 +3,7 @@
 [Campaign HQ](../../README.md) · [Decisions](DECISIONS.md) · [Findings](FINDINGS.md) ·
 [Progress ledger](progress.json)
 
-**As of 2026-11-18.** The one-loop result is complete (Phases 1 and 2 of the outline), and so is Phase 3 for the one-loop pilot. The headline theorem (H) proves F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions from the general Wick model with the model's own LSZ amplitude; it passes the Comparator challenge and an independent end-to-end audit (D-21). Phase 3 certifies the regulated Pauli form factor at three regulator points by kernel-checked interval quadrature and proves the CODATA 2022 contribution bound α/(2π) ∈ [0.0011614097319, 0.0011614097323] (D-34, D-35). Phase 4 (two loops, route A) has begun: the two-loop Wick model (packet T1) is frozen, and its three theorems, including that packet 6a is the special case through order 2nf + nA + 1, are proved and audited (D-36, D-37, D-38). Packets T2 (the target constant A₁⁽⁴⁾), T4 (the one-loop Ward identity) and T3 (the two-loop headline) are frozen and approved (D-39, D-40, D-41; approval D-43); (U₂) and (WI₁) are sealed. Toward the two-loop headline, helper-level results are proved but not yet assembled; the headline (HV₃) remains a registered draft. The proved results are: the enumeration of the order-e⁵ vertex with coefficient one per class under momentum conservation (O2-2, combinatorics), the Furry cancellation (O2-3), the routing theorems (O2-5), the invariances of the joint prescription (O2-6), the scalar parametric representation with an integrability criterion (O2-10), positivity of V for the classes L and X (O2-12), the one-loop Ward identity (O2-15), helper-level values for the vacuum-polarization unit (O2-18, O2-19), the polylogarithm values (O2-24) and the order separation of the counterterms (O2-27, items 1–2). Exact statements and hypotheses are in [TWO-LOOP-DERIVATION.md](../TWO-LOOP-DERIVATION.md); corrections to the wording of the earlier records are in D-42.
+**As of 2026-11-18.** The one-loop result is complete (Phases 1 and 2 of the outline), and so is Phase 3 for the one-loop pilot. The headline theorem (H) proves F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions from the general Wick model with the model's own LSZ amplitude; it passes the Comparator challenge and an independent end-to-end audit (D-21). Phase 3 certifies the regulated Pauli form factor at three regulator points by kernel-checked interval quadrature and proves the CODATA 2022 contribution bound α/(2π) ∈ [0.0011614097319, 0.0011614097323] (D-34, D-35). Phase 4 (two loops, route A) has begun: the two-loop Wick model (packet T1) is frozen, and its three theorems, including that packet 6a is the special case through order 2nf + nA + 1, are proved and audited (D-36, D-37, D-38). Packets T2 (the target constant A₁⁽⁴⁾), T4 (the one-loop Ward identity) and T3 (the two-loop headline) are frozen and approved (D-39, D-40, D-41; approval D-43); (U₂) and (WI₁) are sealed. The two-loop headline (HV₃) remains a registered draft, but its proof is assembled up to one statement: `QED.TwoLoop.HeadlineAssembly.pauliLimit_of_unitLimits` proves the exact (HV₃) statement from the S + C and X unit limits. The VP, L and X unit links are proved (`unitF2_VP_iterated_limit_closed`, `unitF2_L_limit`, `QED.TwoLoop.UnitXXi.xUnitLimit`). For S + C, the reductions, the self-energy side through its limit and the δ₂/δ_m counterterm half are proved, and `scUnitLimitOne_of_cornerPart` reduces the link to the joint limit of the corner graph alone (`CornerPartLimit`), now in progress. Details: [TWO-LOOP-UNITS.md](../TWO-LOOP-UNITS.md) section 1 and the [ledger](progress.json). Exact statements and hypotheses are in [TWO-LOOP-DERIVATION.md](../TWO-LOOP-DERIVATION.md); corrections to the wording of the earlier records are in D-42.
 
 Milestones (see the [ledger](progress.json)):
 
@@ -19,7 +19,7 @@ Milestones (see the [ledger](progress.json)):
 | L1.VERTEX | done: the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram (O-1, O-2), and its ε → 0⁺ limit is the vertex function (packet 5) |
 | L1.ASSEMBLY | done: the headline theorem (H) is proved and audited (D-33); fresh-checkout rebuild clean; Comparator challenge passes (con-ron, NanoDa, Lean kernel); independent end-to-end audit: proved as advertised; errata record updated (D-21) |
 | NUM.ARITHMETIC, NUM.INTEGRATION, NUM.CERTIFICATE, NUM.VALIDATION | done (Phase 3, one-loop pilot): integer interval arithmetic and the box-partition checker with soundness theorems; certified enclosures (Q₁)–(Q₃) of the regulated Pauli form factor and the CODATA contribution bound (Q₄); invalid certificates rejected (D-34, D-35) |
-| L2.ENUMERATION | in progress: the two-loop Wick model (packet T1) frozen; (T₁₂)–(T₁₄) proved and audited (D-38). The order-e⁵ 1PI vertex is proved to be the signed sum of the nine classes of five gauge vertices, each with coefficient one under momentum conservation, plus the listed counterterm contractions (O2-2, `QED.TwoLoop.Relabel.onePIFunction₂_five_sub_four_eq`), and the Furry pair cancels (O2-3, `QED.TwoLoop.Furry.furry_pair`). Open: grouping the counterterm contractions into classes |
+| L2.ENUMERATION | in progress: the two-loop Wick model (packet T1) frozen; (T₁₂)–(T₁₄) proved and audited (D-38). The order-e⁵ 1PI vertex is proved to be the signed sum of the nine classes of five gauge vertices, each with coefficient one under momentum conservation, plus the listed counterterm contractions (O2-2, `QED.TwoLoop.Relabel.onePIFunction₂_five_sub_four_eq`), and the Furry pair cancels (O2-3, `QED.TwoLoop.Furry.furry_pair`). The counterterm contractions are grouped into the units in the headline assembly (`QED/TwoLoop/HeadlineAssembly*.lean`) |
 
 ## Reporting fields
 
@@ -270,7 +270,19 @@ The one-loop result is complete. Next, per the
      - the remaining classes of O2-12;
      - grouping the counterterm contractions of O2-2 into classes.
 
-   Next: O2-11 (in progress).
+   **Update (2026-11-18, later).** The list above is superseded: the proof of
+   (HV₃) is assembled in Lean (`pauliLimit_of_unitLimits`), and the only input it
+   still lacks is the corner graph's joint limit `CornerPartLimit` (in progress),
+   the last step of O2-25/O2-26. Given it, (HV₃) follows by
+   `pauliLimit_of_unitLimits`; then the seal, an independent refute-first audit,
+   and a two-loop Comparator challenge. Also recommended by an independent
+   strategy review (2026-11-18): a sorry-free theorem that the Furry classes
+   F₊, F₋ are individually integrable (the cancellation `furry_pair` holds for
+   every integrand, so (HV₃) does not depend on it, but the record should show
+   that every class value is a genuine integral), and porting the confirmed AHKN
+   (2012) items to [ERRATA-AND-DEVIATIONS.md](../ERRATA-AND-DEVIATIONS.md).
+
+   Next: `CornerPartLimit`, then the (HV₃) seal.
 3. **Later phases.** Selected higher-loop families and an experimental
    comparison.
 4. **Optional.** A public release of the one-loop result (Palomar would also
