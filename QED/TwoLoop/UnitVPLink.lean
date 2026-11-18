@@ -7,7 +7,6 @@ module
 
 public import QED.TwoLoop.UnitsRegulated
 public import QED.TwoLoop.VacuumPolarizationUnitLimit
--- the bodies of `f2Kernel`, `regKernel`, `rho`, `vpFlavour`, `vpUnitReg` (not exposed there)
 import Mathlib.MeasureTheory.Integral.Prod
 import Mathlib.Tactic.FieldSimp
 import Mathlib.Tactic.Linarith

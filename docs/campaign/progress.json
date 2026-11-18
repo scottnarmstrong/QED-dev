@@ -425,6 +425,10 @@
     {
       "date": "2026-11-18",
       "change": "VP unit link, partial: at m = 1 with the photon on-shell condition, the outer one-loop form of the VP insertion equals the explicit finite-regulator VP value (spectral form of the model's Pi, Fubini), so given the remaining identity between the model's VP unit and that outer form (O2-8/O2-10/O2-13 at q -> 0), the VP unit tends to 119/36 - pi^2/3 in the D-37.4 order. Normalization anchors via the one-loop Pauli form factor are proved."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "L unit link, partial: the counterterm half exact (delta1 from the frozen charge condition, its unit contribution delta1 (F2^(2)(m_gamma) - F2^(2)(Lambda))); the x-integration of the lambda = 0 ladder integrand gives K_L; the lambda -> 0 limit of the ladder representation equals 11/48 + zeta(2)/3 given one dominated-convergence bound (numerically supported). The graph half (two-loop Dirac and Gaussian-moment algebra, Cheng-Wu) and the Lambda -> infinity stage remain."
     }
   ],
   "tracks": [

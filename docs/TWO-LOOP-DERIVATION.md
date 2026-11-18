@@ -893,7 +893,14 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   one-loop form `vpOuterF2` of the VP insertion equals the explicit `vpUnitReg` up to the
   normalization $16\pi^4$, via the spectral form of the model's $\Pi$ and Fubini; hence, given
   `VPUnitNested` (that the model's VP unit equals this outer form, still open: O2-8/O2-10/O2-13
-  at $q\to0$), the VP unit tends to $\frac{119}{36}-\frac{\pi^2}3$ in the D-37.4 order. Earlier step (`QED/TwoLoop/PauliZero*.lean`): The Pauli
+  at $q\to0$), the VP unit tends to $\frac{119}{36}-\frac{\pi^2}3$ in the D-37.4 order.
+  **L unit, partial link** (`QED/TwoLoop/UnitLLink*.lean`): the counterterm half is exact (δ₁
+  from the frozen charge condition equals the doc's formula, and its unit contribution is
+  $\delta_1(F_2^{(2)}(m_\gamma)-F_2^{(2)}(\Lambda))$); the $x$-integration of the $\lambda=0$
+  integrand gives the kernel $K_{\rm L}$; and the $\lambda\to0$ limit of the doc's (3.4) is
+  $\frac{11}{48}+\frac{\pi^2}{18}$ given one dominated-convergence bound (checked numerically). The
+  graph half of the link (the two-loop Dirac and Gaussian-moment algebra, Cheng–Wu) and the
+  $\Lambda\to\infty$ stage remain. Earlier step (`QED/TwoLoop/PauliZero*.lean`): The Pauli
   projection of the order-5 vertex limit depends on the on-shell pair only through $q^2$
   (covariance under Lorentz maps that move $p,p'$, reached by two reflections), so the uniform
   statement is equivalent to a one-variable limit of `pauliAt` as $q^2\to0^+$
