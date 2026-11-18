@@ -28,7 +28,7 @@ theorem onePIFunction₂_one_zero (P : Params) {F : Type} [Fintype F] [Decidable
     (hΦ : Φ.mass Φ.openLine = P.m) {K : ℕ} (hK : K ≤ 3) :
     onePIFunction₂ P Φ 1 0 K = QED.WickModel.onePIFunction P 1 0 K :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.onePIFunction₂_one_zero
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

@@ -22047,7 +22047,7 @@
         "module": "QED.Provider.Lepton.OnePIFunctionRelabel",
         "export": "QED.Provider.Lepton.onePIFunction₂_relabel"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "d9ac1e2f1ef6170ca796790f76ae187d5be206e97d91c262369eb6a616ed2a5d",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {
@@ -22342,7 +22342,7 @@
         "module": "QED.Provider.Lepton.VertexOrderFiveLeptonFlavorsZero",
         "export": "QED.Provider.Lepton.vertexOrderFive_leptonFlavors_zero"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "ba9602faadd08daf700e78eb1f686eff8c7edff7d284f1044931feeb6ebe4ac3",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {
@@ -22645,7 +22645,7 @@
         "module": "QED.Provider.Lepton.IsVertexOrderFiveLimitLeptonFlavorsZeroIff",
         "export": "QED.Provider.Lepton.isVertexOrderFiveLimit_leptonFlavors_zero_iff"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "4f8eb79c71c7bdb61bcc8e5edda633511a2be660c99a897df7ef7bce81f0ea5d",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {
@@ -23044,7 +23044,7 @@
         "module": "QED.Provider.Lepton.IsPhotonOnShellLeptonFlavorsZeroIff",
         "export": "QED.Provider.Lepton.isPhotonOnShell_leptonFlavors_zero_iff"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "558cd9f70ce5103eb25046f519d69b6c931656274acde1699a9f9ca7931708c7",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {
@@ -23343,7 +23343,7 @@
         "module": "QED.Provider.Lepton.OnePIFunctionOneZero",
         "export": "QED.Provider.Lepton.onePIFunction₂_one_zero"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "dfb7ca0d01c6b252761bad00fee984444135882f56aa310eb757f64ee64f8173",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {

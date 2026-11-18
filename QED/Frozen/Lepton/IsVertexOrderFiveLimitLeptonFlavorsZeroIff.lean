@@ -23,7 +23,7 @@ theorem isVertexOrderFiveLimit_leptonFlavors_zero_iff (P : Params) (H : Fin 0 â†
     IsVertexOrderFiveLimit P (leptonFlavors P H) p' p V â†”
       QED.TwoLoop.IsVertexOrderFiveLimit P p' p V :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.isVertexOrderFiveLimit_leptonFlavors_zero_iff
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

@@ -577,6 +577,10 @@
     {
       "date": "2026-11-18",
       "change": "Seven Phase 5 Stage 0 goals sealed and audited PROVED (D-50): the transcription identity a2FourPas = a2Four, the limit y -> 1, the certified muon and tau enclosures of A2^(4), non-vacuity of the heavy regulators, and the two rfl embeddings. Remaining DRAFT_SORRY: (E2)-(E5) and (HM2)."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Phase 5 Stage 0 embedding theorems (E2)-(E5) sealed and audited PROVED: flavour relabelling, reduction to T1 with no heavy leptons (vertex and limit predicate), the flavour-summed photon condition equivalent to T1's (Z8), and flavour independence of the electron conditions. Only (HM2) remains DRAFT_SORRY."
     }
   ],
   "tracks": [

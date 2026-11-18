@@ -23,7 +23,7 @@ the multi-lepton model is T1's (HV₁). From (E₁′) and (E₂) with
 theorem vertexOrderFive_leptonFlavors_zero (P : Params) (H : Fin 0 → HeavyLepton) :
     vertexOrderFive P (leptonFlavors P H) = QED.TwoLoop.vertexOrderFive P :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.vertexOrderFive_leptonFlavors_zero
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

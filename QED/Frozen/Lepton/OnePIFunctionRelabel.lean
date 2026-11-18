@@ -25,7 +25,7 @@ theorem onePIFunction₂_relabel (P : Params) {F G : Type} [Fintype F] [Decidabl
     (hcoeff : ∀ f, Ψ.coeff (e f) = Φ.coeff f) (hopen : e Φ.openLine = Ψ.openLine) :
     onePIFunction₂ P Φ = onePIFunction₂ P Ψ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.onePIFunction₂_relabel
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

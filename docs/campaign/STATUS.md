@@ -27,8 +27,8 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 6 — Phase 5 Stage 0 goals in QED/Frozen/Lepton/ (D-50): the embedding theorems
-               (E₂)–(E₅) and (HM₂) VertexOrderFiveLeptonPauliLimit.lean; 7 Stage 0 goals sealed
+DRAFT_ANCHORS: 1 — QED/Frozen/Lepton/VertexOrderFiveLeptonPauliLimit.lean ((HM₂), D-50); the
+               other 12 Stage 0 goals are sealed
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
 SEALED_THIS_TURN: 2 — QED.TwoLoop.jointEnergyFirstIntegrable_vertexOrderFive (HV₀, D-45) and

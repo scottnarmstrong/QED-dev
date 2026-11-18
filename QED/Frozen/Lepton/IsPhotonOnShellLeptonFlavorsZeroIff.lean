@@ -27,7 +27,7 @@ theorem isPhotonOnShell_leptonFlavors_zero_iff (P : Params) (H : Fin 0 → Heavy
     IsPhotonOnShell P (leptonFlavors P H) ↔
       QED.WickModel.IsPhotonOnShell P hm hM₁ hM₂ hPV₁ hPV₂ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.isPhotonOnShell_leptonFlavors_zero_iff
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

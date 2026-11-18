@@ -2318,3 +2318,14 @@ An independent refute-first seal audit returned PROVED for all seven. It found t
 proof-body lines changed, the hashes and ABI match, the axioms are standard, there is no smuggled
 hypothesis, the enclosure intervals and regulator witnesses are covered, and the guard and build
 are clean. Six goals remain DRAFT_SORRY: the embedding theorems (E₂)–(E₅) and (HM₂).
+
+**Seals (2026-11-18, continued).** The embedding theorems (E₂)–(E₅) are sealed, from helpers in
+`QED/LeptonProof/Embed*.lean`:
+- (E₂) `onePIFunction₂_relabel`, through a bijection of flavourings;
+- (E₃) and (E₃′), by `Equiv.sumEmpty` and (E₂);
+- (E₄) `isPhotonOnShell_leptonFlavors_zero_iff`, via (T₁₄) and (Z₇′): the lightlike limit is
+  −Π(0)·k^μk^ν;
+- (E₅) `onePIFunction₂_one_zero`: through order 3 every fermion field lies on the external line.
+
+An independent refute-first seal audit returned PROVED for all five. Only (HM₂) remains
+DRAFT_SORRY.
