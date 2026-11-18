@@ -799,8 +799,16 @@ source: the decision record).
   $e,m\ne0$, on-shell $p,p'$ and $q^2>0$, explicit trace functionals `formFactorProj₁`,
   `formFactorProj₂` recover every form-factor pair (`eq_formFactorProj_of_isFormFactorPair`), and a
   vertex whose on-shell sandwich has the four-term form $a\gamma^\mu+bK^\mu+cq^\mu+dS^{\mu\nu}q_\nu$
-  has a form-factor pair iff $c=0$ (`exists_isFormFactorPair_iff`). What remains is that the
-  order-5 vertex has such a sandwich form (O2-20) with $c=0$.
+  has a form-factor pair iff $c=0$ (`exists_isFormFactorPair_iff`). **Algebraic halves of O2-20
+  and O2-21 proved** (`QED/Algebra/SandwichReduction*.lean`, `QED/TwoLoop/VertexCovariance.lean`):
+  a vertex covariant under the Lorentz maps fixing $p,p'$ (`IsLittleGroupCovariant`) has the
+  on-shell sandwich form; a covariant vertex that also satisfies the mirror identity
+  (`IsMirrorSymmetric`: charge conjugation followed by the reflection in $p+p'$) has exactly one
+  form-factor pair; both properties pass to finite sums and integrals. Hence the second clause
+  of the headline (HV₃) holds given covariance and the mirror identity of the order-5 limit
+  (`existsUnique_isFormFactorPair_headline`). Open: proving these two properties for the
+  limit (numerator covariance of the class amplitudes, invariance of the parametric integrand,
+  and the C±, S± mirror pairing).
 - **O2-22 ($q^2\to0^+$ at fixed regulators).** At fixed $m_\gamma>0$, $\Lambda$, $M_1,M_2$
   and the on-shell order-$e^2$ counterterms, the Pauli coefficient $\hat F_2$ of the order-5
   vertex (O2-27; D-37.6) has a limit as $q^2\to0^+$, uniformly over the on-shell

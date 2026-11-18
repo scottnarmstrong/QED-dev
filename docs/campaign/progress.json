@@ -389,6 +389,10 @@
     {
       "date": "2026-11-18",
       "change": "X unit 1D integral proved in Lean: the integral of K_X over [0,1] is 1/6 - 5 zeta(2) ln 2 + 13/6 zeta(2) + 5/4 zeta(3), with integrability, via the integration-by-parts identity and fifth-order endpoint expansions of Li2 and of Li2(1-2s) - Li2(2s-1). All four q-type and VP unit values (L, S, C, X, VP) are now proved for their explicit integral representations; the reductions from the 2D representations and the link to the model remain."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Algebraic halves of covariance (O2-20) and of the absence of a q^mu term (O2-21) proved: a vertex covariant under the Lorentz maps fixing p, p' has the on-shell sandwich form, and if it also satisfies the mirror identity (charge conjugation then the reflection in p + p') it has exactly one form-factor pair; both properties pass to sums and integrals. The second clause of the provisional headline follows given these two properties of the order-e^5 limit, which remain to be proved."
     }
   ],
   "tracks": [
