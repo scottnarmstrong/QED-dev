@@ -470,6 +470,15 @@ matrix independently (section 10).
   self-energy form at $q\to0$; at $q\ne0$ a trace projector on the spinor bases is the
   candidate (**recalled**). Per-class $F_2[G]$ (section 5.1) is defined through $P_2$, since
   a single class need not have the form (G₀) (O2-21). Definition and theorems; moderate.
+  **Status (2026-11-18): parametric numerators, partial.** Degree ≤ 2 proved
+  (`QED/Integration/TwoLoopParametricNumerator.lean`), with the integrability hypotheses replaced
+  by the four-lines criterion `NoSubdivergenceQuadratic`
+  (`QED/Integration/SymanzikIntegrabilityQuadratic.lean`; it holds for L, X, C± with doubled
+  photons and for the VP bubble form, not for S±, VP, F±). Degree 4: fourth moments and the
+  energy step proved (`TwoLoopMomentsQuartic.lean`, `TwoLoopNumeratorQuartic.lean`); the spatial
+  step and the assembly remain. The generic degree-4 criterion (five lines per direction class)
+  holds only for X, so L and C± need a sharper criterion that tracks the numerator's degree in
+  each one-loop subgraph's own momentum. The projection to $F_2$ is not started.
 - **O2-12 (positivity of $V$).** On the closed simplex, for on-shell $p,p'$ with $q^2\ge0$
   and $m_\gamma>0$, $V$ is bounded below by a positive constant. This is the two-loop
   analogue of $D\ge(1-x_3)^2m^2+x_3m_\gamma^2$ ("no thresholds": a free electron cannot

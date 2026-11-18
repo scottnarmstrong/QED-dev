@@ -101,6 +101,8 @@ public import QED.Integration.SymanzikIntegrabilityClasses
 public import QED.Integration.SymanzikPositivity
 public import QED.Integration.SymanzikPositivityClasses
 public import QED.Integration.TwoLoopParametricNumerator
+public import QED.Integration.SymanzikIntegrabilityQuadraticClasses
+public import QED.Integration.TwoLoopNumeratorQuartic
 public import QED.WickModel.CompatibilityLines
 public import QED.WickModel.Compatibility
 public import QED.Frozen.WickModel.WickVertexEqOnePIFunction

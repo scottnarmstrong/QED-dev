@@ -337,6 +337,10 @@
     {
       "date": "2026-11-18",
       "change": "Bridge from the frozen amplitude to the parametric form, for the ladder and crossed classes: frozen propagators in lineDenom form (photon Pauli-Villars pair combined for eps != 0); the frozen routings of L and X are proved equal to the class loop matrices up to integer unimodular changes, and satisfy the no-subdivergence criterion in PV form, removing the numerical-only matching caveat for these two classes; their values are joint integrals of a degree <= 4 numerator over 8 PV-form denominators. Other classes and integrability (O2-7) remain."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Integrability criteria of every order: if every direction class leaves at least k+1 lines then tr(A)^j U^-k is integrable on the simplex, giving the degree <= 2 parametric theorems under the four-lines criterion (L, X, C+- with doubled photons, the VP bubble form; not S+-, VP, F+-). Fourth moments of the energy and spatial integrals, and the degree-4 energy step, proved; the degree-4 spatial step and assembly remain. Finding: the generic degree-4 criterion (five lines per class) holds only for X, so L and C+- will need a sharper criterion tracking the numerator degree in each subloop momentum."
     }
   ],
   "tracks": [
