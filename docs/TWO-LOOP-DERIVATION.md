@@ -457,8 +457,18 @@ matrix independently (section 10).
     satisfy the criterion and S±, VP do not (`noSubdivergence_loopMatrix`,
     `not_noSubdivergence_loopMatrix`). With each photon line doubled (`class5LoopMatrixPV`),
     every class but VP satisfies it. VP satisfies it once its bubble lines are doubled too
-    (`loopMatrixVPBubble`). The doubled-line forms are assumed shapes of the
-    Pauli–Villars-combined integrands for S± and VP; they are not derived from the model.
+    (`loopMatrixVPBubble`).
+  - **Link to the model (2026-11-18).** The frozen chord routing of every class equals its class
+    routing up to an integer unimodular change of loop momenta, kernel-checked
+    (`QED/TwoLoop/ParametricBridgeLX.lean`, `ParametricBridgeC.lean`, `ParametricBridgeS.lean`,
+    `ParametricBridgeVP.lean`), so the "numerically only" caveat above is removed. Each class
+    value is a joint integral of a degree-≤4 numerator over Pauli–Villars-form denominators
+    (`parametricForm_open` for L, X, C±, S±, the photon pairs combined; `parametricForm_VP`).
+    For VP the regulator-flavour sum is derived, not assumed: by the two PV conditions and the
+    vanishing of odd γ-traces (the odd mass terms cancel only after the loop trace), it becomes
+    four terms of bubble shapes (1,3), (2,2), (3,1), (2,2) (`ParametricBridgeVPFlavour.lean`,
+    `flavourSum_bubble`); all four satisfy the criterion, but only the two (2,2) terms have the
+    `loopMatrixVPBubble` shape.
 
   Numerical replay: `python3 scripts/numerics/two_loop_crosschecks.py energy2d`, `feynman`,
   `param`, `criterion`.

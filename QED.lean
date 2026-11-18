@@ -93,6 +93,8 @@ public import QED.TwoLoop.FurryPair
 public import QED.TwoLoop.RelabelCountertermClasses
 public import QED.TwoLoop.NestedVP
 public import QED.TwoLoop.ParametricBridgeLX
+public import QED.TwoLoop.ParametricBridgeS
+public import QED.TwoLoop.ParametricBridgeVPFlavour
 public import QED.Integration.FeynmanParameterGeneral
 public import QED.Integration.SpatialIntegralSix
 public import QED.Integration.TwoLoopParametric

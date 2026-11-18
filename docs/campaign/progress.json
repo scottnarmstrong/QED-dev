@@ -341,6 +341,10 @@
     {
       "date": "2026-11-18",
       "change": "Integrability criteria of every order: if every direction class leaves at least k+1 lines then tr(A)^j U^-k is integrable on the simplex, giving the degree <= 2 parametric theorems under the four-lines criterion (L, X, C+- with doubled photons, the VP bubble form; not S+-, VP, F+-). Fourth moments of the energy and spatial integrals, and the degree-4 energy step, proved; the degree-4 spatial step and assembly remain. Finding: the generic degree-4 criterion (five lines per class) holds only for X, so L and C+- will need a sharper criterion tracking the numerator degree in each subloop momentum."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Parametric bridge completed for all classes: the frozen routings of C+-, S+-, VP are proved equal to the class routings up to integer unimodular changes, with the criterion on the frozen matrices (S+- after doubling both photons), and every class value is a joint integral of degree <= 4 numerators over PV-form denominators. For VP the regulator-flavour sum becomes, by the two PV conditions and the vanishing of odd gamma traces (the odd mass terms cancel only after the trace), four terms of bubble shapes (1,3), (2,2), (3,1), (2,2), all satisfying the criterion; only the (2,2) terms have the doubled-bubble shape assumed earlier. Integrability (O2-7) remains."
     }
   ],
   "tracks": [
