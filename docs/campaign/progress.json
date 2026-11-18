@@ -361,6 +361,10 @@
     {
       "date": "2026-11-18",
       "change": "Preparatory analysis for O2-25 (docs/TWO-LOOP-UNITS.md; numerics, not proof): one structural identity in hierarchical Cheng-Wu variables reduces each q-type unit to a low-dimensional integral; the route-A units L and S have 1D representations agreeing with BMR-I's per-graph values to 40 digits, with exact evaluations by hand needing only zeta(2); C to 10 digits and X to 17 digits from 3D and 2D representations, whose exact evaluation (zeta(2) ln 2, zeta(3)) is not yet carried out. The route-A counterterm allocation coincides with BMR's."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Exact values of the L and S unit representations proved at helper level (O2-25): the integrals of the 1D kernels of docs/TWO-LOOP-UNITS.md are 1/16 + pi^2/18 and 11/48 - pi^2/36, so L = 11/48 + zeta(2)/3 and b_S = 11/24 - zeta(2)/3, BMR-I's values; with integrability. That these are the limits of the model's units needs the chain of TWO-LOOP-UNITS section 8."
     }
   ],
   "tracks": [

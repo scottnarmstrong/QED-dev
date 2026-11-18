@@ -50,6 +50,12 @@ Two findings are worth stating at the outset.
    subgraph plus a shifted one-loop $V$ of the outer loop. It makes the integral over the
    outer electron parameter elementary for every graph.
 
+**Lean (2026-11-18).** The exact values of the 1D integrals of L and S are proved at helper
+level (`QED/TwoLoop/UnitLS.lean`: `integral_ladderKernel` $=\frac1{16}+\frac{\pi^2}{18}$,
+`ladderUnit_value`, `integral_selfEnergyKernel` $=\frac{11}{48}-\frac{\pi^2}{36}$,
+`selfEnergyUnit_finitePart_value`), with the integrability of both kernels. The link to the
+model (section 8) is not proved.
+
 ## 2. The common starting point
 
 ### 2.1 The parametric integrand
