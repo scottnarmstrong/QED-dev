@@ -813,7 +813,13 @@ source: the decision record).
   between the data $(p',p)$ and $(-p,-p')$; the mirror identity of the vertex limit is reduced
   (`isMirrorSymmetric_headline_of_cov`) to the covariance of the seven class limits under the
   reflection in $p+p'$ (which reverses time, so it is applied to the limits, not at fixed
-  $\varepsilon$) and the mirror identity of the counterterm part; both remain.
+  $\varepsilon$) and the mirror identity of the counterterm part. The counterterm part is done up
+  to the same kind of input (`QED/TwoLoop/CountertermMirror*.lean`): the δ₁ classes are mirror
+  symmetric unconditionally, from the closed form of the one-loop vertex; the δ₂/δm and δ₃ classes
+  pair by charge conjugation at fixed $\varepsilon$ and need the reflection covariance of two
+  counterterm-class limits (`isMirrorSymmetric_headline_of_cov_ct`). What remains for O2-21 is
+  reflection covariance of nine limits (seven classes, two counterterm classes), which is the
+  parametric covariance step of O2-20.
 - **O2-22 ($q^2\to0^+$ at fixed regulators).** At fixed $m_\gamma>0$, $\Lambda$, $M_1,M_2$
   and the on-shell order-$e^2$ counterterms, the Pauli coefficient $\hat F_2$ of the order-5
   vertex (O2-27; D-37.6) has a limit as $q^2\to0^+$, uniformly over the on-shell

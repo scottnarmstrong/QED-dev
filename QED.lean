@@ -108,6 +108,7 @@ public import QED.TwoLoop.ClassLimitVP
 public import QED.TwoLoop.VertexLimit
 public import QED.TwoLoop.VertexCovariance
 public import QED.TwoLoop.LimitMirrorVP
+public import QED.TwoLoop.CountertermMirrorPart
 public import QED.Integration.FeynmanParameterGeneral
 public import QED.Integration.SpatialIntegralSix
 public import QED.Integration.TwoLoopParametric

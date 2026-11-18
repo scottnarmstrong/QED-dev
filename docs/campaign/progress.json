@@ -397,6 +397,10 @@
     {
       "date": "2026-11-18",
       "change": "Mirror identity (O2-21), partial: at fixed epsilon, charge conjugation maps C+ to C-, S+ to S- and L, X, VP to themselves between the data (p', p) and (-p, -p') (routing change between different external data); the mirror identity of the order-e^5 limit is reduced to the reflection covariance of the seven class limits and the mirror identity of the counterterm part."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Mirror identity of the counterterm part: the delta1 classes are mirror-symmetric unconditionally (closed form of the one-loop vertex); the delta2/deltam and delta3 classes pair under charge conjugation at fixed epsilon. The mirror identity of the order-e^5 limit now needs only the reflection covariance of nine limits (seven classes, two counterterm classes)."
     }
   ],
   "tracks": [
