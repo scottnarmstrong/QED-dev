@@ -10,3 +10,7 @@ M1 = 2, M2 = 3) and find
 with the transverse part given by the complex-mass function and an extra non-transverse term
 proportional to eps (`fixed_eps_vp.py` at k = 0, `fixed_eps_vp_k.py` at timelike k,
 `compare_cov.py`). Run each with `nice -n 10 python3 <file>`.
+
+`n1_complex_spectral.py`: the spectral identity with complex mass M^2 - i eps (line-dependent
+prescription eps_v = 4 eps/(1 - v^2)). `n2_fixed_q_rhs.py`: the spectral and outer forms of the
+right side of `VPHalfSubAt` agree.

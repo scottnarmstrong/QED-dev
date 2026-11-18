@@ -903,7 +903,12 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   the $\Pi_{\rm loop}(0)$ part discharged; the five-mass partial fractions and the per-spectral-mass
   one-loop limit (distinct masses) are proved. Numerically the fixed-$\varepsilon$ energy-first
   vacuum polarization is transverse up to an extra term $\varepsilon g^{\sigma\tau}S_\varepsilon(k)$
-  (`scripts/numerics/vp_half/`), which must be shown to vanish in the limit.
+  (`scripts/numerics/vp_half/`), which must be shown to vanish in the limit. `VPHalfSub` (hence `VPHalf` and
+  `VPUnitNested`) now follows from the fixed-momentum statement `VPHalfSubAt` along the boost curve
+  (`QED/TwoLoop/VPHalfSub.lean`, `vpHalfSub_of_eventually`; the $q\to0$ step on the explicit side
+  is proved), and `VPHalfSubAt` is equivalent to an outer one-loop form with $\Pi_{\rm loop}$
+  inserted (`vpHalfSubAt_iff_outer`). That fixed-$q$ identity, O2-8 at the $\varepsilon\to0$ level,
+  remains; the plan is the nested route with explicit packet-6b constants for the Fubini condition.
   **L unit, partial link** (`QED/TwoLoop/UnitLLink*.lean`): the counterterm half is exact (δ₁
   from the frozen charge condition equals the doc's formula, and its unit contribution is
   $\delta_1(F_2^{(2)}(m_\gamma)-F_2^{(2)}(\Lambda))$); the $x$-integration of the $\lambda=0$
