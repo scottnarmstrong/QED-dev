@@ -401,6 +401,10 @@
     {
       "date": "2026-11-18",
       "change": "Mirror identity of the counterterm part: the delta1 classes are mirror-symmetric unconditionally (closed form of the one-loop vertex); the delta2/deltam and delta3 classes pair under charge conjugation at fixed epsilon. The mirror identity of the order-e^5 limit now needs only the reflection covariance of nine limits (seven classes, two counterterm classes)."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Covariance of the order-e^5 limit (O2-20) proved: the epsilon -> 0+ limit of the vertex is covariant under every Lorentz map fixing p and p', on the parametric limit formulas (numerator covariance of the open-line chains, the VP loop trace and the counterterm classes; invariance of the parametric integrand). With the mirror identity (reduced to reflection covariance of nine limits), the form-factor clause of the provisional headline would follow."
     }
   ],
   "tracks": [

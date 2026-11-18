@@ -806,8 +806,11 @@ source: the decision record).
   (`IsMirrorSymmetric`: charge conjugation followed by the reflection in $p+p'$) has exactly one
   form-factor pair; both properties pass to finite sums and integrals. Hence the second clause
   of the headline (HV₃) holds given covariance and the mirror identity of the order-5 limit
-  (`existsUnique_isFormFactorPair_headline`). Open: proving these two properties for the
-  limit (numerator covariance of the class amplitudes, invariance of the parametric integrand,
+  (`existsUnique_isFormFactorPair_headline`). **Covariance of the limit is proved**
+  (`QED/TwoLoop/LimitCovariance*.lean`, `isLittleGroupCovariant_headline`): on the parametric limit
+  formulas, via the chain form of the open-line numerators, the VP loop trace, the counterterm
+  limits and the invariance of the parametric integrand under Lorentz maps fixing $p,p'$. Open
+  before that: proving these two properties for the limit (numerator covariance of the class amplitudes, invariance of the parametric integrand,
   and the C±, S± mirror pairing). **Mirror identity, partial** (`QED/TwoLoop/LimitMirror*.lean`):
   charge conjugation pairs C₊↔C₋, S₊↔S₋ and maps L, X, VP to themselves at fixed $\varepsilon$,
   between the data $(p',p)$ and $(-p,-p')$; the mirror identity of the vertex limit is reduced
