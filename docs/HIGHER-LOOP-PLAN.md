@@ -4,7 +4,9 @@
 [Two-loop derivation](TWO-LOOP-DERIVATION.md) · [Two-loop units](TWO-LOOP-UNITS.md) ·
 [Sources](SOURCES.md) · [Decisions](campaign/DECISIONS.md)
 
-**Status (2026-11-18): draft planning document.** Nothing here has been approved or frozen.
+**Status (2026-11-18): planning document; design rulings in D-49** (Stage 0, then set (b); the
+D-37 order with one regulator threshold; exact where feasible; minimal successor packets).
+No declaration has been approved or frozen yet.
 **Update:** task T2 is done. The value integral of set (b) (O3-13) and its enclosure (O3-14) are
 proved at helper level (`QED/Chain/*.lean`: `integral_setB`, `aSetB_bounds`); the closed form still
 needs a pinned literature source. Claims are labelled as at two loops:

@@ -2202,3 +2202,47 @@ Deferred, and outside this milestone:
 - the mass-dependent two-loop terms (D-36.2; Stage 0 of
   `docs/HIGHER-LOOP-PLAN.md`);
 - the two-loop LSZ lift (D-44 item 1).
+
+## D-49. Phase 5 rulings: targets, order of limits, value form, model extension (author ruling)
+
+**Ruling.** On 2026-11-18 the author ruled on the design questions of
+`docs/HIGHER-LOOP-PLAN.md` section 6, choosing the recommended option each
+time.
+
+1. **Targets.** Stage 0 comes first: the mass-dependent two-loop term
+   A₂⁽⁴⁾(mₑ/m_μ) and A₂⁽⁴⁾(mₑ/m_τ). Then Stage 1a: the vacuum-polarization
+   chain, sixth-order set (b).
+2. **Order of limits (Q1).** The order of D-37 is kept:
+   - ε → 0⁺;
+   - then q² → 0⁺ at fixed regulators, uniformly over the on-shell pairs;
+   - then (m_γ, Λ) → (0, ∞) jointly;
+   - then the regulator fermions, last.
+
+   With several lepton flavours, one threshold R_M covers the regulator pairs
+   of every flavour.
+3. **Form of the results (Q2, successor of D-36.3 for Phase 5).**
+   - Exact closed constants where feasible, each with a companion certified
+     enclosure theorem as for (U₂).
+   - Otherwise a certified enclosure, labelled as such.
+   - A flavour-dependent coefficient is stated as an explicit function of the
+     mass ratio, with a separate enclosure on an input interval. Input
+     uncertainty is never mixed into a coefficient.
+4. **Model extension (Q3–Q5).**
+   - The sealed anchors stay untouched.
+   - The model is extended by minimal versioned successor packets, each with
+     an embedding theorem into the frozen T1 model. These are physical
+     flavours, each with its own Pauli–Villars pair (Stage 0), and later
+     counterterms graded by order in e⁴ (Stage 2).
+   - A family is a frozen structural predicate, proved equal to the
+     relabelling orbit of explicit representatives.
+   - The three frozen model generations are not unified now.
+
+Questions Q6–Q8 were not asked separately. The plan's proposals are the
+working defaults:
+- **Q6, the amplitude:** the 1PI vertex.
+- **Q7, normalizations:** 64π⁶[e⁶]F₂ and 16π⁴[e⁴]F₂, with mass ratio
+  y = mₑ/m_ℓ.
+- **Q8, completeness:** a family is reported as a subset.
+
+They are settled only when the author approves the exact Lean text of the
+corresponding declarations, as for every frozen statement.
