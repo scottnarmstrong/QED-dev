@@ -4,8 +4,10 @@
 [Two-loop derivation](TWO-LOOP-DERIVATION.md) · [Two-loop units](TWO-LOOP-UNITS.md) ·
 [Sources](SOURCES.md) · [Decisions](campaign/DECISIONS.md)
 
-**Status (2026-11-18): draft planning document.** Nothing here is a Lean declaration, and
-nothing has been approved, frozen or proved. Claims are labelled as at two loops:
+**Status (2026-11-18): draft planning document.** Nothing here has been approved or frozen.
+**Update:** task T2 is done. The value integral of set (b) (O3-13) and its enclosure (O3-14) are
+proved at helper level (`QED/Chain/*.lean`: `integral_setB`, `aSetB_bounds`); the closed form still
+needs a pinned literature source. Claims are labelled as at two loops:
 **source** (read in a pinned PDF at the cited place), **numerics** (a floating-point or
 multiprecision computation, evidence only; section 9), **recalled** (standard knowledge not
 yet located in a pinned source, which must be pinned before anything relies on it).
