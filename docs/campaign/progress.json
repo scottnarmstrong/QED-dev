@@ -485,6 +485,10 @@
     {
       "date": "2026-11-18",
       "change": "Headline assembly proved (O2-26, conditional): a theorem with exactly the statement of the approved headline (HV3), from the L and VP unit links (proved) and two hypotheses, the S + C and X unit links. The counterterm existence clause, the sum of the unit values to A1(4) and the quantifier order are proved; once the two remaining links are proved, the headline follows in one line."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "X graph half reduced: the crossed-ladder trace identity proved, and 16 pi^4 times the model's X unit equals an explicit iterated integral in the hierarchical variables (a general Cheng-Wu theorem for constraints on any set of coordinates added). The regulator limit and the outer integrations to the 1D kernel remain."
     }
   ],
   "tracks": [

@@ -65,6 +65,12 @@ integrability of $K_{\rm X}$. The steps from the 2D representations to the 1D
 kernels (the $x$- and $\xi$-integrations) are symbolic computations, and the link to the model
 (section 8) is not proved.
 
+**X link (2026-11-18).** The model's X unit is proved equal to an explicit iterated integral in
+the hierarchical variables of section 2 (`QED/TwoLoop/UnitXGraph*.lean`,
+`sixteen_pi_pow_four_mul_unitF2_X_eq_iterated`, at $m=e=1$, $0<m_\gamma<\Lambda$), whose $\lambda=0$,
+$\Lambda=\infty$ term is exactly the integrand behind (4.1)/(4.4). The regulator limit and the
+outer integrations of 4.2 and the $\xi$-integration to $K_{\rm X}$ remain.
+
 ## 2. The common starting point
 
 ### 2.1 The parametric integrand
