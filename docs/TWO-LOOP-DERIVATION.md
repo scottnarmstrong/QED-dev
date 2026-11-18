@@ -482,8 +482,14 @@ matrix independently (section 10).
   They assume photon masses
   $\lambda_i^2\ge m_\gamma^2$, on-shell $p\cdot p=p'\cdot p'=-m^2$ and $q\cdot q\ge0$, and
   hold at every point of the simplex with $U(z)\ne0$. The hypothesis $U\ne0$ is needed because
-  `symanzikV` takes a junk value at $U=0$. The other classes, and the use of the bound in the
-  $\varepsilon\to0^+$ limit (O2-7, O2-22), remain.
+  `symanzikV` takes a junk value at $U=0$. **The other classes** C±, S±, VP (F± cancel, O2-3)
+  are proved in the same way, with the same hypotheses, and also the Pauli–Villars forms of all
+  seven classes and the doubled-bubble VP form, using a general lemma that repeating a line with
+  a mass at least the original's preserves a lower bound
+  (`QED/Integration/SymanzikPositivityClasses.lean`: `le_symanzikV_classCp`, `…Cm`, `…Sp`,
+  `…Sm`, `…VP`, their `_ge` and `_pos` forms, `symanzikV_class*PV_ge`,
+  `symanzikV_VPBubble_ge`, `le_symanzikV_comp_of`); same caveat on the loop matrices. The use
+  of the bound in the $\varepsilon\to0^+$ limit (O2-7, O2-22) remains.
 
 ## 5. Stage 3 — Subtraction at fixed regulators
 

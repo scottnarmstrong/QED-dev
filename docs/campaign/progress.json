@@ -317,6 +317,10 @@
     {
       "date": "2026-11-18",
       "change": "Correction record (D-42): an independent audit of the 2026-11-17 prose found no wrong mathematics and no claim of an unproved result; the earlier entries are left as written and are corrected here. (1) The VP value 119/36 - pi^2/3 is the evaluation of an explicit double integral, at helper level; that it is the limit of the model's VP unit remains O2-8, O2-10, O2-13. (2) Momentum conservation for relabelling invariance is argued to be needed, not shown necessary in Lean. (3) Relabelling invariance needs connected vertices and external momenta summing to zero (for 1PI contractions, momentum conservation). (4) Integrability classes: the class loop matrices are integer routings written for that file, not lineMomentum2, matched to the representatives numerically only; the doubled-line forms for S+- and VP are assumed shapes of the Pauli-Villars-combined integrands, not derived; necessity of the criterion is not proved. (5) The no-subdivergence criterion replaces the U hypotheses of the parametric representation; it does not remove them. (6) The exact loop formula 2 loopCount + 2nf + nA = V3 + 2 also needs attached externals and N >= 1. (7) The VP decoupling bound (1/M1^2 + 1/M2^2)/45 needs M_f >= m. (8) The Landen identities are proved on [1/2, 1]. (9) The scalar parametric representation needs spanning loop coefficients (two independent alpha_i). Replay scripts for the numerical cross-checks: scripts/numerics/two_loop_crosschecks.py."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Positivity of V (O2-12) proved for the remaining classes C+-, S+-, VP (F+- cancel), and for the Pauli-Villars forms of all seven classes and the doubled-bubble VP form, wherever U != 0 on the simplex, for the class loop matrices (own routings, matched to the representatives numerically). The use in the epsilon -> 0+ limit remains."
     }
   ],
   "tracks": [
