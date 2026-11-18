@@ -23,7 +23,7 @@ that does not depend on the mass ratios. -/
 theorem tendsto_a2Four_one :
     Tendsto a2Four (𝓝[<] 1) (𝓝 (119 / 36 - Real.pi ^ 2 / 3)) :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.tendsto_a2Four_one
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

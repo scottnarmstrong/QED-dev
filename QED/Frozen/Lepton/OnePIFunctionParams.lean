@@ -22,7 +22,7 @@ namespace QED.Lepton
 theorem onePIFunction₂_params (P : Params) :
     onePIFunction₂ P ⟨P.mass, P.loopCoeff, 0⟩ = QED.WickModel.onePIFunction₂ P :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.onePIFunction₂_params
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

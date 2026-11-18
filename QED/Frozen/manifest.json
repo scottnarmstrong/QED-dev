@@ -21113,7 +21113,7 @@
         "module": "QED.Provider.Lepton.A2FourPasEqA2Four",
         "export": "QED.Provider.Lepton.a2FourPas_eq_a2Four"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "9394a834c0c2af8c09d793e3284bf4b76dd94b4b48c2ef43ebbf627fe16263cb",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {
@@ -21156,7 +21156,7 @@
         "module": "QED.Provider.Lepton.TendstoA2FourOne",
         "export": "QED.Provider.Lepton.tendsto_a2Four_one"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "b3b3fb23af825f727b7203b5d049820c9e09795f672a248b0b6216383997615d",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {
@@ -21199,7 +21199,7 @@
         "module": "QED.Provider.Lepton.A2FourMemMuon",
         "export": "QED.Provider.Lepton.a2Four_mem_muon"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "77863a60134500831e50896bfdcc56efe753aa2d41ef90c24fd7c26b8053dbb2",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {
@@ -21242,7 +21242,7 @@
         "module": "QED.Provider.Lepton.A2FourMemTau",
         "export": "QED.Provider.Lepton.a2Four_mem_tau"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "8bb2577366a99960f2ee50abcd77366ca22934976f1ccd6ad9afd72588778185",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {
@@ -21521,7 +21521,7 @@
         "module": "QED.Provider.Lepton.OnePIFunctionParams",
         "export": "QED.Provider.Lepton.onePIFunction₂_params"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "0e68704af3d6d71b60ceb59c79cfea60a1ef01ecf2abc60e5d131ab60e9eae56",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {
@@ -21808,7 +21808,7 @@
         "module": "QED.Provider.Lepton.VertexOrderFiveParams",
         "export": "QED.Provider.Lepton.vertexOrderFive_params"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "4f5e8240322a9ba88b2714bab819700fae67c71977679234e768f40ed30f2a59",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {
@@ -23804,7 +23804,7 @@
         "module": "QED.Provider.Lepton.ExistsHeavyLeptonRegulators",
         "export": "QED.Provider.Lepton.exists_heavyLepton_regulators"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "1006412d734c9d6648df6412a496ac0057a711cfced668f829c1ba084918cc95",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {

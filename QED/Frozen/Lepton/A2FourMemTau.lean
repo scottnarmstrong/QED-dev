@@ -21,7 +21,7 @@ interval is about `[1.837 648, 1.838 134] × 10⁻⁹` (numerics), against AKN T
 theorem a2Four_mem_tau (y : ℝ) (hy : y ∈ Set.Icc (0.000287566 : ℝ) 0.000287604) :
     a2Four y ∈ Set.Icc (1.8376e-9 : ℝ) 1.8382e-9 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.a2Four_mem_tau
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

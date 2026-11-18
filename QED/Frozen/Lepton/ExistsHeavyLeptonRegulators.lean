@@ -23,7 +23,7 @@ theorem exists_heavyLepton_regulators {n : ℕ} (mH : Fin n → ℝ) (RM : ℝ) 
       (∀ ℓ, RM < MH₁ ℓ) ∧ (∀ ℓ, RM < MH₂ ℓ) ∧ (∀ ℓ, 1 + cH₁ ℓ + cH₂ ℓ = 0) ∧
       ∀ ℓ, mH ℓ ^ 2 + cH₁ ℓ * MH₁ ℓ ^ 2 + cH₂ ℓ * MH₂ ℓ ^ 2 = 0 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.exists_heavyLepton_regulators
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

@@ -18,7 +18,7 @@ namespace QED.Lepton
 transcription audit if `a2Four` is chosen). -/
 theorem a2FourPas_eq_a2Four {y : ℝ} (hy0 : 0 < y) (hy1 : y < 1) : a2FourPas y = a2Four y :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.a2FourPas_eq_a2Four
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

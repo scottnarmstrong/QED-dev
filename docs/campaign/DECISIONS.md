@@ -2304,3 +2304,17 @@ WITH NITS, and the nits were applied before approval:
 
 **Freeze.** The definitions are SEALED. The theorem goals are DRAFT_SORRY in
 `QED/Frozen/Lepton/`, with providers in `QED/Provider/Lepton/`.
+
+**Seals (2026-11-18).** Seven goals are sealed, each with body `by exact` its provider in
+`QED/Provider/Lepton/`, from helpers in `QED/LeptonProof/Coeff*.lean`:
+- `a2FourPas_eq_a2Four`;
+- `tendsto_a2Four_one`;
+- `a2Four_mem_muon` and `a2Four_mem_tau`, through `a2Four = a2Heavy`, which is definitional, and
+  the O3-M3 enclosures;
+- `exists_heavyLepton_regulators`;
+- `onePIFunction₂_params` and `vertexOrderFive_params`, both `rfl`.
+
+An independent refute-first seal audit returned PROVED for all seven. It found that only the
+proof-body lines changed, the hashes and ABI match, the axioms are standard, there is no smuggled
+hypothesis, the enclosure intervals and regulator witnesses are covered, and the guard and build
+are clean. Six goals remain DRAFT_SORRY: the embedding theorems (E₂)–(E₅) and (HM₂).

@@ -573,6 +573,10 @@
     {
       "date": "2026-11-18",
       "change": "Phase 5 O3-M2 analytic core proved (helper level): the heavy-lepton VP outer functional, its joint (m_gamma, Lambda) limit, decoupling of the heavy lepton's own regulators with the sharp constant 1/45 and no ratio constraint, the limit value a2Heavy, and the split into lepton blocks (QED/Chain/HeavyVP*)."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Seven Phase 5 Stage 0 goals sealed and audited PROVED (D-50): the transcription identity a2FourPas = a2Four, the limit y -> 1, the certified muon and tau enclosures of A2^(4), non-vacuity of the heavy regulators, and the two rfl embeddings. Remaining DRAFT_SORRY: (E2)-(E5) and (HM2)."
     }
   ],
   "tracks": [

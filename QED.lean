@@ -92,6 +92,13 @@ public import QED.Frozen.Lepton.OnePIFunction
 public import QED.Frozen.Lepton.Preserves
 public import QED.Frozen.Lepton.RegulatedAmplitude
 public import QED.Frozen.Lepton.VertexOrderFive
+public import QED.Frozen.Lepton.A2FourPasEqA2Four
+public import QED.Frozen.Lepton.TendstoA2FourOne
+public import QED.Frozen.Lepton.A2FourMemMuon
+public import QED.Frozen.Lepton.A2FourMemTau
+public import QED.Frozen.Lepton.ExistsHeavyLeptonRegulators
+public import QED.Frozen.Lepton.OnePIFunctionParams
+public import QED.Frozen.Lepton.VertexOrderFiveParams
 public import QED.Frozen.TwoLoop.IsVertexOrderFiveLimit
 public import QED.Polylog.Basic
 public import QED.Polylog.Deriv

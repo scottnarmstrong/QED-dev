@@ -22,7 +22,7 @@ interval is about `[5.197 386 53, 5.197 387 00] × 10⁻⁷` (numerics), against
 theorem a2Four_mem_muon (y : ℝ) (hy : y ∈ Set.Icc (0.00483633159 : ℝ) 0.00483633181) :
     a2Four y ∈ Set.Icc (5.197386e-7 : ℝ) 5.197388e-7 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.a2Four_mem_muon
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

@@ -20,7 +20,7 @@ namespace QED.Lepton
 theorem vertexOrderFive_params (P : Params) :
     vertexOrderFive P ⟨P.mass, P.loopCoeff, 0⟩ = QED.TwoLoop.vertexOrderFive P :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.vertexOrderFive_params
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 
