@@ -365,6 +365,10 @@
     {
       "date": "2026-11-18",
       "change": "Exact values of the L and S unit representations proved at helper level (O2-25): the integrals of the 1D kernels of docs/TWO-LOOP-UNITS.md are 1/16 + pi^2/18 and 11/48 - pi^2/36, so L = 11/48 + zeta(2)/3 and b_S = 11/24 - zeta(2)/3, BMR-I's values; with integrability. That these are the limits of the model's units needs the chain of TWO-LOOP-UNITS section 8."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "O2-7 at fixed epsilon proved for all seven classes: at every epsilon > 0, with momentum conservation (and the two PV conditions for VP), both stages of each class value's joint energy-first integral are integrable, via a pointwise bound of the numerator integrand by the refined weight (degree-4 representation under the refined criterion, N >= 8). This discharges the joint-integrability hypothesis of the nested-VP theorem. The epsilon -> 0+ limit remains."
     }
   ],
   "tracks": [

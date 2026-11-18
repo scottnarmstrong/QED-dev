@@ -31,8 +31,10 @@ Newton-polytope test (integer weight vectors with entries up to `4`, up to `3` f
 agrees with every decision, and Monte Carlo truncated means are consistent with them (a numerical
 check, not part of the formal statement).
 
-That the absolute parametric integrand of the class numerators is bounded by this weight is not
-formalized, and the representation theorems still assume `tr² A · U⁻⁴` integrable.
+That the absolute parametric integrand of the class numerators is bounded by this weight is
+proved in `QED.Integration.TwoLoopRefinedBound` (`RefinedBound`), which gives the degree-4
+representation under the refined criterion
+(`jointEnergyFirstIntegral_loopQuartic_mul_prod_inv_lineDenom_of_refined`).
 -/
 
 @[expose] public section

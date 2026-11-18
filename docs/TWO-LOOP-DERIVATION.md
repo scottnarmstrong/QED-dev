@@ -376,6 +376,13 @@ $|t|^{-12}$ overall.
   $\varepsilon>0$, and the value has a unique limit as $\varepsilon\to0^+$. This is the
   two-loop analogue of packet 1's (E). Theorem; **high** effort; the main analytic risk of
   stage 2.
+  **Status (2026-11-18): fixed $\varepsilon$ proved, limit open.** For every class L, X, C±, S±
+  (`QED/TwoLoop/ClassIntegrable.lean`, `jointEnergyFirstIntegrable_open`) and VP
+  (`ClassIntegrableVP.lean`, `jointEnergyFirstIntegrable_VP`, using the two Pauli–Villars
+  conditions), at every $\varepsilon>0$ and with momentum conservation, both stages of the class
+  value's joint integral at the frozen routing are integrable (T₉′), with no condition on the
+  regulators. Route: the parametric bridge, the refined pointwise bound and the refined
+  criterion. The $\varepsilon\to0^+$ limit remains.
 - **O2-8 (nested equals joint, for insertions).** For the insertion classes S₊, S₋ and VP,
   the joint value equals the outer one-loop integral of the frozen inner one-loop function
   (Σ, Π at fixed $\varepsilon$, then $\varepsilon\to0^+$, as appropriate). This is needed to
@@ -490,8 +497,11 @@ matrix independently (section 10).
   `tr²A·U⁻⁴` integrable or the five-lines criterion, which holds only for X with doubled photons).
   A refined criterion `NoSubdivergenceRefined` (`SymanzikIntegrabilityRefined*.lean`) gives the
   integrability of the weight $U^{-k}\prod_{e\in E}\sqrt{1+Q_e/U}$ and holds for L, X, C±, S± with
-  doubled photons and the VP bubble form; the pointwise bound of the numerator integrand by that
-  weight is not yet formalized. Projection to $F_2$: see O2-21.
+  doubled photons and the VP bubble form. The pointwise bound of the numerator integrand by that
+  weight is proved (`QED/Integration/TwoLoopRefinedBound*.lean`, `RefinedBound`), which gives
+  the degree-4 representation under the refined criterion for N ≥ 8 lines
+  (`jointEnergyFirstIntegral_loopQuartic_mul_prod_inv_lineDenom_of_refined`). Projection to $F_2$:
+  see O2-21.
 - **O2-12 (positivity of $V$).** On the closed simplex, for on-shell $p,p'$ with $q^2\ge0$
   and $m_\gamma>0$, $V$ is bounded below by a positive constant. This is the two-loop
   analogue of $D\ge(1-x_3)^2m^2+x_3m_\gamma^2$ ("no thresholds": a free electron cannot
