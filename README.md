@@ -134,6 +134,15 @@ result are approved and frozen; for two loops, the model is approved and frozen,
 target constant, the one-loop Ward identity and the headline statement are approved and
 frozen (decisions D-39 to D-41, approved in D-43).
 
+**Scope of the two-loop headline.** The two-loop headline theorem is a statement about the
+one-particle-irreducible electron–photon vertex at order $e^5$, with the one-loop counterterms
+fixed by the on-shell and charge conditions: its magnetic form factor $F_2$ tends to
+$e^4A_1^{(4)}/(16\pi^4)$ in the stated order of regulator limits. It does not include the
+order-$e^5$ vertex counterterm or the two-loop external-leg factors, which $F_2$ does not need;
+without them the order-$e^5$ electric form factor $F_1$ is not renormalized. Lifting the result to
+the measured magnetic moment through the model's own LSZ amplitude, as the one-loop headline does,
+needs counterterms graded by order and is future work (decisions D-37, D-44).
+
 ## What a result certifies
 
 The reader-facing guide [What does it mean to prove a QED calculation?](docs/WHAT-IS-PROVED.md)

@@ -1981,3 +1981,34 @@ The manifest entries of the six declarations now record the approval
 unchanged: (U₂) and (WI₁) remain SEALED, and (HV₃) remains DRAFT_SORRY. The
 seals of (U₂) and (WI₁), made on the provisional text, now stand on approved
 text.
+
+## D-44. Rulings on an independent strategy review (author ruling)
+
+**Context.** On 2026-11-18 an independent reviewer (Gemini 4 Carbon, high
+effort, read-only) critiqued the campaign's strategy. The orchestrator checked
+its claims against the repository and put four questions to the author. The
+author ruled on 2026-11-18:
+
+1. **Scope of (HV₃) disclosed, LSZ lift deferred.** (HV₃) concerns the 1PI
+   vertex at order e⁵ with one-loop counterterms (D-37). F₂ needs nothing more,
+   but F₁ at order e⁵ is not renormalized there, and a two-loop LSZ or
+   Landé-factor theorem would need counterterms graded by order. The scope is
+   stated in the README; the lift is future work. ("ok")
+2. **An integrability companion for the two-loop challenge.** A frozen
+   statement that every class of `vertexOrderFive` is jointly energy-first
+   integrable (T₉′) is to be drafted for the two-loop Comparator challenge,
+   once the individual integrability of the Furry classes F₊, F₋ is proved
+   (in progress). Its exact Lean text goes to the author for approval. ("yes")
+3. **No provisional manifest state.** The manifest schema stays as it is. The
+   author confirmed that the overnight freezes carried their provisional
+   approval and approved all of them ("i gave provisional approval and i hereby
+   approve all"). No provisional entry is outstanding: D-43 already recorded
+   the approval of packets T2, T3 and T4.
+4. **AGENTS.md.** Its stale bootstrap paragraph ("documentation and HQ
+   maintenance tooling …") is replaced by a description of the current
+   repository. ("fix it")
+
+The review's other findings (STATUS.md staleness, the `.scratch` deletion in
+`scripts/frozen_abi.py`) were fixed in a57d2db. Its engineering suggestions
+for the corner limit went to that worker; its cleanup suggestions are deferred
+until after the headline.

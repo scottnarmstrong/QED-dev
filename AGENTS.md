@@ -8,9 +8,14 @@ The priority is experimentally relevant QED computation,
 beginning with the complete one-loop electron magnetic anomaly. Develop reusable
 infrastructure in service of that target.
 
-This initial repository contains documentation and HQ maintenance tooling.
-Lean/Mathlib revisions, exact declarations, and the regulator route remain to be
-selected. Do not describe the documentation bootstrap as a Lean implementation.
+The repository holds the Lean 4/Mathlib formalization (`QED/`, pinned toolchain
+and Mathlib revision in `lean-toolchain` and `lake-manifest.json`), the frozen
+statement anchors (`QED/Frozen/`, bound by `QED/Frozen/manifest.json`), the
+derivation and campaign documents (`docs/`), and the HQ and guard tooling
+(`scripts/`). The one-loop result and Phase 3 are complete; Phase 4 (two loops,
+route A) is in progress. [STATUS.md](docs/campaign/STATUS.md) has the current
+state; describe a result as proved only when its build, guard and axiom checks
+pass and its audit is recorded.
 
 ## Mathematical integrity
 
