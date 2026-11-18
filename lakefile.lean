@@ -35,3 +35,14 @@ lean_lib «QEDChallenge» where
 lean_lib «QEDSolution» where
   roots := #[`QEDSolution]
   leanOptions := projectLeanOptions
+
+/-- The two-loop Comparator Challenge: a Mathlib-only statement of the two-loop headline theorem,
+with one intentional `sorry` per theorem. -/
+lean_lib «QEDChallengeTwoLoop» where
+  roots := #[`QEDChallengeTwoLoop]
+  leanOptions := projectLeanOptions
+
+/-- The two-loop Comparator Solution: the two-loop Challenge theorems, proved by the library. -/
+lean_lib «QEDSolutionTwoLoop» where
+  roots := #[`QEDSolutionTwoLoop]
+  leanOptions := projectLeanOptions

@@ -4,10 +4,10 @@
 This tool verifies supplied baselines only.  It deliberately has no update,
 accept, or rebaseline command: an author-approved successor is external work.
 
-Comparator Challenges: the `challenge_module` named by a `comparator.json` at the root states
-its theorems with one intentional `sorry` each, by design; `lake comparator` checks it against
-its Solution.  This guard therefore accepts the word `sorry` in that one file and nowhere else
-outside DRAFT proof regions; every other check (`admit`, axioms, module form) still applies to
+Comparator Challenges: the `challenge_module` named by a `comparator.json` (at the root or in
+`challenges/*/`) states its theorems with one intentional `sorry` each, by design; `lake comparator`
+checks it against its Solution.  This guard therefore accepts the word `sorry` in those files and
+nowhere else outside DRAFT proof regions; every other check (`admit`, axioms, module form) still applies to
 it, and no other project file may import it.
 """
 from __future__ import annotations
@@ -83,10 +83,14 @@ class Guard:
         self.challenge_modules = self.comparator_challenges()
 
     def comparator_challenges(self) -> dict[Path, str]:
-        """Challenge files named by `comparator.json` files at the root, by resolved path."""
+        """Challenge files named by `comparator.json` files (at the root or in `challenges/*/`),
+        by resolved path. Module names resolve from the root."""
         found: dict[Path, str] = {}
-        config = self.root / "comparator.json"
-        if config.is_file():
+        configs = [self.root / "comparator.json", *sorted((self.root / "challenges").glob(
+            "*/comparator.json"))]
+        for config in configs:
+            if not config.is_file():
+                continue
             try:
                 module = json.loads(config.read_text(encoding="utf-8")).get("challenge_module")
             except (OSError, json.JSONDecodeError, AttributeError):

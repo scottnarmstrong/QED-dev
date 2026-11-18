@@ -1,0 +1,16 @@
+{
+  "challenge_module": "QEDChallengeTwoLoop",
+  "solution_module": "QEDSolutionTwoLoop",
+  "theorem_names": [
+    "QEDChallenge.QED.TwoLoop.isFormFactorPair_vertexOrderFive_pauli_limit",
+    "QEDChallenge.QED.TwoLoop.jointEnergyFirstIntegrable_vertexOrderFive",
+    "QEDChallenge.QED.TwoLoop.a1Four_bounds",
+    "QEDChallenge.QED.TwoLoop.exists_pauliVillars_regulators",
+    "QEDChallenge.QED.WickModel.selfEnergy_existsUnique",
+    "QEDChallenge.QED.WickModel.vacuumPolarization_existsUnique",
+    "QEDChallenge.QED.OneLoop.vertexLimit_existsUnique"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}
