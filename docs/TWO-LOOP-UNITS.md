@@ -71,6 +71,11 @@ the hierarchical variables of section 2 (`QED/TwoLoop/UnitXGraph*.lean`,
 $\Lambda=\infty$ term is exactly the integrand behind (4.1)/(4.4). The regulator limit and the
 outer integrations of 4.2 and the $\xi$-integration to $K_{\rm X}$ remain.
 
+**S + C link, stage 1 (2026-11-18).** The pointwise trace identities and class-value formulas
+are proved for S₊, S₋, C₊, C₋ (`QED/TwoLoop/UnitSCGraph*.lean`, `openZero_Sp_eq`, `openZero_Sm_eq`,
+`openZero_Cp_eq`, `openZero_Cm_eq`, at $m=e=1$; C₋ from C₊ by charge-conjugation reversal at trace
+level). The reductions to (5.3), (6.3), the counterterm halves and the joint limit remain.
+
 ## 2. The common starting point
 
 ### 2.1 The parametric integrand

@@ -125,6 +125,10 @@ public import QED.TwoLoop.UnitVPClose
 public import QED.TwoLoop.MassScalingClose
 public import QED.TwoLoop.HeadlineAssembly
 public import QED.TwoLoop.UnitXGraphReduceChengWu
+public import QED.TwoLoop.UnitSCGraphSpMain
+public import QED.TwoLoop.UnitSCGraphSmMain
+public import QED.TwoLoop.UnitSCGraphCpMain
+public import QED.TwoLoop.UnitSCGraphCmMain
 public import QED.TwoLoop.UnitLLinkLimit
 public import QED.TwoLoop.UnitLLinkDominated
 public import QED.TwoLoop.UnitLGraph
