@@ -98,7 +98,12 @@ two branches of $\beta(x)$). The counterterms combine as in section 7: with the 
 $\delta_m-\delta_2$, $\delta_1=\delta_2$ and $V_k+V_m+F_2^{(2)}=0$ at both photon masses, the S + C
 link is proved conditionally (`scUnitLimitOne_of_sCtHalf_cornerPart`) on two statements: the
 $\delta_2,\delta_m$ half (`SCtHalfFormula`, numerically pinned) and the joint limit of the corner
-graph alone (`CornerPartLimit`, the limit $2\int_0^1K_{\rm C}$).
+graph alone (`CornerPartLimit`, the limit $2\int_0^1K_{\rm C}$). The first is now proved
+(`QED/TwoLoop/UnitSCCt*.lean`, `sixteen_pi_pow_four_mul_sCtHalf`): evaluated directly from the
+parametric class values, $16\pi^4\cdot$(the $\delta_2,\delta_m$ half)
+$=8\pi^2\bigl[d_2(V_k(m_\gamma)-V_k(\Lambda))+d_m(V_m(m_\gamma)-V_m(\Lambda))\bigr]$ at finite regulators,
+an exact Pauli–Villars difference with no regulator-fermion terms. So the S + C link depends only on
+`CornerPartLimit` (`scUnitLimitOne_of_cornerPart`).
 
 ## 2. The common starting point
 

@@ -509,6 +509,10 @@
     {
       "date": "2026-11-18",
       "change": "S + C link, stage 3: the S side proved through the joint limit (b-integration, uniform bounds, dominated convergence, x-integration to K_S); the C b-integration proved; the counterterms combined (on-shell delta_m - delta_2, delta1 = delta2, V_k + V_m + F2 = 0). SCUnitLimitOne is proved conditionally on the delta2/delta_m half (SCtHalfFormula) and the corner-graph limit (CornerPartLimit)."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "S + C link: the delta2/delta_m half proved (sixteen_pi_pow_four_mul_sCtHalf, an exact Pauli-Villars difference 8 pi^2 [d2 Delta V_k + dm Delta V_m], evaluated directly from the parametric class values). SCUnitLimitOne now depends only on the corner graph's joint limit (CornerPartLimit); the headline waits on that one statement."
     }
   ],
   "tracks": [
