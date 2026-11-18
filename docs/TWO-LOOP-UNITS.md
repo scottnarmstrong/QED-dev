@@ -109,7 +109,11 @@ an exact Pauli–Villars difference with no regulator-fermion terms. So the S + 
 to `cornerKernel` reusing the X machinery (`integral_cornerPhi_eq_cornerKernel`), and the value of
 the triangle integral (`integral_cornerZero`). `CornerPartLimit` is reduced to two analytic
 statements (`cornerPartLimit_of`): dominated convergence for the main term (`CornerMainLimit`) and
-the vanishing of the error terms, including the outer-$\Lambda$ pair (`CornerErrLimit`).
+the vanishing of the error terms, including the outer-$\Lambda$ pair (`CornerErrLimit`). The first is
+proved (`QED/TwoLoop/UnitSCCornerMain*.lean`, `cornerMainLimit`): each master integral is bounded
+through $M+bh\ge\sqrt{Mhb}$, giving one majorant $C/(Y\sqrt x\sqrt g)$ uniform in $\lambda^2\le1$,
+integrable on the triangle, and dominated convergence is applied in $x$ and then on the
+triangle.
 
 ## 2. The common starting point
 

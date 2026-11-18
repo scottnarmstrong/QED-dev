@@ -529,6 +529,10 @@
     {
       "date": "2026-11-18",
       "change": "(HV0) sealed and PROVED: QED.TwoLoop.jointEnergyFirstIntegrable_vertexOrderFive, every term of the order-e^5 vertex is a genuine integral (counterterm one-loop graphs at epsilon > 0; the nine two-loop classes, with the Pauli-Villars conditions for VP and the Furry pair; transfer along relabellings). Independent refute-first seal audit: PROVED (D-45)."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "CornerMainLimit proved: a majorant C/(Y sqrt(x) sqrt(g)) for the corner graph's main term, uniform in lambda^2 <= 1 (through bounds on the master integrals), and dominated convergence in x and on the triangle. The S + C link, and with it the headline (HV3), now waits only on CornerErrLimit."
     }
   ],
   "tracks": [
