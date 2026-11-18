@@ -4,10 +4,11 @@
 [Sources](SOURCES.md) · [Conventions](CONVENTIONS.md)
 
 **Status (2026-11-18):** preparatory analysis for obligation O2-25 of
-[TWO-LOOP-DERIVATION.md](TWO-LOOP-DERIVATION.md). Nothing here is a Lean declaration, and
-nothing here is proved. Every representation below was derived from the covariant
-Feynman-parametric integrand of section 11 of the derivation document and checked
-numerically; the checks are evidence, not proof. The verification script is
+[TWO-LOOP-DERIVATION.md](TWO-LOOP-DERIVATION.md). Every representation below was derived from
+the covariant Feynman-parametric integrand of section 11 of the derivation document and checked
+numerically; the checks are evidence, not proof. The final one-dimensional (or master) integrals
+are proved in Lean at helper level, as listed in the "Lean" paragraph below; the chain from the
+model to these representations (section 8) is not proved. The verification script is
 [`scripts/numerics/two_loop_unit_integrals.py`](../scripts/numerics/two_loop_unit_integrals.py).
 
 Notation follows the derivation document: $r=\alpha/\pi$, $m=1$, photon mass $\lambda$
@@ -32,8 +33,8 @@ photon; $\delta_1=\delta_2$ (O2-15, proved).
 | --- | --- | --- | --- | --- |
 | L | $\frac16+\int_0^1K_{\rm L}(Y)\,dY$, eq. (3.6) | 1D; rational, $\ln Y$, $\ln(1-Y)$ | 40 digits | $\mathrm{Li}_2(1)=\zeta(2)$ only (done by hand, 3.5) |
 | S | $\ln\lambda+b_{\rm S}+o(1)$, $b_{\rm S}=2\int_0^1K_{\rm S}(Y)\,dY$, eq. (5.5) | 1D; rational, $\ln Y$, $\ln(1-Y)$ | 40 digits | $\mathrm{Li}_2(1)$ only (done by hand, 5.5) |
-| C | $-\ln\lambda+b_{\rm C}+o(1)$, $b_{\rm C}=2\int G_{\rm C}-\frac32$, eq. (6.5) | 3D; rational and $\ln$ (2D with $\mathrm{Li}_2$ after one more elementary integration) | 10 digits (outer step 1/8) | $\zeta(2)\ln2$, $\zeta(3)$ |
-| S$+$C | $b_{\rm S}+b_{\rm C}$: the logarithms cancel inside the counterterms, eq. (7.1) | 1D $+$ 3D | 10 digits (outer step 1/8) | as for C |
+| C | $-\ln\lambda+b_{\rm C}+o(1)$, $b_{\rm C}=2\int G_{\rm C}-\frac32$, eq. (6.5); 1D form $2\int_0^1K_{\rm C}-\frac32$ (6.9) | 3D; rational and $\ln$ (2D with single logarithms after the $x$-integration, no $\mathrm{Li}_2$, 6.6.1) | 42 digits (1D form) | derived exactly in 6.6: $\zeta(2)\ln2$, $\zeta(3)$ through the masters of X; the 1D integral and its value proved in Lean |
+| S$+$C | $b_{\rm S}+b_{\rm C}$: the logarithms cancel inside the counterterms, eq. (7.1) | 1D $+$ 1D (5.5), (6.9) | 42 digits (1D forms) | derived exactly (6.6.4); the 1D value proved in Lean |
 | X | $\int_{\Delta_2}\Phi_{\rm X}(z_2,z_3)\,dz_2\,dz_3$, eq. (4.4); 1D form $\int_0^1K_{\rm X}$ (4.5) | 2D; rational and $\ln$ only (the $\mathrm{Li}_2$ terms of (4.3) have zero coefficient, 4.5) | 37 digits (1D form) | derived exactly in 4.5: $\zeta(2)\ln2$, $\zeta(3)$; master integrals proved in Lean |
 
 Two findings are worth stating at the outset.
@@ -53,8 +54,14 @@ Two findings are worth stating at the outset.
 **Lean (2026-11-18).** The exact values of the 1D integrals of L and S are proved at helper
 level (`QED/TwoLoop/UnitLS.lean`: `integral_ladderKernel` $=\frac1{16}+\frac{\pi^2}{18}$,
 `ladderUnit_value`, `integral_selfEnergyKernel` $=\frac{11}{48}-\frac{\pi^2}{36}$,
-`selfEnergyUnit_finitePart_value`), with the integrability of both kernels. The link to the
-model (section 8) is not proved.
+`selfEnergyUnit_finitePart_value`), with the integrability of both kernels. For C the 1D
+integral is proved too (`QED/TwoLoop/UnitC.lean`: `intervalIntegrable_and_integral_cornerKernel`,
+`cornerUnit_finitePart_value`, and `selfEnergyCornerUnit_value` for S + C
+$=-\frac73+2\zeta(2)\ln2-\frac12\zeta(3)$). For X the eight master integrals and the final
+assembly are proved (`QED/Polylog/ExtraIntegrals.lean`, `QED/TwoLoop/UnitX.lean`), but not the 1D
+integral $\int_0^1K_{\rm X}$ itself (section 4.5). The steps from the 2D representations to the 1D
+kernels (the $x$- and $\xi$-integrations) are symbolic computations, and the link to the model
+(section 8) is not proved.
 
 ## 2. The common starting point
 
@@ -642,7 +649,7 @@ finite part $-0.56402094134468281559\ldots$ The coefficient of $\ln\lambda$ is B
 
 ### 6.5 Toward the exact value
 
-The $x$-integral of $G_{\rm C}$ is elementary up to $\mathrm{Li}_2$: on $x<x_*$ the logarithms
+(Superseded by 6.6.1: the $x$-integral in fact produces no $\mathrm{Li}_2$.) The $x$-integral of $G_{\rm C}$ is elementary up to $\mathrm{Li}_2$: on $x<x_*$ the logarithms
 are $\ln x$ and $\ln(Y^2+gx)$; on $x>x_*$ they are $\ln x$, $\ln(1-x)$ and, by the
 factorization
 $$Y^2(1-x)+y_3y_4x^2=y_3y_4\Bigl(\frac Y{y_3}-x\Bigr)\Bigl(\frac Y{y_4}-x\Bigr), \tag{6.6}$$
@@ -650,6 +657,199 @@ $\ln(Y/y_3-x)$ and $\ln(Y/y_4-x)$. The denominators are powers of $x$, $1-x$ and
 linear factors. So $b_{\rm C}$ is a 2D integral of rational functions, logarithms and
 $\mathrm{Li}_2$ of rational arguments, of the same type as (4.4) for X; the same comments
 on the exact evaluation apply. Not carried out.
+
+### 6.6 Exact evaluation
+
+**Status (2026-11-18).** The chain below takes (6.5) to BMR's value of $b_{\rm C}$, and hence of
+S$+$C. Every algebraic step was carried out in exact rational arithmetic (sympy). Every step is
+also checked numerically by mode `cornerexact` of the script, which rebuilds each object from the
+engine; the checks are evidence, not proof. No new master integral is needed: the reduction ends
+on the masters of X (4.5.4), all proved in Lean. The one-dimensional integral (6.10) itself, with
+its value, is **proved in Lean** (6.6.5). The steps before it, (6.5) $\to$ (6.8) $\to$ (6.10),
+are not.
+
+#### 6.6.1 Integration over $x$: no dilogarithm
+
+Use $Y=y_3+y_4$ and $\xi=y_3/Y$, so that $dy_3\,dy_4=Y\,dY\,d\xi$, $g=Y\xi(1-Y)$,
+$e=Y^2\xi(1-\xi)$ and $x_*=g/(g+e)=\frac{1-Y}{1-Y\xi}$. At $\lambda=0$, $G_{\rm C}$ is the
+$b$-integral of (6.2) at $M=Y^2$, $h=x$, and its logarithms are those of the two arguments
+$Y^2+\beta x$ and $\beta x$. On the two branches of section 2.2:
+
+| branch | $\beta$ | $Y^2+\beta x$ | letters of $G_{\rm C}$ |
+| --- | --- | --- | --- |
+| $x<x_*$ | $g$ | $Y\,(Y+\xi(1-Y)x)$ | $Y,\ \xi,\ 1-Y,\ x,\ Y+\xi(1-Y)x$ |
+| $x>x_*$ | $ex/(1-x)$ | $Y^2(1-\xi x)(1-(1-\xi)x)/(1-x)$, by (6.6) | $Y,\ \xi,\ 1-\xi,\ x,\ 1-x,\ 1-\xi x,\ 1-(1-\xi)x$ |
+
+The structural fact that makes the $x$-integral elementary: **every logarithm coefficient is a
+polynomial in $x$** (of degree at most 4), and the rational part is a polynomial in $x$ for
+$x<x_*$ and has only simple poles at $x=1/\xi$ and $x=1/(1-\xi)$ (that is, $Y/y_3$ and
+$Y/y_4$, outside $[0,1]$) for $x>x_*$. For a polynomial $c$ and a letter $a+bx$, choose the
+antiderivative $\tilde C$ of $c$ that vanishes at $x=-a/b$; then
+$\int c\ln(a+bx)\,dx=\tilde C\ln(a+bx)-\int b\tilde C/(a+bx)\,dx$, and the last integrand is a
+polynomial. So no dilogarithm arises. (Section 6.5 expected one; there is none.) The endpoint
+values of the letters are
+$$x_*=\frac{1-Y}{1-Y\xi},\quad 1-x_*=\frac{Y(1-\xi)}{1-Y\xi},\quad
+1-\xi x_*=\frac{1-\xi}{1-Y\xi},\quad
+Y+\xi(1-Y)x_*=1-(1-\xi)x_*=\frac{\xi+Y-2Y\xi}{1-Y\xi},$$
+and $\ln(1-x)$ enters only through $\tilde C$ vanishing at $x=1$. The result is
+$$\Phi_{\rm C}(Y,\xi)=\int_0^1G_{\rm C}\,dx
+=R_1+R_Y\ln Y+R_\xi\ln\xi+R_A\ln(1-Y\xi)+R_B\ln(\xi+Y-2Y\xi), \tag{6.7}$$
+with $R_\bullet$ rational. The coefficients of $\ln(1-Y)$ and $\ln(1-\xi)$ cancel, so
+$\Phi_{\rm C}$ has exactly the letters of $\Phi_{\rm X}$ in (4.5). The denominators are
+
+| coefficient | denominator |
+| --- | --- |
+| $R_1$ | $24\,Y^2\xi^2(1-\xi)^2$ |
+| $R_Y$ | $12\,\xi^3(1-Y)^2$ |
+| $R_\xi$ | $12\,Y^3(1-\xi)^4(2\xi-1)$ |
+| $R_A$ | $12\,Y^3\xi^3(1-Y)^2(1-\xi)^4$ |
+| $R_B$ | $12\,Y^3\xi^3(1-Y)^2(1-\xi)^4(2\xi-1)$ |
+
+(numerators of total degree up to 12, generated by the script). As for X, the pole at
+$\xi=\frac12$ (the line $y_3=y_4$) occurs only in $R_\xi$ and $R_B$, with residues
+$\pm\frac1{2Y^3}$, and multiplies $\ln\xi-\ln(\xi+Y-2Y\xi)$, which vanishes there. Thus
+$$b_{\rm C}=2\int_0^1\!dY\int_0^1\!d\xi\;Y\,\Phi_{\rm C}(Y,\xi)-\frac32 . \tag{6.8}$$
+
+#### 6.6.2 Integration over $\xi$
+
+The $\xi$-integration of $Y\Phi_{\rm C}$ is the procedure of 4.5.2, with the same code: partial
+fractions in $\xi$, finite parts at $\xi=0,1$ (the seven divergent coefficients cancel exactly),
+the removable term integrated as in 4.5.2, and the identities (4.6) to reduce the dilogarithm
+arguments. The result is
+$$\boxed{\ b_{\rm C}=2\int_0^1K_{\rm C}(Y)\,dY-\frac32\ } \tag{6.9}$$
+$$K_{\rm C}=k_L\,\mathrm{Li}_2(Y)+k_D\,D(Y)+k_{aa}\ln^2Y+k_{ab}\ln Y\ln(1-Y)+k_a\ln Y
++k_b\ln(1-Y)+k_z\,\zeta(2)+k_1, \tag{6.10}$$
+with $D(Y)=\mathrm{Li}_2(1-2Y)-\mathrm{Li}_2(2Y-1)$ as in 4.5.2 and
+
+| | coefficient (partial fractions) |
+| --- | --- |
+| $k_L$ | $Y-\frac12-\frac1{3(Y-1)}-\frac1{6Y}+\frac1{2Y^2}$ |
+| $k_D$ | $\frac23Y-\frac13-\frac1{6(Y-1)}-\frac1{6Y}$ |
+| $k_{aa}$ | $\frac16Y-\frac1{12}-\frac1{12(Y-1)}$ |
+| $k_{ab}$ | $\frac13Y-\frac16-\frac1{6Y}+\frac1{2Y^2}$ |
+| $k_a$ | $\frac16Y-\frac14-\frac5{12(Y-1)}+\frac1{2Y}$ |
+| $k_b$ | $-\frac23Y+\frac43-\frac5{6Y}+\frac1{6Y^2}$ |
+| $k_z$ | $-\frac23Y+\frac13+\frac1{12(Y-1)}+\frac1{4Y}$ |
+| $k_1$ | $\frac{31}{24}Y-\frac76-\frac1{3Y}$ |
+
+$K_{\rm C}$ is simpler than $K_{\rm X}$: no $(2Y-1)^{-1}$ poles, no $\ln^2(1-Y)$, no $\ln2$, poles
+of order at most 2 at $Y=0$ and simple poles at $Y=1$. The poles cancel: the $Y^{-2}$ and $Y^{-1}$
+terms combine through $(\mathrm{Li}_2(Y)+\ln(1-Y))/Y^2$, $(\ln(1-Y)+Y)/Y^2$ and
+$\ln Y\,(\ln(1-Y)+Y)/Y^2$, and the $(Y-1)^{-1}$ terms through
+$-\frac13(\mathrm{Li}_2-\zeta(2))-\frac16(D+\frac32\zeta(2))-\frac1{12}\ln^2Y-\frac5{12}\ln Y$,
+which vanishes at $Y=1$. Then $K_{\rm C}(Y)=-\frac14\ln Y-\frac18+o(1)$ as $Y\to0$ and
+$K_{\rm C}(1)=\frac12\zeta(2)-\frac58$.
+
+**Checks.** $\Phi_{\rm C}$ against an $x$-quadrature of $G_{\rm C}$ (both branches) at three
+points: largest difference $1.5\times10^{-31}$ (40-digit arithmetic; $G_{\rm C}$ loses digits to
+cancellation). $K_{\rm C}$ against a $\xi$-quadrature of $Y\Phi_{\rm C}$: $1\times10^{-22}$ at
+$Y=0.3$ and $2\times10^{-22}$ at $Y=0.7$ (50-digit arithmetic, tanh-sinh step $\frac1{64}$).
+$\int_0^1K_{\rm C}=0.46798952932765859220338117972215771$, and
+$2\int_0^1K_{\rm C}-\frac32=-0.56402094134468281559323764055568458$, which differs from BMR-I
+row c) by $8\times10^{-43}$ at 40-digit precision. This replaces the 10-digit check of 6.4.
+
+#### 6.6.3 Reduction to master integrals
+
+The integration by parts of 4.5.3, applied to $K_{\rm C}$ (now done by a short algorithm in
+exact arithmetic: integrate the polynomial and higher-pole parts of each coefficient, from the
+weight-two functions down, and move the divergent simple-pole pieces into the boundary term),
+gives the exact identity on $(0,1)\setminus\{\frac12\}$
+$$K_{\rm C}=G_{\rm C}'+K^{\rm C}_{\rm m}, \tag{6.11}$$
+$$\begin{aligned}
+G_{\rm C}={}&\Bigl(\tfrac12Y^2-\tfrac12Y-\tfrac1{2Y}\Bigr)\mathrm{Li}_2(Y)+\tfrac13(Y^2-Y)\,D(Y)
++\tfrac1{12}(Y^2-Y)\ln^2Y+\Bigl(\tfrac16Y^2-\tfrac16Y-\tfrac1{2Y}\Bigr)\ln Y\ln(1-Y)\\
+&+\Bigl(\tfrac1{12}Y^2-\tfrac14Y-\tfrac12\Bigr)\ln Y
++\Bigl(-\tfrac13Y^2+\tfrac76Y-\tfrac23-\tfrac1{6Y}\Bigr)\ln(1-Y)
+-\tfrac13\zeta(2)(Y^2-Y)+\tfrac{37}{48}Y^2-\tfrac74Y,
+\end{aligned}$$
+$$\begin{aligned}
+K^{\rm C}_{\rm m}={}&-\tfrac16\Bigl[\frac{\mathrm{Li}_2(Y)}Y+\frac{\ln Y\ln(1-Y)}Y
++\frac{D(Y)-\frac32\zeta(2)}Y+2\,\frac{\mathrm{Li}_2(Y)-\zeta(2)}{Y-1}
++\frac{D(Y)+\frac32\zeta(2)}{Y-1}\Bigr]\\
+&-\tfrac1{12}\Bigl[\frac{\ln^2Y}{Y-1}-\frac{\ln Y}{Y-1}\Bigr]-\tfrac56\,\frac{\ln(1-Y)}Y
+-\tfrac16\,\frac{\ln Y-\ln(1-Y)}{2Y-1}.
+\end{aligned}$$
+There is no polynomial remainder (the $p$ of (4.8) is absorbed into $G_{\rm C}$). The bracket of
+$K^{\rm C}_{\rm m}$ is the bracket $M_1+M_2+M_3+2M_4+M_3'$ of (4.9). $G_{\rm C}$ has only a simple
+pole at $Y=0$, and its one-sided limits are
+$$G_{\rm C}(0^+)=-\tfrac13,\qquad G_{\rm C}(1^-)=-\tfrac{47}{48}-\tfrac12\zeta(2). \tag{6.12}$$
+At $Y\to0$ they use $\mathrm{Li}_2(Y)/Y\to1$, $\ln(1-Y)/Y\to-1$ and
+$\ln Y\,(\ln(1-Y)+Y)/Y\to0$; at $Y\to1$ the coefficient of $\ln(1-Y)$ vanishes at $Y=1$.
+
+#### 6.6.4 Assembly
+
+By (6.11), (6.12) and the table of 4.5.4,
+$$\begin{aligned}
+\int_0^1K_{\rm C}&=G_{\rm C}(1^-)-G_{\rm C}(0^+)-\tfrac16(M_1+M_2+M_3+2M_4+M_3')
+-\tfrac1{12}(M_5-M_6)-\tfrac56M_7-\tfrac16M_8\\
+&=-\tfrac{31}{48}+\tfrac16\zeta(2)-\tfrac56\zeta(3)-\tfrac13M_3
+=-\tfrac{31}{48}+\tfrac16\zeta(2)+\zeta(2)\ln2-\tfrac14\zeta(3),
+\end{aligned}\tag{6.13}$$
+so that
+$$b_{\rm C}=-\tfrac{67}{24}+2\zeta(2)\ln2+\tfrac13\zeta(2)-\tfrac12\zeta(3),\qquad
+\mathrm S+\mathrm C=b_{\rm S}+b_{\rm C}=-\tfrac73+2\zeta(2)\ln2-\tfrac12\zeta(3),$$
+which are BMR-I rows c) (finite part) and the S$+$C value of section 7, with
+$b_{\rm S}=\frac{11}{24}-\frac13\zeta(2)$ from 5.5. As for X, $\ln2$ enters only through
+$M_3$. The sum is evaluated symbolically by the script; numerically $b_{\rm C}$ and S$+$C agree
+with BMR to $8\times10^{-43}$ and $5\times10^{-42}$. So the exact value of C is **derived** from
+(6.5).
+
+| step | object | check |
+| --- | --- | --- |
+| 6.6.1 | log coefficients of $G_{\rm C}$ polynomial in $x$; rational part as stated | symbolic |
+| 6.6.1 | (6.7) vs $x$-quadrature of $G_{\rm C}$ | $1.5\times10^{-31}$, 3 points |
+| 6.6.2 | endpoint divergences of the $\xi$-integral | 7 coefficients, exactly zero |
+| 6.6.2 | (6.10) vs $\xi$-quadrature of $Y\Phi_{\rm C}$ | $2\times10^{-22}$ |
+| 6.6.2 | $2\int_0^1K_{\rm C}-\frac32$ vs BMR | $8\times10^{-43}$ |
+| 6.6.3 | (6.11) | exact identity |
+| 6.6.3 | (6.12) | exact series; divergent parts zero |
+| 6.6.4 | masters $M_1,\dots,M_8$ (4.5.4) | 40 digits ($4\times10^{-35}$ for $M_8$) |
+| 6.6.4 | (6.13), $b_{\rm C}$, S$+$C | symbolic; $8\times10^{-43}$, $5\times10^{-42}$ |
+
+Reproduce: `nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py cornerexact`
+(single process, about 20 s, under 0.1 GB).
+
+#### 6.6.5 What is proved in Lean
+
+Proved, with integrability and only the standard axioms (`#print axioms`: `propext`,
+`Classical.choice`, `Quot.sound`):
+
+- `QED/Polylog/ExtraIntegralsC.lean` (namespace `QED.Polylog`): $\mathrm{Li}_2(x)\le-\ln(1-x)$ on
+  $[0,1)$ (`Li₂_le_neg_log_one_sub`, by comparing the series), $|\ln(1-x)+x|\le x^2/(1-x)$
+  (`abs_log_one_sub_add_le`), $\mathrm{Li}_2(x)/x\to1$ (`tendsto_Li₂_div_zero`),
+  $\int_0^1(\mathrm{Li}_2(x)+\ln(1-x))/x^2=1-\zeta(2)$ (antiderivative $-\mathrm{Li}_2(x)/x$),
+  $\int_0^1(\ln(1-x)+x)/x^2=-1$, the integrability of $\ln x\,(\ln(1-x)+x)/x^2$ (dominated by
+  $\ln x/(x-1)$), and $\ln x\,(\ln(1-x)+x)/x\to0$ as $x\to0^+$.
+- `QED/TwoLoop/UnitC.lean` (namespace `QED.TwoLoop.Units`), with $K_{\rm C}$ = `cornerKernel`
+  (the table of (6.10), $\zeta(2)=\pi^2/6$, $D$ = `crossedD`), $G_{\rm C}$ = `cornerBoundary`,
+  $K^{\rm C}_{\rm m}$ = `cornerMasterKernel`:
+  - `intervalIntegrable_cornerKernel`, from a decomposition of $K_{\rm C}$ on $(0,1)$ into
+    polynomials times integrable functions (`cornerKernel_eq_decomp`);
+  - `hasDerivAt_cornerBoundary`: (6.11) on $(0,1)\setminus\{\frac12\}$;
+  - `tendsto_cornerBoundary_zero`, `tendsto_cornerBoundary_one`: (6.12);
+  - `intervalIntegrable_and_integral_cornerKernel`:
+    $\int_0^1K_{\rm C}=-\frac{31}{48}+\frac{\pi^2}{36}+\frac{\pi^2}6\ln2-\frac{\zeta(3)}4$
+    (the fundamental theorem of calculus on $[0,\frac12]$ and $[\frac12,1]$, plus the masters);
+  - `cornerUnit_finitePart_value`: $2\int_0^1K_{\rm C}-\frac32
+    =-\frac{67}{24}+2\zeta(2)\ln2+\frac13\zeta(2)-\frac12\zeta(3)$;
+  - `selfEnergyCornerUnit_value`: $2\int_0^1K_{\rm S}+(2\int_0^1K_{\rm C}-\frac32)
+    =-\frac73+2\zeta(2)\ln2-\frac12\zeta(3)$, with $K_{\rm S}$ = `selfEnergyKernel` of
+    `QED/TwoLoop/UnitLS.lean`;
+  - `cornerUnit_assembly`: the arithmetic of (6.13) from the master integrals, in the form of
+    `crossedUnit_assembly`.
+
+So for C, unlike X, the one-dimensional integral is proved in full: the analogues of items 3–5
+of the list in 4.5.6 are proved here.
+
+**Not proved (the remaining gap for C and S$+$C).**
+
+1. The representations (6.5) and (5.5), and their link to the model (section 8, items 1–11),
+   including the regulator limits and the counterterm constant $-\frac32$.
+2. The step (6.5) $\to$ (6.8): the $x$-integration of 6.6.1 (polynomial antiderivatives with
+   the two branches; the structural facts about $G_{\rm C}$ are checked symbolically, not proved).
+3. The step (6.8) $\to$ (6.10): the $\xi$-integration with its finite parts and the identities
+   (4.6), exactly as item 2 of 4.5.6 for X (part of the left-hand dilogarithm arguments of (4.6)
+   leaves $[-1,1]$, where the Lean power series $\mathrm{Li}_2$ is not the dilogarithm).
 
 ## 7. S $+$ C: the infrared-finite grouping
 
@@ -731,7 +931,7 @@ From the parametric integrand to the formulas of this document:
 | S: value of (5.5) | same as L | low–moderate |
 | L, S: reduction steps 6–10 | Cheng–Wu, polynomial identities, masters, two limit interchanges each | moderate–high (the limit interchanges dominate) |
 | X: value of (4.4) | the reduction of 4.5: the ξ-integration and identities (4.6) (with $\mathrm{Li}_2$ arguments outside $[-1,1]$), the identity $K_{\rm X}=G'+p+K_m$, the endpoint limits of $G$ (third-order poles at 1); the eight master integrals are proved (`QED/Polylog/ExtraIntegrals.lean`, `QED/TwoLoop/UnitX.lean`) | high, mainly the endpoint expansions |
-| C: value of $b_{\rm C}$ | the $x$-integral (6.6), then as for X | high |
+| C: value of $b_{\rm C}$ | the $x$-integration (6.6.1, elementary) and the $\xi$-integration (6.6.2, as for X, with the identities (4.6)); the 1D integral (6.9) and its value are proved (`QED/TwoLoop/UnitC.lean`), with no new master | moderate–high, mainly the $\xi$-integration |
 | S$+$C | sum of the two, with the Ward-identity cancellation of 7 | as for C |
 
 ## 10. Sources and evidence
@@ -742,9 +942,9 @@ From the parametric integrand to the formulas of this document:
 - Cheng–Wu theorem, the masters $I_{j,n}$, the dilogarithm formula (4.3) and the special
   values $\mathrm{Li}_2(1)$: standard (**recalled**; the last is proved in `QED/Polylog/`).
 - Everything else above is **derived** here and checked by
-  `scripts/numerics/two_loop_unit_integrals.py`; nothing is proved.
+  `scripts/numerics/two_loop_unit_integrals.py`; the Lean results are listed in section 1.
 
 Reproduce (single process each, niced): `exact` (seconds), `ladder` (under a minute),
 `selfenergy` (about 2 min), `crossed` (about 2 min; tanh-sinh steps $\frac18$, $\frac1{16}$),
 `corner` (about 4 min at `--level 4`, 15 min at the default `--level 8`, an hour at
-`--level 16`).
+`--level 16`), `crossedexact` (about 1 min), `cornerexact` (about 20 s).

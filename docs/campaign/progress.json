@@ -381,6 +381,10 @@
     {
       "date": "2026-11-18",
       "change": "The order-e^5 vertex has a unique epsilon -> 0+ limit at fixed regulators: the seven counterterm classes have limits (via an auxiliary independent loop that reduces one-loop limits to the two-loop theorem), so with the class limits the vertex (HV1) has a unique limit (HV2) for m, m_gamma, Lambda > 0, M_f >= m with the PV conditions, on-shell positive-energy p, p' and q^2 >= 0, for every choice of counterterms. This is the existence clause of the provisional headline (HV3), at helper level."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Corner unit C: exact value derived (docs/TWO-LOOP-UNITS.md section 6.6; the x-integration produces no Li2, the letters are those of X) and its 1D integral proved in Lean: b_C = -67/24 + 2 zeta(2) ln 2 + zeta(2)/3 - zeta(3)/2 and S + C = -7/3 + 2 zeta(2) ln 2 - zeta(3)/2 (QED/TwoLoop/UnitC.lean), BMR-I's values, checked to 8e-43. All three q-type units now have their final integrals proved in Lean except the 1D X integral; the steps from the model remain."
     }
   ],
   "tracks": [

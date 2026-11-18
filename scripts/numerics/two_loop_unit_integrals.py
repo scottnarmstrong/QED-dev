@@ -16,6 +16,7 @@ Modes (each runs in ONE process; run niced):
   nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py corner      # ~20 min (--level 8)
   nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py crossed     # ~5 min (levels 8, 16)
   nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py crossedexact  # ~2 min (section 4.5)
+  nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py cornerexact   # ~20 s (section 6.6)
   nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py exact       # seconds
   nice -n 10 python3 scripts/numerics/two_loop_unit_integrals.py all
 Options: --dps N (base working precision of the 2D/3D integrals; extra digits are added
@@ -870,6 +871,247 @@ def run_crossedexact(args):
               mp.nstr(mp.mpf(str(fv)) - T['X'], 3))
 
 
+# ====================================================================== corner: exact evaluation (section 6.6)
+# Letters of Phi_C in the variables Y = y3 + y4, xi = y3/Y, and the x-linear letters of G_C.
+def _cc_kernel_doc():
+    """K_C(Y) of eq. (6.10), as written in docs/TWO-LOOP-UNITS.md (partial fractions)."""
+    Y, L, D, a, b, z2 = _CX_Y, _CX_L, _CX_D, _CX_a, _CX_b, _CX_z2
+    R = sp.Rational
+    kL = Y - R(1, 2) - R(1, 3)/(Y-1) - R(1, 6)/Y + R(1, 2)/Y**2
+    kD = R(2, 3)*Y - R(1, 3) - R(1, 6)/(Y-1) - R(1, 6)/Y
+    kaa = Y/6 - R(1, 12) - R(1, 12)/(Y-1)
+    kab = Y/3 - R(1, 6) - R(1, 6)/Y + R(1, 2)/Y**2
+    ka = Y/6 - R(1, 4) - R(5, 12)/(Y-1) + R(1, 2)/Y
+    kb = -R(2, 3)*Y + R(4, 3) - R(5, 6)/Y + R(1, 6)/Y**2
+    kz = -R(2, 3)*Y + R(1, 3) + R(1, 12)/(Y-1) + R(1, 4)/Y
+    k1 = R(31, 24)*Y - R(7, 6) - R(1, 3)/Y
+    return kL*L + kD*D + kaa*a**2 + kab*a*b + ka*a + kb*b + kz*z2 + k1
+
+
+def _cc_boundary_doc():
+    """the boundary function G_C(Y) of eq. (6.11)."""
+    Y, L, D, a, b, z2 = _CX_Y, _CX_L, _CX_D, _CX_a, _CX_b, _CX_z2
+    R = sp.Rational
+    return ((Y**2/2 - Y/2 - 1/(2*Y))*L + (Y**2 - Y)/3*D + (Y**2 - Y)/12*a**2
+            + (Y**2/6 - Y/6 - 1/(2*Y))*a*b + (Y**2/12 - Y/4 - R(1, 2))*a
+            + (-Y**2/3 + R(7, 6)*Y - R(2, 3) - 1/(6*Y))*b - z2*(Y**2 - Y)/3 + R(37, 48)*Y**2 - R(7, 4)*Y)
+
+
+def _cc_masters_doc():
+    """K_m^C(Y) of eq. (6.11): the convergent simple-pole terms (masters of section 4.5.4)."""
+    Y, L, D, a, b, z2 = _CX_Y, _CX_L, _CX_D, _CX_a, _CX_b, _CX_z2
+    R = sp.Rational
+    return (-R(1, 6)*(L/Y + a*b/Y + (D - R(3, 2)*z2)/Y + 2*(L - z2)/(Y-1) + (D + R(3, 2)*z2)/(Y-1))
+            - R(1, 12)*(a**2/(Y-1) - a/(Y-1)) - R(5, 6)*b/Y - R(1, 6)*(a - b)/(2*Y-1))
+
+
+def _cc_letter_decomp(expr, letters, pt):
+    """expr (rational functions and logarithms) as {letter or '1': coefficient}; every logarithm
+    argument must factor into the given letters times a positive constant."""
+    Ls = {k: sp.Symbol('ln_' + k) for k in letters}
+
+    def logmap(arg):
+        num, den = sp.fraction(sp.factor(sp.together(arg)))
+        res, const = 0, sp.Integer(1)
+        for part, sgn in ((num, 1), (den, -1)):
+            c0, fl = sp.factor_list(part)
+            const *= c0**sgn
+            for f, mult in fl:
+                sg = sp.sign(f.subs(pt)); f = sp.expand(sg*f); const *= sg**(mult*sgn)
+                key = [k for k, v in letters.items() if sp.expand(f - v) == 0]
+                assert len(key) == 1, f
+                res += sgn*mult*Ls[key[0]]
+        assert const > 0
+        return res + sp.log(const)
+    P = expr.xreplace({l: logmap(l.args[0]) for l in expr.atoms(sp.log)})
+    out = {k: sp.cancel(sp.together(sp.diff(P, sy))) for k, sy in Ls.items()}
+    out['1'] = sp.cancel(sp.together(P.xreplace({sy: 0 for sy in Ls.values()})))
+    return {k: v for k, v in out.items() if v != 0}
+
+
+def corner_x_integral():
+    """Phi_C(Y, xi) = int_0^1 G_C dx in closed form (section 6.6.1). Returns the two branch
+    decompositions of G_C, the coefficients of Phi_C over the letters, and the engine data."""
+    y3, y4, x, E, logc, e0 = corner_parts()
+    Y, xi = _CX_Y, sp.Symbol('xi', positive=True)
+    Yc = y3 + y4
+    G = (E - e0).subs(MS, Yc**2).subs(hS, x)
+    sub = {y3: Y*xi, y4: Y*(1 - xi)}
+    G1 = G.subs(betaS, y3*(1 - Yc)).subs(sub)              # x < x* = (1-Y)/(1-Y xi)
+    G2 = G.subs(betaS, y3*y4*x/(1 - x)).subs(sub)          # x > x*
+    pt = {Y: sp.Rational(3, 10), xi: sp.Rational(1, 5), x: sp.Rational(2, 7)}
+    lin1 = {'x': (0, 1), 'Y+xi(1-Y)x': (Y, xi*(1 - Y))}
+    lin2 = {'x': (0, 1), '1-x': (1, -1), '1-xi x': (1, -xi), '1-(1-xi)x': (1, -(1 - xi))}
+    cst = {'Y': Y, 'xi': xi, '1-Y': 1 - Y, '1-xi': 1 - xi}
+    d1 = _cc_letter_decomp(G1, {**cst, **{k: a + b*x for k, (a, b) in lin1.items()}}, pt)
+    d2 = _cc_letter_decomp(G2, {**cst, **{k: a + b*x for k, (a, b) in lin2.items()}}, pt)
+    # structure: every logarithm coefficient is a polynomial in x; the rational part is a
+    # polynomial in x on the first branch and has simple poles at x = 1/xi, 1/(1-xi) on the second
+    for d in (d1, d2):
+        for k, c in d.items():
+            if k != '1':
+                assert not sp.fraction(c)[1].has(x), (k, c)
+    assert not sp.fraction(d1['1'])[1].has(x)
+    DOM = sp.QQ.frac_field(Y, xi)
+    xs = (1 - Y)/(1 - Y*xi)
+    pv = {'xs': xs, 1: sp.Integer(1), 0: sp.Integer(0)}
+    # logarithm of each x-linear letter at the endpoints, over the letters of Phi_C
+    lv = {('x', 'xs'): {'1-Y': 1, '1-Y*xi': -1}, ('x', 1): {},
+          ('1-x', 'xs'): {'Y': 1, '1-xi': 1, '1-Y*xi': -1},
+          ('Y+xi(1-Y)x', 'xs'): {'xi+Y-2*Y*xi': 1, '1-Y*xi': -1}, ('Y+xi(1-Y)x', 0): {'Y': 1},
+          ('1-xi x', 'xs'): {'1-xi': 1, '1-Y*xi': -1}, ('1-xi x', 1): {'1-xi': 1},
+          ('1-(1-xi)x', 'xs'): {'xi+Y-2*Y*xi': 1, '1-Y*xi': -1}, ('1-(1-xi)x', 1): {'xi': 1}}
+    acc = {}
+
+    def add(k, v):
+        acc[k] = acc.get(k, 0) + v
+
+    def branch(d, lin, lo, hi):
+        for k, c in d.items():
+            if k == '1':
+                continue
+            C = sp.Poly(c, x, domain=DOM).integrate()
+            if k in cst:
+                add(k, C.as_expr().subs(x, pv[hi]) - C.as_expr().subs(x, pv[lo]))
+                continue
+            # int c ln(a + b x) = Ct ln(a + b x) - int b Ct/(a + b x), Ct(-a/b) = 0: no new log
+            a, b = lin[k]
+            Ct = C - sp.Poly(C.as_expr().subs(x, -sp.Integer(1)*a/b), x, domain=DOM)
+            q, r = sp.div(Ct*sp.Poly(b, x, domain=DOM), sp.Poly(a + b*x, x, domain=DOM))
+            assert r.is_zero
+            Q = q.integrate()
+            add('1', -(Q.as_expr().subs(x, pv[hi]) - Q.as_expr().subs(x, pv[lo])))
+            for p, sg in ((hi, 1), (lo, -1)):
+                if (k, p) in (('x', 0), ('1-x', 1)):
+                    continue          # Ct vanishes there
+                cv = Ct.as_expr().subs(x, pv[p])
+                for l, m in lv[(k, p)].items():
+                    add(l, sg*m*cv)
+        r = d['1']
+        poly = r
+        if sp.fraction(r)[1].has(x):
+            for k, (a, b) in (('1-xi x', lin2['1-xi x']), ('1-(1-xi)x', lin2['1-(1-xi)x'])):
+                res = sp.cancel(sp.cancel(r*(a + b*x)).subs(x, -sp.Integer(1)*a/b))
+                poly = poly - res/(a + b*x)
+                for p, sg in ((hi, 1), (lo, -1)):
+                    for l, m in lv[(k, p)].items():
+                        add(l, sg*m*res/b)
+            poly = sp.cancel(poly)
+            assert not sp.fraction(poly)[1].has(x)
+        P = sp.Poly(poly, x, domain=DOM).integrate()
+        add('1', P.as_expr().subs(x, pv[hi]) - P.as_expr().subs(x, pv[lo]))
+    branch(d1, lin1, 0, 'xs')
+    branch(d2, lin2, 'xs', 1)
+    co = {k: sp.cancel(sp.together(v)) for k, v in acc.items()}
+    co = {k: v for k, v in co.items() if v != 0}
+    return xi, co, (d1, d2), (y3, y4, x, G)
+
+
+def _cc_phi_expr(xi, co):
+    Y = _CX_Y
+    lt = {'Y': Y, 'xi': xi, '1-Y': 1 - Y, '1-xi': 1 - xi, '1-Y*xi': 1 - Y*xi, 'xi+Y-2*Y*xi': xi + Y - 2*Y*xi}
+    return co.get('1', 0) + sum(c*sp.log(lt[k]) for k, c in co.items() if k != '1')
+
+
+def run_cornerexact(args):
+    T = targets()
+    Y, L, D, a, b, z2 = _CX_Y, _CX_L, _CX_D, _CX_a, _CX_b, _CX_z2
+    print('== corner unit C: exact evaluation (section 6.6)')
+    t0 = time.time()
+    # step 1: x-integration
+    xi, co, (d1, d2), (y3, y4, x, G) = corner_x_integral()
+    print(f'  step 1: G_C letters: branch x<x*: {sorted(d1)}; branch x>x*: {sorted(d2)}')
+    print('    all logarithm coefficients are polynomials in x; rational parts: polynomial (x<x*),'
+          ' simple poles at x = 1/xi, 1/(1-xi) (x>x*) -> no dilogarithm')
+    print(f'    Phi_C = int_0^1 G_C dx: letters {sorted(k for k in co if k != "1")} ({time.time()-t0:.0f} s)')
+    for k in ('1', 'Y', 'xi', '1-Y*xi', 'xi+Y-2*Y*xi'):
+        print(f'    denominator of the {k:12s} coefficient: {sp.factor(sp.fraction(co[k])[1])}')
+    Phi = _cc_phi_expr(xi, co)
+    fP = sp.lambdify((Y, xi), Phi, 'mpmath')
+    f1 = sp.lambdify((y3, y4, x), G.subs(betaS, y3*(1 - y3 - y4)), 'mpmath')
+    f2 = sp.lambdify((y3, y4, x), G.subs(betaS, y3*y4*x/(1 - x)), 'mpmath')
+    mp.mp.dps = 40
+    worst = 0
+    for yv, sv in (('0.3', '0.2'), ('0.8', '0.65'), ('0.55', '0.9')):
+        yv, sv = mp.mpf(yv), mp.mpf(sv)
+        a3, a4 = yv*sv, yv*(1 - sv); xsv = (1 - yv)/(1 - yv*sv)
+        q = mp.quad(lambda t: f1(a3, a4, t), [0, xsv]) + mp.quad(lambda t: f2(a3, a4, t), [xsv, 1])
+        worst = max(worst, abs(q - fP(yv, sv)))
+    print('    Phi_C against x-quadrature of G_C at three points (40 digits): max deviation', mp.nstr(worst, 3))
+    # step 2: xi-integration (same finite-part machinery as for X)
+    cox = dict(co); cox.setdefault('1-Y', 0)
+    assert set(cox) <= {'1', 'Y', 'xi', '1-Y*xi', 'xi+Y-2*Y*xi', '1-Y'} and cox['1-Y'] == 0
+    K, div = crossed_xi_integral(xi, cox)
+    assert all(v == 0 for v in div.values()), div
+    print(f'  step 2: xi-integral in closed form; all {len(div)} endpoint divergences cancel')
+    Kc = crossed_canonical(K)
+    print('    canonical form (identities (4.6)) equals eq. (6.10):', _cx_is_zero(Kc - _cc_kernel_doc()))
+    fK = _cx_numeric(_cc_kernel_doc())
+    mp.mp.dps = args.dps
+    xn = de_nodes(mp.mpf(1)/args.level, T=4.0)
+    for yv in (mp.mpf('0.3'), mp.mpf('0.7')):
+        v = 0
+        for u, um, w in xn:
+            for x_, xm in ((u/2, 1 - u/2), (1 - u/2, u/2)):
+                with mp.workdps(mp.mp.dps + bumped(min(x_, xm, um/2))):
+                    try:
+                        v += w/2*yv*fP(yv, x_)
+                    except ZeroDivisionError:    # a node rounded onto xi = 1/2; negligible weight
+                        pass
+        with mp.workdps(mp.mp.dps + 20):
+            kv = fK(yv)
+        print(f'    K_C({mp.nstr(yv, 2)}): xi-quadrature {mp.nstr(v, 25)}  eq. (6.10) {mp.nstr(kv, 25)}  diff {mp.nstr(v - kv, 3)}')
+    mp.mp.dps = 40
+
+    def Kh(y):
+        if y <= 0 or y >= 1:
+            return mp.mpf(0)
+        with mp.workdps(int(5*max(0, -mp.log10(min(y, 1 - y)))) + 60):
+            return fK(y)
+    v = mp.quad(Kh, [0, 0.1, 0.3, 0.5, 0.7, 0.9, 1])
+    bC = 2*v - mp.mpf(3)/2
+    print('    int_0^1 K_C =', mp.nstr(v, 35))
+    print('    b_C = 2 int K_C - 3/2 =', mp.nstr(bC, 35), '  BMR', mp.nstr(T['C'], 35), '  diff', mp.nstr(bC - T['C'], 3))
+    # step 3: K_C = G' + K_m exactly, boundary values
+    Gb, Km = _cc_boundary_doc(), _cc_masters_doc()
+    print("  step 3: K_C - G_C' - K_m^C = 0 identically:", _cx_is_zero(_cc_kernel_doc() - _cx_ddY(Gb) - Km))
+    g0, dd0 = _cx_series_limit(Gb, 0); g1, dd1 = _cx_series_limit(Gb, 1)
+    print(f'    G_C(0+) = {g0},  G_C(1-) = {g1}  (divergent parts: {dd0}, {dd1})')
+    with mp.workdps(60):
+        fG = _cx_numeric(Gb); e_ = mp.mpf(10)**-12
+        print('    numerically G_C(1e-12) =', mp.nstr(fG(e_), 12), ' G_C(1-1e-12) =', mp.nstr(fG(1 - e_), 12))
+    # step 4: the masters (all from section 4.5.4)
+    Z2, Z3, LN2 = mp.zeta(2), mp.zeta(3), mp.log(2)
+    Dn = lambda y: mp.polylog(2, 1-2*y) - mp.polylog(2, 2*y-1)
+    q = lambda f, pts=(0, 0.5, 1): mp.quad(f, list(pts))
+    mv = {'M1': (q(lambda y: mp.polylog(2, y)/y), Z3), 'M2': (q(lambda y: mp.log(y)*mp.log1p(-y)/y), Z3),
+          'M3': (q(lambda y: (Dn(y) - 3*Z2/2)/y, (0, 0.25, 0.5, 1)), -3*Z2*LN2 - 7*Z3/4),
+          "M3'": (q(lambda y: (Dn(y) + 3*Z2/2)/(y-1), (0, 0.5, 0.75, 1)), -3*Z2*LN2 - 7*Z3/4),
+          'M4': (q(lambda y: (mp.polylog(2, y) - Z2)/(y-1)), 2*Z3), 'M5': (q(lambda y: mp.log(y)**2/(y-1)), -2*Z3),
+          'M6': (q(lambda y: mp.log(y)/(y-1)), Z2), 'M7': (q(lambda y: mp.log1p(-y)/y), -Z2),
+          'M8': (q(lambda y: (mp.log(y) - mp.log1p(-y))/(2*y-1), (0, 0.3, 0.7, 1)), 3*Z2/2)}
+    print('  step 4: the masters M1..M8 of section 4.5.4 (40 digits): max deviation',
+          mp.nstr(max(abs(u - w) for u, w in mv.values()), 3))
+    # step 5: assembly
+    z3, M3 = sp.symbols('z3 M3')
+    mex = {'M1': z3, 'M2': z3, 'M3': M3, "M3'": M3, 'M4': 2*z3, 'M5': -2*z3, 'M6': z2, 'M7': -z2,
+           'M8': sp.Rational(3, 2)*z2}
+    R = sp.Rational
+    comb = (-R(1, 6)*(mex['M1'] + mex['M2'] + mex['M3'] + 2*mex['M4'] + mex["M3'"])
+            - R(1, 12)*(mex['M5'] - mex['M6']) - R(5, 6)*mex['M7'] - R(1, 6)*mex['M8'])
+    intK = sp.expand(g1 - g0 + comb)
+    print('  step 5: int K_C = G_C(1-) - G_C(0+) + (masters) =', intK)
+    intK = sp.expand(intK.subs(M3, -3*z2*sp.log(2) - R(7, 4)*z3))
+    bCs = sp.expand(2*intK - R(3, 2))
+    SCs = sp.expand(bCs + R(11, 24) - z2/3)
+    print('          with M3 = -3 z2 ln2 - 7/4 z3:  b_C =', bCs)
+    print('          S + C = b_S + b_C =', SCs, '  (b_S = 11/24 - z2/3, section 5.5)')
+    with mp.workdps(40):
+        for nm, ex, ref in (('b_C', bCs, T['C']), ('S+C', SCs, T['SC'])):
+            fv = mp.mpf(str(sp.N(ex.subs({z2: sp.pi**2/6, z3: sp.zeta(3)}), 45)))
+            print(f'          {nm} = {mp.nstr(fv, 30)}   BMR {mp.nstr(ref, 30)}   diff {mp.nstr(fv - ref, 3)}')
+
+
 # ====================================================================== exact pieces
 def run_exact(args):
     """the elementary decompositions of int K_L and int K_S used in sections 3.5 and 5.5."""
@@ -889,13 +1131,14 @@ def run_exact(args):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('mode', choices=['ladder', 'selfenergy', 'corner', 'crossed', 'crossedexact', 'exact', 'all'])
+    ap.add_argument('mode', choices=['ladder', 'selfenergy', 'corner', 'crossed', 'crossedexact', 'cornerexact',
+                                         'exact', 'all'])
     ap.add_argument('--dps', type=int, default=None)
     ap.add_argument('--skip-finite', action='store_true')
     ap.add_argument('--level', type=int, default=None,
                     help='inverse tanh-sinh step of the outer rules (corner default 8, crossed 8 and 16)')
     args = ap.parse_args()
-    modes = (['exact', 'ladder', 'selfenergy', 'corner', 'crossed', 'crossedexact'] if args.mode == 'all'
+    modes = (['exact', 'ladder', 'selfenergy', 'corner', 'crossed', 'crossedexact', 'cornerexact'] if args.mode == 'all'
              else [args.mode])
     bS_, bC_ = None, None
     for m in modes:
@@ -914,6 +1157,10 @@ def main():
             dps, lv = args.dps, args.level
             args.dps = dps or 30; args.level = lv or 16
             run_crossedexact(args); args.dps, args.level = dps, lv
+        elif m == 'cornerexact':
+            dps, lv = args.dps, args.level
+            args.dps = dps or 50; args.level = lv or 64
+            run_cornerexact(args); args.dps, args.level = dps, lv
         elif m == 'exact':
             run_exact(args)
         print(f'  [{m}: {time.time()-t0:.0f} s]', flush=True)
