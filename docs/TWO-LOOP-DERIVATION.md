@@ -486,9 +486,12 @@ matrix independently (section 10).
   (`QED/Integration/SymanzikIntegrabilityQuadratic.lean`; it holds for L, X, C± with doubled
   photons and for the VP bubble form, not for S±, VP, F±). Degree 4: fourth moments and the
   energy step proved (`TwoLoopMomentsQuartic.lean`, `TwoLoopNumeratorQuartic.lean`); the spatial
-  step and the assembly remain. The generic degree-4 criterion (five lines per direction class)
-  holds only for X, so L and C± need a sharper criterion that tracks the numerator's degree in
-  each one-loop subgraph's own momentum. The projection to $F_2$ is not started.
+  step and the assembly are also proved (`TwoLoopNumeratorQuarticFull.lean`, N ≥ 7, under
+  `tr²A·U⁻⁴` integrable or the five-lines criterion, which holds only for X with doubled photons).
+  A refined criterion `NoSubdivergenceRefined` (`SymanzikIntegrabilityRefined*.lean`) gives the
+  integrability of the weight $U^{-k}\prod_{e\in E}\sqrt{1+Q_e/U}$ and holds for L, X, C±, S± with
+  doubled photons and the VP bubble form; the pointwise bound of the numerator integrand by that
+  weight is not yet formalized. Projection to $F_2$: see O2-21.
 - **O2-12 (positivity of $V$).** On the closed simplex, for on-shell $p,p'$ with $q^2\ge0$
   and $m_\gamma>0$, $V$ is bounded below by a positive constant. This is the two-loop
   analogue of $D\ge(1-x_3)^2m^2+x_3m_\gamma^2$ ("no thresholds": a free electron cannot

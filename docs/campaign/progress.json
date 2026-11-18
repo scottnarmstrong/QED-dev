@@ -349,6 +349,10 @@
     {
       "date": "2026-11-18",
       "change": "Explicit form-factor projectors proved (O2-11, O2-21 computational form): for e, m != 0, on-shell p, p' and q^2 > 0, trace functionals P1, P2 of a vertex V recover any form-factor pair (G0); a sandwich decomposition with gamma^mu, (p+p')^mu, q^mu and S^{mu nu} q_nu terms has a form-factor pair iff its q^mu coefficient vanishes, and then it is (P1 V, P2 V)."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Parametric representation with numerators of degree <= 4 proved (N >= 7, spanning, U^-2 and tr(A)^2 U^-4 integrable, or the five-lines criterion, or the two Fubini integrabilities as hypotheses). A refined power-counting criterion (UV degree of each one-loop subgraph with the numerator's momentum factors) is proved to give integrability of the refined weight; it holds for L, X, C+-, S+- with doubled photons and the VP bubble form. The bound linking that weight to the integrand is not yet formalized, so the degree-4 representation is currently unconditional only for X with doubled photons."
     }
   ],
   "tracks": [
