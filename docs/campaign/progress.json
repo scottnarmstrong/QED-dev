@@ -469,6 +469,10 @@
     {
       "date": "2026-11-18",
       "change": "VP epsilon -> 0 engine proved: for one-loop vertex integrands with an extra photon power and separate prescriptions on every line, the energy-first integral has a prescription-independent limit, continuous in the photon masses, identified with the frozen one-loop kernels including the repeated photon pair. The assembly into VPHalfSubAt (projection, algebraic bridge, splitting, Fubini in x, matching) remains."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "L unit link closed (m = 1): with delta1 from the frozen charge condition, 16 pi^4 times the model's ladder unit tends to 11/48 + zeta(2)/3 jointly as m_gamma -> 0+, Lambda -> infinity (the headline's limit form). First unit fully linked from the model to its exact value."
     }
   ],
   "tracks": [
