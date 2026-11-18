@@ -2171,3 +2171,34 @@ Challenge modules named by `challenges/*/comparator.json`. Negative controls
 still fail: a `sorry` in another file, and an import of a Challenge.
 
 **Remaining for L2.ASSEMBLY:** a fresh-checkout rebuild.
+
+## D-48. The two-loop result complete: L2.ASSEMBLY closed
+
+**Status.** Record; the author approved the fresh-checkout rebuild on
+2026-11-18 ("go ahead").
+
+**Fresh-checkout audit.** Commit 6940505 was cloned from GitHub and its
+Mathlib taken from the cache. The steps ran from 17:05 to 17:30 UTC, niced on
+three cores.
+
+| Step | Result |
+| --- | --- |
+| `lake build` of `QED` | exit 0, 3,973 jobs, no warnings |
+| Both Comparator Challenge and Solution pairs | build; only the 12 intentional Challenge `sorry` warnings (5 one-loop, 7 two-loop) |
+| Frozen-anchor guard | OK |
+| Module check | PASS: 600 Lean files, 2 Comparator configurations |
+| HQ check | passed |
+| ABI check | 144 of 144 frozen exports match the manifest |
+| Axiom report | 51 theorems: every sealed theorem of the manifest and every Comparator theorem; all standard (propext, Classical.choice, Quot.sound) |
+
+**Closure of the two-loop milestone.** With the headline (HV₃) sealed and
+audited (D-46), its companion (HV₀) sealed (D-45), the enclosure (U₂) (D-39),
+the two Comparator challenges accepted (D-47) and this audit, L2.ASSEMBLY is
+done. The two-loop calculation is complete in the scope stated in the README
+and D-44 item 1: the order-e⁵ 1PI vertex with on-shell one-loop counterterms,
+A₁⁽⁴⁾ exact.
+
+Deferred, and outside this milestone:
+- the mass-dependent two-loop terms (D-36.2; Stage 0 of
+  `docs/HIGHER-LOOP-PLAN.md`);
+- the two-loop LSZ lift (D-44 item 1).

@@ -549,6 +549,10 @@
     {
       "date": "2026-11-18",
       "change": "Phase 5 planning begun: docs/HIGHER-LOOP-PLAN.md (draft) recommends the vacuum-polarization chains (sixth-order set (b), exact value (8/3)zeta(3) - (4/135)pi^2 - 943/324 by numerics) as the first higher-loop family, with the mass-dependent two-loop term A2^(4)(me/mmu, me/mtau) as Stage 0; design questions Q1-Q8 go to the author before any declaration is drafted."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "L2.ASSEMBLY done: fresh checkout of 6940505 builds with no warnings; guard OK; module check PASS; ABI 144/144; 51 axiom reports, all standard; both Comparator pairs build (D-48). The two-loop calculation is complete in its stated scope."
     }
   ],
   "tracks": [
@@ -608,7 +612,7 @@
         {"id": "L2.ENUMERATION", "title": "Complete two-loop contribution enumeration", "status": "done", "evidence": ["docs/TWO-LOOP-DERIVATION.md", "docs/TWO-LOOP-ENUMERATION.md", "QED/Frozen/TwoLoop/OnePIFunction.lean", "QED/TwoLoop/RelabelInvarianceOrderFive.lean", "QED/TwoLoop/FurryPair.lean", "QED/TwoLoop/IntegrableOrderFive.lean"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L2.RENORMALIZATION", "title": "Subtractions, counterterms, and cancellations", "status": "done", "evidence": ["QED/Frozen/TwoLoop/WardIdentity.lean", "QED/TwoLoop/CountertermScaling.lean", "QED/TwoLoop/UnitSCCloseIR.lean", "QED/TwoLoop/UnitSCCtHalf.lean", "docs/TWO-LOOP-UNITS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L2.COEFFICIENT", "title": "Complete coefficient and certified evaluation", "status": "done", "evidence": ["QED/Frozen/TwoLoop/A1Four.lean", "QED/Frozen/TwoLoop/A1FourBounds.lean", "QED/TwoLoop/HeadlineAssemblyUnits.lean", "docs/TWO-LOOP-UNITS.md"], "validation": "docs/campaign/STATUS.md"},
-        {"id": "L2.ASSEMBLY", "title": "Complete theorem assembled, audited, and reproducible", "status": "in_progress", "evidence": ["QED/Frozen/TwoLoop/VertexOrderFivePauliLimit.lean", "QED/Frozen/TwoLoop/JointEnergyFirstIntegrableVertexOrderFive.lean", "QED/Provider/TwoLoop/VertexOrderFivePauliLimit.lean", "QEDChallengeTwoLoop.lean", "QEDSolutionTwoLoop.lean", "challenges/two-loop/comparator.json", "docs/campaign/DECISIONS.md"]}
+        {"id": "L2.ASSEMBLY", "title": "Complete theorem assembled, audited, and reproducible", "status": "done", "validation": "docs/campaign/STATUS.md", "evidence": ["QED/Frozen/TwoLoop/VertexOrderFivePauliLimit.lean", "QED/Frozen/TwoLoop/JointEnergyFirstIntegrableVertexOrderFive.lean", "QED/Provider/TwoLoop/VertexOrderFivePauliLimit.lean", "QEDChallengeTwoLoop.lean", "QEDSolutionTwoLoop.lean", "challenges/two-loop/comparator.json", "docs/campaign/DECISIONS.md"]}
       ]
     },
     {
