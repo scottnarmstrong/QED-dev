@@ -57,9 +57,11 @@ level (`QED/TwoLoop/UnitLS.lean`: `integral_ladderKernel` $=\frac1{16}+\frac{\pi
 `selfEnergyUnit_finitePart_value`), with the integrability of both kernels. For C the 1D
 integral is proved too (`QED/TwoLoop/UnitC.lean`: `intervalIntegrable_and_integral_cornerKernel`,
 `cornerUnit_finitePart_value`, and `selfEnergyCornerUnit_value` for S + C
-$=-\frac73+2\zeta(2)\ln2-\frac12\zeta(3)$). For X the eight master integrals and the final
-assembly are proved (`QED/Polylog/ExtraIntegrals.lean`, `QED/TwoLoop/UnitX.lean`), but not the 1D
-integral $\int_0^1K_{\rm X}$ itself (section 4.5). The steps from the 2D representations to the 1D
+$=-\frac73+2\zeta(2)\ln2-\frac12\zeta(3)$). For X the 1D integral is proved too
+(`QED/TwoLoop/UnitXKernel.lean`: `intervalIntegrable_and_integral_crossedKernel`,
+`crossedUnit_value`, with the eight master integrals in `QED/Polylog/ExtraIntegrals.lean` and
+`QED/TwoLoop/UnitX.lean`), including the endpoint limits of the boundary function and the
+integrability of $K_{\rm X}$. The steps from the 2D representations to the 1D
 kernels (the $x$- and $\xi$-integrations) are symbolic computations, and the link to the model
 (section 8) is not proved.
 
@@ -297,7 +299,7 @@ carried out in exact rational arithmetic (sympy). Every step is also checked num
 mode `crossedexact` of the script, which rebuilds each object from the engine; the checks
 are evidence, not proof. The classical integrals used at the end are standard results
 (**recalled**, each with a 40-digit check); all of them are now also proved in Lean (4.5.6).
-The Lean evaluation of the one-dimensional integral (4.7) itself is **not** done.
+The Lean evaluation of the one-dimensional integral (4.7) is also done (`QED/TwoLoop/UnitXKernel.lean`, items 3–5 of 4.5.6).
 
 #### 4.5.1 The integrand has no dilogarithm
 
@@ -668,6 +670,12 @@ on the masters of X (4.5.4), all proved in Lean. The one-dimensional integral (6
 its value, is **proved in Lean** (6.6.5). The steps before it, (6.5) $\to$ (6.8) $\to$ (6.10),
 are not.
 
+
+**Update (2026-11-18).** Items 3–5 are now proved: the integration-by-parts identity (4.8)
+(`hasDerivAt_crossedBoundary`), the endpoint limits of $G$ (`tendsto_crossedBoundary_zero`, `…_one`,
+via fifth-order bounds for $\mathrm{Li}_2$ near 0 and for $D(s)+\ln s\ln(1-2s)$, in
+`QED/Polylog/ExtraIntegralsX.lean`, `QED/TwoLoop/UnitXKernelBasic.lean`), and the integrability and
+value of $\int_0^1K_{\rm X}$ (`QED/TwoLoop/UnitXKernel.lean`, `crossedUnit_value`). Items 1–2 remain.
 #### 6.6.1 Integration over $x$: no dilogarithm
 
 Use $Y=y_3+y_4$ and $\xi=y_3/Y$, so that $dy_3\,dy_4=Y\,dY\,d\xi$, $g=Y\xi(1-Y)$,

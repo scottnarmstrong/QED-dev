@@ -385,6 +385,10 @@
     {
       "date": "2026-11-18",
       "change": "Corner unit C: exact value derived (docs/TWO-LOOP-UNITS.md section 6.6; the x-integration produces no Li2, the letters are those of X) and its 1D integral proved in Lean: b_C = -67/24 + 2 zeta(2) ln 2 + zeta(2)/3 - zeta(3)/2 and S + C = -7/3 + 2 zeta(2) ln 2 - zeta(3)/2 (QED/TwoLoop/UnitC.lean), BMR-I's values, checked to 8e-43. All three q-type units now have their final integrals proved in Lean except the 1D X integral; the steps from the model remain."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "X unit 1D integral proved in Lean: the integral of K_X over [0,1] is 1/6 - 5 zeta(2) ln 2 + 13/6 zeta(2) + 5/4 zeta(3), with integrability, via the integration-by-parts identity and fifth-order endpoint expansions of Li2 and of Li2(1-2s) - Li2(2s-1). All four q-type and VP unit values (L, S, C, X, VP) are now proved for their explicit integral representations; the reductions from the 2D representations and the link to the model remain."
     }
   ],
   "tracks": [
