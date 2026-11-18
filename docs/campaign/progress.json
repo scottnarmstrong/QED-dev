@@ -557,6 +557,10 @@
     {
       "date": "2026-11-18",
       "change": "Phase 5 task T2 done (helper level): the sixth-order set (b) value integral int_0^1 (1-x) PiHat(x^2/(1-x))^2 dx = (8/3) zeta(3) - (4/135) pi^2 - 943/324 is proved, with integrability, and the enclosure 0.00255852 < A_(b) < 0.00255853 (QED/Chain/). The closed form still needs a pinned source; nothing is frozen."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Phase 5 task T1 done: scripts/numerics/phase5_chains.py reproduces every pinned value of the plan's section 9; the model-level set (b) value at finite regulators converges to A_(b) in the D-37 order (regulator masses last, remainder kappa (M1^-2 + M2^-2) with no ratio constraint); Stage 0 analogue converges to Passera (10). Candidate finding: AHKN Table 1 A2^(8)(me/mtau) for I(a) is 2.7 sigma off at AHKN's own stated ratio (0.4 sigma at Passera's)."
     }
   ],
   "tracks": [

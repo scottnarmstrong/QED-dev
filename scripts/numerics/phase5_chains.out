@@ -1,0 +1,276 @@
+phase5_chains.py -- numerical validation of the Phase 5 VP chains (task T1). Evidence, not proof.
+python 3.13.13, mpmath 1.3.0; started 2026-11-18 17:37:38 UTC; mode full
+====================================================================================================
+A. HIGHER-LOOP-PLAN section 9, row by row, against the pinned references
+====================================================================================================
+A.0 machinery
+  PiHat closed form - defining integral, s=0.3, M=1: -3.74e-36;  - spectral form: -3.74e-36
+  PiHat closed form - defining integral, s=7.0, M=1: 3.76e-37;  - spectral form: 3.76e-37
+  PiHat closed form - defining integral, s=5.0, M=3: 2.35e-37;  - spectral form: 2.35e-37
+  PiHat closed form - defining integral, s=0.05, M=1: -2.94e-39;  - spectral form: -2.94e-39
+  PiHat closed form - defining integral, s=1000.0, M=1: 1.5e-36;  - spectral form: 1.5e-36
+  outer functional f2(c) in t = log s minus direct x-quadrature, c=1.0e-6: 0.0
+  outer functional f2(c) in t = log s minus direct x-quadrature, c=0.3: 0.0
+  outer functional f2(c) in t = log s minus direct x-quadrature, c=4.0: 0.0
+  outer functional f2(c) in t = log s minus direct x-quadrature, c=1.0e+8: 9.05e-43
+  f2(0) = O[1/s] = 0.5 (exact 1/2)
+
+A.1 table (computed | section-9 recorded value | pinned reference | status)
+  * one electron bubble int(1-x)PiHat
+      computed  : 0.01568742185910268261072522
+      sec. 9    : 0.015687421859102682610725
+      reference : 119/36 - pi^2/3 (BMR-II (1.10); integral_vpUnit)
+      status    : diff -2.58e-41
+  * A2(4)(me/mmu), Pas ratio 4.83633167e-3
+      computed  : 5.197386696964e-7 (Pas(10) - chain: 7.3e-51)
+      sec. 9    : 5.19738669696e-7
+      reference : Pas (11) 5.19738670e-7(0.00000028e-7)
+      status    : agrees (0.011 sigma)
+  * A2(4)(me/mtau), Pas ratio 2.87564e-4
+      computed  : 1.837622630943e-9 (Pas(10) - chain: -6.6e-46)
+      sec. 9    : 1.8376226e-9
+      reference : Pas (12) 1.83762e-9(0.00060e-9)
+      status    : agrees (0.0044 sigma)
+  * A2(4)(me/mmu), AHKN ratio 4.83633166e-3
+      computed  : 5.197386675472e-7 (Pas(10) - chain: -2.5e-51)
+      sec. 9    : 5.197386675e-7
+      reference : AHKN (2.6) 5.19738667e-7(0.00000026e-7)
+      status    : agrees (0.021 sigma)
+  * A2(4)(me/mtau), AHKN ratio 2.87592e-4
+      computed  : 1.837980505488e-9 (Pas(10) - chain: -3.1e-45)
+      sec. 9    : 1.8379805e-9
+      reference : AHKN (2.7) 1.83798e-9(0.00034e-9)
+      status    : agrees (0.0015 sigma)
+  * A2(4)(me/mmu), AKN ratio 4.83633170e-3
+      computed  : 5.197386761438e-7 (Pas(10) - chain: 1.1e-50)
+      sec. 9    : 5.197386761e-7
+      reference : AKN Table 1 0.519738676e-6(0.000000024e-6)
+      status    : agrees (0.006 sigma)
+  * A2(4)(me/mtau), AKN ratio 2.87585e-4
+      computed  : 1.837891033585e-9 (Pas(10) - chain: 2.0e-45)
+      sec. 9    : 1.8378910e-9
+      reference : AKN Table 1 0.183790e-8(0.000025e-8)
+      status    : agrees (0.036 sigma)
+  * A3(6) = 2 int(1-x)PiHat_mu PiHat_tau, Pas ratios
+      computed  : 1.909446298e-13
+      sec. 9    : 1.909446e-13
+      reference : Pas (21) 1.90945e-13(0.00062e-13)
+      status    : agrees (0.006 sigma)
+  * A3(6) = 2 int(1-x)PiHat_mu PiHat_tau, AHKN ratios
+      computed  : 1.909817172e-13
+      sec. 9    : (not in sec. 9)
+      reference : AHKN (2.11) 1.909e-13(0.001e-13)
+      status    : agrees (0.82 sigma)
+  * A3(6) = 2 int(1-x)PiHat_mu PiHat_tau, AKN ratios
+      computed  : 1.909724477e-13
+      sec. 9    : (not in sec. 9)
+      reference : AKN Table 1 0.1909e-12(0.0001e-12)
+      status    : agrees (0.72 sigma)
+  * set (b) int(1-x)PiHat^2
+      computed  : 0.00255852493651734519926746279964
+      sec. 9    : 0.002558524936517345199267462799635
+      reference : - (closed form by PSLQ, source to pin)
+      status    : (8/3)z3-(4/135)pi^2-943/324 residual -1.77e-63
+  * eighth-order I(a) int(1-x)PiHat^3
+      computed  : 0.0008768658588899906979137
+      sec. 9    : 0.0008768658588899906979
+      reference : AHKN Table 1 0.000 876 865...
+      status    : agrees (digits match); 151849/40824+(32/63)z3-(2/45)pi^4 residual 4.48e-73
+  * tenth-order I(a) int(1-x)PiHat^4
+      computed  : 0.000470905716032
+      sec. 9    : 0.000470905716
+      reference : AHKN Table 2 0.000 470 94(6)
+      status    : agrees (0.57 sigma)
+  * e-mu chain 2 int(1-x)PiHat_e PiHat_mu (Pas ratio)
+      computed  : 2.634672136e-7
+      sec. 9    : 2.634672e-7
+      reference : part of Pas (15); no pinned comparison
+      status    : -
+  * eighth I(a) A2(8)(me/mmu): eemu x3 + emumu x3 + mumumu
+      computed  : 2.26447441e-7 (AHKN ratios)
+      sec. 9    : (not in sec. 9)
+      reference : AHKN Table 1 0.000226456e-3(0.000000014e-3)
+      status    : at AHKN ratios: agrees (0.61 sigma); at Pas ratios 2.26447442e-7: agrees (0.61 sigma); at AKN ratios 2.26447445e-7: agrees (0.61 sigma)
+  * eighth I(a) A2(8)(me/mtau): eetau x3 + etautau x3 + tau^3
+      computed  : 8.02466543e-10 (AHKN ratios)
+      sec. 9    : (not in sec. 9)
+      reference : AHKN Table 1 0.000080233e-5(0.000000005e-5)
+      status    : at AHKN ratios: DISAGREES (2.73 sigma); at Pas ratios 8.02310297e-10: agrees (0.39 sigma); at AKN ratios 8.0242748e-10: agrees within 2 sigma (1.9 sigma)
+  * eighth I(a) A3(8): emutau x6 + mumutau x3 + mutautau x3
+      computed  : 1.19955848e-12 (AHKN ratios)
+      sec. 9    : (not in sec. 9)
+      reference : AHKN Table 1 0.000011994e-7(0.000000001e-7)
+      status    : at AHKN ratios: agrees within 2 sigma (1.6 sigma); at Pas ratios 1.19932641e-12: agrees (0.74 sigma); at AKN ratios 1.19950047e-12: agrees within 2 sigma (1.0 sigma)
+  * tenth I(a) A2(10)(me/mmu): e^3mu x4 + e^2mu^2 x6 + emu^3 x4 + mu^4
+      computed  : 2.79256843e-7 (AHKN ratios)
+      sec. 9    : (not in sec. 9)
+      reference : AHKN Table 2 0.00000028(0.00000001)
+      status    : at AHKN ratios: agrees (0.074 sigma); at Pas ratios 2.79256844e-7: agrees (0.074 sigma); at AKN ratios 2.79256847e-7: agrees (0.074 sigma)
+
+A.2 integer-relation detection
+  set (b), 45 digits, basis [A, 1, pi^2, zeta3, pi^2 ln2, pi^4]: [1620, 4715, 48, -4320, 0, 0]  (1620 A + 4715 + 48 pi^2 - 4320 zeta3 = 0 <=> A = (8/3)zeta3 - (4/135)pi^2 - 943/324)
+  eighth-order I(a), 60 digits, basis [A, 1, pi^2, zeta3, pi^4]: [204120, -759245, 0, -103680, 9072]  (<=> A = 151849/40824 + (32/63)zeta3 - (2/45)pi^4)
+  quadrature check: set (b) at 62 digits minus at 45 digits recomputed: -1.88e-47
+[section A done, 14 s]
+
+====================================================================================================
+B. O3-M3: Passera (10) against the spectral integral, A_2^(4)(y), y = m_e/m_l
+====================================================================================================
+  columns: spectral double integral int rho(v) f2(4/(y^2(1-v^2))) dv (dps 30) | Feynman-parameter form int(1-x)PiHat_{1/y} (dps 30) | Pas (10) direct (dps 60) | Pas (10) inverted form, Li2 at y,-y,y^2 (dps 60)
+  Pas  m_e/m_mu  = 4.83633167e-3: spectral 5.197386696963758e-7 | x-form 5.197386696963758e-7 | Pas(10) 5.197386696963758e-7 | inverted 5.197386696963758e-7
+        relative differences: spectral/Pas(10)-1 = -2.0e-31, x-form/Pas(10)-1 = 2.0e-30, inverted - direct = -7.6e-51;  vs Pas (11) 5.19738670e-7(0.00000028e-7): agrees (0.011 sigma)  [8 s]
+  Pas  m_e/m_tau = 2.87564e-4: spectral 1.837622630943337e-9 | x-form 1.837622630943337e-9 | Pas(10) 1.837622630943337e-9 | inverted 1.837622630943337e-9
+        relative differences: spectral/Pas(10)-1 = -2.6e-29, x-form/Pas(10)-1 = 3.1e-30, inverted - direct = 7.0e-46;  vs Pas (12) 1.83762e-9(0.00060e-9): agrees (0.0044 sigma)  [8 s]
+  AHKN m_e/m_mu  = 4.83633166e-3: spectral 5.197386675472214e-7 | x-form 5.197386675472214e-7 | Pas(10) 5.197386675472214e-7 | inverted 5.197386675472214e-7
+        relative differences: spectral/Pas(10)-1 = -6.5e-32, x-form/Pas(10)-1 = 2.1e-30, inverted - direct = 2.7e-51;  vs AHKN (2.6) 5.19738667e-7(0.00000026e-7): agrees (0.021 sigma)  [8 s]
+  AHKN m_e/m_tau = 2.87592e-4: spectral 1.837980505488234e-9 | x-form 1.837980505488234e-9 | Pas(10) 1.837980505488234e-9 | inverted 1.837980505488234e-9
+        relative differences: spectral/Pas(10)-1 = -2.6e-29, x-form/Pas(10)-1 = 3.1e-30, inverted - direct = 3.0e-45;  vs AHKN (2.7) 1.83798e-9(0.00034e-9): agrees (0.0015 sigma)  [8 s]
+  AKN  m_e/m_mu  = 4.83633170e-3: spectral 5.197386761438388e-7 | x-form 5.197386761438388e-7 | Pas(10) 5.197386761438388e-7 | inverted 5.197386761438388e-7
+        relative differences: spectral/Pas(10)-1 = -8.7e-32, x-form/Pas(10)-1 = 2.1e-30, inverted - direct = -1.1e-50;  vs AKN Table 1 0.519738676e-6(0.000000024e-6): agrees (0.006 sigma)  [8 s]
+  AKN  m_e/m_tau = 2.87585e-4: spectral 1.837891033585351e-9 | x-form 1.837891033585351e-9 | Pas(10) 1.837891033585351e-9 | inverted 1.837891033585351e-9
+        relative differences: spectral/Pas(10)-1 = -2.6e-29, x-form/Pas(10)-1 = 3.4e-30, inverted - direct = -2.0e-45;  vs AKN Table 1 0.183790e-8(0.000025e-8): agrees (0.036 sigma)  [8 s]
+  checks of the inverted form away from the physical ratios (direct - inverted):
+    y = 0.5: 3.73e-60
+    y = 0.9: 3.11e-61
+    y = 0.01: 2.24e-52
+    y = 1e-6: -3.47e-35
+  y = 1: Pas (10) - (119/36 - pi^2/3) = -2.54e-42 (at x = 1 + 1e-40)
+  small-y behaviour (recalled leading term y^2/45; informational): A2(4)(y)/y^2 * 45 at y = 1e-3, 1e-5: 0.99999558, 1.0
+  Precision note: Pas (10) direct at the tau ratio, dps 15/25/40/60: -4.308053166, 1.676444317e-9, 1.837622631e-9, 1.837622631e-9
+[section B done, 62 s]
+
+====================================================================================================
+C. Stage 1a model-level check: set (b) at finite (m_gamma, Lambda, M1, M2), nested form
+   value = O[(Pi_loop - delta_3)^2 s^2 D^3], Pi_loop the model's flavour-summed loop, delta_3 = Pi_loop(0) (Z8)
+====================================================================================================
+  target A_(b) = (8/3)zeta3 - (4/135)pi^2 - 943/324 = 0.002558524936517345199267463
+
+C.0 Pi_loop closed form against the defining integral (Lean vacuumPolarizationLoop / r)
+  (M1,M2)=(3,5): c1=-1.5, c2=0.5; PV conditions: 0.0, 0.0; s=0: 0.0; s=0.5: 0.0; s=40: -1.6e-31; s=1e6: -6.4e-31; delta3 = Pi_loop(0)/r = -0.56213298
+  (M1,M2)=(100,300): c1=-1.1249875, c2=0.1249875; PV conditions: -4.9e-32, 0.0; s=0: 0.0; s=0.5: 3.9e-31; s=40: 3.9e-31; s=1e6: 5.5e-31; delta3 = Pi_loop(0)/r = -2.9785716
+  (M1,M2)=(1000,1001): c1=-500.74963, c2=499.74963; PV conditions: 0.0, 0.0; s=0: 1.1e-28; s=0.5: -1.8e-28; s=40: 6.4e-28; s=1e6: -1.2e-28; delta3 = Pi_loop(0)/r = -4.2721702
+
+C.1 the four contraction types at finite regulators (each grows like log^2 M; the sum is finite)
+    columns: bubble-bubble | 2 x bubble-delta3 | delta3-delta3 | sum = nested value | sum - A_(b)
+  M=(10,20) m_g=0.01 Lam=100: delta3/r=-1.382564 | 0.86367981153 | -1.76505740037 | 0.903794953592 | 0.00241736474938 (nested 0.00241736474938) | -0.000141
+  M=(100,300) m_g=0.001 Lam=1000: delta3/r=-2.978572 | 4.31925963795 | -8.72684045783 | 4.41013794853 | 0.00255712865268 (nested 0.00255712865268) | -1.4e-6
+  M=(1000,3000) m_g=0.001 Lam=10000: delta3/r=-4.513619 | 9.98808511521 | -20.112666209 | 10.1271396023 | 0.00255850849177 (nested 0.00255850849177) | -1.64e-8
+  M=(10000,30000) m_g=0.001 Lam=100000: delta3/r=-6.048676 | 17.9996378585 | -36.183933781 | 18.1868544448 | 0.00255852232981 (nested 0.00255852232981) | -2.61e-9
+
+C.2 the O3-10 representation (spectral form of each bubble, Fubini) against the nested form
+  M=(3,5) m_g=0.1 Lam=10: nested 0.00116023972861931  spectral 0.00116023972861931  diff 1.9e-25  [14 s]
+  M=(10,20) m_g=0.01 Lam=100: nested 0.00241736474938423  spectral 0.00241736474938423  diff -6.5e-26  [14 s]
+  M=(30,60) m_g=0 Lam=+inf: nested 0.00254313476928881  spectral 0.00254313476928881  diff 1.1e-25  [12 s]
+
+C.3 regulator table in the Q1 order: value - A_(b); rows (M1,M2), columns (m_gamma, Lambda).
+    The (0, inf) column is the (m_gamma, Lambda) limit at fixed M (O3-11); the M -> inf row
+    (no regulator flavours, i.e. Delta_M = 0) is the opposite order, shown for comparison only.
+             (M1,M2)    (0.1,1.0e+1)   (0.01,1.0e+2)  (0.001,1.0e+3) (0.0001,1.0e+4) (1.0e-5,1.0e+5)        (0,+inf)
+              (3, 5)         -0.0014        -0.00108        -0.00107        -0.00107        -0.00107        -0.00107
+            (10, 20)        -0.00075       -0.000141       -0.000129       -0.000129       -0.000129       -0.000129
+            (30, 60)       -0.000681        -2.89e-5        -1.55e-5        -1.54e-5        -1.54e-5        -1.54e-5
+          (100, 300)       -0.000673        -1.51e-5         -1.4e-6        -1.25e-6        -1.25e-6        -1.25e-6
+        (1000, 1001)       -0.000672        -1.39e-5         -1.7e-7         -2.4e-8        -2.25e-8        -2.25e-8
+        (1000, 3000)       -0.000672        -1.39e-5         -1.6e-7         -1.4e-8        -1.25e-8        -1.25e-8
+      (10000, 30000)       -0.000672        -1.39e-5        -1.48e-7        -1.61e-9        -1.4e-10       -1.25e-10
+                 inf       -0.000672        -1.39e-5        -1.48e-7        -1.48e-9       -1.48e-11       -9.75e-32
+    (largest quadrature error estimate in the table: 4.3e-32)
+
+C.4 the (m_gamma, Lambda) limit at fixed M, separately in each regulator, M = (10, 20):
+    Lambda = inf, m_gamma -> 0:   m_g=1e-1: -2.31e-5, m_g=1e-2: -2.39e-7, m_g=1e-3: -2.39e-9, m_g=1e-4: -2.39e-11, m_g=1e-6: -2.39e-15
+    m_gamma = 0, Lambda -> inf:   Lam=10: -0.000598, Lam=30: -0.00011, Lam=100: -1.16e-5, Lam=300: -1.33e-6, Lam=1000: -1.21e-7, Lam=10000: -1.21e-9
+    off-diagonal (joint limit):  (1e-6,10): -0.000598, (1e-6,100): -1.16e-5, (0.1,1000000): -2.31e-5, (1e-2,1000000): -2.39e-7, (1e-8,100000000): -1.23e-17
+
+C.5 regulator fermions last (D-37.4 / Q1): limited value at fixed M minus A_(b), and diff/(M1^-2 + M2^-2)
+    leading term predicted from Delta_M ~ -(s/15)(M1^-2 + M2^-2) for s << M^2: kappa (M1^-2 + M2^-2), kappa = -(2/15) int x^2 PiHat_e dx = -0.011270981
+    (M1,M2)=          (3, 5):    -0.001075   diff/(M1^-2 + M2^-2) = -0.00711206
+    (M1,M2)=        (10, 20):   -0.0001293   diff/(M1^-2 + M2^-2) = -0.0103419
+    (M1,M2)=        (30, 60):    -1.539e-5   diff/(M1^-2 + M2^-2) = -0.0110809
+    (M1,M2)=      (100, 300):    -1.249e-6   diff/(M1^-2 + M2^-2) = -0.0112439
+    (M1,M2)=    (1000, 1001):    -2.252e-8   diff/(M1^-2 + M2^-2) = -0.0112702
+    (M1,M2)=    (1000, 3000):    -1.252e-8   diff/(M1^-2 + M2^-2) = -0.0112704
+    (M1,M2)=  (10000, 30000):   -1.252e-10   diff/(M1^-2 + M2^-2) = -0.011271
+    no regulator flavours, m_gamma=0, Lambda=inf: -9.75e-32 (the limited formula)
+[section C done, 126 s]
+
+====================================================================================================
+D. O3-12: cross terms in the Q1 order (m_gamma = 0, Lambda = inf), Pi_R = Pi_{R,e} + Delta_M,
+   Delta_M = c1 PiHat_{M1} + c2 PiHat_{M2}.  X1 = O[2 Pi_{R,e} Delta_M / s], X2 = O[Delta_M^2 / s]
+====================================================================================================
+  kappa = -(2/15) int x^2 PiHat_e dx = -0.011270981 (predicted X1 ~ kappa (M1^-2 + M2^-2))
+  columns: M1 | M2/M1 | c1 | X1 | X2 | X1 + X2 + A_(b) - (limited nested value) | X1/(M1^-2+M2^-2) | M1^4 X2
+     10.0 |  1.000001 |    -495001.0 | -0.000206826 |   6.25683e-6 |  -2.1e-37 | -0.0103413 |  0.0625683
+    100.0 |  1.000001 |    -499951.0 |  -2.24778e-6 |   1.43579e-9 |  -3.0e-37 | -0.0112389 |   0.143579
+   1000.0 |  1.000001 |    -500000.0 |  -2.25405e-8 |  2.25432e-13 |  -1.2e-36 | -0.0112703 |   0.225432
+  10000.0 |  1.000001 |    -500001.0 | -2.25419e-10 |  3.07302e-17 |  -1.4e-36 |  -0.011271 |   0.307302
+     10.0 |     1.001 |     -495.753 | -0.000206631 |   6.24605e-6 |   2.2e-40 | -0.0103419 |  0.0624605
+    100.0 |     1.001 |       -500.7 |  -2.24554e-6 |    1.4331e-9 |   2.4e-40 | -0.0112389 |    0.14331
+   1000.0 |     1.001 |      -500.75 |  -2.25181e-8 |     2.25e-13 |   1.1e-40 | -0.0112703 |      0.225
+  10000.0 |     1.001 |      -500.75 | -2.25194e-10 |  3.06707e-17 |  -6.5e-40 |  -0.011271 |   0.306707
+     10.0 |       1.1 |     -5.71429 | -0.000189831 |   5.34519e-6 |   3.5e-41 | -0.0103935 |  0.0534519
+    100.0 |       1.1 |     -5.76143 |  -2.05312e-6 |   1.21058e-9 |   3.0e-41 | -0.0112411 |   0.121058
+   1000.0 |       1.1 |      -5.7619 |  -2.05847e-8 |  1.89322e-13 |   3.3e-41 | -0.0112703 |   0.189322
+  10000.0 |       1.1 |      -5.7619 | -2.05858e-10 |    2.576e-17 |   3.3e-41 |  -0.011271 |     0.2576
+     10.0 |         2 |        -1.33 | -0.000131988 |   2.71393e-6 |   3.8e-41 |  -0.010559 |  0.0271393
+    100.0 |         2 |      -1.3333 |   -1.4059e-6 |  5.87998e-10 |   3.7e-41 | -0.0112472 |  0.0587998
+   1000.0 |         2 |     -1.33333 |  -1.40881e-8 |   9.0774e-14 |   3.7e-41 | -0.0112705 |   0.090774
+  10000.0 |         2 |     -1.33333 | -1.40887e-10 |  1.22754e-17 |   3.8e-41 |  -0.011271 |   0.122754
+     10.0 |        10 |        -1.01 | -0.000107119 |   1.81027e-6 |   3.8e-41 | -0.0106059 |  0.0181027
+    100.0 |        10 |      -1.0101 |  -1.13609e-6 |  3.87205e-10 |   3.8e-41 | -0.0112484 |  0.0387205
+   1000.0 |        10 |      -1.0101 |  -1.13832e-8 |  5.95942e-14 |   3.8e-41 | -0.0112705 |  0.0595942
+  10000.0 |        10 |      -1.0101 | -1.13837e-10 |  8.04729e-18 |   3.5e-41 |  -0.011271 |  0.0804729
+     10.0 |       100 |      -1.0001 |  -0.00010608 |    1.7754e-6 |   3.8e-41 |  -0.010607 |   0.017754
+    100.0 |       100 |      -1.0001 |  -1.12496e-6 |  3.79662e-10 |   3.7e-41 | -0.0112485 |  0.0379662
+   1000.0 |       100 |      -1.0001 |  -1.12716e-8 |  5.84326e-14 |   3.8e-41 | -0.0112705 |  0.0584326
+  10000.0 |       100 |      -1.0001 | -1.12721e-10 |   7.8904e-18 |   3.6e-41 |  -0.011271 |   0.078904
+     10.0 |      1000 |         -1.0 |  -0.00010607 |   1.77505e-6 |   3.9e-41 |  -0.010607 |  0.0177505
+    100.0 |      1000 |         -1.0 |  -1.12485e-6 |  3.79587e-10 |   3.8e-41 | -0.0112485 |  0.0379587
+   1000.0 |      1000 |         -1.0 |  -1.12705e-8 |   5.8421e-14 |   3.5e-41 | -0.0112705 |   0.058421
+  10000.0 |      1000 |         -1.0 |  -1.1271e-10 |  7.88884e-18 |   3.7e-41 |  -0.011271 |  0.0788884
+  ratios below 1 (M2 < M1) are the same pairs with the labels swapped (the value is symmetric):
+    (100,50) - (50,100) = 0.0
+    (1000,10) - (10,1000) = 0.0
+[section D done, 158 s]
+
+====================================================================================================
+E. Stage 0 analogue: heavy-lepton VP insertion at finite regulators, nested form
+   value = O[(Pi_loop,l - delta_3,l) s D^2], loop mass m_l = 1/y with its own PV pair (M1, M2)
+   (PV conditions with m_l: 1 + c1 + c2 = 0, m_l^2 + c1 M1^2 + c2 M2^2 = 0; HIGHER-LOOP-PLAN Q5 (i))
+====================================================================================================
+
+  m_e/m_mu = 4.83633167e-3 (Pas), target A2(4) = Pas (10) = 5.19738669696376e-7
+  E.1 relative deviation (value/A2(4) - 1); rows (M1,M2)/m_l, columns (m_gamma, Lambda)
+         (M1,M2)/m_l    (0.1,1.0e+1)   (0.01,1.0e+2)   (0.01,1.0e+3)  (0.001,1.0e+4) (0.0001,1.0e+5) (1.0e-5,1.0e+6)        (0,+inf)
+              (2, 3)          -0.439          -0.336          -0.334          -0.333          -0.333          -0.333          -0.333
+            (10, 20)          -0.169         -0.0167         -0.0128         -0.0125         -0.0125         -0.0125         -0.0125
+          (100, 300)          -0.158        -0.00435       -0.000461       -0.000115       -0.000111       -0.000111       -0.000111
+        (1000, 1001)          -0.158        -0.00424       -0.000352        -5.65e-6        -2.03e-6         -2.0e-6         -2.0e-6
+      (10000, 30000)          -0.158        -0.00424        -0.00035        -3.66e-6        -4.78e-8        -1.15e-8        -1.11e-8
+                 inf          -0.158        -0.00424        -0.00035        -3.65e-6        -3.67e-8       -3.67e-10        -1.7e-25
+  E.2 regulator fermions last: limited value at fixed M minus A2(4), and its scaling
+    (M1,M2)/m_l=          (2, 3):    -1.733e-7  (M1)^2 x diff = -0.029629  [(M1^-2 + M2^-2)/45 = 1.88e-7: the form of abs_vpLimSum_sub_le, proved only for loop mass 1]
+    (M1,M2)/m_l=        (10, 20):    -6.484e-9  (M1)^2 x diff = -0.027722  [(M1^-2 + M2^-2)/45 = 6.5e-9: the form of abs_vpLimSum_sub_le, proved only for loop mass 1]
+    (M1,M2)/m_l=      (100, 300):   -5.775e-11  (M1)^2 x diff = -0.024691  [(M1^-2 + M2^-2)/45 = 5.78e-11: the form of abs_vpLimSum_sub_le, proved only for loop mass 1]
+    (M1,M2)/m_l=    (1000, 1001):   -1.039e-12  (M1)^2 x diff = -0.0444  [(M1^-2 + M2^-2)/45 = 1.04e-12: the form of abs_vpLimSum_sub_le, proved only for loop mass 1]
+    (M1,M2)/m_l=  (10000, 30000):   -5.775e-15  (M1)^2 x diff = -0.024691  [(M1^-2 + M2^-2)/45 = 5.78e-15: the form of abs_vpLimSum_sub_le, proved only for loop mass 1]
+    no regulator flavours (0, inf): -8.86e-32
+
+  m_e/m_tau = 2.87564e-4 (Pas), target A2(4) = Pas (10) = 1.83762263094334e-9
+  E.1 relative deviation (value/A2(4) - 1); rows (M1,M2)/m_l, columns (m_gamma, Lambda)
+         (M1,M2)/m_l    (0.1,1.0e+1)   (0.01,1.0e+2)   (0.01,1.0e+3)  (0.001,1.0e+4) (0.0001,1.0e+5) (1.0e-5,1.0e+6)        (0,+inf)
+              (2, 3)          -0.439          -0.336          -0.334          -0.333          -0.333          -0.333          -0.333
+            (10, 20)          -0.169         -0.0167         -0.0128         -0.0125         -0.0125         -0.0125         -0.0125
+          (100, 300)          -0.158        -0.00438       -0.000467       -0.000115       -0.000111       -0.000111       -0.000111
+        (1000, 1001)          -0.158        -0.00427       -0.000358         -5.9e-6        -2.04e-6         -2.0e-6         -2.0e-6
+      (10000, 30000)          -0.158        -0.00427       -0.000356        -3.91e-6        -5.11e-8        -1.15e-8        -1.11e-8
+                 inf          -0.158        -0.00427       -0.000356         -3.9e-6         -4.0e-8       -4.01e-10       -1.24e-18
+  E.2 regulator fermions last: limited value at fixed M minus A2(4), and its scaling
+    (M1,M2)/m_l=          (2, 3):   -6.125e-10  (M1)^2 x diff = -0.02963  [(M1^-2 + M2^-2)/45 = 6.64e-10: the form of abs_vpLimSum_sub_le, proved only for loop mass 1]
+    (M1,M2)/m_l=        (10, 20):   -2.292e-11  (M1)^2 x diff = -0.027722  [(M1^-2 + M2^-2)/45 = 2.3e-11: the form of abs_vpLimSum_sub_le, proved only for loop mass 1]
+    (M1,M2)/m_l=      (100, 300):   -2.042e-13  (M1)^2 x diff = -0.024691  [(M1^-2 + M2^-2)/45 = 2.04e-13: the form of abs_vpLimSum_sub_le, proved only for loop mass 1]
+    (M1,M2)/m_l=    (1000, 1001):   -3.672e-15  (M1)^2 x diff = -0.0444  [(M1^-2 + M2^-2)/45 = 3.67e-15: the form of abs_vpLimSum_sub_le, proved only for loop mass 1]
+    (M1,M2)/m_l=  (10000, 30000):   -2.042e-17  (M1)^2 x diff = -0.024691  [(M1^-2 + M2^-2)/45 = 2.04e-17: the form of abs_vpLimSum_sub_le, proved only for loop mass 1]
+    no regulator flavours (0, inf): -2.27e-27
+[section E done, 201 s]
+
+total run time 201 s

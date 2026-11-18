@@ -646,3 +646,40 @@ evidence, not proof.
 Conventions: $\hat\Pi_M(s)=\tfrac13\bigl[-\tfrac53+a+(1-\tfrac a2)\beta\ln\tfrac{(\beta+1)^2}{a}\bigr]$,
 with $a=4M^2/s$ and $\beta=\sqrt{1+a}$. Its Taylor series is used for $s/M^2<0.1$. It is
 checked against the defining integral to $10^{-30}$.
+
+## 10. Task T1 results (2026-11-18)
+
+Script `scripts/numerics/phase5_chains.py` (record `scripts/numerics/phase5_chains.out`; about
+200 s on one core). Evidence, not proof.
+
+- **Section 9 reproduced.** Every row agrees with its pinned reference:
+  - $A_2^{(4)}(m_e/m_\mu)$ and $A_2^{(4)}(m_e/m_\tau)$ at the Pas, AHKN and AKN mass ratios, all
+    within $0.04\sigma$;
+  - $A_3^{(6)}$ against Pas (21), AHKN and AKN, within $0.8\sigma$;
+  - tenth-order I(a) at $0.57\sigma$;
+  - O3-M3: Pas (10) against the spectral integral, to $10^{-29}$ relative.
+- **Set (b) at finite regulators** (model level, the object of O3-10): the outer functional of
+  $(\Pi_{
+m loop}-\delta_3)^2$ with $\delta_3$ from (Z₈), taken in the Q1 order, regulator
+  masses last.
+  - It converges to $A_{(b)}$.
+  - At fixed regulator masses, the remainders in $m_\gamma$ and in $1/\Lambda$ carry no logarithm.
+  - The remaining offset is $\kappa(M_1^{-2}+M_2^{-2})$ with $\kappa=-\tfrac{2}{15}\int x^2\hat\Pi_e$. It
+    has no logarithm and does not depend on $M_2/M_1$.
+  - The four contraction types each grow like $\ln^2M$ and cancel to the nested value.
+- **O3-12.** Both cross terms decay with no constraint on $M_2/M_1$; ratios tried from
+  $1+10^{-6}$ to $10^3$.
+- **Stage 0 analogue.** The heavy lepton's own VP unit, with its own Pauli–Villars pair,
+  converges to Pas (10). The regulators must lie far above $m_\ell$: at $M=(2,3)\,m_\ell$ the value
+  shifts by $-33\%$. The bound has the form of `abs_vpLimSum_sub_le`, which is proved only for
+  loop mass 1.
+- **One discrepancy (candidate finding, not an erratum).** AHKN Table 1, eighth-order I(a), the
+  $A_2^{(8)}(m_e/m_\tau)$ entry: at AHKN's own stated ratio $2.87592\times10^{-4}$ the chain
+  integral gives $8.024665\times10^{-10}$ against $8.0233(5)\times10^{-10}$, which is $2.7\sigma$.
+  At Passera's ratio the difference is $0.4\sigma$. The table entry was probably computed with
+  an older tau ratio; this is unconfirmed.
+- **Not tested** (as at two loops): the energy-first prescription and $\varepsilon\to0$, the
+  $q^2\to0$ limit, nested-equals-joint (O3-6), covariance (O3-8), and the family enumeration
+  (O3-3, O3-4).
+
+**Task T2 is done.** O3-13 and O3-14 are proved at helper level (`QED/Chain/`).
