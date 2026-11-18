@@ -441,6 +441,10 @@
     {
       "date": "2026-11-18",
       "change": "Graph-half infrastructure for the q-type units: linearity of the parametric numerator, Wick's rule for chains of electron propagators, a second-order jet calculus for the q^2 -> 0 coefficient, and the ladder's projected numerator written as an explicit sum of chain traces. The ladder's remaining pointwise identity is confirmed numerically (scripts/numerics/ladder_graph/), not yet proved."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "VP bubble identity, partial: VPHalf reduced to a subtracted statement with the Pi_loop(0) part discharged; five-mass partial fractions and the per-spectral-mass one-loop limit (distinct masses) proved; numerically, the fixed-epsilon energy-first vacuum polarization carries an extra eps g S term besides the transverse complex-mass part, which must vanish in the limit."
     }
   ],
   "tracks": [

@@ -116,6 +116,7 @@ public import QED.TwoLoop.PauliZeroLimit
 public import QED.TwoLoop.UnitsRegulated
 public import QED.TwoLoop.UnitVPLink
 public import QED.TwoLoop.VPUnitNested
+public import QED.TwoLoop.VPHalf
 public import QED.TwoLoop.UnitLLinkLimit
 public import QED.TwoLoop.UnitLLinkDominated
 public import QED.TwoLoop.UnitLGraph

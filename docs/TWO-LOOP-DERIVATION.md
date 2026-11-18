@@ -898,7 +898,12 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   every δ₃: the longitudinal part of the insertion vanishes exactly on shell, partial fractions
   with four distinct photon masses reduce the class to the frozen one-loop vertex, and continuity
   in the masses closes it), and `VPUnitNested` is equivalent to the bubble identity `VPHalf`
-  (`vpUnitNested_iff_vpHalf`), which remains (O2-8 at the $\varepsilon\to0$ level).
+  (`vpUnitNested_iff_vpHalf`), which remains (O2-8 at the $\varepsilon\to0$ level). Partial progress
+  (`QED/TwoLoop/VPHalf*.lean`): `VPHalf` is equivalent to a subtracted statement `VPHalfSub` with
+  the $\Pi_{\rm loop}(0)$ part discharged; the five-mass partial fractions and the per-spectral-mass
+  one-loop limit (distinct masses) are proved. Numerically the fixed-$\varepsilon$ energy-first
+  vacuum polarization is transverse up to an extra term $\varepsilon g^{\sigma\tau}S_\varepsilon(k)$
+  (`scripts/numerics/vp_half/`), which must be shown to vanish in the limit.
   **L unit, partial link** (`QED/TwoLoop/UnitLLink*.lean`): the counterterm half is exact (δ₁
   from the frozen charge condition equals the doc's formula, and its unit contribution is
   $\delta_1(F_2^{(2)}(m_\gamma)-F_2^{(2)}(\Lambda))$); the $x$-integration of the $\lambda=0$
