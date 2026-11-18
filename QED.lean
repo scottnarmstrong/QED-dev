@@ -121,6 +121,7 @@ public import QED.TwoLoop.VPHalfSub
 public import QED.TwoLoop.UnitLLinkLimit
 public import QED.TwoLoop.UnitLLinkDominated
 public import QED.TwoLoop.UnitLGraph
+public import QED.TwoLoop.UnitLGraphTraceMain
 public import QED.Integration.FeynmanParameterGeneral
 public import QED.Integration.SpatialIntegralSix
 public import QED.Integration.TwoLoopParametric

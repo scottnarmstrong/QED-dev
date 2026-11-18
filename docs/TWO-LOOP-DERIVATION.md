@@ -919,9 +919,12 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   $\Lambda\to\infty$ stage remain. Infrastructure for the graph half is proved
   (`QED/TwoLoop/ParamNumEval*.lean`: linearity and Wick's rule for the parametric numerator of
   electron chains, and a second-order jet calculus for `secondCoeff`; `UnitLGraph.lean`: the
-  ladder's projected numerator as an explicit sum of chain traces). The remaining pointwise
-  identity (the Dirac traces and $u^2$ coefficients) is confirmed numerically
-  (`scripts/numerics/ladder_graph/`), not proved. Earlier step (`QED/TwoLoop/PauliZero*.lean`): The Pauli
+  ladder's projected numerator as an explicit sum of chain traces). **The pointwise identity is
+  proved** (`QED/TwoLoop/UnitLGraphTrace*.lean`: the Dirac traces in the planar subalgebra and the
+  $u^2$ coefficients by jets; `openZero_L_eq` writes the ladder's class value as a simplex integral
+  of explicit rational functions of the Feynman parameters). Remaining for the ladder's graph
+  half: the explicit $V$, integrating out the electron and Pauli–Villars splits, and Cheng–Wu, to
+  reach the doc's (3.1). Earlier step (`QED/TwoLoop/PauliZero*.lean`): The Pauli
   projection of the order-5 vertex limit depends on the on-shell pair only through $q^2$
   (covariance under Lorentz maps that move $p,p'$, reached by two reflections), so the uniform
   statement is equivalent to a one-variable limit of `pauliAt` as $q^2\to0^+$

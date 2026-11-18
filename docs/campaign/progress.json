@@ -453,6 +453,10 @@
     {
       "date": "2026-11-18",
       "change": "The author approved packets T2, T4 and T3 as written (D-43), confirming the headline's two quantifier readings (regulator-fermion threshold first; photon-mass and Pauli-Villars limits joint). The manifest records the approval; frozen bytes and states unchanged."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Ladder graph half: the pointwise identity proved - the Dirac traces of the ladder numerator in the planar subalgebra and the q^2 -> 0 coefficients by jets give the class value as a simplex integral of explicit rational functions of the Feynman parameters (openZero_L_eq). Remaining: integrating out the electron and Pauli-Villars splits and Cheng-Wu, to reach the unit representation."
     }
   ],
   "tracks": [
