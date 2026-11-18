@@ -704,3 +704,16 @@ Script `scripts/numerics/phase5_chains.py` (record `scripts/numerics/phase5_chai
 
 The model-level steps remain: the nested form of the heavy VP class, the flavour-summed photon
 condition, model mass scaling, and the assembly of (HM₂).
+
+**O3-10 to O3-12, analytic core for set (b), done** (helper level, `QED/Chain/ChainB*.lean`):
+- **O3-10.** The finite-regulator two-bubble outer functional: $64\pi^6$ times the outer
+  functional of $(\Pi-\Pi(0))^2s^2D^3$ equals $e^4$ times the explicit chain integral. This holds
+  both for any flavour family and for the frozen `Params` (`chainModel_eq_chainReg`).
+- **O3-11.** Its joint $(m_\gamma,\Lambda)$ limit.
+- **O3-12.** Decoupling in the product:
+  $-K(M_1^{-2}+M_2^{-2})\le\text{chainLim}-A_{(b)}\le0$ with $K=(41-4\pi^2)/135=|\kappa|$
+  (`chainLim_sub_bounds`), sharp, with no constraint on $M_2/M_1$.
+- **The value.** $\int_0^1x^2\hat\Pi=41/18-2\pi^2/9$.
+- **The iterated limit** in the D-37 order (`chainReg_iterated_limit`).
+
+The model-level steps O3-3 to O3-9 and O3-15 follow the Stage 1a packet.

@@ -585,6 +585,10 @@
     {
       "date": "2026-11-18",
       "change": "PHASE 5 STAGE 0 COMPLETE: the two-loop headline with heavy leptons (HM2), 16 pi^4 F2 / e^4 -> A1^(4) + sum_l A2^(4)(me/ml) in the D-37 order with one regulator threshold, is proved and sealed (D-51; independent seal audit PROVED). With mu and tau this is the full order-alpha^2 coefficient of the 1PI vertex; certified enclosures of A2^(4)(me/mmu) and A2^(4)(me/mtau) are sealed too."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Phase 5 Stage 1a analytic core (helper level): the set (b) two-bubble outer functional at finite regulators, its joint (m_gamma, Lambda) limit, decoupling of the regulator fermions in the product with the sharp constant (41 - 4 pi^2)/135 and no ratio constraint, and the iterated limit to A_(b) (QED/Chain/ChainB*)."
     }
   ],
   "tracks": [
