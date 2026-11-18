@@ -104,6 +104,7 @@ public import QED.Frozen.Lepton.VertexOrderFiveLeptonFlavorsZero
 public import QED.Frozen.Lepton.IsVertexOrderFiveLimitLeptonFlavorsZeroIff
 public import QED.Frozen.Lepton.IsPhotonOnShellLeptonFlavorsZeroIff
 public import QED.Frozen.Lepton.OnePIFunctionOneZero
+public import QED.Frozen.Lepton.VertexOrderFiveLeptonPauliLimit
 public import QED.Frozen.TwoLoop.IsVertexOrderFiveLimit
 public import QED.Polylog.Basic
 public import QED.Polylog.Deriv

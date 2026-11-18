@@ -2329,3 +2329,47 @@ are clean. Six goals remain DRAFT_SORRY: the embedding theorems (E₂)–(E₅) 
 
 An independent refute-first seal audit returned PROVED for all five. Only (HM₂) remains
 DRAFT_SORRY.
+
+## D-51. The two-loop headline with heavy leptons (HM₂) sealed
+
+**Status.** Record of a seal; no ruling.
+
+On 2026-11-18 the frozen headline (HM₂)
+`QED.Lepton.isFormFactorPair_vertexOrderFive_lepton_pauli_limit`
+(`QED/Frozen/Lepton/VertexOrderFiveLeptonPauliLimit.lean`; D-50) was sealed. Its provider is
+`QED.Provider.Lepton.isFormFactorPair_vertexOrderFive_lepton_pauli_limit`, and the proof is in
+`QED/LeptonProof/HM*.lean`. The statement: for the order-e⁵ 1PI vertex with any finite family of
+heavy leptons, 16π⁴F₂/e⁴ → A₁⁽⁴⁾ + Σ_ℓ A₂⁽⁴⁾(mₑ/m_ℓ), in the D-37 order with one regulator
+threshold. With μ and τ this is the full order-α² coefficient of the 1PI vertex (Passera (13)).
+
+**Proof route.**
+1. Each heavy lepton's loop is written exactly as a weighted sum of T1 vertices at auxiliary
+   regulator sets. These sets have masses (m, M_j, m_ℓ + M_ℓ1 + M_ℓ2) with
+   M_j ∈ {m_ℓ, M_ℓ1, M_ℓ2}, and each satisfies T1's own Pauli–Villars conditions. The weights sum
+   to 0 by the lepton's conditions.
+2. The lepton vertex is therefore T1's vertex at a shifted photon counterterm, plus those sums.
+3. The flavour-summed photon condition is equivalent to T1's (Z₈) at the shifted counterterm, so
+   the sealed (HV₃) applies to the first part.
+4. The heavy part, through T1's fixed-regulator q² → 0 machinery, is the heavy-lepton VP unit
+   (`QED/Chain/HeavyVP*`), whose iterated limit is `a2Heavy`; and `a2Four = a2Heavy` by
+   definition.
+
+The auxiliary sets enter only at fixed regulators. No regulator limit is taken on them, so the
+threshold R_M never has to exceed a physical lepton mass.
+
+**Audit.** An independent refute-first seal audit returned PROVED, with no defects:
+- the bytes, hashes and ABI match, and the provider type equals the frozen type;
+- the closure of 73,408 constants uses only propext, Classical.choice and Quot.sound; it has no
+  `sorryAx`, no `ofReduceBool`, no QED opaque or extern, and no `set_option`; `decide +kernel` is
+  a kernel decision;
+- (HV₃) is applied with its premises genuinely met;
+- the weight identity is checked, the assembly misses no factor, the quantifier order is the
+  frozen one, and the tolerance split is sound;
+- the guard and the build are clean.
+
+**Stage 0 is complete.** All 13 theorem goals of D-50 are sealed. Remaining Stage 0 hygiene:
+- a Comparator challenge for (HM₂);
+- a fresh-checkout audit.
+
+The mass-dependent part of the Phase 4 exit criterion, deferred by D-36.2, is thereby met for
+the 1PI vertex.

@@ -581,6 +581,10 @@
     {
       "date": "2026-11-18",
       "change": "Phase 5 Stage 0 embedding theorems (E2)-(E5) sealed and audited PROVED: flavour relabelling, reduction to T1 with no heavy leptons (vertex and limit predicate), the flavour-summed photon condition equivalent to T1's (Z8), and flavour independence of the electron conditions. Only (HM2) remains DRAFT_SORRY."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "PHASE 5 STAGE 0 COMPLETE: the two-loop headline with heavy leptons (HM2), 16 pi^4 F2 / e^4 -> A1^(4) + sum_l A2^(4)(me/ml) in the D-37 order with one regulator threshold, is proved and sealed (D-51; independent seal audit PROVED). With mu and tau this is the full order-alpha^2 coefficient of the 1PI vertex; certified enclosures of A2^(4)(me/mmu) and A2^(4)(me/mtau) are sealed too."
     }
   ],
   "tracks": [

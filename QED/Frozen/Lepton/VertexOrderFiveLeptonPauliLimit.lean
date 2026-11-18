@@ -118,7 +118,7 @@ theorem isFormFactorPair_vertexOrderFive_lepton_pauli_limit {n : ℕ} (P₀ : Pa
                 ‖16 * (Real.pi : ℂ) ^ 4 * F.2 / (P₀.e : ℂ) ^ 4 -
                   ((QED.TwoLoop.a1Four + ∑ ℓ, a2Four (P₀.m / mH ℓ) : ℝ) : ℂ)‖ < η :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Lepton.isFormFactorPair_vertexOrderFive_lepton_pauli_limit
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

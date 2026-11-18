@@ -84,7 +84,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 660. **Total lines of Lean code:** 148,946.
+**Tracked Lean source files:** 670. **Total lines of Lean code:** 151,598.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.
@@ -250,9 +250,9 @@ python3 scripts/frozen_abi.py --check        # elaborated ABI hashes of frozen e
 `lake build` prints no warnings. The frozen-anchor guard fails on any `sorry`
 not registered as a `DRAFT_SORRY` body, on any change to frozen bytes, on a sealed
 body other than `by exact <provider export>`, and on any import of a draft anchor or
-its provider outside the allowlist. One `DRAFT_SORRY` body is registered at present: the two-loop headline with heavy leptons (HM₂) of
-the Phase 5 Stage 0 packet (decision D-50); its proof is in progress. The packet's other twelve
-goals are proved and sealed. The two-loop headline theorem (decisions D-41, D-43, D-46) and its companion (HV₀),
+its provider outside the allowlist. No `DRAFT_SORRY` body is registered at present: every frozen theorem is sealed, including the
+two-loop headline with heavy leptons (HM₂) and the rest of the Phase 5 Stage 0 packet (decisions
+D-50, D-51). The two-loop headline theorem (decisions D-41, D-43, D-46) and its companion (HV₀),
 that every term of the order-$e^5$ vertex is a genuine integral (decision D-45), are proved and
 sealed.
 

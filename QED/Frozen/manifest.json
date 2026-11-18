@@ -23766,7 +23766,7 @@
         "module": "QED.Provider.Lepton.VertexOrderFiveLeptonPauliLimit",
         "export": "QED.Provider.Lepton.isFormFactorPair_vertexOrderFive_lepton_pauli_limit"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "695f6f6ee0fc37dc5b5feb57d0ca021c34619abb0b65688842c488d0fc6e514d",
       "suffix_sha256": "d0716cbd148e8d62e00ea16c12adb5293e75f6b00fa93b8616749e26f99acd9b",
       "draft_allowlist": {
