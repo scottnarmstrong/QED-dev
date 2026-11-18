@@ -497,6 +497,10 @@
     {
       "date": "2026-11-18",
       "change": "X unit link reduced to the xi-integration: the joint regulator limit proved by dominated convergence (a bound on the crossed integrand certified by 420 kernel-checked weighted AM-GM certificates), the w- and b-integrations give Phi_X in closed form and the representation (4.4), and the change to (Y, xi); the link follows from the single identity that the xi-integral of Phi_X is the proved kernel K_X."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "S + C link, stage 2: the reductions proved (explicit V, mirror identities S- = S+ and C- = C+, integrability, merging, divided differences, Cheng-Wu, matched to (5.1) and (6.2)). The joint-limit risk of D-41 is resolved: V_k + V_m + F2^(2) = 0 at every photon mass, so the (m^2/Lambda^2) ln m_gamma terms of S and C cancel exactly in S + C by delta1 = delta2."
     }
   ],
   "tracks": [

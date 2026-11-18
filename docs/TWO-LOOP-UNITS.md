@@ -77,7 +77,15 @@ $\xi$-integration of 4.5.2 (`xUnitLimit_of_kernel`).
 **S + C link, stage 1 (2026-11-18).** The pointwise trace identities and class-value formulas
 are proved for S₊, S₋, C₊, C₋ (`QED/TwoLoop/UnitSCGraph*.lean`, `openZero_Sp_eq`, `openZero_Sm_eq`,
 `openZero_Cp_eq`, `openZero_Cm_eq`, at $m=e=1$; C₋ from C₊ by charge-conjugation reversal at trace
-level). The reductions to (5.3), (6.3), the counterterm halves and the joint limit remain.
+level). **Stage 2 (reductions) is proved** (`QED/TwoLoop/UnitSCReduce*.lean`): explicit V, the
+mirror identities S₋ = S₊ and C₋ = C₊ (by simplex permutations), integrability, merging, the
+Pauli–Villars divided differences and Cheng–Wu, matched exactly to (5.1) and (6.2), and the unit
+assembly with the δ₁ counterterm half of C. **The joint-limit risk is resolved**
+(`QED/TwoLoop/UnitSCCloseIR.lean`, `selfVk_add_selfVm_add_oneLoopF2`): $V_k(\mu)+V_m(\mu)+
+F_2^{(2)}(\mu)=0$ for every photon mass $\mu$, so the $(m^2/\Lambda^2)\ln m_\gamma$ terms of S and C
+cancel exactly in S + C by $\delta_1=\delta_2$. Remaining: the δ₂/δ_m class values, the
+$b$-integrations, the $\ln M_\Lambda$ cancellation, the uniform bounds and limit, and the $x$-, $\xi$-
+integrations to the proved kernels.
 
 ## 2. The common starting point
 
