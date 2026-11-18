@@ -119,6 +119,8 @@ public import QED.TwoLoop.VPUnitNested
 public import QED.TwoLoop.VPHalf
 public import QED.TwoLoop.VPHalfSub
 public import QED.TwoLoop.VPHalfAtNested
+public import QED.TwoLoop.VPHalfAtLimitPauli
+public import QED.TwoLoop.VPHalfAtLimitD3
 public import QED.TwoLoop.UnitLLinkLimit
 public import QED.TwoLoop.UnitLLinkDominated
 public import QED.TwoLoop.UnitLGraph

@@ -915,7 +915,14 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   $\varepsilon g^{\mu\nu}S_\varepsilon(k^2)$ term (`QED/TwoLoop/VPHalfAt*.lean`); and the class value
   equals the outer integral of that closed form. Remaining: the $\varepsilon\to0$ limit of the outer
   integral (line-dependent prescriptions after the $x$-integration, and the $\varepsilon g S$ term,
-  which absolute bounds cannot remove).
+  which absolute bounds cannot remove). The $\varepsilon\to0$ engine is proved
+  (`QED/TwoLoop/VPHalfAtLimit*.lean`): for the one-loop vertex integrand with an extra photon power
+  and arbitrary separate prescriptions on every line, the energy-first integral has a limit that
+  does not depend on how the prescriptions vanish, continuous in the photon masses (via Feynman
+  parameters, which merge the prescriptions); its value is identified with the frozen one-loop
+  kernels, including the repeated photon pair. Remaining: projecting the class value, the
+  algebraic bridge to the vertex chain, splitting into engine pieces, Fubini in $x$, and matching
+  the target.
   **L unit, partial link** (`QED/TwoLoop/UnitLLink*.lean`): the counterterm half is exact (δ₁
   from the frozen charge condition equals the doc's formula, and its unit contribution is
   $\delta_1(F_2^{(2)}(m_\gamma)-F_2^{(2)}(\Lambda))$); the $x$-integration of the $\lambda=0$

@@ -465,6 +465,10 @@
     {
       "date": "2026-11-18",
       "change": "Ladder graph half reaches the unit representation (3.1): general simplex merging, Pauli-Villars split and Cheng-Wu lemmas proved, and 16 pi^4 times the ladder's graph half equals the iterated (3.1) integral at finite regulators. Remaining for L: the a-integration to (3.4) and the Lambda -> infinity stage."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "VP epsilon -> 0 engine proved: for one-loop vertex integrands with an extra photon power and separate prescriptions on every line, the energy-first integral has a prescription-independent limit, continuous in the photon masses, identified with the frozen one-loop kernels including the repeated photon pair. The assembly into VPHalfSubAt (projection, algebraic bridge, splitting, Fubini in x, matching) remains."
     }
   ],
   "tracks": [
