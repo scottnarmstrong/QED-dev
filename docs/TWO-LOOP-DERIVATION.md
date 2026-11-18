@@ -908,7 +908,14 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   (`QED/TwoLoop/VPHalfSub.lean`, `vpHalfSub_of_eventually`; the $q\to0$ step on the explicit side
   is proved), and `VPHalfSubAt` is equivalent to an outer one-loop form with $\Pi_{\rm loop}$
   inserted (`vpHalfSubAt_iff_outer`). That fixed-$q$ identity, O2-8 at the $\varepsilon\to0$ level,
-  remains; the plan is the nested route with explicit packet-6b constants for the Fubini condition.
+  remains. Progress on the nested route: the Fubini condition `hG` is proved, so nested = joint
+  for the VP class holds unconditionally at fixed $\varepsilon>0$
+  (`QED/TwoLoop/NestedVPFubiniBound*.lean`, `contractionValue₂_VP_eq_nested`); the fixed-$\varepsilon$
+  inner vacuum polarization is proved in closed form, transverse complex-mass part plus an explicit
+  $\varepsilon g^{\mu\nu}S_\varepsilon(k^2)$ term (`QED/TwoLoop/VPHalfAt*.lean`); and the class value
+  equals the outer integral of that closed form. Remaining: the $\varepsilon\to0$ limit of the outer
+  integral (line-dependent prescriptions after the $x$-integration, and the $\varepsilon g S$ term,
+  which absolute bounds cannot remove).
   **L unit, partial link** (`QED/TwoLoop/UnitLLink*.lean`): the counterterm half is exact (δ₁
   from the frozen charge condition equals the doc's formula, and its unit contribution is
   $\delta_1(F_2^{(2)}(m_\gamma)-F_2^{(2)}(\Lambda))$); the $x$-integration of the $\lambda=0$

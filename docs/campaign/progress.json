@@ -457,6 +457,10 @@
     {
       "date": "2026-11-18",
       "change": "Ladder graph half: the pointwise identity proved - the Dirac traces of the ladder numerator in the planar subalgebra and the q^2 -> 0 coefficients by jets give the class value as a simplex integral of explicit rational functions of the Feynman parameters (openZero_L_eq). Remaining: integrating out the electron and Pauli-Villars splits and Cheng-Wu, to reach the unit representation."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "VP nested route: the Fubini condition hG proved with explicit packet-6b bounds, so nested = joint holds unconditionally for the VP class at fixed epsilon; the fixed-epsilon one-loop vacuum polarization in closed form (transverse complex-mass part plus an explicit eps g S(k^2) term); the class value as the outer integral of that closed form. The epsilon -> 0 limit of the outer integral remains."
     }
   ],
   "tracks": [
