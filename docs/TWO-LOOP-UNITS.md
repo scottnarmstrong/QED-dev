@@ -90,6 +90,16 @@ cancel exactly in S + C by $\delta_1=\delta_2$. Remaining: the δ₂/δ_m class 
 $b$-integrations, the $\ln M_\Lambda$ cancellation, the uniform bounds and limit, and the $x$-, $\xi$-
 integrations to the proved kernels.
 
+**S + C link, stage 3 (2026-11-18)** (`QED/TwoLoop/UnitSCLimit*.lean`). The S side is proved
+through the limit: the $b$-integration by the ladder masters, pointwise bounds uniform in
+$\lambda$, an error term $O(\log\Lambda/\Lambda^2)$, dominated convergence, and the $x$-integration
+to $K_{\rm S}$ (`integral_selfR_zero`). For C the $b$-integration is proved (two new masters, the
+two branches of $\beta(x)$). The counterterms combine as in section 7: with the on-shell identity for
+$\delta_m-\delta_2$, $\delta_1=\delta_2$ and $V_k+V_m+F_2^{(2)}=0$ at both photon masses, the S + C
+link is proved conditionally (`scUnitLimitOne_of_sCtHalf_cornerPart`) on two statements: the
+$\delta_2,\delta_m$ half (`SCtHalfFormula`, numerically pinned) and the joint limit of the corner
+graph alone (`CornerPartLimit`, the limit $2\int_0^1K_{\rm C}$).
+
 ## 2. The common starting point
 
 ### 2.1 The parametric integrand

@@ -505,6 +505,10 @@
     {
       "date": "2026-11-18",
       "change": "X unit link closed: the xi-integration hK proved (explicit antiderivative with seven dilogarithms, endpoint limits, the identities (4.6) for the real dilogarithm off [-1,1]); QED.TwoLoop.UnitXXi.xUnitLimit : XUnitLimit, standard axioms only. The headline now waits only on the S + C link."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "S + C link, stage 3: the S side proved through the joint limit (b-integration, uniform bounds, dominated convergence, x-integration to K_S); the C b-integration proved; the counterterms combined (on-shell delta_m - delta_2, delta1 = delta2, V_k + V_m + F2 = 0). SCUnitLimitOne is proved conditionally on the delta2/delta_m half (SCtHalfFormula) and the corner-graph limit (CornerPartLimit)."
     }
   ],
   "tracks": [
