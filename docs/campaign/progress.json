@@ -353,6 +353,10 @@
     {
       "date": "2026-11-18",
       "change": "Parametric representation with numerators of degree <= 4 proved (N >= 7, spanning, U^-2 and tr(A)^2 U^-4 integrable, or the five-lines criterion, or the two Fubini integrabilities as hypotheses). A refined power-counting criterion (UV degree of each one-loop subgraph with the numerator's momentum factors) is proved to give integrability of the refined weight; it holds for L, X, C+-, S+- with doubled photons and the VP bubble form. The bound linking that weight to the integrand is not yet formalized, so the degree-4 representation is currently unconditional only for X with doubled photons."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Counterterm insertion identities at fixed epsilon (O2-13, partial): delta1 classes = delta1 times the one-loop vertex value (exact); delta3 classes = transverse plus longitudinal parts (exact, longitudinal is O2-14); delta2/deltam classes exact only with an extra O(eps) defect term that equals -1 on shell, so the section 5.1 form holds only in the epsilon -> 0+ limit, not yet proved. Value identities assume integrability of the split integrands."
     }
   ],
   "tracks": [

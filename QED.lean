@@ -96,6 +96,7 @@ public import QED.TwoLoop.ParametricBridgeLX
 public import QED.TwoLoop.ParametricBridgeS
 public import QED.TwoLoop.ParametricBridgeVPFlavour
 public import QED.Algebra.FormFactorProjector
+public import QED.TwoLoop.CountertermInsertion
 public import QED.Integration.FeynmanParameterGeneral
 public import QED.Integration.SpatialIntegralSix
 public import QED.Integration.TwoLoopParametric
