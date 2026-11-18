@@ -409,6 +409,10 @@
     {
       "date": "2026-11-18",
       "change": "O2-20 and O2-21 proved for the order-e^5 vertex limit: reflection covariance of the nine class and counterterm limits (for every Lorentz map with a spinor lift), hence the mirror identity; with covariance, the limit has exactly one form-factor pair for e != 0, m, m_gamma, Lambda > 0, M_f > m with the PV conditions, any counterterms, on-shell positive-energy p, p' and q^2 > 0. Of the provisional headline (HV3), the existence and form-factor clauses now hold at fixed regulators (helper level); the Pauli-component bound in the regulator limits remains."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "O2-22 reduced to one variable: the Pauli projection of the order-e^5 vertex limit depends on the on-shell pair only through q^2 (covariance under pair-moving Lorentz maps, all seven counterterm classes included), so the uniform q^2 -> 0+ limit is equivalent to the limit of a function of q^2. That limit needs the 1/q^2 cancellation of the projector, which requires the joint polynomial dependence of the numerators on the external momenta; the zeroth-order cancellation is proved."
     }
   ],
   "tracks": [

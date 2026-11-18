@@ -876,6 +876,13 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   $+d_1F_2^{(2)}$, which contributes $-\tfrac12r^2\ln(\lambda/m)$, yet BMR's ladder has no
   logarithm, so the bare ladder must carry $+\tfrac12r^2\ln(\lambda/m)$. The cancellation must
   be proved unit by unit, from infrared expansions (O2-23).
+  **Status (2026-11-18): reduced to one variable** (`QED/TwoLoop/PauliZero*.lean`). The Pauli
+  projection of the order-5 vertex limit depends on the on-shell pair only through $q^2$
+  (covariance under Lorentz maps that move $p,p'$, reached by two reflections), so the uniform
+  statement is equivalent to a one-variable limit of `pauliAt` as $q^2\to0^+$
+  (`uniform_iff_tendsto_pauliAt`). That limit is open: the projector's $1/q^2$ must cancel, which
+  needs the joint polynomial dependence of the parametric numerators on the external momenta
+  (the zeroth-order cancellation is proved, `formFactorProj₂_numerator_self`).
 - **O2-23 (infrared limit).** Plan: per-unit infrared expansions at $q^2=0$. For each unit
   $U$, its contribution to the regulated $F_2^{(4)}(0)$ of O2-22 has the form
   $a_U\ln(m_\gamma/m)+b_U(\Lambda,M_f)+o(1)$ as $m_\gamma\to0^+$, at fixed $M_f$, with the
