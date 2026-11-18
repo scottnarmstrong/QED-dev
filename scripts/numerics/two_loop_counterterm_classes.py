@@ -5,10 +5,13 @@ file states each list identity and the kernel checks it (`decide +kernel`); this
 proposed the representatives and permutations. It reuses the independent enumeration in
 two_loop_enumeration.py.
 
-Run: nice -n 10 python3 scripts/numerics/two_loop_counterterm_classes.py   (seconds)
+Run: nice -n 10 python3 scripts/numerics/two_loop_counterterm_classes.py [OUTDIR]   (seconds)
+The Lean fragments reps.lean, eqs.lean, vals.lean are written to OUTDIR (default $TMPDIR or /tmp),
+never into the repository.
 """
 import sys, itertools
 import os
+OUT = sys.argv[1] if len(sys.argv) > 1 else os.environ.get('TMPDIR', '/tmp')
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import two_loop_enumeration as T
 import two_loop_enumeration_lean as TL
@@ -93,6 +96,6 @@ for seqs, names in groups:
                     f"  simp only [List.map_cons, List.map_nil, List.sum_cons, List.sum_nil,\n    {hs}]\n"
                     f"  ring\n")
         print(ts, counts, file=sys.stderr)
-open('reps.lean', 'w').write("\n".join(repdefs))
-open('eqs.lean', 'w').write("\n".join(eqs))
-open('vals.lean', 'w').write("\n".join(vals))
+open(os.path.join(OUT, 'reps.lean'), 'w').write("\n".join(repdefs))
+open(os.path.join(OUT, 'eqs.lean'), 'w').write("\n".join(eqs))
+open(os.path.join(OUT, 'vals.lean'), 'w').write("\n".join(vals))

@@ -357,6 +357,10 @@
     {
       "date": "2026-11-18",
       "change": "Counterterm insertion identities at fixed epsilon (O2-13, partial): delta1 classes = delta1 times the one-loop vertex value (exact); delta3 classes = transverse plus longitudinal parts (exact, longitudinal is O2-14); delta2/deltam classes exact only with an extra O(eps) defect term that equals -1 on shell, so the section 5.1 form holds only in the epsilon -> 0+ limit, not yet proved. Value identities assume integrability of the split integrands."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Preparatory analysis for O2-25 (docs/TWO-LOOP-UNITS.md; numerics, not proof): one structural identity in hierarchical Cheng-Wu variables reduces each q-type unit to a low-dimensional integral; the route-A units L and S have 1D representations agreeing with BMR-I's per-graph values to 40 digits, with exact evaluations by hand needing only zeta(2); C to 10 digits and X to 17 digits from 3D and 2D representations, whose exact evaluation (zeta(2) ln 2, zeta(3)) is not yet carried out. The route-A counterterm allocation coincides with BMR's."
     }
   ],
   "tracks": [
