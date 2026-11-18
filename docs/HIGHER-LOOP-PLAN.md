@@ -659,8 +659,7 @@ Script `scripts/numerics/phase5_chains.py` (record `scripts/numerics/phase5_chai
   - tenth-order I(a) at $0.57\sigma$;
   - O3-M3: Pas (10) against the spectral integral, to $10^{-29}$ relative.
 - **Set (b) at finite regulators** (model level, the object of O3-10): the outer functional of
-  $(\Pi_{
-m loop}-\delta_3)^2$ with $\delta_3$ from (Z₈), taken in the Q1 order, regulator
+  $(\Pi_{\rm loop}-\delta_3)^2$ with $\delta_3$ from (Z₈), taken in the Q1 order, regulator
   masses last.
   - It converges to $A_{(b)}$.
   - At fixed regulator masses, the remainders in $m_\gamma$ and in $1/\Lambda$ carry no logarithm.
