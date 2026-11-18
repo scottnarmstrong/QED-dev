@@ -44,11 +44,10 @@ photon; it factorizes, `T₁(λ; Y, x) = -(Y²(1-Y)/M(Y)) · x(1-x)³/M(x)`, so 
 * `tendsto_of_tendsto_integral_ladderR`: **if** `∬ R(λ) → ∬ R₀`, then
   `∬ R(λ) - F₂⁽²⁾(λ)(J(λ) + ∫ CT) → 11/48 + π²/18 = 11/48 + ζ(2)/3`, the value of (3.6).
 
-**Not proved here** (the remaining part of stage (3)): the convergence `∬ R(λ) → ∬ R₀`, which
-needs a bound on `R(λ; Y, x)` uniform in small `λ` and integrable on the square (numerically,
-`|R| ≤ (1 + |log x| + |log Y|) / max(x, Y)`: on a logarithmic grid of `(0,1)²` the largest ratio
-is `0.49` for `λ ∈ [10⁻⁶, 10⁻¹]`, and `R₀` itself has ratio below `1`), and the integrability of
-`G(λ; Y, ·)` needed for the decomposition above.
+**Proved in `QED.TwoLoop.UnitLLinkDominated`** (the remaining part of stage (3)): the convergence
+`∬ R(λ) → ∬ R₀`, from the uniform bound `|R| ≤ 17 (1 - log x - log Y) / max(x, Y)` for `|λ| ≤ 1`
+(`QED.TwoLoop.UnitLLinkDominatedBound`), and the integrability and Fubini facts needed for the
+decomposition above; the unconditional limit of (3.4) is `tendsto_ladderRep`.
 -/
 
 @[expose] public section

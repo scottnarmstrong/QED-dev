@@ -898,7 +898,8 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   from the frozen charge condition equals the doc's formula, and its unit contribution is
   $\delta_1(F_2^{(2)}(m_\gamma)-F_2^{(2)}(\Lambda))$); the $x$-integration of the $\lambda=0$
   integrand gives the kernel $K_{\rm L}$; and the $\lambda\to0$ limit of the doc's (3.4) is
-  $\frac{11}{48}+\frac{\pi^2}{18}$ given one dominated-convergence bound (checked numerically). The
+  $\frac{11}{48}+\frac{\pi^2}{18}$, unconditionally (`QED/TwoLoop/UnitLLinkDominated.lean`,
+  `tendsto_ladderRep`, with a proved uniform bound on the remainder). The
   graph half of the link (the two-loop Dirac and Gaussian-moment algebra, Cheng–Wu) and the
   $\Lambda\to\infty$ stage remain. Earlier step (`QED/TwoLoop/PauliZero*.lean`): The Pauli
   projection of the order-5 vertex limit depends on the on-shell pair only through $q^2$
