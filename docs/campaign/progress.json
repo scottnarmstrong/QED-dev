@@ -329,6 +329,10 @@
     {
       "date": "2026-11-18",
       "change": "Parametric representation with loop-momentum numerators of degree <= 2 proved (O2-10/O2-11 infrastructure): energy and 6D spatial second moments, and for N >= 6 lines with spanning loop coefficients, U^-2 and tr(A) U^-3 integrable on the simplex (the latter an explicit hypothesis, expected from a four-lines-per-subloop criterion not yet proved), J[P prod D^-1] = -pi^4 times the simplex integral of U^-2 [(N-5)! (V-i eps)^(4-N) P(-S) + (N-6)!/2 (V-i eps)^(5-N) contraction]. Degree 3-4 (the QED vertex) remains."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "O2-8 for the VP class, conditionally: at fixed epsilon > 0 with momentum conservation, the VP class value is rewritten in the nested routing and factorized as outer chain times the one-loop vacuum-polarization integrand (unconditional), and equals the iterated energy-first integral with the frozen one-loop Pi inserted, under two explicit integrability hypotheses: O2-7 for the class and a (t2, v1) Fubini condition, both still to be proved."
     }
   ],
   "tracks": [

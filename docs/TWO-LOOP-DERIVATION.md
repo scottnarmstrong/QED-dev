@@ -381,6 +381,13 @@ $|t|^{-12}$ overall.
   (Σ, Π at fixed $\varepsilon$, then $\varepsilon\to0^+$, as appropriate). This is needed to
   reuse the frozen self-energy and vacuum polarization. Theorem; moderate–high (exchange of
   limits in $\varepsilon$ for the subloop and the outer loop).
+  **Status (2026-11-18): VP class, conditional** (`QED/TwoLoop/NestedVP*.lean`). Unconditional:
+  the routing change to a nested routing and the factorization of the integrand into the open
+  chain times the one-loop vacuum-polarization integrand. The equality with the iterated
+  energy-first integral (`contractionValue₂_VP_eq_nested_energyFirst`) assumes two explicit
+  hypotheses: the integrability of both joint stages (O2-7 for this class) and a Fubini condition
+  in $(t_2,\vec v_1)$. The second needs a sharper bound on the packet-6b spatial integrand than
+  the existing one. The $\varepsilon\to0^+$ step and the classes S± remain.
 - **O2-9 (embedding).** The analogue of (Y₁) for the successor model (single real
   counterterms in `Params` with the frozen order labels, D-37.3; two-loop routing; the joint
   prescription, D-37.5; section 7 carriers): at total order $K\le 2n_f+n_A+1$ (the frozen
