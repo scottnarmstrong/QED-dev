@@ -390,6 +390,14 @@ $|t|^{-12}$ overall.
   integrable on the simplex. Domination uses O2-12 ($V\ge c>0$). The limit is stated through
   a numerator chosen to equal the class numerator; uniformity in small $q^2$ (O2-22) is not
   addressed.
+  **The order-$e^5$ vertex.** The seven counterterm classes also have $\varepsilon\to0^+$ limits
+  for every value of the counterterms (`QED/TwoLoop/CountertermLimit.lean`; the δ₁ classes use
+  positive energies), via an auxiliary independent loop that turns a one-loop integrand into a
+  two-loop one. Hence the order-$e^5$ vertex (HV₁) has a unique limit (HV₂) at fixed regulators,
+  for $m,m_\gamma,\Lambda>0$, $M_f\ge m$ with the PV conditions, on-shell positive-energy $p,p'$
+  and $q^2\ge0$ (`QED/TwoLoop/VertexLimit.lean`, `existsUnique_isVertexOrderFiveLimit`), and
+  `exists_isVertexOrderFiveLimit_headline` is the existence clause of the headline (HV₃) in its
+  exact shape, for every choice of counterterms.
 - **O2-8 (nested equals joint, for insertions).** For the insertion classes S₊, S₋ and VP,
   the joint value equals the outer one-loop integral of the frozen inner one-loop function
   (Σ, Π at fixed $\varepsilon$, then $\varepsilon\to0^+$, as appropriate). This is needed to

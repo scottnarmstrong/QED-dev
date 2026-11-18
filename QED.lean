@@ -103,6 +103,7 @@ public import QED.TwoLoop.ClassIntegrable
 public import QED.TwoLoop.ClassIntegrableVP
 public import QED.TwoLoop.ClassLimit
 public import QED.TwoLoop.ClassLimitVP
+public import QED.TwoLoop.VertexLimit
 public import QED.Integration.FeynmanParameterGeneral
 public import QED.Integration.SpatialIntegralSix
 public import QED.Integration.TwoLoopParametric

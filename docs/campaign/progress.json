@@ -377,6 +377,10 @@
     {
       "date": "2026-11-18",
       "change": "Crossed-ladder unit X: exact value derived (docs/TWO-LOOP-UNITS.md section 4.5, every step checked numerically, final agreement with BMR-I to 6e-42): a 1D form via the xi-integration, integration by parts, and eight master integrals; the master integrals (zeta(3), zeta(2) ln 2 via Li2/Li3 at 1/2) and the final assembly are proved in Lean (QED/Polylog/ExtraIntegrals.lean, QED/TwoLoop/UnitX.lean). Remaining for X in Lean: the xi-integration, the integration-by-parts identity and the endpoint limits."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "The order-e^5 vertex has a unique epsilon -> 0+ limit at fixed regulators: the seven counterterm classes have limits (via an auxiliary independent loop that reduces one-loop limits to the two-loop theorem), so with the class limits the vertex (HV1) has a unique limit (HV2) for m, m_gamma, Lambda > 0, M_f >= m with the PV conditions, on-shell positive-energy p, p' and q^2 >= 0, for every choice of counterterms. This is the existence clause of the provisional headline (HV3), at helper level."
     }
   ],
   "tracks": [
