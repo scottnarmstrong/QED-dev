@@ -888,7 +888,12 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   (a function of the regulators alone under the frozen counterterm conditions), and it is the
   sum of five unit functions VP, S, C, L, X (`QED/TwoLoop/UnitsRegulated.lean`,
   `pauliZeroFour_eq_sum_units`). The regulator limits of these units (O2-17, O2-19, O2-23) and
-  their link to the representations of `docs/TWO-LOOP-UNITS.md` remain. Earlier step (`QED/TwoLoop/PauliZero*.lean`): The Pauli
+  their link to the representations of `docs/TWO-LOOP-UNITS.md` remain.
+  **VP unit, partial link** (`QED/TwoLoop/UnitVPLink.lean`, at $m=1$): with (Z₈), the outer
+  one-loop form `vpOuterF2` of the VP insertion equals the explicit `vpUnitReg` up to the
+  normalization $16\pi^4$, via the spectral form of the model's $\Pi$ and Fubini; hence, given
+  `VPUnitNested` (that the model's VP unit equals this outer form, still open: O2-8/O2-10/O2-13
+  at $q\to0$), the VP unit tends to $\frac{119}{36}-\frac{\pi^2}3$ in the D-37.4 order. Earlier step (`QED/TwoLoop/PauliZero*.lean`): The Pauli
   projection of the order-5 vertex limit depends on the on-shell pair only through $q^2$
   (covariance under Lorentz maps that move $p,p'$, reached by two reflections), so the uniform
   statement is equivalent to a one-variable limit of `pauliAt` as $q^2\to0^+$

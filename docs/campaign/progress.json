@@ -421,6 +421,10 @@
     {
       "date": "2026-11-18",
       "change": "Regulated F2^(4)(0) made explicit: the q^2 -> 0 limit of the Pauli form factor is a sum of fourteen explicit simplex integrals; by the charge scaling, divided by e^4 it is the regulated F2^(4)(0; m_gamma, Lambda, M1, M2), a function of the regulators alone under the frozen counterterm conditions, and it is the sum of the five unit functions VP, S, C, L, X. The regulator limits of the units remain."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "VP unit link, partial: at m = 1 with the photon on-shell condition, the outer one-loop form of the VP insertion equals the explicit finite-regulator VP value (spectral form of the model's Pi, Fubini), so given the remaining identity between the model's VP unit and that outer form (O2-8/O2-10/O2-13 at q -> 0), the VP unit tends to 119/36 - pi^2/3 in the D-37.4 order. Normalization anchors via the one-loop Pauli form factor are proved."
     }
   ],
   "tracks": [

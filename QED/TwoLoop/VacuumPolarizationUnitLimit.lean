@@ -67,7 +67,7 @@ VP unit (the frozen order-5 vertex restricted to the VP contractions) is a separ
   `vpInsert_eq_integral`: the partial-fraction value is the kernel integral.
 -/
 
-public section
+@[expose] public section
 
 open Real MeasureTheory Set Filter Topology
 
