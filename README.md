@@ -208,6 +208,7 @@ five-loop QED, and an experimental comparison.
 | [docs/REGULARIZATION.md](docs/REGULARIZATION.md) | Regulator comparison and choice, the Minkowski-integral prescription, renormalization, and order of limits |
 | [docs/ONE-LOOP-DERIVATION.md](docs/ONE-LOOP-DERIVATION.md) | Source-linked derivation from the interaction to the magnetic moment, with numbered proof obligations |
 | [docs/TWO-LOOP-DERIVATION.md](docs/TWO-LOOP-DERIVATION.md) | The two-loop plan: enumeration, divergences, route, exact evaluation, and numbered proof obligations for the fourth-order coefficient |
+| [docs/HIGHER-LOOP-PLAN.md](docs/HIGHER-LOOP-PLAN.md) | The Phase 5 plan for higher-loop families: candidate families, the recommended first family (vacuum-polarization chains) and the mass-dependent two-loop term, route, obligations and open design questions |
 | [docs/MATHLIB-INVENTORY.md](docs/MATHLIB-INVENTORY.md) | What Mathlib `v4.35.0` provides and what the pilot must build |
 | [docs/campaign/STATUS.md](docs/campaign/STATUS.md) | Current state, validation, and next work |
 | [docs/campaign/DECISIONS.md](docs/campaign/DECISIONS.md) | Decisions, author rulings, and pending questions |

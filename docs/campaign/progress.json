@@ -545,6 +545,10 @@
     {
       "date": "2026-11-18",
       "change": "Two-loop Comparator challenge added and accepted by con-ron (71,746 declarations), NanoDa and Lean's kernel at c5c8473 ((HV3), (HV0), (U2), a non-vacuity corollary). The one-loop challenge, which had drifted (an instance path for C changed with the library's imports), repaired and re-accepted (D-47). Remaining for L2.ASSEMBLY: a fresh-checkout rebuild."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Phase 5 planning begun: docs/HIGHER-LOOP-PLAN.md (draft) recommends the vacuum-polarization chains (sixth-order set (b), exact value (8/3)zeta(3) - (4/135)pi^2 - 943/324 by numerics) as the first higher-loop family, with the mass-dependent two-loop term A2^(4)(me/mmu, me/mtau) as Stage 0; design questions Q1-Q8 go to the author before any declaration is drafted."
     }
   ],
   "tracks": [
