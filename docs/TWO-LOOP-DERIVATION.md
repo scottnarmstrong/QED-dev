@@ -883,7 +883,12 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   positive-energy pairs; the $1/q^2$ of the projector cancels at zeroth order pointwise and at
   first order by the evenness of the total numerator under the reflection fixing $p$, and the
   second-order coefficient converges by dominated convergence. The explicit Feynman-parameter
-  form of the limit is not yet surfaced. Earlier step (`QED/TwoLoop/PauliZero*.lean`): The Pauli
+  form is surfaced (`QED/TwoLoop/PauliZeroExplicit*.lean`, `pauliZeroLimit_eq_sum`), the
+  charge scaling gives the regulated $F_2^{(4)}(0;m_\gamma,\Lambda,M_1,M_2)$ = `pauliZeroFour`
+  (a function of the regulators alone under the frozen counterterm conditions), and it is the
+  sum of five unit functions VP, S, C, L, X (`QED/TwoLoop/UnitsRegulated.lean`,
+  `pauliZeroFour_eq_sum_units`). The regulator limits of these units (O2-17, O2-19, O2-23) and
+  their link to the representations of `docs/TWO-LOOP-UNITS.md` remain. Earlier step (`QED/TwoLoop/PauliZero*.lean`): The Pauli
   projection of the order-5 vertex limit depends on the on-shell pair only through $q^2$
   (covariance under Lorentz maps that move $p,p'$, reached by two reflections), so the uniform
   statement is equivalent to a one-variable limit of `pauliAt` as $q^2\to0^+$
