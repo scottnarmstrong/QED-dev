@@ -692,3 +692,15 @@ Script `scripts/numerics/phase5_chains.py` (record `scripts/numerics/phase5_chai
 - monotonicity;
 - certified enclosures on the AKN Table 1 mass-ratio intervals: $5.197386525\ldots5.197386998\times10^{-7}$ (muon)
   and $1.8376481\ldots1.8381339\times10^{-9}$ (tau).
+
+**O3-M2, analytic core, is done** (helper level, `QED/Chain/HeavyVP*.lean`):
+- the heavy-lepton outer functional at loop mass $M_L$ and its joint $(m_\gamma,\Lambda)$ limit;
+- decoupling of the heavy lepton's regulators,
+  $|\text{PV sum}-\hat\Pi\text{-value}|\le(M_1^{-2}+M_2^{-2})/45$ for $M_1,M_2\ge M_L$, with no
+  constraint on $M_2/M_1$ (`abs_heavyLimSum_sub_le`; the constant is numerically sharp);
+- the limit value `a2Heavy` (`vpLim_eq_a2Heavy`);
+- the split of the outer functional into lepton blocks (`outerF2_blocks`);
+- the iterated limit in physical units (`heavyUnitReg_iterated_limit_mass`).
+
+The model-level steps remain: the nested form of the heavy VP class, the flavour-summed photon
+condition, model mass scaling, and the assembly of (HM₂).

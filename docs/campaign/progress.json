@@ -569,6 +569,10 @@
     {
       "date": "2026-11-18",
       "change": "Phase 5 Stage 0 packet approved and frozen (D-50): the flavour-successor model QED.Lepton (16 definitions, SEALED) and 13 theorem goals (DRAFT_SORRY), among them the two-loop headline with heavy leptons (HM2): 16 pi^4 F2 / e^4 -> A1^(4) + sum over heavy leptons of A2^(4)(me/ml)."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Phase 5 O3-M2 analytic core proved (helper level): the heavy-lepton VP outer functional, its joint (m_gamma, Lambda) limit, decoupling of the heavy lepton's own regulators with the sharp constant 1/45 and no ratio constraint, the limit value a2Heavy, and the split into lepton blocks (QED/Chain/HeavyVP*)."
     }
   ],
   "tracks": [

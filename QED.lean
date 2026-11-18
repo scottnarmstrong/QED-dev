@@ -155,6 +155,7 @@ public import QED.TwoLoop.UnitSCCornerMain
 public import QED.TwoLoop.UnitSCCornerErr
 public import QED.Chain.VPChainSetBBounds
 public import QED.Chain.HeavyLeptonBounds
+public import QED.Chain.HeavyVPLimit
 public import QED.TwoLoop.ClassIntegrableFurry
 public import QED.TwoLoop.UnitSCGraphSpMain
 public import QED.TwoLoop.UnitSCGraphSmMain
