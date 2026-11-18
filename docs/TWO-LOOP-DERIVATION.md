@@ -376,13 +376,20 @@ $|t|^{-12}$ overall.
   $\varepsilon>0$, and the value has a unique limit as $\varepsilon\to0^+$. This is the
   two-loop analogue of packet 1's (E). Theorem; **high** effort; the main analytic risk of
   stage 2.
-  **Status (2026-11-18): fixed $\varepsilon$ proved, limit open.** For every class L, X, C±, S±
+  **Status (2026-11-18): proved at helper level, per class.** For every class L, X, C±, S±
   (`QED/TwoLoop/ClassIntegrable.lean`, `jointEnergyFirstIntegrable_open`) and VP
   (`ClassIntegrableVP.lean`, `jointEnergyFirstIntegrable_VP`, using the two Pauli–Villars
   conditions), at every $\varepsilon>0$ and with momentum conservation, both stages of the class
   value's joint integral at the frozen routing are integrable (T₉′), with no condition on the
   regulators. Route: the parametric bridge, the refined pointwise bound and the refined
-  criterion. The $\varepsilon\to0^+$ limit remains.
+  criterion. **The $\varepsilon\to0^+$ limit is also proved** for every class, entrywise
+  (`QED/TwoLoop/ClassLimit.lean`, `tendsto_contractionValue₂_open`,
+  `existsUnique_tendsto_contractionValue₂_open`; `ClassLimitVP.lean` for VP, which also needs
+  $M_f\ge m$), for $m,m_\gamma,\Lambda>0$, on-shell $p,p'$ with $q^2\ge0$ and momentum
+  conservation. The limit is the $\varepsilon=0$ parametric integral, whose integrand is
+  integrable on the simplex. Domination uses O2-12 ($V\ge c>0$). The limit is stated through
+  a numerator chosen to equal the class numerator; uniformity in small $q^2$ (O2-22) is not
+  addressed.
 - **O2-8 (nested equals joint, for insertions).** For the insertion classes S₊, S₋ and VP,
   the joint value equals the outer one-loop integral of the frozen inner one-loop function
   (Σ, Π at fixed $\varepsilon$, then $\varepsilon\to0^+$, as appropriate). This is needed to

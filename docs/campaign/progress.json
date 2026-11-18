@@ -369,6 +369,10 @@
     {
       "date": "2026-11-18",
       "change": "O2-7 at fixed epsilon proved for all seven classes: at every epsilon > 0, with momentum conservation (and the two PV conditions for VP), both stages of each class value's joint energy-first integral are integrable, via a pointwise bound of the numerator integrand by the refined weight (degree-4 representation under the refined criterion, N >= 8). This discharges the joint-integrability hypothesis of the nested-VP theorem. The epsilon -> 0+ limit remains."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "O2-7 limit proved per class: for m, m_gamma, Lambda > 0 (M_f >= m and the PV conditions for VP), on-shell p, p' with q^2 >= 0 and momentum conservation, each class value has a unique limit as epsilon -> 0+, the epsilon = 0 parametric integral, by dominated convergence using the positivity of V (O2-12). Uniformity in small q^2 (O2-22) remains."
     }
   ],
   "tracks": [
