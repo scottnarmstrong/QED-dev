@@ -168,12 +168,19 @@ addressed.
    `∑ c, sign c * contractionValue₂ P c.rep …` plus the counterterm terms, with coefficient one
    per class (`QED/TwoLoop/RelabelInvarianceOrderFive.lean`,
    `onePIFunction₂_five_sub_four_eq`).
-2. **Counterterm classes by relabelling.** The counterterm sequences are presented as
-   explicit lists per sequence, not as orbits of class representatives: the relabelling
-   here is defined for gauge vertices only. Grouping the $4\times12$ ($\delta_{2,m}$,
-   $\delta_3$) and $3\times6$ ($\delta_1$) contractions into classes with coefficient one
-   needs relabelling across sequences ($\kappa\mapsto\kappa\circ\pi^{-1}$) and the same
-   value invariance.
+2. **Counterterm classes by relabelling: proved.** A relabelling across kind sequences
+   (`relabelK`, $\kappa\mapsto\kappa\circ\pi^{-1}$) preserves the contraction value for
+   connected contractions with conserved external momenta, including the momentum-dependent
+   `fermionCt` and two-slot `photonCt` vertex factors
+   (`QED/TwoLoop/RelabelCountertermValue.lean`, `contractionValue₂_relabelK`). The eleven
+   counterterm lists are, by kernel checks, relabellings of seven representatives (δ₂/δm on the
+   incoming or outgoing internal electron line, δ₃ with either slot pairing, δ₁ at each of the
+   three vertices), each class having exactly $N!$ members. Under momentum conservation the
+   order-5 vertex is therefore the sum of the seven five-gauge classes L, X, C±, S±, VP with
+   their signs and the seven counterterm classes, all with coefficient one
+   (`QED/TwoLoop/RelabelCountertermClasses.lean`, `onePIFunction₂_five_sub_four_eq_classes`).
+   The representatives and permutations were found by
+   `scripts/numerics/two_loop_counterterm_classes.py`; the Lean proof does not rely on it.
 3. **O2-3 (Furry pair): proved.** With momentum conservation, the two orientations of the
    closed three-vertex loop cancel at fixed parameters, flavour by flavour
    (`QED/TwoLoop/FurryPair.lean`, `furry_pair`), by charge conjugation with `C = γ⁰γ²`

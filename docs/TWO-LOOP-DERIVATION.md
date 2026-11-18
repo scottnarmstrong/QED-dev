@@ -213,7 +213,7 @@ tree; a closed loop gives $-1$ (X₅).
   combinatorics, moderate size (the review notes that the cost of deciding the
   classification in Lean at $N=5$ may push it higher). Source: Srednicki ch. 58 rules;
   BMR-I Fig. 2; AKN Fig. 2 (seven vertex diagrams).
-  **Status (2026-11-18): combinatorics proved; counterterm grouping open**
+  **Status (2026-11-18): proved under momentum conservation**
   (`QED/TwoLoop/Enumeration*.lean`, `RelabelInvariance*.lean`; method and inventory in
   [TWO-LOOP-ENUMERATION.md](TWO-LOOP-ENUMERATION.md)).
   `QED.TwoLoop.Enumeration.onePIFunction₂_five_sub_four`, at every `P` and all external data,
@@ -226,9 +226,12 @@ tree; a closed loop gives $-1$ (X₅).
   connectedness and attached externals. Hence coefficient one per class with its sign,
   `QED.TwoLoop.Relabel.onePIFunction₂_five_sub_four_eq`, under momentum conservation
   `pOut 0 = pIn 0 + kIn 0`. That the conservation hypothesis cannot be dropped is argued (the
-  routing is not conserved without it), not proved. Open: grouping the counterterm
-  contractions into the six classes of 3.2 with coefficient one (relabelling across kind
-  sequences).
+  routing is not conserved without it), not proved. The counterterm contractions are grouped
+  likewise into seven classes with coefficient one (the six of 3.2, with the two δ₃ slot
+  pairings counted separately), so under momentum conservation the order-5 vertex is the sum
+  over 7 + 7 class representatives (`QED.TwoLoop.Relabel.onePIFunction₂_five_sub_four_eq_classes`,
+  with the Furry pair cancelled; see TWO-LOOP-ENUMERATION.md, section 3). **O2-2 is proved**
+  for the 1PI vertex at fixed parameters.
 - **O2-3 (Furry pair).** The two flavour-summed orientations of the three-vertex loop cancel
   at fixed $\varepsilon$. Per-flavour values are not objects of the model: X₂₆ sums the
   flavours inside the integrand. Proof: charge conjugation, $C\gamma^\mu C^{-1}=-\gamma^{\mu T}$,

@@ -321,6 +321,10 @@
     {
       "date": "2026-11-18",
       "change": "Positivity of V (O2-12) proved for the remaining classes C+-, S+-, VP (F+- cancel), and for the Pauli-Villars forms of all seven classes and the doubled-bubble VP form, wherever U != 0 on the simplex, for the class loop matrices (own routings, matched to the representatives numerically). The use in the epsilon -> 0+ limit remains."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "O2-2 completed: the counterterm contractions are relabellings across kind sequences of seven class representatives, with value invariance for connected contractions with conserved momenta (momentum-dependent counterterm vertex factors included); under momentum conservation the order-e^5 1PI vertex is the sum of 7 + 7 class representatives with coefficient one (Furry pair cancelled)."
     }
   ],
   "tracks": [
