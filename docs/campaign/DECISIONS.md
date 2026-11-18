@@ -2012,3 +2012,39 @@ The review's other findings (STATUS.md staleness, the `.scratch` deletion in
 `scripts/frozen_abi.py`) were fixed in a57d2db. Its engineering suggestions
 for the corner limit went to that worker; its cleanup suggestions are deferred
 until after the headline.
+
+## D-45. HV0: every term of the order-e5 vertex is a genuine integral (author approved)
+
+**Ruling.** On 2026-11-18 the author approved ("approve") the exact Lean
+declaration (HV₀) `QED.TwoLoop.jointEnergyFirstIntegrable_vertexOrderFive`,
+drafted under D-44 item 2. It is frozen at
+`QED/Frozen/TwoLoop/JointEnergyFirstIntegrableVertexOrderFive.lean` with state
+`DRAFT_SORRY` and provider
+`QED.Provider.TwoLoop.jointEnergyFirstIntegrable_vertexOrderFive`.
+
+**Statement.** Let `ε > 0` and let the regulator fermions satisfy the
+Pauli–Villars conditions `1 + c₁ + c₂ = 0` and `m² + c₁M₁² + c₂M₂² = 0`. For
+every 1PI contraction `C` with one external fermion pair and one external
+photon whose vertices have total order exactly 5 (the terms summed in (HV₁)),
+at all external momenta with momentum conservation and all external indices,
+the integrand of its value (T₁₀) satisfies (T₉′). No mass, cutoff or on-shell
+condition is assumed: at `ε > 0` every propagator is bounded.
+
+**Review.** An independent refute-first audit returned APPROVE WITH NITS:
+- coverage is exact: (HV₁) is the 1PI order-5 part, since every vertex has
+  order at least 1;
+- the integrand is that of `contractionValue₂`, checked by `rfl`;
+- the hypotheses are satisfiable, with an explicit `Params`;
+- no counterexample was found. The admitted contractions are the nine
+  two-loop classes and the one-loop counterterm graphs; power counting is
+  negative in every case.
+
+Its nits concerned packaging, which the freezer supplies, a wider-than-needed
+import, kept because it documents the link to (HV₁), and docstring wording,
+left as approved.
+
+**Proof status.** The two-loop classes are proved integrable:
+`QED/TwoLoop/ClassIntegrable*.lean`, including the Furry classes (c0a709f).
+The transfer from class representatives to arbitrary contractions, and the
+one-loop counterterm graphs, are in progress. (HV₀) is a companion of (HV₃)
+for the two-loop Comparator challenge; (HV₃) does not depend on it.

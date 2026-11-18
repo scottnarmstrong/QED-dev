@@ -521,6 +521,10 @@
     {
       "date": "2026-11-18",
       "change": "S + C link, corner graph: the exact lambda = 0 evaluation proved (x-integration on both branches to Phi_C, xi-integration to cornerKernel reusing the X machinery, value of the triangle integral). CornerPartLimit is reduced to dominated convergence for the main term (CornerMainLimit) and the vanishing of the error terms (CornerErrLimit)."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "(HV0) approved and frozen as DRAFT_SORRY (D-45): every 1PI contraction of total order 5 (the terms of (HV1)) has a jointly energy-first integrable value integrand at epsilon > 0 under the Pauli-Villars conditions. Independent statement review: approve with nits."
     }
   ],
   "tracks": [
