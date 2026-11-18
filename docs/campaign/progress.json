@@ -393,6 +393,10 @@
     {
       "date": "2026-11-18",
       "change": "Algebraic halves of covariance (O2-20) and of the absence of a q^mu term (O2-21) proved: a vertex covariant under the Lorentz maps fixing p, p' has the on-shell sandwich form, and if it also satisfies the mirror identity (charge conjugation then the reflection in p + p') it has exactly one form-factor pair; both properties pass to sums and integrals. The second clause of the provisional headline follows given these two properties of the order-e^5 limit, which remain to be proved."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Mirror identity (O2-21), partial: at fixed epsilon, charge conjugation maps C+ to C-, S+ to S- and L, X, VP to themselves between the data (p', p) and (-p, -p') (routing change between different external data); the mirror identity of the order-e^5 limit is reduced to the reflection covariance of the seven class limits and the mirror identity of the counterterm part."
     }
   ],
   "tracks": [
