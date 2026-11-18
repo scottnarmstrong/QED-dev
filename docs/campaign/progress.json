@@ -525,6 +525,10 @@
     {
       "date": "2026-11-18",
       "change": "(HV0) approved and frozen as DRAFT_SORRY (D-45): every 1PI contraction of total order 5 (the terms of (HV1)) has a jointly energy-first integrable value integrand at epsilon > 0 under the Pauli-Villars conditions. Independent statement review: approve with nits."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "(HV0) sealed and PROVED: QED.TwoLoop.jointEnergyFirstIntegrable_vertexOrderFive, every term of the order-e^5 vertex is a genuine integral (counterterm one-loop graphs at epsilon > 0; the nine two-loop classes, with the Pauli-Villars conditions for VP and the Furry pair; transfer along relabellings). Independent refute-first seal audit: PROVED (D-45)."
     }
   ],
   "tracks": [

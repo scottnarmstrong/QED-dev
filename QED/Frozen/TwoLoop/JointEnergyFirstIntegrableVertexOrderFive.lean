@@ -32,7 +32,7 @@ theorem jointEnergyFirstIntegrable_vertexOrderFive (P : Params) (hε : 0 < P.ε)
       (((2 * Real.pi) ^ (4 * loopCount C) : ℝ) : ℂ)⁻¹ *
         regulatedAmplitude₂ P C pIn kIn (lineMomentum₂ C pOut pIn kIn ℓ) αOut βIn μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.TwoLoop.jointEnergyFirstIntegrable_vertexOrderFive
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

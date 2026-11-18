@@ -24,14 +24,12 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 2 — QED/Frozen/TwoLoop/VertexOrderFivePauliLimit.lean (HV₃, the two-loop headline;
-               approved D-43); QED/Frozen/TwoLoop/JointEnergyFirstIntegrableVertexOrderFive.lean (HV₀,
-               every term of the order-e⁵ vertex is a genuine integral; approved D-45)
+DRAFT_ANCHORS: 1 — QED/Frozen/TwoLoop/VertexOrderFivePauliLimit.lean (HV₃, the two-loop headline;
+               approved D-43). (HV₀) was sealed on 2026-11-18 (D-45).
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 0 — documentation corrections only (D-42). Last seal: QED.WickModel.δ₁_eq_δ₂ (WI₁),
-               on its provisional text (D-40); PROVED (guard, build, standard axioms, independent
-               refute-first audit)
+SEALED_THIS_TURN: 1 — QED.TwoLoop.jointEnergyFirstIntegrable_vertexOrderFive (HV₀, D-45);
+               PROVED (guard, build, standard axioms, independent refute-first seal audit)
 ```
 
 | Field | Value |

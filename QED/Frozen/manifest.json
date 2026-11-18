@@ -19274,7 +19274,7 @@
         "module": "QED.Provider.TwoLoop.JointEnergyFirstIntegrableVertexOrderFive",
         "export": "QED.Provider.TwoLoop.jointEnergyFirstIntegrable_vertexOrderFive"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "4f4c673b2b88a31c65aee0accb400c1b5d9d550451ff0cc5c3325de96060014f",
       "suffix_sha256": "40068b95469d700692e1439c29833ce8c5bce83685e82400d38bfea6f5f35a83",
       "draft_allowlist": {

@@ -2048,3 +2048,24 @@ left as approved.
 The transfer from class representatives to arbitrary contractions, and the
 one-loop counterterm graphs, are in progress. (HV₀) is a companion of (HV₃)
 for the two-loop Comparator challenge; (HV₃) does not depend on it.
+
+**Sealed (2026-11-18).** The body is `by exact
+QED.Provider.TwoLoop.jointEnergyFirstIntegrable_vertexOrderFive`, from
+`QED.TwoLoop.IntegrableOrderFive.jointEnergyFirstIntegrable_of_order_five`
+(`QED/TwoLoop/IntegrableOrderFive*.lean`). The proof splits by the number of
+vertices: N ≤ 5 since every vertex has order at least 1. The 1PI lists for
+N = 2 and part of N = 3 are computed empty. The remaining N = 3 and N = 4
+contractions are relabellings of the δ₁, δ₂/δ_m and δ₃ counterterm
+representatives, integrable at ε > 0. The N = 5 contractions are
+relabellings of the nine class representatives. (T₉′) transfers along
+relabellings by unimodular changes of loop momenta.
+
+An independent refute-first seal audit returned PROVED:
+- the frozen bytes changed only in the proof-body line, with prefix and suffix
+  hashes matching;
+- the manifest changed only `state`;
+- the frozen and proof types are identical, and the ABI hash is unchanged;
+- the axioms are propext, Classical.choice and Quot.sound;
+- no smuggled hypothesis was found; the emptiness and relabelling claims are
+  proved, not assumed;
+- the guard and the build are clean.
