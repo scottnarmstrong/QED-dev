@@ -103,7 +103,13 @@ graph alone (`CornerPartLimit`, the limit $2\int_0^1K_{\rm C}$). The first is no
 parametric class values, $16\pi^4\cdot$(the $\delta_2,\delta_m$ half)
 $=8\pi^2\bigl[d_2(V_k(m_\gamma)-V_k(\Lambda))+d_m(V_m(m_\gamma)-V_m(\Lambda))\bigr]$ at finite regulators,
 an exact Pauli–Villars difference with no regulator-fermion terms. So the S + C link depends only on
-`CornerPartLimit` (`scUnitLimitOne_of_cornerPart`).
+`CornerPartLimit` (`scUnitLimitOne_of_cornerPart`). The exact evaluation at $\lambda=0$ is proved too
+(`QED/TwoLoop/UnitSCCorner*.lean`): the $x$-integration on both branches of $\beta$ to $\Phi_{\rm C}$
+(6.7) (`integral_cornerGm_zero`, polynomial antiderivatives, no dilogarithm), the $\xi$-integration
+to `cornerKernel` reusing the X machinery (`integral_cornerPhi_eq_cornerKernel`), and the value of
+the triangle integral (`integral_cornerZero`). `CornerPartLimit` is reduced to two analytic
+statements (`cornerPartLimit_of`): dominated convergence for the main term (`CornerMainLimit`) and
+the vanishing of the error terms, including the outer-$\Lambda$ pair (`CornerErrLimit`).
 
 ## 2. The common starting point
 
@@ -893,7 +899,9 @@ Proved, with integrability and only the standard axioms (`#print axioms`: `prope
 So for C, unlike X, the one-dimensional integral is proved in full: the analogues of items 3–5
 of the list in 4.5.6 are proved here.
 
-**Not proved (the remaining gap for C and S$+$C).**
+**Not proved (the remaining gap for C and S$+$C).** (Update, 2026-11-18: items 2 and 3 are proved, in
+`QED/TwoLoop/UnitSCCorner*.lean`; item 1 is reduced to `CornerMainLimit` and `CornerErrLimit`, see
+section 1.)
 
 1. The representations (6.5) and (5.5), and their link to the model (section 8, items 1–11),
    including the regulator limits and the counterterm constant $-\frac32$.
