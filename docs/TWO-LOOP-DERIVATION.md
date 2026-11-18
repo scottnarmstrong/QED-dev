@@ -767,6 +767,12 @@ source: the decision record).
   their counterterm insertions), within the self-mirror classes L, X and VP (charge
   conjugation, **recalled**), or through the order-5 Ward identity $q_\mu V^\mu=0$ on shell.
   Uniqueness reuses packet 2's argument. Existence and uniqueness theorem; **moderate–high**.
+  **Status (2026-11-18): projectors proved** (`QED/Algebra/FormFactorProjector.lean`): for
+  $e,m\ne0$, on-shell $p,p'$ and $q^2>0$, explicit trace functionals `formFactorProj₁`,
+  `formFactorProj₂` recover every form-factor pair (`eq_formFactorProj_of_isFormFactorPair`), and a
+  vertex whose on-shell sandwich has the four-term form $a\gamma^\mu+bK^\mu+cq^\mu+dS^{\mu\nu}q_\nu$
+  has a form-factor pair iff $c=0$ (`exists_isFormFactorPair_iff`). What remains is that the
+  order-5 vertex has such a sandwich form (O2-20) with $c=0$.
 - **O2-22 ($q^2\to0^+$ at fixed regulators).** At fixed $m_\gamma>0$, $\Lambda$, $M_1,M_2$
   and the on-shell order-$e^2$ counterterms, the Pauli coefficient $\hat F_2$ of the order-5
   vertex (O2-27; D-37.6) has a limit as $q^2\to0^+$, uniformly over the on-shell

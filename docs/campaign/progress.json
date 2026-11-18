@@ -345,6 +345,10 @@
     {
       "date": "2026-11-18",
       "change": "Parametric bridge completed for all classes: the frozen routings of C+-, S+-, VP are proved equal to the class routings up to integer unimodular changes, with the criterion on the frozen matrices (S+- after doubling both photons), and every class value is a joint integral of degree <= 4 numerators over PV-form denominators. For VP the regulator-flavour sum becomes, by the two PV conditions and the vanishing of odd gamma traces (the odd mass terms cancel only after the trace), four terms of bubble shapes (1,3), (2,2), (3,1), (2,2), all satisfying the criterion; only the (2,2) terms have the doubled-bubble shape assumed earlier. Integrability (O2-7) remains."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Explicit form-factor projectors proved (O2-11, O2-21 computational form): for e, m != 0, on-shell p, p' and q^2 > 0, trace functionals P1, P2 of a vertex V recover any form-factor pair (G0); a sandwich decomposition with gamma^mu, (p+p')^mu, q^mu and S^{mu nu} q_nu terms has a form-factor pair iff its q^mu coefficient vanishes, and then it is (P1 V, P2 V)."
     }
   ],
   "tracks": [
