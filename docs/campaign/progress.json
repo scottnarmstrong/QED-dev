@@ -541,6 +541,10 @@
     {
       "date": "2026-11-18",
       "change": "THE TWO-LOOP HEADLINE (HV3) IS PROVED AND SEALED: QED.TwoLoop.isFormFactorPair_vertexOrderFive_pauli_limit, 16 pi^4 F2 / e^4 -> A1^(4) = 197/144 + pi^2/12 - (pi^2/2) ln 2 + (3/4) zeta(3) in the approved order of regulator limits (D-37, D-41, D-43), from the general two-loop Wick model with on-shell one-loop counterterms. Provider: pauliLimit_of_unitLimits applied to the proved S + C and X unit links. Standard axioms only; independent refute-first seal audit PROVED (D-46). Remaining for L2.ASSEMBLY: the two-loop Comparator challenge and a fresh-checkout rebuild."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Two-loop Comparator challenge added and accepted by con-ron (71,746 declarations), NanoDa and Lean's kernel at c5c8473 ((HV3), (HV0), (U2), a non-vacuity corollary). The one-loop challenge, which had drifted (an instance path for C changed with the library's imports), repaired and re-accepted (D-47). Remaining for L2.ASSEMBLY: a fresh-checkout rebuild."
     }
   ],
   "tracks": [
@@ -600,7 +604,7 @@
         {"id": "L2.ENUMERATION", "title": "Complete two-loop contribution enumeration", "status": "done", "evidence": ["docs/TWO-LOOP-DERIVATION.md", "docs/TWO-LOOP-ENUMERATION.md", "QED/Frozen/TwoLoop/OnePIFunction.lean", "QED/TwoLoop/RelabelInvarianceOrderFive.lean", "QED/TwoLoop/FurryPair.lean", "QED/TwoLoop/IntegrableOrderFive.lean"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L2.RENORMALIZATION", "title": "Subtractions, counterterms, and cancellations", "status": "done", "evidence": ["QED/Frozen/TwoLoop/WardIdentity.lean", "QED/TwoLoop/CountertermScaling.lean", "QED/TwoLoop/UnitSCCloseIR.lean", "QED/TwoLoop/UnitSCCtHalf.lean", "docs/TWO-LOOP-UNITS.md"], "validation": "docs/campaign/STATUS.md"},
         {"id": "L2.COEFFICIENT", "title": "Complete coefficient and certified evaluation", "status": "done", "evidence": ["QED/Frozen/TwoLoop/A1Four.lean", "QED/Frozen/TwoLoop/A1FourBounds.lean", "QED/TwoLoop/HeadlineAssemblyUnits.lean", "docs/TWO-LOOP-UNITS.md"], "validation": "docs/campaign/STATUS.md"},
-        {"id": "L2.ASSEMBLY", "title": "Complete theorem assembled, audited, and reproducible", "status": "in_progress", "evidence": ["QED/Frozen/TwoLoop/VertexOrderFivePauliLimit.lean", "QED/Frozen/TwoLoop/JointEnergyFirstIntegrableVertexOrderFive.lean", "QED/Provider/TwoLoop/VertexOrderFivePauliLimit.lean", "docs/campaign/DECISIONS.md"]}
+        {"id": "L2.ASSEMBLY", "title": "Complete theorem assembled, audited, and reproducible", "status": "in_progress", "evidence": ["QED/Frozen/TwoLoop/VertexOrderFivePauliLimit.lean", "QED/Frozen/TwoLoop/JointEnergyFirstIntegrableVertexOrderFive.lean", "QED/Provider/TwoLoop/VertexOrderFivePauliLimit.lean", "QEDChallengeTwoLoop.lean", "QEDSolutionTwoLoop.lean", "challenges/two-loop/comparator.json", "docs/campaign/DECISIONS.md"]}
       ]
     },
     {

@@ -2128,3 +2128,46 @@ two-loop LSZ or Landé-factor theorem is future work.
 **Remaining for L2.ASSEMBLY:**
 - the two-loop Comparator challenge, with (HV₃), (HV₀) and (U₂);
 - a fresh-checkout rebuild.
+
+## D-47. Comparator runs: the two-loop challenge, and the one-loop challenge repaired
+
+**Status.** Record; the author approved running the Comparator on
+2026-11-18 ("yes run the comparator").
+
+**Two-loop challenge** (`QEDChallengeTwoLoop.lean`, `QEDSolutionTwoLoop.lean`,
+`challenges/two-loop/comparator.json`; commit c5c8473). The Challenge imports
+only Mathlib (941 lines). Its theorems:
+- (HV₃);
+- (HV₀);
+- (U₂);
+- a non-vacuity corollary `exists_pauliVillars_regulators`: admissible
+  regulator masses and coefficients exist above every threshold;
+- the three existence theorems (Z₁), (Z₂), (E), whose choices define
+  compared values.
+
+The Solution repeats the Challenge's declarations verbatim and proves each
+theorem from the library.
+
+**One-loop challenge drift.** A library module added since the one-loop seal
+imports `Mathlib.Analysis.CStarAlgebra.Classes`, which changes the instance
+path Lean selects for ℂ in every module importing `QED`. The one-loop
+Challenge then no longer matched its Solution. Adding that import to
+`QEDChallenge.lean` repairs it; the statements are unchanged. Re-run both
+comparators whenever the library's import closure changes.
+
+**Runs.** Both used `lake comparator` with a Palomar-style config: external
+kernels con-ron and NanoDa, plus Lean's kernel. Each ran at commit c5c8473 on
+a clean tree, niced and pinned to three cores.
+
+| Challenge | Challenge sha256 | Solution sha256 | con-ron | NanoDa, Lean kernel | Time | Peak RSS |
+| --- | --- | --- | --- | --- | --- | --- |
+| Two-loop | b4a3a273…7cfabf | 28dc580a…23b012 | accepted 71,746 declarations | accept | 20 min 28 s | 3.7 GB |
+| One-loop | 44352749…037924 | 34a8c4d6…a8724b75d | accepted 56,067 declarations | accept | 2 min 20 s | 0.9 GB |
+
+Both runs end with "Your solution is okay!".
+
+**Guard.** `scripts/check_frozen_anchors.py` now also recognises the
+Challenge modules named by `challenges/*/comparator.json`. Negative controls
+still fail: a `sorry` in another file, and an import of a Challenge.
+
+**Remaining for L2.ASSEMBLY:** a fresh-checkout rebuild.
