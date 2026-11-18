@@ -493,6 +493,10 @@
     {
       "date": "2026-11-18",
       "change": "S + C link, stage 1: the trace identities and class-value formulas proved for S+, S-, C+, C- (Dirac traces in the planar subalgebra, a general vertex-family double pattern, C- from C+ by charge-conjugation reversal at trace level). The reductions, counterterm halves and the joint limit remain."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "X unit link reduced to the xi-integration: the joint regulator limit proved by dominated convergence (a bound on the crossed integrand certified by 420 kernel-checked weighted AM-GM certificates), the w- and b-integrations give Phi_X in closed form and the representation (4.4), and the change to (Y, xi); the link follows from the single identity that the xi-integral of Phi_X is the proved kernel K_X."
     }
   ],
   "tracks": [

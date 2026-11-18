@@ -68,8 +68,11 @@ kernels (the $x$- and $\xi$-integrations) are symbolic computations, and the lin
 **X link (2026-11-18).** The model's X unit is proved equal to an explicit iterated integral in
 the hierarchical variables of section 2 (`QED/TwoLoop/UnitXGraph*.lean`,
 `sixteen_pi_pow_four_mul_unitF2_X_eq_iterated`, at $m=e=1$, $0<m_\gamma<\Lambda$), whose $\lambda=0$,
-$\Lambda=\infty$ term is exactly the integrand behind (4.1)/(4.4). The regulator limit and the
-outer integrations of 4.2 and the $\xi$-integration to $K_{\rm X}$ remain.
+$\Lambda=\infty$ term is exactly the integrand behind (4.1)/(4.4). The joint regulator limit is
+proved by dominated convergence with a bound certified monomial by monomial (420 weighted AM–GM
+certificates, kernel-checked), and the $w$- and $b$-integrations give $\Phi_{\rm X}$ in closed form
+and (4.4) (`QED/TwoLoop/UnitXClose*.lean`). The X link now reduces to one statement, the
+$\xi$-integration of 4.5.2 (`xUnitLimit_of_kernel`).
 
 **S + C link, stage 1 (2026-11-18).** The pointwise trace identities and class-value formulas
 are proved for S₊, S₋, C₊, C₋ (`QED/TwoLoop/UnitSCGraph*.lean`, `openZero_Sp_eq`, `openZero_Sm_eq`,

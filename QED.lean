@@ -125,6 +125,8 @@ public import QED.TwoLoop.UnitVPClose
 public import QED.TwoLoop.MassScalingClose
 public import QED.TwoLoop.HeadlineAssembly
 public import QED.TwoLoop.UnitXGraphReduceChengWu
+public import QED.TwoLoop.UnitXCloseYXi
+public import QED.TwoLoop.UnitXCloseDilog
 public import QED.TwoLoop.UnitSCGraphSpMain
 public import QED.TwoLoop.UnitSCGraphSmMain
 public import QED.TwoLoop.UnitSCGraphCpMain
