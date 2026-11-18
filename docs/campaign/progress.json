@@ -325,6 +325,10 @@
     {
       "date": "2026-11-18",
       "change": "O2-2 completed: the counterterm contractions are relabellings across kind sequences of seven class representatives, with value invariance for connected contractions with conserved momenta (momentum-dependent counterterm vertex factors included); under momentum conservation the order-e^5 1PI vertex is the sum of 7 + 7 class representatives with coefficient one (Furry pair cancelled)."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Parametric representation with loop-momentum numerators of degree <= 2 proved (O2-10/O2-11 infrastructure): energy and 6D spatial second moments, and for N >= 6 lines with spanning loop coefficients, U^-2 and tr(A) U^-3 integrable on the simplex (the latter an explicit hypothesis, expected from a four-lines-per-subloop criterion not yet proved), J[P prod D^-1] = -pi^4 times the simplex integral of U^-2 [(N-5)! (V-i eps)^(4-N) P(-S) + (N-6)!/2 (V-i eps)^(5-N) contraction]. Degree 3-4 (the QED vertex) remains."
     }
   ],
   "tracks": [
