@@ -3,16 +3,19 @@
 [Campaign HQ](../README.md) · [Two-loop derivation](TWO-LOOP-DERIVATION.md) ·
 [Decisions](campaign/DECISIONS.md)
 
-**Status (2026-11-17):** obligation O2-2 (section 3 of
+**Status (2026-11-18):** obligation O2-2 (section 3 of
 [TWO-LOOP-DERIVATION.md](TWO-LOOP-DERIVATION.md)), combinatorial part, proved in Lean at
-fixed parameters, modulo one analytic statement that is *not* proved (the relabelling
-invariance of the contraction value, below). Not reviewed; nothing here is frozen.
+fixed parameters. The relabelling invariance of the contraction value is also proved, so
+each of the nine classes of five gauge vertices enters with coefficient one, under momentum
+conservation (section 3, item 1). The counterterm contractions are not yet grouped into
+classes (section 3, item 2). Not reviewed; nothing here is frozen.
 
 The object is the order-exactly-5 part of the frozen two-loop 1PI function (T₁₁, D-38) for
 the vertex, $n_f=n_A=1$:
-`onePIFunction₂ P 1 1 5 … − onePIFunction₂ P 1 1 4 …`, the (P₁) vertex of candidate packet
-T3. It sums, over $N$, the kind sequences $\kappa:\mathrm{Fin}\,N\to$ `VertexKind` of total
-order exactly 5 and their 1PI contractions, each with $1/N!$ and its fermionic sign.
+`onePIFunction₂ P 1 1 5 … − onePIFunction₂ P 1 1 4 …`, the (HV₁) vertex of packet T3 (frozen
+provisionally, D-41). It sums, over $N$, the kind sequences
+$\kappa:\mathrm{Fin}\,N\to$ `VertexKind` of total order exactly 5 and their 1PI
+contractions, each with $1/N!$ and its fermionic sign.
 
 ## 1. Inventory
 
@@ -29,7 +32,8 @@ and the loop counts are from the script only, except that the kernel also checks
 fixed-point-free involution, so the number of vertex photon fields
 $n_g+n_C+2n_p$ must be odd. It has the parity of the order $n_g+3n_C+2n_f+2n_p$, so with one
 external photon every contributing term has odd order; sequences of order 2 or 4 have no
-contraction at all (checked by the script).
+contraction at all. This is checked by the Python script only, not by the kernel; the Lean
+proof does not need it, since it sums only the sequences of order exactly 5.
 
 There are 28 sequences of order exactly 5:
 
@@ -157,9 +161,10 @@ addressed.
    integer change of the loop momenta plus a shift (`QED/TwoLoop/RoutingChange.lean`,
    `LineCorr.exists_routing_change`, O2-5 (ii)); the amplitudes agree under the line
    correspondence, including the flavour weights of closed loops; and the joint prescription
-   is invariant under such maps for every integrand. Momentum conservation is needed: without
-   it the routing is not conserved and depends on the orientation of photon lines, which
-   relabelling changes. Consequently, with momentum conservation, the order-5 vertex is
+   is invariant under such maps for every integrand. Momentum conservation is needed, by the
+   following argument (not a Lean theorem): without it the routing is not conserved and
+   depends on the orientation of photon lines, which relabelling changes. Consequently, with
+   momentum conservation, the order-5 vertex is
    `∑ c, sign c * contractionValue₂ P c.rep …` plus the counterterm terms, with coefficient one
    per class (`QED/TwoLoop/RelabelInvarianceOrderFive.lean`,
    `onePIFunction₂_five_sub_four_eq`).
@@ -183,6 +188,7 @@ addressed.
 python3 scripts/numerics/two_loop_enumeration.py          # inventory table, < 1 s
 python3 scripts/numerics/two_loop_enumeration_lean.py > QED/TwoLoop/EnumerationCounterterm.lean
 lake build QED.TwoLoop.EnumerationOrderFive
+python3 scripts/numerics/two_loop_crosschecks.py furry   # charge conjugation, numerically, < 1 s
 ```
 
 Measured on lemma.farm (niced, shared machine, 2026-11-17), with a watchdog at 8 GB:

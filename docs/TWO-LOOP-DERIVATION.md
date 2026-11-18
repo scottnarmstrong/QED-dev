@@ -213,6 +213,22 @@ tree; a closed loop gives $-1$ (X₅).
   combinatorics, moderate size (the review notes that the cost of deciding the
   classification in Lean at $N=5$ may push it higher). Source: Srednicki ch. 58 rules;
   BMR-I Fig. 2; AKN Fig. 2 (seven vertex diagrams).
+  **Status (2026-11-18): combinatorics proved; counterterm grouping open**
+  (`QED/TwoLoop/Enumeration*.lean`, `RelabelInvariance*.lean`; method and inventory in
+  [TWO-LOOP-ENUMERATION.md](TWO-LOOP-ENUMERATION.md)).
+  `QED.TwoLoop.Enumeration.onePIFunction₂_five_sub_four`, at every `P` and all external data,
+  writes the order-exactly-5 part as an explicit finite sum: the nine classes of five gauge
+  vertices, each summed over the $5!$ relabellings of its representative and divided by $5!$,
+  plus the listed 1PI contractions with one counterterm vertex, divided by $N!$ (kernel
+  checks). Relabelling invariance `QED.TwoLoop.Relabel.contractionValue₂_relabel` assumes
+  connected vertices (X₁₇) and external momenta summing to zero. For 1PI contractions,
+  `contractionValue₂_relabel_of_isOnePI` assumes momentum conservation only, since 1PI gives
+  connectedness and attached externals. Hence coefficient one per class with its sign,
+  `QED.TwoLoop.Relabel.onePIFunction₂_five_sub_four_eq`, under momentum conservation
+  `pOut 0 = pIn 0 + kIn 0`. That the conservation hypothesis cannot be dropped is argued (the
+  routing is not conserved without it), not proved. Open: grouping the counterterm
+  contractions into the six classes of 3.2 with coefficient one (relabelling across kind
+  sequences).
 - **O2-3 (Furry pair).** The two flavour-summed orientations of the three-vertex loop cancel
   at fixed $\varepsilon$. Per-flavour values are not objects of the model: X₂₆ sums the
   flavours inside the integrand. Proof: charge conjugation, $C\gamma^\mu C^{-1}=-\gamma^{\mu T}$,
@@ -221,7 +237,17 @@ tree; a closed loop gives $-1$ (X₅).
   invariance of the two-loop prescription (O2-6) on integrable data. Integrability needs the
   flavour sum: one flavour's triangle decays like $|\ell|^{-3}$, and with
   $\sum c_f=\sum c_fM_f^2=0$ the sum decays like $|\ell|^{-7}$ (power counting, section 4.1).
-  Theorem; low–moderate risk.
+  Theorem; low–moderate risk. **Status (2026-11-18): proved**
+  (`QED/TwoLoop/FurryPair.lean`, with `QED/Algebra/ChargeConjugation.lean`).
+  `QED.TwoLoop.Furry.furry_pair` holds under momentum conservation `pOut 0 = pIn 0 + kIn 0`,
+  at every parameter set (so at every fixed $\varepsilon$) and all external indices: the values
+  of F₊ and F₋ sum to zero. The connectedness that the routing change needs comes from the
+  kernel-checked 1PI property of the two representatives. The proof needs no integrability.
+  The amplitudes are related pointwise, flavour by flavour, by $C=\gamma^0\gamma^2$, and the
+  joint prescription respects the integer unimodular change and the negation for every
+  integrand. Consequence: `onePIFunction₂_five_sub_four_eq_furry`, the seven classes L, X,
+  C±, S±, VP plus the counterterm contractions. Numerical replay of the charge-conjugation
+  identities: `python3 scripts/numerics/two_loop_crosschecks.py furry`.
 - **O2-4 (tadpoles).** Tadpoles do not enter the 1PI function. For the connected and LSZ
   functions they vanish at fixed $\varepsilon$: the flavour-summed loop integrand
   $\sum_fc_f\,\mathrm{tr}[\gamma^\mu\tilde S_f(\ell)]$ is odd in $\ell$ and decays like
@@ -274,6 +300,23 @@ convergent. Two side remarks that may simplify proofs:
   Definition and theorems; moderate (graph combinatorics in the frozen `Joined` and
   `IsBridge` vocabulary). Source: Srednicki rule 8, p. 349; CK-R (11)–(16), p. 3980–3981
   (circuit matrix, incidence matrix).
+  **Status (2026-11-18): (i)–(iii) proved** for the frozen routing `lineMomentum₂` (T₄).
+  (i) `QED/TwoLoop/Routing.lean`. Uniqueness, `QED.TwoLoop.Routing.eq_lineMomentum₂_of_isConserved`,
+  needs no connectedness and no condition on the external momenta. Conservation,
+  `QED.TwoLoop.Routing.isConserved_lineMomentum₂`, assumes connected vertices (X₁₇) and
+  external momenta summing to zero.
+  (ii) `QED/TwoLoop/RoutingChange.lean`, `QED.TwoLoop.Relabel.LineCorr.exists_routing_change`.
+  It applies to two contractions whose lines correspond under a bijection of the vertices, up
+  to orientation, which is how the chords change under relabelling. Both must have connected
+  vertices and equal loop counts, and their external momenta must match vertex by vertex and
+  sum to zero. Then the pulled-back routing is `lineMomentum₂ C (M ℓ + a)` with `M` an integer
+  matrix with `IsUnit M.det`.
+  (iii) `QED/TwoLoop/LoopBoundTwo.lean`, `LoopBoundTwoExact.lean`. The bound
+  `QED.TwoLoop.LoopBoundTwo.loopCount_le_two_of_order` holds for 1PI contractions of total
+  order at most $K\le2n_f+n_A+3$. The exact formula
+  `QED.TwoLoop.LoopBoundTwo.two_mul_loopCount_add_eq`,
+  $2L+2n_f+n_A=V_3+2$, assumes attached externals (X₁₆), connected vertices (X₁₇) and
+  $N\ge1$.
 
 ### 4.3 The two-loop energy-first prescription
 
@@ -317,6 +360,13 @@ $|t|^{-12}$ overall.
   on integrable data it is invariant under integer unimodular changes of $(\ell_1,\ell_2)$
   that act equally on energies and space, under real shifts, and under the reflection
   $\ell\mapsto-\ell$. Definition (meaning-carrying, needs approval) and theorems; low–moderate.
+  **Status (2026-11-18): proved.** The definition is the frozen `jointEnergyFirstIntegral`
+  (T₉) of packet T1 (D-38). The invariances are in `QED/TwoLoop/JointIntegralInvariance.lean`:
+  `QED.TwoLoop.JointIntegralInvariance.jointEnergyFirstIntegral_comp_add` (real shifts),
+  `jointEnergyFirstIntegral_comp_matrix` (integer `M` with `IsUnit M.det`, acting equally on
+  energies and space), `jointEnergyFirstIntegral_comp_neg` and
+  `jointEnergyFirstIntegral_comp_matrix_add`. They hold for every integrand, with no
+  integrability hypothesis: on non-integrable data both sides are 0.
 - **O2-7 (well-definedness).** For each class of 3.1–3.2, with $m,m_\gamma,\Lambda>0$,
   $M_f>m$, the Pauli–Villars conditions, on-shell positive-energy $p,p'$ and $q^2\ge0$:
   the inner energy integral and the outer spatial integral are integrable for every
@@ -364,6 +414,44 @@ matrix independently (section 10).
   The degenerations $U\to0$ at the simplex faces are exactly the UV subdivergences (CK-UV
   (2.3), (2.11), p. 3992–3993); at fixed $\Lambda,M_f$ the regulators make them integrable,
   but only after the Pauli–Villars pairs are combined (or rewritten as in 4.1).
+  **Status (2026-11-18): proved for scalar propagators, at helper level.** These are not yet
+  statements about the model's contraction values: numerators (O2-11), the Pauli–Villars-combined
+  integrands and the link to `lineMomentum₂` remain.
+  - 2D energy formula of 4.3: `QED.Integration.TwoLoop.integral_inv_neg_quadratic_add_pow`,
+    with integrability (`QED/Integration/TwoLoopEnergyIntegral.lean`), for $A$ positive
+    definite $2\times2$, $\operatorname{Im}w<0$, $n\ge2$.
+  - General Feynman formula: `QED.Integration.Feynman.prod_inv_eq_factorial_mul_integral_simplex`
+    (`FeynmanParameterGeneral.lean`), for factors in the open lower half plane.
+  - 6D spatial formula, previously recalled: `QED.Integration.Spatial.integral_inv_quadForm_add_pow`
+    (`SpatialIntegralSix.lean`), for $k\ge4$, $A$ positive definite, $w$ off the closed
+    negative real axis.
+  - Scalar parametric representation:
+    `QED.Integration.TwoLoop.jointEnergyFirstIntegral_prod_inv_lineDenom`
+    (`TwoLoopParametric*.lean`). It covers $N=m+1\ge5$ scalar propagators
+    $k_i\cdot k_i+M_i^2-i\varepsilon$ with line momenta $\sum_s\alpha_{is}\ell_s+p_i$, at
+    $\varepsilon>0$. It assumes spanning loop coefficients (two independent $\alpha_i$) and
+    $U^{-2}$ integrable on the simplex. Both stages of the joint integral are then integrable,
+    and the value is $-\pi^4(N-5)!\int_\Delta U^{-2}(V-i\varepsilon)^{4-N}$.
+  - Integrability criterion (`SymanzikIntegrability.lean`,
+    `SymanzikIntegrabilityParametric.lean`). `integrableOn_inv_sq_symanzikU_of_criterion`
+    gives $U^{-2}$ integrable under the no-subdivergence criterion `NoSubdivergence α`:
+    every line has at least three lines not parallel to it. The corollary
+    `jointEnergyFirstIntegral_prod_inv_lineDenom_of_noSubdivergence` replaces the two
+    hypotheses on $U$ by the criterion. For the energy step, `integral_prod_lineDenom_eq_of_span`
+    needs only the spanning condition. The criterion is proved sufficient; its necessity is not
+    proved, and the only evidence for it is a Monte Carlo check.
+  - Classes (`SymanzikIntegrabilityClasses.lean`). The loop matrices `class5LoopMatrix c` are
+    integer routings written for that file, not `lineMomentum₂`. That they are loop matrices
+    of the class representatives is checked numerically only
+    (`scripts/numerics/two_loop_positivity.py`). With one denominator per line, L, X, C±, F±
+    satisfy the criterion and S±, VP do not (`noSubdivergence_loopMatrix`,
+    `not_noSubdivergence_loopMatrix`). With each photon line doubled (`class5LoopMatrixPV`),
+    every class but VP satisfies it. VP satisfies it once its bubble lines are doubled too
+    (`loopMatrixVPBubble`). The doubled-line forms are assumed shapes of the
+    Pauli–Villars-combined integrands for S± and VP; they are not derived from the model.
+
+  Numerical replay: `python3 scripts/numerics/two_loop_crosschecks.py energy2d`, `feynman`,
+  `param`, `criterion`.
 - **O2-11 (numerator algebra and projection to $F_2$).** The parametric numerator of each
   class: the loop momenta in the numerator replaced by contractions in the $B_{ij}$ and the
   powers of $V$ lowered accordingly (CK-R rule 6, (7), (37); AKN (64)–(65)); and a
@@ -381,10 +469,21 @@ matrix independently (section 10).
   **moderate–high risk**: a uniform lower bound, including at faces where $U\to0$, is
   unproved and has not been located in a pinned source. O2-22 needs it uniformly for small
   $q^2\ge0$. **Status:** numerically positive for all nine classes, with minimum
-  $m_\gamma^2(1-m_\gamma^2/4m^2)$ approached along edges where $U\to0$, and nondecreasing in $q^2$;
-  **proved for L and X** at every spacelike $q^2$ (`QED/Integration/SymanzikPositivity.lean`,
-  current-fraction form of CK-UV), for the loop matrices of the class representatives. The
-  other classes remain.
+  $m_\gamma^2(1-m_\gamma^2/4m^2)$ approached along edges where $U\to0$, and nondecreasing in $q^2$
+  (`scripts/numerics/two_loop_positivity.py`);
+  **proved for L and X, at helper level** (`QED/Integration/SymanzikPositivity.lean`,
+  current-fraction form of CK-UV). The statements are
+  `QED.Integration.TwoLoop.le_symanzikV_classL` ($V\ge m^2E^2+m_\gamma^2(1-E)$),
+  `le_symanzikV_classX` ($V\ge m^2E^2/4+m_\gamma^2(1-E)$), with $E$ the electron-line weight,
+  and the uniform forms `symanzikV_classL_ge`, `symanzikV_classX_ge`, `symanzikV_classL_pos`,
+  `symanzikV_classX_pos` (the last two for $m,m_\gamma\ne0$). They hold for the per-class
+  loop matrices `loopMatrixL`, `loopMatrixX` (that is, `class5LoopMatrix .L`, `.X`; see O2-10
+  on how these were matched to the representatives) and the line momenta `classLXMomenta`.
+  They assume photon masses
+  $\lambda_i^2\ge m_\gamma^2$, on-shell $p\cdot p=p'\cdot p'=-m^2$ and $q\cdot q\ge0$, and
+  hold at every point of the simplex with $U(z)\ne0$. The hypothesis $U\ne0$ is needed because
+  `symanzikV` takes a junk value at $U=0$. The other classes, and the use of the bound in the
+  $\varepsilon\to0^+$ limit (O2-7, O2-22), remain.
 
 ## 5. Stage 3 — Subtraction at fixed regulators
 
@@ -435,13 +534,13 @@ on the mirror-closed units of 5.2 it is the Pauli component of (G₀).
   on shell (Z₅) and the charge condition (K₀) holds, then $\delta_1^{(2)}=\delta_2^{(2)}$. (The premise
   $e\ne0$ is needed: at $e=0$ every $Z_1$ satisfies (K₀) while $\delta_2=0$.) **Proved**
   (`QED/TwoLoop/WardIdentity.lean`), on the $\varepsilon=0$ parametric closed forms, separately
-  for each Pauli–Villars term. Proof
-  route: the differential identity $\partial\tilde S/\partial p_\mu=-\tilde S\gamma^\mu\tilde S$,
-  differentiation under the one-loop integral, and the relation of the $q\to0$ vertex to
-  $\partial\Sigma/\partial p$. At $\varepsilon>0$ the identity has an $O(\varepsilon)$
+  for each Pauli–Villars term; the proof uses those closed forms only. The original plan was a
+  different route: the differential identity
+  $\partial\tilde S/\partial p_\mu=-\tilde S\gamma^\mu\tilde S$, differentiation under the
+  one-loop integral, and the relation of the $q\to0$ vertex to $\partial\Sigma/\partial p$.
+  At $\varepsilon>0$ that identity has an $O(\varepsilon)$
   defect, since $\tilde S_\varepsilon^{-1}=(\not p+m)(p^2+m^2-i\varepsilon)/(p^2+m^2)$ is not
-  affine in $p$; it is therefore proved in the $\varepsilon\to0^+$ limit, or directly on the
-  parametric closed forms. Only the
+  affine in $p$, so that route would work only in the $\varepsilon\to0^+$ limit. Only the
   photon line is regulated, and the identity holds line by line on electron lines, so the
   Pauli–Villars photon preserves it (REGULARIZATION.md, route B row). Theorem; moderate.
   Source: Srednicki (68.13) (statement); AKN (29)–(30) and AHKN (4.29)–(4.30) (the
@@ -478,6 +577,20 @@ With O2-15, the $\delta$-terms reduce to $d_1F_2^{(2)}+(d_2-d_m)F_2^*-d_3F_2^{(\
   is a choice to be settled, with the author and the reviewers, when the declarations are
   drafted. Theorem; low for items 1–2 (linear algebra on the frozen existence and uniqueness
   theorems), moderate for item 3.
+  **Status (2026-11-18): items 1–2 proved for the vertex function; item 3 not addressed**
+  (`QED/TwoLoop/CountertermScaling.lean`). The standing hypotheses are $m,m_\gamma,\Lambda>0$,
+  $M_1,M_2>m$, the two Pauli–Villars conditions and $e\ne0$.
+  - Item 1: `QED.TwoLoop.Scaling.counterterms_eq_sq_mul`. If the counterterms of `P` satisfy
+    (Z₅), (Z₈) and (K₀) at charge $e$, and $d_1,d_2,d_m,d_3$ satisfy the same conditions at
+    charge 1, then $\delta_i=e^2d_i$ for each $i$. Conversely, $e^2$ times admissible
+    counterterms at charge 1 is admissible at charge $e$ (`isElectronOnShell_scale`,
+    `isPhotonOnShell_scale`, `isChargeNormalized_scale`).
+  - Item 2, for the vertex function: `QED.TwoLoop.Scaling.onePIFunction₂_succ_sub`. With
+    $\delta_i=e^2d_i$, the part of total order exactly $K+1$ is $e^{K+1}$ times its value at
+    $e=1$. `onePIFunction₂_five_sub_four_of_conditions` states this at order 5 under the
+    frozen conditions.
+
+  The statement about the Pauli form factor in item 2 needs the order-5 form factors (O2-21).
 
 ### 5.2 Units and their UV cancellation
 
@@ -560,8 +673,12 @@ source: the decision record).
   (numerics: 40 digits). The inner integral is the one-loop $F_2/r$ with photon mass
   $\lambda$, $\lambda^2/m^2=4/(1-v^2)$; it is the same function as $C_1$ in
   REGULARIZATION.md section 6. BMR-II (1.1)–(1.10), p. 868–869, derives the same value
-  dispersively (source). The exact evaluation needs only $\zeta(2)$. **Both the limit value and the
-  spectral identity are proved** (`QED/TwoLoop/VacuumPolarizationUnit.lean`).
+  dispersively (source). The exact evaluation needs only $\zeta(2)$. **Proved**
+  (`QED/TwoLoop/VacuumPolarizationUnit.lean`): the evaluation of the explicit double integral
+  above, $=\frac{119}{36}-\frac{\pi^2}3$ (`QED.TwoLoop.VPUnit.integral_vpUnit`), and the
+  spectral identity for $M\ne0$, $k^2>-4M^2$
+  (`QED.TwoLoop.VPUnit.integral_mul_log_eq_spectral`). That this double integral is the limit
+  of the model's VP unit is not proved; it remains O2-8, O2-10 and O2-13.
 - **O2-19 (regulator-fermion decoupling).** By D-37.4 the masses $M_1,M_2$ are removed
   last, after $q^2\to0^+$ and after $m_\gamma\to0$, $\Lambda\to\infty$ at fixed $M_f$. So the
   object is the already-limited VP-unit contribution of one flavour of squared mass $\mu$,
@@ -587,14 +704,19 @@ source: the decision record).
   $\Lambda\to\infty$ limit of the whole regulated $F_2^{(4)}(0)$ at fixed $M_f$ (O2-23) must
   split as the $M_f$-independent units plus $c_1g(M_1^2)+c_2g(M_2^2)$, so that $M_f$ enters
   the inner limit only through the VP unit. Theorem; moderate, lower than under a joint limit.
+  **Proved at helper level** for the explicit finite-regulator VP value of the numerical
+  model (`QED/TwoLoop/VacuumPolarizationUnitLimit.lean`, electron mass $m=1$), not for the
+  model's VP unit (that identification is O2-8, O2-10, O2-13). The $(m_\gamma,\Lambda)$-limit of
+  the explicit value exists at fixed $M_1,M_2\ne0$, as a joint limit
+  (`QED.TwoLoop.VPUnit.tendsto_vpUnitReg`). Pointwise in the parameters the Pauli–Villars sum
+  is a second divided difference, which bounds this limited explicit value:
+  $|\cdot-(119/36-\pi^2/3)|\le(M_1^{-2}+M_2^{-2})/45$ for $M_1,M_2\ge m$, with no constraint
+  on $M_2/M_1$ (`QED.TwoLoop.VPUnit.abs_vpLimSum_sub_le`; the limit $M_1,M_2\to\infty$ is
+  `tendsto_vpLimSum`, the D-37.4 order `vpUnitReg_iterated_limit`). No derivative bound is
+  needed.
 
 ### 5.4 Form factors at order 5
 
-  **Proved at helper level** for the explicit finite-regulator VP value
-  (`QED/TwoLoop/VacuumPolarizationUnitLimit.lean`): pointwise in the parameters the
-  Pauli–Villars sum is a second divided difference, which gives the bound
-  $|\cdot-(119/36-\pi^2/3)|\le(M_1^{-2}+M_2^{-2})/45$ for $M_1,M_2\ge1$ with no constraint on
-  $M_2/M_1$; no derivative bound is needed.
 - **O2-20 (covariance).** After $\varepsilon\to0^+$, at fixed regulators, the value of each
   unit at on-shell $(p,p')$ is Lorentz covariant. This is not free: the energy-first
   prescription singles out a frame, and its value at $\varepsilon>0$ is frame-dependent.
@@ -748,6 +870,15 @@ polylogarithm or Nielsen function**, and no closed form is expected for $\zeta(3
   $\int_0^1\ln x\ln(1+x)\,dx/x=-\tfrac34\zeta(3)$. The values at $\tfrac12$ and the last
   integral are checked numerically (section 10); the identities are classical (**recalled**).
   Infrastructure; moderate (FTC with singular endpoints, Abel summation at $x=\pm1$).
+  **Status (2026-11-18): proved for the listed values and identities** (`QED/Polylog/`).
+  $\mathrm{Li}_2,\mathrm{Li}_3$ and $\zeta(3)$ are defined as series, with
+  `QED.Polylog.riemannZeta_three` linking $\zeta(3)$ to Mathlib. The values are `Li₂_one`,
+  `Li₂_neg_one`, `Li₃_one`, `Li₃_neg_one`, `Li₂_one_half` and `Li₃_one_half`. The reflection
+  `Li₂_add_Li₂_one_sub` holds on $[0,1]$, and the integral is
+  `integral_log_mul_log_one_add_div`. The Landen identities
+  `Li₂_one_sub_inv_add_Li₂_one_sub` and `Li₃_add_Li₃_one_sub_add_Li₃_one_sub_inv` are proved
+  on $[\tfrac12,1]$ only, where every argument lies in $[-1,1]$. Further integrals that the
+  reduction of O2-25 produces remain.
 - **O2-25 (exact values of the units).** Prove the limits, at $q^2=0$ (after O2-22),
   $$\mathrm X\to\tfrac16-5\zeta(2)\ln2+\tfrac{13}6\zeta(2)+\tfrac54\zeta(3),\qquad
   \mathrm L\to\tfrac{11}{48}+\tfrac13\zeta(2),$$

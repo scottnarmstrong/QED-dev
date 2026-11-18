@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-09",
+  "updated": "2026-11-18",
   "history": [
     {
       "date": "2026-11-07",
@@ -313,6 +313,10 @@
     {
       "date": "2026-11-17",
       "change": "Positivity of V (O2-12): numerically V >= m_gamma^2 (1 - m_gamma^2/4m^2) on the simplex for all nine order-e^5 classes and every q^2 >= 0 tested (V is nondecreasing in q^2); proved in Lean for the ladder and crossed classes at every spacelike q^2, V >= m^2 E^2 (resp. m^2 E^2/4) + m_gamma^2 (z4 + z5) wherever U != 0, for the loop matrices of the class representatives. The other classes and the use in the epsilon -> 0+ limit remain."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Correction record (D-42): an independent audit of the 2026-11-17 prose found no wrong mathematics and no claim of an unproved result; the earlier entries are left as written and are corrected here. (1) The VP value 119/36 - pi^2/3 is the evaluation of an explicit double integral, at helper level; that it is the limit of the model's VP unit remains O2-8, O2-10, O2-13. (2) Momentum conservation for relabelling invariance is argued to be needed, not shown necessary in Lean. (3) Relabelling invariance needs connected vertices and external momenta summing to zero (for 1PI contractions, momentum conservation). (4) Integrability classes: the class loop matrices are integer routings written for that file, not lineMomentum2, matched to the representatives numerically only; the doubled-line forms for S+- and VP are assumed shapes of the Pauli-Villars-combined integrands, not derived; necessity of the criterion is not proved. (5) The no-subdivergence criterion replaces the U hypotheses of the parametric representation; it does not remove them. (6) The exact loop formula 2 loopCount + 2nf + nA = V3 + 2 also needs attached externals and N >= 1. (7) The VP decoupling bound (1/M1^2 + 1/M2^2)/45 needs M_f >= m. (8) The Landen identities are proved on [1/2, 1]. (9) The scalar parametric representation needs spanning loop coefficients (two independent alpha_i). Replay scripts for the numerical cross-checks: scripts/numerics/two_loop_crosschecks.py."
     }
   ],
   "tracks": [

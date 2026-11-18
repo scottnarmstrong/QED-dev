@@ -72,7 +72,7 @@ The longer-term milestone lists will be refined as their sources and statements
 become precise; changes to their scope must be recorded.
 
 <!-- HQ:progress:start -->
-**Ledger updated:** 2026-11-09. Only milestones marked `done` contribute to the meters.
+**Ledger updated:** 2026-11-18. Only milestones marked `done` contribute to the meters.
 
 | Workstream | Complete | Milestone meter | State |
 | --- | ---: | --- | --- |
@@ -128,8 +128,11 @@ does not complete that chain.
    inputs and the required non-QED contributions to support an experimental test.
 
 The [outline](docs/PROJECT-OUTLINE.md) gives the scope, stages, proposed module
-areas, completion criteria, and initial sources. These are planning targets;
-none is an approved or frozen Lean declaration yet.
+areas, completion criteria, and initial sources. These are planning targets, not Lean
+declarations. The exact Lean statements are fixed stage by stage: those of the one-loop
+result are approved and frozen; for two loops, the model is approved and frozen, and the
+target constant, the one-loop Ward identity and the headline statement are frozen
+provisionally, pending the author's approval (decisions D-39 to D-41).
 
 ## What a result certifies
 
@@ -234,9 +237,11 @@ python3 scripts/frozen_abi.py --check        # elaborated ABI hashes of frozen e
 ```
 
 `lake build` prints no warnings. The frozen-anchor guard fails on any `sorry`
-not registered as a `DRAFT_SORRY` body (none is registered at present), on any
-change to frozen bytes, on a sealed body other than `by exact <provider export>`,
-and on any import of a draft anchor or its provider outside the allowlist.
+not registered as a `DRAFT_SORRY` body, on any change to frozen bytes, on a sealed
+body other than `by exact <provider export>`, and on any import of a draft anchor or
+its provider outside the allowlist. One `DRAFT_SORRY` body is registered at present:
+the statement of the two-loop headline theorem, frozen provisionally pending the
+author's approval (decision D-41).
 
 Every regular `.lean` file must be a Lean module. Landings run the
 `lean-project-architecture` skill's `check_lean_modules.py --root .`. On this

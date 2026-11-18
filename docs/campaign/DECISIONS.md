@@ -1781,7 +1781,9 @@ checked:
 
 - the source, and the normalization δᵢ = Zᵢ − 1;
 - that each hypothesis is necessary: Lean counterexamples without `he`,
-  without (Z₅) and without (K₀);
+  without (Z₅) and without (K₀) (only the e = 0 counterexample is kept in
+  the repository, as `QED.TwoLoop.Ward.exists_counterexample_e_eq_zero`;
+  the other two were in the reviewer's scratch files);
 - the docstring claims;
 - the choice of (K₀) over the LSZ form, which follows through (L₄′);
 - that the helper proves exactly this statement, and that its mathematics is
@@ -1890,3 +1892,66 @@ one fails, (HV₃) is false as frozen and needs a versioned successor:
 - O2-22: uniformity over the pairs;
 - O2-19: decoupling of the regulator fermions;
 - the joint-limit question above.
+
+## D-42. Corrections to the overnight prose (2026-11-18)
+
+**Status.** Record of corrections; no ruling.
+
+An independent audit compared the prose written overnight on 2026-11-17
+(commit messages, the progress ledger, `docs/TWO-LOOP-DERIVATION.md`,
+`docs/TWO-LOOP-ENUMERATION.md`, STATUS and the README) with the Lean
+statements. It found no wrong mathematics, and no claim that an unproved
+result was proved. It did find wording that overstated a result or left out
+hypotheses. The documents are corrected in place. Pushed commits are not
+rewritten, so this entry is the correction of record for their messages:
+
+- **cda92e2** said it proved "the exact vacuum-polarization unit value".
+  What it proves is the evaluation of an explicit double integral,
+  `QED.TwoLoop.VPUnit.integral_vpUnit` (= 119/36 − π²/3), and the spectral
+  identity `integral_mul_log_eq_spectral`, which needs M ≠ 0 as well as
+  k² > −4M². Both are helper-level facts about explicit integrals. That the
+  double integral is the limit of the model's VP unit remains O2-8, O2-10
+  and O2-13.
+- **3934bc6** said momentum conservation "is necessary". It is argued to be
+  needed (without it the routing is not conserved), not shown necessary in
+  Lean. `QED.TwoLoop.Relabel.contractionValue₂_relabel` also assumes
+  connected vertices (X₁₇) and external momenta summing to zero. The 1PI
+  form, `contractionValue₂_relabel_of_isOnePI`, assumes momentum
+  conservation, with connectedness supplied by the 1PI property.
+- **2b65b47** said the parametric representation holds "without the U
+  hypotheses". The hypotheses are replaced, not removed. The full
+  representation `jointEnergyFirstIntegral_prod_inv_lineDenom_of_noSubdivergence`
+  needs the no-subdivergence criterion; the energy step
+  `integral_prod_lineDenom_eq_of_span` needs the spanning condition. The class
+  statements use the loop matrices `class5LoopMatrix`. These are integer
+  routings written for that file, not `lineMomentum₂`, and are matched to the
+  class representatives numerically only. The doubled-line forms for S± and VP
+  are assumed shapes of the Pauli–Villars-combined integrands, not derived from
+  the model. Necessity of the criterion is not proved; the only evidence for it
+  is a Monte Carlo check (`scripts/numerics/two_loop_crosschecks.py criterion`).
+- **73dc087** stated the exact loop formula for "connected contractions with
+  N ≥ 1". `QED.TwoLoop.LoopBoundTwo.two_mul_loopCount_add_eq` also needs
+  attached externals (X₁₆).
+- **1872b4b** said "sequences of even order [have] none at all" among the
+  kernel-checked facts. That statement comes from the Python enumeration
+  (`scripts/numerics/two_loop_enumeration.py`) and is not kernel-checked. The
+  Lean proof does not need it.
+- **6c3b90f** stated the decoupling bound without its hypothesis.
+  `QED.TwoLoop.VPUnit.abs_vpLimSum_sub_le` holds for M₁, M₂ ≥ m (= 1 in that
+  module). It bounds the (m_γ, Λ)-limited explicit value, at helper level, not
+  the model's VP unit.
+- **277a494** listed "the Landen identities for Li2 and Li3" without a domain.
+  `QED.Polylog.Li₂_one_sub_inv_add_Li₂_one_sub` and
+  `Li₃_add_Li₃_one_sub_add_Li₃_one_sub_inv` are proved on [1/2, 1].
+
+The same corrections, and two more, are applied to the ledger entry of
+2026-11-18 and to the documents:
+
+- the scalar parametric representation (e9ebf16) also needs spanning loop
+  coefficients;
+- the O2-15 proof used the ε = 0 parametric closed forms; the
+  differential-identity route was the original plan.
+
+Replay scripts for the numerical cross-checks run with these commits, which
+had none in the repository, are added as
+`scripts/numerics/two_loop_crosschecks.py`.

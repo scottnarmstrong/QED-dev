@@ -3,7 +3,7 @@
 [Campaign HQ](../../README.md) · [Decisions](DECISIONS.md) · [Findings](FINDINGS.md) ·
 [Progress ledger](progress.json)
 
-**As of 2026-11-17.** The one-loop result is complete (Phases 1 and 2 of the outline), and so is Phase 3 for the one-loop pilot. The headline theorem (H) proves F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions from the general Wick model with the model's own LSZ amplitude; it passes the Comparator challenge and an independent end-to-end audit (D-21). Phase 3 certifies the regulated Pauli form factor at three regulator points by kernel-checked interval quadrature and proves the CODATA 2022 contribution bound α/(2π) ∈ [0.0011614097319, 0.0011614097323] (D-34, D-35). Phase 4 (two loops, route A) has begun: the two-loop Wick model (packet T1) is frozen, and its three theorems, including that packet 6a is the special case through order 2nf + nA + 1, are proved and audited (D-36, D-37, D-38).
+**As of 2026-11-18.** The one-loop result is complete (Phases 1 and 2 of the outline), and so is Phase 3 for the one-loop pilot. The headline theorem (H) proves F₂ → α/2π and g → 2(1 + α/2π) for both magnetic-moment definitions from the general Wick model with the model's own LSZ amplitude; it passes the Comparator challenge and an independent end-to-end audit (D-21). Phase 3 certifies the regulated Pauli form factor at three regulator points by kernel-checked interval quadrature and proves the CODATA 2022 contribution bound α/(2π) ∈ [0.0011614097319, 0.0011614097323] (D-34, D-35). Phase 4 (two loops, route A) has begun: the two-loop Wick model (packet T1) is frozen, and its three theorems, including that packet 6a is the special case through order 2nf + nA + 1, are proved and audited (D-36, D-37, D-38). Packets T2 (the target constant A₁⁽⁴⁾), T4 (the one-loop Ward identity) and T3 (the two-loop headline) are frozen provisionally, pending the author's approval (D-39, D-40, D-41). On their provisional text, (U₂) and (WI₁) are sealed. Toward the two-loop headline, helper-level results are proved but not yet assembled; the headline (HV₃) remains a registered draft. The proved results are: the enumeration of the order-e⁵ vertex with coefficient one per class under momentum conservation (O2-2, combinatorics), the Furry cancellation (O2-3), the routing theorems (O2-5), the invariances of the joint prescription (O2-6), the scalar parametric representation with an integrability criterion (O2-10), positivity of V for the classes L and X (O2-12), the one-loop Ward identity (O2-15), helper-level values for the vacuum-polarization unit (O2-18, O2-19), the polylogarithm values (O2-24) and the order separation of the counterterms (O2-27, items 1–2). Exact statements and hypotheses are in [TWO-LOOP-DERIVATION.md](../TWO-LOOP-DERIVATION.md); corrections to the wording of the earlier records are in D-42.
 
 Milestones (see the [ledger](progress.json)):
 
@@ -19,7 +19,7 @@ Milestones (see the [ledger](progress.json)):
 | L1.VERTEX | done: the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram (O-1, O-2), and its ε → 0⁺ limit is the vertex function (packet 5) |
 | L1.ASSEMBLY | done: the headline theorem (H) is proved and audited (D-33); fresh-checkout rebuild clean; Comparator challenge passes (con-ron, NanoDa, Lean kernel); independent end-to-end audit: proved as advertised; errata record updated (D-21) |
 | NUM.ARITHMETIC, NUM.INTEGRATION, NUM.CERTIFICATE, NUM.VALIDATION | done (Phase 3, one-loop pilot): integer interval arithmetic and the box-partition checker with soundness theorems; certified enclosures (Q₁)–(Q₃) of the regulated Pauli form factor and the CODATA contribution bound (Q₄); invalid certificates rejected (D-34, D-35) |
-| L2.ENUMERATION | in progress: the two-loop Wick model (packet T1) frozen; (T₁₂)–(T₁₄) proved and audited (D-38) |
+| L2.ENUMERATION | in progress: the two-loop Wick model (packet T1) frozen; (T₁₂)–(T₁₄) proved and audited (D-38). The order-e⁵ 1PI vertex is proved to be the signed sum of the nine classes of five gauge vertices, each with coefficient one under momentum conservation, plus the listed counterterm contractions (O2-2, `QED.TwoLoop.Relabel.onePIFunction₂_five_sub_four_eq`), and the Furry pair cancels (O2-3, `QED.TwoLoop.Furry.furry_pair`). Open: grouping the counterterm contractions into classes |
 
 ## Reporting fields
 
@@ -27,8 +27,9 @@ Milestones (see the [ledger](progress.json)):
 DRAFT_ANCHORS: 1 — QED/Frozen/TwoLoop/VertexOrderFivePauliLimit.lean (HV₃, the two-loop headline), frozen provisionally (D-41)
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 1 theorem — QED.WickModel.δ₁_eq_δ₂ (WI₁), on its provisional text (D-40); PROVED
-               (guard, build, standard axioms, independent refute-first audit)
+SEALED_THIS_TURN: 0 — documentation corrections only (D-42). Last seal: QED.WickModel.δ₁_eq_δ₂ (WI₁),
+               on its provisional text (D-40); PROVED (guard, build, standard axioms, independent
+               refute-first audit)
 ```
 
 | Field | Value |
@@ -36,7 +37,7 @@ SEALED_THIS_TURN: 1 theorem — QED.WickModel.δ₁_eq_δ₂ (WI₁), on its pro
 | Model / prescription | Perturbative QED in Feynman gauge with the on-shell scheme, starting from a momentum-space Wick expansion at order $e^3$ (D-8). The one-loop pilot uses a Pauli–Villars photon (mass $\Lambda$) and a photon mass $m_\gamma$, with Minkowski loop integrals defined by the energy-first prescription M1 ([REGULARIZATION.md](../REGULARIZATION.md); D-5). The magnetic moment has two definitions, the source's wave-packet definition and the vertex response, proved equivalent (D-9). |
 | Base commit for this work | `67a0e50`. The landing commits follow it on `main`. |
 | Retained external inputs | none. No conditional results exist. |
-| Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. (F′) the characterization of the one-loop vertex `QED.OneLoop.vertexOneLoop`. (G) `existsUnique_isFormFactorPair_vertexOneLoop`: for e ≠ 0 and q² > 0 the decomposition (63.18) exists and is unique. (I) `isFormFactorPair_vertexOneLoop_pauli_limit`: near q², m_γ → 0⁺ and Λ → ∞, every form-factor pair has F₂ within η of e²/8π² = α/2π, uniformly over the momenta. Packet 3: (K) the charge condition (63.1) fixes a unique counterterm Z₁; (N) the counterterm shifts only F₁ (O-8); (M) F₁(0) = 1 (64.2) at fixed regulators. Packet 4a: (R) the response magnetic moment exists and is unique; (R′) with the charge-normalized counterterm, g = 4mμ/e → 2(1 + α/2π) (64.17) jointly as m_γ → 0⁺ and Λ → ∞. Packet 4b: (W₄) for the source's wave-packet definition (64.4)–(64.9), the undamped position integral converges absolutely and, as the packet narrows, the source μ tends to the response μ (O-24); (W₅) g → 2(1 + α/2π) for the source definition. Scope: the (62.39) vertex function under D-5, with current matrix elements read from the amputated vertex (O-3). Packet 5: (W₁) the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram, with coefficient one and no closed-loop sign (O-1, O-2); (W₂) its ε → 0⁺ limit is the vertex function. Packet 6a: (Y₁) packet 5 is a special case of the general Wick model with Pauli–Villars regulator fermions. Packet 6b: (Z₁), (Z₂) the one-loop self-energy and vacuum polarization exist in covariant form; (Z₆), (Z₉) the on-shell conditions (62.27) and (62.11) fix δ₂, δ_m and δ₃ uniquely. Packet 6c-1: (L₁) the LSZ amplitude of the electron current exists and is unique. Packet 6c-2: (L₃) it equals ū′V^μu plus a photon-leg term e·q²D(q²)Π(q²)ū′γ^μu; (L₄′), (L₅′), (L₇′) the charge condition and both magnetic-moment definitions restated with the LSZ amplitude are equivalent to packets 3, 4a and 4b. Packet T1: (T₁₂) the joint energy-first integral is (D) at one loop; (T₁₃) a contraction with at most one loop has its packet 6a value; (T₁₄) through order 2nf + nA + 1 the two-loop 1PI function is packet 6a's. Headline (H): from the general Wick model with on-shell counterterms and the LSZ amplitude, F₂ within η of α/2π and both Landé factors within η of 2(1 + α/2π) near the regulator limit, for every δ₃; (H₀′) the LSZ form factors are well defined. The Comparator challenge and the fresh-checkout audit (D-21) remain. |
+| Proved source-facing results | (E) `QED.OneLoop.vertexLimit_existsUnique`: the regulated one-loop vertex is well defined. (F′) the characterization of the one-loop vertex `QED.OneLoop.vertexOneLoop`. (G) `existsUnique_isFormFactorPair_vertexOneLoop`: for e ≠ 0 and q² > 0 the decomposition (63.18) exists and is unique. (I) `isFormFactorPair_vertexOneLoop_pauli_limit`: near q², m_γ → 0⁺ and Λ → ∞, every form-factor pair has F₂ within η of e²/8π² = α/2π, uniformly over the momenta. Packet 3: (K) the charge condition (63.1) fixes a unique counterterm Z₁; (N) the counterterm shifts only F₁ (O-8); (M) F₁(0) = 1 (64.2) at fixed regulators. Packet 4a: (R) the response magnetic moment exists and is unique; (R′) with the charge-normalized counterterm, g = 4mμ/e → 2(1 + α/2π) (64.17) jointly as m_γ → 0⁺ and Λ → ∞. Packet 4b: (W₄) for the source's wave-packet definition (64.4)–(64.9), the undamped position integral converges absolutely and, as the packet narrows, the source μ tends to the response μ (O-24); (W₅) g → 2(1 + α/2π) for the source definition. Scope: the (62.39) vertex function under D-5, with current matrix elements read from the amputated vertex (O-3). Packet 5: (W₁) the order-e³ 1PI part of the Wick expansion with all counterterms is iZ₁eγ^μ plus the regulated (62.40) diagram, with coefficient one and no closed-loop sign (O-1, O-2); (W₂) its ε → 0⁺ limit is the vertex function. Packet 6a: (Y₁) packet 5 is a special case of the general Wick model with Pauli–Villars regulator fermions. Packet 6b: (Z₁), (Z₂) the one-loop self-energy and vacuum polarization exist in covariant form; (Z₆), (Z₉) the on-shell conditions (62.27) and (62.11) fix δ₂, δ_m and δ₃ uniquely. Packet 6c-1: (L₁) the LSZ amplitude of the electron current exists and is unique. Packet 6c-2: (L₃) it equals ū′V^μu plus a photon-leg term e·q²D(q²)Π(q²)ū′γ^μu; (L₄′), (L₅′), (L₇′) the charge condition and both magnetic-moment definitions restated with the LSZ amplitude are equivalent to packets 3, 4a and 4b. Packet T1: (T₁₂) the joint energy-first integral is (D) at one loop; (T₁₃) a contraction with at most one loop has its packet 6a value; (T₁₄) through order 2nf + nA + 1 the two-loop 1PI function is packet 6a's. On provisional text (D-39, D-40): (U₂) `QED.TwoLoop.a1Four_bounds`, −0.3285 < A₁⁽⁴⁾ < −0.3284; (WI₁) `QED.WickModel.δ₁_eq_δ₂`, the one-loop Ward identity δ₁ = δ₂ at fixed regulators, for e ≠ 0 and m, m_γ, Λ > 0, on shell (Z₅) and with (K₀). Headline (H): from the general Wick model with on-shell counterterms and the LSZ amplitude, F₂ within η of α/2π and both Landé factors within η of 2(1 + α/2π) near the regulator limit, for every δ₃; (H₀′) the LSZ form factors are well defined. The Comparator challenge and the fresh-checkout audit (D-21) remain. |
 | Pending author decisions | Approval of the provisional freezes listed at the end of this row. Rulings so far: D-1, D-8, D-9, D-10, D-11, D-12, D-14, D-15, D-16, D-17, D-18, D-19, D-20, D-21, D-22, D-23, D-24, D-25, D-26, D-27, D-28, D-29, D-30, D-31, D-32, D-33, D-34, D-35, D-36, D-37, and D-38 (packet T1, 2026-11-17). **Provisional, awaiting author approval:** D-39 (packet T2, the target constant A₁⁽⁴⁾) and D-40 (packet T4, the one-loop Ward identity) and D-41 (packet T3, the two-loop headline, with two quantifier questions), frozen overnight at the author's instruction. |
 
 ## Work completed
@@ -243,10 +244,35 @@ The one-loop result is complete. Next, per the
    follow-ups ruled (D-37); every route-A unit checked numerically against
    BMR-I (`scripts/numerics/two_loop_units.py`). Packet T1, the two-loop Wick
    model, is frozen, and its theorems (T₁₂)–(T₁₄) are proved and audited (D-38).
-   Next: the classification of the order-e⁵ 1PI vertex contractions (O2-2)
-   and the one-loop Ward identity δ₁ = δ₂ (D-37.2).
+   Packets T2, T4 and T3 are frozen provisionally (D-39–D-41); (U₂) and (WI₁)
+   are sealed on their provisional text.
+   - **Proved** (statements and hypotheses in `docs/TWO-LOOP-DERIVATION.md`):
+     - O2-2, combinatorics: coefficient one per class, under momentum conservation;
+     - O2-3: the Furry pair;
+     - O2-5 (i)–(iii): the routing;
+     - O2-6: the invariances of the joint prescription;
+     - O2-10: the scalar parametric representation, with the U⁻² integrability
+       criterion, at helper level;
+     - O2-12: positivity of V for the classes L and X, at helper level;
+     - O2-15: the one-loop Ward identity;
+     - O2-18, O2-19: values at helper level, for the explicit vacuum-polarization
+       double integral and its regulator limits;
+     - O2-24: polylogarithm infrastructure;
+     - O2-27, items 1–2: order separation of the counterterms.
+   - **Open:**
+     - O2-7: integrability and the ε → 0⁺ limit;
+     - O2-8: nested equals joint, for the insertion classes;
+     - O2-11: numerators and the projection to F₂ (in progress);
+     - O2-13, O2-14: counterterm insertions and longitudinal terms;
+     - O2-16, O2-17: the overall divergence and the UV cancellation;
+     - O2-20 to O2-23: covariance, the q^μ term, q² → 0⁺ and the infrared limit;
+     - O2-25, O2-26: the exact unit values and the assembly;
+     - the remaining classes of O2-12;
+     - grouping the counterterm contractions of O2-2 into classes.
+
+   Next: O2-11 (in progress).
 3. **Later phases.** Selected higher-loop families and an experimental
    comparison.
-3. **Optional.** A public release of the one-loop result (Palomar would also
+4. **Optional.** A public release of the one-loop result (Palomar would also
    need a `formalization.yaml` and a scrubbed public tree); cleanups of the
    duplicated helper lemmas noted in audits.
