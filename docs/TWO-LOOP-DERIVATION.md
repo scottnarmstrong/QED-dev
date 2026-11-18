@@ -920,9 +920,12 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   and arbitrary separate prescriptions on every line, the energy-first integral has a limit that
   does not depend on how the prescriptions vanish, continuous in the photon masses (via Feynman
   parameters, which merge the prescriptions); its value is identified with the frozen one-loop
-  kernels, including the repeated photon pair. Remaining: projecting the class value, the
-  algebraic bridge to the vertex chain, splitting into engine pieces, Fubini in $x$, and matching
-  the target.
+  kernels, including the repeated photon pair. **The VP unit link is closed**
+  (`QED/TwoLoop/VPHalfAtAssembly*.lean`, `vpHalfSubAt_of`; `QED/TwoLoop/UnitVPClose.lean`): the
+  fixed-momentum identity holds at every on-shell pair with $q^2>0$, hence `VPHalfSub`, `VPHalf` and
+  `VPUnitNested` hold unconditionally, and $16\pi^4$ times the model's VP unit tends to
+  $\frac{119}{36}-\frac{\pi^2}3$ in the D-37.4 order (`unitF2_VP_iterated_limit_closed`, at $m=1$).
+  The statements above that call `VPHalfSubAt` open are superseded by this.
   **L unit, partial link** (`QED/TwoLoop/UnitLLink*.lean`): the counterterm half is exact (δ₁
   from the frozen charge condition equals the doc's formula, and its unit contribution is
   $\delta_1(F_2^{(2)}(m_\gamma)-F_2^{(2)}(\Lambda))$); the $x$-integration of the $\lambda=0$

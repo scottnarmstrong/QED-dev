@@ -473,6 +473,10 @@
     {
       "date": "2026-11-18",
       "change": "L unit link closed (m = 1): with delta1 from the frozen charge condition, 16 pi^4 times the model's ladder unit tends to 11/48 + zeta(2)/3 jointly as m_gamma -> 0+, Lambda -> infinity (the headline's limit form). First unit fully linked from the model to its exact value."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "VP unit link closed (m = 1): the VP class's fixed-momentum identity proved at every on-shell pair with q^2 > 0 (projection, algebraic bridge, splitting into engine pieces, Fubini in x, dominated convergence, matching), so 16 pi^4 times the model's VP unit tends to 119/36 - pi^2/3 in the D-37.4 order with no remaining hypothesis. Two of the five units (L, VP) are now linked from the model to their exact values."
     }
   ],
   "tracks": [
