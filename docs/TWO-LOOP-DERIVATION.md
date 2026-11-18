@@ -929,9 +929,12 @@ At fixed $m_\gamma>0$ every unit is finite. As $m_\gamma\to0$:
   ladder's projected numerator as an explicit sum of chain traces). **The pointwise identity is
   proved** (`QED/TwoLoop/UnitLGraphTrace*.lean`: the Dirac traces in the planar subalgebra and the
   $u^2$ coefficients by jets; `openZero_L_eq` writes the ladder's class value as a simplex integral
-  of explicit rational functions of the Feynman parameters). Remaining for the ladder's graph
-  half: the explicit $V$, integrating out the electron and Pauli–Villars splits, and Cheng–Wu, to
-  reach the doc's (3.1). Earlier step (`QED/TwoLoop/PauliZero*.lean`): The Pauli
+  of explicit rational functions of the Feynman parameters). **The graph half now reaches the
+  doc's (3.1)** (`QED/TwoLoop/UnitLGraphReduce*.lean`,
+  `sixteen_pi_pow_four_mul_graphHalf_eq_doc_iterated`, at $m=e=1$, $0<m_\gamma<\Lambda$, with the
+  outer-photon terms at mass $\Lambda$ kept), via general simplex merging, Pauli–Villars split and
+  Cheng–Wu lemmas (`QED/Integration/SimplexMerge*.lean`, `ChengWu*.lean`). Remaining for L: the
+  $a$-integration from (3.1) to (3.4) and the $\Lambda\to\infty$ stage. Earlier step (`QED/TwoLoop/PauliZero*.lean`): The Pauli
   projection of the order-5 vertex limit depends on the on-shell pair only through $q^2$
   (covariance under Lorentz maps that move $p,p'$, reached by two reflections), so the uniform
   statement is equivalent to a one-variable limit of `pauliAt` as $q^2\to0^+$

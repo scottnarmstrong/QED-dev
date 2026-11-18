@@ -461,6 +461,10 @@
     {
       "date": "2026-11-18",
       "change": "VP nested route: the Fubini condition hG proved with explicit packet-6b bounds, so nested = joint holds unconditionally for the VP class at fixed epsilon; the fixed-epsilon one-loop vacuum polarization in closed form (transverse complex-mass part plus an explicit eps g S(k^2) term); the class value as the outer integral of that closed form. The epsilon -> 0 limit of the outer integral remains."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Ladder graph half reaches the unit representation (3.1): general simplex merging, Pauli-Villars split and Cheng-Wu lemmas proved, and 16 pi^4 times the ladder's graph half equals the iterated (3.1) integral at finite regulators. Remaining for L: the a-integration to (3.4) and the Lambda -> infinity stage."
     }
   ],
   "tracks": [
