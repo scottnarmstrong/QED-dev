@@ -481,6 +481,10 @@
     {
       "date": "2026-11-18",
       "change": "Mass scaling proved: the regulated F2^(4)(0), each unit and the frozen counterterm conditions (Z5), (Z8), (K0) are dimensionless (invariant when m and all regulator masses are scaled together), so the L and VP unit links hold for every electron mass m > 0."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Headline assembly proved (O2-26, conditional): a theorem with exactly the statement of the approved headline (HV3), from the L and VP unit links (proved) and two hypotheses, the S + C and X unit links. The counterterm existence clause, the sum of the unit values to A1(4) and the quantifier order are proved; once the two remaining links are proved, the headline follows in one line."
     }
   ],
   "tracks": [

@@ -123,6 +123,7 @@ public import QED.TwoLoop.VPHalfAtLimitPauli
 public import QED.TwoLoop.VPHalfAtLimitD3
 public import QED.TwoLoop.UnitVPClose
 public import QED.TwoLoop.MassScalingClose
+public import QED.TwoLoop.HeadlineAssembly
 public import QED.TwoLoop.UnitLLinkLimit
 public import QED.TwoLoop.UnitLLinkDominated
 public import QED.TwoLoop.UnitLGraph

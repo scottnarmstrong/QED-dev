@@ -1089,6 +1089,11 @@ polylogarithm or Nielsen function**, and no closed form is expected for $\zeta(3
   and from it the quantifier-form headline of 5.6 via O2-22 and O2-27. Since $r=e^2/4\pi^2$,
   $[r^2]F_2=16\pi^4[e^4]F_2$. Theorem by combination; low once O2-1–O2-25 and O2-27 hold.
 
+  **Status (2026-11-18): assembly proved, conditional on two unit links**
+  (`QED/TwoLoop/HeadlineAssembly*.lean`, `pauliLimit_of_unitLimits`): a theorem whose statement is
+  exactly the approved headline (HV₃), with only the S + C and X unit links (`SCUnitLimit`,
+  `XUnitLimit`) as hypotheses; the counterterm existence clause, the four unit values summing to
+  $A_1^{(4)}$, and the quantifier order (regulator-fermion threshold from VP first) are proved.
 ## 7. Obligations, carriers and kinds
 
 The last column lists the obligations each one uses; the numbering follows the sections
