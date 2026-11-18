@@ -118,6 +118,7 @@ public import QED.TwoLoop.UnitVPLink
 public import QED.TwoLoop.VPUnitNested
 public import QED.TwoLoop.UnitLLinkLimit
 public import QED.TwoLoop.UnitLLinkDominated
+public import QED.TwoLoop.UnitLGraph
 public import QED.Integration.FeynmanParameterGeneral
 public import QED.Integration.SpatialIntegralSix
 public import QED.Integration.TwoLoopParametric

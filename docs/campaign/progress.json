@@ -437,6 +437,10 @@
     {
       "date": "2026-11-18",
       "change": "VP unit: the delta3 half of the model-to-outer-form identity proved for every delta3 (exact on-shell vanishing of the longitudinal insertion, partial fractions with four distinct photon masses reducing to the frozen one-loop vertex, continuity in the masses); the full identity is equivalent to the bubble-class identity VPHalf, which remains (O2-8 at the epsilon -> 0 level)."
+    },
+    {
+      "date": "2026-11-18",
+      "change": "Graph-half infrastructure for the q-type units: linearity of the parametric numerator, Wick's rule for chains of electron propagators, a second-order jet calculus for the q^2 -> 0 coefficient, and the ladder's projected numerator written as an explicit sum of chain traces. The ladder's remaining pointwise identity is confirmed numerically (scripts/numerics/ladder_graph/), not yet proved."
     }
   ],
   "tracks": [
