@@ -20,7 +20,7 @@ evaluation `-0.328 478 965 579 193 784 5 …`. -/
 theorem a1Four_bounds_fine :
     -0.32847896557919380 < a1Four ∧ a1Four < -0.32847896557919376 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.TwoLoop.a1Four_bounds_fine
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

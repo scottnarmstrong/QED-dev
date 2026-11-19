@@ -26237,7 +26237,7 @@
         "module": "QED.Provider.ThreeLoop.A1SixLRBounds",
         "export": "QED.Provider.ThreeLoop.a1SixLR_bounds"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "a030d33bf31969bdafbcb0fcc24321bd1b1faff7ed6080931a45972709a83d96",
       "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
       "draft_allowlist": {
@@ -26280,7 +26280,7 @@
         "module": "QED.Provider.TwoLoop.A1FourBoundsFine",
         "export": "QED.Provider.TwoLoop.a1Four_bounds_fine"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "e0b212bdf12d3bb2bfeddfb58663a6e8aef551396370c07e1e14b0bf80cee0d8",
       "suffix_sha256": "40068b95469d700692e1439c29833ce8c5bce83685e82400d38bfea6f5f35a83",
       "draft_allowlist": {

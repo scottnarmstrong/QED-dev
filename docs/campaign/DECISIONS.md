@@ -2564,3 +2564,9 @@ line set to f, and δ₃ is shared by all flavours. The frozen models are unchan
 - Its two docstring digit corrections and its fuller quotation of Passera (9) are applied.
 
 The manifest records these entries with `approval_version` "provisional".
+
+**Seals (2026-11-19).** (R₂) and (U₂′) are sealed with bodies `by exact` their providers in
+`QED/Provider/ThreeLoop/` and `QED/Provider/TwoLoop/`, from the helpers `QED/Polylog/A1Six.lean`
+and `A1FourFine.lean`. An independent refute-first seal audit returned PROVED: statement bytes
+and ABI unchanged, provider types definitionally the frozen statements, tail bounds genuine,
+standard axioms only. The approval of all three D-56 declarations remains pending.

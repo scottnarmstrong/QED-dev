@@ -207,16 +207,22 @@ estimates. [What does "proved" mean?](WHAT-IS-PROVED.md) explains the scope of s
 - **One loop.** The proof runs from the model, through its own definition of the electron's current
   matrix element and two definitions of the magnetic moment (proved equivalent), to
   $F_2\to\alpha/2\pi$ and $g\to2(1+\alpha/2\pi)$, where $F_2$ is the magnetic form factor. A
-  kernel-checked enclosure places $\alpha/2\pi$ in $[0.001\,161\,409\,731\,9,\ 0.001\,161\,409\,732\,3]$
-  for the CODATA 2022 value of $\alpha$.
+  kernel-checked enclosure for the CODATA 2022 value of $\alpha$ places $\alpha/2\pi$ in the interval
+
+  $$0.001\,161\,409\,731\,9 < \frac{\alpha}{2\pi} < 0.001\,161\,409\,732\,3 .$$
+
 - **Two loops.** The complete mass-independent coefficient, exactly: the magnetic form factor of the
   two-loop electron–photon vertex tends to the closed form
   $\frac{197}{144}+\frac{\pi^2}{12}-\frac{\pi^2}{2}\ln2+\frac34\zeta(3)$ of section 2. The theorem's
   limit is this exact expression, not a decimal approximation, so the derivation reproduces the
   Petermann–Sommerfield result itself. A separate, much smaller theorem evaluates the expression
-  numerically, $-0.3285<A_1^{(4)}<-0.3284$, to confirm that it is the published number
-  $-0.328\,478\,965\ldots$; those bounds come from interval arithmetic on $\pi$, $\ln2$ and
-  $\zeta(3)$ and can be tightened to any number of digits. The mass-dependent two-loop terms from a muon or tau loop are also
+  numerically, to sixteen significant digits, confirming that it is the published number
+  $-0.328\,478\,965\,579\,193\,78\ldots$:
+
+  $$-0.328\,478\,965\,579\,193\,80 < A_1^{(4)} < -0.328\,478\,965\,579\,193\,76 .$$
+
+  These bounds come from kernel-checked interval arithmetic on $\pi$, $\ln2$ and $\zeta(3)$, and
+  can be tightened further. The mass-dependent two-loop terms from a muon or tau loop are also
   proved, as exact functions of the mass ratio, with certified enclosures at the measured ratios.
   The two-loop theorems concern the one-particle-irreducible vertex, which is all the coefficient
   needs; extending the full chain to the measured magnetic moment at two loops, as was done at one
@@ -237,7 +243,13 @@ The accuracy target for three loops is the exact value. Laporta and Remiddi's 19
 closed form in $\zeta(3)$, $\zeta(5)$, $\pi^2\ln2$, $\pi^4$, $\ln^42$ and
 $\mathrm{Li}_4(\frac12)$, and the aim is to derive that closed form from the model, set by set, as was
 done at two loops, so that their result is reproduced and independently verified rather than merely
-approximated. The next sets are the vacuum-polarization insertions (3 and 12 diagrams). The
+approximated. The target is already fixed in Lean: Laporta and Remiddi's closed form is a definition,
+with a kernel-checked evaluation to sixteen significant digits,
+
+$$1.181\,241\,456\,587\,199\,5 < A_1^{(6)}\big|_{\text{Laporta–Remiddi}} < 1.181\,241\,456\,587\,200\,3 .$$
+
+What remains is the theorem that the model's three-loop coefficient equals this closed form. The next
+sets are the vacuum-polarization insertions (3 and 12 diagrams). The
 light-by-light diagrams (6) and the 50 diagrams without fermion loops are much harder; the plan is to
 reduce them analytically as far as possible, following the route of the original analytic
 computations. If some piece has to be evaluated numerically for a time, its certified enclosure and

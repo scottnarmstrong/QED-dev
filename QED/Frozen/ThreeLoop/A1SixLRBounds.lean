@@ -19,7 +19,7 @@ the published value `1.181 241 456 587 …` (Laporta–Remiddi 1996, eq. (5); Pa
 and with a 40-digit evaluation `1.181 241 456 587 200 006 2 …`. -/
 theorem a1SixLR_bounds : 1.1812414565871995 < a1SixLR ∧ a1SixLR < 1.1812414565872003 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.ThreeLoop.a1SixLR_bounds
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 
