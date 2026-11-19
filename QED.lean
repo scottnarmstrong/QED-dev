@@ -276,6 +276,8 @@ public import QED.ChainProof.SetCKPairDisp
 public import QED.ChainProof.SetCKPairX
 public import QED.ChainProof.SetCKPairS
 public import QED.ChainProof.SetCKPairFub
+public import QED.ChainProof.SetCKPairBd
+public import QED.ChainProof.SetCKPairInt
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
