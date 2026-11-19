@@ -609,6 +609,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 (HC3) value link reduced: the q^2 -> 0+ step, the identification with the outer functional of (Pi - delta3)^2 s^2 D^3 and its value e^6 chainRegMass/(64 pi^6), and the counterterm combination O3-7 on the nine classes are proved (QED/ChainProof/HCValue*); the open input is the per-class nested value (O3-6)."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 (HC3): the mirror link proved (charge conjugation and momentum reversal on the whole chain family; fixed-epsilon identity unconditional); (HC3) now follows from three links: the per-class epsilon-limits, the per-class covariance, and the value link. Boost covariance must come from the closed form of the limits (O3-6)."
     }
   ],
   "tracks": [

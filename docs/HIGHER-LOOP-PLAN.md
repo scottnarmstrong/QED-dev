@@ -762,3 +762,13 @@ yet have: three loop momenta, and numerators of degree 6, because the `photonCt`
 The open input, `ClassNestedAtLink enumClass enumPhoton`, is O3-6 per class at fixed q: each class
 limit is the one-loop vertex with its inserted photon function. It is the same work as
 `ClassLimitLink`.
+
+**Covariance and mirror** (`QED/ChainProof/HCCov*.lean`):
+- **The mirror link is proved** from existence and covariance alone. The fixed-ε identity
+  `chainMirrorAt` is proved unconditionally, by reversing every momentum and applying charge
+  conjugation to the whole family sum, which swaps the bubble–δ₃ and δ₃–bubble classes.
+- **(HC₃) now needs three links:** the per-class ε-limits, the per-class covariance and the value
+  link (`isFormFactorPair_vertexChain_two_pauli_limit_of_classLinks`). `enumClass_eq_chainClassX`
+  identifies the class families used by the value and covariance links.
+- **Per-class covariance under boosts is not a fixed-ε symmetry** of the energy-first integral. It
+  must be read off the closed form of the ε → 0⁺ limits (O3-6), as at two loops.

@@ -186,6 +186,7 @@ public import QED.ChainProof.HCNestedFubini
 public import QED.ChainProof.EnumVertex
 public import QED.ChainProof.IntegrableChainReduction
 public import QED.ChainProof.HCValueEnum
+public import QED.ChainProof.HCBridge
 public import QED.TwoLoop.ClassIntegrableFurry
 public import QED.TwoLoop.UnitSCGraphSpMain
 public import QED.TwoLoop.UnitSCGraphSmMain
