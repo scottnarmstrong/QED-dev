@@ -294,6 +294,9 @@ public import QED.GradedProof.SE2LimC
 public import QED.GradedProof.SE2Positivity
 public import QED.GradedProof.SE2LimP
 public import QED.GradedProof.SE2LimF
+public import QED.GradedProof.SE2PositivityTwo
+public import QED.GradedProof.SE2LimRX
+public import QED.GradedProof.SE2LimV
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
@@ -321,6 +324,7 @@ public import QED.Integration.TwoLoopNumeratorQuartic
 public import QED.Integration.TwoLoopNumeratorQuarticFull
 public import QED.Integration.SymanzikIntegrabilityRefinedClasses
 public import QED.Integration.TwoLoopRefinedBoundCubic
+public import QED.Integration.TwoLoopClassLimitCubic
 public import QED.WickModel.CompatibilityLines
 public import QED.WickModel.Compatibility
 public import QED.Frozen.WickModel.WickVertexEqOnePIFunction
