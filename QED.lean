@@ -297,6 +297,10 @@ public import QED.GradedProof.SE2LimF
 public import QED.GradedProof.SE2PositivityTwo
 public import QED.GradedProof.SE2LimRX
 public import QED.GradedProof.SE2LimV
+public import QED.GradedProof.SE2Form
+public import QED.GradedProof.SE2FormLemma
+public import QED.GradedProof.SE2Decomp
+public import QED.GradedProof.SE2FormC
 public import QED.GradedProof.VP2Enum
 public import QED.GradedProof.VP2EnumG
 public import QED.GradedProof.VP2Classes
