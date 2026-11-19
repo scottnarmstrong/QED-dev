@@ -35,7 +35,7 @@ theorem existsUnique_withLevel_one (P : Params) {F : Type} [Fintype F] [Decidabl
     (hD : IsRenormalizedThrough P Φ D rep 1) :
     ∃! x : (F → ℝ × ℝ × ℝ) × ℝ, IsRenormalizedThrough P Φ (D.withLevel 1 x.1 x.2) rep 2 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.existsUnique_withLevel_one
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

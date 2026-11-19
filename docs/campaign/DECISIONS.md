@@ -2724,3 +2724,15 @@ by grading and loop count:
 Coverage is checked in the kernel by enumeration over normal forms, one `decide +kernel` theorem
 per pairing (each under 4 GB). ABI unchanged; standard axioms; guard OK. An independent seal
 audit found it PROVED, including the coverage of the enumeration.
+
+**Seal of (G-ex₂) (2026-11-19).** `existsUnique_withLevel_one` is sealed with body `by exact` its
+provider: given the level-0 data renormalized through e², exactly one level-1 counterterm set
+renormalizes through e⁴. The renormalization conditions are affine in the level-1 data with
+nonzero coefficients; the solution is real because the order-e⁴ on-shell self-energy data, the
+vacuum polarization at s = 0 and the order-e⁵ vertex at q = 0 are real. Reality comes from a
+conjugate-linear map fixing every gamma matrix (`SE2Real*`, `VP2Real*`, `V5ZeroSharp*`); the
+general-flavour vertex splits into one-electron vertices with loop flavours allowed lighter than
+the open line (`V5Zero*`). ABI unchanged; standard axioms; guard OK; independent seal audit PROVED.
+Binder note: the provider's `hm₀ : 0 < m₀` default first fixes `m₀` from `hmass`, since a plain
+`by assumption` would pick `0 < P.Λ`; the binder's type is exactly the frozen one, and the audit
+confirmed it affects elaboration only.

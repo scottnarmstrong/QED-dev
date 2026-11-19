@@ -737,6 +737,10 @@
     {
       "date": "2026-11-19",
       "change": "Stage 2: X0 (jointEnergyFirstIntegrable_connectedPart_five) sealed after an independent audit: every attached connected order-5 (1,1) contraction is integrable at any masses for eps > 0. 13 of 18 Stage 2 goals sealed. Set (c) kernel: the inner crossed placement (G3) proved; four of five placement groups done."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Stage 2: G-ex2 (existsUnique_withLevel_one) sealed after an independent audit: the level-1 counterterms are uniquely determined and real. 14 of 18 Stage 2 goals sealed."
     }
   ],
   "tracks": [
