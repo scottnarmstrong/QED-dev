@@ -268,6 +268,9 @@ public import QED.ChainProof.SetCKInnerX
 public import QED.ChainProof.SetCKLPair
 public import QED.ChainProof.SetCKAtoms
 public import QED.ChainProof.SetCKDensity
+public import QED.ChainProof.SetCKOuterY
+public import QED.ChainProof.SetCKOuterInt
+public import QED.ChainProof.SetCKOuterL
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
