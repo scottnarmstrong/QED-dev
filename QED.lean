@@ -286,6 +286,10 @@ public import QED.GradedProof.SE2Clause1
 public import QED.GradedProof.SE2TwoLoopGggg
 public import QED.GradedProof.SE2ClassRX
 public import QED.GradedProof.SE2Clause1V
+public import QED.GradedProof.SE2ClassVAmp
+public import QED.GradedProof.SE2ClassVNum
+public import QED.GradedProof.SE2ClassV
+public import QED.GradedProof.SE2Clause1Final
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
