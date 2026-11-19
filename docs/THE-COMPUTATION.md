@@ -132,6 +132,33 @@ only part of the difficulty.
   $\mathrm{Li}_4(\frac12)$ and $\zeta(5)$ at three; integrals of elliptic functions at four. No exact
   result is known at five loops.
 
+**Who did each order first, and how.** Each new order took longer than the one before. From three
+loops on, the first values came from numerical integration on computers, and the exact values came
+decades later.
+
+```mermaid
+flowchart LR
+  L1["<b>1 loop</b><br/>1 diagram<br/>1948: Schwinger<br/>exact, by hand"]
+  L2["<b>2 loops</b><br/>7 diagrams<br/>1950: Karplus–Kroll (in error)<br/>1957: Petermann; Sommerfield<br/>exact, by hand"]
+  L3["<b>3 loops</b><br/>72 diagrams<br/>1971: Levine–Wright, numerical<br/>1996: Laporta–Remiddi, exact<br/>(after 25 years of work set by set)"]
+  L4["<b>4 loops</b><br/>891 diagrams<br/>1981: Kinoshita–Lindquist, numerical<br/>2017: Laporta, 1100 digits,<br/>semi-analytic"]
+  L5["<b>5 loops</b><br/>12,672 diagrams<br/>2012: Aoyama–Hayakawa–Kinoshita–Nio,<br/>Monte Carlo on supercomputers<br/>2024: Volkov, independent<br/>no exact value"]
+  L1 --> L2 --> L3 --> L4 --> L5
+```
+
+| Loops | Diagrams | First complete value | Method | Exact or most precise value |
+| ---: | ---: | --- | --- | --- |
+| 1 | 1 | Schwinger, 1948 [3] | analytic, by hand | exact: $1/2$ (Schwinger, 1948) |
+| 2 | 7 | Karplus and Kroll, 1950 [4], with an error; corrected by Petermann [5] and Sommerfield [6], 1957 | analytic, by hand | exact (Petermann; Sommerfield, 1957) |
+| 3 | 72 | Levine and Wright, 1971 [23] | numerical integration on a computer | exact (Laporta and Remiddi, 1996 [7]), completing analytic work begun in the early 1970s |
+| 4 | 891 | Kinoshita and Lindquist, 1981 [24], "very preliminary" | numerical (Monte Carlo); later on supercomputers | 1100 digits and a semi-analytic form, with six pieces known only numerically (Laporta, 2017 [8]) |
+| 5 | 12,672 | Aoyama, Hayakawa, Kinoshita and Nio, 2012 [9] | Monte Carlo on supercomputers | numerical only; two independent computations agree since 2025 (section 3) |
+
+The gaps tell the story. One loop took one paper. Two loops took seven years, because the first
+calculation contained an error. At three loops the first numerical value came in 1971 and the exact
+value 25 years later. At four loops the gap was 36 years: from the first preliminary value in 1981
+to Laporta's 1100 digits in 2017. At five loops there is still no exact value.
+
 ## 5. What each loop buys
 
 With the CODATA 2022 value $\alpha^{-1}=137.035\,999\,177$ [22], so $\alpha/\pi=0.002\,322\,819\,464$,
@@ -323,3 +350,8 @@ many dimensions, both substantial research problems for formal mathematics.
     [doi:10.1038/s41586-020-2964-7](https://doi.org/10.1038/s41586-020-2964-7)
 22. NIST, "CODATA 2022 recommended value: inverse fine-structure constant", 137.035 999 177(21).
     [physics.nist.gov](https://physics.nist.gov/cgi-bin/cuu/Value?alphinv)
+23. M. J. Levine and J. Wright, "Sixth-order magnetic moment of the electron", *Phys. Rev. Lett.*
+    **26**, 1351–1353 (1971). [doi:10.1103/PhysRevLett.26.1351](https://doi.org/10.1103/PhysRevLett.26.1351)
+24. T. Kinoshita and W. B. Lindquist, "Eighth-order anomalous magnetic moment of the electron",
+    *Phys. Rev. Lett.* **47**, 1573–1576 (1981).
+    [doi:10.1103/PhysRevLett.47.1573](https://doi.org/10.1103/PhysRevLett.47.1573)
