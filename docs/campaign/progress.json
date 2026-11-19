@@ -712,6 +712,75 @@
       ]
     },
     {
+      "id": "L3",
+      "title": "Complete three-loop calculation",
+      "kind": "formal",
+      "items": [
+        {
+          "id": "L3.LEPTONS",
+          "title": "Heavy-lepton model and two-loop muon and tau terms",
+          "status": "done",
+          "evidence": [
+            "QED/Frozen/Lepton/HeavyLepton.lean",
+            "QED/Frozen/Lepton/VertexOrderFiveLeptonPauliLimit.lean",
+            "docs/campaign/DECISIONS.md"
+          ],
+          "validation": "docs/campaign/STATUS.md"
+        },
+        {
+          "id": "L3.SETB",
+          "title": "Set (b): two vacuum-polarization bubbles in a chain, 1 diagram",
+          "status": "in_progress",
+          "evidence": [
+            "QED/Frozen/VPChain/A1SixSetB.lean",
+            "QED/Frozen/VPChain/JointEnergyFirstIntegrableVertexChainTwo.lean"
+          ]
+        },
+        {
+          "id": "L3.MODEL",
+          "title": "Counterterms graded to order e^4 for the three-loop model",
+          "status": "planned",
+          "evidence": []
+        },
+        {
+          "id": "L3.SETA",
+          "title": "Set (a): fourth-order vacuum-polarization insertion, 3 diagrams",
+          "status": "planned",
+          "evidence": []
+        },
+        {
+          "id": "L3.SETC",
+          "title": "Set (c): one bubble in the two-loop vertex, 12 diagrams",
+          "status": "planned",
+          "evidence": []
+        },
+        {
+          "id": "L3.QUAD",
+          "title": "Certified integration in three or more dimensions",
+          "status": "planned",
+          "evidence": []
+        },
+        {
+          "id": "L3.SETD",
+          "title": "Set (d): light-by-light scattering, 6 diagrams",
+          "status": "planned",
+          "evidence": []
+        },
+        {
+          "id": "L3.SETE",
+          "title": "Set (e): no fermion loops, 50 diagrams",
+          "status": "planned",
+          "evidence": []
+        },
+        {
+          "id": "L3.ASSEMBLY",
+          "title": "Three-loop coefficient: limit theorem and certified enclosure",
+          "status": "planned",
+          "evidence": []
+        }
+      ]
+    },
+    {
       "id": "HIGH",
       "title": "Higher loops toward five-loop QED",
       "kind": "formal",

@@ -84,6 +84,7 @@ become precise; changes to their scope must be recorded.
 | Complete one-loop calculation | 8/8 | `██████████` 100% | Complete |
 | Numerical certification pilot | 4/4 | `██████████` 100% | Complete |
 | Complete two-loop calculation | 4/4 | `██████████` 100% | Complete |
+| Complete three-loop calculation | 1/9 | `█░░░░░░░░░` 11% | In progress |
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
