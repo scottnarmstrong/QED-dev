@@ -229,33 +229,13 @@ axioms. Coefficients are proved as exact closed forms. Separately, numerical cla
 rigorous enclosures computed with interval arithmetic and checked by the kernel, not floating-point
 estimates. [What does "proved" mean?](WHAT-IS-PROVED.md) explains the scope of such a claim.
 
-**A series without a theory?** A natural question is whether the loops approximate a theory that is
-not even known to exist, so that the project only defines a formal series and computes it. The short
-answer is: largely yes, and this is deliberate.
-
-- **No exact theory is known.** Nobody has constructed QED in four space-time dimensions as a
-  mathematical theory. Rigorous constructions of interacting quantum field theories exist only in
-  two and three dimensions, and four-dimensional QED is widely expected not to exist on its own at
-  arbitrarily high energies. So there is no proven exact function $a_e(\alpha)$ for the loop
-  expansion to approximate.
-- **What is defined is a series.** The project treats $a_e$ as a formal power series in
-  $\alpha/\pi$. The terms are not chosen freely, though. Each coefficient $A_1^{(2n)}$ is a
-  specific real number, determined by the model: it is the limit of explicitly regulated
-  finite-dimensional integrals, with counterterms fixed by the physical mass and charge, as the
-  regulators are removed in a stated order. The work lies in proving that these limits exist, do not
-  depend on the regulators, and equal the stated closed forms.
-- **The full series probably diverges.** Dyson argued in 1952 [25] that it cannot converge for any
-  $\alpha\neq0$: if it converged for small positive $\alpha$ it would also converge for small
-  negative $\alpha$, a theory in which like charges attract and the vacuum is unstable. The series
-  is expected to be asymptotic. Its terms keep shrinking until roughly the 137th order, $1/\alpha$,
-  so the divergence has no effect at five loops. But with no exact quantity to compare against, no
-  theorem can bound the error of truncating it.
-- **The link to nature is empirical.** The truncated series, together with the hadronic and
-  electroweak contributions, agrees with the measured $g/2$ at the level of parts per trillion. That
-  agreement is a fact about experiment, not a theorem. The proofs certify each coefficient of the
-  series; whether the series describes the electron is tested by measurement.
-  [What does "proved" mean?](WHAT-IS-PROVED.md), sections 4, 9 and 10, states this distinction
-  precisely.
+**A series without a theory?** No one has constructed QED in four dimensions as an exact
+mathematical theory, so the loops do not approximate a known exact function. What the project
+proves is that each coefficient of the series in $\alpha/\pi$ is a precisely defined number, the
+limit of explicitly regulated integrals, and what that number is. The full series is expected to
+diverge, and its agreement with the measured $g/2$ is an experimental fact, not a theorem.
+[Is there a theory behind the series?](WHAT-IS-PROVED.md#is-there-a-theory-behind-the-series)
+explains this in more detail.
 
 **Done.**
 
@@ -383,5 +363,3 @@ many dimensions, both substantial research problems for formal mathematics.
 24. T. Kinoshita and W. B. Lindquist, "Eighth-order anomalous magnetic moment of the electron",
     *Phys. Rev. Lett.* **47**, 1573–1576 (1981).
     [doi:10.1103/PhysRevLett.47.1573](https://doi.org/10.1103/PhysRevLett.47.1573)
-25. F. J. Dyson, "Divergence of perturbation theory in quantum electrodynamics", *Phys. Rev.* **85**,
-    631–632 (1952). [doi:10.1103/PhysRev.85.631](https://doi.org/10.1103/PhysRev.85.631)

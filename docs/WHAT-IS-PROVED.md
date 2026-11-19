@@ -162,14 +162,42 @@ not imply this bound. Even asymptotic coefficients need not determine a
 function uniquely: on $r>0$, adding $e^{-1/r}$ leaves every power-series
 asymptotic coefficient unchanged as $r\downarrow0$.
 
-For QED this is not a technicality. No four-dimensional construction of QED as
-an exact theory is known, so there is no independently defined $A$ for its
-series to approximate. The project's theorems are therefore about the
-coefficients of a formal series, each a precisely defined limit of regulated
-integrals. The QED series is moreover expected to diverge (Dyson, 1952). Its
-relation to the measured anomaly is an empirical claim, tested by experiment
-(sections 9 and 10). [The computation](THE-COMPUTATION.md), section 6, explains
-this for non-specialists.
+### Is there a theory behind the series?
+
+A natural question is whether the loops approximate a theory that is not even
+known to exist, so that the project only defines a formal series and computes
+its coefficients. The short answer is: largely yes, and this is deliberate.
+
+**No exact theory is known.** Nobody has constructed QED in four space-time
+dimensions as a mathematical theory. Rigorous constructions of interacting
+quantum field theories exist only in two and three dimensions, and
+four-dimensional QED is widely expected not to exist on its own at arbitrarily
+high energies. So there is no independently defined quantity $A$, in the sense
+above, for the series to approximate.
+
+**What is defined is a series, but not an arbitrary one.** The project treats
+$a_e$ as a formal power series in $r=\alpha/\pi$. Each coefficient is a
+specific real number determined by the model: the limit of explicitly regulated
+finite-dimensional integrals, with counterterms fixed by the physical mass and
+charge, as the regulators are removed in a stated order (sections 2 and 6). The
+substance of the theorems is that these limits exist, do not depend on the
+regulators, and equal the stated values.
+
+**The full series probably diverges.** Dyson argued that it cannot converge for
+any nonzero coupling: convergence for small positive $\alpha$ would imply
+convergence for small negative $\alpha$, a theory in which like charges attract
+and the vacuum is unstable.
+[Dyson (1952)](https://doi.org/10.1103/PhysRev.85.631)
+The series is expected to be asymptotic. Its terms keep shrinking until roughly
+the order $1/\alpha\approx137$, so the divergence has no effect at five loops.
+But with no exact quantity to compare against, no theorem can bound the error
+of truncating it; this is the missing remainder bound described above.
+
+**The link to nature is empirical.** The truncated series, with the hadronic and
+electroweak contributions, agrees with the measured $g/2$ at the level of parts
+per trillion. That agreement is a fact about experiment, not a theorem. The
+proofs certify the coefficients; whether the series describes the electron is
+tested by measurement (sections 9 and 10).
 
 ## 5. What does it mean to allow a textbook manipulation?
 
