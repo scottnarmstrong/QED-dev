@@ -306,6 +306,15 @@ public import QED.GradedProof.SE2Form
 public import QED.GradedProof.SE2FormLemma
 public import QED.GradedProof.SE2Decomp
 public import QED.GradedProof.SE2FormC
+public import QED.GradedProof.SE2ParamPiece
+public import QED.GradedProof.SE2ParamCont
+public import QED.GradedProof.SE2CovTensor
+public import QED.GradedProof.SE2Chain4
+public import QED.GradedProof.SE2FormP
+public import QED.GradedProof.SE2FormF
+public import QED.GradedProof.SE2FormRX
+public import QED.GradedProof.SE2FormV
+public import QED.GradedProof.SE2Clause2
 public import QED.GradedProof.VP2Enum
 public import QED.GradedProof.VP2EnumG
 public import QED.GradedProof.VP2Classes

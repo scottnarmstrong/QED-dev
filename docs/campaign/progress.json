@@ -709,6 +709,10 @@
     {
       "date": "2026-11-19",
       "change": "Set (c) kernel, stage K pilot (QED/ChainProof/SetCK*): the one-loop massive-photon anomaly as a Stieltjes transform of the kernel variable, the inner integration in closed form, single- and double-pole Stieltjes atoms, and the ladder-pair density in closed form (rational and logarithms only); the pilot is reduced to the two per-placement density identities, which remain open."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Stage 2, order-e^4 self-energy: the second clause of G-Sigma2 proved (selfEnergyPart_two_clause2): below threshold the epsilon -> 0 limit exists and has the covariant form with unique form factors A, B, via explicit parametric limits, reflection covariance and null-ray continuity for all eight classes. Differentiability at the mass shell remains."
     }
   ],
   "tracks": [
