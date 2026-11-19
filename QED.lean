@@ -508,6 +508,12 @@ public import QED.GradedProof.RPi4WWard
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
+public import QED.GradedProof.WI2Grad
+public import QED.GradedProof.WI2Moment
+public import QED.GradedProof.WI2Square
+public import QED.GradedProof.WI2PA
+public import QED.GradedProof.WI2Diff
+public import QED.GradedProof.WI2Merge
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
