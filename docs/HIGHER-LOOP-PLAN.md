@@ -832,3 +832,7 @@ Open:
   pieces with limits from the generic engine.
 - `RepNested` for these four is reduced to `BDNestedForm C 1`, still to be proved.
 - `RepCov` for these four is open.
+
+**Bubble–bubble on the engine** (`QED/ChainProof/HCBB2*.lean`): `RepLimit repBB` follows from
+`BBJointIntegrable` (the (HC₀) gap). `RepNested` and `RepCov` for `repBB` reduce to two ε-free
+statements, `BBPauliValue` (identify the engine's limit with the nested kernel) and `BBCov`.

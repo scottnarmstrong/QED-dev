@@ -637,6 +637,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 (HC3): epsilon -> 0+ limits (RepLimit) proved for the four bubble-on-side representatives repBD 0/1 and repDB 0/1 (QED/ChainProof/HCSideBD*); their nested values are reduced to one nested-form identity (BDNestedForm); covariance (RepCov) for these classes is open. Added the reader-facing explainer docs/THE-COMPUTATION.md."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 (HC3): the bubble-bubble representative on the generic engine (QED/ChainProof/HCBB2*): RepLimit repBB from three-loop integrability (BBJointIntegrable); RepNested and RepCov for repBB reduced to two epsilon-free statements (BBPauliValue, BBCov)."
     }
   ],
   "tracks": [

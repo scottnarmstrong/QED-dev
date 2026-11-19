@@ -199,6 +199,10 @@ public import QED.ChainProof.HCSideBDRows
 public import QED.ChainProof.HCSideBDRepLimit
 public import QED.ChainProof.HCBBLimit
 public import QED.ChainProof.HCBBPauli
+public import QED.ChainProof.HCBB2Spec
+public import QED.ChainProof.HCBB2Num
+public import QED.ChainProof.HCBB2Limit
+public import QED.ChainProof.HCBB2Pauli
 public import QED.ChainProof.RepsIntFinal
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
