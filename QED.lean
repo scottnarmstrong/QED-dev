@@ -124,6 +124,12 @@ public import QED.Polylog.Deriv
 public import QED.Polylog.Reflection
 public import QED.Polylog.Integral
 public import QED.Polylog.Landen
+public import QED.Polylog.LiN
+public import QED.Polylog.Zeta5
+public import QED.Polylog.LiHalf
+public import QED.Polylog.ConstBounds
+public import QED.Polylog.A1Six
+public import QED.Polylog.A1FourFine
 public import QED.TwoLoop.WardIdentity
 public import QED.TwoLoop.LoopBoundTwoExact
 public import QED.TwoLoop.JointIntegralInvariance

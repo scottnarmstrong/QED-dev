@@ -653,6 +653,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 (HC3) sealed: the sixth-order set (b) coefficient is proved, 64 pi^6 F2 / e^6 -> a1SixSetB = 8/3 zeta(3) - 4/135 pi^2 - 943/324 in the D-37.4 order (QED/ChainProof/HCBB2*, HCFinal). Independent seal audit PROVED. All 13 Stage 1a goals sealed; no draft anchors remain."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Three-loop constants library (QED/Polylog/LiN, Zeta5, LiHalf, ConstBounds, A1Six, A1FourFine): generic polylogarithm Li k, zeta(5), Li3(1/2) closed form, kernel-checked enclosures of log 2, zeta(3), zeta(5), Li4(1/2) to about 1e-17; the Laporta-Remiddi closed form a1SixLR with 1.1812414565871995 < a1SixLR < 1.1812414565872003; and -0.32847896557919380 < a1Four < -0.32847896557919376."
     }
   ],
   "tracks": [
