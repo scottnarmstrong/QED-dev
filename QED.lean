@@ -511,6 +511,9 @@ public import QED.GradedProof.RPi4PhotonMass
 public import QED.GradedProof.RPi4WLim
 public import QED.GradedProof.RPi4WRem
 public import QED.GradedProof.RPi4WWard
+public import QED.GradedProof.RPi4Null
+public import QED.GradedProof.RPi4MassIns
+public import QED.GradedProof.RPi4MassInsLim
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
