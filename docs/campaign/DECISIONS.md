@@ -2570,3 +2570,27 @@ The manifest records these entries with `approval_version` "provisional".
 and `A1FourFine.lean`. An independent refute-first seal audit returned PROVED: statement bytes
 and ABI unchanged, provider types definitionally the frozen statements, tail bounds genuine,
 standard axioms only. The approval of all three D-56 declarations remains pending.
+
+**D-55 revised (2026-11-19, overnight; author approval pending).** Drafting the Stage 2 statements
+showed that the literal per-flavour scheme fails. Under the frozen value prescription each
+contraction is integrated separately, flavour-summed inside its integrand. With an independent δ₂
+on every flavour, a counterterm contraction on a closed loop then decays only like |ℓ⃗|⁻¹, so it is
+not integrable and its value defaults to 0. A numerical check confirmed the slopes and verified the
+alternative.
+
+**Revised provisional ruling (S2′).**
+- Each physical lepton block (lepton plus its two regulator fermions) carries one set of
+  counterterm coefficients d₁, d₂, d_m, fixed on shell at the lepton's physical mass.
+- On a regulator line the mass counterterm vertex is d_m·M_f, with the regulator's own mass.
+- δ₃ is shared by all flavours.
+
+**What the check showed.**
+- **Integrability.** Under S2′ the counterterm contraction decays like |ℓ⃗|⁻⁵ (|ℓ⃗|⁻⁶ for the 00
+  component), so the block's two Pauli–Villars conditions suffice. With d_m·m in place of
+  d_m·M_f it decays only like |ℓ⃗|⁻³.
+- **Limit.** The regulator residue of set (a) is independent of Λ and vanishes as M → ∞. Set (a)
+  tends to 0.052870652475767.
+- **Pole masses.** The muon and tau poles stay at their physical masses.
+
+**Open risk.** It is not yet tested whether the genuine two-loop vacuum polarization of a block is
+integrable with only two Pauli–Villars conditions.
