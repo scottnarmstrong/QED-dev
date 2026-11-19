@@ -2447,3 +2447,16 @@ were applied before approval. It found:
   clause cannot fail; the target is positive and non-vacuous.
 
 The one-bubble analogue (HC₁) is a helper-level pilot, not an anchor.
+
+**Seals (2026-11-19).** Six Stage 1a goals are sealed, each with body `by exact` its provider in
+`QED/Provider/VPChain/`, from helpers in `QED/ChainProof/Quick*.lean`:
+- (C₆) `a1SixSetB_bounds` and (C₇) `integral_chainTwo_eq_a1SixSetB`, through `a1SixSetB = aSetB`
+  by `rfl` and the T2 helpers;
+- (M₁) `onePIFamilyFunction₂_true`;
+- (M₂) `onePIFunction₂_sub_eq_family_add`, proved with `IsVPChain n` ⇒ total order 2n + 3 via the
+  photon-field bijection;
+- (M₃) `contractionValue₂_params`, by `rfl`;
+- (M₄) `exists_isVPChain_two`, by a kernel check of the bubble–bubble representative.
+
+An independent refute-first seal audit returned PROVED for all six. (HC₀) and (HC₃) remain
+DRAFT_SORRY.

@@ -28,7 +28,7 @@ theorem integral_chainTwo_eq_a1SixSetB :
       ∫ x in (0 : ℝ)..1, (1 - x) * (2 * ∫ t in (0 : ℝ)..1,
         t * (1 - t) * Real.log (1 + t * (1 - t) * (x ^ 2 / (1 - x)))) ^ 2 = a1SixSetB :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.VPChain.integral_chainTwo_eq_a1SixSetB
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

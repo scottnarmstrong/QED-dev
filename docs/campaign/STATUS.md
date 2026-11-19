@@ -27,8 +27,8 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 8 — the Phase 5 Stage 1a theorem goals in QED/Frozen/VPChain/ (D-53), among them
-               (HC₃) VertexChainTwoPauliLimit.lean
+DRAFT_ANCHORS: 2 — Stage 1a (D-53): (HC₀) JointEnergyFirstIntegrableVertexChainTwo.lean and
+               (HC₃) VertexChainTwoPauliLimit.lean in QED/Frozen/VPChain/; 6 Stage 1a goals sealed
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
 SEALED_THIS_TURN: 2 — QED.TwoLoop.jointEnergyFirstIntegrable_vertexOrderFive (HV₀, D-45) and

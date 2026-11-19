@@ -36,7 +36,7 @@ theorem onePIFunction₂_sub_eq_family_add (n : ℕ) (P : Params) {F : Type} [Fi
           (fun {_} {κ} C => ¬ IsVPChain n C ∧ ∑ t, (κ t).order = 2 * n + 3) (2 * n + 3)
           pOut pIn kIn αOut βIn μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.VPChain.onePIFunction₂_sub_eq_family_add
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

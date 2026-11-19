@@ -24,7 +24,7 @@ theorem onePIFamilyFunction₂_true (P : Params) {F : Type} [Fintype F] [Decidab
     (Φ : Flavors F) (nf nA : ℕ) :
     onePIFamilyFunction₂ P Φ nf nA (fun _ => True) = onePIFunction₂ P Φ nf nA :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.VPChain.onePIFamilyFunction₂_true
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

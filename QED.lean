@@ -110,6 +110,12 @@ public import QED.Frozen.Lepton.OnePIFamilyFunction
 public import QED.Frozen.VPChain.VertexChain
 public import QED.Frozen.VPChain.IsVertexChainLimit
 public import QED.Frozen.VPChain.A1SixSetB
+public import QED.Frozen.VPChain.A1SixSetBBounds
+public import QED.Frozen.VPChain.IntegralChainTwoEqA1SixSetB
+public import QED.Frozen.VPChain.OnePIFamilyFunctionTrue
+public import QED.Frozen.VPChain.OnePIFunctionSubEqFamilyAdd
+public import QED.Frozen.VPChain.ContractionValueParams
+public import QED.Frozen.VPChain.ExistsIsVPChainTwo
 public import QED.Frozen.TwoLoop.IsVertexOrderFiveLimit
 public import QED.Polylog.Basic
 public import QED.Polylog.Deriv

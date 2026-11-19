@@ -6,13 +6,26 @@ Authors: Scott Armstrong
 module
 
 public import QED.Frozen.VPChain.A1SixSetB
+import QED.ChainProof.QuickValues
 
 /-!
 # Provider for `QED.VPChain.a1SixSetB_bounds`
 
-Under development. This module will prove the frozen theorem goal
-`QED.VPChain.a1SixSetB_bounds` (Phase 5 Stage 1a packet, decision D-53) as
-`QED.Provider.VPChain.a1SixSetB_bounds`, with the binder convention of decision D-13.
-Until the frozen anchor is sealed, this module is quarantined: only the frozen anchor file may
-import it (`scripts/check_frozen_anchors.py`). It must never import the frozen anchor.
+Proves the frozen theorem goal `QED.VPChain.a1SixSetB_bounds` (Phase 5 Stage 1a packet, decision
+D-53) as `QED.Provider.VPChain.a1SixSetB_bounds`, with the binder convention of decision D-13, from
+the helper in `QED.ChainProof.QuickValues`. This module must never import the frozen anchor.
 -/
+
+public section
+
+namespace QED.Provider.VPChain
+
+open QED.VPChain
+
+/-- The frozen goal with implicit data binders and `by assumption` hypotheses (decision D-13). -/
+theorem a1SixSetB_bounds : 0.00255852 < a1SixSetB ∧ a1SixSetB < 0.00255853 :=
+  QED.ChainProof.a1SixSetB_bounds'
+
+end QED.Provider.VPChain
+
+end

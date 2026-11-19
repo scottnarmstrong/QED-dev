@@ -20,7 +20,7 @@ transcription of (C₅): changing any numerator or denominator in it by one move
 more than `10⁻³`. -/
 theorem a1SixSetB_bounds : 0.00255852 < a1SixSetB ∧ a1SixSetB < 0.00255853 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.VPChain.a1SixSetB_bounds
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

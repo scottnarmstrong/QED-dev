@@ -25,7 +25,7 @@ theorem contractionValue₂_params (P : Params) {nf nA N : ℕ} {κ : Fin N → 
     (C : Contraction nf nA κ) :
     contractionValue₂ P ⟨P.mass, P.loopCoeff, 0⟩ C = QED.WickModel.contractionValue₂ P C :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.VPChain.contractionValue₂_params
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

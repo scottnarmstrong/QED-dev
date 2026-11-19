@@ -24624,7 +24624,7 @@
         "module": "QED.Provider.VPChain.A1SixSetBBounds",
         "export": "QED.Provider.VPChain.a1SixSetB_bounds"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "b474db63757c246fc54dd87880b2abfc147274109cb85595eb378353d4ad13c7",
       "suffix_sha256": "996be8928563b70eb6f920a44fb29f60221cfa4a78f7c557208592ab8370fbff",
       "draft_allowlist": {
@@ -24667,7 +24667,7 @@
         "module": "QED.Provider.VPChain.IntegralChainTwoEqA1SixSetB",
         "export": "QED.Provider.VPChain.integral_chainTwo_eq_a1SixSetB"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "3eeeb84281af2328bc3fc190ea5d0c9e278aae666242afedabc6f0970bcfecaf",
       "suffix_sha256": "996be8928563b70eb6f920a44fb29f60221cfa4a78f7c557208592ab8370fbff",
       "draft_allowlist": {
@@ -24910,7 +24910,7 @@
         "module": "QED.Provider.VPChain.OnePIFamilyFunctionTrue",
         "export": "QED.Provider.VPChain.onePIFamilyFunction₂_true"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "3b568e4555a2a5749400aacab9be228d4659c19768da37d71151d69422a6b60e",
       "suffix_sha256": "996be8928563b70eb6f920a44fb29f60221cfa4a78f7c557208592ab8370fbff",
       "draft_allowlist": {
@@ -25157,7 +25157,7 @@
         "module": "QED.Provider.VPChain.OnePIFunctionSubEqFamilyAdd",
         "export": "QED.Provider.VPChain.onePIFunction₂_sub_eq_family_add"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "5a44a51b2ca7d982e04c5d295fc43421f6def9dfed9d0c4ee4f2b2d4d344d945",
       "suffix_sha256": "996be8928563b70eb6f920a44fb29f60221cfa4a78f7c557208592ab8370fbff",
       "draft_allowlist": {
@@ -25400,7 +25400,7 @@
         "module": "QED.Provider.VPChain.ContractionValueParams",
         "export": "QED.Provider.VPChain.contractionValue₂_params"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "b0e49a1c676a13bd15b44cd692c66f93d67a74902e9d0831b648c07326f56763",
       "suffix_sha256": "996be8928563b70eb6f920a44fb29f60221cfa4a78f7c557208592ab8370fbff",
       "draft_allowlist": {
@@ -25523,7 +25523,7 @@
         "module": "QED.Provider.VPChain.ExistsIsVPChainTwo",
         "export": "QED.Provider.VPChain.exists_isVPChain_two"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "d83209228e04ac3359ce483e27ae54f2a286d38d2415ec920e1eea6847006007",
       "suffix_sha256": "996be8928563b70eb6f920a44fb29f60221cfa4a78f7c557208592ab8370fbff",
       "draft_allowlist": {
