@@ -297,6 +297,15 @@ public import QED.GradedProof.SE2LimF
 public import QED.GradedProof.SE2PositivityTwo
 public import QED.GradedProof.SE2LimRX
 public import QED.GradedProof.SE2LimV
+public import QED.GradedProof.VP2Enum
+public import QED.GradedProof.VP2EnumG
+public import QED.GradedProof.VP2Classes
+public import QED.GradedProof.VP2Relabel
+public import QED.GradedProof.VP2Reduce
+public import QED.GradedProof.VP2Loop
+public import QED.GradedProof.VP2ClassG
+public import QED.GradedProof.VP2ClassG0
+public import QED.GradedProof.VP2Clause1
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
