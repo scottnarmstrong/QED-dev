@@ -297,6 +297,9 @@ public import QED.ChainProof.SetCKCrossTW
 public import QED.ChainProof.SetCKCrossT
 public import QED.ChainProof.SetCKCrossTBd
 public import QED.ChainProof.SetCKCrossTFub
+public import QED.ChainProof.SetCKScOutW
+public import QED.ChainProof.SetCKScOut
+public import QED.ChainProof.SetCKScOutSBd
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
