@@ -1,1 +1,35 @@
 
+end SetCJInt
+
+open SetCJInt
+
+theorem continuousAt_setCJ {x : ℝ} (hx : x ∈ Ioo (0 : ℝ) 1) : ContinuousAt setCJ x := by
+  obtain ⟨h0, h1⟩ := hx
+  have hz : x ≠ 0 := h0.ne'
+  have hm : 1 - x ≠ 0 := by linarith
+  have hp : 1 + x ≠ 0 := by linarith
+  have cP : ContinuousAt (Li 2) x :=
+    (continuousOn_Li le_rfl).continuousAt (Icc_mem_nhds (by linarith) h1)
+  have cM : ContinuousAt (Li 2) (-x) :=
+    (continuousOn_Li le_rfl).continuousAt (Icc_mem_nhds (by linarith) (by linarith))
+  unfold setCJ j21000 j20100 j20000 j11000 j10100 j10010 j10001 j10000 j01000 j00100 j00010
+    j00001 j00000
+  fun_prop (disch := simp [*])
+
+/-- **`setCJ` is integrable on `[0, 1]`.** -/
+theorem intervalIntegrable_setCJ : IntervalIntegrable setCJ volume 0 1 := by
+  have hA : IntervalIntegrable setCJ volume 0 (1 / 2) :=
+    intervalIntegrable_of_logSqBound (logSqBound_jzSum.congr fun x hx =>
+      setCJ_eq_near_zero hx.1 (by linarith [hx.2])) fun x hx =>
+      continuousAt_setCJ ⟨hx.1, by linarith [hx.2]⟩
+  have hB : IntervalIntegrable (fun y => setCJ (1 - y)) volume 0 (1 / 2) :=
+    intervalIntegrable_of_logSqBound (logSqBound_joSum.congr fun y hy =>
+      setCJ_eq_near_one hy.1 (by linarith [hy.2])) fun y hy =>
+      ContinuousAt.comp (g := setCJ) (continuousAt_setCJ ⟨by linarith [hy.2], by linarith [hy.1]⟩)
+        (by fun_prop)
+  have h := hB.comp_sub_left 1
+  simp only [sub_sub_cancel] at h
+  norm_num at h
+  exact hA.trans h.symm
+
+end QED.Chain

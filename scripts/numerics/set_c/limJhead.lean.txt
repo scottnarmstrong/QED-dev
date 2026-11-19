@@ -1,1 +1,43 @@
+/-
+Copyright (c) 2026 Scott Armstrong. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Scott Armstrong
+-/
+module
 
+public import QED.Chain.SetCRem
+public import QED.Chain.SetCKernel
+import QED.Polylog.ExtraIntegrals
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Tactic.FieldSimp
+import Mathlib.Tactic.FunProp
+import Mathlib.Tactic.LinearCombination
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.Ring
+
+/-!
+# Set (c): integrability of the integrand
+
+Helper analysis for the sixth-order set (c) of `docs/HIGHER-LOOP-PLAN.md`. It is **not** frozen.
+
+Substituting the second-order expansions of the atoms (`QED.Chain.SetCRem`) into the integrand
+`QED.Chain.setCJ`, every pole of the coefficients cancels: on `(0, 1)`, `setCJ x = T₀(x)` and
+`setCJ (1 - y) = T₁(y)`, sums of terms `d(x) logʲ x r(x)` with `d` rational (poles only at
+`1, -1, 2`), `j ≤ 2` and `r` a product of bounded remainders. Hence `|setCJ x|` is
+`O(1 + log² x)` near `0` and `O(1 + log² (1 - x))` near `1`, and `setCJ` is integrable on
+`[0, 1]`. Generator: `scratchpad/setC/gen_lim.py J`.
+
+## Main statements
+
+* `QED.Chain.continuousAt_setCJ`: `setCJ` is continuous on `(0, 1)`.
+* `QED.Chain.intervalIntegrable_setCJ`: `setCJ` is integrable on `[0, 1]`.
+-/
+
+@[expose] public section
+
+open Real Set Filter Topology MeasureTheory QED.Polylog QED.Chain.SetCKernel QED.Chain.SetCRem
+
+namespace QED.Chain
+
+namespace SetCJInt

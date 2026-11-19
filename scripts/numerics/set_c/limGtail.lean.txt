@@ -1,1 +1,18 @@
 
+end SetCW1Lim
+
+open SetCW1Lim
+
+/-- `G₁(0⁺) = 2147/432`. -/
+theorem tendsto_setCG1_zero : Tendsto setCG1 (𝓝[>] 0) (𝓝 (2147 / 432)) :=
+  tendsto_of_eq_add_mul logSqBound_gzSum fun x hx =>
+    setCG1_eq_near_zero hx.1 (by linarith [hx.2])
+
+/-- `G₁(1⁻) = 3509/432 - (8/9) log 2`. -/
+theorem tendsto_setCG1_one : Tendsto setCG1 (𝓝[<] 1) (𝓝 (3509 / 432 - 8 / 9 * log 2)) := by
+  have h := (tendsto_of_eq_add_mul (f := fun y => setCG1 (1 - y)) logSqBound_goSum
+    fun y hy => setCG1_eq_near_one hy.1 (by linarith [hy.2])).comp tendsto_one_sub_nhdsLT_one
+  refine h.congr fun x => ?_
+  simp only [Function.comp_apply, sub_sub_cancel]
+
+end QED.Chain

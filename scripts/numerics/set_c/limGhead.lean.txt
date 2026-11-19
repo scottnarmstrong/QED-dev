@@ -1,1 +1,42 @@
+/-
+Copyright (c) 2026 Scott Armstrong. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Scott Armstrong
+-/
+module
 
+public import QED.Chain.SetCRem
+public import QED.Chain.SetCW1
+import QED.Polylog.ExtraIntegrals
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Tactic.FieldSimp
+import Mathlib.Tactic.FunProp
+import Mathlib.Tactic.LinearCombination
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.Ring
+
+/-!
+# Set (c): endpoint limits of the rational-coefficient part
+
+Helper analysis for the sixth-order set (c) of `docs/HIGHER-LOOP-PLAN.md`. It is **not** frozen.
+
+Substituting the second-order expansions of the atoms (`QED.Chain.SetCRem`) into
+`G₁ = QED.Chain.setCG1`, every pole of the coefficients cancels: on `(0, 1)`,
+`G₁(x) = 2147/432 + x S₀(x)` and `G₁(1 - y) = 3509/432 - (8/9) log 2 + y S₁(y)`, where `S₀, S₁`
+are sums of terms `d(x) logʲ x r(x)` with `d` rational (poles only at `1, -1, 2`), `j ≤ 2` and
+`r` a product of bounded remainders. Hence `S₀, S₁ = O(1 + log² x)` on `(0, 1/2)` and the limits
+follow. Generator: `scratchpad/setC/gen_lim.py G`.
+
+## Main statements
+
+* `QED.Chain.tendsto_setCG1_zero`: `G₁(0⁺) = 2147/432`.
+* `QED.Chain.tendsto_setCG1_one`: `G₁(1⁻) = 3509/432 - (8/9) log 2`.
+-/
+
+@[expose] public section
+
+open Real Set Filter Topology QED.Polylog QED.Chain.SetCW1 QED.Chain.SetCRem
+
+namespace QED.Chain
+
+namespace SetCW1Lim

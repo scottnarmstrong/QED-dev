@@ -1,1 +1,57 @@
 
+
+/-- The set (c) integrand at `x = 1 - s` in atoms, for `0 < s < 1`. -/
+theorem setCJ_eq {s : ℝ} (hs : s ∈ Ioo (0 : ℝ) 1) :
+    setCLambda (1 - s) * setCDeltaAlpha (1 - s) = setCJ s := by
+  obtain ⟨h0, h1⟩ := hs
+  have hx : 1 - s ∈ Ioo (0 : ℝ) 1 := ⟨by linarith, by linarith⟩
+  have hz : s ≠ 0 := h0.ne'
+  have hm : 1 - s ≠ 0 := by linarith
+  have hp : 1 + s ≠ 0 := by linarith
+  have hm' : 0 < 1 - s := by linarith
+  have hp' : 0 < 1 + s := by linarith
+  have hn : -s ≠ 0 := neg_ne_zero.2 hz
+  have hn1 : -s - 1 ≠ 0 := by linarith
+  have hn2 : -s + 1 ≠ 0 := by linarith
+  have eu : 1 - s - 1 = -s := by ring
+  have e1 : 1 - (1 - s) = s := by ring
+  have l1 : log ((1 - -s) ^ 2 * (1 + -s)) = 2 * log (1 + s) + log (1 - s) := by
+    rw [sub_neg_eq_add, ← sub_eq_add_neg, log_mul (by positivity) hm, log_pow]
+    push_cast; ring
+  unfold setCLambda setCDeltaAlpha setCKappa setCF4
+  rw [piHat_photonVar hx, eu, l1, neg_neg, ← sub_eq_add_neg]
+  unfold piHatX setCR1 setCR2 setCR3 setCR4 setCR5 setCJ
+  rw [e1]
+  simp only [sub_neg_eq_add]
+  generalize log s = A0 at *
+  generalize log (1 - s) = A1 at *
+  generalize log (1 + s) = A2 at *
+  generalize Li 2 s = A3 at *
+  generalize Li 2 (-s) = A4 at *
+  simp only [j21000, j20100, j20000, j11000, j10100, j10010, j10001, j10000, j01000, j00100,
+    j00010, j00001, j00000]
+  field_simp
+  ring
+
+/-- The substitution `x = 1 - s` transfers integrability. -/
+theorem intervalIntegrable_setC_of_setCJ (h : IntervalIntegrable setCJ volume 0 1) :
+    IntervalIntegrable (fun x => setCLambda x * setCDeltaAlpha x) volume 0 1 := by
+  have h1 : IntervalIntegrable (fun s => setCLambda (1 - s) * setCDeltaAlpha (1 - s))
+      volume 0 1 := by
+    rw [intervalIntegrable_iff_integrableOn_Ioo_of_le zero_le_one] at h ⊢
+    exact h.congr_fun (fun s hs => (setCJ_eq hs).symm) measurableSet_Ioo
+  have h2 := h1.comp_sub_left 1
+  simp only [sub_sub_cancel, sub_zero, sub_self] at h2
+  exact h2.symm
+
+/-- **The set (c) integral in the variable `s = 1 - x`.** -/
+theorem integral_setC_eq_setCJ :
+    ∫ x in (0 : ℝ)..1, setCLambda x * setCDeltaAlpha x = ∫ s in (0 : ℝ)..1, setCJ s := by
+  have h := intervalIntegral.integral_comp_sub_left
+    (fun x => setCLambda x * setCDeltaAlpha x) (a := 0) (b := 1) (1 : ℝ)
+  simp only [sub_zero, sub_self] at h
+  rw [← h, intervalIntegral.integral_of_le zero_le_one, intervalIntegral.integral_of_le
+    zero_le_one, integral_Ioc_eq_integral_Ioo, integral_Ioc_eq_integral_Ioo]
+  exact setIntegral_congr_fun measurableSet_Ioo fun s hs => setCJ_eq hs
+
+end QED.Chain

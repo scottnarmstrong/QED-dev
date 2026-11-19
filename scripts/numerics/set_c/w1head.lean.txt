@@ -1,1 +1,51 @@
+/-
+Copyright (c) 2026 Scott Armstrong. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Scott Armstrong
+-/
+module
 
+public import QED.Chain.SetCKernel
+public import QED.Chain.SetCW3
+import QED.Polylog.AlphabetPM
+import QED.Polylog.LiCalculus
+import Mathlib.Analysis.SpecialFunctions.Log.Deriv
+import Mathlib.Tactic.FieldSimp
+import Mathlib.Tactic.LinearCombination
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.Positivity
+import Mathlib.Tactic.Ring
+
+/-!
+# Set (c): the rational-coefficient part
+
+Helper analysis for the sixth-order set (c) of `docs/HIGHER-LOOP-PLAN.md`. It is **not** frozen.
+
+In the atoms `log u, log (1 - u), log (1 + u), Li 2 u, Li 2 (-u)` the set (c) integrand
+`QED.Chain.setCJ` is `G₁' + g₃ + w₄`, where `g₃ = QED.Chain.setCg3` has simple poles only,
+`w₄ = QED.Chain.setCw4 = (5/3) log u Φ(u)/u` (`Φ = QED.Polylog.setCPhi`), and
+`G₁ = QED.Chain.setCG1` is a combination of the atom monomials of weight at most three with
+rational coefficients whose denominators are powers of `u`, `1 - u` and `1 + u` (obtained by
+repeated integration by parts of the highest-weight monomial; generator
+`scratchpad/setC/gen_w1.py`). The coefficients (`QED.Chain.SetCW1.h21000`, ...) are indexed by
+the exponents of the five atoms.
+
+## Main statements
+
+* `QED.Chain.SetCW1.setCg3_add_eq`: `g₃ + w₄` in atoms.
+* `QED.Chain.hasDerivAt_setCG1`: `G₁' = setCJ - g₃ - w₄` on `(0, 1)`.
+-/
+
+@[expose] public section
+
+open Real Set QED.Polylog QED.Chain.SetCKernel
+
+namespace QED.Chain
+
+/-- The weight-four part `w₄ = (5/3) log u Φ(u)/u` of the set (c) integrand, written out
+(`Φ = QED.Polylog.setCPhi`). -/
+noncomputable def setCw4 (u : ℝ) : ℝ :=
+  5 / 3 * (log u ^ 2 * log (1 - u) / u + 2 * (log u ^ 2 * log (1 + u) / u) +
+    2 * (log u * Li 2 u / u) + 4 * (log u * Li 2 (-u) / u))
+
+namespace SetCW1
