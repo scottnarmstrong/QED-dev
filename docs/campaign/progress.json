@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "history": [
     {
       "date": "2026-11-07",
@@ -589,6 +589,10 @@
     {
       "date": "2026-11-18",
       "change": "Phase 5 Stage 1a analytic core (helper level): the set (b) two-bubble outer functional at finite regulators, its joint (m_gamma, Lambda) limit, decoupling of the regulator fermions in the product with the sharp constant (41 - 4 pi^2)/135 and no ratio constraint, and the iterated limit to A_(b) (QED/Chain/ChainB*)."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 Stage 1a packet approved and frozen (D-52 three-loop scope ruling for the VP chains; D-53): the family predicate IsVPChain n, the family function and chain vertex, a1SixSetB = (8/3) zeta(3) - (4/135) pi^2 - 943/324 (5 definitions, SEALED) and 8 theorem goals (DRAFT_SORRY), among them the set (b) headline (HC3): 64 pi^6 F2 / e^6 -> a1SixSetB."
     }
   ],
   "tracks": [

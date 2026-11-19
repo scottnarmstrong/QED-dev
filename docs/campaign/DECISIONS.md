@@ -2373,3 +2373,77 @@ threshold R_M never has to exceed a physical lepton mass.
 
 The mass-dependent part of the Phase 4 exit criterion, deferred by D-36.2, is thereby met for
 the 1PI vertex.
+
+## D-52. Three-loop scope for the vacuum-polarization chains (author ruling)
+
+**Ruling.** On 2026-11-19 the author approved this ruling with the Stage 1a packet (D-53), on
+question Q4 of `docs/HIGHER-LOOP-PLAN.md` (option (a)). No frozen text changes.
+
+The audit behind it found that T1's generic objects mean the right thing at L = 3:
+- `Line.label`, `IsChord` and `loopCount`;
+- `chordMomentum` and `lineMomentum₂`;
+- the joint energy-first integral;
+- the value, `fermionSign` and the 1/N!.
+
+Each is backed by a proved helper generic in the loop count, or by a kernel check. The only
+restrictions are in the docstrings of (T₁₀), (T₁₁) and (F₈). The ruling:
+
+1. The source-facing scope of the joint energy-first value (T₁₀)/(F₇) extends to contractions
+   with three or more loops in the following cases:
+   - (a) the contractions of the vacuum-polarization chains (C₁) `QED.VPChain.IsVPChain n`, when
+     summed in the family 1PI function (C₂) `QED.Lepton.onePIFamilyFunction₂` at
+     K = 2n + 3, as in the chain vertex (C₃);
+   - (b) each such chain contraction individually, in the integrability companion (HC₀), which
+     states (T₉′) for the integrand of (T₁₀) directly at up to three loops.
+
+   Both cases hold at ε > 0, with momentum conservation and the Pauli–Villars conditions.
+2. Every proper divergent subgraph of a chain contraction is a one-loop vacuum polarization,
+   renormalized by the model's single order-e² counterterm δ₃ (D-37.3). The overall
+   logarithmic divergence of the vertex affects only F₁, and the headline concerns F₂.
+3. The ruling covers (C₂) at K = 2n + 3, above the source-facing bound K ≤ 2nf + nA + 3 of
+   (T₁₁)/(F₈), only for the chain family.
+4. The full order-e^{2n+3} part of (T₁₁)/(F₈) for n ≥ 2 remains outside the scope and is not a
+   renormalized amplitude.
+5. Any later family (for example, set (c) as an enclosure) requires its own audit at its loop
+   number and its own amendment of this ruling.
+
+## D-53. Phase 5 Stage 1a packet approved: sixth-order set (b) (author ruling)
+
+**Ruling.** On 2026-11-19 the author approved the Stage 1a packet exactly as written ("Approve as
+written"). It has 13 declarations:
+- **(C₁) `QED.VPChain.IsVPChain n`.** The vacuum-polarization chain with n insertions, each a
+  two-vertex electron bubble or a `photonCt` (δ₃) vertex. It is spelled out as an explicit
+  witness of the open line, the external photon on the middle vertex, and the photon walk.
+  - n = 2 is set (b) with its δ₃ partners.
+  - n = 1 is the Phase 4 VP class with its δ₃ class, checked by the kernel.
+  - n = 3 is eighth-order I(a).
+- **(C₂) `QED.Lepton.onePIFamilyFunction₂`.** (F₈)'s text with the filter `IsOnePI ∧ Fam`.
+- **(C₃) `vertexChain` and (C₄) `IsVertexChainLimit`.** The chain vertex at order 2n + 3 and its
+  ε → 0⁺ limit predicate.
+- **(C₅) `a1SixSetB` = (8/3)ζ(3) − (4/135)π² − 943/324.** Its value is a proved integral
+  (`QED/Chain/VPChainSetB*`). The literature pin is still open: Mignaco–Remiddi 1969 or
+  Barbieri–Remiddi 1974.
+  - Companions: (C₆), the enclosure 0.00255852 < a1SixSetB < 0.00255853, and (C₇), the
+    integral representation.
+- **Meaning theorems (M₁)–(M₄).**
+  - (M₁): the family function with the trivial family is (F₈).
+  - (M₂): the order-(2n+3) part splits into chain and non-chain.
+  - (M₃): at T1's flavours the value is (T₁₀), by `rfl`.
+  - (M₄): a three-loop set (b) contraction exists.
+- **(HC₀) `jointEnergyFirstIntegrable_vertexChain_two`.** Every set (b) contraction has a
+  genuinely integrable value integrand.
+- **The headline (HC₃) `isFormFactorPair_vertexChain_two_pauli_limit`.** (HV₃)'s exact binders
+  and quantifier order, at T1's flavours, with the conclusion ‖64π⁶F₂/e⁶ − a1SixSetB‖ < η. It is
+  reported as a subset: set (b), 1 of 72 sixth-order diagrams, with its δ₃ counterterm graphs.
+
+**Review.** An independent refute-first statement review returned APPROVE WITH NITS, and the nits
+were applied before approval. It found:
+- no false positive, false negative or double counting in (C₁), proved by hand from the frozen
+  definitions, with kernel checks at n = 1;
+- 9 relabelling orbits without automorphisms;
+- (C₂) and (C₃) are mechanical diffs of (F₈) and (F₉);
+- the L = 3 audit holds;
+- (HC₃) is (HV₃) binder for binder; the normalization (α/π)³ = e⁶/64π⁶ is right; the existence
+  clause cannot fail; the target is positive and non-vacuous.
+
+The one-bubble analogue (HC₁) is a helper-level pilot, not an anchor.
