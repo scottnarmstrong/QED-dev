@@ -817,3 +817,11 @@ Open:
   three-dimensional energy integral, a spatial bound on ℝ⁹, and the Fubini steps. It is comparable
   to the existing two-loop machinery. The outer energy integral must stay signed, because absolute
   values destroy the gauge cancellation.
+
+**The generic limit engine** (`QED/TwoLoop/VPHalfAtGen*.lean`):
+- **Supported shapes:** ε → 0⁺ limits with any number of photon-type denominators, each with its
+  own prescription, together with (k²)^j factors and any number of spectral insertions.
+- **Bounds:** uniform in the masses, the prescriptions and the spectral parameters.
+- **Dominated convergence:** Fubini and dominated convergence over any finite measure on the
+  spectral parameters.
+- **Coverage:** it serves the side classes and the bubble–bubble insertion Π̂_ε²k⁴d³ (r = 2, j = 4).

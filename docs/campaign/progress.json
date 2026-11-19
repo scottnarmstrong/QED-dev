@@ -629,6 +629,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 (HC0) reduced to integrability of the three-loop bubble-bubble representative: the other eight set (b) representatives are proved integrable at epsilon > 0 (QED/ChainProof/RepsInt*). The gap is a three-loop numerator-aware integrability criterion."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Generic mixed-prescription limit engine landed (QED/TwoLoop/VPHalfAtGen*): epsilon -> 0+ limits with any number of photon-type denominators with independent prescriptions, (k^2)^j factors and spectral insertions, uniform bounds, Fubini and dominated convergence over spectral parameters; it covers the set (b) side classes and the bubble-bubble double insertion."
     }
   ],
   "tracks": [

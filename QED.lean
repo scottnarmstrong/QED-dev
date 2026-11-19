@@ -194,6 +194,9 @@ public import QED.ChainProof.HCSideBDAlgebra
 public import QED.ChainProof.HCBBLimit
 public import QED.ChainProof.HCBBPauli
 public import QED.ChainProof.RepsIntFinal
+public import QED.TwoLoop.VPHalfAtGenAssembly
+public import QED.TwoLoop.VPHalfAtGenFubini
+public import QED.TwoLoop.VPHalfAtGenSpec
 public import QED.TwoLoop.ClassIntegrableFurry
 public import QED.TwoLoop.UnitSCGraphSpMain
 public import QED.TwoLoop.UnitSCGraphSmMain
