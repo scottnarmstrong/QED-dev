@@ -2521,3 +2521,25 @@ The memo rates a fully analytic end-to-end proof of the Laporta–Remiddi closed
 reusable layers (dimensionally continued integrals, integration-by-parts certificates, the
 polylogarithm library) at 35–55%. Pilots run first: the triple-cross integral J₀ in four dimensions,
 and the set (a) value integral.
+
+## D-55. Counterterms on non-electron flavours (finding; provisional ruling)
+
+**Finding (2026-11-19).**
+- **The frozen models.** Neither flavouring definition (`QED/Frozen/WickModel/Flavoring.lean`,
+  `QED/Frozen/Lepton/Flavoring.lean`) lets a counterterm vertex (δ₁, δ₂, δm) sit on a non-electron
+  line. Flavour is constant along a closed loop, so loops of regulator fermions or heavy leptons
+  never carry counterterms.
+- **Order e⁵ and the chains are unaffected.** At order e⁵ and on the vacuum-polarization chains, no
+  counterterm can sit on a closed loop. (HV₃), (HM₂), (HC₀) and (HC₃) are therefore correct as
+  stated, and no frozen anchor needs a successor. This strengthens D-52.4.
+- **Order e⁷ is affected.** In the two-loop vacuum polarization of a regulator flavour (set (a)),
+  the mass subdivergence of the internal self-energy is not renormalized. This leaves a term in
+  A₁⁽⁶⁾ of about −(1/30)·Σ_f c_f (m/M_f)² ln(Λ²/M_f²). It grows without bound as Λ → ∞ at fixed
+  M_f, so the D-37 limit would not exist. A muon loop diverges the same way.
+- **Numerical evidence.** The memo's script confirms the mass shift to 10⁻⁷. The residue grows
+  linearly in ln Λ with the predicted slope, and after the predicted term is subtracted the remainder
+  is constant to six figures.
+
+**Provisional ruling (overnight mode; author approval pending).** In the Stage 2 successor every
+flavour gets its own on-shell counterterms. Flavour f's conditions are the electron's with the open
+line set to f, and δ₃ is shared by all flavours. The frozen models are unchanged.
