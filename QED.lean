@@ -355,6 +355,7 @@ public import QED.GradedProof.X0OneCtVertex
 public import QED.GradedProof.X0OneCt
 public import QED.GradedProof.X0OneCtCrit
 public import QED.GradedProof.X0OneCtEnum
+public import QED.GradedProof.X0Block
 public import QED.GradedProof.VP2Enum
 public import QED.GradedProof.VP2EnumG
 public import QED.GradedProof.VP2Classes
