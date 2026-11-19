@@ -27,7 +27,7 @@ one Fubini swap gives (**`scOutCH_isScOutCHDensity_of_bound`**)
 `C(0, t) = ∫₀¹ H_C(X) Q'(X)/(Q(X) + t)² dX`,
 `H_C(X) = 2 ∫_{(0,1)³} 1{y₃ < Y, x < X} T(Y, y₃, x, Q(X) - Q(x))` (`scOutCH`).
 
-The domination `ScOutCBound` is the remaining analytic input of G4C (see the status notes).
+The domination `ScOutCBound` is proved in `SetCKScOutCH` (`scOutC_bound`).
 -/
 
 @[expose] public section

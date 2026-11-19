@@ -310,6 +310,12 @@ public import QED.ChainProof.SetCKScOutCPt
 public import QED.ChainProof.SetCKScOutCId
 public import QED.ChainProof.SetCKScOutC
 public import QED.ChainProof.SetCKScOutCFub
+public import QED.ChainProof.SetCKScOutCAbs
+public import QED.ChainProof.SetCKScOutCBd
+public import QED.ChainProof.SetCKScOutCDom
+public import QED.ChainProof.SetCKScOutCH
+public import QED.ChainProof.SetCKAsmRho
+public import QED.ChainProof.SetCKAssembly
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
