@@ -278,6 +278,11 @@ public import QED.GradedProof.LevelZero
 public import QED.GradedProof.SE2Enum
 public import QED.GradedProof.SE2Classes
 public import QED.GradedProof.SE2Reduce
+public import QED.GradedProof.SE2SEChain
+public import QED.GradedProof.SE2ClassC
+public import QED.GradedProof.SE2ClassP
+public import QED.GradedProof.SE2ClassF
+public import QED.GradedProof.SE2Clause1
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec

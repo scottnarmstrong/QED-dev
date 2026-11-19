@@ -693,6 +693,10 @@
     {
       "date": "2026-11-19",
       "change": "Stage 2, order-e^4 self-energy (G-Sigma2): the 1PI one-fermion contractions of graded order 4 enumerated by kernel decision and grouped into eight representative classes (QED/GradedProof/SE2Enum, SE2Classes); integrability of all of them reduced to the eight classes (SE2Reduce). Per-class integrability, the form factors and their differentiability remain."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Stage 2, order-e^4 self-energy: the five one-loop classes (vertex, fermion and photon counterterm insertions) proved integrable at every epsilon > 0 and momentum (QED/GradedProof/SE2Class*); the integrability clause of G-Sigma2 now rests only on the two-loop rainbow, crossed and vacuum-polarization classes."
     }
   ],
   "tracks": [
