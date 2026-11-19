@@ -300,6 +300,16 @@ public import QED.ChainProof.SetCKCrossTFub
 public import QED.ChainProof.SetCKScOutW
 public import QED.ChainProof.SetCKScOut
 public import QED.ChainProof.SetCKScOutSBd
+public import QED.ChainProof.SetCKScOutSDom
+public import QED.ChainProof.SetCKScOutSFub
+public import QED.ChainProof.SetCKScOutSAtom
+public import QED.ChainProof.SetCKScOutSH
+public import QED.ChainProof.SetCKScOutCMast
+public import QED.ChainProof.SetCKScOutCW
+public import QED.ChainProof.SetCKScOutCPt
+public import QED.ChainProof.SetCKScOutCId
+public import QED.ChainProof.SetCKScOutC
+public import QED.ChainProof.SetCKScOutCFub
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
