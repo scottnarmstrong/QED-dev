@@ -192,6 +192,10 @@ public import QED.Chain.VPChainSetBBounds
 public import QED.Chain.HeavyLeptonBounds
 public import QED.Chain.HeavyVPLimit
 public import QED.Chain.ChainBLimit
+public import QED.Chain.SetASpectral
+public import QED.Chain.SetAFubini
+public import QED.Chain.SetASubst
+public import QED.Chain.SetAConst
 public import QED.ChainProof.HCClasses
 public import QED.ChainProof.HCNestedFubini
 public import QED.ChainProof.EnumVertex

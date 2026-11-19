@@ -661,6 +661,10 @@
     {
       "date": "2026-11-19",
       "change": "D-56 (provisional): the Laporta-Remiddi closed form of A1^(6) frozen as the three-loop target (R1); its sixteen-digit enclosure (R2) and the sixteen-digit two-loop enclosure (U2') sealed after an independent audit. The pilot for the triple-cross integral J0 in four dimensions is a no-go as scoped (square roots in the electron-line integrations); the integration-by-parts route is next for set (e)."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Set (a) value side, part 1 (QED/Chain/SetA*): the Kallen-Sabry spectral function (Kaptari et al. 2025, eq. (20)) and the reusable two-loop vacuum polarization piHat4 with bounds and endpoint limits; the set (a) integral reduced by Fubini and a closed-form inner integral to a one-variable integral of logarithms and dilogarithms; the closed form aSetA (eq. (16)) with 0.0528706524757669 < aSetA < 0.0528706524757671. Open: the last one-variable integral, which needs weight-4 polylogarithm identities."
     }
   ],
   "tracks": [
