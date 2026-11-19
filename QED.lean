@@ -271,6 +271,11 @@ public import QED.ChainProof.SetCKDensity
 public import QED.ChainProof.SetCKOuterY
 public import QED.ChainProof.SetCKOuterInt
 public import QED.ChainProof.SetCKOuterL
+public import QED.ChainProof.SetCKPairF
+public import QED.ChainProof.SetCKPairDisp
+public import QED.ChainProof.SetCKPairX
+public import QED.ChainProof.SetCKPairS
+public import QED.ChainProof.SetCKPairFub
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
