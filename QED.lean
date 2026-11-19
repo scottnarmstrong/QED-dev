@@ -363,6 +363,12 @@ public import QED.GradedProof.VP2Weights
 public import QED.GradedProof.VP2TensorForm
 public import QED.GradedProof.VP2Piece
 public import QED.GradedProof.VP2Positivity
+public import QED.GradedProof.VP2LimG
+public import QED.GradedProof.VP2Kinds
+public import QED.GradedProof.VP2FCov
+public import QED.GradedProof.VP2FPieces
+public import QED.GradedProof.VP2FTriple
+public import QED.GradedProof.VP2LimF
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
