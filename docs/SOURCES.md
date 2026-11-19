@@ -148,6 +148,7 @@ exact fourth-order results.
 | --- | --- | --- | --- |
 | `laporta-remiddi-1996` | S. Laporta, E. Remiddi, 'The analytical value of the electron (g-2) at order alpha^3 in QED', arXiv:hep-ph/9602417v1 | primary, three loops (the exact closed form of A1^(6); the triple-cross graphs) | 136424 / `afd37a24aa9540bcac49afd0df306ed518f6a3b9593042bc888b08473210102a` |
 | `laporta-remiddi-1996-plb` | the same, Phys. Lett. B 379 (1996) 283-291, doi:10.1016/0370-2693(96)00439-X (publisher PDF, acquired by the author) | version of record; scanned, so the arXiv text is used for transcription and this to check it | 618867 / `a398e60c88357399f9f5b655c49335348aecae15ee71a82fa5d9bbb8c45a7689` |
+| `barbieri-remiddi-1974` | R. Barbieri and E. Remiddi, "Sixth order electron and muon (g-2)/2 from second order vacuum polarization insertion", CERN preprint TH.1801 (1974); Phys. Lett. B 49 (1974) 468, doi:10.1016/0370-2693(74)90638-8 (CERN scan CM-P00060973, acquired by the author) | set (c): eq. (3) gives the electron value 227/72 + 31/9 ζ(2) − 8 ζ(2) ln 2 − 35/8 ζ(3) + 2 ζ(2)² = −0.150172282…; eq. (1) gives graph-pair partial sums; the rest of the set comes from its refs. 1)–3) | 243310 / `55f3721e9fabb8e26c0d87537303f242e040f0e63957f0139f60055d4750744f` |
 
 The earlier analytic results that the 1996 paper builds on (light-by-light, the other sets and
 their master integrals) will be pinned here as they are acquired.

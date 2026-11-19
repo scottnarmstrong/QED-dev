@@ -167,6 +167,17 @@
       "sha256": "a398e60c88357399f9f5b655c49335348aecae15ee71a82fa5d9bbb8c45a7689",
       "license": "Publisher copyright; acquired by the author; never committed or redistributed.",
       "stability": "journal version of record; fixed."
+    },
+    {
+      "id": "barbieri-remiddi-1974",
+      "role": "primary, three loops, set (c): closed form of the second-order vacuum-polarization insertions into the fourth-order vertex graphs (eq. (3), electron; eq. (1) partial sums by graph pair)",
+      "citation": "R. Barbieri and E. Remiddi, 'Sixth order electron and muon (g-2)/2 from second order vacuum polarization insertion', CERN preprint Ref.TH.1801-CERN (31 January 1974); published Phys. Lett. B 49 (1974) 468, doi:10.1016/0370-2693(74)90638-8",
+      "url": "https://cds.cern.ch/record/CM-P00060973",
+      "retrieved_utc": "2026-11-19T00:00:00Z",
+      "bytes": 243310,
+      "sha256": "55f3721e9fabb8e26c0d87537303f242e040f0e63957f0139f60055d4750744f",
+      "license": "CERN preprint scan; acquired by the author; never committed or redistributed.",
+      "stability": "archival preprint scan (CERN Document Server CM-P00060973); fixed."
     }
   ]
 }
