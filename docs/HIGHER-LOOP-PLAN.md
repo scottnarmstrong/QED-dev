@@ -796,3 +796,13 @@ Open:
   - the VP assembly engine, which is written for photon masses (a,b,a,b), must be generalized to
     extra photon lines;
   - the parametric route for the full matrix limit must be extended to 11- and 12-line shapes.
+
+**Bubble–bubble, part 1** (`QED/ChainProof/HCBB*.lean`):
+- **The Wick step is proved.** The value of `repBB` is the three-loop joint integral of
+  `bbIntegrand` with the outer factor `chainOuter`, whose constants are confirmed. Given
+  integrability, it is the one-loop vertex integral with the double insertion
+  d³(Π̂_ε²k²(k²g − kk) − ε(…)).
+- **The limit, nested value and covariance are reduced** to statements about that integral.
+- **The analytic core remains:** the ε → 0⁺ limit with several different iε prescriptions, one
+  from each spectral bubble plus ε itself. It needs a dominated-convergence engine for mixed
+  prescriptions with more photon-type powers. The side classes need the same engine.

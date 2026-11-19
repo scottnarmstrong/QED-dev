@@ -191,6 +191,8 @@ public import QED.ChainProof.HCLimitDDLimit
 public import QED.ChainProof.HCLimitNested
 public import QED.ChainProof.HCSideLinks
 public import QED.ChainProof.HCSideBDAlgebra
+public import QED.ChainProof.HCBBLimit
+public import QED.ChainProof.HCBBPauli
 public import QED.TwoLoop.ClassIntegrableFurry
 public import QED.TwoLoop.UnitSCGraphSpMain
 public import QED.TwoLoop.UnitSCGraphSmMain

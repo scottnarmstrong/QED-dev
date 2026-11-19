@@ -621,6 +621,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 (HC3) per-class limits, part 2: the delta3-delta3 classes are complete (limit, closed form, nested value with the delta3^2/4 coefficient proved, covariance); the three links reduce to 15 per-representative inputs for the bubble-bubble and side classes; the side classes are reduced algebraically to the VP class with extra photon lines."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 (HC3) bubble-bubble class, part 1: the three-loop Wick step is proved (value = joint integral of the nested integrand; constants confirmed), and the value is the one-loop vertex with a double spectral insertion; the epsilon-limit, nested value and covariance are reduced to statements about that integral, which need a mixed-prescription limit engine (shared with the side classes)."
     }
   ],
   "tracks": [
