@@ -14,51 +14,26 @@ should produce reusable tools for real physics calculations.
 [The computation](docs/THE-COMPUTATION.md) explains, for non-specialists, what
 $a_e$ is, why each loop order is harder, and how far the verification has come.
 
-**Current state (the one-loop result is complete):** the primary derivation is pinned
-(Srednicki, chapters 62–64). The conventions are fixed, and the one-loop
-regulator route is chosen. The derivation is mapped step by step with its proof
-obligations exposed. A Lean package is pinned to Lean and Mathlib `v4.35.0`.
-It contains proved Dirac-algebra infrastructure, the loop-energy integral
-evaluation that replaces Wick rotation, and the **first author-approved frozen
-declarations** (packets 1 and 1b, D-11 and D-12): the regulated propagators,
-the one-loop vertex integrand (62.40), the energy-first integral, the Minkowski
-and Dirac definitions they are built from, and the theorem goal that the
-regulated vertex is well defined. Both that theorem and **packet 2** (D-14) are
-now proved, sealed, and independently audited. Packet 2 defines the one-loop
-vertex, proves that its form-factor decomposition (63.18) exists and is
-unique, and proves the Pauli form-factor limit: the one-loop Pauli form factor tends to
-$e^2/8\pi^2=\alpha/2\pi$ ($C_1=1/2$) jointly as $q^2\to0^+$, $m_\gamma\to0^+$, and
-$\Lambda\to\infty$. Packet 3 (D-15) adds the charge
-condition (63.1), the counterterm shift (O-8), and $F_1(0)=1$. Packet 4a
-(D-16) defines the magnetic moment from the vertex's static magnetic response
-and proves the one-loop Landé factor $g\to2(1+\alpha/2\pi)$ (64.17). All are
-sealed and independently audited.
+**Where things stand.**
 
-Packet 4b (D-18) adds the source's own wave-packet definition of the magnetic
-moment, $\mu=\int d^3x\,x^1\langle e|J^2(x)|e\rangle/\langle e|e\rangle$, and
-proves that its position integral converges absolutely, that it agrees with the
-response definition as the packet narrows, and so that $g\to2(1+\alpha/2\pi)$
-for the source definition too. Packet 5 (D-20) derives the vertex from the
-order-$e^3$ Wick expansion of the interaction with all counterterms: the 1PI
-part is the counterterm-corrected tree vertex plus the one-loop diagram, with
-coefficient one and no closed-loop sign. Packets 6a and 6b (D-24, D-26–D-28)
-extend the Wick expansion to a general model with Pauli–Villars regulator
-fermions. They prove the covariant forms of the one-loop self-energy and vacuum
-polarization, and show that the on-shell conditions (62.27) and (62.11) fix the
-counterterms $\delta_2$, $\delta_m$ and $\delta_3$ uniquely. Packet 6c (D-30,
-D-31) defines the LSZ amplitude of the electron current from the model's
-connected three-point function, proves that it is
-$\bar u'V^\mu u$ plus a photon-leg term, and restates the charge condition and
-both magnetic-moment definitions with it; they agree with the earlier ones, so
-the current matrix elements are no longer a modeling identification (O-3).
-The headline theorem (D-33) assembles the chain: starting from the general
-model with on-shell counterterms and its own LSZ amplitude, the Pauli form
-factor tends to $\alpha/2\pi$ and both magnetic-moment definitions give
-$g\to2(1+\alpha/2\pi)$ as $m_\gamma\to0^+$ and $\Lambda\to\infty$. Remaining
-one-loop work: none. A Comparator challenge for the headline passes with three
-independent kernels, a rebuild in a fresh checkout is clean, and an
-independent end-to-end audit found the headline proved as advertised. See the
-[campaign status](docs/campaign/STATUS.md).
+- **One loop: done.** Starting from the rules of QED with the standard (on-shell)
+  mass and charge conditions, Lean proves Schwinger's result: the electron's
+  $g$-factor is $2(1+\alpha/2\pi)$ at this order.
+- **Two loops: done.** Lean proves the exact two-loop coefficient,
+  $\frac{197}{144}+\frac{\pi^2}{12}-\frac{\pi^2}{2}\ln2+\frac34\zeta(3)
+  =-0.328\,478\,965\ldots$ (Petermann and Sommerfield, 1957), and the
+  smaller contributions from muon and tau loops.
+- **Three loops: in progress.** The target is the exact result of Laporta and
+  Remiddi (1996), which sums 72 Feynman diagrams in five groups. One group is
+  proved. For two more, the final integrals are proved equal to their published
+  values, and the link back to the underlying model is being built. The two
+  largest groups (56 diagrams) are not yet started.
+
+Every theorem is checked by Lean's kernel using only Lean's standard axioms.
+The one- and two-loop main results were also re-checked by two independent
+proof checkers. [The computation](docs/THE-COMPUTATION.md) explains these
+results in more detail; the [campaign status](docs/campaign/STATUS.md) has the
+working detail.
 
 **Start here:** [What does "proved" mean?](docs/WHAT-IS-PROVED.md) ·
 [Project outline](docs/PROJECT-OUTLINE.md) ·
@@ -181,23 +156,13 @@ documented with its evidence in
 
 ## Next steps
 
-The one-loop result is proved and assembled. The headline theorem,
-`lszAmplitude_pauli_landeFactor_limit`, starts from the regulated Wick
-expansion of QED with on-shell counterterms and the model's own LSZ amplitude
-of the electron current. It proves that the Pauli form factor tends to
-$\alpha/2\pi$ and that both definitions of the magnetic moment give
-$g\to2(1+\alpha/2\pi)$, jointly as $m_\gamma\to0^+$ and $\Lambda\to\infty$.
-It depends only on the standard Lean axioms.
-
-Phase 3 for the one-loop pilot is also complete: the regulated Pauli form
-factor of the same amplitude is certified at three regulator points by
-interval quadrature checked by Lean's kernel, and for the CODATA 2022 value of
-$\alpha$ the one-loop contribution $\alpha/2\pi$ is proved to lie in
-$[0.0011614097319,\ 0.0011614097323]$ ([certificates](certificates/README.md)).
-
-Next are the later phases of the [outline](docs/PROJECT-OUTLINE.md#4-campaign-phases):
-the complete two-loop calculation, selected higher-loop families toward
-five-loop QED, and an experimental comparison.
+- **Finish three loops.** Complete the model for three-loop diagrams, link the
+  three groups whose values are already proved back to it, and then compute
+  the two remaining groups: the six light-by-light diagrams and the fifty
+  diagrams without closed electron loops.
+- **Then four and five loops.** These are the later phases of the
+  [outline](docs/PROJECT-OUTLINE.md#4-campaign-phases), together with a
+  comparison with the measured value of $a_e$.
 
 ## Repository map
 
