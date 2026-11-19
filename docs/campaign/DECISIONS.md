@@ -2666,3 +2666,11 @@ Checks: the frozen bytes changed only in the proof bodies; ABI unchanged (8/8); 
 guard is OK. An independent refute-first seal audit found all eight PROVED: provider types are
 definitionally equal to the frozen ones with D-13 binders, and no draft anchor or provider is
 reachable.
+
+**Seals, continued (2026-11-19).** Two more goals are sealed the same way:
+- `existsUnique_withLevel_zero`: the level-0 counterterms exist and are unique for any idempotent
+  `rep` with block Pauli–Villars data. The photon counterterm uses a new block split of the flavour
+  sum into single-lepton photon functions (`QED/GradedProof/LevelZeroPhotonSplit.lean`).
+- `d₁_eq_d₂_zero`: the level-0 Ward identity, from the sealed one-loop identity.
+
+ABI unchanged (2/2); standard axioms; guard OK. An independent seal audit found both PROVED.

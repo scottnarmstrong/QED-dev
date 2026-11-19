@@ -33,7 +33,7 @@ theorem existsUnique_withLevel_zero (P : Params) {F : Type} [Fintype F] [Decidab
     (hPV₂ : ∑ f, Φ.coeff f * Φ.mass f ^ 2 = 0) :
     ∃! x : (F → ℝ × ℝ × ℝ) × ℝ, IsRenormalizedThrough P Φ (D.withLevel 0 x.1 x.2) rep 1 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.existsUnique_withLevel_zero
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

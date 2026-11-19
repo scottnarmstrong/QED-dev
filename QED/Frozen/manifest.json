@@ -32387,7 +32387,7 @@
         "module": "QED.Provider.Graded.ExistsUniqueWithLevelZero",
         "export": "QED.Provider.Graded.existsUnique_withLevel_zero"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "cef54b33c4672ae638e2fc99da97af34cf05b0563d32390550f408bbca04539f",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
@@ -32662,7 +32662,7 @@
         "module": "QED.Provider.Graded.WardIdentityZero",
         "export": "QED.Provider.Graded.d₁_eq_d₂_zero"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "f971e58028e9efc55a044becabfa2e64a6d5f7b9c9a96fe0188ecfae8dc56396",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {

@@ -685,6 +685,10 @@
     {
       "date": "2026-11-19",
       "change": "Stage 2: 8 of 18 D-57 goals sealed and audited (order homogeneity, level-one conditions, the order-e^5 vertex, embeddings into the frozen two-loop model)."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Stage 2: 10 of 18 D-57 goals sealed and audited; new: existence and uniqueness of the level-0 counterterms for every lepton block, and the level-0 Ward identity."
     }
   ],
   "tracks": [
