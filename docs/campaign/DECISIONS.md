@@ -2484,3 +2484,40 @@ DRAFT_SORRY.
 
 All thirteen Stage 1a goals are sealed. The sixth-order set (b) coefficient is proved: 64π⁶F₂/e⁶
 tends to `a1SixSetB` = 8/3·ζ(3) − 4/135·π² − 943/324 ≈ 0.00255852 in the D-37.4 order.
+
+## D-54. Three-loop programme: exact target and four-loop readiness (author ruling; provisional items)
+
+**Author rulings (2026-11-19).**
+1. **Scope and order.** Complete sets (a), (b) and (c) of the sixth-order coefficient, then attack sets
+   (d) (light-by-light, 6 diagrams) and (e) (no fermion loops, 50 diagrams) analytically, reducing
+   them as far as possible.
+2. **Exact target.** Every analytic result that Laporta and Remiddi (1996; source
+   `laporta-remiddi-1996`) prove or use is to become an analytic Lean theorem, and their closed form
+   of A₁⁽⁶⁾ is to be reproduced in full. Certified numerics are at most an interim step, and any
+   interim enclosure states its width.
+3. **Four-loop readiness.** The three-loop work must serve as input to a later four-loop
+   computation:
+   - counterterms graded generically in the loop order;
+   - per-set theorems that expose the reusable objects, such as the two-loop vacuum polarization
+     Π⁽⁴⁾(q²) for all q² and the renormalization constants;
+   - general analytic machinery (integration by parts, master integrals, a polylogarithm library)
+     preferred over set-specific tricks.
+4. **Two-loop enclosure.** The numerical check of A₁⁽⁴⁾ is to be tightened beyond the published nine
+   digits.
+5. **Overnight mode.** The author pre-authorized continued work on the exact three-loop programme in
+   overnight mode: statements are frozen provisionally, pending approval in the morning.
+
+**Provisional choices (overnight mode; author approval pending).** These follow the analytic-route
+memo's recommendations.
+- **(P1)** Non-integer dimension may be used as an evaluation device only. The model is unchanged,
+  and a proved bridge theorem per set links the model's limit to the dimensionally continued
+  expression. This would be a successor note to D-36.1.
+- **(P2)** Large polynomial identities, such as integration-by-parts reduction certificates, are
+  checked in the kernel by `decide +kernel`. This is read as within D-34.
+- **(P3)** Theorems are stated per gauge-invariant set, not per graph, so that each statement is
+  free of infrared divergences.
+
+The memo rates a fully analytic end-to-end proof of the Laporta–Remiddi closed form at 5–10%, and the
+reusable layers (dimensionally continued integrals, integration-by-parts certificates, the
+polylogarithm library) at 35–55%. Pilots run first: the triple-cross integral J₀ in four dimensions,
+and the set (a) value integral.
