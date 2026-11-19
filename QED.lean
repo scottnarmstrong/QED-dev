@@ -138,6 +138,7 @@ public import QED.Polylog.AlphabetPM
 public import QED.Polylog.DilogPM
 public import QED.Polylog.LiLimits
 public import QED.Polylog.LogLogSq
+public import QED.Polylog.LogLiDiv
 public import QED.TwoLoop.WardIdentity
 public import QED.TwoLoop.LoopBoundTwoExact
 public import QED.TwoLoop.JointIntegralInvariance
@@ -206,6 +207,7 @@ public import QED.Chain.SetAW3
 public import QED.Chain.SetAW1
 public import QED.Chain.SetAW1Lim
 public import QED.Chain.SetAValue
+public import QED.Chain.SetCConst
 public import QED.ChainProof.HCClasses
 public import QED.ChainProof.HCNestedFubini
 public import QED.ChainProof.EnumVertex

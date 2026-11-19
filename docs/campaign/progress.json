@@ -669,6 +669,10 @@
     {
       "date": "2026-11-19",
       "change": "Set (a) value side complete: integral_setA_eq_aSetA proves that the set (a) integral with the two-loop vacuum polarization equals the closed form aSetA (Kaptari et al. 2025, eq. (16)). New weight-4 polylogarithm library (QED/Polylog/LiCalculus, AlphabetPM, DilogPM, LiLimits, LogLogSq), reusable for sets (c)-(e). The model link for set (a) needs the Stage 2 model."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Set (c) started: Barbieri-Remiddi 1974 pinned (eq. (3)); aSetC with a 1e-16 enclosure (QED/Chain/SetCConst); the weight-4 integrals of set (c), including int log s Phi(s)/s = pi^4/30 (QED/Polylog/LogLiDiv). A one-variable kernel representation (Balzani-Laporta-Passera 2022) reproduces eq. (3) to 50 digits."
     }
   ],
   "tracks": [

@@ -178,6 +178,17 @@
       "sha256": "55f3721e9fabb8e26c0d87537303f242e040f0e63957f0139f60055d4750744f",
       "license": "CERN preprint scan; acquired by the author; never committed or redistributed.",
       "stability": "archival preprint scan (CERN Document Server CM-P00060973); fixed."
+    },
+    {
+      "id": "balzani-laporta-passera-2022",
+      "role": "kernel, three loops, set (c): space-like form of the two-loop massive-photon kernel (eqs. (20)-(24), (38)); retained external input until the kernel is derived in the model",
+      "citation": "E. Balzani, S. Laporta and M. Passera, 'Hadronic vacuum polarization contributions to the muon g-2 in the space-like region', Phys. Lett. B 834 (2022) 137462, arXiv:2112.05704v3",
+      "url": "https://arxiv.org/abs/2112.05704v3",
+      "retrieved_utc": "2026-11-19T00:00:00Z",
+      "bytes": 637932,
+      "sha256": "cd190af861de2cbfccd136783f7cc88b715c38dec3f2f22e9a24d335983c6c29",
+      "license": "arXiv non-exclusive distribution license; kept in the ignored cache, not committed.",
+      "stability": "arXiv version v3; fixed."
     }
   ]
 }
