@@ -705,6 +705,10 @@
     {
       "date": "2026-11-19",
       "change": "Stage 2, order-e^4 self-energy: the vacuum-polarization-insertion class proved integrable (flavour sum with both Pauli-Villars conditions); the integrability clause of G-Sigma2 is now proved unconditionally (selfEnergyPart_two_clause1). The form-factor limit and its differentiability remain."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Set (c) kernel, stage K pilot (QED/ChainProof/SetCK*): the one-loop massive-photon anomaly as a Stieltjes transform of the kernel variable, the inner integration in closed form, single- and double-pole Stieltjes atoms, and the ladder-pair density in closed form (rational and logarithms only); the pilot is reduced to the two per-placement density identities, which remain open."
     }
   ],
   "tracks": [

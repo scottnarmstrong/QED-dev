@@ -263,6 +263,11 @@ public import QED.ChainProof.RepsIntBBIntegrand
 public import QED.ChainProof.RepsIntBBRot
 public import QED.ChainProof.RepsIntBBJoint
 public import QED.ChainProof.RepsIntBBFinal
+public import QED.ChainProof.SetCKOneLoop
+public import QED.ChainProof.SetCKInnerX
+public import QED.ChainProof.SetCKLPair
+public import QED.ChainProof.SetCKAtoms
+public import QED.ChainProof.SetCKDensity
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
