@@ -617,6 +617,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 (HC3) per-class limits, part 1: the four delta3-delta3 classes have epsilon -> 0+ limits unconditionally (value independent of the field pairing, confirming the delta3^2/4 split); the three-loop bubble-bubble Fubini step is proved (risk R2 resolved). Open: the bubble-bubble Wick step, the epsilon-limits of the bubble classes, and the per-class closed forms."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 (HC3) per-class limits, part 2: the delta3-delta3 classes are complete (limit, closed form, nested value with the delta3^2/4 coefficient proved, covariance); the three links reduce to 15 per-representative inputs for the bubble-bubble and side classes; the side classes are reduced algebraically to the VP class with extra photon lines."
     }
   ],
   "tracks": [

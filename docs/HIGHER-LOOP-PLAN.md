@@ -785,3 +785,14 @@ Open:
 - the bubble–bubble Wick step, matching the representative's amplitude to the nested integrand;
 - the ε → 0⁺ limits for bubble–bubble, bubble–δ₃ and δ₃–bubble (numerators beyond quadratic);
 - the per-class closed forms, which give `ClassNestedAtLink` and `ClassCovLink`.
+
+**Per-class limits, part 2** (`QED/ChainProof/HCSide*.lean`):
+- **The δ₃–δ₃ classes are done:** limit, closed form (`classLimit_repDD_eq`), nested value with the
+  δ₃²/4 coefficient proved, and covariance.
+- **The three links reduce to 15 inputs** (`classLinks_of_reps`): `RepLimit`, `RepNested` and
+  `RepCov` for `repBB`, `repBD s` and `repDB s`.
+- **The side classes are reduced algebraically** (`HCSideBDAlgebra`). Their Pauli projection is
+  −(i/2)δ₃ k²d(k) times the VP class's. Two pieces of work remain:
+  - the VP assembly engine, which is written for photon masses (a,b,a,b), must be generalized to
+    extra photon lines;
+  - the parametric route for the full matrix limit must be extended to 11- and 12-line shapes.
