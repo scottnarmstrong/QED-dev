@@ -649,6 +649,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 (HC3): all three inputs (RepLimit, RepNested, RepCov) proved for the four bubble-on-side representatives repBD 0/1 and repDB 0/1 (QED/ChainProof/HCSideBD*). Remaining for (HC3): the bubble-bubble value and covariance (BBPauliValue, BBCov)."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 (HC3) sealed: the sixth-order set (b) coefficient is proved, 64 pi^6 F2 / e^6 -> a1SixSetB = 8/3 zeta(3) - 4/135 pi^2 - 943/324 in the D-37.4 order (QED/ChainProof/HCBB2*, HCFinal). Independent seal audit PROVED. All 13 Stage 1a goals sealed; no draft anchors remain."
     }
   ],
   "tracks": [
@@ -730,11 +734,15 @@
         {
           "id": "L3.SETB",
           "title": "Set (b): two vacuum-polarization bubbles in a chain, 1 diagram",
-          "status": "in_progress",
+          "status": "done",
           "evidence": [
             "QED/Frozen/VPChain/A1SixSetB.lean",
-            "QED/Frozen/VPChain/JointEnergyFirstIntegrableVertexChainTwo.lean"
-          ]
+            "QED/Frozen/VPChain/JointEnergyFirstIntegrableVertexChainTwo.lean",
+            "QED/Frozen/VPChain/VertexChainTwoPauliLimit.lean",
+            "QED/Provider/VPChain/VertexChainTwoPauliLimit.lean",
+            "docs/campaign/DECISIONS.md"
+          ],
+          "validation": "docs/campaign/STATUS.md"
         },
         {
           "id": "L3.MODEL",

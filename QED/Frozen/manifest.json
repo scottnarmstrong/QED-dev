@@ -26165,7 +26165,7 @@
         "module": "QED.Provider.VPChain.VertexChainTwoPauliLimit",
         "export": "QED.Provider.VPChain.isFormFactorPair_vertexChain_two_pauli_limit"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "e9bd2498651b78c88c1f3ec5a9f2f768ed024c10da0c38b7320c204ba56db64c",
       "suffix_sha256": "996be8928563b70eb6f920a44fb29f60221cfa4a78f7c557208592ab8370fbff",
       "draft_allowlist": {

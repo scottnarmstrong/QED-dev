@@ -170,7 +170,7 @@ theorem classNestedAt_zero_of (hF : BBJointIntegrable) (hN : BBNestedAt) (P : Pa
   intro Y hY
   exact hQ Y ((isClassLimit_zero_iff hF hA (isPairQ_canonical' hA.hm hQ0) Y).mp hY)
 
-/-- **Covariance of the bubble–bubble limits** (one loop; not proved here): at admissible
+/-- **Covariance of the bubble–bubble limits** (one loop; proved in `HCBB2CovBB`): at admissible
 parameters, the limits `BBLim` are covariant under every spinor-lifted `L` that keeps positive
 energies. -/
 def BBCov : Prop :=

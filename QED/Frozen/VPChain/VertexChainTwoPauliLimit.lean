@@ -92,7 +92,7 @@ theorem isFormFactorPair_vertexChain_two_pauli_limit (P₀ : Params) (he : P₀.
               ∀ F : ℂ × ℂ, QED.OneLoop.IsFormFactorPair P₀.e P₀.m p' p V F →
                 ‖64 * (Real.pi : ℂ) ^ 6 * F.2 / (P₀.e : ℂ) ^ 6 - (a1SixSetB : ℂ)‖ < η :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.VPChain.isFormFactorPair_vertexChain_two_pauli_limit
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

@@ -2471,4 +2471,16 @@ DRAFT_SORRY.
 - An independent refute-first seal audit returned PROVED: statement bytes and ABI unchanged,
   binder convention D-13, all nine representatives discharged, standard axioms only.
 
-(HC₃) remains DRAFT_SORRY.
+**Seal of (HC₃) (2026-11-19).** `isFormFactorPair_vertexChain_two_pauli_limit` is sealed with body
+`by exact QED.Provider.VPChain.isFormFactorPair_vertexChain_two_pauli_limit`.
+- The provider applies `isFormFactorPair_vertexChain_two_pauli_limit_of_classLinks` to
+  `QED.ChainProof.chainClassLinks` (`QED/ChainProof/HCFinal.lean`). That is `classLinks_of_reps`
+  on the limit, nested value and covariance of the bubble–bubble representative
+  (`QED/ChainProof/HCBB2*.lean`) and of the bubble-on-side representatives
+  (`QED/ChainProof/HCSideBD*.lean`).
+- An independent refute-first seal audit returned PROVED: statement bytes and ABI unchanged,
+  provider type definitionally the frozen statement, every input proved, no vacuity, standard
+  axioms only.
+
+All thirteen Stage 1a goals are sealed. The sixth-order set (b) coefficient is proved: 64π⁶F₂/e⁶
+tends to `a1SixSetB` = 8/3·ζ(3) − 4/135·π² − 943/324 ≈ 0.00255852 in the D-37.4 order.

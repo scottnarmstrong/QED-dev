@@ -117,6 +117,7 @@ public import QED.Frozen.VPChain.OnePIFunctionSubEqFamilyAdd
 public import QED.Frozen.VPChain.ContractionValueParams
 public import QED.Frozen.VPChain.ExistsIsVPChainTwo
 public import QED.Frozen.VPChain.JointEnergyFirstIntegrableVertexChainTwo
+public import QED.Frozen.VPChain.VertexChainTwoPauliLimit
 public import QED.Frozen.TwoLoop.IsVertexOrderFiveLimit
 public import QED.Polylog.Basic
 public import QED.Polylog.Deriv
@@ -211,6 +212,15 @@ public import QED.ChainProof.HCBB2Spec
 public import QED.ChainProof.HCBB2Num
 public import QED.ChainProof.HCBB2Limit
 public import QED.ChainProof.HCBB2Pauli
+public import QED.ChainProof.HCBB2Value
+public import QED.ChainProof.HCBB2ValueBB
+public import QED.ChainProof.HCBB2Joint
+public import QED.ChainProof.HCBB2CovNum
+public import QED.ChainProof.HCBB2CovProd
+public import QED.ChainProof.HCBB2CovPow
+public import QED.ChainProof.HCBB2CovBB
+public import QED.ChainProof.HCBB2Links
+public import QED.ChainProof.HCFinal
 public import QED.ChainProof.RepsIntFinal
 public import QED.Integration.ThreeLoopRotation
 public import QED.ChainProof.RepsIntBBComplex

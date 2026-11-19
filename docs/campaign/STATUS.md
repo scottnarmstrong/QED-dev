@@ -27,11 +27,10 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 1 — Stage 1a (D-53): (HC₃) VertexChainTwoPauliLimit.lean in QED/Frozen/VPChain/;
-               7 Stage 1a goals sealed
+DRAFT_ANCHORS: 0 — all 13 Stage 1a goals (D-53) sealed
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 1 — QED.VPChain.jointEnergyFirstIntegrable_vertexChain_two (HC₀, D-53); PROVED
+SEALED_THIS_TURN: 1 — QED.VPChain.isFormFactorPair_vertexChain_two_pauli_limit (HC₃, D-53); PROVED
                (guard, build, standard axioms, ABI unchanged, independent refute-first seal audit)
 ```
 

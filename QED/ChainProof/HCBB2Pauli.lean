@@ -27,7 +27,7 @@ bubble–bubble class. With the entrywise limit of `QED/ChainProof/HCBB2Limit.le
   `pauliNum Y = (1/i) bbPauliLimit`.
 * **`bbNestedAt_of_value`**: `BBNestedAt` from the `ε`-free value identity `BBPauliValue`
   (`bbPauliLimit` at the canonical pair is the one-loop Pauli functional of
-  `enumPhoton 0 = Π_loop² s² D³`), which is **not proved here**.
+  `enumPhoton 0 = Π_loop² s² D³`), which is proved in `HCBB2ValueBB`.
 * `repNested_repBB_of`, `repCov_repBB_of`: `RepNested repBB (enumPhoton 0)` and `RepCov repBB`
   (inputs of `QED.ChainProof.HCSide.classLinks_of_reps`) from `BBJointIntegrable` and
   `BBNestedAt`, resp. `BBCov`.
@@ -190,7 +190,7 @@ theorem pauliNum_of_bbLim {P : Params} (hA : QED.ChainProof.ChainAdmissible P)
 
 /-! ### The nested value, reduced to an `ε`-free identity -/
 
-/-- **The value identity of the bubble–bubble class** (`ε`-free; **not proved here**): at
+/-- **The value identity of the bubble–bubble class** (`ε`-free; proved in `HCBB2ValueBB`): at
 admissible parameters, for all small `Q > 0`, the explicit limit `bbPauliLimit` at the canonical
 pair is the one-loop Pauli functional of the photon function `enumPhoton 0 P = Π_loop² s² D³`. -/
 def BBPauliValue : Prop :=

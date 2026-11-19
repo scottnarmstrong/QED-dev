@@ -841,3 +841,8 @@ statements, `BBPauliValue` (identify the engine's limit with the nested kernel) 
 and `RepCov` (limits written as combinations of parametric values, plus a covariance lemma for the
 longitudinal numerators) are proved for `repBD s` and `repDB s`. With the earlier `repDD` results,
 only the bubble–bubble inputs remain for (HC₃).
+
+**Set (b) complete (2026-11-19).** (HC₀) and (HC₃) are sealed (D-53). The sixth-order set (b)
+coefficient `a1SixSetB` = 8/3·ζ(3) − 4/135·π² − 943/324 is proved from the model in the D-37.4 order.
+Next, by the author's direction: sets (a) and (c), which need the order-e⁴ counterterm successor,
+then an analytic reduction of sets (d) and (e).
