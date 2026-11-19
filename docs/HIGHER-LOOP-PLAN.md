@@ -751,3 +751,14 @@ The model-level steps O3-3 to O3-9 and O3-15 follow the Stage 1a packet.
 (HC₀) is reduced to integrability of the 9 representatives
 (`jointEnergyFirstIntegrable_vertexChain_two_of_reps`). That needs criteria the repository does not
 yet have: three loop momenta, and numerators of degree 6, because the `photonCt` factor is quadratic.
+
+**The value link, reduced** (`QED/ChainProof/HCValue*.lean`):
+- the q² → 0⁺ step for the one-loop outer functional;
+- the set (b) photon function (Π_loop − δ₃)² s² D³ and its limit;
+- its value e⁶·chainRegMass/(64π⁶), with mass scaling and δ₃ from (Z₈);
+- the counterterm combination O3-7 on the nine enumerated classes (`enumPhoton_sum`);
+- `chainPauliAtLink_of_enum`.
+
+The open input, `ClassNestedAtLink enumClass enumPhoton`, is O3-6 per class at fixed q: each class
+limit is the one-loop vertex with its inserted photon function. It is the same work as
+`ClassLimitLink`.

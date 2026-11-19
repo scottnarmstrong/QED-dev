@@ -605,6 +605,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 O3-4 done: every set (b) contraction is a relabelling of exactly one of 9 representatives with coefficient one (path argument, no permutation enumeration); the chain vertex is the signed sum of the 9 representative values for every flavour set; (HC0) reduced to integrability of the 9 representatives, which needs three-loop and degree-6 criteria."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 (HC3) value link reduced: the q^2 -> 0+ step, the identification with the outer functional of (Pi - delta3)^2 s^2 D^3 and its value e^6 chainRegMass/(64 pi^6), and the counterterm combination O3-7 on the nine classes are proved (QED/ChainProof/HCValue*); the open input is the per-class nested value (O3-6)."
     }
   ],
   "tracks": [
