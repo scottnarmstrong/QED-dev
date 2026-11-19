@@ -26172,6 +26172,121 @@
         "frozen_paths": [],
         "audit_paths": []
       }
+    },
+    {
+      "id": "threeloop.a1_six_lr_v1",
+      "kind": "definition",
+      "author_approval": {
+        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_at": "2026-11-19",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-frozen-provisionally-author-approval-pending",
+        "approval_version": "provisional"
+      },
+      "source": {
+        "revision": "laporta-remiddi-1996 sha256:afd37a24aa9540bcac49afd0df306ed518f6a3b9593042bc888b08473210102a",
+        "range": "(R1) Laporta-Remiddi (1996) abstract and eq. (5): the closed form of A1(6); same as Passera (2007) eq. (14); decision D-54.2"
+      },
+      "contract": {
+        "id": "qed_dev.packetR.a1_six_lr",
+        "version": "1"
+      },
+      "path": "QED/Frozen/ThreeLoop/A1SixLR.lean",
+      "export": "QED.ThreeLoop.a1SixLR",
+      "split_policy": {
+        "source_group": "qed_dev.packetR.a1_six_lr",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-frozen-provisionally-author-approval-pending"
+      },
+      "abi_sha256": "19e1892a4f154d681b6dd3d10d102e943bd06f30d2a4b64b2890c0dcefd61e31",
+      "definition_closure": [],
+      "state": "SEALED",
+      "full_file_sha256": "3c2f475222213fa43a441a1ca439b465d6c3b9e3bb4642178fcc79ee3fef6611"
+    },
+    {
+      "id": "threeloop.a1_six_lr_bounds_v1",
+      "kind": "theorem",
+      "author_approval": {
+        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_at": "2026-11-19",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-frozen-provisionally-author-approval-pending",
+        "approval_version": "provisional"
+      },
+      "source": {
+        "revision": "laporta-remiddi-1996 sha256:afd37a24aa9540bcac49afd0df306ed518f6a3b9593042bc888b08473210102a",
+        "range": "(R2) enclosure of (R1) to sixteen significant digits, against Laporta-Remiddi (1996) eq. (5) and Passera (2007) eq. (14); decision D-54.2"
+      },
+      "contract": {
+        "id": "qed_dev.packetR.a1_six_lr_bounds",
+        "version": "1"
+      },
+      "path": "QED/Frozen/ThreeLoop/A1SixLRBounds.lean",
+      "export": "QED.ThreeLoop.a1SixLR_bounds",
+      "split_policy": {
+        "source_group": "qed_dev.packetR.a1_six_lr_bounds",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-frozen-provisionally-author-approval-pending"
+      },
+      "abi_sha256": "8cc72a67688a1d7a33dc329a508b7277e62597468988fbcd86410038dfd28536",
+      "definition_closure": [
+        {
+          "path": "QED/Frozen/ThreeLoop/A1SixLR.lean",
+          "sha256": "3c2f475222213fa43a441a1ca439b465d6c3b9e3bb4642178fcc79ee3fef6611"
+        }
+      ],
+      "implementation": {
+        "module": "QED.Provider.ThreeLoop.A1SixLRBounds",
+        "export": "QED.Provider.ThreeLoop.a1SixLR_bounds"
+      },
+      "state": "DRAFT_SORRY",
+      "prefix_sha256": "a030d33bf31969bdafbcb0fcc24321bd1b1faff7ed6080931a45972709a83d96",
+      "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
+      "draft_allowlist": {
+        "frozen_paths": [],
+        "audit_paths": []
+      }
+    },
+    {
+      "id": "twoloop.a1_four_bounds_fine_v1",
+      "kind": "theorem",
+      "author_approval": {
+        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_at": "2026-11-19",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-frozen-provisionally-author-approval-pending",
+        "approval_version": "provisional"
+      },
+      "source": {
+        "revision": "passera-2007 sha256:3761261045e2fdcf7495a529e8cac31275ad8ee1e85b979c6f9fe6e1e29631f6",
+        "range": "(U2') enclosure of (U1) to sixteen significant digits, against Passera (2007) eq. (9); sharpening of (U2); decision D-54.4"
+      },
+      "contract": {
+        "id": "qed_dev.packetR.a1_four_bounds_fine",
+        "version": "1"
+      },
+      "path": "QED/Frozen/TwoLoop/A1FourBoundsFine.lean",
+      "export": "QED.TwoLoop.a1Four_bounds_fine",
+      "split_policy": {
+        "source_group": "qed_dev.packetR.a1_four_bounds_fine",
+        "mode": "NOT_SPLIT",
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-frozen-provisionally-author-approval-pending"
+      },
+      "abi_sha256": "cd952595d52e1cae28b5cec86c7a38d8fcffcca260e6530e0166dbac4a9ce5a0",
+      "definition_closure": [
+        {
+          "path": "QED/Frozen/TwoLoop/A1Four.lean",
+          "sha256": "e1ee0c497f95236b0344b53d729b4d1a021b766fb51e28f0e83b84e31de8691a"
+        }
+      ],
+      "implementation": {
+        "module": "QED.Provider.TwoLoop.A1FourBoundsFine",
+        "export": "QED.Provider.TwoLoop.a1Four_bounds_fine"
+      },
+      "state": "DRAFT_SORRY",
+      "prefix_sha256": "e0b212bdf12d3bb2bfeddfb58663a6e8aef551396370c07e1e14b0bf80cee0d8",
+      "suffix_sha256": "40068b95469d700692e1439c29833ce8c5bce83685e82400d38bfea6f5f35a83",
+      "draft_allowlist": {
+        "frozen_paths": [],
+        "audit_paths": []
+      }
     }
   ]
 }

@@ -2543,3 +2543,24 @@ and the set (a) value integral.
 **Provisional ruling (overnight mode; author approval pending).** In the Stage 2 successor every
 flavour gets its own on-shell counterterms. Flavour f's conditions are the electron's with the open
 line set to f, and δ₃ is shared by all flavours. The frozen models are unchanged.
+
+## D-56. Three-loop target constant and sharpened enclosures (frozen provisionally; author approval pending)
+
+**Provisional freeze (2026-11-19, overnight mode).** Three declarations implement D-54.2 and D-54.4:
+- **(R₁) `QED.ThreeLoop.a1SixLR`** (`QED/Frozen/ThreeLoop/A1SixLR.lean`), a definition: the
+  Laporta–Remiddi closed form of A₁⁽⁶⁾ (LR96 abstract and eq. (5); Passera eq. (14)). ζ(3), ζ(5) and
+  a₄ = Li₄(1/2) are written as explicit series. It fixes the target of the three-loop headline. That
+  the model's coefficient equals it is not yet proved.
+- **(R₂) `QED.ThreeLoop.a1SixLR_bounds`**: 1.1812414565871995 < a1SixLR < 1.1812414565872003.
+- **(U₂′) `QED.TwoLoop.a1Four_bounds_fine`**: −0.32847896557919380 < a1Four < −0.32847896557919376,
+  sixteen significant digits. Passera eq. (9) prints seventeen, so this sharpens (U₂) to about the
+  published precision; it does not go beyond it.
+
+**Review.** An independent refute-first review returned APPROVE WITH NITS.
+- It checked every coefficient of (R₁) against both versions of LR96 and Passera (14).
+- It confirmed that the series are summable and denote ζ(3), ζ(5) and Li₄(1/2).
+- It confirmed the value 1.18124145658720000627… to 50 digits, and that the decimal literals
+  elaborate as the intended rationals.
+- Its two docstring digit corrections and its fuller quotation of Passera (9) are applied.
+
+The manifest records these entries with `approval_version` "provisional".

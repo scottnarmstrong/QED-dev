@@ -118,6 +118,7 @@ public import QED.Frozen.VPChain.ContractionValueParams
 public import QED.Frozen.VPChain.ExistsIsVPChainTwo
 public import QED.Frozen.VPChain.JointEnergyFirstIntegrableVertexChainTwo
 public import QED.Frozen.VPChain.VertexChainTwoPauliLimit
+public import QED.Frozen.ThreeLoop.A1SixLR
 public import QED.Frozen.TwoLoop.IsVertexOrderFiveLimit
 public import QED.Polylog.Basic
 public import QED.Polylog.Deriv
