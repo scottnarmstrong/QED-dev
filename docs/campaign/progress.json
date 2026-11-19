@@ -625,6 +625,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 (HC3) bubble-bubble class, part 1: the three-loop Wick step is proved (value = joint integral of the nested integrand; constants confirmed), and the value is the one-loop vertex with a double spectral insertion; the epsilon-limit, nested value and covariance are reduced to statements about that integral, which need a mixed-prescription limit engine (shared with the side classes)."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 (HC0) reduced to integrability of the three-loop bubble-bubble representative: the other eight set (b) representatives are proved integrable at epsilon > 0 (QED/ChainProof/RepsInt*). The gap is a three-loop numerator-aware integrability criterion."
     }
   ],
   "tracks": [

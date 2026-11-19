@@ -806,3 +806,14 @@ Open:
 - **The analytic core remains:** the ε → 0⁺ limit with several different iε prescriptions, one
   from each spectral bubble plus ε itself. It needs a dominated-convergence engine for mixed
   prescriptions with more photon-type powers. The side classes need the same engine.
+
+**Integrability (HC₀)** (`QED/ChainProof/RepsInt*.lean`):
+- **Eight of the nine representatives are proved integrable at ε > 0:**
+  - δ₃–δ₃, without the Pauli–Villars conditions;
+  - bubble–δ₃ and δ₃–bubble, through the loop's Ward identity and the two-loop refined criterion.
+- **(HC₀) is reduced to one hypothesis,** integrability of `repBB`
+  (`jointEnergyFirstIntegrable_vertexChain_two'_of_remaining`).
+- **The gap is a three-loop numerator-aware criterion:** Symanzik with 3×3 minors, the
+  three-dimensional energy integral, a spatial bound on ℝ⁹, and the Fubini steps. It is comparable
+  to the existing two-loop machinery. The outer energy integral must stay signed, because absolute
+  values destroy the gauge cancellation.

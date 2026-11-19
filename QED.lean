@@ -193,6 +193,7 @@ public import QED.ChainProof.HCSideLinks
 public import QED.ChainProof.HCSideBDAlgebra
 public import QED.ChainProof.HCBBLimit
 public import QED.ChainProof.HCBBPauli
+public import QED.ChainProof.RepsIntFinal
 public import QED.TwoLoop.ClassIntegrableFurry
 public import QED.TwoLoop.UnitSCGraphSpMain
 public import QED.TwoLoop.UnitSCGraphSmMain
