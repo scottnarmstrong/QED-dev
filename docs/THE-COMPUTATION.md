@@ -167,9 +167,9 @@ and tau terms of those orders; the error is the size of everything omitted, rela
 The number of correct digits is about $-\log_{10}$ of the relative error. Because $a_e$ is about
 $10^{-3}$ of $g/2=1.001\,159\ldots$, each digit count for $g/2$ is about three more than for $a_e$. At
 three loops the error is dominated by the four-loop term; at four loops, by the hadronic and five-loop
-terms. One practical consequence: a certified enclosure of $A_1^{(6)}$ to about $\pm10^{-3}$ moves
-$a_e$ by at most $1.3\times10^{-11}$, under a quarter of the four-loop term, so it is enough for full
-three-loop accuracy.
+terms. For predicting $a_e$ alone, $A_1^{(6)}$ to about $\pm10^{-3}$ would already be enough at
+three loops: it moves $a_e$ by at most $1.3\times10^{-11}$, under a quarter of the four-loop term.
+This project aims higher than that (see section 6).
 
 With all five loops and the non-QED terms, the theory's own uncertainty, from the five-loop and
 hadronic terms, is about $10^{-14}$ in $a_e$ [12, 14], below the experimental $1.3\times10^{-13}$.
@@ -198,9 +198,9 @@ explicit definition of the regularized perturbative amplitudes:
 A coefficient is then a theorem: the magnetic form factor of this regulated amplitude tends to the
 stated number as the regulators are removed in a stated order. Lean's kernel checks every step,
 including every limit, integrability condition and exchange of integrals, using only the standard
-axioms. Exact values are proved, and numerical claims are rigorous enclosures computed with interval
-arithmetic and checked by the kernel, not floating-point estimates. [What does "proved"
-mean?](WHAT-IS-PROVED.md) explains the scope of such a claim.
+axioms. Coefficients are proved as exact closed forms. Separately, numerical claims about them are
+rigorous enclosures computed with interval arithmetic and checked by the kernel, not floating-point
+estimates. [What does "proved" mean?](WHAT-IS-PROVED.md) explains the scope of such a claim.
 
 **Done.**
 
@@ -209,9 +209,14 @@ mean?](WHAT-IS-PROVED.md) explains the scope of such a claim.
   $F_2\to\alpha/2\pi$ and $g\to2(1+\alpha/2\pi)$, where $F_2$ is the magnetic form factor. A
   kernel-checked enclosure places $\alpha/2\pi$ in $[0.001\,161\,409\,731\,9,\ 0.001\,161\,409\,732\,3]$
   for the CODATA 2022 value of $\alpha$.
-- **Two loops.** The complete mass-independent coefficient: the magnetic form factor of the two-loop
-  electron–photon vertex tends to the closed form of $A_1^{(4)}$ above, with the enclosure
-  $-0.3285<A_1^{(4)}<-0.3284$. The mass-dependent two-loop terms from a muon or tau loop are also
+- **Two loops.** The complete mass-independent coefficient, exactly: the magnetic form factor of the
+  two-loop electron–photon vertex tends to the closed form
+  $\frac{197}{144}+\frac{\pi^2}{12}-\frac{\pi^2}{2}\ln2+\frac34\zeta(3)$ of section 2. The theorem's
+  limit is this exact expression, not a decimal approximation, so the derivation reproduces the
+  Petermann–Sommerfield result itself. A separate, much smaller theorem evaluates the expression
+  numerically, $-0.3285<A_1^{(4)}<-0.3284$, to confirm that it is the published number
+  $-0.328\,478\,965\ldots$; those bounds come from interval arithmetic on $\pi$, $\ln2$ and
+  $\zeta(3)$ and can be tightened to any number of digits. The mass-dependent two-loop terms from a muon or tau loop are also
   proved, as exact functions of the mass ratio, with certified enclosures at the measured ratios.
   The two-loop theorems concern the one-particle-irreducible vertex, which is all the coefficient
   needs; extending the full chain to the measured magnetic moment at two loops, as was done at one
@@ -222,15 +227,21 @@ addition to Lean's own kernel. The two-loop result alone took about 320 Lean fil
 Formalizing the calculation also found five misprints in the primary textbook source
 ([errata](ERRATA-AND-DEVIATIONS.md)).
 
-**In progress: three loops.** The first target is the simplest gauge-invariant set: two one-loop
-vacuum-polarization bubbles in a chain on the photon line of the one-loop diagram (one of the 72
-diagrams, with its counterterm partners). The value of the integral it reduces to,
-$\frac83\zeta(3)-\frac{4}{135}\pi^2-\frac{943}{324}\approx0.002\,558\,52$, is proved; the theorem that
-the model's three-loop amplitude reduces to that integral is being completed. This set contributes
-$3.2\times10^{-11}$ to $a_e$, about 250 times the experimental uncertainty, but on its own it does not
-improve the prediction. The next goal is the complete $A_1^{(6)}$, all 72 diagrams, combining exact
-evaluation where feasible with certified numerical enclosures for the light-by-light and
-no-fermion-loop diagrams ([higher-loop plan](HIGHER-LOOP-PLAN.md)).
+**In progress: three loops.** The 72 diagrams fall into five gauge-invariant sets. The first is
+done: two one-loop vacuum-polarization bubbles in a chain on the photon line of the one-loop diagram
+(with its counterterm partners). Its contribution to $A_1^{(6)}$ is proved, exactly, to be
+$\frac83\zeta(3)-\frac{4}{135}\pi^2-\frac{943}{324}\approx0.002\,558\,52$. On its own this set does
+not improve the prediction; the complete $A_1^{(6)}$ does.
+
+The accuracy target for three loops is the exact value. Laporta and Remiddi's 1996 result [7] is a
+closed form in $\zeta(3)$, $\zeta(5)$, $\pi^2\ln2$, $\pi^4$, $\ln^42$ and
+$\mathrm{Li}_4(\frac12)$, and the aim is to derive that closed form from the model, set by set, as was
+done at two loops, so that their result is reproduced and independently verified rather than merely
+approximated. The next sets are the vacuum-polarization insertions (3 and 12 diagrams). The
+light-by-light diagrams (6) and the 50 diagrams without fermion loops are much harder; the plan is to
+reduce them analytically as far as possible, following the route of the original analytic
+computations. If some piece has to be evaluated numerically for a time, its certified enclosure and
+its width will be stated explicitly ([higher-loop plan](HIGHER-LOOP-PLAN.md)).
 
 **Long-range goal.** Four and five loops, the mass-dependent terms of those orders, and the hadronic
 and electroweak contributions and $\alpha$ as clearly labelled external inputs, assembled into a
