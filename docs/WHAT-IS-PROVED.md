@@ -100,13 +100,13 @@ reusable theorem. A tactic can apply that theorem and discharge its conditions.
 The resulting proof is checked in the same way as other Lean mathematics.
 
 We can also represent the calculational language explicitly. Let $E$ be an
-expression and $\llbracket E\rrbracket_M$ its mathematical interpretation in
+expression and $[\![E]\!]_M$ its mathematical interpretation in
 model $M$. A sound rewrite system establishes a statement of the form
 
 $$
 \mathrm{Derivable}_M(E,E')
 \quad\Longrightarrow\quad
-\llbracket E\rrbracket_M=\llbracket E'\rrbracket_M,
+[\![E]\!]_M=[\![E']\!]_M,
 $$
 
 with the necessary domain conditions included. For truncations or enclosures,
