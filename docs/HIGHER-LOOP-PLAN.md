@@ -841,4 +841,3 @@ statements, `BBPauliValue` (identify the engine's limit with the nested kernel) 
 and `RepCov` (limits written as combinations of parametric values, plus a covariance lemma for the
 longitudinal numerators) are proved for `repBD s` and `repDB s`. With the earlier `repDD` results,
 only the bubble–bubble inputs remain for (HC₃).
-
