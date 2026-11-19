@@ -361,6 +361,12 @@ public import QED.GradedProof.X0OneCt
 public import QED.GradedProof.X0OneCtCrit
 public import QED.GradedProof.X0OneCtEnum
 public import QED.GradedProof.X0Block
+public import QED.GradedProof.X0ClosedSum
+public import QED.GradedProof.X0ClosedFlavor
+public import QED.GradedProof.X0ClosedFlavor2
+public import QED.GradedProof.X0ClosedTerm
+public import QED.GradedProof.X0ClosedOne
+public import QED.GradedProof.X0ClosedEnum
 public import QED.GradedProof.VP2Enum
 public import QED.GradedProof.VP2EnumG
 public import QED.GradedProof.VP2Classes
