@@ -293,6 +293,10 @@ public import QED.ChainProof.SetCKCornInNode
 public import QED.ChainProof.SetCKCornInBd
 public import QED.ChainProof.SetCKCornInDomInt
 public import QED.ChainProof.SetCKCornInFub
+public import QED.ChainProof.SetCKCrossTW
+public import QED.ChainProof.SetCKCrossT
+public import QED.ChainProof.SetCKCrossTBd
+public import QED.ChainProof.SetCKCrossTFub
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
