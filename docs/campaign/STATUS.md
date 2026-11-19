@@ -27,12 +27,11 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 0 — all Stage 1a goals (D-53) and the D-56 bounds sealed
+DRAFT_ANCHORS: 18 — the Stage 2 goals under QED/Frozen/Graded/ (D-57, provisional; author
+               approval pending); all earlier anchors sealed
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 2 — QED.ThreeLoop.a1SixLR_bounds (R₂) and QED.TwoLoop.a1Four_bounds_fine (U₂′),
-               D-56, provisional (author approval pending); PROVED (guard, build, standard axioms,
-               ABI unchanged, independent refute-first seal audit)
+SEALED_THIS_TURN: 0 (this turn froze the D-57 packet: 25 definitions SEALED, 18 goals DRAFT_SORRY)
 ```
 
 | Field | Value |

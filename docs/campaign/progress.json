@@ -673,6 +673,10 @@
     {
       "date": "2026-11-19",
       "change": "Set (c) started: Barbieri-Remiddi 1974 pinned (eq. (3)); aSetC with a 1e-16 enclosure (QED/Chain/SetCConst); the weight-4 integrals of set (c), including int log s Phi(s)/s = pi^4/30 (QED/Polylog/LogLiDiv). A one-variable kernel representation (Balzani-Laporta-Passera 2022) reproduces eq. (3) to 50 digits."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Stage 2 packet frozen provisionally (D-57; author approval pending): the graded counterterm model in QED/Frozen/Graded, 25 definitions and 18 theorem goals, with per-lepton-block counterterms (D-55 revised). Two independent reviews."
     }
   ],
   "tracks": [
@@ -767,8 +771,10 @@
         {
           "id": "L3.MODEL",
           "title": "Counterterms graded to order e^4 for the three-loop model",
-          "status": "planned",
-          "evidence": []
+          "status": "in_progress",
+          "evidence": [
+            "docs/campaign/STAGE2-DESIGN.md"
+          ]
         },
         {
           "id": "L3.SETA",

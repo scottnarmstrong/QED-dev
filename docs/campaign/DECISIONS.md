@@ -2594,3 +2594,51 @@ alternative.
 
 **Open risk.** It is not yet tested whether the genuine two-loop vacuum polarization of a block is
 integrable with only two Pauli–Villars conditions.
+
+## D-57. Phase 5 Stage 2 packet: the graded counterterm model (frozen provisionally; author approval pending)
+
+**What was frozen (2026-11-19, overnight, at the author's instruction; approval pending).** 43
+declarations in namespace `QED.Graded`, one per file under `QED/Frozen/Graded/`, with manifest
+`approval_version` "provisional". They are 25 definitions (SEALED) and 18 theorem goals (DRAFT_SORRY;
+quarantined providers under `QED/Provider/Graded/`). The design note, with the binder tables, risk
+analysis and the record of both reviews, is [STAGE2-DESIGN.md](STAGE2-DESIGN.md).
+
+**The model.**
+- Counterterms graded by loop level: `Counterterms` stores e-free coefficients d₁, d₂, d_m per
+  flavour and d₃, per level k, entering at order e^{2(k+1)}, so order separation is definitional.
+- The counterterm scheme follows D-55 revised (S2′). `IsRenormalizedThrough` takes the scheme map
+  `rep` as a parameter, and `leptonRep` gives S2′: shared coefficients per lepton block, with δm·M_f
+  on regulator lines and δ₃ shared.
+- The order-by-order on-shell conditions (`IsOnShellAt`, `IsChargeNormalizedAt`,
+  `IsPhotonOnShellAt`) reduce to the frozen one-loop and two-loop conditions at level ≤ 1.
+
+**The goals.**
+- Existence and uniqueness of the level-0 and level-1 counterterms.
+- Embedding into the frozen two-loop and lepton models: 1PI parts, the connected part (E-G₅), and
+  the level-one condition equivalences.
+- The reusable two-loop vacuum polarization limit with the leptons, for s > −4m² (R-Π₄).
+- The order-e⁵ integrability companion (X₀).
+- The exit test `isSpinFormFactorPair_lszFive_lepton_pauli_limit`, the D-44.1 lift of (HM₂)
+  through LSZ.
+
+**Reviews.**
+- Two independent refute-first reviews, the full packet and then the changes, both returned
+  APPROVE WITH NITS, and every nit was applied.
+- The freezer wrote declaration text byte-identical to the reviewed candidates (43/43), and every
+  file elaborates.
+- The per-block Pauli–Villars hypotheses are standing assumptions on the regulator data, not proof
+  obligations.
+
+**Open questions for the author.**
+- Q1, S2 versus S2′: provisionally S2′ (D-55 revised).
+- Q2: `rep` stays a parameter.
+- Q3: the existential limit for Π⁽⁴⁾ is stated now.
+- Q4: the exit test is about form factors only; the Landé and wave-packet clauses come later.
+- Q5: one common lower bound m₀ on the masses.
+- Q6: D-54.3 asks for Π⁽⁴⁾(q²) for all q², but (R-Π₄) covers s > −4m²; the timelike region above
+  threshold is deferred.
+- (X₀) constrains only level-0 data, because level ≥ 1 counterterms enter only tree contractions at
+  order e⁵.
+
+**Open risk.** Integrability of the genuine two-loop vacuum polarization of a block is argued by
+power counting (it needs only Σc = 0), but not yet checked numerically.
