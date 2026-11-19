@@ -335,6 +335,9 @@ public import QED.GradedProof.X0Crit
 public import QED.GradedProof.X0Denom
 public import QED.GradedProof.X0Num
 public import QED.GradedProof.X0TwoLoop
+public import QED.GradedProof.X0Link
+public import QED.GradedProof.X0Enum
+public import QED.GradedProof.X0Product
 public import QED.GradedProof.VP2Enum
 public import QED.GradedProof.VP2EnumG
 public import QED.GradedProof.VP2Classes
