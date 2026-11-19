@@ -645,6 +645,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 (HC0) sealed: every set (b) chain term is a genuine integral at epsilon > 0. The three-loop bubble-bubble case is proved by a common complex rotation of the loop energies (QED/Integration/ThreeLoopRotation, QED/ChainProof/RepsIntBB*). Independent seal audit PROVED. (HC3) remains DRAFT_SORRY."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 (HC3): all three inputs (RepLimit, RepNested, RepCov) proved for the four bubble-on-side representatives repBD 0/1 and repDB 0/1 (QED/ChainProof/HCSideBD*). Remaining for (HC3): the bubble-bubble value and covariance (BBPauliValue, BBCov)."
     }
   ],
   "tracks": [

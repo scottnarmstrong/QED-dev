@@ -836,3 +836,9 @@ Open:
 **Bubble–bubble on the engine** (`QED/ChainProof/HCBB2*.lean`): `RepLimit repBB` follows from
 `BBJointIntegrable` (the (HC₀) gap). `RepNested` and `RepCov` for `repBB` reduce to two ε-free
 statements, `BBPauliValue` (identify the engine's limit with the nested kernel) and `BBCov`.
+
+**Side classes complete:** `RepNested` (via `BDNestedForm C 1`, by a generic nested-integral lemma)
+and `RepCov` (limits written as combinations of parametric values, plus a covariance lemma for the
+longitudinal numerators) are proved for `repBD s` and `repDB s`. With the earlier `repDD` results,
+only the bubble–bubble inputs remain for (HC₃).
+

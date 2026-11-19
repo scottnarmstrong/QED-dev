@@ -198,6 +198,13 @@ public import QED.ChainProof.HCSideBDMatch
 public import QED.ChainProof.HCSideBDNested
 public import QED.ChainProof.HCSideBDRows
 public import QED.ChainProof.HCSideBDRepLimit
+public import QED.ChainProof.HCSideBDNestedGen
+public import QED.ChainProof.HCSideBDOuter
+public import QED.ChainProof.HCSideBDOuterBound
+public import QED.ChainProof.HCSideBDNestedForm
+public import QED.ChainProof.HCSideBDCovPieces
+public import QED.ChainProof.HCSideBDCovLim
+public import QED.ChainProof.HCSideBDCov
 public import QED.ChainProof.HCBBLimit
 public import QED.ChainProof.HCBBPauli
 public import QED.ChainProof.HCBB2Spec
