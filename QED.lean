@@ -498,6 +498,10 @@ public import QED.GradedProof.V5ZeroDirac
 public import QED.GradedProof.V5ZeroTotal
 public import QED.GradedProof.V5ZeroInput
 public import QED.GradedProof.GEx2Final
+public import QED.GradedProof.RPi4Setup
+public import QED.GradedProof.RPi4Reduce
+public import QED.GradedProof.RPi4Counterterm
+public import QED.GradedProof.RPi4PhotonMass
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
