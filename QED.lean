@@ -354,6 +354,7 @@ public import QED.GradedProof.VP2WeightsZero
 public import QED.GradedProof.VP2Weights
 public import QED.GradedProof.VP2TensorForm
 public import QED.GradedProof.VP2Piece
+public import QED.GradedProof.VP2Positivity
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
