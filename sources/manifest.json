@@ -145,6 +145,28 @@
       "sha256": "3a1009f2b02501fc1592202c96a5562e1a2eb639ac4035ed384ae35583d6a438",
       "license": "CC BY 4.0 (open access). Not redistributed here; the publisher blocks scripted downloads, so the file was saved by the author.",
       "stability": "Publisher PDF v2; fixed."
+    },
+    {
+      "id": "laporta-remiddi-1996",
+      "role": "primary for the three-loop coefficient A1^(6) (exact closed form; triple-cross graphs)",
+      "citation": "S. Laporta and E. Remiddi, 'The analytical value of the electron (g-2) at order alpha^3 in QED', Phys. Lett. B 379 (1996) 283-291, doi:10.1016/0370-2693(96)00439-X, arXiv:hep-ph/9602417v1",
+      "url": "https://arxiv.org/pdf/hep-ph/9602417v1",
+      "retrieved_utc": "2026-11-19T11:19:39Z",
+      "bytes": 136424,
+      "sha256": "afd37a24aa9540bcac49afd0df306ed518f6a3b9593042bc888b08473210102a",
+      "license": "arXiv non-exclusive distribution licence; not redistributed here.",
+      "stability": "arXiv v1; fixed."
+    },
+    {
+      "id": "laporta-remiddi-1996-plb",
+      "role": "primary, three loops: version of record of laporta-remiddi-1996 (scanned; use the arXiv text for transcription and this to check it)",
+      "citation": "S. Laporta and E. Remiddi, 'The analytical value of the electron (g-2) at order alpha^3 in QED', Phys. Lett. B 379 (1996) 283-291, doi:10.1016/0370-2693(96)00439-X",
+      "url": "https://doi.org/10.1016/0370-2693(96)00439-X",
+      "retrieved_utc": "2026-11-19T00:00:00Z",
+      "bytes": 618867,
+      "sha256": "a398e60c88357399f9f5b655c49335348aecae15ee71a82fa5d9bbb8c45a7689",
+      "license": "Publisher copyright; acquired by the author; never committed or redistributed.",
+      "stability": "journal version of record; fixed."
     }
   ]
 }

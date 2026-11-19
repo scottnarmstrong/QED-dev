@@ -142,6 +142,16 @@ Also wanted for the exact evaluation: Petermann, Helv. Phys. Acta 30 (1957) 407,
 Sommerfield, Ann. Phys. 5 (1958) 26 (doi:10.1016/0003-4916(58)90003-4), the original
 exact fourth-order results.
 
+## Three-loop sources (Phase 5)
+
+| Id | Citation | Role | Size / SHA-256 |
+| --- | --- | --- | --- |
+| `laporta-remiddi-1996` | S. Laporta, E. Remiddi, 'The analytical value of the electron (g-2) at order alpha^3 in QED', arXiv:hep-ph/9602417v1 | primary, three loops (the exact closed form of A1^(6); the triple-cross graphs) | 136424 / `afd37a24aa9540bcac49afd0df306ed518f6a3b9593042bc888b08473210102a` |
+| `laporta-remiddi-1996-plb` | the same, Phys. Lett. B 379 (1996) 283-291, doi:10.1016/0370-2693(96)00439-X (publisher PDF, acquired by the author) | version of record; scanned, so the arXiv text is used for transcription and this to check it | 618867 / `a398e60c88357399f9f5b655c49335348aecae15ee71a82fa5d9bbb8c45a7689` |
+
+The earlier analytic results that the 1996 paper builds on (light-by-light, the other sets and
+their master integrals) will be pinned here as they are acquired.
+
 ## Physical input: the fine-structure constant
 
 Used by the Phase 3 contribution bound (D-34). This is a numerical input, not
