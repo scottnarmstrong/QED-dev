@@ -733,6 +733,10 @@
     {
       "date": "2026-11-19",
       "change": "Set (c) kernel, stage K: the inner self-energy (G1) and inner corner (G2) placements proved as Stieltjes transforms of explicit densities (rhoSelfIn_isSelfInDensity, rhoCornIn_isCornInDensity; the corner density as a triple integral). The crossed placement, the outer group, the assembly into lambda4 and the regulator links remain."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Stage 2: X0 (jointEnergyFirstIntegrable_connectedPart_five) sealed after an independent audit: every attached connected order-5 (1,1) contraction is integrable at any masses for eps > 0. 13 of 18 Stage 2 goals sealed. Set (c) kernel: the inner crossed placement (G3) proved; four of five placement groups done."
     }
   ],
   "tracks": [

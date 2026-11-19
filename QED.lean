@@ -389,6 +389,13 @@ public import QED.GradedProof.X0SepEnum
 public import QED.GradedProof.X0SepCheck
 public import QED.GradedProof.X0BlockGen
 public import QED.GradedProof.X0TwoLoopEntries
+public import QED.GradedProof.X0NsCrit
+public import QED.GradedProof.X0NsLines
+public import QED.GradedProof.X0NsTerm
+public import QED.GradedProof.X0NsAmp
+public import QED.GradedProof.X0NsEnum
+public import QED.GradedProof.X0NsCheck
+public import QED.GradedProof.X0Final
 public import QED.GradedProof.VP2Enum
 public import QED.GradedProof.VP2EnumG
 public import QED.GradedProof.VP2Classes

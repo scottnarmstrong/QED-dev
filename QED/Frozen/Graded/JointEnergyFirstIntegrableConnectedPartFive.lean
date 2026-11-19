@@ -54,7 +54,7 @@ theorem jointEnergyFirstIntegrable_connectedPart_five (P : Params) {F : Type} [F
       (((2 * Real.pi) ^ (4 * loopCount C) : ℝ) : ℂ)⁻¹ *
         regulatedAmplitude P Φ D C g pIn kIn (lineMomentum₂ C pOut pIn kIn ℓ) αOut βIn μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.jointEnergyFirstIntegrable_connectedPart_five
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

@@ -2710,3 +2710,17 @@ semantics-neutral. Ruling: record each such move with its diff and the definitio
 check, and update `abi_sha256` in the manifest. Updated: `selfEnergyPart_two_existsUnique`
 `13a3890f…` → `aa21aa23…`; `vacuumPolarizationPart_two_existsUnique` `c24e9c2f…` → `471919e7…`.
 Every later seal runs `scripts/frozen_abi.py --check` in full and handles any move this way.
+
+**Seal of (X₀) (2026-11-19).** `jointEnergyFirstIntegrable_connectedPart_five` is sealed with body
+`by exact` its provider. Every attached, connected (1,1) contraction at graded order 5 satisfies
+(T₉′) for every ε > 0, with no bound on the masses. The proof (`QED/GradedProof/X0*.lean`) splits
+by grading and loop count:
+- nonzero gradings leave only trees;
+- one loop: generic mass-free one-loop integrability through an auxiliary loop with a fourth-power
+  propagator, and block sums over closed fermion loops, where mass entries come in even number
+  around the loop;
+- two loops: a generic power-counting criterion for open contractions, products of one-loop
+  pieces when the loops share no line, and block sums with padding otherwise.
+Coverage is checked in the kernel by enumeration over normal forms, one `decide +kernel` theorem
+per pairing (each under 4 GB). ABI unchanged; standard axioms; guard OK. An independent seal
+audit found it PROVED, including the coverage of the enumeration.

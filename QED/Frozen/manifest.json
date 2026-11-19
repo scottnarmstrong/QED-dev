@@ -34620,7 +34620,7 @@
         "module": "QED.Provider.Graded.JointEnergyFirstIntegrableConnectedPartFive",
         "export": "QED.Provider.Graded.jointEnergyFirstIntegrable_connectedPart_five"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "0edc34a5e7817a1b0286ca32d75e6faf9152cee665c57b82c31f687d4d10c80c",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
