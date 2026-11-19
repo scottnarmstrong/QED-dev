@@ -23,7 +23,7 @@ sum of the seven unit placements of the plan (`docs/campaign/SETC-KERNEL-PLAN.md
 In Lean the pieces are `lPair` (the L pair), `selfIn` (`S(t,0)`), `cornIn` (`C(t,0)`),
 `crossT` (`X(t,0)`), `scOutS` (`S(0,t) + C_ct(0,t)`) and `scOutC` (`C(0,t)`, two-loop part).
 The mirror placement `X(0,t)` is replaced by `X(t,0)` (**`setCKKernelSum`** has `2 crossT`):
-the mirror identity `X(t,0) = X(0,t)` is numerical only (agreement `2.4·10⁻¹³` at `t = 1`).
+the mirror identity `X(t,0) = X(0,t)` is proved in `SetCKCrossLink` (`setCKKernelSum_eq'`).
 
 **`setCKKernelSum_eq`**: for every `t > 0`,
 

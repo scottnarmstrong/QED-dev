@@ -14,7 +14,7 @@ public import QED.ChainProof.SetCKCornInCV
 
 Helper level (no frozen statement). Group G3 of the set (c) kernel plan is the crossed-ladder
 unit `X` with the photon of mass² `t > 0` on the line `z_b` and the other photon massless,
-`X(t, 0)` (equal to `X(0, t)` by the mirror symmetry of the graph; checked numerically only).
+`X(t, 0)` (equal to `X(0, t)` by the mirror symmetry of the graph, `SetCKCrossMirror`).
 It has no subdivergence and no counterterm.
 
 **The two-mass integrand.** In the frame of section 2.2 of `docs/TWO-LOOP-UNITS.md` (inner
@@ -25,7 +25,8 @@ simplex `(z₂, z₃, z_b) = (y₃, y₄, 1 - Y)`, `Y = y₃ + y₄`, outer `b =
 (coefficients `crossTA1`, …, `crossTC3`, polynomials in `x, y₃, y₄`), `M = cornerMass`,
 `h = (x² + (1-x) μ_a)/x`. Its `b`-integral over `b > β(x) = max(g, e x/(1-x))` is
 `cForm(0, a₁, a₂, 0, c₁, c₂, c₃, β, h, M, …)` (**`crossTGm`**, outer photon mass `la`, inner
-photon mass `lb`). Not proved in Lean: the Cheng–Wu reduction and the `b`-integration. Checks
+photon mass `lb`). The Cheng–Wu reduction and the `b`-integration are proved in
+`SetCKCrossLink` (`crossT_eq_crossUnit`). Checks
 (scratch `stageK/g3`): the coefficients are the Laurent coefficients of the parametric engine
 (`coef.py`, `chkEng.py`, exact); `∫∫ crossedTerm 0 t dz_A dz_a` at three inner points equals
 `∫₀¹ crossTGm 0 (√t) y₃ y₄ x dx` to `10⁻¹⁴` (`chkTerm.py`); the unit at `(t, 0)` and `(0, t)`,

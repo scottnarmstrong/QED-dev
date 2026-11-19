@@ -316,6 +316,10 @@ public import QED.ChainProof.SetCKScOutCDom
 public import QED.ChainProof.SetCKScOutCH
 public import QED.ChainProof.SetCKAsmRho
 public import QED.ChainProof.SetCKAssembly
+public import QED.ChainProof.SetCKCrossMirror
+public import QED.ChainProof.SetCKCrossSubst
+public import QED.ChainProof.SetCKCrossLink
+public import QED.ChainProof.SetCKAXPos
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
