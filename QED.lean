@@ -383,6 +383,11 @@ public import QED.GradedProof.VP2FCov
 public import QED.GradedProof.VP2FPieces
 public import QED.GradedProof.VP2FTriple
 public import QED.GradedProof.VP2LimF
+public import QED.GradedProof.VP2FWardEF
+public import QED.GradedProof.VP2FWardAlg
+public import QED.GradedProof.VP2FWardR
+public import QED.GradedProof.VP2FWard
+public import QED.GradedProof.VP2FPol
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
