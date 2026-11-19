@@ -263,6 +263,14 @@ public import QED.ChainProof.RepsIntBBIntegrand
 public import QED.ChainProof.RepsIntBBRot
 public import QED.ChainProof.RepsIntBBJoint
 public import QED.ChainProof.RepsIntBBFinal
+public import QED.GradedProof.Homogeneity
+public import QED.GradedProof.Embed
+public import QED.GradedProof.LoopCycle
+public import QED.GradedProof.EmbedOrder
+public import QED.GradedProof.LevelOnePhoton
+public import QED.GradedProof.LevelOneCharge
+public import QED.GradedProof.LevelOneElectron
+public import QED.GradedProof.VertexTwo
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec

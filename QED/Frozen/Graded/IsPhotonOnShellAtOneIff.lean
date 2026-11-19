@@ -24,7 +24,7 @@ theorem isPhotonOnShellAt_one_iff (P : Params) {F : Type} [Fintype F] [Decidable
     (Φ : Lepton.Flavors F) (D : Counterterms F) :
     IsPhotonOnShellAt P Φ D 1 ↔ Lepton.IsPhotonOnShell { P with δ₃ := P.e ^ 2 * D.d₃ 0 } Φ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.isPhotonOnShellAt_one_iff
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

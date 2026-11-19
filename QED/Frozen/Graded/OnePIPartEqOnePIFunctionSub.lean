@@ -38,7 +38,7 @@ theorem onePIPart_eq_onePIFunction₂_sub (P : Params) {F : Type} [Fintype F] [D
       Lepton.onePIFunction₂ P Φ nf nA (K + 1) pOut pIn kIn αOut βIn μ -
         Lepton.onePIFunction₂ P Φ nf nA K pOut pIn kIn αOut βIn μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.onePIPart_eq_onePIFunction₂_sub
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

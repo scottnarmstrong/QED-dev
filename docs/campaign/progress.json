@@ -681,6 +681,10 @@
     {
       "date": "2026-11-19",
       "change": "Set (c) value side complete: integral_setC_eq_aSetC proves that the one-variable kernel integral (Balzani-Laporta-Passera 2022, with the chain graphs subtracted) equals the Barbieri-Remiddi 1974 closed form aSetC. The kernel itself is a retained external input until it is derived in the model; the model link needs the Stage 2 model."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Stage 2: 8 of 18 D-57 goals sealed and audited (order homogeneity, level-one conditions, the order-e^5 vertex, embeddings into the frozen two-loop model)."
     }
   ],
   "tracks": [

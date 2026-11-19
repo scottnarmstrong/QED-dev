@@ -29,7 +29,7 @@ theorem isOnShellAt_one_iff (P : Params) {F : Type} [Fintype F] [DecidableEq F]
         { P with m := Φ.mass f, δ₂ := P.e ^ 2 * D.d₂ f 0, δm := P.e ^ 2 * D.dm f 0 }
         hf hmγ hΛ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.isOnShellAt_one_iff
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

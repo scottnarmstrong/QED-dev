@@ -26,7 +26,7 @@ theorem isChargeNormalizedAt_one_iff (P : Params) {F : Type} [Fintype F] [Decida
       QED.OneLoop.IsChargeNormalized P.e (1 + P.e ^ 2 * D.d₁ f 0) (Φ.mass f) P.mγ P.Λ hf hmγ
         hΛ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.isChargeNormalizedAt_one_iff
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

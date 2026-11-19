@@ -29955,7 +29955,7 @@
         "module": "QED.Provider.Graded.SelectedPartEqPowMul",
         "export": "QED.Provider.Graded.selectedPart_eq_pow_mul"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "2a6030a6acf0d7e87e666b2db7f458d9e3fc82050cd017c34ea072e01eace98c",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
@@ -30194,7 +30194,7 @@
         "module": "QED.Provider.Graded.SelectedPartCongr",
         "export": "QED.Provider.Graded.selectedPart_congr"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "388acbed9894256af667e7127b99d662486e0c2d3d1eafe2a4458c27fb9f1ce6",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
@@ -30485,7 +30485,7 @@
         "module": "QED.Provider.Graded.OnePIPartEqOnePIFunctionSub",
         "export": "QED.Provider.Graded.onePIPart_eq_onePIFunction₂_sub"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "a85992ec15e22b8e3441b6a4d4359f5a77994206d080b9bab571bf67150c6b71",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
@@ -30892,7 +30892,7 @@
         "module": "QED.Provider.Graded.IsOnShellAtOneIff",
         "export": "QED.Provider.Graded.isOnShellAt_one_iff"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "32648f816626156d5e7e566161dd1842538b2cc5073b63a161426fb3401dfc0e",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
@@ -31179,7 +31179,7 @@
         "module": "QED.Provider.Graded.IsChargeNormalizedAtOneIff",
         "export": "QED.Provider.Graded.isChargeNormalizedAt_one_iff"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "0e521ae9b212c60c09e2d52cd1463ee731695db4345b674aa6ce12f8caaf2d15",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
@@ -31482,7 +31482,7 @@
         "module": "QED.Provider.Graded.IsPhotonOnShellAtOneIff",
         "export": "QED.Provider.Graded.isPhotonOnShellAt_one_iff"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "ba406d525de782d5d8e9c3ddec0b05adb43178314b30c2f9b8bec5e388c5e0ad",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
@@ -31781,7 +31781,7 @@
         "module": "QED.Provider.Graded.VertexPartTwoEq",
         "export": "QED.Provider.Graded.vertexPart_two_eq"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "2370a2efb4112c957547899f8b39def8d8816cfe423cba8ad18c36d47649c801",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
@@ -32096,7 +32096,7 @@
         "module": "QED.Provider.Graded.ConnectedPartEqConnectedFunctionSub",
         "export": "QED.Provider.Graded.connectedPart_eq_connectedFunction_sub"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "bc531fa19beeb902ab2310abc8081bde5f56c6451aa9732571310c16fcc3ad56",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {

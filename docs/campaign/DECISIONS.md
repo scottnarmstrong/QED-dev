@@ -2650,3 +2650,19 @@ analysis and the record of both reviews, is [STAGE2-DESIGN.md](STAGE2-DESIGN.md)
 
 **Open risk.** Integrability of the genuine two-loop vacuum polarization of a block is argued by
 power counting (it needs only Σc = 0), but not yet checked numerically.
+
+**Seals (2026-11-19).** Eight goals are sealed with bodies `by exact` their providers in
+`QED/Provider/Graded/`, proved in `QED/GradedProof/`:
+- `selectedPart_eq_pow_mul` and `selectedPart_congr` (order homogeneity);
+- `isPhotonOnShellAt_one_iff`, `isChargeNormalizedAt_one_iff` and `isOnShellAt_one_iff` (the
+  level-one conditions are the frozen ones);
+- `vertexPart_two_eq` (the order-e⁵ vertex: the frozen vertex plus the level-1 charge counterterm
+  tree);
+- `onePIPart_eq_onePIFunction₂_sub` and `connectedPart_eq_connectedFunction_sub` (embedding into
+  the frozen two-loop model; the key lemma is that a counterterm on a closed fermion cycle costs one
+  extra loop, two in a 1PI graph).
+
+Checks: the frozen bytes changed only in the proof bodies; ABI unchanged (8/8); standard axioms; the
+guard is OK. An independent refute-first seal audit found all eight PROVED: provider types are
+definitionally equal to the frozen ones with D-13 binders, and no draft anchor or provider is
+reachable.

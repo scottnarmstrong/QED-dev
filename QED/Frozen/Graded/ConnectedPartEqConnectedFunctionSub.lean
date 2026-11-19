@@ -37,7 +37,7 @@ theorem connectedPart_eq_connectedFunction_sub (P : Params) (D : Counterterms (F
       WickModel.connectedFunction P nf nA (K + 1) pOut pIn kIn αOut βIn μ -
         WickModel.connectedFunction P nf nA K pOut pIn kIn αOut βIn μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.connectedPart_eq_connectedFunction_sub
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

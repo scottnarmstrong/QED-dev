@@ -27,7 +27,7 @@ theorem selectedPart_eq_pow_mul (P : Params) {F : Type} [Fintype F] [DecidableEq
     selectedPart P Φ D nf nA Sel K pOut pIn kIn αOut βIn μ =
       (P.e : ℂ) ^ K * selectedPart { P with e := 1 } Φ D nf nA Sel K pOut pIn kIn αOut βIn μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.selectedPart_eq_pow_mul
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

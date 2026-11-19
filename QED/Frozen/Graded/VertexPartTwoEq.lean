@@ -32,7 +32,7 @@ theorem vertexPart_two_eq (P : Params) {F : Type} [Fintype F] [DecidableEq F]
       Lepton.vertexOrderFive P Φ p' p μ +
         ((P.e ^ 4 * D.d₁ Φ.openLine 1 * P.e : ℝ) : ℂ) • Dirac.gamma μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.vertexPart_two_eq
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 
