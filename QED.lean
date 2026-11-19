@@ -208,6 +208,13 @@ public import QED.Chain.SetAW1
 public import QED.Chain.SetAW1Lim
 public import QED.Chain.SetAValue
 public import QED.Chain.SetCConst
+public import QED.Chain.SetCKernel
+public import QED.Chain.SetCW3
+public import QED.Chain.SetCW1
+public import QED.Chain.SetCRem
+public import QED.Chain.SetCW1Lim
+public import QED.Chain.SetCJInt
+public import QED.Chain.SetCValue
 public import QED.ChainProof.HCClasses
 public import QED.ChainProof.HCNestedFubini
 public import QED.ChainProof.EnumVertex

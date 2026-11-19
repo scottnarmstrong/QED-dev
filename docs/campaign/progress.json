@@ -677,6 +677,10 @@
     {
       "date": "2026-11-19",
       "change": "Stage 2 packet frozen provisionally (D-57; author approval pending): the graded counterterm model in QED/Frozen/Graded, 25 definitions and 18 theorem goals, with per-lepton-block counterterms (D-55 revised). Two independent reviews."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Set (c) value side complete: integral_setC_eq_aSetC proves that the one-variable kernel integral (Balzani-Laporta-Passera 2022, with the chain graphs subtracted) equals the Barbieri-Remiddi 1974 closed form aSetC. The kernel itself is a retained external input until it is derived in the model; the model link needs the Stage 2 model."
     }
   ],
   "tracks": [
@@ -787,8 +791,10 @@
         {
           "id": "L3.SETC",
           "title": "Set (c): one bubble in the two-loop vertex, 12 diagrams",
-          "status": "planned",
-          "evidence": []
+          "status": "in_progress",
+          "evidence": [
+            "QED/Chain/SetCValue.lean"
+          ]
         },
         {
           "id": "L3.QUAD",
