@@ -133,6 +133,11 @@ public import QED.Polylog.LiHalf
 public import QED.Polylog.ConstBounds
 public import QED.Polylog.A1Six
 public import QED.Polylog.A1FourFine
+public import QED.Polylog.LiCalculus
+public import QED.Polylog.AlphabetPM
+public import QED.Polylog.DilogPM
+public import QED.Polylog.LiLimits
+public import QED.Polylog.LogLogSq
 public import QED.TwoLoop.WardIdentity
 public import QED.TwoLoop.LoopBoundTwoExact
 public import QED.TwoLoop.JointIntegralInvariance
@@ -196,6 +201,11 @@ public import QED.Chain.SetASpectral
 public import QED.Chain.SetAFubini
 public import QED.Chain.SetASubst
 public import QED.Chain.SetAConst
+public import QED.Chain.SetAW4
+public import QED.Chain.SetAW3
+public import QED.Chain.SetAW1
+public import QED.Chain.SetAW1Lim
+public import QED.Chain.SetAValue
 public import QED.ChainProof.HCClasses
 public import QED.ChainProof.HCNestedFubini
 public import QED.ChainProof.EnumVertex

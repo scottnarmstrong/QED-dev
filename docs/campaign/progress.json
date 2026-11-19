@@ -665,6 +665,10 @@
     {
       "date": "2026-11-19",
       "change": "Set (a) value side, part 1 (QED/Chain/SetA*): the Kallen-Sabry spectral function (Kaptari et al. 2025, eq. (20)) and the reusable two-loop vacuum polarization piHat4 with bounds and endpoint limits; the set (a) integral reduced by Fubini and a closed-form inner integral to a one-variable integral of logarithms and dilogarithms; the closed form aSetA (eq. (16)) with 0.0528706524757669 < aSetA < 0.0528706524757671. Open: the last one-variable integral, which needs weight-4 polylogarithm identities."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Set (a) value side complete: integral_setA_eq_aSetA proves that the set (a) integral with the two-loop vacuum polarization equals the closed form aSetA (Kaptari et al. 2025, eq. (16)). New weight-4 polylogarithm library (QED/Polylog/LiCalculus, AlphabetPM, DilogPM, LiLimits, LogLogSq), reusable for sets (c)-(e). The model link for set (a) needs the Stage 2 model."
     }
   ],
   "tracks": [
@@ -765,8 +769,10 @@
         {
           "id": "L3.SETA",
           "title": "Set (a): fourth-order vacuum-polarization insertion, 3 diagrams",
-          "status": "planned",
-          "evidence": []
+          "status": "in_progress",
+          "evidence": [
+            "QED/Chain/SetAValue.lean"
+          ]
         },
         {
           "id": "L3.SETC",
