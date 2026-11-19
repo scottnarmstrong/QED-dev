@@ -713,6 +713,10 @@
     {
       "date": "2026-11-19",
       "change": "Stage 2, order-e^4 self-energy: the second clause of G-Sigma2 proved (selfEnergyPart_two_clause2): below threshold the epsilon -> 0 limit exists and has the covariant form with unique form factors A, B, via explicit parametric limits, reflection covariance and null-ray continuity for all eight classes. Differentiability at the mass shell remains."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Stage 2, order-e^4 vacuum polarization: the integrability clause of G-Pi2 proved unconditionally (vacuumPolarizationPart_two_clause1), for all seven classes, the two-loop ones via divided differences over each lepton block (15 pieces). The transverse epsilon -> 0 limit remains."
     }
   ],
   "tracks": [

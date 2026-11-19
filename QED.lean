@@ -324,6 +324,16 @@ public import QED.GradedProof.VP2Loop
 public import QED.GradedProof.VP2ClassG
 public import QED.GradedProof.VP2ClassG0
 public import QED.GradedProof.VP2Clause1
+public import QED.GradedProof.VP2FAlg
+public import QED.GradedProof.VP2ClassF
+public import QED.GradedProof.VP2Clause1F
+public import QED.GradedProof.VP2VAlg
+public import QED.GradedProof.VP2VBlock
+public import QED.GradedProof.VP2VAmp
+public import QED.GradedProof.VP2ClassVA
+public import QED.GradedProof.VP2ClassVB
+public import QED.GradedProof.VP2ClassVC
+public import QED.GradedProof.VP2Clause1V
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
