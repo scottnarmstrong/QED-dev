@@ -36,13 +36,13 @@ namespace QED.ChainProof.SetCK
 
 open QED.TwoLoop.UnitSCLimit QED.TwoLoop.UnitLLink
 
-/-- The cubic  of  (coefficients in ). -/
+/-- The cubic factor `P` of `φ`, as coefficients in `x` (used through `hpoly`). -/
 noncomputable def cornInPl (Y y3 : ℝ) : List ℝ :=
   [-2*(-Y^3 + Y^2*y3 + 2*Y^2 - Y - 2*y3 + 1), -2*Y^3 - 2*Y^2*y3 + 6*Y^2 + 4*Y*y3^2 - 3*Y -
     6*y3 + 3, 4*Y^2*y3 - 2*Y^2 - 2*Y*y3^2 - 4*Y*y3 + 2*Y - 2*y3^3 + 4*y3^2 + y3 - 1, 2*y3*(-Y +
     y3)*(y3 - 1)]
 
-/-- The numerator  of  (coefficients in ). -/
+/-- The numerator `N` of `φ′`, as coefficients in `x` (used through `hpoly`). -/
 noncomputable def cornInNl (Y y3 : ℝ) : List ℝ :=
   [-4*(Y - 1)*(-Y^3 + Y^2*y3 + 2*Y^2 - Y - 2*y3 + 1), -5*Y^4 - Y^3*y3 + 19*Y^3 + 6*Y^2*y3^2 +
     Y^2*y3 - 22*Y^2 - 4*Y*y3^2 - 14*Y*y3 + 14*Y - 4*y3^2 + 18*y3 - 8, -(Y - 1)*(-Y^3 + Y^2*y3 +
@@ -52,16 +52,16 @@ noncomputable def cornInNl (Y y3 : ℝ) : List ℝ :=
     + 18*y3^2 + 11*y3 - 5, -(y3 - 1)*(-6*Y^2*y3 + 2*Y^2 - 5*Y*y3^2 + 15*Y*y3 - 2*Y + 11*y3^3 -
     15*y3^2 - y3 + 1), 3*y3*(-Y + y3)*(y3 - 1)^2]
 
-/-- ****: the boundary term on the second branch is . -/
+/-- **The function `φ`**: the boundary term on the second branch is `φ · w₀′`. -/
 noncomputable def cornInPhi (Y y3 x : ℝ) : ℝ :=
   (x - 1) ^ 2 * (1 - Y - x * (1 - y3)) * hpoly (cornInPl Y y3) x /
     (4 * x ^ 2 * y3 * (y3 - Y) ^ 3 * (x - 2))
 
-/-- . -/
+/-- The derivative `φ′` of `cornInPhi` in `x`. -/
 noncomputable def cornInDPhi (Y y3 x : ℝ) : ℝ :=
   (x - 1) * hpoly (cornInNl Y y3) x / (2 * x ^ 3 * y3 * (y3 - Y) ^ 3 * (x - 2) ^ 2)
 
-/-- The branch point . -/
+/-- The branch point `x* = (1 − Y)/(1 − y₃)`. -/
 noncomputable def cornInXs (Y y3 : ℝ) : ℝ := (1 - Y) / (1 - y3)
 
 theorem hasDerivAt_cornInPhi {Y y3 x : ℝ} (hx : x ≠ 0) (hx2 : x ≠ 2) (h3 : y3 ≠ 0)
@@ -110,7 +110,7 @@ theorem cornInPhi_xs (Y y3 : ℝ) (h3 : y3 ≠ 1) : cornInPhi Y y3 (cornInXs Y y
 theorem cornInPhi_one (Y y3 : ℝ) : cornInPhi Y y3 1 = 0 := by
   simp [cornInPhi]
 
-/-- On the first branch . -/
+/-- On the first branch `x(1 − y₃) ≤ 1 − Y`, `β` is the corner value. -/
 theorem betaG_of_branch1 {Y y3 x : ℝ} (h3 : 0 < y3) (hx : x < 1)
     (hb : x * (1 - y3) ≤ 1 - Y) :
     betaG (cornerG y3 (Y - y3)) (y3 * (Y - y3)) x = cornerG y3 (Y - y3) := by
@@ -121,7 +121,7 @@ theorem betaG_of_branch1 {Y y3 x : ℝ} (h3 : 0 < y3) (hx : x < 1)
   have : 0 < y3 := h3
   nlinarith [mul_pos h3 h1]
 
-/-- On the second branch . -/
+/-- On the second branch `1 − Y ≤ x(1 − y₃)`, `β = y₃(Y − y₃)x/(1 − x)`. -/
 theorem betaG_of_branch2 {Y y3 x : ℝ} (h3 : 0 < y3) (hx : x < 1)
     (hb : 1 - Y ≤ x * (1 - y3)) :
     betaG (cornerG y3 (Y - y3)) (y3 * (Y - y3)) x = y3 * (Y - y3) * x / (1 - x) := by
@@ -136,7 +136,7 @@ theorem cornInW0_of_branch2 {Y y3 x : ℝ} (h3 : 0 < y3) (hx : x < 1)
   rw [cornInW0, betaG_of_branch2 h3 hx hb]
   ring
 
-/-- **The boundary term on the second branch** is . -/
+/-- **The boundary term on the second branch** is `φ · w₀′`. -/
 theorem cornInDel_of_branch2 {Y y3 x : ℝ} (h3 : 0 < y3) (h34 : y3 < Y) (hx : x ∈ Ioo (0 : ℝ) 1)
     (hb : 1 - Y ≤ x * (1 - y3)) :
     cornInDel Y y3 x = cornInPhi Y y3 x * (y3 * (Y - y3) * x * (2 - x) / (1 - x) ^ 2) := by

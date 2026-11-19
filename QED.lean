@@ -287,6 +287,12 @@ public import QED.ChainProof.SetCKCornInW
 public import QED.ChainProof.SetCKCornIn
 public import QED.ChainProof.SetCKCornInPhi
 public import QED.ChainProof.SetCKCornInIBP
+public import QED.ChainProof.SetCKCornInCV
+public import QED.ChainProof.SetCKCornInKt
+public import QED.ChainProof.SetCKCornInNode
+public import QED.ChainProof.SetCKCornInBd
+public import QED.ChainProof.SetCKCornInDomInt
+public import QED.ChainProof.SetCKCornInFub
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
