@@ -738,3 +738,16 @@ The model-level steps O3-3 to O3-9 and O3-15 follow the Stage 1a packet.
   the proved two-loop bound gives 17/2. The inner-first route integrates the first bubble in closed
   form (`VPHalfAtInner`), which reduces the rest to the two-loop VP shape, where 17/2 appears to
   suffice.
+
+**O3-4 is done** (`QED/ChainProof/Enum*.lean`):
+- Every set (b) contraction is a relabelling of exactly one of 9 representatives. The
+  classification comes from the path argument; no permutations are enumerated.
+- No representative has a nontrivial automorphism, so each class has coefficient one.
+- `vertexChain_two_eq_classes_flavors` gives the chain vertex as the signed sum of the 9
+  representative values, for every flavour set.
+- The (C₁) implications are proved at n = 2: 1PI, order 7, loop count 1 + #bubbles, sign
+  (−1)^#bubbles.
+
+(HC₀) is reduced to integrability of the 9 representatives
+(`jointEnergyFirstIntegrable_vertexChain_two_of_reps`). That needs criteria the repository does not
+yet have: three loop momenta, and numerators of degree 6, because the `photonCt` factor is quadratic.

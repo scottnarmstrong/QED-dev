@@ -601,6 +601,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 (HC3) reduced to five named obligations (helper level, QED/ChainProof/HC*): the assembly in the D-37 order (O3-15) is proved, with reductions of O3-9 to one variable, of the vertex to its classes, and of the three-loop nested-equals-joint step to Fubini conditions; the inner-first route for O3-6 is identified as compatible with the proved two-loop bounds."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 O3-4 done: every set (b) contraction is a relabelling of exactly one of 9 representatives with coefficient one (path argument, no permutation enumeration); the chain vertex is the signed sum of the 9 representative values for every flavour set; (HC0) reduced to integrability of the 9 representatives, which needs three-loop and degree-6 criteria."
     }
   ],
   "tracks": [
