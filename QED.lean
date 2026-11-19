@@ -502,6 +502,9 @@ public import QED.GradedProof.RPi4Setup
 public import QED.GradedProof.RPi4Reduce
 public import QED.GradedProof.RPi4Counterterm
 public import QED.GradedProof.RPi4PhotonMass
+public import QED.GradedProof.WI2Line
+public import QED.GradedProof.WI2Gauss
+public import QED.GradedProof.WI2Stein
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
