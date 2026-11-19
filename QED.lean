@@ -531,6 +531,13 @@ public import QED.GradedProof.WI2Square
 public import QED.GradedProof.WI2PA
 public import QED.GradedProof.WI2Diff
 public import QED.GradedProof.WI2Merge
+public import QED.GradedProof.WI2Dbl
+public import QED.GradedProof.WI2RayCore
+public import QED.GradedProof.WI2RayPoint
+public import QED.GradedProof.WI2Ray
+public import QED.GradedProof.WI2Transfer
+public import QED.GradedProof.WI2Ward
+public import QED.GradedProof.WI2Route
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
