@@ -349,6 +349,11 @@ public import QED.GradedProof.VP2ClassVA
 public import QED.GradedProof.VP2ClassVB
 public import QED.GradedProof.VP2ClassVC
 public import QED.GradedProof.VP2Clause1V
+public import QED.GradedProof.VP2WeightsRelabel
+public import QED.GradedProof.VP2WeightsZero
+public import QED.GradedProof.VP2Weights
+public import QED.GradedProof.VP2TensorForm
+public import QED.GradedProof.VP2Piece
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
