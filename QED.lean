@@ -343,6 +343,13 @@ public import QED.GradedProof.X0TwoLoop
 public import QED.GradedProof.X0Link
 public import QED.GradedProof.X0Enum
 public import QED.GradedProof.X0Product
+public import QED.GradedProof.X0OneLoop
+public import QED.GradedProof.X0Entry
+public import QED.GradedProof.X0Sep
+public import QED.GradedProof.X0Open
+public import QED.GradedProof.X0Assemble
+public import QED.GradedProof.X0AffPoly
+public import QED.GradedProof.X0OneCtVertex
 public import QED.GradedProof.VP2Enum
 public import QED.GradedProof.VP2EnumG
 public import QED.GradedProof.VP2Classes
