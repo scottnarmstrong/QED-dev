@@ -825,3 +825,10 @@ Open:
 - **Dominated convergence:** Fubini and dominated convergence over any finite measure on the
   spectral parameters.
 - **Coverage:** it serves the side classes and the bubble–bubble insertion Π̂_ε²k⁴d³ (r = 2, j = 4).
+
+**Side classes, first part** (`QED/ChainProof/HCSideBD*.lean`):
+- `RepLimit` is proved for `repBD s` and `repDB s` (s = 0, 1). Each value is rewritten, by an
+  integer change of loop momenta, as a joint integral of `bdG`/`dbG`, which is split into seven
+  pieces with limits from the generic engine.
+- `RepNested` for these four is reduced to `BDNestedForm C 1`, still to be proved.
+- `RepCov` for these four is open.

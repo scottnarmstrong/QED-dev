@@ -633,6 +633,10 @@
     {
       "date": "2026-11-19",
       "change": "Generic mixed-prescription limit engine landed (QED/TwoLoop/VPHalfAtGen*): epsilon -> 0+ limits with any number of photon-type denominators with independent prescriptions, (k^2)^j factors and spectral insertions, uniform bounds, Fubini and dominated convergence over spectral parameters; it covers the set (b) side classes and the bubble-bubble double insertion."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 (HC3): epsilon -> 0+ limits (RepLimit) proved for the four bubble-on-side representatives repBD 0/1 and repDB 0/1 (QED/ChainProof/HCSideBD*); their nested values are reduced to one nested-form identity (BDNestedForm); covariance (RepCov) for these classes is open. Added the reader-facing explainer docs/THE-COMPUTATION.md."
     }
   ],
   "tracks": [

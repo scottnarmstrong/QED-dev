@@ -11,6 +11,9 @@ $a_e^{(1)}=\alpha/(2\pi)$. The longer route runs through two loops and selected
 higher-loop contributions toward a verified five-loop QED prediction. Each stage
 should produce reusable tools for real physics calculations.
 
+[The computation](docs/THE-COMPUTATION.md) explains, for non-specialists, what
+$a_e$ is, why each loop order is harder, and how far the verification has come.
+
 **Current state (the one-loop result is complete):** the primary derivation is pinned
 (Srednicki, chapters 62–64). The conventions are fixed, and the one-loop
 regulator route is chosen. The derivation is mapped step by step with its proof
@@ -84,7 +87,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 748. **Total lines of Lean code:** 168,236.
+**Tracked Lean source files:** 754. **Total lines of Lean code:** 169,988.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.
