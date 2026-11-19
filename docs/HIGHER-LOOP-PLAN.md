@@ -772,3 +772,16 @@ limit is the one-loop vertex with its inserted photon function. It is the same w
   identifies the class families used by the value and covariance links.
 - **Per-class covariance under boosts is not a fixed-ε symmetry** of the energy-first integral. It
   must be read off the closed form of the ε → 0⁺ limits (O3-6), as at two loops.
+
+**Per-class limits, part 1** (`QED/ChainProof/HCLimit*.lean`):
+- `ClassLimitLink enumClass` is reduced to the nine representatives.
+- The four δ₃–δ₃ classes have ε → 0⁺ limits with no hypotheses. Their value does not depend on the
+  field pairing, which confirms the δ₃²/4 split in `enumPhoton`.
+- The bubble–bubble Fubini step is proved (risk R2): joint equals nested
+  ∫ O(k)·Π_ε(k)², with new bounds on the unintegrated and integrated bubbles. The decay exponent
+  14 is exactly enough.
+
+Open:
+- the bubble–bubble Wick step, matching the representative's amplitude to the nested integrand;
+- the ε → 0⁺ limits for bubble–bubble, bubble–δ₃ and δ₃–bubble (numerators beyond quadratic);
+- the per-class closed forms, which give `ClassNestedAtLink` and `ClassCovLink`.

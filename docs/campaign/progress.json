@@ -613,6 +613,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 (HC3): the mirror link proved (charge conjugation and momentum reversal on the whole chain family; fixed-epsilon identity unconditional); (HC3) now follows from three links: the per-class epsilon-limits, the per-class covariance, and the value link. Boost covariance must come from the closed form of the limits (O3-6)."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 (HC3) per-class limits, part 1: the four delta3-delta3 classes have epsilon -> 0+ limits unconditionally (value independent of the field pairing, confirming the delta3^2/4 split); the three-loop bubble-bubble Fubini step is proved (risk R2 resolved). Open: the bubble-bubble Wick step, the epsilon-limits of the bubble classes, and the per-class closed forms."
     }
   ],
   "tracks": [
