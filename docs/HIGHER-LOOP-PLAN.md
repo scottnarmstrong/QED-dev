@@ -717,3 +717,24 @@ condition, model mass scaling, and the assembly of (HM₂).
 - **The iterated limit** in the D-37 order (`chainReg_iterated_limit`).
 
 The model-level steps O3-3 to O3-9 and O3-15 follow the Stage 1a packet.
+
+**(HC₃) reduced to five named obligations** (`QED/ChainProof/HC*.lean`, conditional helpers):
+- **O3-15 is proved.** The assembly in the D-37 order, with the regulator limits and the existence
+  clause, goes from a fixed-regulator link (`..._of_fixedLink`).
+- **Proved reductions:**
+  - the fixed link from four links: ε-limit existence, covariance, mirror, and a one-variable
+    q² → 0⁺ value;
+  - O3-9 reduced to one variable through covariance (`HCKinematics`);
+  - from the class decomposition to the whole vertex (`HCClasses`);
+  - the measure-theoretic step of O3-6 at three loops (`HCNestedFubini`), in a direct form and an
+    inner-first form.
+- **Open:**
+  - `ChainClassDecomposition` (O3-4);
+  - `ClassLimitLink`, the per-class ε → 0⁺ limits (O3-5/O3-6);
+  - `ClassCovLink` (O3-8);
+  - `ChainMirrorLink` (O3-8; it holds for the sum only, since C swaps bubble–δ₃ with δ₃–bubble);
+  - `ChainPauliAtLink` (O3-9 value, O3-7, O3-10, with mass and charge scaling).
+- **Finding on O3-6.** The direct Fubini route needs a bubble bound with exponent below 13/2, but
+  the proved two-loop bound gives 17/2. The inner-first route integrates the first bubble in closed
+  form (`VPHalfAtInner`), which reduces the rest to the two-loop VP shape, where 17/2 appears to
+  suffice.

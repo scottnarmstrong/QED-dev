@@ -181,6 +181,8 @@ public import QED.Chain.VPChainSetBBounds
 public import QED.Chain.HeavyLeptonBounds
 public import QED.Chain.HeavyVPLimit
 public import QED.Chain.ChainBLimit
+public import QED.ChainProof.HCClasses
+public import QED.ChainProof.HCNestedFubini
 public import QED.TwoLoop.ClassIntegrableFurry
 public import QED.TwoLoop.UnitSCGraphSpMain
 public import QED.TwoLoop.UnitSCGraphSmMain
