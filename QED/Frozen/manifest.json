@@ -25734,7 +25734,7 @@
         "module": "QED.Provider.VPChain.JointEnergyFirstIntegrableVertexChainTwo",
         "export": "QED.Provider.VPChain.jointEnergyFirstIntegrable_vertexChain_two"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "c5acb210218035333a09da008e3eb638088f51c8e8e4592f28bf9578c3f75f23",
       "suffix_sha256": "996be8928563b70eb6f920a44fb29f60221cfa4a78f7c557208592ab8370fbff",
       "draft_allowlist": {

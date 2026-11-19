@@ -641,6 +641,10 @@
     {
       "date": "2026-11-19",
       "change": "Phase 5 (HC3): the bubble-bubble representative on the generic engine (QED/ChainProof/HCBB2*): RepLimit repBB from three-loop integrability (BBJointIntegrable); RepNested and RepCov for repBB reduced to two epsilon-free statements (BBPauliValue, BBCov)."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Phase 5 (HC0) sealed: every set (b) chain term is a genuine integral at epsilon > 0. The three-loop bubble-bubble case is proved by a common complex rotation of the loop energies (QED/Integration/ThreeLoopRotation, QED/ChainProof/RepsIntBB*). Independent seal audit PROVED. (HC3) remains DRAFT_SORRY."
     }
   ],
   "tracks": [

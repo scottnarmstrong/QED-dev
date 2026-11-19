@@ -2460,3 +2460,15 @@ The one-bubble analogue (HC₁) is a helper-level pilot, not an anchor.
 
 An independent refute-first seal audit returned PROVED for all six. (HC₀) and (HC₃) remain
 DRAFT_SORRY.
+
+**Seal of (HC₀) (2026-11-19).** `jointEnergyFirstIntegrable_vertexChain_two` is sealed with body
+`by exact QED.Provider.VPChain.jointEnergyFirstIntegrable_vertexChain_two`.
+- The eight one- and two-loop representatives were already integrable (`QED/ChainProof/RepsInt*`).
+- The bubble–bubble representative is the only three-loop one. It is handled by a common complex
+  rotation of the three loop energies (`QED/Integration/ThreeLoopRotation.lean`). On the rotated
+  contour every denominator is elliptic, and each Pauli–Villars-summed bubble decays like ρ⁻⁵, which
+  gives joint integrability on (ℝ⁴)³ (`QED/ChainProof/RepsIntBB*.lean`). No mass condition is used.
+- An independent refute-first seal audit returned PROVED: statement bytes and ABI unchanged,
+  binder convention D-13, all nine representatives discharged, standard axioms only.
+
+(HC₃) remains DRAFT_SORRY.
