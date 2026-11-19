@@ -2571,7 +2571,7 @@ and `A1FourFine.lean`. An independent refute-first seal audit returned PROVED: s
 and ABI unchanged, provider types definitionally the frozen statements, tail bounds genuine,
 standard axioms only. The approval of all three D-56 declarations remains pending.
 
-**D-55 revised (2026-11-19, overnight; author approval pending).** Drafting the Stage 2 statements
+**D-55 revised (2026-11-19, overnight; approved by the author with D-57).** Drafting the Stage 2 statements
 showed that the literal per-flavour scheme fails. Under the frozen value prescription each
 contraction is integrated separately, flavour-summed inside its integrand. With an independent δ₂
 on every flavour, a counterterm contraction on a closed loop then decays only like |ℓ⃗|⁻¹, so it is
@@ -2595,9 +2595,13 @@ alternative.
 **Open risk.** It is not yet tested whether the genuine two-loop vacuum polarization of a block is
 integrable with only two Pauli–Villars conditions.
 
-## D-57. Phase 5 Stage 2 packet: the graded counterterm model (frozen provisionally; author approval pending)
+## D-57. Phase 5 Stage 2 packet approved: the graded counterterm model (author ruling)
 
-**What was frozen (2026-11-19, overnight, at the author's instruction; approval pending).** 43
+**Ruling.** On 2026-11-19 the author approved the packet as frozen ("approved, continue"), with the
+answers to Q1–Q6 recorded below (Q1: S2′, so D-55 revised is approved with it) and the level-0
+form of (X₀). The manifest entries move from approval version "provisional" to "1".
+
+**What was frozen (2026-11-19, overnight, at the author's instruction).** 43
 declarations in namespace `QED.Graded`, one per file under `QED/Frozen/Graded/`, with manifest
 `approval_version` "provisional". They are 25 definitions (SEALED) and 18 theorem goals (DRAFT_SORRY;
 quarantined providers under `QED/Provider/Graded/`). The design note, with the binder tables, risk
@@ -2629,7 +2633,7 @@ analysis and the record of both reviews, is [STAGE2-DESIGN.md](STAGE2-DESIGN.md)
 - The per-block Pauli–Villars hypotheses are standing assumptions on the regulator data, not proof
   obligations.
 
-**Open questions for the author.**
+**Questions put to the author (answered as listed by the approval).**
 - Q1, S2 versus S2′: provisionally S2′ (D-55 revised).
 - Q2: `rep` stays a parameter.
 - Q3: the existential limit for Π⁽⁴⁾ is stated now.

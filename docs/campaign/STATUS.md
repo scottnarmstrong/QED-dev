@@ -27,8 +27,7 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 18 — the Stage 2 goals under QED/Frozen/Graded/ (D-57, provisional; author
-               approval pending); all earlier anchors sealed
+DRAFT_ANCHORS: 18 — the Stage 2 goals under QED/Frozen/Graded/ (D-57, approved by the author); all earlier anchors sealed
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
 SEALED_THIS_TURN: 0 (this turn froze the D-57 packet: 25 definitions SEALED, 18 goals DRAFT_SORRY)

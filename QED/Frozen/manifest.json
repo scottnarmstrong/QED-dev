@@ -26292,10 +26292,10 @@
       "id": "graded.counterterms_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -26310,7 +26310,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.counterterms",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "0bc1f4e1a1a8c00314a66c6ae10a578c514935921dfb212fc4fc511545333592",
       "definition_closure": [],
@@ -26321,10 +26321,10 @@
       "id": "graded.counterterms_with_level_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -26339,7 +26339,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.counterterms_with_level",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "08a5516ebbba24688f233abab18ec949359835d9bc62e87a67f29aa545541a11",
       "definition_closure": [
@@ -26355,10 +26355,10 @@
       "id": "graded.flavoring_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -26373,7 +26373,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.flavoring",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "0994e5fa3e34c868a1e4ddbb64f6c9ff787f40a36a81b49099b99ae9eb9a33d2",
       "definition_closure": [
@@ -26393,10 +26393,10 @@
       "id": "graded.fermion_flavor_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -26411,7 +26411,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.fermion_flavor",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "8c25fe742af4e65260fec8f587bb525177aa76972143783066bd092fa0c036ef",
       "definition_closure": [
@@ -26439,10 +26439,10 @@
       "id": "graded.preserves_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -26457,7 +26457,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.preserves",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "f3777713452af1874093193d3d15d700c2123d36ff38623fcfe87c0a5e6fa2fe",
       "definition_closure": [
@@ -26501,10 +26501,10 @@
       "id": "graded.loop_weight_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -26519,7 +26519,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.loop_weight",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "d568a762d25b12cc9ac3a43c9365e3434d43033008dd3bd7b73e093ef1c53132",
       "definition_closure": [
@@ -26567,10 +26567,10 @@
       "id": "graded.ct_vertex_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -26585,7 +26585,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.ct_vertex",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "4772408ae8c7593f231b9d4daeddfe5811d77bf8fb90196fd84a5f9ad4d7ad13",
       "definition_closure": [
@@ -26601,10 +26601,10 @@
       "id": "graded.grading_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -26619,7 +26619,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.grading",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "b2fb8713dc3a9a9ebadfb7bce47518f779435f66e42a98c6b6178406914298c7",
       "definition_closure": [
@@ -26639,10 +26639,10 @@
       "id": "graded.graded_order_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -26657,7 +26657,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.graded_order",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "89dcdb4a293afd8ca0f5841c9ee972bb0e1dbbaa0475c137e032ce5343e42bc4",
       "definition_closure": [
@@ -26685,10 +26685,10 @@
       "id": "graded.lepton_rep_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -26703,7 +26703,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.lepton_rep",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "0cba597c05191ec7f37c5f02cd8b9c69aaca0a10da87f174877a895f3c08a362",
       "definition_closure": [],
@@ -26714,10 +26714,10 @@
       "id": "graded.contraction_amplitude_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -26732,7 +26732,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.contraction_amplitude",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "afb2626351abd97714af176cf3b3ad66131041e3e4bc3efb1b112cd4974919b1",
       "definition_closure": [
@@ -26860,10 +26860,10 @@
       "id": "graded.regulated_amplitude_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -26878,7 +26878,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.regulated_amplitude",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "2c6e38b7acf3a4628aa6f4438457a570b5d3b3c94080aa98f9dfd7741ec31fb1",
       "definition_closure": [
@@ -27026,10 +27026,10 @@
       "id": "graded.contraction_value_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -27044,7 +27044,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.contraction_value",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "4b84030f44b579e20b3eec8c8426c6b24b0db9a18e532566ee6e642eabef4c68",
       "definition_closure": [
@@ -27232,10 +27232,10 @@
       "id": "graded.selected_part_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -27250,7 +27250,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.selected_part",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "5464ccf37e5473f1cdf8318b8dabbbecaa6e3571b67e3920e41c8ce0b7ae77d8",
       "definition_closure": [
@@ -27458,10 +27458,10 @@
       "id": "graded.one_p_i_part_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -27476,7 +27476,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.one_p_i_part",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "3aab2658a7404fe9703566ea6e9dd001b6c1ada92408f840ad3f657ea31f730c",
       "definition_closure": [
@@ -27704,10 +27704,10 @@
       "id": "graded.connected_part_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -27722,7 +27722,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.connected_part",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "27ba1521a7eb962463ed3ea09adae9339742f64145a93957143c97b05782fe3a",
       "definition_closure": [
@@ -27942,10 +27942,10 @@
       "id": "graded.self_energy_part_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -27960,7 +27960,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.self_energy_part",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "df8fd00b56810957d98e193f8aa6017eff1cc62363bc449824ed95917c7c90b9",
       "definition_closure": [
@@ -28192,10 +28192,10 @@
       "id": "graded.vertex_part_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -28210,7 +28210,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.vertex_part",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "7b7fd2e67b66cb51df18e9c79df1c2a5edf811a56a75154ea214b694b22ffee8",
       "definition_closure": [
@@ -28442,10 +28442,10 @@
       "id": "graded.vacuum_polarization_part_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -28460,7 +28460,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.vacuum_polarization_part",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "706826bdaaf6180acbbd43a110673d9e891ef82e0fb48285ae6852a7728a2525",
       "definition_closure": [
@@ -28692,10 +28692,10 @@
       "id": "graded.is_on_shell_at_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -28710,7 +28710,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.is_on_shell_at",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "67f84a7e0ec5f025cc6695d96ea8089150d58685b1b85ff7a3359b54143d600a",
       "definition_closure": [
@@ -28946,10 +28946,10 @@
       "id": "graded.is_charge_normalized_at_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -28964,7 +28964,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.is_charge_normalized_at",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "7889eb4239743694358e270ee859ed0f645266ed225a413a2cc6ab1981a15af0",
       "definition_closure": [
@@ -29200,10 +29200,10 @@
       "id": "graded.is_photon_on_shell_at_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -29218,7 +29218,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.is_photon_on_shell_at",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "dfd7041d9613434b04c2709f97c0e927bbc5a096e824415aa00f40489c7749c0",
       "definition_closure": [
@@ -29454,10 +29454,10 @@
       "id": "graded.is_renormalized_through_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -29472,7 +29472,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.is_renormalized_through",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "8113b9847d8d47aaf45779ad8fa6fa6818344fa4a681a1fcfca44ae405278250",
       "definition_closure": [
@@ -29728,10 +29728,10 @@
       "id": "graded.selected_part_eq_pow_mul_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -29746,7 +29746,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.selected_part_eq_pow_mul",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "1c70c5a355bf801e3291b998932fcb5b8bc1a90c88d4d85915bed3c62f474c19",
       "definition_closure": [
@@ -29967,10 +29967,10 @@
       "id": "graded.selected_part_congr_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -29985,7 +29985,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.selected_part_congr",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "9bc77c6aef383c1d82931a81cf70b8ac8266afe810faa1ccaedcd18bed3da3ee",
       "definition_closure": [
@@ -30206,10 +30206,10 @@
       "id": "graded.one_p_i_part_eq_one_p_i_function_sub_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -30224,7 +30224,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.one_p_i_part_eq_one_p_i_function_sub",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "8b605aa82a7f34eca35e372deaaa05bba5e6d17d71ef168e78cf4f61edb3f305",
       "definition_closure": [
@@ -30497,10 +30497,10 @@
       "id": "graded.is_on_shell_at_one_iff_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -30515,7 +30515,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.is_on_shell_at_one_iff",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "011ff53bd54a4106d19af0d9dec25a8f0abd533b99bbcd548e64db6dd6a4f9f9",
       "definition_closure": [
@@ -30904,10 +30904,10 @@
       "id": "graded.is_charge_normalized_at_one_iff_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -30922,7 +30922,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.is_charge_normalized_at_one_iff",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "85339465db3351e2c024f5b8fcaba9a8dd402272da7e2fd06b5cfef7165637d9",
       "definition_closure": [
@@ -31191,10 +31191,10 @@
       "id": "graded.is_photon_on_shell_at_one_iff_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -31209,7 +31209,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.is_photon_on_shell_at_one_iff",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "40807ca9f76caf78da05358dc4b9b19668b79856810efabbe0ee946287e4f741",
       "definition_closure": [
@@ -31494,10 +31494,10 @@
       "id": "graded.vertex_part_two_eq_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -31512,7 +31512,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.vertex_part_two_eq",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "575cf2a06dbce3601a56e2f7c8c20882ee24b2a73777b8ca32226c142c593315",
       "definition_closure": [
@@ -31793,10 +31793,10 @@
       "id": "graded.connected_part_eq_connected_function_sub_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -31811,7 +31811,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.connected_part_eq_connected_function_sub",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "7f1e349b74a830d7fb9980c5b41d46c485cf384b79caaf70beb849fe684aa103",
       "definition_closure": [
@@ -32108,10 +32108,10 @@
       "id": "graded.exists_unique_with_level_zero_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -32126,7 +32126,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.exists_unique_with_level_zero",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "143989b152421bd02e79b4f03ccfc6543dd0be422ff1a34318ce0b1f20950a6c",
       "definition_closure": [
@@ -32399,10 +32399,10 @@
       "id": "graded.ward_identity_zero_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -32417,7 +32417,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.ward_identity_zero",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "416c1e77e8afad041335cf643218ebc4cadab49dded17f0764a9c027177974ea",
       "definition_closure": [
@@ -32674,10 +32674,10 @@
       "id": "graded.self_energy_part_two_exists_unique_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -32692,7 +32692,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.self_energy_part_two_exists_unique",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "13a3890fc94490a35c43a4db751b1344ed6dd58848f12b58f7c5b71975894c1c",
       "definition_closure": [
@@ -32941,10 +32941,10 @@
       "id": "graded.vacuum_polarization_part_two_exists_unique_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -32959,7 +32959,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.vacuum_polarization_part_two_exists_unique",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "c24e9c2f19cf0653160b23b76edb9b4c3a1e267f65777d89f4d2271780542bd3",
       "definition_closure": [
@@ -33208,10 +33208,10 @@
       "id": "graded.exists_unique_with_level_one_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -33226,7 +33226,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.exists_unique_with_level_one",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "088bf35f229176287f727f8049788eb81d1c28a9b994f98d3578eb76ef43aec6",
       "definition_closure": [
@@ -33499,10 +33499,10 @@
       "id": "graded.ward_identity_one_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -33517,7 +33517,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.ward_identity_one",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "04d731120b1f586234fed9290e2d5a6ab5708e88787e39e67872c6df55b719d5",
       "definition_closure": [
@@ -33774,10 +33774,10 @@
       "id": "graded.vacuum_polarization_part_two_lepton_limit_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -33792,7 +33792,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.vacuum_polarization_part_two_lepton_limit",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "bba7229830dabaae3373bb49e99669ae4976f4deb126da6940f0c8a3ba7ea065",
       "definition_closure": [
@@ -34081,10 +34081,10 @@
       "id": "graded.is_l_s_z_amplitude_part_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -34099,7 +34099,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.is_l_s_z_amplitude_part",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "f1013c4dd98475b278829afa80725f2d748d68ed1ac9a29726bfaf62885709fc",
       "definition_closure": [
@@ -34335,10 +34335,10 @@
       "id": "graded.is_spin_form_factor_pair_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -34353,7 +34353,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.is_spin_form_factor_pair",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "44302b6595da6a77cce4260f0197f60bf9c6b32b178d3802d49b04ee5be9f9a4",
       "definition_closure": [
@@ -34401,10 +34401,10 @@
       "id": "graded.joint_energy_first_integrable_connected_part_five_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -34419,7 +34419,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.joint_energy_first_integrable_connected_part_five",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "bfa0dd80daa842a146adc2777eb6f10e9c845423488633ff2d36e55eb46d0d3f",
       "definition_closure": [
@@ -34632,10 +34632,10 @@
       "id": "graded.is_l_s_z_amplitude_part_five_self_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -34650,7 +34650,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.is_l_s_z_amplitude_part_five_self",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "9635df321b6544820337bb3a37b156fb2167cdf25df2ceef4545d4aeecb03aa9",
       "definition_closure": [
@@ -34939,10 +34939,10 @@
       "id": "graded.lsz_five_lepton_pauli_limit_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -34957,7 +34957,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetG1.lsz_five_lepton_pauli_limit",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-the-graded-counterterm-model-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
       "abi_sha256": "11a0553df8db266a462cf5d6f3c68ebd77b7f095441d5543a00e35028b9f3b23",
       "definition_closure": [
