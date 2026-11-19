@@ -329,6 +329,7 @@ public import QED.GradedProof.SE2FormRXD
 public import QED.GradedProof.SE2FormVD
 public import QED.GradedProof.SE2Clause3
 public import QED.GradedProof.SE2Final
+public import QED.GradedProof.X0Reduce
 public import QED.GradedProof.VP2Enum
 public import QED.GradedProof.VP2EnumG
 public import QED.GradedProof.VP2Classes
