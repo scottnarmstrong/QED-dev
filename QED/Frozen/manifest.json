@@ -26177,10 +26177,10 @@
       "id": "threeloop.a1_six_lr_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "laporta-remiddi-1996 sha256:afd37a24aa9540bcac49afd0df306ed518f6a3b9593042bc888b08473210102a",
@@ -26195,7 +26195,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetR.a1_six_lr",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-author-ruling"
       },
       "abi_sha256": "19e1892a4f154d681b6dd3d10d102e943bd06f30d2a4b64b2890c0dcefd61e31",
       "definition_closure": [],
@@ -26206,10 +26206,10 @@
       "id": "threeloop.a1_six_lr_bounds_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "laporta-remiddi-1996 sha256:afd37a24aa9540bcac49afd0df306ed518f6a3b9593042bc888b08473210102a",
@@ -26224,7 +26224,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetR.a1_six_lr_bounds",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-author-ruling"
       },
       "abi_sha256": "8cc72a67688a1d7a33dc329a508b7277e62597468988fbcd86410038dfd28536",
       "definition_closure": [
@@ -26249,10 +26249,10 @@
       "id": "twoloop.a1_four_bounds_fine_v1",
       "kind": "theorem",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight at the author's instruction (Scott Armstrong, 2026-11-19); statement approval pending",
+        "approved_by": "Scott Armstrong",
         "approved_at": "2026-11-19",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-frozen-provisionally-author-approval-pending",
-        "approval_version": "provisional"
+        "approval_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "passera-2007 sha256:3761261045e2fdcf7495a529e8cac31275ad8ee1e85b979c6f9fe6e1e29631f6",
@@ -26267,7 +26267,7 @@
       "split_policy": {
         "source_group": "qed_dev.packetR.a1_four_bounds_fine",
         "mode": "NOT_SPLIT",
-        "ruling_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-frozen-provisionally-author-approval-pending"
+        "ruling_ref": "docs/campaign/DECISIONS.md#d-56-three-loop-target-constant-and-sharpened-enclosures-author-ruling"
       },
       "abi_sha256": "cd952595d52e1cae28b5cec86c7a38d8fcffcca260e6530e0166dbac4a9ce5a0",
       "definition_closure": [

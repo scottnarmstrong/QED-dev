@@ -2485,7 +2485,7 @@ DRAFT_SORRY.
 All thirteen Stage 1a goals are sealed. The sixth-order set (b) coefficient is proved: 64π⁶F₂/e⁶
 tends to `a1SixSetB` = 8/3·ζ(3) − 4/135·π² − 943/324 ≈ 0.00255852 in the D-37.4 order.
 
-## D-54. Three-loop programme: exact target and four-loop readiness (author ruling; provisional items)
+## D-54. Three-loop programme: exact target and four-loop readiness (author ruling)
 
 **Author rulings (2026-11-19).**
 1. **Scope and order.** Complete sets (a), (b) and (c) of the sixth-order coefficient, then attack sets
@@ -2507,7 +2507,7 @@ tends to `a1SixSetB` = 8/3·ζ(3) − 4/135·π² − 943/324 ≈ 0.00255852 in 
 5. **Overnight mode.** The author pre-authorized continued work on the exact three-loop programme in
    overnight mode: statements are frozen provisionally, pending approval in the morning.
 
-**Provisional choices (overnight mode; author approval pending).** These follow the analytic-route
+**Choices made overnight, approved by the author on 2026-11-19.** These follow the analytic-route
 memo's recommendations.
 - **(P1)** Non-integer dimension may be used as an evaluation device only. The model is unchanged,
   and a proved bridge theorem per set links the model's limit to the dimensionally continued
@@ -2522,7 +2522,7 @@ reusable layers (dimensionally continued integrals, integration-by-parts certifi
 polylogarithm library) at 35–55%. Pilots run first: the triple-cross integral J₀ in four dimensions,
 and the set (a) value integral.
 
-## D-55. Counterterms on non-electron flavours (finding; provisional ruling)
+## D-55. Counterterms on non-electron flavours (finding; ruling superseded by D-55 revised)
 
 **Finding (2026-11-19).**
 - **The frozen models.** Neither flavouring definition (`QED/Frozen/WickModel/Flavoring.lean`,
@@ -2540,11 +2540,15 @@ and the set (a) value integral.
   linearly in ln Λ with the predicted slope, and after the predicted term is subtracted the remainder
   is constant to six figures.
 
-**Provisional ruling (overnight mode; author approval pending).** In the Stage 2 successor every
+**Provisional ruling (overnight mode; superseded by D-55 revised, approved with D-57).** In the Stage 2 successor every
 flavour gets its own on-shell counterterms. Flavour f's conditions are the electron's with the open
 line set to f, and δ₃ is shared by all flavours. The frozen models are unchanged.
 
-## D-56. Three-loop target constant and sharpened enclosures (frozen provisionally; author approval pending)
+## D-56. Three-loop target constant and sharpened enclosures (author ruling)
+
+**Ruling.** On 2026-11-19 the author approved the three declarations as frozen ("yes, approve D-54
+and D-56 too"), together with the D-54 choices P1–P3. The manifest entries move from approval
+version "provisional" to "1".
 
 **Provisional freeze (2026-11-19, overnight mode).** Three declarations implement D-54.2 and D-54.4:
 - **(R₁) `QED.ThreeLoop.a1SixLR`** (`QED/Frozen/ThreeLoop/A1SixLR.lean`), a definition: the
@@ -2569,7 +2573,7 @@ The manifest records these entries with `approval_version` "provisional".
 `QED/Provider/ThreeLoop/` and `QED/Provider/TwoLoop/`, from the helpers `QED/Polylog/A1Six.lean`
 and `A1FourFine.lean`. An independent refute-first seal audit returned PROVED: statement bytes
 and ABI unchanged, provider types definitionally the frozen statements, tail bounds genuine,
-standard axioms only. The approval of all three D-56 declarations remains pending.
+standard axioms only. All three were later approved by the author (ruling above).
 
 **D-55 revised (2026-11-19, overnight; approved by the author with D-57).** Drafting the Stage 2 statements
 showed that the literal per-flavour scheme fails. Under the frozen value prescription each
