@@ -689,6 +689,10 @@
     {
       "date": "2026-11-19",
       "change": "Stage 2: 10 of 18 D-57 goals sealed and audited; new: existence and uniqueness of the level-0 counterterms for every lepton block, and the level-0 Ward identity."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Stage 2, order-e^4 self-energy (G-Sigma2): the 1PI one-fermion contractions of graded order 4 enumerated by kernel decision and grouped into eight representative classes (QED/GradedProof/SE2Enum, SE2Classes); integrability of all of them reduced to the eight classes (SE2Reduce). Per-class integrability, the form factors and their differentiability remain."
     }
   ],
   "tracks": [

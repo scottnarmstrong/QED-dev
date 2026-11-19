@@ -275,6 +275,9 @@ public import QED.GradedProof.LevelZeroWard
 public import QED.GradedProof.LevelZeroPhotonSplit
 public import QED.GradedProof.LevelZeroPhoton
 public import QED.GradedProof.LevelZero
+public import QED.GradedProof.SE2Enum
+public import QED.GradedProof.SE2Classes
+public import QED.GradedProof.SE2Reduce
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
