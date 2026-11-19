@@ -180,7 +180,7 @@ momenta, and $q^2\ge0$ (the only case the pilot needs), the steps are:
    legitimate in the inner integral. After the shift, the energy integrand at
    fixed $\vec\ell$ is a rational function of $t=\tilde\ell^0$ in
    $-t^2+w$, with $w=|\vec{\tilde\ell}|^2+D-i\epsilon$. Since
-   $\operatorname{Re}w>0$ and $\operatorname{Im}w<0$, $w$ lies in
+   $\mathrm{Re}w>0$ and $\mathrm{Im}w<0$, $w$ lies in
    $\mathbb C\setminus[0,\infty)$. The integrals of $(-t^2+w)^{-3}$ and
    $t^2(-t^2+w)^{-3}$ are evaluated on that slit domain by analytic
    continuation from $w<0$, where $-t^2+w<0$ has no real zeros. Both sides are

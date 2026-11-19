@@ -346,9 +346,9 @@ $R=10,10^2,10^3$). So Tonelli fails on (energies) $\times$ (space) after paramet
 more severely than at one loop, and any Fubini step there must use the signed energy integral.
 The signed integral is elementary, with integer powers and no branch choice:
 $$\int_{\mathbb R^2}\frac{dt_1\,dt_2}{(-t^{\mathsf T}At+w)^n}
-=-\frac{\pi}{n-1}\,(\det A)^{-1/2}\,w^{1-n}\qquad(n\ge2,\ \operatorname{Im}w<0).$$
+=-\frac{\pi}{n-1}\,(\det A)^{-1/2}\,w^{1-n}\qquad(n\ge2,\ \mathrm{Im}w<0).$$
 Proof: diagonalize $A$, pass to polar coordinates, and use the antiderivative of
-$(w-u)^{-n}$; $w-u\ne0$ because $\operatorname{Im}w<0$. Checked numerically for $n=2,3$,
+$(w-u)^{-n}$; $w-u\ne0$ because $\mathrm{Im}w<0$. Checked numerically for $n=2,3$,
 two values of $w$ and a non-diagonal $A$ (section 10). This replaces the holomorphy argument
 of O-7. Note $\det A=U$, the first Symanzik polynomial (CK-R (24)).
 
@@ -451,7 +451,7 @@ matrix independently (section 10).
   integrands and the link to `lineMomentum₂` remain.
   - 2D energy formula of 4.3: `QED.Integration.TwoLoop.integral_inv_neg_quadratic_add_pow`,
     with integrability (`QED/Integration/TwoLoopEnergyIntegral.lean`), for $A$ positive
-    definite $2\times2$, $\operatorname{Im}w<0$, $n\ge2$.
+    definite $2\times2$, $\mathrm{Im}w<0$, $n\ge2$.
   - General Feynman formula: `QED.Integration.Feynman.prod_inv_eq_factorial_mul_integral_simplex`
     (`FeynmanParameterGeneral.lean`), for factors in the open lower half plane.
   - 6D spatial formula, previously recalled: `QED.Integration.Spatial.integral_inv_quadForm_add_pow`
@@ -1031,7 +1031,7 @@ at arguments $\pm x$, $x^2$ (BMR-I p. 826–827 and Appendix A; source).
 
 **What Mathlib has** (pinned checkout, grep only): `hasSum_zeta_two` and `riemannZeta_two`
 ($\zeta(2)=\pi^2/6$), `riemannZeta_four`, the series form of `riemannZeta` for
-$\operatorname{Re}s>1$, $\int\log\sin$ (`integral_log_sin_zero_pi_div_two`), and elementary
+$\mathrm{Re}s>1$, $\int\log\sin$ (`integral_log_sin_zero_pi_div_two`), and elementary
 log and power integrals (MATHLIB-INVENTORY.md 3.7). **There is no dilogarithm,
 polylogarithm or Nielsen function**, and no closed form is expected for $\zeta(3)$.
 

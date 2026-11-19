@@ -104,7 +104,7 @@ expression and $\llbracket E\rrbracket_M$ its mathematical interpretation in
 model $M$. A sound rewrite system establishes a statement of the form
 
 $$
-\operatorname{Derivable}_M(E,E')
+\mathrm{Derivable}_M(E,E')
 \quad\Longrightarrow\quad
 \llbracket E\rrbracket_M=\llbracket E'\rrbracket_M,
 $$
@@ -161,6 +161,15 @@ for an independently defined analytic quantity. Formal coefficients alone do
 not imply this bound. Even asymptotic coefficients need not determine a
 function uniquely: on $r>0$, adding $e^{-1/r}$ leaves every power-series
 asymptotic coefficient unchanged as $r\downarrow0$.
+
+For QED this is not a technicality. No four-dimensional construction of QED as
+an exact theory is known, so there is no independently defined $A$ for its
+series to approximate. The project's theorems are therefore about the
+coefficients of a formal series, each a precisely defined limit of regulated
+integrals. The QED series is moreover expected to diverge (Dyson, 1952). Its
+relation to the measured anomaly is an empirical claim, tested by experiment
+(sections 9 and 10). [The computation](THE-COMPUTATION.md), section 6, explains
+this for non-specialists.
 
 ## 5. What does it mean to allow a textbook manipulation?
 
@@ -276,7 +285,7 @@ external program can search for useful transformations and generate numerical
 certificates. A Lean checker would establish a theorem of the form
 
 $$
-\operatorname{check}(M,n,c,L,U)=\mathrm{true}
+\mathrm{check}(M,n,c,L,U)=\mathrm{true}
 \quad\Longrightarrow\quad L\le C_n^M\le U.
 $$
 
