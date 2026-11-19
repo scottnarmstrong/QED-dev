@@ -426,6 +426,11 @@ public import QED.GradedProof.VP2VWard
 public import QED.GradedProof.VP2VWardLim
 public import QED.GradedProof.VP2VWardFin
 public import QED.GradedProof.VP2Final
+public import QED.GradedProof.GEx2SE
+public import QED.GradedProof.GEx2Affine
+public import QED.GradedProof.GEx2Solve
+public import QED.GradedProof.GEx2Inputs
+public import QED.GradedProof.GEx2Assemble
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
