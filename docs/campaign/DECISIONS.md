@@ -2674,3 +2674,13 @@ reachable.
 - `d₁_eq_d₂_zero`: the level-0 Ward identity, from the sealed one-loop identity.
 
 ABI unchanged (2/2); standard axioms; guard OK. An independent seal audit found both PROVED.
+
+**Seal of (G-Σ₂) (2026-11-19).** `selfEnergyPart_two_existsUnique` is sealed with body `by exact`
+its provider. The proof (`QED/GradedProof/SE2*.lean`) has three clauses:
+- integrability of every order-4 1PI term, by reduction to eight classes;
+- the covariant limit `A p̸ + B M` below threshold with unique `(A, B)`, from explicit parametric
+  limits, reflection covariance and null-ray continuity;
+- differentiability of `A(−z²)z + B(−z²)M_f` at `z = −M_f`, by differentiation under the integral
+  along lines through the origin. Only differentiability is proved, not analyticity.
+
+ABI unchanged; standard axioms; guard OK. An independent seal audit found it PROVED.

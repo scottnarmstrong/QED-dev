@@ -60,7 +60,7 @@ theorem selfEnergyPart_two_existsUnique (P : Params) {F : Type} [Fintype F] [Dec
       DifferentiableAt ℝ (fun z : ℝ => A (-z ^ 2) * (z : ℂ) + B (-z ^ 2) * Φ.mass f)
         (-Φ.mass f) :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.selfEnergyPart_two_existsUnique
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

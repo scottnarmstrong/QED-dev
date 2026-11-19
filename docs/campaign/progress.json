@@ -717,6 +717,10 @@
     {
       "date": "2026-11-19",
       "change": "Stage 2, order-e^4 vacuum polarization: the integrability clause of G-Pi2 proved unconditionally (vacuumPolarizationPart_two_clause1), for all seven classes, the two-loop ones via divided differences over each lepton block (15 pieces). The transverse epsilon -> 0 limit remains."
+    },
+    {
+      "date": "2026-11-19",
+      "change": "Stage 2: G-Sigma2 (selfEnergyPart_two_existsUnique) sealed after an independent audit; the third clause, differentiability at the mass shell, by differentiation under the integral. 11 of 18 Stage 2 goals sealed."
     }
   ],
   "tracks": [

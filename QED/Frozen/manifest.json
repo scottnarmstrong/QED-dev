@@ -32929,7 +32929,7 @@
         "module": "QED.Provider.Graded.SelfEnergyPartTwoExistsUnique",
         "export": "QED.Provider.Graded.selfEnergyPart_two_existsUnique"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "edcaac47b231c64913fd8dcc9cd4fcbe1d7d6d3aaf6b6bbf8893f78edccb881f",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {

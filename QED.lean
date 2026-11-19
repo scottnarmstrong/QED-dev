@@ -318,6 +318,17 @@ public import QED.GradedProof.SE2FormF
 public import QED.GradedProof.SE2FormRX
 public import QED.GradedProof.SE2FormV
 public import QED.GradedProof.SE2Clause2
+public import QED.GradedProof.SE2DiffCore
+public import QED.GradedProof.SE2FormD
+public import QED.GradedProof.SE2DiffPiece
+public import QED.GradedProof.SE2DecompD
+public import QED.GradedProof.SE2FormCD
+public import QED.GradedProof.SE2FormPD
+public import QED.GradedProof.SE2FormFD
+public import QED.GradedProof.SE2FormRXD
+public import QED.GradedProof.SE2FormVD
+public import QED.GradedProof.SE2Clause3
+public import QED.GradedProof.SE2Final
 public import QED.GradedProof.VP2Enum
 public import QED.GradedProof.VP2EnumG
 public import QED.GradedProof.VP2Classes
