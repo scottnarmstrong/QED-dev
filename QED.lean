@@ -403,6 +403,17 @@ public import QED.GradedProof.VP2FWardAlg
 public import QED.GradedProof.VP2FWardR
 public import QED.GradedProof.VP2FWard
 public import QED.GradedProof.VP2FPol
+public import QED.GradedProof.VP2VGen
+public import QED.GradedProof.VP2VTriple
+public import QED.GradedProof.VP2VNum
+public import QED.GradedProof.VP2VLim
+public import QED.GradedProof.VP2VWardR
+public import QED.GradedProof.VP2VPin
+public import QED.GradedProof.VP2VWardNum
+public import QED.GradedProof.VP2VWard
+public import QED.GradedProof.VP2VWardLim
+public import QED.GradedProof.VP2VWardFin
+public import QED.GradedProof.VP2Final
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec

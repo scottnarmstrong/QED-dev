@@ -32694,7 +32694,7 @@
         "mode": "NOT_SPLIT",
         "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
-      "abi_sha256": "13a3890fc94490a35c43a4db751b1344ed6dd58848f12b58f7c5b71975894c1c",
+      "abi_sha256": "aa21aa2397d4b6ee280fd5f4a253db6336d085c0c95861eb2ccd8900d4fd955e",
       "definition_closure": [
         {
           "path": "QED/Frozen/Wick/VertexKind.lean",
@@ -32961,7 +32961,7 @@
         "mode": "NOT_SPLIT",
         "ruling_ref": "docs/campaign/DECISIONS.md#d-57-phase-5-stage-2-packet-approved-the-graded-counterterm-model-author-ruling"
       },
-      "abi_sha256": "c24e9c2f19cf0653160b23b76edb9b4c3a1e267f65777d89f4d2271780542bd3",
+      "abi_sha256": "471919e71744f428c11ee8597eb4f961fefcfc865e7a2ffabf7bce02e30af522",
       "definition_closure": [
         {
           "path": "QED/Frozen/Wick/VertexKind.lean",
@@ -33196,7 +33196,7 @@
         "module": "QED.Provider.Graded.VacuumPolarizationPartTwoExistsUnique",
         "export": "QED.Provider.Graded.vacuumPolarizationPart_two_existsUnique"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "361d9cde11a8745091abeeb3e420d556951f428113c78736776daf62aee57f71",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {

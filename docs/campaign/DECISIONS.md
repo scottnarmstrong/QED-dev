@@ -2683,4 +2683,30 @@ its provider. The proof (`QED/GradedProof/SE2*.lean`) has three clauses:
 - differentiability of `A(−z²)z + B(−z²)M_f` at `z = −M_f`, by differentiation under the integral
   along lines through the origin. Only differentiability is proved, not analyticity.
 
-ABI unchanged; standard axioms; guard OK. An independent seal audit found it PROVED.
+Standard axioms; guard OK. An independent seal audit found it PROVED. (Correction: this note
+originally said "ABI unchanged"; the ABI hash in fact moved. See the ABI note below.)
+
+**Seal of (G-Π₂) (2026-11-19).** `vacuumPolarizationPart_two_existsUnique` is sealed with body
+`by exact` its provider. The proof (`QED/GradedProof/VP2*.lean`) has two clauses:
+- integrability of every order-4 1PI term, by reduction to seven classes and divided differences
+  over each lepton block;
+- the transverse limit `Pol(k·k)(k·k g − k k)` on `s > −4m₀²` with unique `Pol`. The classes are
+  grouped so that each group satisfies the Ward identity in the limit: the vertex-counterterm
+  classes through the one-loop limit, the fermion-counterterm classes through a one-loop Ward
+  identity, and the three two-loop classes through a two-loop Ward identity whose six pinched
+  terms cancel in pairs under unimodular changes of loop momenta.
+
+Standard axioms; guard OK. An independent seal audit found it PROVED.
+
+**ABI hashes move on sealing (author ruling, 2026-11-19).** Sealing makes a frozen anchor import
+its provider, so the frozen statement is elaborated with the provider's transitive imports in
+scope. For (G-Σ₂) and (G-Π₂) this changes one instance in the elaborated statement: ℂ's
+`NormedCommRing` is found as `CommCStarAlgebra.toNormedCommRing ℂ instCommCStarAlgebraComplex`
+instead of `NormedField.toNormedCommRing ℂ Complex.instNormedField`. This is the only difference
+in the `pp.all` text (diffed for both goals). The two instances are equal by
+`with_reducible_and_instances rfl`, and an independent audit had the kernel accept the approved
+statement with the sealed constant as its proof and the reverse. The change is therefore
+semantics-neutral. Ruling: record each such move with its diff and the definitional-equality
+check, and update `abi_sha256` in the manifest. Updated: `selfEnergyPart_two_existsUnique`
+`13a3890f…` → `aa21aa23…`; `vacuumPolarizationPart_two_existsUnique` `c24e9c2f…` → `471919e7…`.
+Every later seal runs `scripts/frozen_abi.py --check` in full and handles any move this way.
