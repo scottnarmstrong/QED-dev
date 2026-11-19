@@ -290,6 +290,10 @@ public import QED.GradedProof.SE2ClassVAmp
 public import QED.GradedProof.SE2ClassVNum
 public import QED.GradedProof.SE2ClassV
 public import QED.GradedProof.SE2Clause1Final
+public import QED.GradedProof.SE2LimC
+public import QED.GradedProof.SE2Positivity
+public import QED.GradedProof.SE2LimP
+public import QED.GradedProof.SE2LimF
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
