@@ -626,6 +626,17 @@ public import QED.GradedProof.X1SEReg
 public import QED.GradedProof.X1CSEOne
 public import QED.GradedProof.X1CStatement
 public import QED.GradedProof.X1CFactor
+public import QED.GradedProof.X1DVPert
+public import QED.GradedProof.X1DInterp
+public import QED.GradedProof.X1DParamPoly
+public import QED.GradedProof.X1DOffLim
+public import QED.GradedProof.X1DParamCont
+public import QED.GradedProof.X1DOpen
+public import QED.GradedProof.X1DVP
+public import QED.GradedProof.X1DCt
+public import QED.GradedProof.X1DVertex
+public import QED.GradedProof.X1DGraded
+public import QED.GradedProof.X1EVertexOne
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
