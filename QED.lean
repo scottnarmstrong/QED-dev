@@ -400,6 +400,14 @@ public import QED.ChainProof.SetCKFormOCFub
 public import QED.ChainProof.SetCKFormOCLaur
 public import QED.ChainProof.SetCKFormOCYInt
 public import QED.ChainProof.SetCKFormOCSplit
+public import QED.ChainProof.SetCKFormOCSwap
+public import QED.ChainProof.SetCKFormOCKDom
+public import QED.ChainProof.SetCKFormOCKSec
+public import QED.ChainProof.SetCKFormOCKFub
+public import QED.ChainProof.SetCKFormOCAh
+public import QED.ChainProof.SetCKFormOCAhBd
+public import QED.ChainProof.SetCKFormOCAFub
+public import QED.ChainProof.SetCKFormOCNode
 public import QED.ChainProof.SetCKLamOutCBd
 public import QED.ChainProof.SetCKLamOutCDecay
 public import QED.ChainProof.SetCKLamOutC
