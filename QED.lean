@@ -705,6 +705,9 @@ public import QED.GradedProof.X2PiV
 public import QED.GradedProof.X2Photon
 public import QED.GradedProof.X2Lsz
 public import QED.GradedProof.X2Pair
+public import QED.GradedProof.X2Bridge
+public import QED.GradedProof.X2LegForm
+public import QED.GradedProof.X2Final
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
