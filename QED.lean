@@ -605,6 +605,13 @@ public import QED.GradedProof.WI2VtxF
 public import QED.GradedProof.WI2VtxVPAlg
 public import QED.GradedProof.WI2VtxVPDen
 public import QED.GradedProof.WI2VtxVP
+public import QED.GradedProof.WI2SEClass
+public import QED.GradedProof.WI2SESplit
+public import QED.GradedProof.WI2FTwR
+public import QED.GradedProof.WI2OneLoop
+public import QED.GradedProof.WI2T1Ward
+public import QED.GradedProof.WI2Core
+public import QED.GradedProof.WI2Final
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec

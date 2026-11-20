@@ -2736,3 +2736,17 @@ the open line (`V5Zero*`). ABI unchanged; standard axioms; guard OK; independent
 Binder note: the provider's `hm₀ : 0 < m₀` default first fixes `m₀` from `hmass`, since a plain
 `by assumption` would pick `0 < P.Λ`; the binder's type is exactly the frozen one, and the audit
 confirmed it affects elaboration only.
+
+**Seal of (WI₂) (2026-11-20).** `d₁_eq_d₂_one` is sealed with body `by exact` its provider: at
+level 1 the charge and wave-function counterterms agree, for every flavour. Route
+(`QED/GradedProof/WI2*.lean`): a parametric Ward–Takahashi identity at zero momentum transfer
+(the derivative of a parametric value along the external momentum is minus the sum of its
+zero-momentum insertions), applied class by class to the order-e⁴ self-energy
+R + X − V + F + P0 + P1 + C1 + C2 (C by one-loop closed forms) and matched to the order-e⁵ vertex
+classes at q = 0 (the vacuum-polarization class by charge conjugation, the Furry pair removed);
+the flavour split; then the on-shell and charge conditions give d₁ = d₂. ABI unchanged; standard
+axioms; guard OK; independent seal audit PROVED.
+Binder note (deviation from D-13, recorded): the provider's hypothesis defaults are
+`by with_reducible assumption`, because plain `by assumption` unfolds the on-shell predicates at
+the wrong order and times out. Each binder's type is exactly the frozen one, and the audit
+confirmed the seal passes each frozen hypothesis to its own slot.

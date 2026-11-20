@@ -27,12 +27,12 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 4 — the remaining Stage 2 goals under QED/Frozen/Graded/ (D-57, approved by the
+DRAFT_ANCHORS: 3 — the remaining Stage 2 goals under QED/Frozen/Graded/ (D-57, approved by the
                author); all earlier anchors sealed
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 1 — QED.Graded.existsUnique_withLevel_one; PROVED (guard, build, standard
-               axioms, ABI unchanged, independent seal audit)
+SEALED_THIS_TURN: 1 — QED.Graded.d₁_eq_d₂_one; PROVED (guard, build, standard axioms, ABI
+               unchanged, independent seal audit)
 ```
 
 | Field | Value |

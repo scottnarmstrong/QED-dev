@@ -31,7 +31,7 @@ theorem d₁_eq_d₂_one (P : Params) {F : Type} [Fintype F] [DecidableEq F]
     (hon₂ : IsOnShellAt P Φ D f 2) (hK₂ : IsChargeNormalizedAt P Φ D f 2) :
     D.d₁ f 1 = D.d₂ f 1 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.d₁_eq_d₂_one
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

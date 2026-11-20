@@ -33762,7 +33762,7 @@
         "module": "QED.Provider.Graded.WardIdentityOne",
         "export": "QED.Provider.Graded.d₁_eq_d₂_one"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "dfedd011ca08c0c3fc0d6de2b8450751bf375199754655821026085b8452ae1d",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
