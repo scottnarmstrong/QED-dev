@@ -563,6 +563,9 @@ public import QED.GradedProof.RPi4CollapsePiece
 public import QED.GradedProof.RPi4PairDens
 public import QED.GradedProof.RPi4PairDensClass
 public import QED.GradedProof.RPi4QDens
+public import QED.GradedProof.RPi4Join
+public import QED.GradedProof.RPi4SigmaAsym
+public import QED.GradedProof.RPi4Face
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
