@@ -346,6 +346,12 @@ public import QED.ChainProof.SetCKFormCS
 public import QED.ChainProof.SetCKFormXF
 public import QED.ChainProof.SetCKFormXH
 public import QED.ChainProof.SetCKFormXThr
+public import QED.ChainProof.SetCKLamOutCBd
+public import QED.ChainProof.SetCKLamOutCDecay
+public import QED.ChainProof.SetCKLamOutC
+public import QED.ChainProof.SetCKLamOutCReg
+public import QED.ChainProof.SetCKLamOutS
+public import QED.ChainProof.SetCKLamOut
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
