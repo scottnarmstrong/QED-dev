@@ -699,6 +699,9 @@ public import QED.GradedProof.RPi4FaceIdAvg
 public import QED.GradedProof.RPi4FaceIdRep
 public import QED.GradedProof.RPi4FaceIdShift
 public import QED.GradedProof.RPi4FaceIdMink
+public import QED.GradedProof.RPi4FaceIdLapF
+public import QED.GradedProof.RPi4FaceIdDirac
+public import QED.GradedProof.RPi4FaceIdMid
 public import QED.GradedProof.RPi4FaceIdLim
 public import QED.GradedProof.RPi4FaceIdClass
 public import QED.GradedProof.RPi4FaceIdSigma
