@@ -701,6 +701,7 @@ public import QED.GradedProof.RPi4DecTwoInt
 public import QED.GradedProof.RPi4DecSegTwo
 public import QED.GradedProof.RPi4DecTwoF
 public import QED.GradedProof.RPi4DecTwoClass
+public import QED.GradedProof.RPi4DecTwoW
 public import QED.GradedProof.RPi4MajGrow
 public import QED.GradedProof.RPi4MajProf
 public import QED.GradedProof.RPi4MajLim
