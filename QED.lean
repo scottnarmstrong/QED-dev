@@ -593,6 +593,11 @@ public import QED.GradedProof.RPi4FaceRate
 public import QED.GradedProof.RPi4FaceBrInst
 public import QED.GradedProof.RPi4FaceFam
 public import QED.GradedProof.RPi4LoopSwap
+public import QED.GradedProof.RPi4FacePerm
+public import QED.GradedProof.RPi4FaceLoop1
+public import QED.GradedProof.RPi4FaceLoop0
+public import QED.GradedProof.RPi4Bulk
+public import QED.GradedProof.RPi4BulkRate
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
