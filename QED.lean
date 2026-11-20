@@ -724,6 +724,8 @@ public import QED.GradedProof.RPi4FaceIdMink
 public import QED.GradedProof.RPi4FaceIdLapF
 public import QED.GradedProof.RPi4FaceIdDirac
 public import QED.GradedProof.RPi4FaceIdMid
+public import QED.GradedProof.RPi4FaceIdRest
+public import QED.GradedProof.RPi4FaceIdFace
 public import QED.GradedProof.RPi4FaceIdLim
 public import QED.GradedProof.RPi4FaceIdClass
 public import QED.GradedProof.RPi4FaceIdSigma
