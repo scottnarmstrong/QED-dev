@@ -732,6 +732,13 @@ public import QED.GradedProof.X1CPeelOutGlue
 public import QED.GradedProof.X1CPeelOutRestrict
 public import QED.GradedProof.X1CPeelOutSurj
 public import QED.GradedProof.X1CPeelOut
+public import QED.GradedProof.X1CPeelPDefs
+public import QED.GradedProof.X1CPeelV
+public import QED.GradedProof.X1CPeelPGlue
+public import QED.GradedProof.X1CPeelPMem
+public import QED.GradedProof.X1CPeelPRestrict
+public import QED.GradedProof.X1CPeelPSurj
+public import QED.GradedProof.X1CPeelVFinal
 public import QED.GradedProof.X1DVPert
 public import QED.GradedProof.X1DInterp
 public import QED.GradedProof.X1DParamPoly
