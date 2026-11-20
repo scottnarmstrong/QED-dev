@@ -598,6 +598,9 @@ public import QED.GradedProof.RPi4FaceLoop1
 public import QED.GradedProof.RPi4FaceLoop0
 public import QED.GradedProof.RPi4Bulk
 public import QED.GradedProof.RPi4BulkRate
+public import QED.GradedProof.RPi4Corner
+public import QED.GradedProof.RPi4Sectors
+public import QED.GradedProof.RPi4JointBdd
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
