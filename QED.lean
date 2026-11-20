@@ -708,6 +708,9 @@ public import QED.GradedProof.RPi4DecTwoClass
 public import QED.GradedProof.RPi4DecTwoW
 public import QED.GradedProof.RPi4DecMajT
 public import QED.GradedProof.RPi4DecMajFace
+public import QED.GradedProof.RPi4DecMajSec
+public import QED.GradedProof.RPi4DecPoint
+public import QED.GradedProof.RPi4DecPiece
 public import QED.GradedProof.RPi4MajGrow
 public import QED.GradedProof.RPi4MajProf
 public import QED.GradedProof.RPi4MajLim
