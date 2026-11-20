@@ -653,6 +653,13 @@ public import QED.GradedProof.RPi4DecAff
 public import QED.GradedProof.RPi4DecAnom
 public import QED.GradedProof.RPi4DecRepCh
 public import QED.GradedProof.RPi4DecDil
+public import QED.GradedProof.RPi4DecNull
+public import QED.GradedProof.RPi4DecDilG
+public import QED.GradedProof.RPi4DecDilV
+public import QED.GradedProof.RPi4DecDilQ
+public import QED.GradedProof.RPi4DecOne
+public import QED.GradedProof.RPi4DecGlue
+public import QED.GradedProof.RPi4DecWeak
 public import QED.GradedProof.RPi4FaceIdCongr
 public import QED.GradedProof.RPi4FaceIdVtx
 public import QED.GradedProof.RPi4FaceIdSE
