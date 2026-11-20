@@ -646,6 +646,14 @@ public import QED.GradedProof.X1CRoute
 public import QED.GradedProof.X1CSplitRoute
 public import QED.GradedProof.X1CLinesIn
 public import QED.GradedProof.X1CRouteIn
+public import QED.GradedProof.X1CLinesOut
+public import QED.GradedProof.X1CRouteOut
+public import QED.GradedProof.X1CLinesP
+public import QED.GradedProof.X1CRouteP
+public import QED.GradedProof.X1CTadSign
+public import QED.GradedProof.X1CTadAmp
+public import QED.GradedProof.X1CTadpole
+public import QED.GradedProof.X1CAmpIn
 public import QED.GradedProof.X1DVPert
 public import QED.GradedProof.X1DInterp
 public import QED.GradedProof.X1DParamPoly
