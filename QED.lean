@@ -393,6 +393,9 @@ public import QED.ChainProof.SetCKFormXG1
 public import QED.ChainProof.SetCKFormXDil
 public import QED.ChainProof.SetCKFormXEc
 public import QED.ChainProof.SetCKFormXE
+public import QED.ChainProof.SetCKAsmLam
+public import QED.ChainProof.SetCKAsmTot
+public import QED.ChainProof.SetCKFormOCThr
 public import QED.ChainProof.SetCKLamOutCBd
 public import QED.ChainProof.SetCKLamOutCDecay
 public import QED.ChainProof.SetCKLamOutC
