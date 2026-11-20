@@ -710,6 +710,13 @@ public import QED.GradedProof.X1CCountDyson
 public import QED.GradedProof.X1CPlumbPiece
 public import QED.GradedProof.X1CPlumbPeel
 public import QED.GradedProof.X1CPlumbDyson
+public import QED.GradedProof.X1CPeelT9
+public import QED.GradedProof.X1CPeelReach
+public import QED.GradedProof.X1CPeelDefs
+public import QED.GradedProof.X1CPeelGlue
+public import QED.GradedProof.X1CPeelRestrict
+public import QED.GradedProof.X1CPeelSurj
+public import QED.GradedProof.X1CPeelIn
 public import QED.GradedProof.X1DVPert
 public import QED.GradedProof.X1DInterp
 public import QED.GradedProof.X1DParamPoly
