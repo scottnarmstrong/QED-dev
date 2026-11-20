@@ -696,6 +696,11 @@ public import QED.GradedProof.X1CCountGlue
 public import QED.GradedProof.X1CCountInj
 public import QED.GradedProof.X1CCountConn
 public import QED.GradedProof.X1CCountPeelIn
+public import QED.GradedProof.X1CCountOut
+public import QED.GradedProof.X1CCountP
+public import QED.GradedProof.X1CCountDysonAlg
+public import QED.GradedProof.X1CCountDysonMat
+public import QED.GradedProof.X1CCountDyson
 public import QED.GradedProof.X1DVPert
 public import QED.GradedProof.X1DInterp
 public import QED.GradedProof.X1DParamPoly
