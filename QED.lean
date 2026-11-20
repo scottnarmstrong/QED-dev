@@ -574,6 +574,15 @@ public import QED.GradedProof.WI2RXData
 public import QED.GradedProof.WI2RX
 public import QED.GradedProof.WI2Slot
 public import QED.GradedProof.WI2SlotWard
+public import QED.GradedProof.WI2P
+public import QED.GradedProof.WI2VData
+public import QED.GradedProof.WI2VSlot
+public import QED.GradedProof.WI2V
+public import QED.GradedProof.WI2WardAdd
+public import QED.GradedProof.WI2Twin
+public import QED.GradedProof.WI2TwinWard
+public import QED.GradedProof.WI2FData
+public import QED.GradedProof.WI2F
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
