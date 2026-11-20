@@ -2763,3 +2763,14 @@ guard OK; independent seal audit PROVED.
 Binder note: the provider's `hm₀ : 0 < m₀` default first fixes `m₀` from `hmass`, as for
 (G-ex₂); each binder's type is exactly the frozen one, and the audit confirmed each frozen
 hypothesis goes to its own slot.
+
+**Seal of (X₂) (2026-11-20).** `isSpinFormFactorPair_lszFive_lepton_pauli_limit` is sealed with
+body `by exact` its provider: with the order-e⁵ LSZ amplitude in place of the 1PI vertex, the
+lepton-flavour Pauli limit at order α² holds with target A₁⁽⁴⁾ + Σ A₂⁽⁴⁾(m/m_ℓ). Route
+(`QED/GradedProof/X2*.lean`): on shell the amplitude is the order-e⁵ vertex sandwich plus a γ
+term plus κ times the order-e³ vertex sandwich, with κ = q² D(q²) Pol₁(q²) → 0 as q² → 0 at fixed
+regulators (`lszFive_eq`, `exists_kappa_small`); the vertex term is the sealed (HM₂) limit through
+(E-G₃) at η/2 and the κ term is bounded through the one-loop Pauli limit; the order-e⁵ Dyson
+decomposition is used only at renormalized points with positive regulators, where
+`X1C.peelV_dysonFive` supplies it (`X2Seal`). ABI unchanged; standard axioms; guard OK;
+independent seal audit PROVED.

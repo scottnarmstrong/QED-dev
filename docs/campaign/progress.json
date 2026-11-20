@@ -749,6 +749,10 @@
     {
       "date": "2026-11-20",
       "change": "Stage 2: X1 (isLSZAmplitudePart_five_self) sealed after an independent audit: the order-e^5 LSZ amplitude at q = 0 exists and vanishes, via the order-e^5 Dyson decomposition proved by peeling 1PI pieces. 16 of 18 Stage 2 goals sealed. Set (c) kernel: closed form of the outer self-energy density proved; outer-group finite-cutoff links proved."
+    },
+    {
+      "date": "2026-11-20",
+      "change": "Stage 2: X2 (isSpinFormFactorPair_lszFive_lepton_pauli_limit) sealed after an independent audit: the lepton-flavour Pauli limit at order alpha^2 with the order-e^5 LSZ amplitude. 17 of 18 Stage 2 goals sealed; R-Pi4 remains."
     }
   ],
   "tracks": [

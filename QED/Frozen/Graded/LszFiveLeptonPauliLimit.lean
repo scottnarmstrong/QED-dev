@@ -75,7 +75,7 @@ theorem isSpinFormFactorPair_lszFive_lepton_pauli_limit {n : ℕ} (P₀ : Params
                 ‖16 * (Real.pi : ℂ) ^ 4 * F.2 / (P₀.e : ℂ) ^ 4 -
                   ((QED.TwoLoop.a1Four + ∑ ℓ, Lepton.a2Four (P₀.m / mH ℓ) : ℝ) : ℂ)‖ < η :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.isSpinFormFactorPair_lszFive_lepton_pauli_limit
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 
