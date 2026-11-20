@@ -676,6 +676,8 @@ public import QED.GradedProof.RPi4FaceIdBeta
 public import QED.GradedProof.RPi4FaceIdKinds
 public import QED.GradedProof.RPi4FaceIdPad
 public import QED.GradedProof.RPi4FaceIdBridge
+public import QED.GradedProof.RPi4FaceIdDup
+public import QED.GradedProof.RPi4FaceIdAvg
 public import QED.GradedProof.RPi4FaceIdLim
 public import QED.GradedProof.RPi4FaceIdClass
 public import QED.GradedProof.RPi4FaceIdSigma
