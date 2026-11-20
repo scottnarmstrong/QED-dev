@@ -687,6 +687,12 @@ public import QED.GradedProof.X1CT9One
 public import QED.GradedProof.X1CT9Vertex
 public import QED.GradedProof.X1CT9Glue
 public import QED.GradedProof.X1CTadSide
+public import QED.GradedProof.X1CCountShuffle
+public import QED.GradedProof.X1CCountSum
+public import QED.GradedProof.X1CCountGlue
+public import QED.GradedProof.X1CCountInj
+public import QED.GradedProof.X1CCountConn
+public import QED.GradedProof.X1CCountPeelIn
 public import QED.GradedProof.X1DVPert
 public import QED.GradedProof.X1DInterp
 public import QED.GradedProof.X1DParamPoly
