@@ -682,6 +682,11 @@ public import QED.GradedProof.X1CAmpGlueP
 public import QED.GradedProof.X1CAmpP
 public import QED.GradedProof.X1CLoopP
 public import QED.GradedProof.X1CValP
+public import QED.GradedProof.X1CT9Base
+public import QED.GradedProof.X1CT9One
+public import QED.GradedProof.X1CT9Vertex
+public import QED.GradedProof.X1CT9Glue
+public import QED.GradedProof.X1CTadSide
 public import QED.GradedProof.X1DVPert
 public import QED.GradedProof.X1DInterp
 public import QED.GradedProof.X1DParamPoly
