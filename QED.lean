@@ -633,6 +633,8 @@ public import QED.GradedProof.RPi4MajRed
 public import QED.GradedProof.RPi4DecDD
 public import QED.GradedProof.RPi4DecCore
 public import QED.GradedProof.RPi4DecScal
+public import QED.GradedProof.RPi4FaceIdLim
+public import QED.GradedProof.RPi4FaceIdClass
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
