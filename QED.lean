@@ -726,6 +726,9 @@ public import QED.GradedProof.RPi4FaceIdDirac
 public import QED.GradedProof.RPi4FaceIdMid
 public import QED.GradedProof.RPi4FaceIdRest
 public import QED.GradedProof.RPi4FaceIdFace
+public import QED.GradedProof.RPi4FaceIdPcs
+public import QED.GradedProof.RPi4FaceIdPL
+public import QED.GradedProof.RPi4FaceIdLap0
 public import QED.GradedProof.RPi4FaceIdLim
 public import QED.GradedProof.RPi4FaceIdClass
 public import QED.GradedProof.RPi4FaceIdSigma
