@@ -571,6 +571,13 @@ public import QED.GradedProof.RPi4FaceCoeff
 public import QED.GradedProof.RPi4LoopDegNum
 public import QED.GradedProof.RPi4FaceBound
 public import QED.GradedProof.RPi4SectorEl
+public import QED.GradedProof.RPi4CubicDeg
+public import QED.GradedProof.RPi4UnifLip
+public import QED.GradedProof.RPi4FaceScale
+public import QED.GradedProof.RPi4FaceInv
+public import QED.GradedProof.RPi4FaceLip
+public import QED.GradedProof.RPi4FaceV
+public import QED.GradedProof.RPi4FaceJoinData
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
