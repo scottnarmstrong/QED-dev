@@ -584,6 +584,14 @@ public import QED.GradedProof.RPi4FaceInv
 public import QED.GradedProof.RPi4FaceLip
 public import QED.GradedProof.RPi4FaceV
 public import QED.GradedProof.RPi4FaceJoinData
+public import QED.GradedProof.RPi4FaceAsm
+public import QED.GradedProof.RPi4FaceSigma
+public import QED.GradedProof.RPi4FaceMarg
+public import QED.GradedProof.RPi4FaceVhat
+public import QED.GradedProof.RPi4FaceRate
+public import QED.GradedProof.RPi4FaceBrInst
+public import QED.GradedProof.RPi4FaceFam
+public import QED.GradedProof.RPi4LoopSwap
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
