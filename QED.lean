@@ -551,6 +551,12 @@ public import QED.GradedProof.RPi4Chain
 public import QED.GradedProof.RPi4Cov
 public import QED.GradedProof.RPi4Unif
 public import QED.GradedProof.RPi4UnifF
+public import QED.GradedProof.RPi4LightInt
+public import QED.GradedProof.RPi4LightBd
+public import QED.GradedProof.RPi4LightPiece
+public import QED.GradedProof.RPi4LightVP
+public import QED.GradedProof.RPi4LightClass
+public import QED.GradedProof.RPi4Light
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
