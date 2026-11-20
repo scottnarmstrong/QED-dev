@@ -721,6 +721,9 @@ public import QED.GradedProof.RPi4MajRayPv
 public import QED.GradedProof.RPi4MajPiece
 public import QED.GradedProof.RPi4MajNum
 public import QED.GradedProof.RPi4MajGrowD
+public import QED.GradedProof.RPi4MajFlow
+public import QED.GradedProof.RPi4MajSplit
+public import QED.GradedProof.RPi4MajUV
 public import QED.GradedProof.RPi4FaceIdCongr
 public import QED.GradedProof.RPi4FaceIdVtx
 public import QED.GradedProof.RPi4FaceIdSE
