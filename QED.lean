@@ -739,6 +739,13 @@ public import QED.GradedProof.RPi4FaceIdFace
 public import QED.GradedProof.RPi4FaceIdPcs
 public import QED.GradedProof.RPi4FaceIdPL
 public import QED.GradedProof.RPi4FaceIdLap0
+public import QED.GradedProof.RPi4FaceIdSERep
+public import QED.GradedProof.RPi4FaceIdLapC
+public import QED.GradedProof.RPi4FaceIdVpFace
+public import QED.GradedProof.RPi4FaceIdVpGen
+public import QED.GradedProof.RPi4FaceIdTri
+public import QED.GradedProof.RPi4FaceIdVDens
+public import QED.GradedProof.RPi4FaceIdAsm
 public import QED.GradedProof.RPi4FaceIdLim
 public import QED.GradedProof.RPi4FaceIdClass
 public import QED.GradedProof.RPi4FaceIdSigma
