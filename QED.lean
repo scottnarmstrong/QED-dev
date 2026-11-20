@@ -566,6 +566,11 @@ public import QED.GradedProof.RPi4QDens
 public import QED.GradedProof.RPi4Join
 public import QED.GradedProof.RPi4SigmaAsym
 public import QED.GradedProof.RPi4Face
+public import QED.GradedProof.RPi4LoopDeg
+public import QED.GradedProof.RPi4FaceCoeff
+public import QED.GradedProof.RPi4LoopDegNum
+public import QED.GradedProof.RPi4FaceBound
+public import QED.GradedProof.RPi4SectorEl
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
