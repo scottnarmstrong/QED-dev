@@ -638,6 +638,12 @@ public import QED.GradedProof.RPi4DecCore
 public import QED.GradedProof.RPi4DecScal
 public import QED.GradedProof.RPi4DecLin
 public import QED.GradedProof.RPi4DecRep
+public import QED.GradedProof.RPi4DecSeries
+public import QED.GradedProof.RPi4DecScalForm
+public import QED.GradedProof.RPi4DecAff
+public import QED.GradedProof.RPi4DecAnom
+public import QED.GradedProof.RPi4DecRepCh
+public import QED.GradedProof.RPi4DecDil
 public import QED.GradedProof.RPi4FaceIdCongr
 public import QED.GradedProof.RPi4FaceIdVtx
 public import QED.GradedProof.RPi4FaceIdSE
