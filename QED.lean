@@ -613,6 +613,8 @@ public import QED.GradedProof.RPi4JointBdd
 public import QED.GradedProof.RPi4InstPiece
 public import QED.GradedProof.RPi4InstClass
 public import QED.GradedProof.RPi4DensBound
+public import QED.GradedProof.RPi4AsmJoint
+public import QED.GradedProof.RPi4AsmCore
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
