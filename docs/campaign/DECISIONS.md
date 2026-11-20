@@ -2750,3 +2750,16 @@ Binder note (deviation from D-13, recorded): the provider's hypothesis defaults 
 `by with_reducible assumption`, because plain `by assumption` unfolds the on-shell predicates at
 the wrong order and times out. Each binder's type is exactly the frozen one, and the audit
 confirmed the seal passes each frozen hypothesis to its own slot.
+
+**Seal of (X₁) (2026-11-20).** `isLSZAmplitudePart_five_self` is sealed with body `by exact` its
+provider: the order-e⁵ LSZ amplitude at `(p, p)` exists and is 0. Route
+(`QED/GradedProof/X1*.lean`): the order-e⁵ Dyson decomposition of the connected three-point
+function at fixed ε (`X1C`: gluing and routing of contractions, value factorization, tadpoles
+vanish by a γ₅ sign argument, and the counting by peeling one 1PI piece at a time off the in-leg,
+the out-leg and the photon, with the graph theory of cuts; `peelV_dysonFive`), the off-shell
+limits of the vertex parts (`X1D`, `X1E`), the photon legs near q = 0 (`X1E`), and the
+assembly (`X1F.isLSZAmplitudePart_five_self_of_dysonFive`). ABI unchanged; standard axioms;
+guard OK; independent seal audit PROVED.
+Binder note: the provider's `hm₀ : 0 < m₀` default first fixes `m₀` from `hmass`, as for
+(G-ex₂); each binder's type is exactly the frozen one, and the audit confirmed each frozen
+hypothesis goes to its own slot.

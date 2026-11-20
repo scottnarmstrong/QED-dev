@@ -34927,7 +34927,7 @@
         "module": "QED.Provider.Graded.IsLSZAmplitudePartFiveSelf",
         "export": "QED.Provider.Graded.isLSZAmplitudePart_five_self"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "aa28f155be115393681deb514c79d77da3f26e58a996f02a06d0ee7e7526725d",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {

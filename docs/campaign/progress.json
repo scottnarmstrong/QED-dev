@@ -745,6 +745,10 @@
     {
       "date": "2026-11-20",
       "change": "Stage 2: WI2 (d1_eq_d2_one) sealed after an independent audit: the level-1 Ward identity d1 = d2 for every flavour, via a parametric Ward-Takahashi identity at q = 0. 15 of 18 Stage 2 goals sealed. Set (c) kernel: Stage K complete; the value follows from one numerically verified density identity."
+    },
+    {
+      "date": "2026-11-20",
+      "change": "Stage 2: X1 (isLSZAmplitudePart_five_self) sealed after an independent audit: the order-e^5 LSZ amplitude at q = 0 exists and vanishes, via the order-e^5 Dyson decomposition proved by peeling 1PI pieces. 16 of 18 Stage 2 goals sealed. Set (c) kernel: closed form of the outer self-energy density proved; outer-group finite-cutoff links proved."
     }
   ],
   "tracks": [

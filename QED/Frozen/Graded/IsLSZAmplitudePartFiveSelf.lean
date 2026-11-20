@@ -35,7 +35,7 @@ theorem isLSZAmplitudePart_five_self (P : Params) {F : Type} [Fintype F] [Decida
     (p : Fin 4 → ℝ) (hp : Minkowski.dot p p = -Φ.mass Φ.openLine ^ 2) (hp0 : 0 < p 0) :
     (∃ M, IsLSZAmplitudePart P Φ D 5 p p M) ∧ ∀ M, IsLSZAmplitudePart P Φ D 5 p p M → M = 0 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.isLSZAmplitudePart_five_self
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 
