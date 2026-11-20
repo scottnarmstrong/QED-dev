@@ -547,6 +547,9 @@ public import QED.GradedProof.RPi4Dyadic
 public import QED.GradedProof.RPi4CtBound
 public import QED.GradedProof.RPi4FLin
 public import QED.GradedProof.RPi4Chain
+public import QED.GradedProof.RPi4Cov
+public import QED.GradedProof.RPi4Unif
+public import QED.GradedProof.RPi4UnifF
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
