@@ -667,6 +667,14 @@ public import QED.GradedProof.RPi4DecDilQ
 public import QED.GradedProof.RPi4DecOne
 public import QED.GradedProof.RPi4DecGlue
 public import QED.GradedProof.RPi4DecWeak
+public import QED.GradedProof.RPi4DecSegCont
+public import QED.GradedProof.RPi4DecContF
+public import QED.GradedProof.RPi4DecContV
+public import QED.GradedProof.RPi4DecContT
+public import QED.GradedProof.RPi4DecLipBase
+public import QED.GradedProof.RPi4DecSegLip
+public import QED.GradedProof.RPi4DecLipF
+public import QED.GradedProof.RPi4DecLipT
 public import QED.GradedProof.RPi4MajGrow
 public import QED.GradedProof.RPi4MajProf
 public import QED.GradedProof.RPi4MajLim
