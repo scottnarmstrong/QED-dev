@@ -584,6 +584,12 @@ public import QED.GradedProof.WI2Twin
 public import QED.GradedProof.WI2TwinWard
 public import QED.GradedProof.WI2FData
 public import QED.GradedProof.WI2F
+public import QED.GradedProof.WI2VtxChain
+public import QED.GradedProof.WI2VtxOpen
+public import QED.GradedProof.WI2VtxR
+public import QED.GradedProof.WI2VtxX
+public import QED.GradedProof.WI2VtxP
+public import QED.GradedProof.WI2VtxF
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
