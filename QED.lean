@@ -665,6 +665,16 @@ public import QED.GradedProof.X1DCt
 public import QED.GradedProof.X1DVertex
 public import QED.GradedProof.X1DGraded
 public import QED.GradedProof.X1EVertexOne
+public import QED.GradedProof.X1EPvCont
+public import QED.GradedProof.X1EPiF
+public import QED.GradedProof.X1EPiV
+public import QED.GradedProof.X1EPiTwo
+public import QED.GradedProof.X1EPiOne
+public import QED.GradedProof.X1EPhoton
+public import QED.GradedProof.X1FVertexZero
+public import QED.GradedProof.X1FLeg
+public import QED.GradedProof.X1FAbs
+public import QED.GradedProof.X1FAssemble
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
