@@ -343,6 +343,9 @@ public import QED.ChainProof.SetCKFormOSXInt
 public import QED.ChainProof.SetCKFormOSK
 public import QED.ChainProof.SetCKFormOS
 public import QED.ChainProof.SetCKFormCS
+public import QED.ChainProof.SetCKFormXF
+public import QED.ChainProof.SetCKFormXH
+public import QED.ChainProof.SetCKFormXThr
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
