@@ -548,6 +548,14 @@ public import QED.GradedProof.WI2Ray
 public import QED.GradedProof.WI2Transfer
 public import QED.GradedProof.WI2Ward
 public import QED.GradedProof.WI2Route
+public import QED.GradedProof.WI2Reroute
+public import QED.GradedProof.WI2Chain
+public import QED.GradedProof.WI2ChainNum
+public import QED.GradedProof.WI2ChainWard
+public import QED.GradedProof.WI2RXData
+public import QED.GradedProof.WI2RX
+public import QED.GradedProof.WI2Slot
+public import QED.GradedProof.WI2SlotWard
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
