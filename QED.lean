@@ -557,6 +557,12 @@ public import QED.GradedProof.RPi4LightPiece
 public import QED.GradedProof.RPi4LightVP
 public import QED.GradedProof.RPi4LightClass
 public import QED.GradedProof.RPi4Light
+public import QED.GradedProof.RPi4Collapse
+public import QED.GradedProof.RPi4CollapseSwap
+public import QED.GradedProof.RPi4CollapsePiece
+public import QED.GradedProof.RPi4PairDens
+public import QED.GradedProof.RPi4PairDensClass
+public import QED.GradedProof.RPi4QDens
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
