@@ -618,6 +618,9 @@ public import QED.GradedProof.WI2Final
 public import QED.GradedProof.X1Glue
 public import QED.GradedProof.X1Leg
 public import QED.GradedProof.X1SEReg
+public import QED.GradedProof.X1CSEOne
+public import QED.GradedProof.X1CStatement
+public import QED.GradedProof.X1CFactor
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
