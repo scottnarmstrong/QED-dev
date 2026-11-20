@@ -707,6 +707,9 @@ public import QED.GradedProof.X1CCountP
 public import QED.GradedProof.X1CCountDysonAlg
 public import QED.GradedProof.X1CCountDysonMat
 public import QED.GradedProof.X1CCountDyson
+public import QED.GradedProof.X1CPlumbPiece
+public import QED.GradedProof.X1CPlumbPeel
+public import QED.GradedProof.X1CPlumbDyson
 public import QED.GradedProof.X1DVPert
 public import QED.GradedProof.X1DInterp
 public import QED.GradedProof.X1DParamPoly
