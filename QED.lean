@@ -626,6 +626,13 @@ public import QED.GradedProof.X1SEReg
 public import QED.GradedProof.X1CSEOne
 public import QED.GradedProof.X1CStatement
 public import QED.GradedProof.X1CFactor
+public import QED.GradedProof.X1CSplit
+public import QED.GradedProof.X1CGlueF
+public import QED.GradedProof.X1CGlueP
+public import QED.GradedProof.X1CRoute
+public import QED.GradedProof.X1CSplitRoute
+public import QED.GradedProof.X1CLinesIn
+public import QED.GradedProof.X1CRouteIn
 public import QED.GradedProof.X1DVPert
 public import QED.GradedProof.X1DInterp
 public import QED.GradedProof.X1DParamPoly
