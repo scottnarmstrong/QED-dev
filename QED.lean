@@ -711,6 +711,12 @@ public import QED.GradedProof.RPi4MajGlue
 public import QED.GradedProof.RPi4MajOne
 public import QED.GradedProof.RPi4MajRayTerm
 public import QED.GradedProof.RPi4MajTilt
+public import QED.GradedProof.RPi4MajRaySum
+public import QED.GradedProof.RPi4MajKinds
+public import QED.GradedProof.RPi4MajRayPv
+public import QED.GradedProof.RPi4MajPiece
+public import QED.GradedProof.RPi4MajNum
+public import QED.GradedProof.RPi4MajGrowD
 public import QED.GradedProof.RPi4FaceIdCongr
 public import QED.GradedProof.RPi4FaceIdVtx
 public import QED.GradedProof.RPi4FaceIdSE
