@@ -21,7 +21,7 @@ needed:
 * **`abs_sForm_add_le`**: `|sForm(k₁, k₂, c, h, M, log(M + ch), log(1 + M/(ch))) + k₂/h²| ≤
   (1 + 1/m)² (4 + 4N) (1 + ℓ(Y, x))` for `h ≥ x`, `0 < m ≤ M ≤ N`;
 * **`abs_selfInS_le`**: `|G_S(λ; Y, x)| ≤ K_S(t) (1 + ℓ(Y, x))` for every outer mass `λ`
-  (`selfInS`, `selfInSBd`).
+  (`selfInRegS`, `selfInSBd`).
 -/
 
 @[expose] public section
@@ -33,10 +33,10 @@ namespace QED.ChainProof.SetCK
 open QED.TwoLoop.UnitLLink QED.TwoLoop.UnitSCLimit
 
 /-- The self-energy `x`-integrand at outer photon mass `λ` and inner photon mass² `t`. -/
-noncomputable def selfInS (t lam Y x : ℝ) : ℝ :=
+noncomputable def selfInRegS (t lam Y x : ℝ) : ℝ :=
   selfGm lam (√t) Y x + selfK2 Y x / (ladderInnerMass 1 lam x / x) ^ 2
 
-/-- The constant of the bound on `selfInS`. -/
+/-- The constant of the bound on `selfInRegS`. -/
 noncomputable def selfInSBd (t : ℝ) : ℝ := (1 + 1 / (3 / 4 * min 1 t)) ^ 2 * (8 + 4 * t)
 
 theorem selfK1_bounds {Y x : ℝ} (hY : Y ∈ Ioo (0 : ℝ) 1) (hx : x ∈ Ioo (0 : ℝ) 1) :
@@ -249,7 +249,7 @@ theorem abs_sForm_add_le {x Y h M m N : ℝ} (hx : x ∈ Ioo (0 : ℝ) 1) (hY : 
 /-- **The uniform bound on the self-energy integrand**: for every outer mass `λ`,
 `|G_S(λ; Y, x)| ≤ K_S(t) (1 + ℓ(Y, x))` on `(0, 1)²`. -/
 theorem abs_selfInS_le {t lam Y x : ℝ} (ht : 0 < t) (hY : Y ∈ Ioo (0 : ℝ) 1)
-    (hx : x ∈ Ioo (0 : ℝ) 1) : |selfInS t lam Y x| ≤ selfInSBd t * (1 + ladderEll Y x) := by
+    (hx : x ∈ Ioo (0 : ℝ) 1) : |selfInRegS t lam Y x| ≤ selfInSBd t * (1 + ladderEll Y x) := by
   have hm : 0 < 3 / 4 * min 1 t := by have := lt_min one_pos ht; positivity
   have hxh : x ≤ ladderInnerMass 1 lam x / x := by
     rw [le_div_iff₀ hx.1]; unfold ladderInnerMass

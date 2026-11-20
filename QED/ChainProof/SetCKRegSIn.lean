@@ -19,7 +19,7 @@ mass² `t`, `M = M_t(Y)`, outer mass `λ`):
 
 `selfInRep t λ = 2 ∫₀¹ dY [∫₀¹ dx G_S(λ; Y, x) + d̄₂(Y, M) V_k(λ) + (d̄₂ - σ)(Y, M) V_m(λ)]`,
 
-`G_S = selfGm λ √t + k₂/h²` (`selfInS`, the engine's `E - e₀`), with the counterterm insertions
+`G_S = selfGm λ √t + k₂/h²` (`selfInRegS`, the engine's `E - e₀`), with the counterterm insertions
 `d̄₂`, `σ` of `QED.ChainProof.SetCK.selfIn` and the one-loop insertion values `V_k`, `V_m`
 (`QED.TwoLoop.UnitSCClose.selfVk`, `selfVm`). The unit is infrared finite.
 
@@ -42,12 +42,12 @@ open QED.TwoLoop.UnitLLink QED.TwoLoop.UnitSCLimit QED.TwoLoop.UnitSCClose
 /-- **The self-energy unit with a massive inner photon at outer photon mass `λ`**: the two-mass
 form of eq. (5.3). -/
 noncomputable def selfInRep (t lam : ℝ) : ℝ :=
-  2 * ∫ Y in (0 : ℝ)..1, ((∫ x in (0 : ℝ)..1, selfInS t lam Y x) +
+  2 * ∫ Y in (0 : ℝ)..1, ((∫ x in (0 : ℝ)..1, selfInRegS t lam Y x) +
     selfInD2 Y (massIn t Y) * selfVk lam +
       (selfInD2 Y (massIn t Y) - selfInSigma Y (massIn t Y)) * selfVm lam)
 
 theorem measurable_selfInS_uncurry (t lam : ℝ) :
-    Measurable (uncurry fun Y x => selfInS t lam Y x) := by
+    Measurable (uncurry fun Y x => selfInRegS t lam Y x) := by
   have h1 := measurable_selfGm_uncurry lam (√t)
   have h2 : Measurable (uncurry fun Y x => selfK2 Y x / (ladderInnerMass 1 lam x / x) ^ 2) := by
     change Measurable fun p : ℝ × ℝ => selfK2 p.1 p.2 / (ladderInnerMass 1 lam p.2 / p.2) ^ 2
@@ -57,14 +57,14 @@ theorem measurable_selfInS_uncurry (t lam : ℝ) :
 
 /-- `G_S` is continuous in the outer mass `λ`. -/
 theorem continuous_selfInS {t Y x : ℝ} (ht : 0 < t) (hY : Y ∈ Ioo (0 : ℝ) 1)
-    (hx : x ∈ Ioo (0 : ℝ) 1) : Continuous fun lam => selfInS t lam Y x := by
+    (hx : x ∈ Ioo (0 : ℝ) 1) : Continuous fun lam => selfInRegS t lam Y x := by
   have hc : 0 < Y * (1 - Y) := mul_pos hY.1 (by linarith [hY.2])
   have hM := massIn_pos ht (Ioo_subset_Icc_self hY)
   have hMx : ∀ lam, 0 < ladderInnerMass 1 lam x := fun lam =>
     ladderInnerMass_pos_of_pos hx.1 hx.2.le
   have hh : ∀ lam, 0 < ladderInnerMass 1 lam x / x := fun lam => div_pos (hMx lam) hx.1
   have hMc : Continuous fun lam => ladderInnerMass 1 lam x := by unfold ladderInnerMass; fun_prop
-  simp only [selfInS, selfGm, sForm]
+  simp only [selfInRegS, selfGm, sForm]
   have hMs : ladderInnerMass 1 (√t) Y = massIn t Y := rfl
   rw [hMs]
   have h1 : ∀ lam, ladderInnerMass 1 lam x / x ≠ 0 := fun lam => (hh lam).ne'
@@ -88,23 +88,23 @@ theorem continuous_selfInS {t Y x : ℝ} (ht : 0 < t) (hY : Y ∈ Ioo (0 : ℝ) 
 
 /-- At `λ = 0`, `G_S` is the Stage K integrand `selfGm 0 √t - D`. -/
 theorem selfInS_zero {t Y x : ℝ} (hx : x ∈ Ioo (0 : ℝ) 1) :
-    selfInS t 0 Y x = selfGm 0 (√t) Y x - selfInSub Y x := by
+    selfInRegS t 0 Y x = selfGm 0 (√t) Y x - selfInSub Y x := by
   have hx0 := hx.1.ne'
   have e : ladderInnerMass 1 0 x / x = x := by
     unfold ladderInnerMass
     rw [show x ^ 2 * 1 ^ 2 + (1 - x) * 0 ^ 2 = x * x by ring]
     field_simp
-  unfold selfInS
+  unfold selfInRegS
   rw [e]
   unfold selfInSub selfK2
   field_simp
   ring
 
 theorem intervalIntegrable_selfInS {t lam Y : ℝ} (ht : 0 < t) (hY : Y ∈ Ioo (0 : ℝ) 1) :
-    IntervalIntegrable (fun x => selfInS t lam Y x) volume 0 1 ∧
-      |∫ x in (0 : ℝ)..1, selfInS t lam Y x| ≤
+    IntervalIntegrable (fun x => selfInRegS t lam Y x) volume 0 1 ∧
+      |∫ x in (0 : ℝ)..1, selfInRegS t lam Y x| ≤
         selfInSBd t * (2 + log 2 - log Y - log (1 - Y)) := by
-  have hm : Measurable fun x => selfInS t lam Y x :=
+  have hm : Measurable fun x => selfInRegS t lam Y x :=
     (measurable_selfGm lam (√t) Y).add (by unfold selfK2 ladderInnerMass; fun_prop)
   obtain ⟨hi, hb⟩ := intervalIntegrable_of_abs_le hm
     ((intervalIntegrable_add_ladderEll 1 Y).const_mul (selfInSBd t))
@@ -114,7 +114,7 @@ theorem intervalIntegrable_selfInS {t lam Y : ℝ} (ht : 0 < t) (hY : Y ∈ Ioo 
   ring
 
 theorem intervalIntegrable_integral_selfInS {t lam : ℝ} (ht : 0 < t) :
-    IntervalIntegrable (fun Y => ∫ x in (0 : ℝ)..1, selfInS t lam Y x) volume 0 1 :=
+    IntervalIntegrable (fun Y => ∫ x in (0 : ℝ)..1, selfInRegS t lam Y x) volume 0 1 :=
   (intervalIntegrable_of_abs_le (measurable_intervalIntegral_of_uncurry
     (measurable_selfInS_uncurry t lam))
     ((intervalIntegrable_ellY (2 + log 2)).const_mul (selfInSBd t))
@@ -122,8 +122,8 @@ theorem intervalIntegrable_integral_selfInS {t lam : ℝ} (ht : 0 < t) :
 
 /-- **`∬ G_S(λ) → ∬ G_S(0)` as `λ → 0⁺`.** -/
 theorem tendsto_integral_selfInS {t : ℝ} (ht : 0 < t) :
-    Tendsto (fun lam => ∫ Y in (0 : ℝ)..1, ∫ x in (0 : ℝ)..1, selfInS t lam Y x) (𝓝[>] 0)
-      (𝓝 (∫ Y in (0 : ℝ)..1, ∫ x in (0 : ℝ)..1, selfInS t 0 Y x)) := by
+    Tendsto (fun lam => ∫ Y in (0 : ℝ)..1, ∫ x in (0 : ℝ)..1, selfInRegS t lam Y x) (𝓝[>] 0)
+      (𝓝 (∫ Y in (0 : ℝ)..1, ∫ x in (0 : ℝ)..1, selfInRegS t 0 Y x)) := by
   refine intervalIntegral.tendsto_integral_filter_of_dominated_convergence
     (fun Y => selfInSBd t * (2 + log 2 - log Y - log (1 - Y)))
     (Eventually.of_forall fun lam => (measurable_intervalIntegral_of_uncurry
@@ -175,7 +175,7 @@ theorem intervalIntegrable_selfInSigma {t : ℝ} (ht : 0 < t) :
     (hc.log hM)).neg
 
 theorem selfInRep_split {t lam : ℝ} (ht : 0 < t) :
-    selfInRep t lam = 2 * ((∫ Y in (0 : ℝ)..1, ∫ x in (0 : ℝ)..1, selfInS t lam Y x) +
+    selfInRep t lam = 2 * ((∫ Y in (0 : ℝ)..1, ∫ x in (0 : ℝ)..1, selfInRegS t lam Y x) +
       selfVk lam * (∫ Y in (0 : ℝ)..1, selfInD2 Y (massIn t Y)) +
         selfVm lam * ((∫ Y in (0 : ℝ)..1, selfInD2 Y (massIn t Y)) -
           ∫ Y in (0 : ℝ)..1, selfInSigma Y (massIn t Y))) := by
@@ -189,21 +189,21 @@ theorem selfInRep_split {t lam : ℝ} (ht : 0 < t) :
   ring
 
 theorem selfIn_split {t : ℝ} (ht : 0 < t) :
-    selfIn t = 2 * ((∫ Y in (0 : ℝ)..1, ∫ x in (0 : ℝ)..1, selfInS t 0 Y x) +
+    selfIn t = 2 * ((∫ Y in (0 : ℝ)..1, ∫ x in (0 : ℝ)..1, selfInRegS t 0 Y x) +
       (-1) * (∫ Y in (0 : ℝ)..1, selfInD2 Y (massIn t Y)) +
         1 / 2 * ((∫ Y in (0 : ℝ)..1, selfInD2 Y (massIn t Y)) -
           ∫ Y in (0 : ℝ)..1, selfInSigma Y (massIn t Y))) := by
   have iS := intervalIntegrable_integral_selfInS (lam := 0) ht
   have iD := intervalIntegrable_selfInD2 ht
   have iσ := intervalIntegrable_selfInSigma ht
-  have e : selfIn t = 2 * ∫ Y in (0 : ℝ)..1, ((∫ x in (0 : ℝ)..1, selfInS t 0 Y x) +
+  have e : selfIn t = 2 * ∫ Y in (0 : ℝ)..1, ((∫ x in (0 : ℝ)..1, selfInRegS t 0 Y x) +
       selfInD2 Y (massIn t Y) * (-1) +
         (selfInD2 Y (massIn t Y) - selfInSigma Y (massIn t Y)) * (1 / 2)) := by
     unfold selfIn
     congr 1
     refine intervalIntegral.integral_congr fun Y _ => ?_
     have hx : ∫ x in (0 : ℝ)..1, (selfGm 0 (√t) Y x - selfInSub Y x) =
-        ∫ x in (0 : ℝ)..1, selfInS t 0 Y x := by
+        ∫ x in (0 : ℝ)..1, selfInRegS t 0 Y x := by
       refine intervalIntegral.integral_congr_ae ?_
       filter_upwards [Measure.ae_ne volume (1 : ℝ)] with x hx1 hx
       rw [uIoc_of_le zero_le_one] at hx
