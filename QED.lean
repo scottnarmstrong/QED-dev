@@ -725,6 +725,12 @@ public import QED.GradedProof.X1CPeelGlue
 public import QED.GradedProof.X1CPeelRestrict
 public import QED.GradedProof.X1CPeelSurj
 public import QED.GradedProof.X1CPeelIn
+public import QED.GradedProof.X1CPeelTad
+public import QED.GradedProof.X1CPeelOutDefs
+public import QED.GradedProof.X1CPeelOutGlue
+public import QED.GradedProof.X1CPeelOutRestrict
+public import QED.GradedProof.X1CPeelOutSurj
+public import QED.GradedProof.X1CPeelOut
 public import QED.GradedProof.X1DVPert
 public import QED.GradedProof.X1DInterp
 public import QED.GradedProof.X1DParamPoly
