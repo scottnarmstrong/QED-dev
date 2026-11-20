@@ -336,6 +336,12 @@ public import QED.ChainProof.SetCKRegCOut
 public import QED.ChainProof.SetCKRegSum
 public import QED.ChainProof.SetCKRegLOutR2
 public import QED.ChainProof.SetCKValue
+public import QED.ChainProof.SetCKFormOSYInt
+public import QED.ChainProof.SetCKFormOSY
+public import QED.ChainProof.SetCKFormOSX
+public import QED.ChainProof.SetCKFormOSXInt
+public import QED.ChainProof.SetCKFormOSK
+public import QED.ChainProof.SetCKFormOS
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
