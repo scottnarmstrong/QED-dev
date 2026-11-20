@@ -658,6 +658,10 @@ public import QED.GradedProof.RPi4FaceIdVtx
 public import QED.GradedProof.RPi4FaceIdSE
 public import QED.GradedProof.RPi4FaceIdSlice
 public import QED.GradedProof.RPi4FaceIdGen
+public import QED.GradedProof.RPi4FaceIdBeta
+public import QED.GradedProof.RPi4FaceIdKinds
+public import QED.GradedProof.RPi4FaceIdPad
+public import QED.GradedProof.RPi4FaceIdBridge
 public import QED.GradedProof.RPi4FaceIdLim
 public import QED.GradedProof.RPi4FaceIdClass
 public import QED.GradedProof.RPi4FaceIdSigma
