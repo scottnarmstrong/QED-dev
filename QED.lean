@@ -354,6 +354,9 @@ public import QED.ChainProof.SetCKFormCB1
 public import QED.ChainProof.SetCKFormCB2
 public import QED.ChainProof.SetCKFormCSig
 public import QED.ChainProof.SetCKFormCPF
+public import QED.ChainProof.SetCKFormCB2PF
+public import QED.ChainProof.SetCKFormCJ
+public import QED.ChainProof.SetCKLi2Deriv
 public import QED.ChainProof.SetCKFormXS
 public import QED.ChainProof.SetCKFormXSDer
 public import QED.ChainProof.SetCKFormXSBd
