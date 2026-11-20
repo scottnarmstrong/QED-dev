@@ -363,6 +363,15 @@ public import QED.ChainProof.SetCKFormXSBd
 public import QED.ChainProof.SetCKFormXSFtc
 public import QED.ChainProof.SetCKFormXJ
 public import QED.ChainProof.SetCKFormXFub
+public import QED.ChainProof.SetCKFormXBr
+public import QED.ChainProof.SetCKFormXB1
+public import QED.ChainProof.SetCKFormXB2
+public import QED.ChainProof.SetCKFormXPF
+public import QED.ChainProof.SetCKFormXB2PF
+public import QED.ChainProof.SetCKFormXB2K
+public import QED.ChainProof.SetCKFormXIJ
+public import QED.ChainProof.SetCKFormXKh
+public import QED.ChainProof.SetCKFormXRho
 public import QED.ChainProof.SetCKLamOutCBd
 public import QED.ChainProof.SetCKLamOutCDecay
 public import QED.ChainProof.SetCKLamOutC
