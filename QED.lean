@@ -683,6 +683,13 @@ public import QED.GradedProof.X1FVertexZero
 public import QED.GradedProof.X1FLeg
 public import QED.GradedProof.X1FAbs
 public import QED.GradedProof.X1FAssemble
+public import QED.GradedProof.X2Transverse
+public import QED.GradedProof.X2PvCont
+public import QED.GradedProof.X2PiF
+public import QED.GradedProof.X2PiV
+public import QED.GradedProof.X2Photon
+public import QED.GradedProof.X2Lsz
+public import QED.GradedProof.X2Pair
 public import QED.TwoLoop.VPHalfAtGenAssembly
 public import QED.TwoLoop.VPHalfAtGenFubini
 public import QED.TwoLoop.VPHalfAtGenSpec
