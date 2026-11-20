@@ -680,6 +680,8 @@ public import QED.GradedProof.RPi4MajProf
 public import QED.GradedProof.RPi4MajLim
 public import QED.GradedProof.RPi4MajScalG
 public import QED.GradedProof.RPi4MajRay
+public import QED.GradedProof.RPi4MajGlue
+public import QED.GradedProof.RPi4MajOne
 public import QED.GradedProof.RPi4FaceIdCongr
 public import QED.GradedProof.RPi4FaceIdVtx
 public import QED.GradedProof.RPi4FaceIdSE
