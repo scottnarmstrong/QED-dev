@@ -320,6 +320,13 @@ public import QED.ChainProof.SetCKCrossMirror
 public import QED.ChainProof.SetCKCrossSubst
 public import QED.ChainProof.SetCKCrossLink
 public import QED.ChainProof.SetCKAXPos
+public import QED.ChainProof.SetCKRegX
+public import QED.ChainProof.SetCKRegCt
+public import QED.ChainProof.SetCKRegLOut
+public import QED.ChainProof.SetCKRegLInBd
+public import QED.ChainProof.SetCKRegLIn
+public import QED.ChainProof.SetCKRegSInBd
+public import QED.ChainProof.SetCKRegSIn
 public import QED.GradedProof.Homogeneity
 public import QED.GradedProof.Embed
 public import QED.GradedProof.LoopCycle
