@@ -356,6 +356,13 @@ public import QED.ChainProof.SetCKFormCSig
 public import QED.ChainProof.SetCKFormCPF
 public import QED.ChainProof.SetCKFormCB2PF
 public import QED.ChainProof.SetCKFormCJ
+public import QED.ChainProof.SetCKFormCG
+public import QED.ChainProof.SetCKFormCH
+public import QED.ChainProof.SetCKFormCGD
+public import QED.ChainProof.SetCKFormCFTC
+public import QED.ChainProof.SetCKFormCDil
+public import QED.ChainProof.SetCKFormCE
+public import QED.ChainProof.SetCKFormCRho
 public import QED.ChainProof.SetCKLi2Deriv
 public import QED.ChainProof.SetCKFormXS
 public import QED.ChainProof.SetCKFormXSDer
