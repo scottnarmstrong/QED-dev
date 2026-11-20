@@ -532,6 +532,13 @@ public import QED.GradedProof.RPi4Tail
 public import QED.GradedProof.RPi4VJV
 public import QED.GradedProof.RPi4VJVTriple
 public import QED.GradedProof.RPi4VJVClass
+public import QED.GradedProof.RPi4Pos
+public import QED.GradedProof.RPi4FV
+public import QED.GradedProof.RPi4FVBlock
+public import QED.GradedProof.RPi4Dyadic
+public import QED.GradedProof.RPi4CtBound
+public import QED.GradedProof.RPi4FLin
+public import QED.GradedProof.RPi4Chain
 public import QED.GradedProof.WI2Line
 public import QED.GradedProof.WI2Gauss
 public import QED.GradedProof.WI2Stein
