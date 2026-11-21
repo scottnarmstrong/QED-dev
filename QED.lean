@@ -174,6 +174,11 @@ public import QED.DimReg.AnalyticExp
 public import QED.DimReg.OneLoopSchwinger
 public import QED.DimReg.OneLoopClosedForm
 public import QED.DimReg.OneLoopReduction
+public import QED.DimReg.ContinuationParam
+public import QED.DimReg.CubeSplit
+public import QED.DimReg.SectorCert
+public import QED.DimReg.Symanzik
+public import QED.DimReg.TwoLoopSESector
 public import QED.Algebra.IBPCertPoly
 public import QED.Algebra.IBPCertFamily
 public import QED.Algebra.IBPCertPilotData
