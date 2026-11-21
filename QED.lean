@@ -467,6 +467,14 @@ public import QED.ChainProof.SetAKSKDDisp
 public import QED.ChainProof.SetAKSKDNode
 public import QED.ChainProof.SetAKSKDPV
 public import QED.ChainProof.SetAKSKAFix
+public import QED.ChainProof.SetALinkLoop
+public import QED.ChainProof.SetALinkDisjoint
+public import QED.ChainProof.SetALinkReps
+public import QED.ChainProof.SetALinkClassify
+public import QED.ChainProof.SetCLinkDisjoint
+public import QED.ChainProof.SetCLinkReps
+public import QED.ChainProof.SetCLinkShareTree
+public import QED.ChainProof.SetCLinkShareAlg
 public import QED.ChainProof.SetCKLamOutCBd
 public import QED.ChainProof.SetCKLamOutCDecay
 public import QED.ChainProof.SetCKLamOutC
