@@ -764,6 +764,10 @@ public import QED.GradedProof.RPi4MajLipMid
 public import QED.GradedProof.RPi4MajLipCfg
 public import QED.GradedProof.RPi4MajDRed
 public import QED.GradedProof.RPi4MajDInc
+public import QED.GradedProof.RPi4FaceIdRayBFace
+public import QED.GradedProof.RPi4FaceIdRayBPiece
+public import QED.GradedProof.RPi4FaceIdRayBDil
+public import QED.GradedProof.RPi4FaceIdRayBRay
 public import QED.GradedProof.RPi4FaceIdCongr
 public import QED.GradedProof.RPi4FaceIdVtx
 public import QED.GradedProof.RPi4FaceIdSE
