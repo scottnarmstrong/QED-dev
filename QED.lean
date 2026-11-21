@@ -162,6 +162,9 @@ public import QED.DimReg.OnShellFamily
 public import QED.DimReg.LR96Family
 public import QED.DimReg.Analytic
 public import QED.DimReg.AnalyticExp
+public import QED.DimReg.OneLoopSchwinger
+public import QED.DimReg.OneLoopClosedForm
+public import QED.DimReg.OneLoopReduction
 public import QED.Algebra.IBPCertPoly
 public import QED.Algebra.IBPCertFamily
 public import QED.Algebra.IBPCertPilotData
@@ -447,9 +450,15 @@ public import QED.ChainProof.SetCKFormOCNFub
 public import QED.ChainProof.SetCKFormOCNC
 public import QED.ChainProof.SetCKFormOCG
 public import QED.ChainProof.SetCKFormOCDone
+public import QED.ChainProof.SetCKFormOCH1
+public import QED.ChainProof.SetCKFormOCH2
+public import QED.ChainProof.SetCKFormOCH3
+public import QED.ChainProof.SetCKFormOCH4
+public import QED.ChainProof.SetCKFormOCFinal
 public import QED.ChainProof.SetAKSProfile
 public import QED.ChainProof.SetAKSIdent
 public import QED.ChainProof.SetAKSMis
+public import QED.ChainProof.SetAKSKDens
 public import QED.ChainProof.SetCKLamOutCBd
 public import QED.ChainProof.SetCKLamOutCDecay
 public import QED.ChainProof.SetCKLamOutC
@@ -802,6 +811,9 @@ public import QED.GradedProof.RPi4MajDInc
 public import QED.GradedProof.RPi4MajDPCov
 public import QED.GradedProof.RPi4MajDPNull
 public import QED.GradedProof.RPi4MajDPInc
+public import QED.GradedProof.RPi4MajDPRWt
+public import QED.GradedProof.RPi4MajDPRRed
+public import QED.GradedProof.RPi4MajDPRB
 public import QED.GradedProof.RPi4FaceIdRayBFace
 public import QED.GradedProof.RPi4FaceIdRayBPiece
 public import QED.GradedProof.RPi4FaceIdRayBDil
@@ -815,6 +827,8 @@ public import QED.GradedProof.RPi4FaceIdRayAPGen
 public import QED.GradedProof.RPi4FaceRateInc
 public import QED.GradedProof.RPi4FaceRateIncInt
 public import QED.GradedProof.RPi4FaceRateIncPcs
+public import QED.GradedProof.RPi4FaceRateIncBDer
+public import QED.GradedProof.RPi4FaceRateIncBPcs
 public import QED.GradedProof.RPi4MajLIncGen
 public import QED.GradedProof.RPi4MajLIncPiece
 public import QED.GradedProof.RPi4MajLIncClass
