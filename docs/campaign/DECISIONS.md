@@ -2774,3 +2774,98 @@ regulators (`lszFive_eq`, `exists_kappa_small`); the vertex term is the sealed (
 decomposition is used only at renormalized points with positive regulators, where
 `X1C.peelV_dysonFive` supplies it (`X2Seal`). ABI unchanged; standard axioms; guard OK;
 independent seal audit PROVED.
+
+## D-58. Phase 5 Stage 3a/3b packet: sets (a) and (c) (provisional freeze; author approval pending)
+
+**Provisional freeze (2026-11-21, overnight mode under D-54.5).** The statement packet for sets (a)
+and (c) of the sixth-order coefficient is frozen provisionally. The author has not yet approved it.
+The manifest records each entry with `approval_version` "provisional". There are 30 declarations,
+one per file:
+- 13 definitions (SEALED, imported by `QED.lean`);
+- 17 theorem goals (DRAFT_SORRY), with quarantined provider stubs under `QED/Provider/Graded/` and
+  `QED/Provider/ThreeLoop/`.
+
+The design memo is the Stage 3a/3b packet memo (session scratch, `stage3pkt/PACKET-3A-3B.md`). The
+frozen declaration text is byte-identical to the reviewed candidates with the fixes below applied
+(30/30).
+
+**Generic declarations (namespace `QED.Graded`, `QED/Frozen/Graded/`).**
+- (Gf₁) `familyVertex`: the order-K vertex of a selected family of graded contractions, (G₈ᵥ)'s
+  text with a selection in place of the 1PI filter. (Gf₂) `IsFamilyVertexLimit`: its ε → 0⁺ limit.
+- (Gs₁) `selfEnergySelPart`, (Gs₂) `IsOnShellSelAt`, (Gs₃) `IsChargeNormalizedSelAt`: (G₈ₛ), (G₉)
+  and (G₁₀) for a selected family. They define a family's share of the level-1 counterterms.
+- Goals: (MF₁) `familyVertex_isOnePI`, (MS₁) `isOnShellSelAt_isOnePI_iff` and (MS₂)
+  `isChargeNormalizedSelAt_isOnePI_iff` (with the 1PI selection these are the Stage 2 objects);
+  (E-G₄) `familyVertex_isVPChain_two`, the bridge from the graded set (b) family vertex to the
+  frozen chain vertex (Stage 2 deferred item D1).
+
+**Set (a) (namespace `QED.ThreeLoop`, `QED/Frozen/ThreeLoop/`).**
+- (A₁) `IsSetA`: the one-loop vertex with one single-loop insertion on its photon.
+- (A₂) `a1SixSetA`: the closed form of Kaptari, Lashkevich and Solovtsova (2025), eq. (16), first
+  obtained by Mignaco and Remiddi (1969), ≈ 0.0528706524758.
+- Block K: (A₄) `ksRhoFour`, the Källén–Sabry spectral function (Kaptari et al. eq. (20)), and
+  (A₅) `piHatFour`, the renormalized fourth-order vacuum polarization as a dispersion integral.
+- Goals: (A₃) `a1SixSetA_bounds`; (A₇) `integral_piHatFour_eq_a1SixSetA`; (MA₁) `exists_isSetA`;
+  (MA₂) `not_isSetA_and_isVPChain_two`; (HA₀) `jointEnergyFirstIntegrable_setA`; and the headline
+  (HA₆) `isFormFactorPair_vertexSetA_pauli_limit`: 64π⁶F₂/e⁶ tends to `a1SixSetA` in the D-57
+  order of limits, at the electron block with no heavy lepton, with counterterms renormalized
+  through order e⁴ in `leptonRep`.
+
+**Set (c) (namespace `QED.ThreeLoop`, `QED/Frozen/ThreeLoop/`).**
+- (Sc₁) `IsVPSelfEnergy`: the one-loop self-energy with a bubble or a `photonCt` on its photon.
+- (Sc₂) `IsVPShareOnShell`: the vacuum-polarization share s of the level-1 counterterms, fixed by
+  the family-restricted on-shell and charge conditions.
+- (Sc₃) `IsSetC`: one vacuum-polarization element in the fourth-order vertex, with its
+  counterterm graphs.
+- (Sc₄) `a1SixSetC`: Barbieri–Remiddi (1974) eq. (3), ≈ −0.1501722821.
+- Goals: (Sc₅) `a1SixSetC_bounds`; (G-ex-s) `existsUnique_isVPShareOnShell`; (WI-s)
+  `isVPShareOnShell_d₁_eq_d₂`; (MC₁) `exists_isSetC`; (MC₂) `isSetC_disjoint`; (HS₀)
+  `jointEnergyFirstIntegrable_setC`; and the headline (HS₆)
+  `isFormFactorPair_vertexSetC_pauli_limit`: as (HA₆), with the level-1 fermion counterterms
+  replaced by every VP share s, and target `a1SixSetC`.
+
+**Goals already proved in scratch.** Eight goals have sorry-free proofs in the packet's scratch
+check files: (A₃), (Sc₅) and (A₇) (from the helpers `QED.Chain.aSetA_bounds`,
+`aSetC_bounds` and `integral_setA_eq_aSetA`, by `rfl` on the constants); (MF₁), (MS₁) and (MS₂)
+(by `rfl` and `Iff.rfl`); (MA₁) and (MC₁) (by `decide +kernel` on representatives). They are
+frozen as DRAFT_SORRY all the same. Each is sealed separately, after a seal audit.
+
+**Source pin.** Kaptari, Lashkevich, Solovtsova, Phys. Rev. D 112 (2025) 073008,
+arXiv:2508.05119v1, is pinned as `kaptari-lashkevich-solovtsova-2025` (370716 bytes, sha256
+`ce2b08a15c91be594c6e06780cecaec2b8c54bfb0e01dd23c2a169a45c699f1a`) in `sources/manifest.json` and
+[SOURCES.md](../SOURCES.md). The PDF is kept only in the ignored cache.
+
+**Review.** One independent refute-first review returned APPROVE WITH FIXES. It checked the
+counts with its own graph enumerator and the constants with high-precision numerics, including
+the dispersive form of the set (a) integral. All six fixes are applied:
+1. **(HS₀) was false as stated** (blocking). The candidate quantified over every contraction in
+   (Sc₃), including ones that are not 1PI. It now has the hypothesis `hC₁ : IsOnePI C`, and its
+   docstring says "every 1PI contraction".
+2. **The Kaptari source was not pinned** (blocking). It is now pinned (above), and the (A₂) and
+   (A₄) docstrings cite arXiv:2508.05119v1 and the source id.
+3. **The (Sc₃) count was wrong.** Set (c) has 39 graphs and 56 relabelling orbits: each of the 17
+   graphs with a `photonCt` vertex gives two orbits, one per field pairing. The list of excluded
+   graphs now says that a closed loop with more than two vertices belongs to set (d) or is a Furry
+   graph (or, as the two-loop vacuum polarization in the one-loop vertex, to set (a)).
+4. **(E-G₄) overstated its role.** It is one of the bridges; adding (HC₃) to the graded headlines
+   also needs the flavour relabelling (E₃) and the meaning theorems (E-G₂).
+5. **Label clash.** The set (c) labels (C₁)–(C₅) clashed with the frozen Stage 1a labels. They
+   are renamed (Sc₁)–(Sc₅) in the docstrings; no Lean name changed.
+6. **(Sc₄) described the graphs loosely.** It now says the 12 graphs come from the six
+   fourth-order vertex graphs without a fermion loop.
+
+**Open questions for the author (provisional answers are the packet's recommended defaults).**
+- Q1 (Q-a1): the set (a) headline is stated at n = 0 heavy leptons (electron block only).
+- Q2 (Q-a2): set (a) owns the level-1 photon counterterm d₃(1).
+- Q3 (Q-a3): the Källén–Sabry identification (R-KS) is not frozen; it stays inside the proof. The
+  optional block K ((A₄), (A₅), (A₇)) is frozen, at the freeze instruction's request. The memo
+  itself recommended not freezing block K unless the author wants a physical anchor for Π⁽⁴⁾. The
+  author may want to drop these three files.
+- Q4 (Q-c4): both headlines assume renormalization "through 2" (order e⁴), not "through 1".
+- Q5 (Q-c5): the set (b) bridge (E-G₄) is frozen now.
+- Q6 (Q-ns): generic declarations in `QED.Graded`, set-specific ones in `QED.ThreeLoop`.
+- Q7 (Q-c6): the orbit counts (9 for set (a); 39 graphs and 56 orbits for set (c)) stay proof
+  obligations of the enumeration step, not frozen goals.
+- Q8 (new): the renamed labels (Sc₁)–(Sc₅) do not match the (Sc) numbering of
+  [SETC-KERNEL-PLAN.md](SETC-KERNEL-PLAN.md), where (Sc₁) is `IsSetC` and (Sc₅) is the constant.
+  The plan is not changed. Should the plan be renumbered to match, or the labels changed again?

@@ -189,6 +189,17 @@
       "sha256": "cd190af861de2cbfccd136783f7cc88b715c38dec3f2f22e9a24d335983c6c29",
       "license": "arXiv non-exclusive distribution license; kept in the ignored cache, not committed.",
       "stability": "arXiv version v3; fixed."
+    },
+    {
+      "id": "kaptari-lashkevich-solovtsova-2025",
+      "role": "primary, three loops, set (a): closed form of the fourth-order vacuum-polarization insertion into the second-order vertex (eq. (16), equal-mass value A2,L(6)(1)); the Kallen-Sabry spectral function (eq. (20)), the dispersion form (eqs. (4), (6), (18)) and the insertion integral (eq. (25))",
+      "citation": "L. P. Kaptari, V. I. Lashkevich and O. P. Solovtsova, 'The sixth order QED radiative corrections to lepton anomalies due to the fourth order vacuum polarization insertions within the Mellin-Barnes representation', Phys. Rev. D 112 (2025) 073008, arXiv:2508.05119v1",
+      "url": "https://arxiv.org/abs/2508.05119v1",
+      "retrieved_utc": "2026-11-19T00:00:00Z",
+      "bytes": 370716,
+      "sha256": "ce2b08a15c91be594c6e06780cecaec2b8c54bfb0e01dd23c2a169a45c699f1a",
+      "license": "arXiv non-exclusive distribution license; kept in the ignored cache, not committed.",
+      "stability": "arXiv version v1; fixed."
     }
   ]
 }

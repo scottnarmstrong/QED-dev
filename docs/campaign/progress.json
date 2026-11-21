@@ -753,6 +753,10 @@
     {
       "date": "2026-11-20",
       "change": "Stage 2: X2 (isSpinFormFactorPair_lszFive_lepton_pauli_limit) sealed after an independent audit: the lepton-flavour Pauli limit at order alpha^2 with the order-e^5 LSZ amplitude. 17 of 18 Stage 2 goals sealed; R-Pi4 remains."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Stage 3a/3b packet frozen provisionally (D-58; author approval pending): the statements for sets (a) and (c) of the three-loop coefficient, 30 declarations in QED/Frozen/Graded and QED/Frozen/ThreeLoop (13 definitions, 17 theorem goals). The goals include the two headlines: 64 pi^6 F2 / e^6 tends to A1(6)(a) (Kaptari et al. 2025, eq. (16)) and to A1(6)(c) (Barbieri-Remiddi 1974, eq. (3)). Kaptari et al. 2025 pinned as a source. One independent review (approve with fixes; all fixes applied)."
     }
   ],
   "tracks": [
@@ -857,7 +861,8 @@
           "title": "Set (a): fourth-order vacuum-polarization insertion, 3 diagrams",
           "status": "in_progress",
           "evidence": [
-            "QED/Chain/SetAValue.lean"
+            "QED/Chain/SetAValue.lean",
+            "QED/Frozen/ThreeLoop/VertexSetAPauliLimit.lean"
           ]
         },
         {
@@ -865,7 +870,8 @@
           "title": "Set (c): one bubble in the two-loop vertex, 12 diagrams",
           "status": "in_progress",
           "evidence": [
-            "QED/Chain/SetCValue.lean"
+            "QED/Chain/SetCValue.lean",
+            "QED/Frozen/ThreeLoop/VertexSetCPauliLimit.lean"
           ]
         },
         {
