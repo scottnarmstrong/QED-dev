@@ -21,8 +21,9 @@ interface, and we prove its input `HasTruncLaurent setDMasterI18 setDLaurentI18 
 (`QED.ThreeLoopD.hasTruncLaurent_setDMasterI18`). This discharges one of the eleven inputs
 (`QED.ThreeLoopD.SetDMasters.Expansions.of_I18`).
 
-The two other Γ-function masters, `I₁₄` and `I₁₆`, need the Taylor coefficients of
-`log Γ(1 + ε)` through `ε⁵` (values `ζ(2), …, ζ(5)`), which the campaign does not have yet.
+The two other Γ-function masters, `I₁₄` and `I₁₆`, are treated in
+`QED.ThreeLoopD.SetDMastersGamma2`, using the Taylor expansion of `log Γ(1 + ε)` in
+`QED.DimReg.GammaTaylor`.
 -/
 
 @[expose] public section

@@ -191,6 +191,8 @@ public import QED.ThreeLoopD.SetDMastersLaurent
 public import QED.ThreeLoopD.SetDMastersPoles
 public import QED.ThreeLoopD.SetDMasters
 public import QED.ThreeLoopD.SetDMastersGamma
+public import QED.DimReg.GammaTaylor
+public import QED.ThreeLoopD.SetDMastersGamma2
 public import QED.Algebra.IBPCertPoly
 public import QED.Algebra.IBPCertFamily
 public import QED.Algebra.IBPCertPilotData
