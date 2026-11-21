@@ -139,6 +139,12 @@ public import QED.Polylog.DilogPM
 public import QED.Polylog.LiLimits
 public import QED.Polylog.LogLogSq
 public import QED.Polylog.LogLiDiv
+public import QED.Polylog.HPLBasic
+public import QED.Polylog.HPLCalculus
+public import QED.Polylog.HPLShuffle
+public import QED.Polylog.HPLLowWeight
+public import QED.Polylog.HPLMixed
+public import QED.Polylog.HPLValues
 public import QED.DimReg.Basic
 public import QED.DimReg.BetaPrime
 public import QED.DimReg.Convergence
