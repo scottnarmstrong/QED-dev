@@ -145,6 +145,11 @@ public import QED.Polylog.HPLShuffle
 public import QED.Polylog.HPLLowWeight
 public import QED.Polylog.HPLMixed
 public import QED.Polylog.HPLValues
+public import QED.Polylog.HPLLi
+public import QED.Polylog.HPLSeries
+public import QED.Polylog.HPLRegular
+public import QED.Polylog.HPLLyndon3
+public import QED.Polylog.HPLValues3
 public import QED.DimReg.Basic
 public import QED.DimReg.BetaPrime
 public import QED.DimReg.Convergence
