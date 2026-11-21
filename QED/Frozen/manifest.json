@@ -35852,7 +35852,7 @@
         "module": "QED.Provider.ThreeLoop.A1SixSetABounds",
         "export": "QED.Provider.ThreeLoop.a1SixSetA_bounds"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "6121cfdcfebe188a20d3f842bd4eb2fd56e7deb2d646d2cb78fa4862db324f02",
       "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
       "draft_allowlist": {
@@ -35966,7 +35966,7 @@
         "module": "QED.Provider.ThreeLoop.IntegralPiHatFourEqA1SixSetA",
         "export": "QED.Provider.ThreeLoop.integral_piHatFour_eq_a1SixSetA"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "3a0ca378a44649cf8f091c28b97a607c3342e1a75b64754ec22b104277b30cdd",
       "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
       "draft_allowlist": {
@@ -36233,7 +36233,7 @@
         "module": "QED.Provider.Graded.FamilyVertexIsOnePI",
         "export": "QED.Provider.Graded.familyVertex_isOnePI"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "a43b03cebd0d577571bed87c93bb47808a7ab7d5593e77bb7f7dd213a18f23d6",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
@@ -36655,7 +36655,7 @@
         "module": "QED.Provider.ThreeLoop.ExistsIsSetA",
         "export": "QED.Provider.ThreeLoop.exists_isSetA"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "c1ac6ed7d7aacbb0509a20d813a2df11af6eb857a127c47cdc3023190c0fe47d",
       "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
       "draft_allowlist": {
@@ -38249,7 +38249,7 @@
         "module": "QED.Provider.Graded.IsOnShellSelAtIsOnePIIff",
         "export": "QED.Provider.Graded.isOnShellSelAt_isOnePI_iff"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "581787f1d8b4346e8780a58cd275f432abc2dbc21abb5d45851e162586a194ba",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
@@ -38524,7 +38524,7 @@
         "module": "QED.Provider.Graded.IsChargeNormalizedSelAtIsOnePIIff",
         "export": "QED.Provider.Graded.isChargeNormalizedSelAt_isOnePI_iff"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "c91e88bb98496808ed79bc9169dc4b7e9cf382f07e22fe8b5f425fa7cb25ce3a",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
@@ -38978,7 +38978,7 @@
         "module": "QED.Provider.ThreeLoop.A1SixSetCBounds",
         "export": "QED.Provider.ThreeLoop.a1SixSetC_bounds"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "9b18c967f5422be1a3ebc30dff14dd1d21a5dcebb21997d7c0bb91bf65bdf688",
       "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
       "draft_allowlist": {
@@ -39747,7 +39747,7 @@
         "module": "QED.Provider.ThreeLoop.ExistsIsSetC",
         "export": "QED.Provider.ThreeLoop.exists_isSetC"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "58ab3066c7618a3c65b1c67283c5711ba912b08e573d154698fad2f2297cfcef",
       "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
       "draft_allowlist": {

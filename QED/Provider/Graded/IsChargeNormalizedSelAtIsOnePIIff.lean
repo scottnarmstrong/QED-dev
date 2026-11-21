@@ -11,10 +11,26 @@ public import QED.Frozen.Graded.IsChargeNormalizedAt
 /-!
 # Provider for `QED.Graded.isChargeNormalizedSelAt_isOnePI_iff`
 
-Under development. This module will prove the frozen theorem goal
-`QED.Graded.isChargeNormalizedSelAt_isOnePI_iff` (Phase 5 Stage 3a/3b packet, decision D-58) as
+Proves the frozen theorem goal (MS₂) (Phase 5 Stage 3a/3b packet, decision D-58) as
 `QED.Provider.Graded.isChargeNormalizedSelAt_isOnePI_iff`, with the binder convention of decision
-D-13.
-Until the frozen anchor is sealed, this module is quarantined: only the frozen anchor file may
-import it (`scripts/check_frozen_anchors.py`). It must never import the frozen anchor.
+D-13: with the 1PI selection the condition (Gs₃) is (G₁₀) by unfolding (`Iff.rfl`). This module
+must never import the frozen anchor.
 -/
+
+@[expose] public section
+
+open QED.WickModel (Params IsOnePI)
+open QED.Graded
+
+namespace QED.Provider.Graded
+
+/-- (MS₂), with implicit data binders (decision D-13). -/
+theorem isChargeNormalizedSelAt_isOnePI_iff {P : Params} {F : Type} [Fintype F]
+    [DecidableEq F] {Φ : Lepton.Flavors F} {D : Counterterms F} {f : F} {n : ℕ} :
+    IsChargeNormalizedSelAt P Φ D (fun C _ => IsOnePI C) f n ↔
+      IsChargeNormalizedAt P Φ D f n :=
+  Iff.rfl
+
+end QED.Provider.Graded
+
+end

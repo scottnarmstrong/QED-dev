@@ -2869,3 +2869,36 @@ the dispersive form of the set (a) integral. All six fixes are applied:
 - Q8 (new): the renamed labels (Sc₁)–(Sc₅) do not match the (Sc) numbering of
   [SETC-KERNEL-PLAN.md](SETC-KERNEL-PLAN.md), where (Sc₁) is `IsSetC` and (Sc₅) is the constant.
   The plan is not changed. Should the plan be renumbered to match, or the labels changed again?
+
+**Seal of the eight proved D-58 goals (2026-11-21).** Eight of the 17 D-58 goals are sealed with
+body `by exact` their providers. The frozen statements stay provisional with the rest of D-58;
+sealing does not approve them. Each provider takes the D-13 binder convention (data implicit;
+none of the eight has a hypothesis) and imports no draft anchor or quarantined provider:
+- (A₃) `a1SixSetA_bounds` and (Sc₅) `a1SixSetC_bounds`: the frozen constants (A₂) and (Sc₄)
+  unfold to the helper constants `QED.Chain.aSetA` and `QED.Chain.aSetC`, whose enclosures
+  `QED.Chain.aSetA_bounds` and `QED.Chain.aSetC_bounds` (`QED/Chain/SetAConst.lean`,
+  `SetCConst.lean`) are the providers' proofs.
+- (A₇) `integral_piHatFour_eq_a1SixSetA`: (A₄), (A₅) and (A₂) unfold to the helper `ksRho`,
+  `piHat4` and `aSetA`, and the identity is `QED.Chain.integral_setA_eq_aSetA`
+  (`QED/Chain/SetAValue.lean`).
+- (MF₁) `familyVertex_isOnePI` by `rfl`; (MS₁) `isOnShellSelAt_isOnePI_iff` and (MS₂)
+  `isChargeNormalizedSelAt_isOnePI_iff` by `Iff.rfl`.
+- (MA₁) `exists_isSetA` and (MC₁) `exists_isSetC`: representatives of seven gauge vertices,
+  defined in the providers and checked by `decide +kernel` through the decision procedures of
+  `QED.TwoLoop.Enumeration`. For set (a), the one-loop vertex with the vertex-type two-loop
+  bubble on its photon (open line `y → 0 → 1 → 2 → x`, loop `3 → 4 → 5 → 6`); for set (c), the
+  two-loop ladder with the one-loop bubble on its outer photon (open line
+  `y → 4 → 3 → 2 → 1 → 0 → x`, bubble `5 ⇄ 6`). The set (c) representative has no counterterm
+  vertex, so (Sc₃) holds for every grading.
+
+Checks: the frozen bytes changed only in the eight proof bodies; the module and provider builds
+exit 0 with no warnings; standard axioms only (8/8); ABI unchanged (8/8, recomputed for these
+exports with the `frozen_abi.py` method; the full `frozen_abi.py --check` passes); guard OK.
+Independent seal audit (refute-first, 2026-11-21): all eight PROVED, APPROVE-FOR-AUTHOR. It
+checked the frozen diff (eight body lines and eight state lines only), provider types equal to
+the frozen types up to D-13 binder information, a fresh elaboration of each statement, standard
+axioms for anchors and providers, quarantine (no draft or provider import), and non-vacuity (the
+constants are definitionally the helper constants, (A₇) uses the frozen `piHatFour`, and both
+representatives are genuine three-loop graphs of their sets). Non-blocking: the frozen docstrings
+of (A₇) and `a1SixSetA` name an internal helper; the guard's file scan also walks `.scratch/`,
+which can race with a concurrent export copy (a false alarm, not a seal defect).

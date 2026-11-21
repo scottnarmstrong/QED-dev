@@ -17,7 +17,7 @@ namespace QED.ThreeLoop
 `-0.15017228210 < A₁⁽⁶⁾(c) < -0.15017228209`. -/
 theorem a1SixSetC_bounds : -0.15017228210 < a1SixSetC ∧ a1SixSetC < -0.15017228209 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.ThreeLoop.a1SixSetC_bounds
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

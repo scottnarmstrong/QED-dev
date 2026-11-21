@@ -24,7 +24,7 @@ theorem familyVertex_isOnePI (P : Params) {F : Type} [Fintype F] [DecidableEq F]
     familyVertex P Φ D (fun C _ => IsOnePI C) (2 * n + 1) p' p μ =
       vertexPart P Φ D Φ.openLine n p' p μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.familyVertex_isOnePI
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

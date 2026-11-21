@@ -7,14 +7,28 @@ module
 
 public import QED.Frozen.ThreeLoop.PiHatFour
 public import QED.Frozen.ThreeLoop.A1SixSetA
+import QED.Chain.SetAValue
 
 /-!
 # Provider for `QED.ThreeLoop.integral_piHatFour_eq_a1SixSetA`
 
-Under development. This module will prove the frozen theorem goal
-`QED.ThreeLoop.integral_piHatFour_eq_a1SixSetA` (Phase 5 Stage 3a/3b packet, decision D-58) as
+Proves the frozen theorem goal (A₇) (Phase 5 Stage 3a/3b packet, decision D-58) as
 `QED.Provider.ThreeLoop.integral_piHatFour_eq_a1SixSetA`, with the binder convention of decision
-D-13.
-Until the frozen anchor is sealed, this module is quarantined: only the frozen anchor file may
-import it (`scripts/check_frozen_anchors.py`). It must never import the frozen anchor.
+D-13 (no binders): the frozen Källén–Sabry function and constant (A₂) are the helper ones
+`QED.Chain.piHat4` and `QED.Chain.aSetA` by unfolding, and the identity is the helper theorem
+`QED.Chain.integral_setA_eq_aSetA`. This module must never import the frozen anchor.
 -/
+
+public section
+
+namespace QED.Provider.ThreeLoop
+
+/-- (A₇) (decision D-13 convention; no binders). -/
+theorem integral_piHatFour_eq_a1SixSetA :
+    ∫ x in (0 : ℝ)..1, (1 - x) * QED.ThreeLoop.piHatFour (x ^ 2 / (1 - x)) =
+      QED.ThreeLoop.a1SixSetA :=
+  QED.Chain.integral_setA_eq_aSetA
+
+end QED.Provider.ThreeLoop
+
+end

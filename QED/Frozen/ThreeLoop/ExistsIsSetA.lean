@@ -24,7 +24,7 @@ theorem exists_isSetA :
     ∃ C : Contraction 1 1 (fun _ : Fin 7 => Wick.VertexKind.gauge),
       IsOnePI C ∧ IsSetA C ∧ loopCount C = 3 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.ThreeLoop.exists_isSetA
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

@@ -21,7 +21,7 @@ theorem isOnShellSelAt_isOnePI_iff (P : Params) {F : Type} [Fintype F] [Decidabl
     (Φ : Lepton.Flavors F) (D : Counterterms F) (f : F) (n : ℕ) :
     IsOnShellSelAt P Φ D (fun C _ => IsOnePI C) f n ↔ IsOnShellAt P Φ D f n :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.isOnShellSelAt_isOnePI_iff
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

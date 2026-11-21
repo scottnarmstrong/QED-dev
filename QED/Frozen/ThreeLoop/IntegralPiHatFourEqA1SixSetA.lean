@@ -22,7 +22,7 @@ level as `QED.Chain.integral_setA_eq_aSetA`. -/
 theorem integral_piHatFour_eq_a1SixSetA :
     ∫ x in (0 : ℝ)..1, (1 - x) * piHatFour (x ^ 2 / (1 - x)) = a1SixSetA :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.ThreeLoop.integral_piHatFour_eq_a1SixSetA
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

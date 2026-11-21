@@ -757,6 +757,10 @@
     {
       "date": "2026-11-21",
       "change": "Stage 3a/3b packet frozen provisionally (D-58; author approval pending): the statements for sets (a) and (c) of the three-loop coefficient, 30 declarations in QED/Frozen/Graded and QED/Frozen/ThreeLoop (13 definitions, 17 theorem goals). The goals include the two headlines: 64 pi^6 F2 / e^6 tends to A1(6)(a) (Kaptari et al. 2025, eq. (16)) and to A1(6)(c) (Barbieri-Remiddi 1974, eq. (3)). Kaptari et al. 2025 pinned as a source. One independent review (approve with fixes; all fixes applied)."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Stage 3a/3b: 8 of the 17 provisionally frozen D-58 goals sealed and independently audited: the eleven-decimal enclosures of the set (a) and set (c) constants, the set (a) constant as the vacuum-polarization-insertion integral, the three meaning theorems for the 1PI selection, and one genuine three-loop graph in each of sets (a) and (c). 9 D-58 goals remain, including both headlines."
     }
   ],
   "tracks": [

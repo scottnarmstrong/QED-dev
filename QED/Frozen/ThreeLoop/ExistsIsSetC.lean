@@ -26,7 +26,7 @@ theorem exists_isSetC :
       ∀ g : Graded.Grading (fun _ : Fin 7 => Wick.VertexKind.gauge),
         IsOnePI C ∧ IsSetC C g ∧ loopCount C = 3 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.ThreeLoop.exists_isSetC
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 
