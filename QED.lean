@@ -504,6 +504,12 @@ public import QED.ChainProof.SetALinkLoop
 public import QED.ChainProof.SetALinkDisjoint
 public import QED.ChainProof.SetALinkReps
 public import QED.ChainProof.SetALinkClassify
+public import QED.ChainProof.SetALinkShape
+public import QED.ChainProof.SetALinkClassLoop
+public import QED.ChainProof.SetALinkSum
+public import QED.ChainProof.SetALinkVertex
+public import QED.ChainProof.SetALinkInt
+public import QED.ChainProof.SetALinkIntP
 public import QED.ChainProof.SetCLinkDisjoint
 public import QED.ChainProof.SetCLinkReps
 public import QED.ChainProof.SetCLinkShareTree
