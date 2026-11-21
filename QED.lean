@@ -782,6 +782,8 @@ public import QED.GradedProof.RPi4FaceIdRayBFace
 public import QED.GradedProof.RPi4FaceIdRayBPiece
 public import QED.GradedProof.RPi4FaceIdRayBDil
 public import QED.GradedProof.RPi4FaceIdRayBRay
+public import QED.GradedProof.RPi4FaceIdRayBNum
+public import QED.GradedProof.RPi4FaceIdRayBClass
 public import QED.GradedProof.RPi4MajLIncGen
 public import QED.GradedProof.RPi4MajLIncPiece
 public import QED.GradedProof.RPi4MajLIncClass
