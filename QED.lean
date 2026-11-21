@@ -144,6 +144,11 @@ public import QED.DimReg.BetaPrime
 public import QED.DimReg.Convergence
 public import QED.DimReg.Tadpole
 public import QED.DimReg.VacuumThreeLoop
+public import QED.DimReg.OrthantFTC
+public import QED.DimReg.IBP
+public import QED.DimReg.Continuation
+public import QED.DimReg.OnShellFamily
+public import QED.DimReg.LR96Family
 public import QED.TwoLoop.WardIdentity
 public import QED.TwoLoop.LoopBoundTwoExact
 public import QED.TwoLoop.JointIntegralInvariance
