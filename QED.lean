@@ -757,6 +757,11 @@ public import QED.GradedProof.RPi4WireRed
 public import QED.GradedProof.RPi4FaceIdRate
 public import QED.GradedProof.RPi4FaceIdRateCont
 public import QED.GradedProof.RPi4FaceIdRateNull
+public import QED.GradedProof.RPi4FaceIdRayInt
+public import QED.GradedProof.RPi4MajLip
+public import QED.GradedProof.RPi4MajLipRay
+public import QED.GradedProof.RPi4MajLipMid
+public import QED.GradedProof.RPi4MajLipCfg
 public import QED.GradedProof.RPi4FaceIdCongr
 public import QED.GradedProof.RPi4FaceIdVtx
 public import QED.GradedProof.RPi4FaceIdSE
