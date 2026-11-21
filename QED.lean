@@ -837,6 +837,8 @@ public import QED.GradedProof.RPi4FaceRateIncInt
 public import QED.GradedProof.RPi4FaceRateIncPcs
 public import QED.GradedProof.RPi4FaceRateIncBDer
 public import QED.GradedProof.RPi4FaceRateIncBPcs
+public import QED.GradedProof.RPi4FaceRateIncW1
+public import QED.GradedProof.RPi4FaceRateIncW2
 public import QED.GradedProof.RPi4MajLIncGen
 public import QED.GradedProof.RPi4MajLIncPiece
 public import QED.GradedProof.RPi4MajLIncClass
