@@ -159,6 +159,13 @@ public import QED.Polylog.HPLValues4
 public import QED.Polylog.HPLValues5
 public import QED.Polylog.HPLAlt4Rel
 public import QED.Polylog.HPLValuesAlt4
+public import QED.Polylog.HPLMobius
+public import QED.Polylog.HPLAlt5Rel
+public import QED.Polylog.HPLValuesAlt5A
+public import QED.Polylog.HPLValuesAlt5B
+public import QED.Polylog.HPLValuesAlt5C
+public import QED.Polylog.HPLValuesAlt5D
+public import QED.Polylog.HPLValuesTrailing
 public import QED.DimReg.Basic
 public import QED.DimReg.BetaPrime
 public import QED.DimReg.Convergence
