@@ -885,6 +885,10 @@ public import QED.GradedProof.RPi4FaceRateIncW3
 public import QED.GradedProof.RPi4FaceRateIncW4
 public import QED.GradedProof.RPi4FaceRateIncW5
 public import QED.GradedProof.RPi4FaceRateIncW6
+public import QED.GradedProof.RPi4Wire2DRay
+public import QED.GradedProof.RPi4FaceRateIncARed
+public import QED.GradedProof.RPi4FaceRateIncAGen
+public import QED.GradedProof.RPi4Wire2Asm
 public import QED.GradedProof.RPi4MajLIncGen
 public import QED.GradedProof.RPi4MajLIncPiece
 public import QED.GradedProof.RPi4MajLIncClass
