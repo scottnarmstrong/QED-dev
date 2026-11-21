@@ -179,6 +179,11 @@ public import QED.DimReg.CubeSplit
 public import QED.DimReg.SectorCert
 public import QED.DimReg.Symanzik
 public import QED.DimReg.TwoLoopSESector
+public import QED.ThreeLoopD.SetDMastersCoeffs
+public import QED.ThreeLoopD.SetDMastersLaurent
+public import QED.ThreeLoopD.SetDMastersPoles
+public import QED.ThreeLoopD.SetDMasters
+public import QED.ThreeLoopD.SetDMastersGamma
 public import QED.Algebra.IBPCertPoly
 public import QED.Algebra.IBPCertFamily
 public import QED.Algebra.IBPCertPilotData
