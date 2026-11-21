@@ -494,6 +494,8 @@ public import QED.ChainProof.SetAKSKDNode
 public import QED.ChainProof.SetAKSKDPV
 public import QED.ChainProof.SetAKSKAFix
 public import QED.ChainProof.SetAKSKBTrace
+public import QED.ChainProof.SetAKSKBMerge
+public import QED.ChainProof.SetAKSKBPiece
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetALinkLoop
