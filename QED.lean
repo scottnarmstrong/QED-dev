@@ -150,6 +150,15 @@ public import QED.Polylog.HPLSeries
 public import QED.Polylog.HPLRegular
 public import QED.Polylog.HPLLyndon3
 public import QED.Polylog.HPLValues3
+public import QED.Polylog.MZVStuffle
+public import QED.Polylog.MZVHPL
+public import QED.Polylog.MZVDistribution
+public import QED.Polylog.HPLDuality
+public import QED.Polylog.HPLLiHalf
+public import QED.Polylog.HPLValues4
+public import QED.Polylog.HPLValues5
+public import QED.Polylog.HPLAlt4Rel
+public import QED.Polylog.HPLValuesAlt4
 public import QED.DimReg.Basic
 public import QED.DimReg.BetaPrime
 public import QED.DimReg.Convergence
