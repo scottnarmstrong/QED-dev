@@ -514,6 +514,14 @@ public import QED.ChainProof.SetCLinkDisjoint
 public import QED.ChainProof.SetCLinkReps
 public import QED.ChainProof.SetCLinkShareTree
 public import QED.ChainProof.SetCLinkShareAlg
+public import QED.ChainProof.SetCLinkSEInput
+public import QED.ChainProof.SetCLinkVEnum
+public import QED.ChainProof.SetCLinkVSplit
+public import QED.ChainProof.SetCLinkVInput
+public import QED.ChainProof.SetCLinkSEEnum
+public import QED.ChainProof.SetCLinkSESplit
+public import QED.ChainProof.SetCLinkWard
+public import QED.ChainProof.SetCLinkFinal
 public import QED.ChainProof.SetCKLamOutCBd
 public import QED.ChainProof.SetCKLamOutCDecay
 public import QED.ChainProof.SetCKLamOutC
