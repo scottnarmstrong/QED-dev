@@ -486,6 +486,7 @@ public import QED.ChainProof.SetAKSKDDisp
 public import QED.ChainProof.SetAKSKDNode
 public import QED.ChainProof.SetAKSKDPV
 public import QED.ChainProof.SetAKSKAFix
+public import QED.ChainProof.SetAKSKBTrace
 public import QED.ChainProof.SetALinkLoop
 public import QED.ChainProof.SetALinkDisjoint
 public import QED.ChainProof.SetALinkReps
@@ -859,6 +860,11 @@ public import QED.GradedProof.RPi4FaceIdRayAFlow
 public import QED.GradedProof.RPi4FaceIdRayA
 public import QED.GradedProof.RPi4FaceIdRayAPWt
 public import QED.GradedProof.RPi4FaceIdRayAPGen
+public import QED.GradedProof.RPi4FaceIdRayAQWt
+public import QED.GradedProof.RPi4FaceIdRayAQCoef
+public import QED.GradedProof.RPi4FaceIdRayAQGen
+public import QED.GradedProof.RPi4FaceIdRayAQPiece
+public import QED.GradedProof.RPi4FaceIdRayAQClass
 public import QED.GradedProof.RPi4FaceRateInc
 public import QED.GradedProof.RPi4FaceRateIncInt
 public import QED.GradedProof.RPi4FaceRateIncPcs
