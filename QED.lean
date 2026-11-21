@@ -155,6 +155,8 @@ public import QED.DimReg.IBP
 public import QED.DimReg.Continuation
 public import QED.DimReg.OnShellFamily
 public import QED.DimReg.LR96Family
+public import QED.DimReg.Analytic
+public import QED.DimReg.AnalyticExp
 public import QED.Algebra.IBPCertPoly
 public import QED.Algebra.IBPCertFamily
 public import QED.Algebra.IBPCertPilotData
@@ -788,6 +790,8 @@ public import QED.GradedProof.RPi4FaceIdRayBDil
 public import QED.GradedProof.RPi4FaceIdRayBRay
 public import QED.GradedProof.RPi4FaceIdRayBNum
 public import QED.GradedProof.RPi4FaceIdRayBClass
+public import QED.GradedProof.RPi4FaceIdRayAFlow
+public import QED.GradedProof.RPi4FaceIdRayA
 public import QED.GradedProof.RPi4MajLIncGen
 public import QED.GradedProof.RPi4MajLIncPiece
 public import QED.GradedProof.RPi4MajLIncClass
