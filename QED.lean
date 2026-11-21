@@ -139,6 +139,11 @@ public import QED.Polylog.DilogPM
 public import QED.Polylog.LiLimits
 public import QED.Polylog.LogLogSq
 public import QED.Polylog.LogLiDiv
+public import QED.DimReg.Basic
+public import QED.DimReg.BetaPrime
+public import QED.DimReg.Convergence
+public import QED.DimReg.Tadpole
+public import QED.DimReg.VacuumThreeLoop
 public import QED.TwoLoop.WardIdentity
 public import QED.TwoLoop.LoopBoundTwoExact
 public import QED.TwoLoop.JointIntegralInvariance
