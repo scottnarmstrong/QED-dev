@@ -155,6 +155,10 @@ public import QED.DimReg.IBP
 public import QED.DimReg.Continuation
 public import QED.DimReg.OnShellFamily
 public import QED.DimReg.LR96Family
+public import QED.Algebra.IBPCertPoly
+public import QED.Algebra.IBPCertFamily
+public import QED.Algebra.IBPCertPilotData
+public import QED.Algebra.IBPCertPilot
 public import QED.TwoLoop.WardIdentity
 public import QED.TwoLoop.LoopBoundTwoExact
 public import QED.TwoLoop.JointIntegralInvariance
