@@ -903,6 +903,8 @@ public import QED.ChainProof.SetCUnitMDisp
 public import QED.ChainProof.SetCUnitMDispBd
 public import QED.ChainProof.SetCUnitMDispPauli
 public import QED.ChainProof.SetCUnitMDispLim
+public import QED.ChainProof.SetCUnitMDispScale
+public import QED.ChainProof.SetCUnitMDispEps
 public import QED.ChainProof.SetCLinkClassStd
 public import QED.ChainProof.SetCLinkClassDecB
 public import QED.ChainProof.SetCLinkClassDecD
