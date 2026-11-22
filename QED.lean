@@ -1074,6 +1074,7 @@ public import QED.ChainProof.SetCUnitMDispScale
 public import QED.ChainProof.SetCUnitMDispEps
 public import QED.ChainProof.SetCUnitMAbs
 public import QED.ChainProof.SetCUnitMAbsDisp
+public import QED.ChainProof.SetCUnitMAbsFub
 public import QED.ChainProof.SetCLinkClassStd
 public import QED.ChainProof.SetCLinkClassDecB
 public import QED.ChainProof.SetCLinkClassDecD
