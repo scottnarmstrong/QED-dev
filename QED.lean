@@ -647,6 +647,9 @@ public import QED.ChainProof.SetAKSKUElem
 public import QED.ChainProof.SetAKSKUAsym
 public import QED.ChainProof.SetAKSKUBnd
 public import QED.ChainProof.SetAKSKUVA
+public import QED.ChainProof.SetAKSKUVANode
+public import QED.ChainProof.SetAKSKUVAFub
+public import QED.ChainProof.SetAKSKUVAExp
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
