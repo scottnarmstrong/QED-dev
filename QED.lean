@@ -339,6 +339,12 @@ public import QED.ThreeLoopD.SetDMastersI8R1Mom
 public import QED.ThreeLoopD.SetDMastersI8R1Fub
 public import QED.ThreeLoopD.SetDMastersI8R1Xi
 public import QED.ThreeLoopD.SetDMastersI8R1
+public import QED.ThreeLoopD.SetDMastersI2Def
+public import QED.ThreeLoopD.SetDMastersI2Wire
+public import QED.ThreeLoopD.SetDMastersI2Analytic
+public import QED.ThreeLoopD.SetDMastersI2P0Lines
+public import QED.ThreeLoopD.SetDMastersI2P0Val
+public import QED.ThreeLoopD.SetDMastersI2PDeriv
 public import QED.ThreeLoopD.SetDMastersI5Def
 public import QED.ThreeLoopD.SetDMastersI5Wire
 public import QED.ThreeLoopD.SetDMastersI5Tri
