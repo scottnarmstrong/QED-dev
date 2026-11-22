@@ -240,6 +240,10 @@ public import QED.ThreeLoopD.SetDMastersI9RemA2Fub
 public import QED.ThreeLoopD.SetDMastersI9RemA2S
 public import QED.ThreeLoopD.SetDMastersI9RemA2CV
 public import QED.ThreeLoopD.SetDMastersI9RemA2Wire
+public import QED.ThreeLoopD.SetDMastersI9RemA2Th
+public import QED.ThreeLoopD.SetDMastersI9RemA2JD
+public import QED.ThreeLoopD.SetDMastersI9RemA2JV
+public import QED.ThreeLoopD.SetDMastersI9RemA2Asm
 public import QED.ThreeLoopD.SetDMastersI9KTaylor
 public import QED.ThreeLoopD.SetDMastersI9KOne
 public import QED.ThreeLoopD.SetDMastersI9KValM
@@ -262,6 +266,7 @@ public import QED.ThreeLoopD.SetDMastersI3F
 public import QED.ThreeLoopD.SetDMastersI3FAnalytic
 public import QED.ThreeLoopD.SetDMastersI3FValCoV
 public import QED.ThreeLoopD.SetDMastersI3FValPhoton
+public import QED.ThreeLoopD.SetDMastersI3FValE3
 public import QED.ThreeLoopD.SetDMastersI12Def
 public import QED.ThreeLoopD.SetDMastersI12Poly
 public import QED.ThreeLoopD.SetDMastersI12Gamma
@@ -783,6 +788,8 @@ public import QED.ChainProof.SetCLimCtCDNum
 public import QED.ChainProof.SetCLimCtCDPiece
 public import QED.ChainProof.SetCLimCtCD01
 public import QED.ChainProof.SetCLimCtCB
+public import QED.ChainProof.SetCLimCtCB01
+public import QED.ChainProof.SetCLimCtCB01Shape
 public import QED.ChainProof.SetCUnitLimit
 public import QED.ChainProof.SetCUnitCov
 public import QED.ChainProof.SetCUnitPauli
