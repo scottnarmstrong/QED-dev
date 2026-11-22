@@ -585,6 +585,14 @@ public import QED.ChainProof.SetALinkIntFLines
 public import QED.ChainProof.SetALinkIntFTerm
 public import QED.ChainProof.SetALinkIntFAmp
 public import QED.ChainProof.SetALinkIntF
+public import QED.ChainProof.SetALinkIntVMaj
+public import QED.ChainProof.SetALinkIntVCx
+public import QED.ChainProof.SetALinkIntVRot
+public import QED.ChainProof.SetALinkIntVTerm
+public import QED.ChainProof.SetALinkIntVA
+public import QED.ChainProof.SetALinkIntVB
+public import QED.ChainProof.SetALinkIntVC
+public import QED.ChainProof.SetALinkIntFinal
 public import QED.ChainProof.SetCLinkDisjoint
 public import QED.ChainProof.SetCLinkReps
 public import QED.ChainProof.SetCLinkShareTree
