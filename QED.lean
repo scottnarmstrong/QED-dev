@@ -223,6 +223,8 @@ public import QED.ThreeLoopD.SetDMastersI9RemY
 public import QED.ThreeLoopD.SetDMastersI15Def
 public import QED.ThreeLoopD.SetDMastersI15Gamma
 public import QED.ThreeLoopD.SetDMastersI15Analytic
+public import QED.ThreeLoopD.SetDMastersI3Wire
+public import QED.ThreeLoopD.SetDMastersI3F
 public import QED.ThreeLoopE.SetEMastersCoeffsA
 public import QED.ThreeLoopE.SetEMastersCoeffsB
 public import QED.ThreeLoopE.SetEMastersLaurent
