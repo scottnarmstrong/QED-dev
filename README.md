@@ -66,6 +66,45 @@ become precise; changes to their scope must be recorded.
 **Tracked Lean source files:** 3096. **Total lines of Lean code:** 1,051,399.
 <!-- HQ:progress:end -->
 
+### Three-loop effort meter
+
+The milestone meter above moves only when a whole set is finished. This second meter
+estimates how much of the three-loop work is done, weighted by effort: the
+[meter data](docs/campaign/three-loop-meter.json) lists each remaining piece with the
+worker-sessions spent and a range for what is left, and
+[scripts/three_loop_meter.py](scripts/three_loop_meter.py) renders it here.
+
+<!-- HQ:threeloop:start -->
+**Updated:** 2026-11-22. Unit: worker-sessions (one bounded worker run, typically 500-1500 Lean lines). Completion = spent / (spent + midpoint of the remaining range); the range column uses the two ends of that range. These are estimates, not milestone counts.
+
+| Part | Spent | Remaining | Estimate | Range | Meter |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Set (a) | 53 | 0–0 | 100% | 100–100% | `████████████████████` |
+| Set (b) | 10 | 0–0 | 100% | 100–100% | `████████████████████` |
+| Set (c) | 62 | 19–45 | 66% | 58–77% | `█████████████░░░░░░░` |
+| Set (d) | 104 | 20–38 | 78% | 73–84% | `████████████████░░░░` |
+| Set (e) | 18 | 27–68 | 27% | 21–40% | `█████░░░░░░░░░░░░░░░` |
+| Model link and assembly | 0 | 83–161 | 0% | 0–0% | `░░░░░░░░░░░░░░░░░░░░` |
+| **Total** | 247 | 149–312 | **52%** | 44–62% | `██████████░░░░░░░░░░` |
+
+Open items (remaining range, part, item):
+
+- 4–7 (Set (c)): CBLoEq mass part (hB): engine+photon landed 4f0ad0d; L3-L6
+- 5–13 (Set (c)): VP-share value identities (self-energy spectral route)
+- 10–25 (Set (c)): regulator hReg: Stage L (L1 two-mass unit chain, L2 uniform bounds), Q1-Q4, measurability
+- 2–5 (Set (d)): I2: P1 done (715f1e6); P2
+- 5–10 (Set (d)): I5: K1 closed form, c2
+- 1–3 (Set (d)): I12: r3, r4 (face T landed; bulk S open)
+- 2–4 (Set (d)): I15: K4
+- 2–4 (Set (d)): I3 via I3Rel + normalisation
+- 8–12 (Set (d)): DimReg (d): pilot reduction done; full cert needs {x8=0} face, local checker, syms
+- 11–28 (Set (e)): extra LR masters: I17 done; I10 to K_a,K_2; I4 def+analytic (audit); I6 I7 I1 + I3
+- 8–20 (Set (e)): analytic layer per family
+- 8–20 (Set (e)): diagram expressions, projection, counterterms in d dims
+- 2–4 (Model link and assembly): frozen statements for (d), (e) and the total; author review
+- 81–157 (Model link and assembly): model link (plan 2026-11-22): generic 12-22, (d) bridge 20-36, (e) bridge 40-80, total 9-19
+<!-- HQ:threeloop:end -->
+
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.
 Update an item's status and evidence, then run:
 

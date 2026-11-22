@@ -1,0 +1,189 @@
+{
+ "unit": "worker-sessions (one bounded worker run, typically 500-1500 Lean lines)",
+ "updated": "2026-11-22",
+ "items": [
+  {
+   "set": "a",
+   "item": "VA half, rho_A, KS reductions (landed)",
+   "spent": 44,
+   "lo": 0,
+   "hi": 0
+  },
+  {
+   "set": "a",
+   "item": "rho_B identity (done, eb909de)",
+   "spent": 5,
+   "lo": 0,
+   "hi": 0
+  },
+  {
+   "set": "a",
+   "item": "Delta F_B dispersion (VB) (landed 33120db)",
+   "spent": 3,
+   "lo": 0,
+   "hi": 0
+  },
+  {
+   "set": "a",
+   "item": "set (a) sealed (68c967b, provisional approval)",
+   "spent": 1,
+   "lo": 0,
+   "hi": 0
+  },
+  {
+   "set": "b",
+   "item": "set (b), sealed",
+   "spent": 10,
+   "lo": 0,
+   "hi": 0
+  },
+  {
+   "set": "c",
+   "item": "repD and repB class limits, Pauli, cov, sharp (landed)",
+   "spent": 45,
+   "lo": 0,
+   "hi": 0
+  },
+  {
+   "set": "c",
+   "item": "MainBKKLinkP: cov, sharp, Pauli (landed)",
+   "spent": 4,
+   "lo": 0,
+   "hi": 0
+  },
+  {
+   "set": "c",
+   "item": "CBLoEq mass part (hB): engine+photon landed 4f0ad0d; L3-L6",
+   "spent": 2,
+   "lo": 4,
+   "hi": 7
+  },
+  {
+   "set": "c",
+   "item": "VP-share value identities (self-energy spectral route)",
+   "spent": 5,
+   "lo": 5,
+   "hi": 13
+  },
+  {
+   "set": "c",
+   "item": "regulator hReg: Stage L (L1 two-mass unit chain, L2 uniform bounds), Q1-Q4, measurability",
+   "spent": 6,
+   "lo": 10,
+   "hi": 25
+  },
+  {
+   "set": "d",
+   "item": "IBP certificate + I9 I13 I14 I16 I18 + I8 (landed)",
+   "spent": 55,
+   "lo": 0,
+   "hi": 0
+  },
+  {
+   "set": "d",
+   "item": "I2: P1 done (715f1e6); P2",
+   "spent": 7,
+   "lo": 2,
+   "hi": 5
+  },
+  {
+   "set": "d",
+   "item": "I5: K1 closed form, c2",
+   "spent": 5,
+   "lo": 5,
+   "hi": 10
+  },
+  {
+   "set": "d",
+   "item": "I12: r3, r4 (face T landed; bulk S open)",
+   "spent": 17,
+   "lo": 1,
+   "hi": 3
+  },
+  {
+   "set": "d",
+   "item": "I15: K4",
+   "spent": 6,
+   "lo": 2,
+   "hi": 4
+  },
+  {
+   "set": "d",
+   "item": "I3 via I3Rel + normalisation",
+   "spent": 2,
+   "lo": 2,
+   "hi": 4
+  },
+  {
+   "set": "d",
+   "item": "analytic layer: sector check (landed)",
+   "spent": 8,
+   "lo": 0,
+   "hi": 0
+  },
+  {
+   "set": "d",
+   "item": "DimReg (d): pilot reduction done; full cert needs {x8=0} face, local checker, syms",
+   "spent": 4,
+   "lo": 8,
+   "hi": 12
+  },
+  {
+   "set": "e",
+   "item": "f3c/f3j certificates + bridge to LR basis (landed)",
+   "spent": 6,
+   "lo": 0,
+   "hi": 0
+  },
+  {
+   "set": "e",
+   "item": "certificates: all 13 families landed",
+   "spent": 7,
+   "lo": 0,
+   "hi": 0
+  },
+  {
+   "set": "e",
+   "item": "extra LR masters: I17 done; I10 to K_a,K_2; I4 def+analytic (audit); I6 I7 I1 + I3",
+   "spent": 5,
+   "lo": 11,
+   "hi": 28
+  },
+  {
+   "set": "e",
+   "item": "analytic layer per family",
+   "spent": 0,
+   "lo": 8,
+   "hi": 20
+  },
+  {
+   "set": "e",
+   "item": "diagram expressions, projection, counterterms in d dims",
+   "spent": 0,
+   "lo": 8,
+   "hi": 20
+  },
+  {
+   "set": "asm",
+   "item": "frozen statements for (d), (e) and the total; author review",
+   "spent": 0,
+   "lo": 2,
+   "hi": 4
+  },
+  {
+   "set": "asm",
+   "item": "model link (plan 2026-11-22): generic 12-22, (d) bridge 20-36, (e) bridge 40-80, total 9-19",
+   "spent": 0,
+   "lo": 81,
+   "hi": 157
+  },
+  {
+   "set": "asm",
+   "item": "A1^(6) assembly (folded into model link total)",
+   "spent": 0,
+   "lo": 0,
+   "hi": 0
+  }
+ ],
+ "note": "Effort-weighted estimate, not a milestone count. Each item has worker-sessions spent and a lo-hi range for the remaining effort; completion = spent / (spent + midpoint remaining). Estimates are judgements and change as work reveals scope."
+}
