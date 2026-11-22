@@ -546,6 +546,13 @@ public import QED.ThreeLoopD.SetDMastersI2P0Lines
 public import QED.ThreeLoopD.SetDMastersI2P1ULines
 public import QED.ThreeLoopD.SetDMastersI2P0Val
 public import QED.ThreeLoopD.SetDMastersI2PDeriv
+public import QED.ThreeLoopD.SetDMastersI2P1UZ
+public import QED.ThreeLoopD.SetDMastersI2P1USub
+public import QED.ThreeLoopD.SetDMastersI2P1UTri
+public import QED.ThreeLoopD.SetDMastersI2P1UVal
+public import QED.ThreeLoopD.SetDMastersI2P1USig
+public import QED.ThreeLoopD.SetDMastersI2P1UTot
+public import QED.ThreeLoopD.SetDMastersI2P1Red
 public import QED.ThreeLoopD.SetDMastersI5Def
 public import QED.ThreeLoopD.SetDMastersI5Wire
 public import QED.ThreeLoopD.SetDMastersI5Tri
