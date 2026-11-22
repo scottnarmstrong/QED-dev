@@ -728,6 +728,8 @@ public import QED.ChainProof.SetAKSKUVBExp
 public import QED.ChainProof.SetAKSKUMass
 public import QED.ChainProof.SetAKSKUSum
 public import QED.ChainProof.SetAKSKUFlav
+public import QED.ChainProof.SetAKSKVCore
+public import QED.ChainProof.SetAKSKVPauli
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
