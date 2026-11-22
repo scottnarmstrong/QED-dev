@@ -223,6 +223,9 @@ public import QED.DimReg.ThreeLoopFaceThm
 public import QED.DimReg.ThreeLoopTmplLP
 public import QED.DimReg.ThreeLoopFaceHolo
 public import QED.DimReg.ThreeLoopTmplFar
+public import QED.DimReg.ThreeLoopRelFar
+public import QED.DimReg.ThreeLoopZero
+public import QED.DimReg.ThreeLoopPilot
 public import QED.DimReg.ThreeLoopPerm
 public import QED.DimReg.ThreeLoopLine
 public import QED.DimReg.ThreeLoopLineVal
