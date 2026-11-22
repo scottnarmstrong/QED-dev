@@ -1647,6 +1647,12 @@ public import QED.ChainProof.SetCMainBKKData
 public import QED.ChainProof.SetCMainBKKCov
 public import QED.ChainProof.SetCMainBKKCurve
 public import QED.ChainProof.SetCMainBKKPauli
+public import QED.ChainProof.SetCRegFront
+public import QED.ChainProof.SetCRegMainBDSum
+public import QED.ChainProof.SetCRegMainBDT
+public import QED.ChainProof.SetCRegMainBDKDesc
+public import QED.ChainProof.SetCRegMainBDK
+public import QED.ChainProof.SetCRegFinal
 public import QED.ChainProof.SetCUnitLimit
 public import QED.ChainProof.SetCUnitCov
 public import QED.ChainProof.SetCUnitPauli
