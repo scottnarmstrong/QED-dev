@@ -482,6 +482,10 @@ public import QED.ThreeLoopD.SetDMastersI13R4N
 public import QED.ThreeLoopD.SetDMastersI13R4F
 public import QED.ThreeLoopD.SetDMastersI13R4V
 public import QED.ThreeLoopD.SetDMastersI13R4S
+public import QED.ThreeLoopD.SetDMastersI5C1Jet
+public import QED.ThreeLoopD.SetDMastersI5C1Rad
+public import QED.ThreeLoopD.SetDMastersI5C1Prim
+public import QED.ThreeLoopD.SetDMastersI5C1Lim
 public import QED.ThreeLoopD.SetDMastersI13R4L
 public import QED.ThreeLoopD.SetDMastersI13R4
 public import QED.ThreeLoopE.SetEMastersCoeffsA
