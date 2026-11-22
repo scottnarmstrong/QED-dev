@@ -60,10 +60,10 @@
   },
   {
    "set": "c",
-   "item": "VP-share value identities (self-energy spectral route)",
-   "spent": 5,
-   "lo": 5,
-   "hi": 13
+   "item": "VP-share value identities (hS): SE limit explicit (c7523aa); b4 (sigma0, sigma1) left",
+   "spent": 6,
+   "lo": 3,
+   "hi": 8
   },
   {
    "set": "c",
@@ -151,10 +151,10 @@
   },
   {
    "set": "e",
-   "item": "extra LR masters: I17 done; I10 K_a done, K2 linear (1) + quadratic (~4) left; I4 P1 (1-2), P2 (2-4); I6 I7 I1 + I3",
-   "spent": 9,
-   "lo": 10,
-   "hi": 25
+   "item": "extra LR masters: I17 done; I10 K_a done, K2 linear (1) + quadratic (~4) left; I4 P1 reduced to one 4D integral (3-4), P2 (3-6); I6 I7 I1 + I3",
+   "spent": 10,
+   "lo": 12,
+   "hi": 28
   },
   {
    "set": "e",
