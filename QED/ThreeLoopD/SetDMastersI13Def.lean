@@ -12,7 +12,7 @@ public import Mathlib.Analysis.SpecialFunctions.Pow.Complex
 /-!
 # Set (d) of `A₁⁽⁶⁾`: the master `I₁₃`, defined through a representation analytic at `ε = 0`
 
-**The integral.** LR96's `I₁₃ = ∫ 1 / (D₄ D₅ D₇ D₈)` (Kira master `lbl[0,0,0,1,1,0,1,1,0]`;
+**The integral.** LR96's `I₁₃ = ∫ 1 / (D₁ D₂ D₄ D₅)` (Kira master `lbl[0,0,0,1,1,0,1,1,0]`;
 normalization as in `QED.DimReg.LR96Family`) is the three-loop equal-mass vacuum banana with four
 unit-mass lines. Pairing the lines into two one-loop bubbles with the same total momentum `q`,
 each bubble is `Γ(ε) b_ε(q²)` (`QED.DimReg.integral_massiveBubbleFamily_one`), with
@@ -108,7 +108,7 @@ noncomputable def i13Rem (ε : ℂ) : ℂ :=
 /-- **The continued radial integral** `T(ε) = ∫₀^∞ t ^ (1 - ε) b_ε(t)² dt`. -/
 noncomputable def i13T (ε : ℂ) : ℂ := i13Tail ε + i13Rem ε
 
-/-- `I₁₃` in LR96's normalization, `1 / (D₄ D₅ D₇ D₈)`: `π ^ (3ε) Γ(ε)² / Γ(2 - ε) T(ε)`, with
+/-- `I₁₃` in LR96's normalization, `1 / (D₁ D₂ D₄ D₅)`: `π ^ (3ε) Γ(ε)² / Γ(2 - ε) T(ε)`, with
 `T` continued by `QED.ThreeLoopD.i13T`. Each loop carries `QED.DimReg.lr96LoopFactor`. -/
 noncomputable def lr96I13 (ω : ℂ) : ℂ :=
   QED.DimReg.lr96LoopFactor (4 - 2 * ω) ^ 3 * (Gamma ω ^ 2 / Gamma (2 - ω) * i13T ω)

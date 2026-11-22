@@ -622,6 +622,8 @@ public import QED.ThreeLoopE.SetEMastersLaurent
 public import QED.ThreeLoopE.SetEMastersProductsA
 public import QED.ThreeLoopE.SetEMastersProductsB
 public import QED.ThreeLoopE.SetEMasters
+public import QED.ThreeLoopE.SetEMastersI17Def
+public import QED.ThreeLoopE.SetEMastersI17
 public import QED.ThreeLoopE.SetECertF3jFamily
 public import QED.ThreeLoopE.SetECertF3jData0
 public import QED.ThreeLoopE.SetECertF3jData1
