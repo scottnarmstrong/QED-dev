@@ -303,6 +303,11 @@ public import QED.ThreeLoopD.SetDMastersI12RSecondPt
 public import QED.ThreeLoopD.SetDMastersI12RSecondK
 public import QED.ThreeLoopD.SetDMastersI12RSecondT
 public import QED.ThreeLoopD.SetDMastersI12RSecondRA
+public import QED.ThreeLoopD.SetDMastersI12RSecondTri
+public import QED.ThreeLoopD.SetDMastersI12RSecondG
+public import QED.ThreeLoopD.SetDMastersI12RSecondRB
+public import QED.ThreeLoopD.SetDMastersI12RSecondPair
+public import QED.ThreeLoopD.SetDMastersI12RSecondGood
 public import QED.ThreeLoopD.SetDCertFamily
 public import QED.ThreeLoopD.SetDCertPilotData0
 public import QED.ThreeLoopD.SetDCertPilotData1
