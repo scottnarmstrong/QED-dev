@@ -600,6 +600,9 @@ public import QED.ChainProof.SetASpecUGCls
 public import QED.ChainProof.SetASpecUStar
 public import QED.ChainProof.SetANestP
 public import QED.ChainProof.SetANestSum
+public import QED.ChainProof.SetANestLRoute
+public import QED.ChainProof.SetANestLFubini
+public import QED.ChainProof.SetANestMatch
 public import QED.ChainProof.SetAPauliLinkGen
 public import QED.ChainProof.SetAPauliLink
 public import QED.ChainProof.SetALinkLoop
