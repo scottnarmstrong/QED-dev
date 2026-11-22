@@ -289,6 +289,8 @@ public import QED.ThreeLoopD.SetDCertPilotChain
 public import QED.ThreeLoopD.SetDCertPilot
 public import QED.ThreeLoopD.SetDMastersI13Def
 public import QED.ThreeLoopD.SetDMastersI13Wire
+public import QED.ThreeLoopD.SetDMastersI8Def
+public import QED.ThreeLoopD.SetDMastersI8Wire
 public import QED.ThreeLoopD.SetDMastersI13RemTaylor
 public import QED.ThreeLoopD.SetDMastersI13RemW
 public import QED.ThreeLoopD.SetDMastersI13RemFP
