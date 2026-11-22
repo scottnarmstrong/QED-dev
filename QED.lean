@@ -532,6 +532,14 @@ public import QED.ChainProof.SetAKSKBVDens
 public import QED.ChainProof.SetAKSKBMassNum
 public import QED.ChainProof.SetAKSKBMassLim
 public import QED.ChainProof.SetAKSKBMassVal
+public import QED.ChainProof.SetAKSKBNHom
+public import QED.ChainProof.SetAKSKBNCW
+public import QED.ChainProof.SetAKSKBNTr
+public import QED.ChainProof.SetAKSKBNHess
+public import QED.ChainProof.SetAKSKBNAlg
+public import QED.ChainProof.SetAKSKBNSlice
+public import QED.ChainProof.SetAKSKBNVA
+public import QED.ChainProof.SetAKSKBNVC
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
