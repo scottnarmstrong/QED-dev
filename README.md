@@ -31,7 +31,7 @@ $a_e$ is, why each loop order is harder, and how far the verification has come.
   done, working directly from the model. The light-by-light diagrams (6 diagrams) are about 78%
   done: most of their final integrals are proved equal to their published values, and the link
   back to the model is being designed. The diagrams without fermion loops (50 diagrams) are about
-  32% done: their final integrals are being evaluated. Overall, about 55% of the estimated work is
+  34% done: their final integrals are being evaluated. Overall, about 55% of the estimated work is
   done ([meter](#three-loop-effort-meter)).
   <!-- HQ:tlstatus:end -->
 
@@ -69,7 +69,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 3143. **Total lines of Lean code:** 1,066,555.
+**Tracked Lean source files:** 3146. **Total lines of Lean code:** 1,067,769.
 <!-- HQ:progress:end -->
 
 ### Three-loop effort meter
@@ -88,10 +88,10 @@ worker-sessions spent and a range for what is left, and
 | Set (a) | 53 | 0–0 | 100% | 100–100% | `████████████████████` |
 | Set (b) | 10 | 0–0 | 100% | 100–100% | `████████████████████` |
 | Set (c) | 71 | 10–24 | 81% | 75–88% | `████████████████░░░░` |
-| Set (d) | 104 | 20–38 | 78% | 73–84% | `████████████████░░░░` |
-| Set (e) | 23 | 28–68 | 32% | 25–45% | `██████░░░░░░░░░░░░░░` |
+| Set (d) | 105 | 20–38 | 78% | 73–84% | `████████████████░░░░` |
+| Set (e) | 24 | 27–66 | 34% | 27–47% | `███████░░░░░░░░░░░░░` |
 | Model link and assembly | 2 | 85–166 | 2% | 1–2% | `░░░░░░░░░░░░░░░░░░░░` |
-| **Total** | 263 | 143–296 | **55%** | 47–65% | `███████████░░░░░░░░░` |
+| **Total** | 265 | 142–294 | **55%** | 47–65% | `███████████░░░░░░░░░` |
 
 Open items (remaining range, part, item):
 
@@ -100,11 +100,11 @@ Open items (remaining range, part, item):
 - 4–11 (Set (c)): regulator hReg (a.e. route): crossed sector done; L/S/C reduced to the eight-line simplex; trace integrals, ladder/S/C bounds, assembly
 - 2–5 (Set (d)): I2: P1 done (715f1e6); P2
 - 5–10 (Set (d)): I5: K1 closed form, c2
-- 1–3 (Set (d)): I12: r3, r4 (face T landed; bulk S open)
+- 1–3 (Set (d)): I12: r3, r4 (face T landed; bulk S: U0-U2 closed forms e00db9d)
 - 2–4 (Set (d)): I15: K4, two weight-4 inner identities (hA1, hA23)
 - 2–4 (Set (d)): I3 via I3Rel + normalisation
 - 8–12 (Set (d)): DimReg (d): pilot reduction done; full cert needs {x8=0} face, local checker, syms
-- 12–28 (Set (e)): extra LR masters: I17 done; I10 K_a done, K2 linear (1) + quadratic (~4) left; I4 P1 reduced to one 4D integral (3-4), P2 (3-6); I6 I7 I1 + I3
+- 11–26 (Set (e)): extra LR masters: I17 done; I10 K_a, K2 linear done, K2 quadratic (~2) + assembly left; I4 P1 (3-4), P2 (3-6); I6 I7 I1 + I3
 - 8–20 (Set (e)): analytic layer per family
 - 8–20 (Set (e)): diagram expressions, projection, counterterms in d dims
 - 1–3 (Model link and assembly): frozen statements: (d) packet drafted and audited (all pass), awaiting author; (e), total drafts
