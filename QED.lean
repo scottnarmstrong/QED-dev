@@ -1699,6 +1699,11 @@ public import QED.ChainProof.SetCRegDispShellSEQBlk
 public import QED.ChainProof.SetCRegDispShellSEExp
 public import QED.ChainProof.SetCRegDispShellSERep
 public import QED.ChainProof.SetCRegDispShellSETail
+public import QED.ChainProof.SetCRegDispShellSEQTail
+public import QED.ChainProof.SetCRegDispShellSEForm
+public import QED.ChainProof.SetCRegDispShellSECt
+public import QED.ChainProof.SetCRegDispShellSESum
+public import QED.ChainProof.SetCRegDispShellSELimit
 public import QED.ChainProof.SetCPauliSum
 public import QED.ChainProof.SetCPauliSumReal
 public import QED.ChainProof.SetCPauliSumCB01

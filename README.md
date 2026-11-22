@@ -69,7 +69,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 3115. **Total lines of Lean code:** 1,058,678.
+**Tracked Lean source files:** 3120. **Total lines of Lean code:** 1,059,810.
 <!-- HQ:progress:end -->
 
 ### Three-loop effort meter
