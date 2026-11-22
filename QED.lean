@@ -713,6 +713,11 @@ public import QED.ChainProof.SetAKSKUVBDec
 public import QED.ChainProof.SetAKSKUVBLim
 public import QED.ChainProof.SetAKSKUVBDom
 public import QED.ChainProof.SetAKSKUVBRem
+public import QED.ChainProof.SetAKSKUVBDr
+public import QED.ChainProof.SetAKSKUVBExp
+public import QED.ChainProof.SetAKSKUMass
+public import QED.ChainProof.SetAKSKUSum
+public import QED.ChainProof.SetAKSKUFlav
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
