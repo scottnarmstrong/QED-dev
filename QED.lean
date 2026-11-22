@@ -543,6 +543,10 @@ public import QED.ChainProof.SetALinkInt
 public import QED.ChainProof.SetALinkIntP
 public import QED.ChainProof.SetALinkIntKind
 public import QED.ChainProof.SetALinkIntG
+public import QED.ChainProof.SetALinkIntFLines
+public import QED.ChainProof.SetALinkIntFTerm
+public import QED.ChainProof.SetALinkIntFAmp
+public import QED.ChainProof.SetALinkIntF
 public import QED.ChainProof.SetCLinkDisjoint
 public import QED.ChainProof.SetCLinkReps
 public import QED.ChainProof.SetCLinkShareTree
