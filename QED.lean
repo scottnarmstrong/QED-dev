@@ -232,6 +232,13 @@ public import QED.ThreeLoopD.SetDMastersI15KTaylor
 public import QED.ThreeLoopD.SetDMastersI15KOne
 public import QED.ThreeLoopD.SetDMastersI3Wire
 public import QED.ThreeLoopD.SetDMastersI3F
+public import QED.ThreeLoopD.SetDMastersI3FAnalytic
+public import QED.ThreeLoopD.SetDCertFamily
+public import QED.ThreeLoopD.SetDCertPilotData0
+public import QED.ThreeLoopD.SetDCertPilotData1
+public import QED.ThreeLoopD.SetDCertPilotData2
+public import QED.ThreeLoopD.SetDCertPilotChain
+public import QED.ThreeLoopD.SetDCertPilot
 public import QED.ThreeLoopD.SetDMastersI13Def
 public import QED.ThreeLoopD.SetDMastersI13Wire
 public import QED.ThreeLoopE.SetEMastersCoeffsA
@@ -250,6 +257,10 @@ public import QED.Algebra.IBPCertPoly
 public import QED.Algebra.IBPCertFamily
 public import QED.Algebra.IBPCertPilotData
 public import QED.Algebra.IBPCertPilot
+public import QED.Algebra.IBPCertLocal
+public import QED.Algebra.IBPCertEval
+public import QED.Algebra.IBPCertKron
+public import QED.Algebra.IBPCertSym
 public import QED.TwoLoop.WardIdentity
 public import QED.TwoLoop.LoopBoundTwoExact
 public import QED.TwoLoop.JointIntegralInvariance
