@@ -1057,6 +1057,8 @@ public import QED.ChainProof.SetCMainDPCurve
 public import QED.ChainProof.SetCMainDPauli
 public import QED.ChainProof.SetCMainBFub
 public import QED.ChainProof.SetCMainBClosed
+public import QED.ChainProof.SetCMainBWick
+public import QED.ChainProof.SetCMainBWickInt
 public import QED.ChainProof.SetCUnitLimit
 public import QED.ChainProof.SetCUnitCov
 public import QED.ChainProof.SetCUnitPauli
