@@ -507,6 +507,10 @@ public import QED.ChainProof.SetAKSKAFix
 public import QED.ChainProof.SetAKSKBTrace
 public import QED.ChainProof.SetAKSKBMerge
 public import QED.ChainProof.SetAKSKBPiece
+public import QED.ChainProof.SetAKSKBLeib
+public import QED.ChainProof.SetAKSKBQuart
+public import QED.ChainProof.SetAKSKBPos
+public import QED.ChainProof.SetAKSKBVDens
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
