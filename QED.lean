@@ -289,6 +289,10 @@ public import QED.ThreeLoopD.SetDMastersI12RestWire
 public import QED.ThreeLoopD.SetDMastersI12RPrim
 public import QED.ThreeLoopD.SetDMastersI12RFirst
 public import QED.ThreeLoopD.SetDMastersI12RSecondDeriv
+public import QED.ThreeLoopD.SetDMastersI12RSecondPt
+public import QED.ThreeLoopD.SetDMastersI12RSecondK
+public import QED.ThreeLoopD.SetDMastersI12RSecondT
+public import QED.ThreeLoopD.SetDMastersI12RSecondRA
 public import QED.ThreeLoopD.SetDCertFamily
 public import QED.ThreeLoopD.SetDCertPilotData0
 public import QED.ThreeLoopD.SetDCertPilotData1
