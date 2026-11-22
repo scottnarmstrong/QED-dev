@@ -30,10 +30,12 @@ import QED.Polylog.LiHalf
 `log s`, `log (1 - s)`, `log (1 + s)`, `log 2`, and `Ψ_c[P]` is the primitive of `f_c P` through
 harmonic polylogarithms (`QED.ThreeLoopD.i12TVPsi`). The polynomials were found by integrating by
 parts; `Φ' = J_3` is checked by `field_simp; ring` after the logarithms of `2s/(1 - s)`,
-`(1 + s)/(1 - s)` and of `φ(s)`, `1 ∓ φ(s)` are expanded. At the endpoints, `B` is a constant
-plus a combination of the atoms `QED.ThreeLoopD.i12TVZ` (at `0`) and `QED.ThreeLoopD.i12TVO`
-(at `1`), which tend to `0`: the poles of `Q₁/s` and `Q₂/(1 - s)` cancel against the vanishing
-combinations `log (1 - s) + s`, `log (1 + s) - s`, resp. `log s + (1 - s)`,
+`(1 + s)/(1 - s)` and of `φ(s)`, `1 ∓ φ(s)` are expanded. To keep this check cheap, the
+derivative of each polynomial is first split over its poles (`QED.ThreeLoopD.i12TVPolyD_eq`),
+and the polynomials stay folded while `field_simp` clears the denominators. At the endpoints,
+`B` is a constant plus a combination of the atoms `QED.ThreeLoopD.i12TVZ` (at `0`) and
+`QED.ThreeLoopD.i12TVO` (at `1`), which tend to `0`: the poles of `Q₁/s` and `Q₂/(1 - s)` cancel
+against the vanishing combinations `log (1 - s) + s`, `log (1 + s) - s`, resp. `log s + (1 - s)`,
 `log ((1 + s)/2) + (1 - s)/2`. The harmonic polylogarithm parts tend to `0` or to their values at
 `1` (`H(c · w; 1)`, first letter `0` or `-1`), which are the library values
 `QED.Polylog.HPL.hpl_zero_one_negOne_at_one` and its companions.
@@ -72,6 +74,36 @@ theorem i12TV_log_one_add_one_div_i12Rk {s : ℝ} (hs : s ∈ Ioo (0 : ℝ) 1) :
   rw [show 1 + 1 / i12Rk s = (1 + s) / (2 * s) by unfold i12Rk; field_simp; ring,
     log_div (by linarith [hs.1]) (by linarith [hs.1]), log_mul (by norm_num) hs.1.ne']
   ring
+
+/-! ### The derivative of a polynomial over its three poles -/
+
+/-- The part of `QED.ThreeLoopD.i12TVPolyD` with the pole at `0`, times `x`. -/
+noncomputable def i12TVPolyDa (P : List (ℝ × ℕ × ℕ × ℕ)) (x : ℝ) : ℝ :=
+  (P.map fun t => t.1 * ((t.2.1 : ℝ) * log x ^ (t.2.1 - 1) * (-log (1 - x)) ^ t.2.2.1 *
+      log (1 + x) ^ t.2.2.2)).sum
+
+/-- The part of `QED.ThreeLoopD.i12TVPolyD` with the pole at `1`, times `1 - x`. -/
+noncomputable def i12TVPolyDb (P : List (ℝ × ℕ × ℕ × ℕ)) (x : ℝ) : ℝ :=
+  (P.map fun t => t.1 * (log x ^ t.2.1 * ((t.2.2.1 : ℝ) * (-log (1 - x)) ^ (t.2.2.1 - 1)) *
+      log (1 + x) ^ t.2.2.2)).sum
+
+/-- The part of `QED.ThreeLoopD.i12TVPolyD` with the pole at `-1`, times `1 + x`. -/
+noncomputable def i12TVPolyDc (P : List (ℝ × ℕ × ℕ × ℕ)) (x : ℝ) : ℝ :=
+  (P.map fun t => t.1 * (log x ^ t.2.1 * (-log (1 - x)) ^ t.2.2.1 *
+      ((t.2.2.2 : ℝ) * log (1 + x) ^ (t.2.2.2 - 1)))).sum
+
+/-- `QED.ThreeLoopD.i12TVPolyD` with its three denominators pulled out, so that a derivative check
+clears only a few denominators before the polynomials are expanded. -/
+theorem i12TVPolyD_eq (P : List (ℝ × ℕ × ℕ × ℕ)) (x : ℝ) :
+    i12TVPolyD P x =
+      i12TVPolyDa P x / x + i12TVPolyDb P x / (1 - x) + i12TVPolyDc P x / (1 + x) := by
+  induction P with
+  | nil => simp [i12TVPolyD, i12TVPolyDa, i12TVPolyDb, i12TVPolyDc]
+  | cons t P ih =>
+    simp only [i12TVPolyD, i12TVPolyDa, i12TVPolyDb, i12TVPolyDc, List.map_cons,
+      List.sum_cons] at ih ⊢
+    rw [ih]
+    ring
 
 /-! ### The primitive -/
 
@@ -134,13 +166,16 @@ theorem hasDerivAt_i12TV3Phi {s : ℝ} (hs : s ∈ Ioo (0 : ℝ) 1) :
     (hasDerivAt_i12TVPsi negOne i12TV3Pm hs)).add (hasDerivAt_i12TVMob i12TV3P1 hs)
   convert h using 1
   · rfl
+  simp only [i12TVPolyD_eq, kernel_zero, kernel_negOne]
   simp only [i12TJ, i12TE, i12TeA, i12TeB, i12TPn, i12_log_i12Rk hs, i12TV_log_one_add_i12Rk hs,
     i12TV_log_one_div_i12Rk hs, i12TV_log_one_add_one_div_i12Rk hs]
-  simp only [i12TVPoly, i12TVPolyD, List.map_cons, List.map_nil, List.sum_cons, List.sum_nil,
-    i12TVMono_mobMap _ _ _ hs, i12TV3Q0, i12TV3Q1, i12TV3Q2, i12TV3P0, i12TV3Pm, i12TV3P1]
-  simp only [i12TVMono, kernel_zero, kernel_negOne, i12Rk, Nat.cast_ofNat, Nat.cast_zero,
-    Nat.cast_succ]
+  simp only [i12Rk, Nat.cast_ofNat, Nat.cast_zero, Nat.cast_succ]
   field_simp
+  simp only [i12TVPoly, i12TVPolyDa, i12TVPolyDb, i12TVPolyDc, List.map_cons, List.map_nil,
+    List.sum_cons, List.sum_nil, i12TVMono_mobMap _ _ _ hs,
+    i12TV3Q0, i12TV3Q1, i12TV3Q2, i12TV3P0, i12TV3Pm, i12TV3P1]
+  simp only [i12TVMono, Nat.cast_ofNat, Nat.cast_zero, Nat.cast_succ, Nat.reduceSub,
+    pow_zero, pow_one, mul_one, one_mul, mul_zero, zero_mul, add_zero, zero_add]
   ring
 
 /-! ### The endpoint limits -/

@@ -15,7 +15,9 @@ The primitive `Φ = B + Ψ₀[P₀] + Ψ₋₁[P₋₁] + Ψ₋₁[P₁] ∘ φ 
 check small, `J_4 = J_A + J_C + J_B` is split along its definition (`J_A` the part of `e_A`,
 `J_C` the first term of the part of `e_B`, `J_B` the rest), and `Φ = Φ_A + Φ_C + Φ_B` with
 `Φ_A' = J_A`, `Φ_C' = J_C`, `Φ_B' = J_B` (the coefficients of `Φ_A`, `Φ_C` from integrating by
-parts, those of `Φ_B` the differences); each derivative is checked by `field_simp; ring`.
+parts, those of `Φ_B` the differences); each derivative is checked by `field_simp; ring`, with
+the polynomials folded while `field_simp` clears the denominators
+(`QED.ThreeLoopD.i12TVPolyD_eq`).
 
 ## Main results
 
@@ -385,13 +387,15 @@ theorem hasDerivAt_i12TV4PhiA {s : ℝ} (hs : s ∈ Ioo (0 : ℝ) 1) :
     (hasDerivAt_i12TVPsi negOne i12TV4PmA hs)).add (hasDerivAt_i12TVMob i12TV4P1A hs)
   convert h using 1
   · rfl
+  simp only [i12TVPolyD_eq, kernel_zero, kernel_negOne]
   simp only [i12TV4JA, i12TE, i12TeA, i12TPn, i12_log_i12Rk hs, i12TV_log_one_add_i12Rk hs]
-  simp only [i12TVPoly, i12TVPolyD, List.map_cons, List.map_nil, List.sum_cons, List.sum_nil,
-    i12TVMono_mobMap _ _ _ hs,
-    i12TV4Q0A, i12TV4Q1A, i12TV4Q2A, i12TV4P0A, i12TV4PmA, i12TV4P1A]
-  simp only [i12TVMono, kernel_zero, kernel_negOne, i12Rk, Nat.cast_ofNat, Nat.cast_zero,
-    Nat.cast_succ]
+  simp only [i12Rk, Nat.cast_ofNat, Nat.cast_zero, Nat.cast_succ]
   field_simp
+  simp only [i12TVPoly, i12TVPolyDa, i12TVPolyDb, i12TVPolyDc, List.map_cons, List.map_nil,
+    List.sum_cons, List.sum_nil, i12TVMono_mobMap _ _ _ hs,
+    i12TV4Q0A, i12TV4Q1A, i12TV4Q2A, i12TV4P0A, i12TV4PmA, i12TV4P1A]
+  simp only [i12TVMono, Nat.cast_ofNat, Nat.cast_zero, Nat.cast_succ, Nat.reduceSub,
+    pow_zero, pow_one, mul_one, one_mul, mul_zero, zero_mul, add_zero, zero_add]
   ring
 
 /-- **`ΦC' = JC` on `(0, 1)`.** -/
@@ -407,14 +411,16 @@ theorem hasDerivAt_i12TV4PhiC {s : ℝ} (hs : s ∈ Ioo (0 : ℝ) 1) :
     (hasDerivAt_i12TVPsi negOne i12TV4PmC hs)).add (hasDerivAt_i12TVMob i12TV4P1C hs)
   convert h using 1
   · rfl
+  simp only [i12TVPolyD_eq, kernel_zero, kernel_negOne]
   simp only [i12TV4JC, i12TeB, i12TPn, i12TV_log_one_div_i12Rk hs,
     i12TV_log_one_add_one_div_i12Rk hs]
-  simp only [i12TVPoly, i12TVPolyD, List.map_cons, List.map_nil, List.sum_cons, List.sum_nil,
-    i12TVMono_mobMap _ _ _ hs,
-    i12TV4Q0C, i12TV4Q1C, i12TV4Q2C, i12TV4P0C, i12TV4PmC, i12TV4P1C]
-  simp only [i12TVMono, kernel_zero, kernel_negOne, i12Rk, Nat.cast_ofNat, Nat.cast_zero,
-    Nat.cast_succ]
+  simp only [i12Rk, Nat.cast_ofNat, Nat.cast_zero, Nat.cast_succ]
   field_simp
+  simp only [i12TVPoly, i12TVPolyDa, i12TVPolyDb, i12TVPolyDc, List.map_cons, List.map_nil,
+    List.sum_cons, List.sum_nil, i12TVMono_mobMap _ _ _ hs,
+    i12TV4Q0C, i12TV4Q1C, i12TV4Q2C, i12TV4P0C, i12TV4PmC, i12TV4P1C]
+  simp only [i12TVMono, Nat.cast_ofNat, Nat.cast_zero, Nat.cast_succ, Nat.reduceSub,
+    pow_zero, pow_one, mul_one, one_mul, mul_zero, zero_mul, add_zero, zero_add]
   ring
 
 /-- **`ΦB' = JB` on `(0, 1)`.** -/
@@ -430,13 +436,15 @@ theorem hasDerivAt_i12TV4PhiB {s : ℝ} (hs : s ∈ Ioo (0 : ℝ) 1) :
     (hasDerivAt_i12TVPsi negOne i12TV4PmB hs)).add (hasDerivAt_i12TVMob i12TV4P1B hs)
   convert h using 1
   · rfl
+  simp only [i12TVPolyD_eq, kernel_zero, kernel_negOne]
   simp only [i12TV4JB, i12TeB, i12TPn, i12TV_log_one_div_i12Rk hs]
-  simp only [i12TVPoly, i12TVPolyD, List.map_cons, List.map_nil, List.sum_cons, List.sum_nil,
-    i12TVMono_mobMap _ _ _ hs,
-    i12TV4Q0B, i12TV4Q1B, i12TV4Q2B, i12TV4P0B, i12TV4PmB, i12TV4P1B]
-  simp only [i12TVMono, kernel_zero, kernel_negOne, i12Rk, Nat.cast_ofNat, Nat.cast_zero,
-    Nat.cast_succ]
+  simp only [i12Rk, Nat.cast_ofNat, Nat.cast_zero, Nat.cast_succ]
   field_simp
+  simp only [i12TVPoly, i12TVPolyDa, i12TVPolyDb, i12TVPolyDc, List.map_cons, List.map_nil,
+    List.sum_cons, List.sum_nil, i12TVMono_mobMap _ _ _ hs,
+    i12TV4Q0B, i12TV4Q1B, i12TV4Q2B, i12TV4P0B, i12TV4PmB, i12TV4P1B]
+  simp only [i12TVMono, Nat.cast_ofNat, Nat.cast_zero, Nat.cast_succ, Nat.reduceSub,
+    pow_zero, pow_one, mul_one, one_mul, mul_zero, zero_mul, add_zero, zero_add]
   ring
 
 theorem i12TV4Phi_eq :

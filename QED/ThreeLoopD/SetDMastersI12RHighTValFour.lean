@@ -34,7 +34,9 @@ As for order three (`QED.ThreeLoopD.SetDMastersI12RHighTValThree`), with the pri
 the elementary part `B` is a constant plus a combination of the atoms `QED.ThreeLoopD.i12TVZ`
 (at `0`) and `QED.ThreeLoopD.i12TVO` (at `1`), which tend to `0`, and the harmonic
 polylogarithm parts tend to `0` or to the library values at `1` (weight at most five; the
-values of `Li₄(1/2)` and `Li₅(1/2)` cancel).
+values of `Li₄(1/2)` and `Li₅(1/2)` cancel). The endpoint identities for `B` are checked after
+multiplying by the denominators of the atoms (`QED.ThreeLoopD.i12TVZs_mul`,
+`QED.ThreeLoopD.i12TVOs_mul`), so that `field_simp` only meets the folded polynomials.
 
 ## Main results
 
@@ -48,6 +50,46 @@ open Real Set Filter Topology MeasureTheory
 open QED.Polylog QED.Polylog.HPL QED.Polylog.HPL.Letter
 
 namespace QED.ThreeLoopD
+
+/-! ### Clearing the denominators of the endpoint atoms -/
+
+/-- `QED.ThreeLoopD.i12TVZs L s` times `sᴺ (1 - s)ᴳ`, as a polynomial expression. -/
+noncomputable def i12TVZsNum (N G : ℕ) (L : List (ℝ × ℕ × ℕ × ℕ × ℕ × ℕ × ℕ)) (s : ℝ) : ℝ :=
+  (L.map fun t => t.1 * (log s ^ t.2.1 * (log (1 - s) + s) ^ t.2.2.1 *
+    (log (1 + s) - s) ^ t.2.2.2.1 * s ^ t.2.2.2.2.1 * s ^ (N - t.2.2.2.2.2.1) *
+    (1 - s) ^ (G - t.2.2.2.2.2.2))).sum
+
+/-- `QED.ThreeLoopD.i12TVOs L s` times `(1 - s)ᴺ sᴳ`, as a polynomial expression. -/
+noncomputable def i12TVOsNum (N G : ℕ) (L : List (ℝ × ℕ × ℕ × ℕ × ℕ × ℕ × ℕ)) (s : ℝ) : ℝ :=
+  (L.map fun t => t.1 * (log (1 - s) ^ t.2.1 * (log s + (1 - s)) ^ t.2.2.1 *
+    (log (1 + s) - log 2 + (1 - s) / 2) ^ t.2.2.2.1 * (1 - s) ^ t.2.2.2.2.1 *
+    (1 - s) ^ (N - t.2.2.2.2.2.1) * s ^ (G - t.2.2.2.2.2.2))).sum
+
+theorem i12TVZs_mul (N G : ℕ) (L : List (ℝ × ℕ × ℕ × ℕ × ℕ × ℕ × ℕ)) {s : ℝ} (hs0 : s ≠ 0)
+    (h1s : 1 - s ≠ 0)
+    (hL : (L.map Prod.snd).all (fun x => decide (x.2.2.2.2.1 ≤ N ∧ x.2.2.2.2.2 ≤ G)) = true) :
+    i12TVZs L s * (s ^ N * (1 - s) ^ G) = i12TVZsNum N G L s := by
+  induction L with
+  | nil => simp [i12TVZs, i12TVZsNum]
+  | cons t L ih =>
+    simp only [List.map_cons, List.all_cons, Bool.and_eq_true, decide_eq_true_eq] at hL
+    simp only [i12TVZs, i12TVZsNum, List.map_cons, List.sum_cons] at ih ⊢
+    rw [add_mul, ih hL.2, pow_sub₀ s hs0 hL.1.1, pow_sub₀ (1 - s) h1s hL.1.2, i12TVZ, inv_pow,
+      inv_pow]
+    ring
+
+theorem i12TVOs_mul (N G : ℕ) (L : List (ℝ × ℕ × ℕ × ℕ × ℕ × ℕ × ℕ)) {s : ℝ} (hs0 : s ≠ 0)
+    (h1s : 1 - s ≠ 0)
+    (hL : (L.map Prod.snd).all (fun x => decide (x.2.2.2.2.1 ≤ N ∧ x.2.2.2.2.2 ≤ G)) = true) :
+    i12TVOs L s * ((1 - s) ^ N * s ^ G) = i12TVOsNum N G L s := by
+  induction L with
+  | nil => simp [i12TVOs, i12TVOsNum]
+  | cons t L ih =>
+    simp only [List.map_cons, List.all_cons, Bool.and_eq_true, decide_eq_true_eq] at hL
+    simp only [i12TVOs, i12TVOsNum, List.map_cons, List.sum_cons] at ih ⊢
+    rw [add_mul, ih hL.2, pow_sub₀ (1 - s) h1s hL.1.1, pow_sub₀ s hs0 hL.1.2, i12TVO, inv_pow,
+      inv_pow]
+    ring
 
 /-! ### The endpoint limits -/
 
@@ -265,11 +307,13 @@ theorem i12TV4B_eq_zero {s : ℝ} (hs : s ∈ Ioo (0 : ℝ) 1) :
       i12TVZs i12TV4Z s := by
   have hs0 : s ≠ 0 := hs.1.ne'
   have h1s : 1 - s ≠ 0 := by linarith [hs.2]
-  simp only [i12TV4B, i12TVZs, i12TVPoly, i12TVZ, i12TVMono,
-    List.map_cons, List.map_nil, List.sum_cons,
-    List.sum_nil, List.map_append, List.sum_append,
-    i12TV4Q0, i12TV4Q1, i12TV4Q2, i12TV4Z_1, i12TV4Z_2, i12TV4Z_3, i12TV4Z_4, i12TV4Z_5, i12TV4Z]
+  rw [← mul_left_inj' (mul_ne_zero (pow_ne_zero 1 hs0) (pow_ne_zero 1 h1s)), add_mul,
+    i12TVZs_mul 1 1 _ hs0 h1s (by decide +kernel), i12TV4B]
   field_simp
+  simp only [i12TVZsNum, i12TVPoly, i12TVMono, List.map_cons, List.map_nil, List.sum_cons,
+    List.sum_nil, List.map_append, List.sum_append,
+    i12TV4Q0, i12TV4Q1, i12TV4Q2, i12TV4Z_1, i12TV4Z_2, i12TV4Z_3, i12TV4Z_4, i12TV4Z_5, i12TV4Z,
+    Nat.reduceSub, pow_zero, pow_one, mul_one, one_mul]
   ring
 
 /-- The atoms at `1` of the part 0 of `B`. -/
@@ -390,10 +434,13 @@ theorem i12TV4B1_eq_one {{s : ℝ}} (hs : s ∈ Ioo (0 : ℝ) 1) :
       i12TVOs i12TV4O1 s := by
   have hs0 : s ≠ 0 := hs.1.ne'
   have h1s : 1 - s ≠ 0 := by linarith [hs.2]
-  simp only [i12TVOs, i12TVPoly, i12TVO, i12TVMono, List.map_cons, List.map_nil, List.sum_cons,
-    List.sum_nil, List.map_append, List.sum_append,
-    i12TV4Q1, i12TV4O1_1, i12TV4O1_2, i12TV4O1_3, i12TV4O1_4, i12TV4O1]
+  rw [← mul_left_inj' (mul_ne_zero (pow_ne_zero 1 h1s) (pow_ne_zero 1 hs0)), add_mul,
+    i12TVOs_mul 1 1 _ hs0 h1s (by decide +kernel)]
   field_simp
+  simp only [i12TVOsNum, i12TVPoly, i12TVMono, List.map_cons, List.map_nil, List.sum_cons,
+    List.sum_nil, List.map_append, List.sum_append,
+    i12TV4Q1, i12TV4O1_1, i12TV4O1_2, i12TV4O1_3, i12TV4O1_4, i12TV4O1,
+    Nat.reduceSub, pow_zero, pow_one, mul_one, one_mul]
   ring
 
 /-- The atoms at `1` of the part 2 of `B`. (part 1) -/
@@ -442,10 +489,13 @@ theorem i12TV4B2_eq_one {{s : ℝ}} (hs : s ∈ Ioo (0 : ℝ) 1) :
       i12TVOs i12TV4O2 s := by
   have hs0 : s ≠ 0 := hs.1.ne'
   have h1s : 1 - s ≠ 0 := by linarith [hs.2]
-  simp only [i12TVOs, i12TVPoly, i12TVO, i12TVMono, List.map_cons, List.map_nil, List.sum_cons,
-    List.sum_nil, List.map_append, List.sum_append,
-    i12TV4Q2, i12TV4O2_1, i12TV4O2_2, i12TV4O2]
+  rw [← mul_left_inj' (mul_ne_zero (pow_ne_zero 1 h1s) (pow_ne_zero 1 hs0)), add_mul,
+    i12TVOs_mul 1 1 _ hs0 h1s (by decide +kernel)]
   field_simp
+  simp only [i12TVOsNum, i12TVPoly, i12TVMono, List.map_cons, List.map_nil, List.sum_cons,
+    List.sum_nil, List.map_append, List.sum_append,
+    i12TV4Q2, i12TV4O2_1, i12TV4O2_2, i12TV4O2,
+    Nat.reduceSub, pow_zero, pow_one, mul_one, one_mul]
   ring
 
 theorem i12TV4B_eq_one {{s : ℝ}} (hs : s ∈ Ioo (0 : ℝ) 1) :
