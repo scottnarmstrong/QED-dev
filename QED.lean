@@ -1145,6 +1145,12 @@ public import QED.ChainProof.SetAKSKWAsmVal
 public import QED.ChainProof.SetAKSKWAsmInt
 public import QED.ChainProof.SetAKSKWAsmA
 public import QED.ChainProof.SetAKSKWAsmTot
+public import QED.ChainProof.SetAKSKWAsmBGen
+public import QED.ChainProof.SetAKSKWAsmBNode
+public import QED.ChainProof.SetAKSKWAsmBDisp
+public import QED.ChainProof.SetAKSKWAsmBVal
+public import QED.ChainProof.SetAKSKWAsmBInt
+public import QED.ChainProof.SetAKSKWAsmBTot
 public import QED.ChainProof.SetAKSKWRhoX
 public import QED.ChainProof.SetAKSKWRhoU
 public import QED.ChainProof.SetAKSKWRhoA
