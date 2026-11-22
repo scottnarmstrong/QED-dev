@@ -250,6 +250,7 @@ public import QED.ThreeLoopD.SetDMastersI15KValPrim
 public import QED.ThreeLoopD.SetDMastersI15KValTwoA
 public import QED.ThreeLoopD.SetDMastersI15KValTwoB
 public import QED.ThreeLoopD.SetDMastersI15KValTwo
+public import QED.ThreeLoopD.SetDMastersI15KValThreeA
 public import QED.ThreeLoopD.SetDMastersI3Wire
 public import QED.ThreeLoopD.SetDMastersI3F
 public import QED.ThreeLoopD.SetDMastersI3FAnalytic
@@ -687,6 +688,12 @@ public import QED.ChainProof.SetANestLBubble
 public import QED.ChainProof.SetANestLGen
 public import QED.ChainProof.SetANestLGW
 public import QED.ChainProof.SetANestLGU
+public import QED.ChainProof.SetANestLFBoundTime
+public import QED.ChainProof.SetANestLFBoundPV
+public import QED.ChainProof.SetANestLFBound
+public import QED.ChainProof.SetANestLFA
+public import QED.ChainProof.SetANestLFB
+public import QED.ChainProof.SetANestLFNested
 public import QED.ChainProof.SetANestVShell
 public import QED.ChainProof.SetANestVPiece
 public import QED.ChainProof.SetANestVRB
