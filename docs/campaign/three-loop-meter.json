@@ -74,10 +74,10 @@
   },
   {
    "set": "c",
-   "item": "regulator hReg (a.e. route): crossed sector done; L/S/C recursive reduction, ladder/S/C bounds, assembly",
-   "spent": 11,
-   "lo": 5,
-   "hi": 13
+   "item": "regulator hReg (a.e. route): crossed sector done; L/S/C reduced to the eight-line simplex; trace integrals, ladder/S/C bounds, assembly",
+   "spent": 12,
+   "lo": 4,
+   "hi": 11
   },
   {
    "set": "d",
@@ -172,7 +172,7 @@
   },
   {
    "set": "asm",
-   "item": "frozen statements for (d), (e) and the total: (d) packet drafted, in audit; author review",
+   "item": "frozen statements: (d) packet drafted and audited (all pass), awaiting author; (e), total drafts",
    "spent": 1,
    "lo": 1,
    "hi": 3
