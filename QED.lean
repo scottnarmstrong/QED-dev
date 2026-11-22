@@ -1800,6 +1800,15 @@ public import QED.ChainProof.SetCMainBKKPauli
 public import QED.ChainProof.SetCRegFront
 public import QED.ChainProof.SetCRegMainBDSum
 public import QED.ChainProof.SetCRegMainBDT
+public import QED.ChainProof.SetCRegDispShellTailQ
+public import QED.ChainProof.SetCRegDispShellYId
+public import QED.ChainProof.SetCRegDispShellQBnd
+public import QED.ChainProof.SetCRegDispShellCovU
+public import QED.ChainProof.SetCRegDispShellCovX
+public import QED.ChainProof.SetCRegDispShellCovD
+public import QED.ChainProof.SetCRegDispShellCovS
+public import QED.ChainProof.SetCRegDispShellCovV
+public import QED.ChainProof.SetCRegDispShellCovHS
 public import QED.ChainProof.SetCRegMainBDKDesc
 public import QED.ChainProof.SetCRegMainBDK
 public import QED.ChainProof.SetCRegLongShare

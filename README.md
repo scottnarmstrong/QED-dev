@@ -28,7 +28,7 @@ $a_e$ is, why each loop order is harder, and how far the verification has come.
   five groups. Two groups are proved: the two-loop vacuum-polarization insertion (3 diagrams) and
   the chain of two one-loop bubbles (1 diagram). The vacuum-polarization insertion in the two-loop
   vertex (12 diagrams) is about 82% done, working directly from the model. The light-by-light
-  diagrams (6 diagrams) are about 81% done: their exact Lean statements are frozen, most of their
+  diagrams (6 diagrams) are about 82% done: their exact Lean statements are frozen, most of their
   final integrals are proved equal to their published values, and the link back to the model is
   being built. The diagrams without fermion loops (50 diagrams) are about 36% done: their final
   integrals are being evaluated. Overall, about 57% of the estimated work is done
@@ -69,7 +69,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 3191. **Total lines of Lean code:** 1,085,832.
+**Tracked Lean source files:** 3200. **Total lines of Lean code:** 1,088,105.
 <!-- HQ:progress:end -->
 
 ### Three-loop effort meter
@@ -88,10 +88,10 @@ worker-sessions spent and a range for what is left, and
 | Set (a) | 53 | 0–0 | 100% | 100–100% | `████████████████████` |
 | Set (b) | 10 | 0–0 | 100% | 100–100% | `████████████████████` |
 | Set (c) | 72 | 9–22 | 82% | 77–89% | `████████████████░░░░` |
-| Set (d) | 108 | 17–33 | 81% | 77–86% | `████████████████░░░░` |
+| Set (d) | 109 | 17–32 | 82% | 77–87% | `████████████████░░░░` |
 | Set (e) | 25 | 25–62 | 36% | 29–50% | `███████░░░░░░░░░░░░░` |
 | Model link and assembly | 5 | 83–162 | 4% | 3–6% | `█░░░░░░░░░░░░░░░░░░░` |
-| **Total** | 273 | 134–279 | **57%** | 49–67% | `███████████░░░░░░░░░` |
+| **Total** | 274 | 134–278 | **57%** | 50–67% | `███████████░░░░░░░░░` |
 
 Open items (remaining range, part, item):
 
@@ -99,7 +99,7 @@ Open items (remaining range, part, item):
 - 3–8 (Set (c)): VP-share value identities (hS): SE limit explicit (c7523aa); b4 (sigma0, sigma1) left
 - 3–9 (Set (c)): regulator hReg (a.e. route): crossed done; ladder reduced, centered bound, charge term; radial link, heavy log, S/C, assembly
 - 2–5 (Set (d)): I2: P1 done (715f1e6); P2
-- 2–5 (Set (d)): I5: K1 primitive P_B proved (33c201c); endpoint limits + FTC, i5RemCoeff_one; c2
+- 2–4 (Set (d)): I5: c0, c1 done (b21979d); c2 (weight 5) left
 - 1–3 (Set (d)): I12: r3, r4 (face T landed; bulk S: U0-U2 closed forms e00db9d)
 - 2–4 (Set (d)): I15: K4, A1 slice evaluated (coefficient replay left), A23 endpoint calculus + replay
 - 2–4 (Set (d)): I3 via I3Rel + normalisation

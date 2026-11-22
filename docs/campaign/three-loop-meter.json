@@ -95,10 +95,10 @@
   },
   {
    "set": "d",
-   "item": "I5: K1 primitive P_B proved (33c201c); endpoint limits + FTC, i5RemCoeff_one; c2",
-   "spent": 7,
+   "item": "I5: c0, c1 done (b21979d); c2 (weight 5) left",
+   "spent": 8,
    "lo": 2,
-   "hi": 5
+   "hi": 4
   },
   {
    "set": "d",
