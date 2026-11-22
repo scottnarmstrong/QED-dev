@@ -1746,6 +1746,10 @@ public import QED.ChainProof.SetCRegXIntegral
 public import QED.ChainProof.SetCRegXScale
 public import QED.ChainProof.SetCRegBndShell
 public import QED.ChainProof.SetCRegBndCoincidence
+public import QED.ChainProof.SetCRegBndAE
+public import QED.ChainProof.SetCRegBndTail
+public import QED.ChainProof.SetCRegBndDeriv
+public import QED.ChainProof.SetCRegBndTailWeights
 public import QED.ChainProof.SetCRegFinal
 public import QED.ChainProof.SetCRegPieceE
 public import QED.ChainProof.SetCUnitLimit
