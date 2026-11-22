@@ -352,6 +352,10 @@ public import QED.ThreeLoopD.SetDMastersI12RHighSRefl
 public import QED.ThreeLoopD.SetDMastersI12RHighSCov
 public import QED.ThreeLoopD.SetDMastersI12RHighTPt
 public import QED.ThreeLoopD.SetDMastersI12RHighTRed
+public import QED.ThreeLoopD.SetDMastersI12RHighTValGen
+public import QED.ThreeLoopD.SetDMastersI12RHighTValThree
+public import QED.ThreeLoopD.SetDMastersI12RHighTValFourPrim
+public import QED.ThreeLoopD.SetDMastersI12RHighTValFour
 public import QED.ThreeLoopD.SetDCertFamily
 public import QED.ThreeLoopD.SetDCertPilotData0
 public import QED.ThreeLoopD.SetDCertPilotData1
