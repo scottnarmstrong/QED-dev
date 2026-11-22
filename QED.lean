@@ -753,6 +753,12 @@ public import QED.ChainProof.SetCPauliLink
 public import QED.ChainProof.SetCMirror
 public import QED.ChainProof.SetCCovClasses
 public import QED.ChainProof.SetCLimCtS
+public import QED.ChainProof.SetCLimCtKind
+public import QED.ChainProof.SetCLimCtD
+public import QED.ChainProof.SetCLimCtCDAmp
+public import QED.ChainProof.SetCLimCtCDNum
+public import QED.ChainProof.SetCLimCtCDPiece
+public import QED.ChainProof.SetCLimCtCD01
 public import QED.ChainProof.SetCUnitLimit
 public import QED.ChainProof.SetCUnitCov
 public import QED.ChainProof.SetCUnitPauli
