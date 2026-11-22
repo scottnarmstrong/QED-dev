@@ -214,6 +214,8 @@ public import QED.DimReg.CpowHolder
 public import QED.ThreeLoopD.SetDMastersI9Def
 public import QED.ThreeLoopD.SetDMastersI9Bounds
 public import QED.ThreeLoopD.SetDMastersI9Analytic
+public import QED.ThreeLoopD.SetDMastersI9Strip
+public import QED.ThreeLoopD.SetDMastersI9Gamma
 public import QED.DimReg.BetaPrimeNested
 public import QED.DimReg.MasslessBubble
 public import QED.DimReg.VacuumTwoMass
