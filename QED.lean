@@ -703,6 +703,7 @@ public import QED.ChainProof.SetANestedAtVal
 public import QED.ChainProof.SetAPhotonReg
 public import QED.ChainProof.SetAPauliAssembly
 public import QED.ChainProof.SetAPauliAssemblyR
+public import QED.ChainProof.SetARegLim
 public import QED.ChainProof.SetALinkLoop
 public import QED.ChainProof.SetALinkDisjoint
 public import QED.ChainProof.SetALinkReps
