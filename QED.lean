@@ -1767,6 +1767,12 @@ public import QED.ChainProof.SetCRegBndAE
 public import QED.ChainProof.SetCRegBndTail
 public import QED.ChainProof.SetCRegBndDeriv
 public import QED.ChainProof.SetCRegBndTailWeights
+public import QED.ChainProof.SetCRegBndSpectral
+public import QED.ChainProof.SetCRegBndMain
+public import QED.ChainProof.SetCRegBndChain
+public import QED.ChainProof.SetCRegBndRadial
+public import QED.ChainProof.SetCRegBndSoft
+public import QED.ChainProof.SetCRegBndEndpoints
 public import QED.ChainProof.SetCRegFinal
 public import QED.ChainProof.SetCRegPieceE
 public import QED.ChainProof.SetCUnitLimit
