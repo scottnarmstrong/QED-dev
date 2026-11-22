@@ -1008,6 +1008,10 @@ public import QED.ChainProof.SetAKSKWAsmVal
 public import QED.ChainProof.SetAKSKWAsmInt
 public import QED.ChainProof.SetAKSKWAsmA
 public import QED.ChainProof.SetAKSKWAsmTot
+public import QED.ChainProof.SetAKSKWRhoX
+public import QED.ChainProof.SetAKSKWRhoU
+public import QED.ChainProof.SetAKSKWRhoA
+public import QED.ChainProof.SetAKSKWRhoInt
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay

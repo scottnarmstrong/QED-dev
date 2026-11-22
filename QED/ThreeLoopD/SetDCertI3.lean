@@ -18,8 +18,8 @@ import Mathlib.Tactic.LinearCombination
 
 The label-split certificate of `QED.Algebra.IBPCertSector` reduces the dotted integral
 `[1, 0, 1, 1, 1, 0, 1, 2, 0]` of `QED.ThreeLoopD.SetDCert.lbl` (`sdTarget`; up to a common
-normalization, the integral `F` of `QED.ThreeLoopD.SetDMasters.I3Rel`) to the five Laporta–Remiddi masters
-`I₃, I₁₂, I₁₃, I₁₄, I₁₈`, `QED.ThreeLoopD.SetDCertI3.sdMasters`, with the IBP
+normalization, the integral `F` of `QED.ThreeLoopD.SetDMasters.I3Rel`) to the five
+Laporta–Remiddi masters `I₃, I₁₂, I₁₃, I₁₄, I₁₈`, `QED.ThreeLoopD.SetDCertI3.sdMasters`, with the IBP
 relations, the scaleless sectors and the relabelling symmetries `I(permLabel σ ν) = I(ν)` of the
 entries of `QED.ThreeLoopD.SetDCertI3.sdSyms` (one per IBP master in a copy of a sector, or
 second master of a sector). The checker reduces to a master list `sdMs` holding the masters and
