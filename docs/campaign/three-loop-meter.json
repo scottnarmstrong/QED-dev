@@ -151,10 +151,10 @@
   },
   {
    "set": "e",
-   "item": "extra LR masters: I17 done; I10 3 evaluations left; I4 P1 (1-2), P2 (2-4); I6 I7 I1 + I3",
-   "spent": 8,
-   "lo": 11,
-   "hi": 27
+   "item": "extra LR masters: I17 done; I10 K_a done, K2 linear (1) + quadratic (~4) left; I4 P1 (1-2), P2 (2-4); I6 I7 I1 + I3",
+   "spent": 9,
+   "lo": 10,
+   "hi": 25
   },
   {
    "set": "e",

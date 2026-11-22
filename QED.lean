@@ -686,6 +686,8 @@ public import QED.ThreeLoopE.SetEMastersI10K2Psi
 public import QED.ThreeLoopE.SetEMastersI10K2UMoments
 public import QED.ThreeLoopE.SetEMastersI10K2Join
 public import QED.ThreeLoopE.SetEMastersI10LogMoment
+public import QED.ThreeLoopE.SetEMastersI10KaMoments
+public import QED.ThreeLoopE.SetEMastersI10K2Inner
 public import QED.ThreeLoopE.SetEMastersI4Def
 public import QED.ThreeLoopE.SetEMastersI4Gauge
 public import QED.ThreeLoopE.SetEMastersI4P1Red
