@@ -209,6 +209,11 @@ public import QED.ThreeLoopD.SetDMasters
 public import QED.ThreeLoopD.SetDMastersGamma
 public import QED.DimReg.GammaTaylor
 public import QED.ThreeLoopD.SetDMastersGamma2
+public import QED.DimReg.FeynmanJoin
+public import QED.DimReg.CpowHolder
+public import QED.ThreeLoopD.SetDMastersI9Def
+public import QED.ThreeLoopD.SetDMastersI9Bounds
+public import QED.ThreeLoopD.SetDMastersI9Analytic
 public import QED.DimReg.BetaPrimeNested
 public import QED.DimReg.MasslessBubble
 public import QED.DimReg.VacuumTwoMass
