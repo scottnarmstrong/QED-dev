@@ -665,6 +665,9 @@ public import QED.ChainProof.SetCLinkSEEnum
 public import QED.ChainProof.SetCLinkSESplit
 public import QED.ChainProof.SetCLinkWard
 public import QED.ChainProof.SetCLinkFinal
+public import QED.ChainProof.SetCPauliCond
+public import QED.ChainProof.SetCPauliLink
+public import QED.ChainProof.SetCMirror
 public import QED.ChainProof.SetCLinkClassStd
 public import QED.ChainProof.SetCLinkClassDecB
 public import QED.ChainProof.SetCLinkClassDecD
