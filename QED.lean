@@ -1052,6 +1052,8 @@ public import QED.ChainProof.SetCMainDKRoute
 public import QED.ChainProof.SetCMainDKTerm
 public import QED.ChainProof.SetCMainDKLim
 public import QED.ChainProof.SetCMainDKLink
+public import QED.ChainProof.SetCMainDPCurve
+public import QED.ChainProof.SetCMainDPauli
 public import QED.ChainProof.SetCMainBFub
 public import QED.ChainProof.SetCMainBClosed
 public import QED.ChainProof.SetCUnitLimit
