@@ -774,6 +774,7 @@ public import QED.ChainProof.SetCLimCtCDAmp
 public import QED.ChainProof.SetCLimCtCDNum
 public import QED.ChainProof.SetCLimCtCDPiece
 public import QED.ChainProof.SetCLimCtCD01
+public import QED.ChainProof.SetCLimCtCB
 public import QED.ChainProof.SetCUnitLimit
 public import QED.ChainProof.SetCUnitCov
 public import QED.ChainProof.SetCUnitPauli
