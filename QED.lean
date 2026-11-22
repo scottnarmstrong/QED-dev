@@ -1141,6 +1141,11 @@ public import QED.ChainProof.SetAKSKWHalf
 public import QED.ChainProof.SetAKSKWQDisp
 public import QED.ChainProof.SetAKSKWAsmDef
 public import QED.ChainProof.SetAKSKWRhoBR
+public import QED.ChainProof.SetAKSKWRhoBP
+public import QED.ChainProof.SetAKSKWRhoBNN
+public import QED.ChainProof.SetAKSKWRhoBNP
+public import QED.ChainProof.SetAKSKWRhoBPN
+public import QED.ChainProof.SetAKSKWRhoBW
 public import QED.ChainProof.SetAKSKWAsmVal
 public import QED.ChainProof.SetAKSKWAsmInt
 public import QED.ChainProof.SetAKSKWAsmA
