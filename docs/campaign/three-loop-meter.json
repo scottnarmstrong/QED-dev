@@ -67,10 +67,10 @@
   },
   {
    "set": "c",
-   "item": "regulator hReg (a.e. route): resolvent split + radial bounds landed; recursive kernel reduction, ladder/S/C assembly",
-   "spent": 10,
-   "lo": 7,
-   "hi": 18
+   "item": "regulator hReg (a.e. route): crossed sector done; L/S/C recursive reduction, ladder/S/C bounds, assembly",
+   "spent": 11,
+   "lo": 6,
+   "hi": 15
   },
   {
    "set": "d",
