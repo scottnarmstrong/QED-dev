@@ -179,10 +179,10 @@
   },
   {
    "set": "asm",
-   "item": "model link (plan 2026-11-22): one-loop pilot done; two-loop pilot 17-28 (mostly shared generic layers); generic 12-22, (d) 20-36, (e) 40-80, total 9-19",
-   "spent": 1,
-   "lo": 84,
-   "hi": 163
+   "item": "model link (plan 2026-11-22): one-loop pilot done; LP layer done; two-loop pilot 15-25 (mostly shared generic layers); generic, (d) 20-36, (e) 40-80, total 9-19",
+   "spent": 2,
+   "lo": 82,
+   "hi": 160
   },
   {
    "set": "asm",

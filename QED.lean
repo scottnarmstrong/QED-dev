@@ -730,6 +730,9 @@ public import QED.DimReg.OneLoopQuadratic
 public import QED.DimReg.OneLoopBridgeWick
 public import QED.DimReg.OneLoopBridge
 public import QED.DimReg.TwoLoopBridgeWick
+public import QED.DimReg.TwoLoopBridgeLPChange
+public import QED.DimReg.TwoLoopBridgeLP
+public import QED.DimReg.OneLoopBridgeNum
 public import QED.DimReg.MassiveBubble
 public import QED.ThreeLoopD.SetDMastersGammaInt
 public import QED.Algebra.IBPCertPoly
@@ -2643,6 +2646,8 @@ public import QED.Frozen.ThreeLoop.IsVPSelfEnergy
 public import QED.Frozen.ThreeLoop.IsVPShareOnShell
 public import QED.Frozen.ThreeLoop.IsSetC
 public import QED.Frozen.ThreeLoop.A1SixSetC
+public import QED.Frozen.ThreeLoop.IsSetD
+public import QED.Frozen.ThreeLoop.A1SixSetD
 public import QED.OneLoop.ChargeCondition
 public import QED.OneLoop.FormFactorPair
 public import QED.OneLoop.ChargeRenormalization

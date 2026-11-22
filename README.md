@@ -56,7 +56,7 @@ The longer-term milestone lists will be refined as their sources and statements
 become precise; changes to their scope must be recorded.
 
 <!-- HQ:progress:start -->
-**Ledger updated:** 2026-11-19. Only milestones marked `done` contribute to the meters.
+**Ledger updated:** 2026-11-22. Only milestones marked `done` contribute to the meters.
 
 | Workstream | Complete | Milestone meter | State |
 | --- | ---: | --- | --- |
@@ -65,11 +65,11 @@ become precise; changes to their scope must be recorded.
 | Complete one-loop calculation | 8/8 | `██████████` 100% | Complete |
 | Numerical certification pilot | 4/4 | `██████████` 100% | Complete |
 | Complete two-loop calculation | 4/4 | `██████████` 100% | Complete |
-| Complete three-loop calculation | 2/9 | `██░░░░░░░░` 22% | In progress |
+| Complete three-loop calculation | 3/9 | `███░░░░░░░` 33% | In progress |
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 3149. **Total lines of Lean code:** 1,068,601.
+**Tracked Lean source files:** 3152. **Total lines of Lean code:** 1,069,492.
 <!-- HQ:progress:end -->
 
 ### Three-loop effort meter
@@ -90,8 +90,8 @@ worker-sessions spent and a range for what is left, and
 | Set (c) | 71 | 10–24 | 81% | 75–88% | `████████████████░░░░` |
 | Set (d) | 105 | 20–38 | 78% | 73–84% | `████████████████░░░░` |
 | Set (e) | 24 | 27–66 | 34% | 27–47% | `███████░░░░░░░░░░░░░` |
-| Model link and assembly | 2 | 85–166 | 2% | 1–2% | `░░░░░░░░░░░░░░░░░░░░` |
-| **Total** | 265 | 142–294 | **55%** | 47–65% | `███████████░░░░░░░░░` |
+| Model link and assembly | 3 | 83–163 | 2% | 2–3% | `░░░░░░░░░░░░░░░░░░░░` |
+| **Total** | 266 | 140–291 | **55%** | 48–66% | `███████████░░░░░░░░░` |
 
 Open items (remaining range, part, item):
 
@@ -108,7 +108,7 @@ Open items (remaining range, part, item):
 - 8–20 (Set (e)): analytic layer per family
 - 8–20 (Set (e)): diagram expressions, projection, counterterms in d dims
 - 1–3 (Model link and assembly): frozen statements: (d) packet drafted and audited (all pass), awaiting author; (e), total drafts
-- 84–163 (Model link and assembly): model link (plan 2026-11-22): one-loop pilot done; two-loop pilot 17-28 (mostly shared generic layers); generic 12-22, (d) 20-36, (e) 40-80, total 9-19
+- 82–160 (Model link and assembly): model link (plan 2026-11-22): one-loop pilot done; LP layer done; two-loop pilot 15-25 (mostly shared generic layers); generic, (d) 20-36, (e) 40-80, total 9-19
 <!-- HQ:threeloop:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.
