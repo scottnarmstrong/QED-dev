@@ -1194,6 +1194,9 @@ public import QED.ChainProof.SetCMainBSplit
 public import QED.ChainProof.SetCMainBSplitLim
 public import QED.ChainProof.SetCMainBRestS
 public import QED.ChainProof.SetCMainBRestLink
+public import QED.ChainProof.SetCMainBPauliPiece
+public import QED.ChainProof.SetCMainBPauliParts
+public import QED.ChainProof.SetCMainBPauli
 public import QED.ChainProof.SetCUnitLimit
 public import QED.ChainProof.SetCUnitCov
 public import QED.ChainProof.SetCUnitPauli
