@@ -650,6 +650,10 @@ public import QED.ChainProof.SetANestLFubini
 public import QED.ChainProof.SetANestMatch
 public import QED.ChainProof.SetANestVFub
 public import QED.ChainProof.SetANestVOuter
+public import QED.ChainProof.SetANestLBubble
+public import QED.ChainProof.SetANestLGen
+public import QED.ChainProof.SetANestLGW
+public import QED.ChainProof.SetANestLGU
 public import QED.ChainProof.SetAPauliLinkGen
 public import QED.ChainProof.SetAPauliLink
 public import QED.ChainProof.GradedMirrorInv
