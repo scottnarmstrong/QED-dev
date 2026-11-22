@@ -568,6 +568,13 @@ public import QED.ThreeLoopD.SetDMastersI2P1Red
 public import QED.ThreeLoopD.SetDMastersI2P1FRect
 public import QED.ThreeLoopD.SetDMastersI2P1FEnd
 public import QED.ThreeLoopD.SetDMastersI2P1FZ
+public import QED.ThreeLoopD.SetDMastersI2P1FXi
+public import QED.ThreeLoopD.SetDMastersI2P1FSub
+public import QED.ThreeLoopD.SetDMastersI2P1FW
+public import QED.ThreeLoopD.SetDMastersI2P1FWS
+public import QED.ThreeLoopD.SetDMastersI2P1FAsm
+public import QED.ThreeLoopD.SetDMastersI2P1FFin
+public import QED.ThreeLoopD.SetDMastersI2P1FTot
 public import QED.ThreeLoopD.SetDMastersI5Def
 public import QED.ThreeLoopD.SetDMastersI5Wire
 public import QED.ThreeLoopD.SetDMastersI5Tri
