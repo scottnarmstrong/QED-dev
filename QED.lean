@@ -1739,6 +1739,10 @@ public import QED.ChainProof.SetCRegKKWard2
 public import QED.ChainProof.SetCRegKKQ
 public import QED.ChainProof.SetCRegKKQChg
 public import QED.ChainProof.SetCRegKKSecond
+public import QED.ChainProof.SetCRegKKGe
+public import QED.ChainProof.SetCRegKKPauliSum
+public import QED.ChainProof.SetCRegKKFactor
+public import QED.ChainProof.SetCRegKKCov
 public import QED.ChainProof.SetCRegXPower
 public import QED.ChainProof.SetCRegXSplit
 public import QED.ChainProof.SetCRegXGeom
