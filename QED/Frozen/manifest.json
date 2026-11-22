@@ -37276,7 +37276,7 @@
         "module": "QED.Provider.ThreeLoop.VertexSetAPauliLimit",
         "export": "QED.Provider.ThreeLoop.isFormFactorPair_vertexSetA_pauli_limit"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "ba3dec9ffed0e57e00d8dc0578401c80d5dbdac0ec9e0f28ffebedc4051fb4b0",
       "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
       "draft_allowlist": {
