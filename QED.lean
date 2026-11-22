@@ -355,6 +355,9 @@ public import QED.ThreeLoopD.SetDMastersI12RHighSCov
 public import QED.ThreeLoopD.SetDMastersI12RHighSMel
 public import QED.ThreeLoopD.SetDMastersI12RHighSGood
 public import QED.ThreeLoopD.SetDMastersI12RHighSGoodPt
+public import QED.ThreeLoopD.SetDMastersI12RHighSDom
+public import QED.ThreeLoopD.SetDMastersI12RHighSGoodAn
+public import QED.ThreeLoopD.SetDMastersI12RHighSGoodId
 public import QED.ThreeLoopD.SetDMastersI12RHighTPt
 public import QED.ThreeLoopD.SetDMastersI12RHighTRed
 public import QED.ThreeLoopD.SetDMastersI12RHighTValGen
