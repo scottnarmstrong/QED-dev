@@ -1608,6 +1608,7 @@ public import QED.ChainProof.SetCRegDispCtLo
 public import QED.ChainProof.SetCRegDispShareVal
 public import QED.ChainProof.SetCRegDispShare
 public import QED.ChainProof.SetCRegDispShellKer
+public import QED.ChainProof.SetCRegBubblePF
 public import QED.ChainProof.SetCRegDispShellKerC
 public import QED.ChainProof.SetCRegDispShellConv
 public import QED.ChainProof.SetCRegDispShellSlope
