@@ -1073,6 +1073,9 @@ public import QED.ChainProof.SetCMainBFub
 public import QED.ChainProof.SetCMainBClosed
 public import QED.ChainProof.SetCMainBWick
 public import QED.ChainProof.SetCMainBWickInt
+public import QED.ChainProof.SetCMainBDecayBub
+public import QED.ChainProof.SetCMainBDecayLem
+public import QED.ChainProof.SetCMainBDecay
 public import QED.ChainProof.SetCMainBSplit
 public import QED.ChainProof.SetCMainBSplitLim
 public import QED.ChainProof.SetCUnitLimit
