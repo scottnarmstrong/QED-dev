@@ -884,6 +884,9 @@ public import QED.ChainProof.SetCMainRel
 public import QED.ChainProof.SetCMainDChain
 public import QED.ChainProof.SetCMainDUnit
 public import QED.ChainProof.SetCMainDK
+public import QED.ChainProof.SetCMainDKWard
+public import QED.ChainProof.SetCMainDKDel
+public import QED.ChainProof.SetCMainDKRoute
 public import QED.ChainProof.SetCUnitLimit
 public import QED.ChainProof.SetCUnitCov
 public import QED.ChainProof.SetCUnitPauli
