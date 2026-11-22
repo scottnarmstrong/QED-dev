@@ -593,6 +593,8 @@ public import QED.ChainProof.SetASpecUGCls
 public import QED.ChainProof.SetASpecUStar
 public import QED.ChainProof.SetANestP
 public import QED.ChainProof.SetANestSum
+public import QED.ChainProof.SetAPauliLinkGen
+public import QED.ChainProof.SetAPauliLink
 public import QED.ChainProof.SetALinkLoop
 public import QED.ChainProof.SetALinkDisjoint
 public import QED.ChainProof.SetALinkReps
