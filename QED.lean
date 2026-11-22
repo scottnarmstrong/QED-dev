@@ -737,6 +737,11 @@ public import QED.ChainProof.SetCLinkIntBData
 public import QED.ChainProof.SetCLinkIntBCrit0
 public import QED.ChainProof.SetCLinkIntBCrit1
 public import QED.ChainProof.SetCLinkIntB
+public import QED.ChainProof.SetCLinkIntDMom
+public import QED.ChainProof.SetCLinkIntDRes
+public import QED.ChainProof.SetCLinkIntDWard
+public import QED.ChainProof.SetCLinkIntDExt
+public import QED.ChainProof.SetCLinkIntD
 public import QED.ChainProof.SetCKLamOutCBd
 public import QED.ChainProof.SetCKLamOutCDecay
 public import QED.ChainProof.SetCKLamOutC
