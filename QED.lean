@@ -654,6 +654,12 @@ public import QED.ThreeLoopE.SetEMastersI17Def
 public import QED.ThreeLoopE.SetEMastersI17
 public import QED.ThreeLoopE.SetEMastersI10Def
 public import QED.ThreeLoopE.SetEMastersI10Wire
+public import QED.ThreeLoopE.SetEMastersI10G0An
+public import QED.ThreeLoopE.SetEMastersI10G0Cl
+public import QED.ThreeLoopE.SetEMastersI10G0
+public import QED.ThreeLoopE.SetEMastersI10KabAn
+public import QED.ThreeLoopE.SetEMastersI10KabVal
+public import QED.ThreeLoopE.SetEMastersI10Asm
 public import QED.ThreeLoopE.SetECertF3jFamily
 public import QED.ThreeLoopE.SetECertF3jData0
 public import QED.ThreeLoopE.SetECertF3jData1
