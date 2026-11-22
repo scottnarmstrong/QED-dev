@@ -546,6 +546,13 @@ public import QED.ChainProof.SetCLinkSEEnum
 public import QED.ChainProof.SetCLinkSESplit
 public import QED.ChainProof.SetCLinkWard
 public import QED.ChainProof.SetCLinkFinal
+public import QED.ChainProof.SetCLinkClassStd
+public import QED.ChainProof.SetCLinkClassDecB
+public import QED.ChainProof.SetCLinkClassDecD
+public import QED.ChainProof.SetCLinkClassWalk
+public import QED.ChainProof.SetCLinkClassMain
+public import QED.ChainProof.SetCLinkSum
+public import QED.ChainProof.SetCLinkVertex
 public import QED.ChainProof.SetCKLamOutCBd
 public import QED.ChainProof.SetCKLamOutCDecay
 public import QED.ChainProof.SetCKLamOutC
