@@ -901,6 +901,11 @@ public import QED.ChainProof.SetAKSKWNode
 public import QED.ChainProof.SetAKSKWSwap
 public import QED.ChainProof.SetAKSKWHalf
 public import QED.ChainProof.SetAKSKWQDisp
+public import QED.ChainProof.SetAKSKWAsmDef
+public import QED.ChainProof.SetAKSKWAsmVal
+public import QED.ChainProof.SetAKSKWAsmInt
+public import QED.ChainProof.SetAKSKWAsmA
+public import QED.ChainProof.SetAKSKWAsmTot
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
