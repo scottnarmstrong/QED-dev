@@ -218,6 +218,8 @@ public import QED.ThreeLoopD.SetDMastersI9Strip
 public import QED.ThreeLoopD.SetDMastersI9Gamma
 public import QED.ThreeLoopD.SetDMastersI9Closed
 public import QED.ThreeLoopD.SetDMastersI9Wire
+public import QED.ThreeLoopD.SetDMastersI9RemTaylor
+public import QED.ThreeLoopD.SetDMastersI9RemY
 public import QED.ThreeLoopE.SetEMastersCoeffsA
 public import QED.ThreeLoopE.SetEMastersCoeffsB
 public import QED.ThreeLoopE.SetEMastersLaurent
