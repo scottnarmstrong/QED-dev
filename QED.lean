@@ -195,6 +195,13 @@ public import QED.DimReg.SectorForms
 public import QED.DimReg.LPCont
 public import QED.DimReg.TwoLoopSEForms
 public import QED.DimReg.TwoLoopSELeaves
+public import QED.DimReg.TwoLoopSELine
+public import QED.DimReg.LPAnnihilator
+public import QED.DimReg.TwoLoopSEPoly
+public import QED.DimReg.TwoLoopSEVal
+public import QED.DimReg.TwoLoopSERel
+public import QED.DimReg.TwoLoopSEZero
+public import QED.DimReg.TwoLoopSEReduction
 public import QED.ThreeLoopD.SetDMastersCoeffs
 public import QED.ThreeLoopD.SetDMastersLaurent
 public import QED.ThreeLoopD.SetDMastersPoles
