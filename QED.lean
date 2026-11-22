@@ -419,6 +419,7 @@ public import QED.ThreeLoopD.SetDMastersI2Def
 public import QED.ThreeLoopD.SetDMastersI2Wire
 public import QED.ThreeLoopD.SetDMastersI2Analytic
 public import QED.ThreeLoopD.SetDMastersI2P0Lines
+public import QED.ThreeLoopD.SetDMastersI2P1ULines
 public import QED.ThreeLoopD.SetDMastersI2P0Val
 public import QED.ThreeLoopD.SetDMastersI2PDeriv
 public import QED.ThreeLoopD.SetDMastersI5Def
