@@ -681,6 +681,11 @@ public import QED.ThreeLoopE.SetEMastersI10KabVal
 public import QED.ThreeLoopE.SetEMastersI10Asm
 public import QED.ThreeLoopE.SetEMastersI10KaFactor
 public import QED.ThreeLoopE.SetEMastersI10K2Factor
+public import QED.ThreeLoopE.SetEMastersI10KaBubbleVal
+public import QED.ThreeLoopE.SetEMastersI10K2Psi
+public import QED.ThreeLoopE.SetEMastersI10K2UMoments
+public import QED.ThreeLoopE.SetEMastersI10K2Join
+public import QED.ThreeLoopE.SetEMastersI10LogMoment
 public import QED.ThreeLoopE.SetEMastersI4Def
 public import QED.ThreeLoopE.SetECertF3jFamily
 public import QED.ThreeLoopE.SetECertF3jData0
