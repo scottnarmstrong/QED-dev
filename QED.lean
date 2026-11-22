@@ -206,6 +206,15 @@ public import QED.DimReg.ThreeLoopSym
 public import QED.DimReg.ThreeLoopPolyEval
 public import QED.DimReg.ThreeLoopPoly
 public import QED.DimReg.ThreeLoopAnn
+public import QED.DimReg.ThreeLoopCut
+public import QED.DimReg.ThreeLoopFaceJobs
+public import QED.DimReg.ThreeLoopFaceChk1
+public import QED.DimReg.ThreeLoopFaceChk2
+public import QED.DimReg.ThreeLoopFaceChk3
+public import QED.DimReg.ThreeLoopFaceChk4
+public import QED.DimReg.ThreeLoopFaceChk5
+public import QED.DimReg.ThreeLoopSector7
+public import QED.DimReg.ThreeLoopVal3
 public import QED.DimReg.ThreeLoopPerm
 public import QED.DimReg.ThreeLoopLine
 public import QED.DimReg.ThreeLoopLineVal
