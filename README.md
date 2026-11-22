@@ -63,7 +63,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 2025. **Total lines of Lean code:** 465,958.
+**Tracked Lean source files:** 2042. **Total lines of Lean code:** 471,894.
 <!-- HQ:progress:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.
