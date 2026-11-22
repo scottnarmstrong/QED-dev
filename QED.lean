@@ -687,6 +687,9 @@ public import QED.ThreeLoopE.SetEMastersI10K2UMoments
 public import QED.ThreeLoopE.SetEMastersI10K2Join
 public import QED.ThreeLoopE.SetEMastersI10LogMoment
 public import QED.ThreeLoopE.SetEMastersI4Def
+public import QED.ThreeLoopE.SetEMastersI4Gauge
+public import QED.ThreeLoopE.SetEMastersI4P1Red
+public import QED.ThreeLoopE.SetEMastersI4P1FY4
 public import QED.ThreeLoopE.SetECertF3jFamily
 public import QED.ThreeLoopE.SetECertF3jData0
 public import QED.ThreeLoopE.SetECertF3jData1
