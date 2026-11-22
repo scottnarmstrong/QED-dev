@@ -521,6 +521,8 @@ public import QED.ChainProof.SetALinkSum
 public import QED.ChainProof.SetALinkVertex
 public import QED.ChainProof.SetALinkInt
 public import QED.ChainProof.SetALinkIntP
+public import QED.ChainProof.SetALinkIntKind
+public import QED.ChainProof.SetALinkIntG
 public import QED.ChainProof.SetCLinkDisjoint
 public import QED.ChainProof.SetCLinkReps
 public import QED.ChainProof.SetCLinkShareTree
