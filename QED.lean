@@ -897,6 +897,10 @@ public import QED.ChainProof.SetAKSKVLog
 public import QED.ChainProof.SetAKSKVOne
 public import QED.ChainProof.SetAKSKWCm
 public import QED.ChainProof.SetAKSKWLogSq
+public import QED.ChainProof.SetAKSKWNode
+public import QED.ChainProof.SetAKSKWSwap
+public import QED.ChainProof.SetAKSKWHalf
+public import QED.ChainProof.SetAKSKWQDisp
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
