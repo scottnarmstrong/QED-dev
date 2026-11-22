@@ -572,6 +572,11 @@ public import QED.ChainProof.SetAKSKBNVBSlice
 public import QED.ChainProof.SetAKSKBNVBCW
 public import QED.ChainProof.SetAKSKBNVB
 public import QED.ChainProof.SetAKSKBNVBQ
+public import QED.ChainProof.SetAKSKDRed
+public import QED.ChainProof.SetAKSKDYA
+public import QED.ChainProof.SetAKSKDElem
+public import QED.ChainProof.SetAKSKDShear
+public import QED.ChainProof.SetAKSKDYB
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
@@ -603,6 +608,8 @@ public import QED.ChainProof.SetANestSum
 public import QED.ChainProof.SetANestLRoute
 public import QED.ChainProof.SetANestLFubini
 public import QED.ChainProof.SetANestMatch
+public import QED.ChainProof.SetANestVFub
+public import QED.ChainProof.SetANestVOuter
 public import QED.ChainProof.SetAPauliLinkGen
 public import QED.ChainProof.SetAPauliLink
 public import QED.ChainProof.GradedMirrorInv
