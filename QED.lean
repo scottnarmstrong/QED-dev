@@ -1709,6 +1709,9 @@ public import QED.ChainProof.SetCRegKKFirst
 public import QED.ChainProof.SetCRegKKWard2
 public import QED.ChainProof.SetCRegXPower
 public import QED.ChainProof.SetCRegXSplit
+public import QED.ChainProof.SetCRegXGeom
+public import QED.ChainProof.SetCRegXNorm
+public import QED.ChainProof.SetCRegXDeriv
 public import QED.ChainProof.SetCRegBndShell
 public import QED.ChainProof.SetCRegFinal
 public import QED.ChainProof.SetCRegPieceE
