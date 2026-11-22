@@ -69,7 +69,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 3112. **Total lines of Lean code:** 1,057,727.
+**Tracked Lean source files:** 3115. **Total lines of Lean code:** 1,058,678.
 <!-- HQ:progress:end -->
 
 ### Three-loop effort meter
@@ -90,8 +90,8 @@ worker-sessions spent and a range for what is left, and
 | Set (c) | 68 | 14–33 | 74% | 67–83% | `███████████████░░░░░` |
 | Set (d) | 104 | 20–38 | 78% | 73–84% | `████████████████░░░░` |
 | Set (e) | 22 | 26–65 | 33% | 25–46% | `███████░░░░░░░░░░░░░` |
-| Model link and assembly | 1 | 82–160 | 1% | 1–1% | `░░░░░░░░░░░░░░░░░░░░` |
-| **Total** | 258 | 142–296 | **54%** | 47–64% | `███████████░░░░░░░░░` |
+| Model link and assembly | 2 | 85–166 | 2% | 1–2% | `░░░░░░░░░░░░░░░░░░░░` |
+| **Total** | 259 | 145–302 | **54%** | 46–64% | `███████████░░░░░░░░░` |
 
 Open items (remaining range, part, item):
 
@@ -108,7 +108,7 @@ Open items (remaining range, part, item):
 - 8–20 (Set (e)): analytic layer per family
 - 8–20 (Set (e)): diagram expressions, projection, counterterms in d dims
 - 1–3 (Model link and assembly): frozen statements for (d), (e) and the total: (d) packet drafted, in audit; author review
-- 81–157 (Model link and assembly): model link (plan 2026-11-22): generic 12-22, (d) bridge 20-36, (e) bridge 40-80, total 9-19
+- 84–163 (Model link and assembly): model link (plan 2026-11-22): one-loop pilot done; two-loop pilot 17-28 (mostly shared generic layers); generic 12-22, (d) 20-36, (e) 40-80, total 9-19
 <!-- HQ:threeloop:end -->
 
 The [progress ledger](docs/campaign/progress.json) is the source of these meters.

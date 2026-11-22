@@ -715,6 +715,9 @@ public import QED.DimReg.BetaPrimeNested
 public import QED.DimReg.MasslessBubble
 public import QED.DimReg.VacuumTwoMass
 public import QED.DimReg.OneLoopQuadratic
+public import QED.DimReg.OneLoopBridgeWick
+public import QED.DimReg.OneLoopBridge
+public import QED.DimReg.TwoLoopBridgeWick
 public import QED.DimReg.MassiveBubble
 public import QED.ThreeLoopD.SetDMastersGammaInt
 public import QED.Algebra.IBPCertPoly
