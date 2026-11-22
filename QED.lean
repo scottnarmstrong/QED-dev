@@ -757,6 +757,10 @@ public import QED.DimReg.TwoLoopBridgeLPChange
 public import QED.DimReg.TwoLoopBridgeLP
 public import QED.DimReg.OneLoopBridgeNum
 public import QED.DimReg.TwoLoopBridgeGauss
+public import QED.DimReg.TwoLoopBridgeMoments
+public import QED.DimReg.TwoLoopBridgeSchwingerProj
+public import QED.DimReg.TwoLoopBridgeSchwinger
+public import QED.DimReg.TwoLoopBridgeTrace
 public import QED.DimReg.MassiveBubble
 public import QED.ThreeLoopD.SetDMastersGammaInt
 public import QED.Algebra.IBPCertPoly

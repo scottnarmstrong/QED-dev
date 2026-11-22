@@ -53,17 +53,17 @@
   },
   {
    "set": "c",
-   "item": "CBLoEq mass part (hB): L3 bounds + vertex limits landed (0eb51fb); rest of L5, L4 assembly, L6",
-   "spent": 3,
-   "lo": 3,
-   "hi": 5
+   "item": "CBLoEq mass part (hB): CD half closed form (a5bb379); CB half (L4), L6 glue",
+   "spent": 4,
+   "lo": 2,
+   "hi": 4
   },
   {
    "set": "c",
-   "item": "VP-share value identities (hS): SE limit explicit (c7523aa); b4 (sigma0, sigma1) left",
-   "spent": 6,
-   "lo": 3,
-   "hi": 8
+   "item": "VP-share value identities (hS): proved unconditionally (b4d1abf)",
+   "spent": 7,
+   "lo": 0,
+   "hi": 0
   },
   {
    "set": "c",
@@ -88,7 +88,7 @@
   },
   {
    "set": "d",
-   "item": "I2: P1 done (715f1e6); P2",
+   "item": "I2: P1 done (715f1e6); P2 (sub-orchestrator)",
    "spent": 7,
    "lo": 2,
    "hi": 5
@@ -180,9 +180,9 @@
   {
    "set": "asm",
    "item": "model link (plan 2026-11-22): one-loop pilot done; LP layer done; two-loop pilot 15-25 (mostly shared generic layers); generic, (d) 20-36, (e) 40-80, total 9-19",
-   "spent": 3,
-   "lo": 82,
-   "hi": 160
+   "spent": 4,
+   "lo": 80,
+   "hi": 157
   },
   {
    "set": "asm",
