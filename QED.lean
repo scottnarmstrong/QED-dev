@@ -263,6 +263,8 @@ public import QED.ThreeLoopD.SetDMastersI12RestBounds
 public import QED.ThreeLoopD.SetDMastersI12RestSector
 public import QED.ThreeLoopD.SetDMastersI12RestAnalytic
 public import QED.ThreeLoopD.SetDMastersI12RestWire
+public import QED.ThreeLoopD.SetDMastersI12RPrim
+public import QED.ThreeLoopD.SetDMastersI12RFirst
 public import QED.ThreeLoopD.SetDCertFamily
 public import QED.ThreeLoopD.SetDCertPilotData0
 public import QED.ThreeLoopD.SetDCertPilotData1
