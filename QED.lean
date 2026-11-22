@@ -676,6 +676,15 @@ public import QED.ChainProof.SetAKSKUVA
 public import QED.ChainProof.SetAKSKUVANode
 public import QED.ChainProof.SetAKSKUVAFub
 public import QED.ChainProof.SetAKSKUVAExp
+public import QED.ChainProof.SetAKSKUVBCov
+public import QED.ChainProof.SetAKSKUVBAnti
+public import QED.ChainProof.SetAKSKUVBNode
+public import QED.ChainProof.SetAKSKUVBBnd
+public import QED.ChainProof.SetAKSKUVBFub
+public import QED.ChainProof.SetAKSKUVBDec
+public import QED.ChainProof.SetAKSKUVBLim
+public import QED.ChainProof.SetAKSKUVBDom
+public import QED.ChainProof.SetAKSKUVBRem
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
@@ -798,6 +807,8 @@ public import QED.ChainProof.SetCLimCtCD01
 public import QED.ChainProof.SetCLimCtCB
 public import QED.ChainProof.SetCLimCtCB01
 public import QED.ChainProof.SetCLimCtCB01Shape
+public import QED.ChainProof.SetCMainRel
+public import QED.ChainProof.SetCMainDChain
 public import QED.ChainProof.SetCUnitLimit
 public import QED.ChainProof.SetCUnitCov
 public import QED.ChainProof.SetCUnitPauli
