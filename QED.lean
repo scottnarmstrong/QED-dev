@@ -350,6 +350,9 @@ public import QED.ThreeLoopD.SetDMastersI12RHighDeriv
 public import QED.ThreeLoopD.SetDMastersI12RHighPt
 public import QED.ThreeLoopD.SetDMastersI12RHighSRefl
 public import QED.ThreeLoopD.SetDMastersI12RHighSCov
+public import QED.ThreeLoopD.SetDMastersI12RHighSMel
+public import QED.ThreeLoopD.SetDMastersI12RHighSGood
+public import QED.ThreeLoopD.SetDMastersI12RHighSGoodPt
 public import QED.ThreeLoopD.SetDMastersI12RHighTPt
 public import QED.ThreeLoopD.SetDMastersI12RHighTRed
 public import QED.ThreeLoopD.SetDMastersI12RHighTValGen
