@@ -673,6 +673,8 @@ public import QED.ThreeLoopE.SetEMastersI10G0
 public import QED.ThreeLoopE.SetEMastersI10KabAn
 public import QED.ThreeLoopE.SetEMastersI10KabVal
 public import QED.ThreeLoopE.SetEMastersI10Asm
+public import QED.ThreeLoopE.SetEMastersI10KaFactor
+public import QED.ThreeLoopE.SetEMastersI10K2Factor
 public import QED.ThreeLoopE.SetECertF3jFamily
 public import QED.ThreeLoopE.SetECertF3jData0
 public import QED.ThreeLoopE.SetECertF3jData1
