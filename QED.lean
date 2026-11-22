@@ -613,6 +613,10 @@ public import QED.ChainProof.SetAKSKDYA
 public import QED.ChainProof.SetAKSKDElem
 public import QED.ChainProof.SetAKSKDShear
 public import QED.ChainProof.SetAKSKDYB
+public import QED.ChainProof.SetAKSKUElem
+public import QED.ChainProof.SetAKSKUAsym
+public import QED.ChainProof.SetAKSKUBnd
+public import QED.ChainProof.SetAKSKUVA
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
