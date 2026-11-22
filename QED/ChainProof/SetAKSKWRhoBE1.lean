@@ -16,7 +16,7 @@ Helper level for `KsCoreOne` (Set (a) of the three-loop coefficient), dispersive
 coefficients, difference quotients, poles at `β = 1`). The identity is split by logarithm: the
 differences `ksWPH j a σ₊ - ksWPH j a σ₋` in closed form (`ksWY1_H*`), the logarithmic
 coefficients of `ksWW3P` (`ksWY1_p*`) and one rational identity per logarithm (`ksWY1_k*`).
-The lists and these lemmas are machine-generated (scratch generator `gen26.py`/`e3aI.py`).
+The lists and these lemmas are machine-generated; every coefficient is checked by the proofs.
 
 Main result:
 
