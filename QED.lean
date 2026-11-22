@@ -1632,6 +1632,8 @@ public import QED.ChainProof.SetCMainBKKTerm
 public import QED.ChainProof.SetCMainBKKLink
 public import QED.ChainProof.SetCMainBKKData
 public import QED.ChainProof.SetCMainBKKCov
+public import QED.ChainProof.SetCMainBKKCurve
+public import QED.ChainProof.SetCMainBKKPauli
 public import QED.ChainProof.SetCUnitLimit
 public import QED.ChainProof.SetCUnitCov
 public import QED.ChainProof.SetCUnitPauli
