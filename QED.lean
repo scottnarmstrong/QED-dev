@@ -1294,6 +1294,9 @@ public import QED.ChainProof.SetCRegDispShareVal
 public import QED.ChainProof.SetCRegDispShare
 public import QED.ChainProof.SetCRegDispShellKer
 public import QED.ChainProof.SetCRegDispShellConv
+public import QED.ChainProof.SetCRegDispShellSlope
+public import QED.ChainProof.SetCRegDispShellNest
+public import QED.ChainProof.SetCRegDispShellIBP
 public import QED.ChainProof.SetCPauliSum
 public import QED.ChainProof.SetCPauliSumReal
 public import QED.ChainProof.SetCPauliSumCB01
