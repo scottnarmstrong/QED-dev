@@ -34069,7 +34069,7 @@
         "module": "QED.Provider.Graded.VacuumPolarizationPartTwoLeptonLimit",
         "export": "QED.Provider.Graded.vacuumPolarizationPart_two_lepton_limit"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "a3305b8ee8fd2de5c1140085da1f854a0f6c9dbe2cc2b0810ee0f9bf79542071",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {
@@ -36532,7 +36532,7 @@
         "module": "QED.Provider.Graded.FamilyVertexIsVPChainTwo",
         "export": "QED.Provider.Graded.familyVertex_isVPChain_two"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "5d08f71213d20935db2e8f03a4f2e9a27170d0dcdaac1788c92426225489785e",
       "suffix_sha256": "39ea5f3119e5ffe04392023335afb022574029ecea8aac4e76a6152702ada859",
       "draft_allowlist": {

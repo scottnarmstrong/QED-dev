@@ -87,7 +87,7 @@ theorem vacuumPolarizationPart_two_lepton_limit {n : ℕ} (P₀ : Params) (mH : 
               ∀ s : ℝ, 0 ≤ s →
                 ‖Pol s / (P₀.e : ℂ) ^ 4‖ ≤ C * (1 + Real.log (1 + s / P₀.m ^ 2)) ^ 2 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.vacuumPolarizationPart_two_lepton_limit
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

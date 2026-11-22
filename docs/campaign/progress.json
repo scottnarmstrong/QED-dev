@@ -765,6 +765,14 @@
     {
       "date": "2026-11-21",
       "change": "Stage 3a/3b: 4 more provisionally frozen D-58 goals sealed: sets (a) and (b) are disjoint, sets (a), (b), (c) are disjoint at order 7, the vacuum-polarization counterterm share exists and is unique, and it satisfies the Ward identity d1 = d2. Independently audited. 5 D-58 goals remain, including both headlines."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Stage 3a/3b: the bridge identifying the graded set (b) family vertex with the frozen chain vertex (E-G4) sealed and independently audited; it is one of the bridges needed to state the set (b) headline in the graded model. 13 of the 17 D-58 goals sealed; the 4 left are the set (a) and set (c) headlines and their integrability goals."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Stage 2 complete: R-Pi4 (vacuumPolarizationPart_two_lepton_limit) sealed, the epsilon -> 0 limit of the two-loop vacuum polarization with heavy leptons, its convergence to a regulator-free limit Pi_inf as the regulators are removed, and its log-squared growth. All 18 Stage 2 goals sealed and independently audited. Identifying Pi_inf with the Kallen-Sabry function is a separate step of set (a)."
     }
   ],
   "tracks": [

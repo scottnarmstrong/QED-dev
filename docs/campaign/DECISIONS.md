@@ -2938,3 +2938,49 @@ hypothesis reaches its own slot (`pp.explicit`), standard axioms, transitive qua
 the three share inputs are proved for every `D` (so `hD` is genuinely unneeded: the share and
 its Ward identity hold for any counterterm values; `hD` matters only for (HS₆)), and
 non-vacuity of `IsSetA`, `IsVPChain 2` and (Sc₃) at order 7.
+
+**Seal of (E-G₄) (2026-11-22).** The D-58 goal (E-G₄) `QED.Graded.familyVertex_isVPChain_two`
+is sealed with the provider `QED.Provider.Graded.familyVertex_isVPChain_two` ←
+`QED.ChainProof.EG4.familyVertex_isVPChain_two'` (`QED/ChainProof/EG4Bridge.lean`). A
+two-insertion chain has only `gauge` and `photonCt` vertices and total order `7`, so at graded
+order `7` only the zero grading contributes (`grading_eq_zero_of_isVPChain`); the graded sum and
+the chain sum then agree term by term (`GradedProof.contractionValue_zero_eq`), the level-`0`
+photon-counterterm factor `e² d₃ 0` being `δ₃` by `h₃`. No representatives or relabelling are
+needed. 13 of the 17 D-58 goals are sealed; the statements stay provisional with the rest of
+D-58.
+
+Checks: the frozen bytes changed only in the proof body and the manifest state; the frozen and
+provider builds exit 0 with no warnings; standard axioms (anchor and provider); guard OK; the
+full `frozen_abi.py --check` passes. Independent seal audit (refute-first, 2026-11-22): PROVED.
+It checked the frozen diff, type equality up to D-13 binders with each argument (including `h₃`)
+in its own slot, standard axioms, the transitive quarantine, that `grading_eq_zero_of_isVPChain`
+holds for every grading, that both sides agree term by term with no sum set to zero by fiat,
+that `vertexChain 2` is non-trivial (HC₃ consumes it), and that `h₃` is what matches the
+`photonCt` terms. Ledger wording was corrected: (E-G₄) is one bridge toward a graded-model
+statement of the set (b) headline, not that statement itself.
+
+**Seal of (R-Π₄) (2026-11-22). Stage 2 complete.** The last Stage 2 goal (D-57, approved by the
+author), `QED.Graded.vacuumPolarizationPart_two_lepton_limit`, is sealed with the provider
+`QED.Provider.Graded.vacuumPolarizationPart_two_lepton_limit`. The provider applies the assembly
+`QED.GradedProof.RPi4.vacuumPolarizationPart_two_lepton_limit_of_incPieces`
+(`QED/GradedProof/RPi4Wire2Asm.lean`) to the per-piece A-increment bounds
+(`faceRateIncAQ_piecesAB_incPieces`, `RPi4FaceRateIncAClass.lean`) and B-increment bounds
+(`faceRateIncBPiecesAB_incPieces`, `RPi4FaceRateIncW11.lean`). The assembly consumes the
+heavy-density ray input (`wire2_wireDRay`), the face-rate majorant
+(`faceIdRayAQ_majFaceRate_cfg4`, `wire2_majFaceRate`), the fixed-density input
+(`wire_fixDens_of_gen`, from `wire2_wireDRayGen` and `wire2_wireFaceRateGen`) and the
+scale-Lipschitz input `MajLimLip4` (`wire2_limLip4_of_pieces`), all
+proved. The Hölder shortcut was ruled out: the frozen majorant clause covers regulator masses
+arbitrarily close together, which forces the full Lipschitz factor. All 18 Stage 2 goals are now
+sealed.
+
+Checks: the frozen bytes changed only in the proof body and the manifest state; the frozen and
+provider builds exit 0; standard axioms; guard OK; the full `frozen_abi.py --check` passes.
+Independent seal audit (refute-first, 2026-11-22): PROVED. It checked the frozen diff, type
+equality up to D-13 binders with every argument in its own slot, standard axioms for the anchor,
+the provider and the ten theorems of the assembly chain (no axiom, sorry, native_decide,
+implemented_by or extern anywhere in the 876-module closure), the quarantine, that every
+conditional premise along `_of_incPieces` → `_of_limLip4` → `_of_gen` → `_of_dens` is
+discharged by a proved term, and non-vacuity (the renormalized counterterms exist by
+`exists_renormalized`; `Π_∞` is a genuine witness). The identification of `Π_∞` with the
+Källén–Sabry function is not part of R-Π₄; it is the set (a) step R-KS (deferred item D6).

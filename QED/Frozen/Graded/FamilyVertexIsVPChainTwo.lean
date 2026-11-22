@@ -31,7 +31,7 @@ theorem familyVertex_isVPChain_two (P : Params) {F : Type} [Fintype F] [Decidabl
     familyVertex P Φ D (fun C _ => IsOnePI C ∧ VPChain.IsVPChain 2 C) 7 p' p μ =
       VPChain.vertexChain 2 P Φ p' p μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.Graded.familyVertex_isVPChain_two
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 
