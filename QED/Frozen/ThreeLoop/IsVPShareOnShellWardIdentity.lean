@@ -31,7 +31,7 @@ theorem isVPShareOnShell_d₁_eq_d₂ (P : Params) {F : Type} [Fintype F] [Decid
     (hD : Graded.IsRenormalizedThrough P Φ D rep 1) (s : ℝ × ℝ × ℝ)
     (hs : IsVPShareOnShell P Φ D s) : s.1 = s.2.1 :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.ThreeLoop.isVPShareOnShell_d₁_eq_d₂
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

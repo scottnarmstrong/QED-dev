@@ -35,7 +35,7 @@ theorem existsUnique_isVPShareOnShell (P : Params) {F : Type} [Fintype F] [Decid
     (hD : Graded.IsRenormalizedThrough P Φ D rep 1) :
     ∃! s : ℝ × ℝ × ℝ, IsVPShareOnShell P Φ D s :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.ThreeLoop.existsUnique_isVPShareOnShell
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

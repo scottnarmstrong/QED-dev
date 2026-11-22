@@ -27,20 +27,17 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 10 — the remaining Stage 2 goal (R-Π₄) under QED/Frozen/Graded/ (D-57, approved by
-               the author), and 9 of the 17 Stage 3a/3b goals (D-58, provisional; author approval
-               pending): FamilyVertexIsVPChainTwo under QED/Frozen/Graded/ and 8 under
-               QED/Frozen/ThreeLoop/ (NotIsSetAAndIsVPChainTwo, JointEnergyFirstIntegrableSetA,
-               VertexSetAPauliLimit, ExistsUniqueIsVPShareOnShell, IsVPShareOnShellWardIdentity,
-               IsSetCDisjoint, JointEnergyFirstIntegrableSetC, VertexSetCPauliLimit); all earlier
-               anchors sealed
+DRAFT_ANCHORS: 6 — the remaining Stage 2 goal (R-Π₄) under QED/Frozen/Graded/ (D-57, approved by
+               the author), and 5 of the 17 Stage 3a/3b goals (D-58, provisional; author approval
+               pending): FamilyVertexIsVPChainTwo under QED/Frozen/Graded/ and 4 under
+               QED/Frozen/ThreeLoop/ (JointEnergyFirstIntegrableSetA, VertexSetAPauliLimit,
+               JointEnergyFirstIntegrableSetC, VertexSetCPauliLimit); all earlier anchors sealed
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 8 — the D-58 goals (A₃) a1SixSetA_bounds, (Sc₅) a1SixSetC_bounds, (A₇)
-               integral_piHatFour_eq_a1SixSetA, (MF₁) familyVertex_isOnePI, (MS₁)
-               isOnShellSelAt_isOnePI_iff, (MS₂) isChargeNormalizedSelAt_isOnePI_iff, (MA₁)
-               exists_isSetA, (MC₁) exists_isSetC; guard, build, standard axioms, ABI unchanged;
-               independent seal audit: all eight PROVED
+SEALED_THIS_TURN: 4 — the D-58 goals (MA₂) not_isSetA_and_isVPChain_two, (MC₂)
+               isSetC_disjoint, (G-ex-s) existsUnique_isVPShareOnShell, (WI-s)
+               isVPShareOnShell_d₁_eq_d₂; guard, build, standard axioms, ABI unchanged;
+               independent seal audit: all four PROVED
 ```
 
 | Field | Value |

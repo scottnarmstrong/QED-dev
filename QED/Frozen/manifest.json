@@ -36722,7 +36722,7 @@
         "module": "QED.Provider.ThreeLoop.NotIsSetAAndIsVPChainTwo",
         "export": "QED.Provider.ThreeLoop.not_isSetA_and_isVPChain_two"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "8bd6f2d443a9538efa803256e9c14ab5aeed93eac82328eddf7dca427ba93bc7",
       "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
       "draft_allowlist": {
@@ -39297,7 +39297,7 @@
         "module": "QED.Provider.ThreeLoop.ExistsUniqueIsVPShareOnShell",
         "export": "QED.Provider.ThreeLoop.existsUnique_isVPShareOnShell"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "ba7585ab3d0165c64c159da61127ca04cc06f4af5be3249d6636452f2ba70924",
       "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
       "draft_allowlist": {
@@ -39616,7 +39616,7 @@
         "module": "QED.Provider.ThreeLoop.IsVPShareOnShellWardIdentity",
         "export": "QED.Provider.ThreeLoop.isVPShareOnShell_d₁_eq_d₂"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "d8409d601e277c30331e2890246ec67e58901b80bc2b8270277cb1a00373da86",
       "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
       "draft_allowlist": {
@@ -39834,7 +39834,7 @@
         "module": "QED.Provider.ThreeLoop.IsSetCDisjoint",
         "export": "QED.Provider.ThreeLoop.isSetC_disjoint"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "06dfa412d1672c00a6cc8bbe5715de851cfab5880d642a97857d568b7d1481d5",
       "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
       "draft_allowlist": {

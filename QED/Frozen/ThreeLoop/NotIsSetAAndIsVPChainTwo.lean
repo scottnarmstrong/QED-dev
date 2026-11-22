@@ -22,7 +22,7 @@ photon walk from `a` meets two insertions; (A₁) allows one. -/
 theorem not_isSetA_and_isVPChain_two {N : ℕ} {κ : Fin N → Wick.VertexKind}
     (C : Contraction 1 1 κ) : ¬ (IsSetA C ∧ VPChain.IsVPChain 2 C) :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.ThreeLoop.not_isSetA_and_isVPChain_two
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

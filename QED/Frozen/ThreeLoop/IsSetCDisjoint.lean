@@ -26,7 +26,7 @@ theorem isSetC_disjoint {N : ℕ} {κ : Fin N → Wick.VertexKind} (C : Contract
     (g : Graded.Grading κ) (hg : Graded.gradedOrder κ g = 7) :
     ¬ (IsSetC C g ∧ IsSetA C) ∧ ¬ (IsSetC C g ∧ VPChain.IsVPChain 2 C) :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.ThreeLoop.isSetC_disjoint
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

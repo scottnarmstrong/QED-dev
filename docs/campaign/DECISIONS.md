@@ -2733,8 +2733,9 @@ vacuum polarization at s = 0 and the order-e⁵ vertex at q = 0 are real. Realit
 conjugate-linear map fixing every gamma matrix (`SE2Real*`, `VP2Real*`, `V5ZeroSharp*`); the
 general-flavour vertex splits into one-electron vertices with loop flavours allowed lighter than
 the open line (`V5Zero*`). ABI unchanged; standard axioms; guard OK; independent seal audit PROVED.
-Binder note: the provider's `hm₀ : 0 < m₀` default first fixes `m₀` from `hmass`, since a plain
-`by assumption` would pick `0 < P.Λ`; the binder's type is exactly the frozen one, and the audit
+Binder note: the provider's `hm₀ : 0 < m₀` default resolves `m₀` by name in the caller's
+context (it also requires a hypothesis `∀ g, _ ≤ Φ.mass g`), since a plain `by assumption`
+would pick `0 < P.Λ`; the binder's type is exactly the frozen one, and the audit
 confirmed it affects elaboration only.
 
 **Seal of (WI₂) (2026-11-20).** `d₁_eq_d₂_one` is sealed with body `by exact` its provider: at
@@ -2760,8 +2761,8 @@ the out-leg and the photon, with the graph theory of cuts; `peelV_dysonFive`), t
 limits of the vertex parts (`X1D`, `X1E`), the photon legs near q = 0 (`X1E`), and the
 assembly (`X1F.isLSZAmplitudePart_five_self_of_dysonFive`). ABI unchanged; standard axioms;
 guard OK; independent seal audit PROVED.
-Binder note: the provider's `hm₀ : 0 < m₀` default first fixes `m₀` from `hmass`, as for
-(G-ex₂); each binder's type is exactly the frozen one, and the audit confirmed each frozen
+Binder note: the provider's `hm₀ : 0 < m₀` default resolves `m₀` by name in the caller's
+context, as for (G-ex₂); each binder's type is exactly the frozen one, and the audit confirmed each frozen
 hypothesis goes to its own slot.
 
 **Seal of (X₂) (2026-11-20).** `isSpinFormFactorPair_lszFive_lepton_pauli_limit` is sealed with
@@ -2902,3 +2903,38 @@ constants are definitionally the helper constants, (A₇) uses the frozen `piHat
 representatives are genuine three-loop graphs of their sets). Non-blocking: the frozen docstrings
 of (A₇) and `a1SixSetA` name an internal helper; the guard's file scan also walks `.scratch/`,
 which can race with a concurrent export copy (a false alarm, not a seal defect).
+
+**Seal of four further D-58 goals (2026-11-21).** Four more of the 17 D-58 goals are sealed with
+body `by exact` their providers, bringing the sealed D-58 goals to 12. The frozen statements stay
+provisional with the rest of D-58; sealing does not approve them. Each provider takes the D-13
+binder convention (data implicit, hypotheses `by assumption` auto-parameters), applies a tracked
+helper with exactly the frozen statement, and imports no draft anchor or quarantined provider:
+- (MA₂) `not_isSetA_and_isVPChain_two` ← `QED.ChainProof.SetALink.not_isSetA_and_isVPChain_two'`
+  (`QED/ChainProof/SetALinkDisjoint.lean`): (A₁) and (C₁) fix the same open line, and the second
+  chain insertion has no admissible starting vertex.
+- (MC₂) `isSetC_disjoint` ← `QED.ChainProof.SetCLink.isSetC_disjoint`
+  (`QED/ChainProof/SetCLinkDisjoint.lean`): with (A₁) or (C₁), every clause of (Sc₃) leaves
+  graded order at most 5, not 7.
+- (G-ex-s) `existsUnique_isVPShareOnShell` and (WI-s) `isVPShareOnShell_d₁_eq_d₂` ←
+  `existsUnique_isVPShareOnShell_c` and `isVPShareOnShell_d₁_eq_d₂_c`
+  (`QED/ChainProof/SetCLinkFinal.lean`): the block Pauli–Villars conditions give the total ones,
+  and the self-energy, vertex and Ward inputs of `SetCLinkShareAlg` hold. The renormalization
+  hypothesis `hD` is passed but not used by the helper.
+
+Binder note: in (G-ex-s) and (WI-s) the provider's `hm₀ : 0 < m₀` default resolves `m₀` by
+name in the caller's context (it also requires a hypothesis `∀ g, _ ≤ Φ.mass g`), as for
+(G-ex₂) and (X₁), since a plain `by assumption` picks `0 < P.Λ` (the build failed that way).
+Each binder's type is exactly the frozen one. (Earlier notes said the default "fixes `m₀` from
+`hmass`"; the 2026-11-21 audit showed it resolves `m₀` by name, failing loudly if renamed.)
+
+Checks: the frozen bytes changed only in the four proof bodies; the module and provider builds
+exit 0 with no warnings in these eight modules; standard axioms only (4/4 anchors and 4/4
+providers); ABI unchanged (4/4, recomputed for these exports with the `frozen_abi.py` method;
+the full `frozen_abi.py --check` passes); after erasing `autoParam` and binder information,
+each provider type is `Expr.eqv` to the frozen type (4/4); guard OK.
+Independent seal audit (refute-first, 2026-11-21): all four PROVED, APPROVE-WITH-FIXES (wording
+only: the binder note above). It checked the frozen diff, type equality and that each frozen
+hypothesis reaches its own slot (`pp.explicit`), standard axioms, transitive quarantine, that
+the three share inputs are proved for every `D` (so `hD` is genuinely unneeded: the share and
+its Ward identity hold for any counterterm values; `hD` matters only for (HS₆)), and
+non-vacuity of `IsSetA`, `IsVPChain 2` and (Sc₃) at order 7.
