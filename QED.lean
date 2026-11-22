@@ -740,6 +740,9 @@ public import QED.ChainProof.SetAKSKUSum
 public import QED.ChainProof.SetAKSKUFlav
 public import QED.ChainProof.SetAKSKVCore
 public import QED.ChainProof.SetAKSKVPauli
+public import QED.ChainProof.SetAKSKVScale
+public import QED.ChainProof.SetAKSKVLog
+public import QED.ChainProof.SetAKSKVOne
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
