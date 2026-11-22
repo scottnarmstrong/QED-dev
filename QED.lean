@@ -1042,6 +1042,7 @@ public import QED.ChainProof.SetCPauliFinal
 public import QED.ChainProof.SetCPauliMainCanon
 public import QED.ChainProof.SetCPauliMainSharp
 public import QED.ChainProof.SetCPauliMainDK
+public import QED.ChainProof.SetCPauliRepB
 public import QED.ChainProof.SetCMainRel
 public import QED.ChainProof.SetCMainDChain
 public import QED.ChainProof.SetCMainDUnit
