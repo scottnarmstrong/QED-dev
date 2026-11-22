@@ -345,6 +345,7 @@ public import QED.ThreeLoopD.SetDMastersI12RSecondT2Fin
 public import QED.ThreeLoopD.SetDMastersI12RHighDeriv
 public import QED.ThreeLoopD.SetDMastersI12RHighPt
 public import QED.ThreeLoopD.SetDMastersI12RHighSRefl
+public import QED.ThreeLoopD.SetDMastersI12RHighSCov
 public import QED.ThreeLoopD.SetDMastersI12RHighTPt
 public import QED.ThreeLoopD.SetDMastersI12RHighTRed
 public import QED.ThreeLoopD.SetDCertFamily
