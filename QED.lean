@@ -317,6 +317,9 @@ public import QED.ThreeLoopD.SetDMastersI12RSecondG
 public import QED.ThreeLoopD.SetDMastersI12RSecondRB
 public import QED.ThreeLoopD.SetDMastersI12RSecondPair
 public import QED.ThreeLoopD.SetDMastersI12RSecondGood
+public import QED.ThreeLoopD.SetDMastersI12RSecondR1y
+public import QED.ThreeLoopD.SetDMastersI12RSecondDy
+public import QED.ThreeLoopD.SetDMastersI12RSecondEx
 public import QED.ThreeLoopD.SetDCertFamily
 public import QED.ThreeLoopD.SetDCertPilotData0
 public import QED.ThreeLoopD.SetDCertPilotData1
