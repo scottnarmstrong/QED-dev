@@ -1722,6 +1722,7 @@ public import QED.ChainProof.SetCRegXGeom
 public import QED.ChainProof.SetCRegXNorm
 public import QED.ChainProof.SetCRegXDeriv
 public import QED.ChainProof.SetCRegBndShell
+public import QED.ChainProof.SetCRegBndCoincidence
 public import QED.ChainProof.SetCRegFinal
 public import QED.ChainProof.SetCRegPieceE
 public import QED.ChainProof.SetCUnitLimit
