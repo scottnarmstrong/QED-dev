@@ -142,6 +142,8 @@ public import QED.Polylog.LogLiDiv
 public import QED.Polylog.HPLBasic
 public import QED.Polylog.HPLCalculus
 public import QED.Polylog.HPLShuffle
+public import QED.Polylog.ParamHPL
+public import QED.Polylog.ParamHPLLog
 public import QED.Polylog.HPLLowWeight
 public import QED.Polylog.HPLMixed
 public import QED.Polylog.HPLValues
@@ -383,6 +385,8 @@ public import QED.ThreeLoopD.SetDMastersI12RHighSBadF
 public import QED.ThreeLoopD.SetDMastersI12RHighSBadReg
 public import QED.ThreeLoopD.SetDMastersI12RHighSBadPt
 public import QED.ThreeLoopD.SetDMastersI12RHighSBadDom
+public import QED.ThreeLoopD.SetDMastersI12RHighSParU
+public import QED.ThreeLoopD.SetDMastersI12RHighSParU2
 public import QED.ThreeLoopD.SetDCertFamily
 public import QED.ThreeLoopD.SetDCertPilotData0
 public import QED.ThreeLoopD.SetDCertPilotData1

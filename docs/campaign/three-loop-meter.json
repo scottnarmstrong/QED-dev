@@ -53,10 +53,10 @@
   },
   {
    "set": "c",
-   "item": "CBLoEq mass part (hB): engine+photon landed 4f0ad0d; L3-L6",
-   "spent": 2,
-   "lo": 4,
-   "hi": 7
+   "item": "CBLoEq mass part (hB): L3 bounds + vertex limits landed (0eb51fb); rest of L5, L4 assembly, L6",
+   "spent": 3,
+   "lo": 3,
+   "hi": 5
   },
   {
    "set": "c",
