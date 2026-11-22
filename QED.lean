@@ -241,6 +241,8 @@ public import QED.ThreeLoopD.SetDMastersI15KOne
 public import QED.ThreeLoopD.SetDMastersI3Wire
 public import QED.ThreeLoopD.SetDMastersI3F
 public import QED.ThreeLoopD.SetDMastersI3FAnalytic
+public import QED.ThreeLoopD.SetDMastersI3FValCoV
+public import QED.ThreeLoopD.SetDMastersI3FValPhoton
 public import QED.ThreeLoopD.SetDMastersI12Def
 public import QED.ThreeLoopD.SetDMastersI12Poly
 public import QED.ThreeLoopD.SetDMastersI12Gamma
@@ -682,6 +684,8 @@ public import QED.ChainProof.SetANestedAtValReal
 public import QED.ChainProof.SetANestedAtValUniq
 public import QED.ChainProof.SetANestedAtVal
 public import QED.ChainProof.SetAPhotonReg
+public import QED.ChainProof.SetAPauliAssembly
+public import QED.ChainProof.SetAPauliAssemblyR
 public import QED.ChainProof.SetALinkLoop
 public import QED.ChainProof.SetALinkDisjoint
 public import QED.ChainProof.SetALinkReps
