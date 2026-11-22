@@ -550,6 +550,11 @@ public import QED.ChainProof.SetASpecForm
 public import QED.ChainProof.SetASpecPieceJ
 public import QED.ChainProof.SetASpecChain
 public import QED.ChainProof.SetASpecVCls
+public import QED.ChainProof.SetASpecAux
+public import QED.ChainProof.SetASpecOne
+public import QED.ChainProof.SetASpecFCls
+public import QED.ChainProof.SetASpecGCls
+public import QED.ChainProof.SetASpecStar
 public import QED.ChainProof.SetALinkLoop
 public import QED.ChainProof.SetALinkDisjoint
 public import QED.ChainProof.SetALinkReps
