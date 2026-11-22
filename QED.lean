@@ -650,6 +650,10 @@ public import QED.ChainProof.SetCLinkIntDeg6
 public import QED.Integration.X0Deg6Ward
 public import QED.ChainProof.SetCLinkIntOCTerm
 public import QED.ChainProof.SetCLinkIntCB01
+public import QED.ChainProof.SetCLinkIntBData
+public import QED.ChainProof.SetCLinkIntBCrit0
+public import QED.ChainProof.SetCLinkIntBCrit1
+public import QED.ChainProof.SetCLinkIntB
 public import QED.ChainProof.SetCKLamOutCBd
 public import QED.ChainProof.SetCKLamOutCDecay
 public import QED.ChainProof.SetCKLamOutC
