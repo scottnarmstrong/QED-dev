@@ -574,6 +574,8 @@ public import QED.ChainProof.SetASpecStar
 public import QED.ChainProof.SetASpecLimTerm
 public import QED.ChainProof.SetASpecLimSum
 public import QED.ChainProof.SetAPauliCond
+public import QED.ChainProof.SetASpecOuterAlg
+public import QED.ChainProof.SetASpecOuterTerm
 public import QED.ChainProof.SetALinkLoop
 public import QED.ChainProof.SetALinkDisjoint
 public import QED.ChainProof.SetALinkReps
