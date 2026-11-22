@@ -748,6 +748,12 @@ public import QED.ChainProof.SetCLimCtS
 public import QED.ChainProof.SetCUnitLimit
 public import QED.ChainProof.SetCUnitCov
 public import QED.ChainProof.SetCUnitPauli
+public import QED.ChainProof.SetCUnitMLines
+public import QED.ChainProof.SetCUnitMUnit
+public import QED.ChainProof.SetCUnitMPow
+public import QED.ChainProof.SetCUnitMCov
+public import QED.ChainProof.SetCUnitMPauli
+public import QED.ChainProof.SetCUnitMEvenBd
 public import QED.ChainProof.SetCLinkClassStd
 public import QED.ChainProof.SetCLinkClassDecB
 public import QED.ChainProof.SetCLinkClassDecD
