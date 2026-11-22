@@ -332,6 +332,15 @@ public import QED.ThreeLoopD.SetDMastersI13R2B
 public import QED.ThreeLoopD.SetDMastersI13R2F
 public import QED.ThreeLoopD.SetDMastersI13R2L
 public import QED.ThreeLoopD.SetDMastersI13R2
+public import QED.ThreeLoopD.SetDMastersI13R3O
+public import QED.ThreeLoopD.SetDMastersI13R3W
+public import QED.ThreeLoopD.SetDMastersI13R3B
+public import QED.ThreeLoopD.SetDMastersI13R3C
+public import QED.ThreeLoopD.SetDMastersI13R3P
+public import QED.ThreeLoopD.SetDMastersI13R3V
+public import QED.ThreeLoopD.SetDMastersI13R3S
+public import QED.ThreeLoopD.SetDMastersI13R3L
+public import QED.ThreeLoopD.SetDMastersI13R3
 public import QED.ThreeLoopE.SetEMastersCoeffsA
 public import QED.ThreeLoopE.SetEMastersCoeffsB
 public import QED.ThreeLoopE.SetEMastersLaurent
