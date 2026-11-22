@@ -1621,6 +1621,8 @@ public import QED.ChainProof.SetCRegDispCtVP
 public import QED.ChainProof.SetCRegDispCt01
 public import QED.ChainProof.SetCRegDispCtLoLin
 public import QED.ChainProof.SetCRegDispCtLo
+public import QED.ChainProof.SetCRegDispCtLoBEngine
+public import QED.ChainProof.SetCRegDispCtLoBPhoton
 public import QED.ChainProof.SetCRegDispShareVal
 public import QED.ChainProof.SetCRegDispShare
 public import QED.ChainProof.SetCRegDispShellKer
