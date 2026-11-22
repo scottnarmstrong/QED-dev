@@ -1182,6 +1182,8 @@ public import QED.ChainProof.SetCMainBDecayLem
 public import QED.ChainProof.SetCMainBDecay
 public import QED.ChainProof.SetCMainBSplit
 public import QED.ChainProof.SetCMainBSplitLim
+public import QED.ChainProof.SetCMainBRestS
+public import QED.ChainProof.SetCMainBRestLink
 public import QED.ChainProof.SetCUnitLimit
 public import QED.ChainProof.SetCUnitCov
 public import QED.ChainProof.SetCUnitPauli
