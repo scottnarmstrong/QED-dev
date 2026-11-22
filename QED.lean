@@ -698,6 +698,9 @@ public import QED.ChainProof.SetANestLFBound
 public import QED.ChainProof.SetANestLFA
 public import QED.ChainProof.SetANestLFB
 public import QED.ChainProof.SetANestLFNested
+public import QED.ChainProof.SetANestVA
+public import QED.ChainProof.SetANestVC
+public import QED.ChainProof.SetANestVB
 public import QED.ChainProof.SetANestVShell
 public import QED.ChainProof.SetANestVPiece
 public import QED.ChainProof.SetANestVRB
