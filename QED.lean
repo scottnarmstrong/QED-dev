@@ -244,6 +244,7 @@ public import QED.ThreeLoopD.SetDMastersI9RemA2Th
 public import QED.ThreeLoopD.SetDMastersI9RemA2JD
 public import QED.ThreeLoopD.SetDMastersI9RemA2JV
 public import QED.ThreeLoopD.SetDMastersI9RemA2Asm
+public import QED.ThreeLoopD.SetDMastersI9RemKuIBP
 public import QED.ThreeLoopD.SetDMastersI9KTaylor
 public import QED.ThreeLoopD.SetDMastersI9KOne
 public import QED.ThreeLoopD.SetDMastersI9KValM
