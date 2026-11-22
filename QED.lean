@@ -202,6 +202,11 @@ public import QED.DimReg.TwoLoopSEVal
 public import QED.DimReg.TwoLoopSERel
 public import QED.DimReg.TwoLoopSEZero
 public import QED.DimReg.TwoLoopSEReduction
+public import QED.DimReg.ThreeLoopSym
+public import QED.DimReg.ThreeLoopPolyEval
+public import QED.DimReg.ThreeLoopPoly
+public import QED.DimReg.ThreeLoopAnn
+public import QED.DimReg.ThreeLoopPerm
 public import QED.ThreeLoopD.SetDMastersCoeffs
 public import QED.ThreeLoopD.SetDMastersLaurent
 public import QED.ThreeLoopD.SetDMastersPoles
