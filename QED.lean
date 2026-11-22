@@ -880,6 +880,9 @@ public import QED.ChainProof.SetCLimCtCB01Link
 public import QED.ChainProof.SetCPauliAt
 public import QED.ChainProof.SetCPauliAtCt
 public import QED.ChainProof.SetCRegLim
+public import QED.ChainProof.SetCPauliAtCD
+public import QED.ChainProof.SetCPauliAtCB
+public import QED.ChainProof.SetCRegLimCt
 public import QED.ChainProof.SetCMainRel
 public import QED.ChainProof.SetCMainDChain
 public import QED.ChainProof.SetCMainDUnit
