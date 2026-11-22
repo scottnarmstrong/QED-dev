@@ -218,6 +218,12 @@ public import QED.ThreeLoopD.SetDMastersI9Strip
 public import QED.ThreeLoopD.SetDMastersI9Gamma
 public import QED.ThreeLoopD.SetDMastersI9Closed
 public import QED.ThreeLoopD.SetDMastersI9Wire
+public import QED.ThreeLoopE.SetEMastersCoeffsA
+public import QED.ThreeLoopE.SetEMastersCoeffsB
+public import QED.ThreeLoopE.SetEMastersLaurent
+public import QED.ThreeLoopE.SetEMastersProductsA
+public import QED.ThreeLoopE.SetEMastersProductsB
+public import QED.ThreeLoopE.SetEMasters
 public import QED.DimReg.BetaPrimeNested
 public import QED.DimReg.MasslessBubble
 public import QED.DimReg.VacuumTwoMass
@@ -559,6 +565,9 @@ public import QED.ChainProof.SetASpecOne
 public import QED.ChainProof.SetASpecFCls
 public import QED.ChainProof.SetASpecGCls
 public import QED.ChainProof.SetASpecStar
+public import QED.ChainProof.SetASpecLimTerm
+public import QED.ChainProof.SetASpecLimSum
+public import QED.ChainProof.SetAPauliCond
 public import QED.ChainProof.SetALinkLoop
 public import QED.ChainProof.SetALinkDisjoint
 public import QED.ChainProof.SetALinkReps
