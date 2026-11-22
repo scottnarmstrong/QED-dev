@@ -225,6 +225,9 @@ public import QED.ThreeLoopD.SetDMastersI9RemA1
 public import QED.ThreeLoopD.SetDMastersI9RemA2Y
 public import QED.ThreeLoopD.SetDMastersI9KTaylor
 public import QED.ThreeLoopD.SetDMastersI9KOne
+public import QED.ThreeLoopD.SetDMastersI9KValM
+public import QED.ThreeLoopD.SetDMastersI9KValId
+public import QED.ThreeLoopD.SetDMastersI9KValB
 public import QED.ThreeLoopD.SetDMastersI15Def
 public import QED.ThreeLoopD.SetDMastersI15Gamma
 public import QED.ThreeLoopD.SetDMastersI15Analytic
