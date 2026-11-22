@@ -784,6 +784,9 @@ public import QED.ChainProof.SetCUnitMPow
 public import QED.ChainProof.SetCUnitMCov
 public import QED.ChainProof.SetCUnitMPauli
 public import QED.ChainProof.SetCUnitMEvenBd
+public import QED.ChainProof.SetCUnitMScale
+public import QED.ChainProof.SetCUnitMPauliBd
+public import QED.ChainProof.SetCUnitMRepB
 public import QED.ChainProof.SetCLinkClassStd
 public import QED.ChainProof.SetCLinkClassDecB
 public import QED.ChainProof.SetCLinkClassDecD
