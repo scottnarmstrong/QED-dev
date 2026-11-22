@@ -333,6 +333,8 @@ public import QED.ThreeLoopD.SetDMastersI12RSecondT2G
 public import QED.ThreeLoopD.SetDMastersI12RSecondT2Lim
 public import QED.ThreeLoopD.SetDMastersI12RSecondT2
 public import QED.ThreeLoopD.SetDMastersI12RSecondT2Fin
+public import QED.ThreeLoopD.SetDMastersI12RHighDeriv
+public import QED.ThreeLoopD.SetDMastersI12RHighPt
 public import QED.ThreeLoopD.SetDCertFamily
 public import QED.ThreeLoopD.SetDCertPilotData0
 public import QED.ThreeLoopD.SetDCertPilotData1
