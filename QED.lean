@@ -605,6 +605,10 @@ public import QED.ChainProof.SetANestLFubini
 public import QED.ChainProof.SetANestMatch
 public import QED.ChainProof.SetAPauliLinkGen
 public import QED.ChainProof.SetAPauliLink
+public import QED.ChainProof.GradedMirrorInv
+public import QED.ChainProof.GradedMirrorGraph
+public import QED.ChainProof.GradedMirrorConj
+public import QED.ChainProof.SetAMirror
 public import QED.ChainProof.SetALinkLoop
 public import QED.ChainProof.SetALinkDisjoint
 public import QED.ChainProof.SetALinkReps
