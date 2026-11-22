@@ -701,6 +701,7 @@ public import QED.ChainProof.SetANestLFNested
 public import QED.ChainProof.SetANestVA
 public import QED.ChainProof.SetANestVC
 public import QED.ChainProof.SetANestVB
+public import QED.ChainProof.SetAPauliFinal
 public import QED.ChainProof.SetANestVShell
 public import QED.ChainProof.SetANestVPiece
 public import QED.ChainProof.SetANestVRB
