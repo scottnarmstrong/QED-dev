@@ -252,6 +252,14 @@ public import QED.ThreeLoopD.SetDMastersI9KValId
 public import QED.ThreeLoopD.SetDMastersI9KValB
 public import QED.ThreeLoopD.SetDMastersI9MInner
 public import QED.ThreeLoopD.SetDMastersI9MTwo
+public import QED.ThreeLoopD.SetDMastersI9MThreeMono
+public import QED.ThreeLoopD.SetDMastersI9MThreeInner
+public import QED.ThreeLoopD.SetDMastersI9MThreeX
+public import QED.ThreeLoopD.SetDMastersI9MThreePJ
+public import QED.ThreeLoopD.SetDMastersI9MThreePA
+public import QED.ThreeLoopD.SetDMastersI9MThreePB
+public import QED.ThreeLoopD.SetDMastersI9MThreeOuter
+public import QED.ThreeLoopD.SetDMastersI9MThree
 public import QED.ThreeLoopD.SetDMastersI15Def
 public import QED.ThreeLoopD.SetDMastersI15Gamma
 public import QED.ThreeLoopD.SetDMastersI15Analytic
