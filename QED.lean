@@ -215,6 +215,8 @@ public import QED.DimReg.ThreeLoopFaceChk4
 public import QED.DimReg.ThreeLoopFaceChk5
 public import QED.DimReg.ThreeLoopSector7
 public import QED.DimReg.ThreeLoopVal3
+public import QED.DimReg.ThreeLoopFaceDeriv
+public import QED.DimReg.ThreeLoopFaceInt
 public import QED.DimReg.ThreeLoopPerm
 public import QED.DimReg.ThreeLoopLine
 public import QED.DimReg.ThreeLoopLineVal
