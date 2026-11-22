@@ -27,7 +27,7 @@ $a_e$ is, why each loop order is harder, and how far the verification has come.
   The target is the exact result of Laporta and Remiddi (1996), which sums 72 Feynman diagrams in
   five groups. Two groups are proved: the two-loop vacuum-polarization insertion (3 diagrams; the
   author has yet to approve its exact Lean statement) and the chain of two one-loop bubbles (1
-  diagram). The vacuum-polarization insertion in the two-loop vertex (12 diagrams) is about 70%
+  diagram). The vacuum-polarization insertion in the two-loop vertex (12 diagrams) is about 71%
   done, working directly from the model. The light-by-light diagrams (6 diagrams) are about 78%
   done: most of their final integrals are proved equal to their published values, and the link
   back to the model is being designed. The diagrams without fermion loops (50 diagrams) are about
@@ -69,7 +69,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 3102. **Total lines of Lean code:** 1,052,694.
+**Tracked Lean source files:** 3105. **Total lines of Lean code:** 1,053,505.
 <!-- HQ:progress:end -->
 
 ### Three-loop effort meter
@@ -87,17 +87,17 @@ worker-sessions spent and a range for what is left, and
 | --- | ---: | ---: | ---: | ---: | --- |
 | Set (a) | 53 | 0–0 | 100% | 100–100% | `████████████████████` |
 | Set (b) | 10 | 0–0 | 100% | 100–100% | `████████████████████` |
-| Set (c) | 65 | 17–40 | 70% | 62–79% | `██████████████░░░░░░` |
+| Set (c) | 66 | 16–38 | 71% | 63–80% | `██████████████░░░░░░` |
 | Set (d) | 104 | 20–38 | 78% | 73–84% | `████████████████░░░░` |
 | Set (e) | 21 | 27–67 | 31% | 24–44% | `██████░░░░░░░░░░░░░░` |
 | Model link and assembly | 0 | 83–161 | 0% | 0–0% | `░░░░░░░░░░░░░░░░░░░░` |
-| **Total** | 253 | 147–306 | **53%** | 45–63% | `███████████░░░░░░░░░` |
+| **Total** | 254 | 146–304 | **53%** | 46–64% | `███████████░░░░░░░░░` |
 
 Open items (remaining range, part, item):
 
 - 4–7 (Set (c)): CBLoEq mass part (hB): engine+photon landed 4f0ad0d; L3-L6
 - 5–13 (Set (c)): VP-share value identities (self-energy spectral route)
-- 8–20 (Set (c)): regulator hReg: Stage L (L1 two-mass unit chain, L2 uniform bounds), Q1-Q4, measurability
+- 7–18 (Set (c)): regulator hReg (a.e. route): resolvent split + radial bounds landed; recursive kernel reduction, ladder/S/C assembly
 - 2–5 (Set (d)): I2: P1 done (715f1e6); P2
 - 5–10 (Set (d)): I5: K1 closed form, c2
 - 1–3 (Set (d)): I12: r3, r4 (face T landed; bulk S open)

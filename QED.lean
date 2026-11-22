@@ -1784,6 +1784,9 @@ public import QED.ChainProof.SetCRegBndChain
 public import QED.ChainProof.SetCRegBndRadial
 public import QED.ChainProof.SetCRegBndSoft
 public import QED.ChainProof.SetCRegBndEndpoints
+public import QED.ChainProof.SetCRegBndParam
+public import QED.ChainProof.SetCRegBndSplit
+public import QED.ChainProof.SetCRegBndFTC
 public import QED.ChainProof.SetCRegFinal
 public import QED.ChainProof.SetCRegPieceE
 public import QED.ChainProof.SetCUnitLimit

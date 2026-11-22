@@ -67,10 +67,10 @@
   },
   {
    "set": "c",
-   "item": "regulator hReg: Stage L (L1 two-mass unit chain, L2 uniform bounds), Q1-Q4, measurability",
-   "spent": 9,
-   "lo": 8,
-   "hi": 20
+   "item": "regulator hReg (a.e. route): resolvent split + radial bounds landed; recursive kernel reduction, ladder/S/C assembly",
+   "spent": 10,
+   "lo": 7,
+   "hi": 18
   },
   {
    "set": "d",
