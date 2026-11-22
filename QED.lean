@@ -352,6 +352,11 @@ public import QED.ThreeLoopD.SetDMastersI5Ker
 public import QED.ThreeLoopD.SetDMastersI5RemTaylor
 public import QED.ThreeLoopD.SetDMastersI5Small
 public import QED.ThreeLoopD.SetDMastersI5Large
+public import QED.ThreeLoopD.SetDMastersI5Beta
+public import QED.ThreeLoopD.SetDMastersI5Fib
+public import QED.ThreeLoopD.SetDMastersI5CoV
+public import QED.ThreeLoopD.SetDMastersI5TriAsy
+public import QED.ThreeLoopD.SetDMastersI5Bound
 public import QED.ThreeLoopD.SetDMastersI13RemTaylor
 public import QED.ThreeLoopD.SetDMastersI13RemW
 public import QED.ThreeLoopD.SetDMastersI13RemFP
