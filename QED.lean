@@ -653,6 +653,9 @@ public import QED.ChainProof.GradedMirrorGraph
 public import QED.ChainProof.GradedMirrorConj
 public import QED.ChainProof.SetAMirror
 public import QED.ChainProof.SetANestedAtPauli
+public import QED.ChainProof.SetACovProd
+public import QED.ChainProof.SetACovTerm
+public import QED.ChainProof.SetACovLimit
 public import QED.ChainProof.SetALinkLoop
 public import QED.ChainProof.SetALinkDisjoint
 public import QED.ChainProof.SetALinkReps
