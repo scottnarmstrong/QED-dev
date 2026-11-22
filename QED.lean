@@ -1670,6 +1670,7 @@ public import QED.ChainProof.SetCRegMainBDSum
 public import QED.ChainProof.SetCRegMainBDT
 public import QED.ChainProof.SetCRegMainBDKDesc
 public import QED.ChainProof.SetCRegMainBDK
+public import QED.ChainProof.SetCRegLongShare
 public import QED.ChainProof.SetCRegFinal
 public import QED.ChainProof.SetCRegPieceE
 public import QED.ChainProof.SetCUnitLimit
