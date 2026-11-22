@@ -521,6 +521,12 @@ public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
 public import QED.ChainProof.SetASpecPow
+public import QED.ChainProof.SetASpecTens
+public import QED.ChainProof.SetASpecCoeff
+public import QED.ChainProof.SetASpecForm
+public import QED.ChainProof.SetASpecPieceJ
+public import QED.ChainProof.SetASpecChain
+public import QED.ChainProof.SetASpecVCls
 public import QED.ChainProof.SetALinkLoop
 public import QED.ChainProof.SetALinkDisjoint
 public import QED.ChainProof.SetALinkReps
