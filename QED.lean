@@ -233,6 +233,9 @@ public import QED.ThreeLoopD.SetDMastersI15KOne
 public import QED.ThreeLoopD.SetDMastersI3Wire
 public import QED.ThreeLoopD.SetDMastersI3F
 public import QED.ThreeLoopD.SetDMastersI3FAnalytic
+public import QED.ThreeLoopD.SetDMastersI12Def
+public import QED.ThreeLoopD.SetDMastersI12Poly
+public import QED.ThreeLoopD.SetDMastersI12Gamma
 public import QED.ThreeLoopD.SetDCertFamily
 public import QED.ThreeLoopD.SetDCertPilotData0
 public import QED.ThreeLoopD.SetDCertPilotData1
