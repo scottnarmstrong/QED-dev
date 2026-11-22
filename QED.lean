@@ -562,6 +562,9 @@ public import QED.ThreeLoopD.SetDMastersI2P1UVal
 public import QED.ThreeLoopD.SetDMastersI2P1USig
 public import QED.ThreeLoopD.SetDMastersI2P1UTot
 public import QED.ThreeLoopD.SetDMastersI2P1Red
+public import QED.ThreeLoopD.SetDMastersI2P1FRect
+public import QED.ThreeLoopD.SetDMastersI2P1FEnd
+public import QED.ThreeLoopD.SetDMastersI2P1FZ
 public import QED.ThreeLoopD.SetDMastersI5Def
 public import QED.ThreeLoopD.SetDMastersI5Wire
 public import QED.ThreeLoopD.SetDMastersI5Tri
