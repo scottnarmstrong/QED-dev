@@ -291,6 +291,10 @@ public import QED.ThreeLoopD.SetDMastersI13Def
 public import QED.ThreeLoopD.SetDMastersI13Wire
 public import QED.ThreeLoopD.SetDMastersI8Def
 public import QED.ThreeLoopD.SetDMastersI8Wire
+public import QED.ThreeLoopD.SetDMastersI8Ang
+public import QED.ThreeLoopD.SetDMastersI8RemAnalytic
+public import QED.ThreeLoopD.SetDMastersI8R0
+public import QED.ThreeLoopD.SetDMastersI8RemCoeff
 public import QED.ThreeLoopD.SetDMastersI13RemTaylor
 public import QED.ThreeLoopD.SetDMastersI13RemW
 public import QED.ThreeLoopD.SetDMastersI13RemFP
