@@ -595,6 +595,10 @@ public import QED.ChainProof.SetCLinkInt
 public import QED.ChainProof.SetCLinkIntOne
 public import QED.ChainProof.SetCLinkIntCB
 public import QED.ChainProof.SetCLinkIntRem
+public import QED.Integration.X0Deg6Merge
+public import QED.Integration.X0Deg6One
+public import QED.Integration.X0Deg6Crit
+public import QED.ChainProof.SetCLinkIntDeg6
 public import QED.ChainProof.SetCKLamOutCBd
 public import QED.ChainProof.SetCKLamOutCDecay
 public import QED.ChainProof.SetCKLamOutC
