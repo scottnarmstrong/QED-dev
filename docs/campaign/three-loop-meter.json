@@ -109,10 +109,10 @@
   },
   {
    "set": "d",
-   "item": "I15: K4, A1 slice evaluated (coefficient replay left), A23 endpoint calculus + replay",
-   "spent": 7,
-   "lo": 2,
-   "hi": 4
+   "item": "I15: K4, hA1 proved; hA23 regularized transport + comparison with i15H4",
+   "spent": 8,
+   "lo": 1,
+   "hi": 3
   },
   {
    "set": "d",
@@ -180,9 +180,9 @@
   {
    "set": "asm",
    "item": "model link (plan 2026-11-22): one-loop pilot done; LP layer done; two-loop pilot 15-25 (mostly shared generic layers); generic, (d) 20-36, (e) 40-80, total 9-19",
-   "spent": 4,
-   "lo": 80,
-   "hi": 157
+   "spent": 6,
+   "lo": 76,
+   "hi": 150
   },
   {
    "set": "asm",

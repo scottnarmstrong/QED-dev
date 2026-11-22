@@ -3088,3 +3088,33 @@ and are not frozen. Before the total's value-split statement (CMP₇-v)
 it, `contractionValue`'s junk value 0 at a non-integrable stage can break additivity in the
 level-1 data. The auditor also suggests considering the (X₀) block and stating `hs` at
 `Φ.openLine` only.
+
+## D-60. Rulings of 2026-11-22: trace scheme and graded vertex definitions (author ruling)
+
+1. **Dirac-trace scheme of the model link: accepted.** The `d`-dimensional Dirac algebra of
+   projected numerators in the model ↔ dimensional-regularization bridge is the conventional
+   one: `{γ^μ, γ^ν} = 2 g^{μν}`, `g^μ_μ = d`, `tr 1 = 4`, no `γ₅`. It is a choice of scheme,
+   not a consequence of the four-dimensional model. Every projected numerator is a named,
+   exposed definition in `QED/DimReg/TwoLoopBridgeTrace*.lean`, with a proved theorem that it
+   equals the model's four-dimensional trace numerator at `d = 4`. The first entry is the
+   one-loop `QED.DimReg.OneLoopBridge.pauliNum` (commit 045272f). New entries follow the same
+   form and are reviewed by the orchestrator as they land.
+2. **`QED.Graded.familyVertex` and `QED.Graded.IsFamilyVertexLimit`: approved.** The author's
+   set (a) approval (D-59) extends to these two definitions, frozen provisionally under D-58,
+   on which the set (a) headline depends (they are also used by the set (c) and (d)
+   headlines). Their manifest entries `graded.family_vertex_v1` and
+   `graded.is_family_vertex_limit_v1` change only in `author_approval`. The meaning theorems
+   `familyVertex_isOnePI` and `familyVertex_isVPChain_two` and the set (c) packet stay
+   provisional.
+3. **`d`-dimensional Pauli projector: accepted.** Contracted in `d` dimensions, the model's
+   four-dimensional Pauli projector `pauliMat` leaks `F₁` at order `d - 4` (its trace against
+   `γ^μ` is `2m q²(q² + 4m²)(d - 4)`), which would add a spurious finite term wherever it
+   multiplies a pole. The bridge uses instead
+   `P^d = A_d N(p) γ_μ N(p') + B_d (p + p')_μ N(p) N(p')` with
+   `A_d = 2m(4m² + Q)/(d - 2)` and `B_d = Q - 4m²/(d - 2)`
+   (`QED.DimReg.TwoLoopBridgeTraceX.pauliProjA`, `pauliProjB`): the unique coefficients that
+   annihilate `F₁` exactly and keep the `F₂` normalization independent of `d`, equal to the
+   model's projector at `d = 4` (`pauliMat_eq_pauliProj`, `pauliProj_annihilates_F₁`,
+   `pauliProj_normalization`). It reproduces the one-loop `pauliNum` exactly. The crossed-graph
+   numerators `psiT1d`, `psiT2d` are defined with it and checked against the model's `psiT1h`,
+   `psiT2h` at `d = 4`.

@@ -35278,10 +35278,10 @@
       "id": "graded.family_vertex_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight under the overnight-mode authorization of D-54.5 (Scott Armstrong); statement approval pending",
-        "approved_at": "2026-11-21",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-58-phase-5-stage-3a3b-packet-sets-a-and-c-provisional-freeze-author-approval-pending",
-        "approval_version": "provisional"
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-22",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-60-rulings-of-2026-11-22-trace-scheme-and-graded-vertex-definitions-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",
@@ -35508,10 +35508,10 @@
       "id": "graded.is_family_vertex_limit_v1",
       "kind": "definition",
       "author_approval": {
-        "approved_by": "PROVISIONAL: frozen overnight under the overnight-mode authorization of D-54.5 (Scott Armstrong); statement approval pending",
-        "approved_at": "2026-11-21",
-        "approval_ref": "docs/campaign/DECISIONS.md#d-58-phase-5-stage-3a3b-packet-sets-a-and-c-provisional-freeze-author-approval-pending",
-        "approval_version": "provisional"
+        "approved_by": "Scott Armstrong",
+        "approved_at": "2026-11-22",
+        "approval_ref": "docs/campaign/DECISIONS.md#d-60-rulings-of-2026-11-22-trace-scheme-and-graded-vertex-definitions-author-ruling",
+        "approval_version": "1"
       },
       "source": {
         "revision": "srednicki-draft sha256:7990bad06ed96750f742729bcc65292f169589739af29012bb110b70649b5621",

@@ -314,6 +314,8 @@ public import QED.ThreeLoopD.SetDMastersI15KValFourW
 public import QED.ThreeLoopD.SetDMastersI15KValFour
 public import QED.ThreeLoopD.SetDMastersI15KValFourWVBase
 public import QED.ThreeLoopD.SetDMastersI15KValFourWu
+public import QED.ThreeLoopD.SetDMastersI15KValFourWVReplay
+public import QED.ThreeLoopD.SetDMastersI15KValFourHxKernel
 public import QED.ThreeLoopD.SetDMastersI3Wire
 public import QED.ThreeLoopD.SetDMastersI3F
 public import QED.ThreeLoopD.SetDMastersI3FAnalytic
@@ -762,6 +764,9 @@ public import QED.DimReg.TwoLoopBridgeMoments
 public import QED.DimReg.TwoLoopBridgeSchwingerProj
 public import QED.DimReg.TwoLoopBridgeSchwinger
 public import QED.DimReg.TwoLoopBridgeTrace
+public import QED.DimReg.TwoLoopBridgeSchwingerNum
+public import QED.DimReg.TwoLoopBridgeTraceX
+public import QED.DimReg.TwoLoopBridgeX
 public import QED.DimReg.MassiveBubble
 public import QED.ThreeLoopD.SetDMastersGammaInt
 public import QED.Algebra.IBPCertPoly
