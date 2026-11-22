@@ -1701,6 +1701,12 @@ public import QED.ChainProof.SetCRegMainBDKDesc
 public import QED.ChainProof.SetCRegMainBDK
 public import QED.ChainProof.SetCRegLongShare
 public import QED.ChainProof.SetCRegKKNorm
+public import QED.ChainProof.SetCRegKKChg
+public import QED.ChainProof.SetCRegKKPinch
+public import QED.ChainProof.SetCRegKKOdd
+public import QED.ChainProof.SetCRegKKShell
+public import QED.ChainProof.SetCRegKKFirst
+public import QED.ChainProof.SetCRegKKWard2
 public import QED.ChainProof.SetCRegXPower
 public import QED.ChainProof.SetCRegXSplit
 public import QED.ChainProof.SetCRegBndShell
