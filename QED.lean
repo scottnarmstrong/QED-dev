@@ -509,6 +509,8 @@ public import QED.ChainProof.SetAKSKBMerge
 public import QED.ChainProof.SetAKSKBPiece
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
+public import QED.ChainProof.SetASpecDecay
+public import QED.ChainProof.SetASpecPow
 public import QED.ChainProof.SetALinkLoop
 public import QED.ChainProof.SetALinkDisjoint
 public import QED.ChainProof.SetALinkReps
