@@ -109,8 +109,8 @@
   },
   {
    "set": "d",
-   "item": "I15: K4, two weight-4 inner identities (hA1, hA23)",
-   "spent": 6,
+   "item": "I15: K4, A1 slice evaluated (coefficient replay left), A23 endpoint calculus + replay",
+   "spent": 7,
    "lo": 2,
    "hi": 4
   },

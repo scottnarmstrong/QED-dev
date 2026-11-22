@@ -28,7 +28,7 @@ $a_e$ is, why each loop order is harder, and how far the verification has come.
   five groups. Two groups are proved: the two-loop vacuum-polarization insertion (3 diagrams; the
   author has yet to approve its exact Lean statement) and the chain of two one-loop bubbles (1
   diagram). The vacuum-polarization insertion in the two-loop vertex (12 diagrams) is about 81%
-  done, working directly from the model. The light-by-light diagrams (6 diagrams) are about 78%
+  done, working directly from the model. The light-by-light diagrams (6 diagrams) are about 79%
   done: most of their final integrals are proved equal to their published values, and the link
   back to the model is being designed. The diagrams without fermion loops (50 diagrams) are about
   34% done: their final integrals are being evaluated. Overall, about 55% of the estimated work is
@@ -69,7 +69,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 3163. **Total lines of Lean code:** 1,076,430.
+**Tracked Lean source files:** 3165. **Total lines of Lean code:** 1,077,870.
 <!-- HQ:progress:end -->
 
 ### Three-loop effort meter
@@ -88,10 +88,10 @@ worker-sessions spent and a range for what is left, and
 | Set (a) | 53 | 0–0 | 100% | 100–100% | `████████████████████` |
 | Set (b) | 10 | 0–0 | 100% | 100–100% | `████████████████████` |
 | Set (c) | 71 | 10–24 | 81% | 75–88% | `████████████████░░░░` |
-| Set (d) | 105 | 20–38 | 78% | 73–84% | `████████████████░░░░` |
+| Set (d) | 106 | 20–38 | 79% | 74–84% | `████████████████░░░░` |
 | Set (e) | 24 | 27–66 | 34% | 27–47% | `███████░░░░░░░░░░░░░` |
 | Model link and assembly | 3 | 83–163 | 2% | 2–3% | `░░░░░░░░░░░░░░░░░░░░` |
-| **Total** | 266 | 140–291 | **55%** | 48–66% | `███████████░░░░░░░░░` |
+| **Total** | 267 | 140–291 | **55%** | 48–66% | `███████████░░░░░░░░░` |
 
 Open items (remaining range, part, item):
 
@@ -101,7 +101,7 @@ Open items (remaining range, part, item):
 - 2–5 (Set (d)): I2: P1 done (715f1e6); P2
 - 5–10 (Set (d)): I5: K1 closed form, c2
 - 1–3 (Set (d)): I12: r3, r4 (face T landed; bulk S: U0-U2 closed forms e00db9d)
-- 2–4 (Set (d)): I15: K4, two weight-4 inner identities (hA1, hA23)
+- 2–4 (Set (d)): I15: K4, A1 slice evaluated (coefficient replay left), A23 endpoint calculus + replay
 - 2–4 (Set (d)): I3 via I3Rel + normalisation
 - 8–12 (Set (d)): DimReg (d): pilot reduction done; full cert needs {x8=0} face, local checker, syms
 - 11–26 (Set (e)): extra LR masters: I17 done; I10 K_a, K2 linear done, K2 quadratic (~2) + assembly left; I4 P1 (3-4), P2 (3-6); I6 I7 I1 + I3
