@@ -1150,6 +1150,8 @@ public import QED.ChainProof.SetCRegDispPV
 public import QED.ChainProof.SetCRegDispLim
 public import QED.ChainProof.SetCRegDispMain
 public import QED.ChainProof.SetCRegDispCtVP
+public import QED.ChainProof.SetCRegDispShareVal
+public import QED.ChainProof.SetCRegDispShare
 public import QED.ChainProof.SetCPauliSum
 public import QED.ChainProof.SetCPauliSumReal
 public import QED.ChainProof.SetCPauliSumCB01
