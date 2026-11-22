@@ -68,9 +68,9 @@
   {
    "set": "c",
    "item": "regulator hReg: Stage L (L1 two-mass unit chain, L2 uniform bounds), Q1-Q4, measurability",
-   "spent": 6,
-   "lo": 10,
-   "hi": 25
+   "spent": 9,
+   "lo": 8,
+   "hi": 20
   },
   {
    "set": "d",
@@ -144,10 +144,10 @@
   },
   {
    "set": "e",
-   "item": "extra LR masters: I17 done; I10 to K_a,K_2; I4 def+analytic (audit); I6 I7 I1 + I3",
-   "spent": 5,
+   "item": "extra LR masters: I17 done; I10 3 evaluations left; I4 P1 (1-2), P2 (2-4); I6 I7 I1 + I3",
+   "spent": 8,
    "lo": 11,
-   "hi": 28
+   "hi": 27
   },
   {
    "set": "e",
@@ -185,5 +185,35 @@
    "hi": 0
   }
  ],
- "note": "Effort-weighted estimate, not a milestone count. Each item has worker-sessions spent and a lo-hi range for the remaining effort; completion = spent / (spent + midpoint remaining). Estimates are judgements and change as work reveals scope."
+ "note": "Effort-weighted estimate, not a milestone count. Each item has worker-sessions spent and a lo-hi range for the remaining effort; completion = spent / (spent + midpoint remaining). Estimates are judgements and change as work reveals scope.",
+ "sets": {
+  "a": {
+   "name": "the two-loop vacuum-polarization insertion",
+   "diagrams": 3,
+   "note": "the author has yet to approve its exact Lean statement"
+  },
+  "b": {
+   "name": "the chain of two one-loop bubbles",
+   "diagrams": 1,
+   "note": ""
+  },
+  "c": {
+   "name": "the vacuum-polarization insertion in the two-loop vertex",
+   "diagrams": 12,
+   "note": ", working directly from the model",
+   "verb": "is"
+  },
+  "d": {
+   "name": "the light-by-light diagrams",
+   "diagrams": 6,
+   "note": ": most of their final integrals are proved equal to their published values, and the link back to the model is being designed",
+   "verb": "are"
+  },
+  "e": {
+   "name": "the diagrams without fermion loops",
+   "diagrams": 50,
+   "note": ": their final integrals are being evaluated",
+   "verb": "are"
+  }
+ }
 }

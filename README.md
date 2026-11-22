@@ -23,11 +23,17 @@ $a_e$ is, why each loop order is harder, and how far the verification has come.
   $\frac{197}{144}+\frac{\pi^2}{12}-\frac{\pi^2}{2}\ln2+\frac34\zeta(3)
   =-0.328\,478\,965\ldots$ (Petermann and Sommerfield, 1957), and the
   smaller contributions from muon and tau loops.
-- **Three loops: in progress.** The target is the exact result of Laporta and
-  Remiddi (1996), which sums 72 Feynman diagrams in five groups. One group is
-  proved. For two more, the final integrals are proved equal to their published
-  values, and the link back to the underlying model is being built. The two
-  largest groups (56 diagrams) are not yet started.
+- **Three loops: in progress.** <!-- HQ:tlstatus:start -->
+  The target is the exact result of Laporta and Remiddi (1996), which sums 72 Feynman diagrams in
+  five groups. Two groups are proved: the two-loop vacuum-polarization insertion (3 diagrams; the
+  author has yet to approve its exact Lean statement) and the chain of two one-loop bubbles (1
+  diagram). The vacuum-polarization insertion in the two-loop vertex (12 diagrams) is about 70%
+  done, working directly from the model. The light-by-light diagrams (6 diagrams) are about 78%
+  done: most of their final integrals are proved equal to their published values, and the link
+  back to the model is being designed. The diagrams without fermion loops (50 diagrams) are about
+  31% done: their final integrals are being evaluated. Overall, about 53% of the estimated work is
+  done ([meter](#three-loop-effort-meter)).
+  <!-- HQ:tlstatus:end -->
 
 Every theorem is checked by Lean's kernel using only Lean's standard axioms.
 The one- and two-loop main results were also re-checked by two independent
@@ -81,24 +87,24 @@ worker-sessions spent and a range for what is left, and
 | --- | ---: | ---: | ---: | ---: | --- |
 | Set (a) | 53 | 0–0 | 100% | 100–100% | `████████████████████` |
 | Set (b) | 10 | 0–0 | 100% | 100–100% | `████████████████████` |
-| Set (c) | 62 | 19–45 | 66% | 58–77% | `█████████████░░░░░░░` |
+| Set (c) | 65 | 17–40 | 70% | 62–79% | `██████████████░░░░░░` |
 | Set (d) | 104 | 20–38 | 78% | 73–84% | `████████████████░░░░` |
-| Set (e) | 18 | 27–68 | 27% | 21–40% | `█████░░░░░░░░░░░░░░░` |
+| Set (e) | 21 | 27–67 | 31% | 24–44% | `██████░░░░░░░░░░░░░░` |
 | Model link and assembly | 0 | 83–161 | 0% | 0–0% | `░░░░░░░░░░░░░░░░░░░░` |
-| **Total** | 247 | 149–312 | **52%** | 44–62% | `██████████░░░░░░░░░░` |
+| **Total** | 253 | 147–306 | **53%** | 45–63% | `███████████░░░░░░░░░` |
 
 Open items (remaining range, part, item):
 
 - 4–7 (Set (c)): CBLoEq mass part (hB): engine+photon landed 4f0ad0d; L3-L6
 - 5–13 (Set (c)): VP-share value identities (self-energy spectral route)
-- 10–25 (Set (c)): regulator hReg: Stage L (L1 two-mass unit chain, L2 uniform bounds), Q1-Q4, measurability
+- 8–20 (Set (c)): regulator hReg: Stage L (L1 two-mass unit chain, L2 uniform bounds), Q1-Q4, measurability
 - 2–5 (Set (d)): I2: P1 done (715f1e6); P2
 - 5–10 (Set (d)): I5: K1 closed form, c2
 - 1–3 (Set (d)): I12: r3, r4 (face T landed; bulk S open)
 - 2–4 (Set (d)): I15: K4
 - 2–4 (Set (d)): I3 via I3Rel + normalisation
 - 8–12 (Set (d)): DimReg (d): pilot reduction done; full cert needs {x8=0} face, local checker, syms
-- 11–28 (Set (e)): extra LR masters: I17 done; I10 to K_a,K_2; I4 def+analytic (audit); I6 I7 I1 + I3
+- 11–27 (Set (e)): extra LR masters: I17 done; I10 3 evaluations left; I4 P1 (1-2), P2 (2-4); I6 I7 I1 + I3
 - 8–20 (Set (e)): analytic layer per family
 - 8–20 (Set (e)): diagram expressions, projection, counterterms in d dims
 - 2–4 (Model link and assembly): frozen statements for (d), (e) and the total; author review
