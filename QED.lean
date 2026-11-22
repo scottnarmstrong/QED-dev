@@ -1757,6 +1757,10 @@ public import QED.ChainProof.SetCRegXMerge
 public import QED.ChainProof.SetCRegXPartialFractions
 public import QED.ChainProof.SetCRegXIntegral
 public import QED.ChainProof.SetCRegXScale
+public import QED.ChainProof.SetCRegXApply
+public import QED.ChainProof.SetCRegXHomogeneity
+public import QED.ChainProof.SetCRegXFixedT
+public import QED.ChainProof.SetCRegXOrder
 public import QED.ChainProof.SetCRegBndShell
 public import QED.ChainProof.SetCRegBndCoincidence
 public import QED.ChainProof.SetCRegBndAE
