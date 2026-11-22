@@ -1694,6 +1694,7 @@ public import QED.ChainProof.SetCRegLongShare
 public import QED.ChainProof.SetCRegKKNorm
 public import QED.ChainProof.SetCRegXPower
 public import QED.ChainProof.SetCRegXSplit
+public import QED.ChainProof.SetCRegBndShell
 public import QED.ChainProof.SetCRegFinal
 public import QED.ChainProof.SetCRegPieceE
 public import QED.ChainProof.SetCUnitLimit
