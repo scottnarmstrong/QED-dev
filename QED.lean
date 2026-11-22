@@ -202,6 +202,12 @@ public import QED.ThreeLoopD.SetDMasters
 public import QED.ThreeLoopD.SetDMastersGamma
 public import QED.DimReg.GammaTaylor
 public import QED.ThreeLoopD.SetDMastersGamma2
+public import QED.DimReg.BetaPrimeNested
+public import QED.DimReg.MasslessBubble
+public import QED.DimReg.VacuumTwoMass
+public import QED.DimReg.OneLoopQuadratic
+public import QED.DimReg.MassiveBubble
+public import QED.ThreeLoopD.SetDMastersGammaInt
 public import QED.Algebra.IBPCertPoly
 public import QED.Algebra.IBPCertFamily
 public import QED.Algebra.IBPCertPilotData
@@ -523,6 +529,7 @@ public import QED.ChainProof.SetALinkShape
 public import QED.ChainProof.SetALinkClassLoop
 public import QED.ChainProof.SetALinkSum
 public import QED.ChainProof.SetALinkVertex
+public import QED.ChainProof.EG4Bridge
 public import QED.ChainProof.SetALinkInt
 public import QED.ChainProof.SetALinkIntP
 public import QED.ChainProof.SetALinkIntKind
