@@ -389,6 +389,8 @@ public import QED.ThreeLoopD.SetDMastersI12RHighSBadPt
 public import QED.ThreeLoopD.SetDMastersI12RHighSBadDom
 public import QED.ThreeLoopD.SetDMastersI12RHighSParU
 public import QED.ThreeLoopD.SetDMastersI12RHighSParU2
+public import QED.ThreeLoopD.SetDMastersI12RHighSParK
+public import QED.ThreeLoopD.SetDMastersI12RHighSParK1
 public import QED.ThreeLoopD.SetDCertFamily
 public import QED.ThreeLoopD.SetDCertPilotData0
 public import QED.ThreeLoopD.SetDCertPilotData1

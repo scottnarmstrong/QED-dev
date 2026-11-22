@@ -95,10 +95,10 @@
   },
   {
    "set": "d",
-   "item": "I5: K1 closed form, c2",
-   "spent": 5,
-   "lo": 5,
-   "hi": 10
+   "item": "I5: K1 primitive P_B proved (33c201c); endpoint limits + FTC, i5RemCoeff_one; c2",
+   "spent": 7,
+   "lo": 2,
+   "hi": 5
   },
   {
    "set": "d",
