@@ -186,6 +186,15 @@ public import QED.DimReg.CubeSplit
 public import QED.DimReg.SectorCert
 public import QED.DimReg.Symanzik
 public import QED.DimReg.TwoLoopSESector
+public import QED.DimReg.BoxInversion
+public import QED.DimReg.CubeMellin
+public import QED.DimReg.CubeCont
+public import QED.DimReg.PowerFamily
+public import QED.DimReg.LeafForm
+public import QED.DimReg.SectorForms
+public import QED.DimReg.LPCont
+public import QED.DimReg.TwoLoopSEForms
+public import QED.DimReg.TwoLoopSELeaves
 public import QED.ThreeLoopD.SetDMastersCoeffs
 public import QED.ThreeLoopD.SetDMastersLaurent
 public import QED.ThreeLoopD.SetDMastersPoles
