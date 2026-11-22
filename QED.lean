@@ -277,6 +277,12 @@ public import QED.ThreeLoopD.SetDMastersI15KValThreeA
 public import QED.ThreeLoopD.SetDMastersI15KValThreeSum
 public import QED.ThreeLoopD.SetDMastersI15KValThreeH
 public import QED.ThreeLoopD.SetDMastersI15KValThreeW
+public import QED.ThreeLoopD.SetDMastersI15KValThreeG
+public import QED.ThreeLoopD.SetDMastersI15KValThreeWu
+public import QED.ThreeLoopD.SetDMastersI15KValThreeK
+public import QED.ThreeLoopD.SetDMastersI15KValThreeW0
+public import QED.ThreeLoopD.SetDMastersI15KValThreeWV
+public import QED.ThreeLoopD.SetDMastersI15KValThreeAs
 public import QED.ThreeLoopD.SetDMastersI3Wire
 public import QED.ThreeLoopD.SetDMastersI3F
 public import QED.ThreeLoopD.SetDMastersI3FAnalytic
