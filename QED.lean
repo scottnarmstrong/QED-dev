@@ -710,6 +710,7 @@ public import QED.ThreeLoopE.SetEMastersI10K2Inner
 public import QED.ThreeLoopE.SetEMastersI10K2Linear
 public import QED.ThreeLoopE.SetEMastersI10K2Radial
 public import QED.ThreeLoopE.SetEMastersI10K2Weighted
+public import QED.ThreeLoopE.SetEMastersI10K2Complete
 public import QED.ThreeLoopE.SetEMastersI4Def
 public import QED.ThreeLoopE.SetEMastersI4Gauge
 public import QED.ThreeLoopE.SetEMastersI4P1Red

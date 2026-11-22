@@ -30,8 +30,8 @@ $a_e$ is, why each loop order is harder, and how far the verification has come.
   vertex (12 diagrams) is about 82% done, working directly from the model. The light-by-light
   diagrams (6 diagrams) are about 81% done: their exact Lean statements are frozen, most of their
   final integrals are proved equal to their published values, and the link back to the model is
-  being built. The diagrams without fermion loops (50 diagrams) are about 34% done: their final
-  integrals are being evaluated. Overall, about 56% of the estimated work is done
+  being built. The diagrams without fermion loops (50 diagrams) are about 36% done: their final
+  integrals are being evaluated. Overall, about 57% of the estimated work is done
   ([meter](#three-loop-effort-meter)).
   <!-- HQ:tlstatus:end -->
 
@@ -69,7 +69,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 3184. **Total lines of Lean code:** 1,080,795.
+**Tracked Lean source files:** 3185. **Total lines of Lean code:** 1,082,040.
 <!-- HQ:progress:end -->
 
 ### Three-loop effort meter
@@ -89,9 +89,9 @@ worker-sessions spent and a range for what is left, and
 | Set (b) | 10 | 0–0 | 100% | 100–100% | `████████████████████` |
 | Set (c) | 72 | 9–22 | 82% | 77–89% | `████████████████░░░░` |
 | Set (d) | 108 | 17–33 | 81% | 77–86% | `████████████████░░░░` |
-| Set (e) | 24 | 27–66 | 34% | 27–47% | `███████░░░░░░░░░░░░░` |
+| Set (e) | 25 | 25–62 | 36% | 29–50% | `███████░░░░░░░░░░░░░` |
 | Model link and assembly | 5 | 83–162 | 4% | 3–6% | `█░░░░░░░░░░░░░░░░░░░` |
-| **Total** | 272 | 136–283 | **56%** | 49–67% | `███████████░░░░░░░░░` |
+| **Total** | 273 | 134–279 | **57%** | 49–67% | `███████████░░░░░░░░░` |
 
 Open items (remaining range, part, item):
 
@@ -104,7 +104,7 @@ Open items (remaining range, part, item):
 - 2–4 (Set (d)): I15: K4, A1 slice evaluated (coefficient replay left), A23 endpoint calculus + replay
 - 2–4 (Set (d)): I3 via I3Rel + normalisation
 - 8–12 (Set (d)): DimReg (d): pilot reduction done; full cert needs {x8=0} face, local checker, syms
-- 11–26 (Set (e)): extra LR masters: I17 done; I10 K_a, K2 linear done, K2 quadratic (~2) + assembly left; I4 P1 (3-4), P2 (3-6); I6 I7 I1 + I3
+- 9–22 (Set (e)): extra LR masters: I17, I10 done; I4 P1 (2-3), P2 (3-6); I6 I7 I1 + I3
 - 8–20 (Set (e)): analytic layer per family
 - 8–20 (Set (e)): diagram expressions, projection, counterterms in d dims
 - 1–2 (Model link and assembly): frozen statements: (d) frozen (D-59); (e) and total drafts, after the pilot

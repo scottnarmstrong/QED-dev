@@ -151,10 +151,10 @@
   },
   {
    "set": "e",
-   "item": "extra LR masters: I17 done; I10 K_a, K2 linear done, K2 quadratic (~2) + assembly left; I4 P1 (3-4), P2 (3-6); I6 I7 I1 + I3",
-   "spent": 11,
-   "lo": 11,
-   "hi": 26
+   "item": "extra LR masters: I17, I10 done; I4 P1 (2-3), P2 (3-6); I6 I7 I1 + I3",
+   "spent": 12,
+   "lo": 9,
+   "hi": 22
   },
   {
    "set": "e",
