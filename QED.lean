@@ -283,6 +283,11 @@ public import QED.ThreeLoopD.SetDMastersI3FAnalytic
 public import QED.ThreeLoopD.SetDMastersI3FValCoV
 public import QED.ThreeLoopD.SetDMastersI3FValPhoton
 public import QED.ThreeLoopD.SetDMastersI3FValE3
+public import QED.ThreeLoopD.SetDMastersI3FValXPos
+public import QED.ThreeLoopD.SetDMastersI3FValXAlpha
+public import QED.ThreeLoopD.SetDMastersI3FValXInt
+public import QED.ThreeLoopD.SetDMastersI3FValXFinal
+public import QED.ThreeLoopD.SetDMastersI3FValXClean
 public import QED.ThreeLoopD.SetDMastersI12Def
 public import QED.ThreeLoopD.SetDMastersI12Poly
 public import QED.ThreeLoopD.SetDMastersI12Gamma
