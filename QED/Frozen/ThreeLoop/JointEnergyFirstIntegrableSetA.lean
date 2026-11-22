@@ -49,7 +49,7 @@ theorem jointEnergyFirstIntegrable_setA (P : Params) {F : Type} [Fintype F] [Dec
         Graded.regulatedAmplitude P Φ D C g pIn kIn (lineMomentum₂ C pOut pIn kIn ℓ) αOut βIn
           μ :=
   -- FROZEN_ANCHOR_PROOF_BEGIN
-  by sorry
+  by exact QED.Provider.ThreeLoop.jointEnergyFirstIntegrable_setA
   -- FROZEN_ANCHOR_PROOF_END
 -- FROZEN_ANCHOR_SUFFIX_BEGIN
 

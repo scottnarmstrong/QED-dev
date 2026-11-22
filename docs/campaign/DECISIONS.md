@@ -2984,3 +2984,24 @@ conditional premise along `_of_incPieces` → `_of_limLip4` → `_of_gen` → `_
 discharged by a proved term, and non-vacuity (the renormalized counterterms exist by
 `exists_renormalized`; `Π_∞` is a genuine witness). The identification of `Π_∞` with the
 Källén–Sabry function is not part of R-Π₄; it is the set (a) step R-KS (deferred item D6).
+
+**Seal of (HA₀) (2026-11-22; provisional freeze, author approval pending).** The D-58 goal
+`QED.ThreeLoop.jointEnergyFirstIntegrable_setA` is sealed with the provider
+`QED.Provider.ThreeLoop.jointEnergyFirstIntegrable_setA` (D-13 binders), which applies
+`QED.ChainProof.SetALink.jointEnergyFirstIntegrable_setA_final` (`SetALinkIntFinal.lean`). That
+theorem discharges the class obligations of the nine representatives of
+`jointEnergyFirstIntegrable_setA_of_classes`:
+the one-loop photon-counterterm classes (`classIntA_repP`, X₀'s one-loop test), the two-loop
+gauge-counterterm classes (`classIntA_repGW`, `classIntA_repGU`), the two-loop
+fermion-counterterm classes (`classIntA_repFA`, `classIntA_repFB`, after the rewrite
+k̸k̸ = −k·k at the counterterm vertex) and the three-loop vertex-type classes
+(`classIntA_repVA`, `classIntA_repVB`, `classIntA_repVC`, by a three-loop lines theorem from
+rotating the three loop energies under a kernel-checked basis criterion).
+Checks: the frozen bytes changed only in the proof body and the manifest state; the frozen and
+provider builds exit 0; standard axioms; guard OK; full `frozen_abi.py --check` passes.
+Independent seal audit (refute-first, 2026-11-22): PROVED. It checked the frozen diff, type
+equality with every argument in its own slot, standard axioms across the 56,817-constant closure
+(no sorryAx, unsafe or QED-namespace extern), the quarantine, that the classification
+`exists_rep_setA` covers every set (a) contraction at graded order 7 by the nine
+representatives, that the kernel-checked criteria are hypotheses actually consumed, and that the
+class hypotheses are exactly the frozen statement's.

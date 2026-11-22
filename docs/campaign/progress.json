@@ -773,6 +773,10 @@
     {
       "date": "2026-11-22",
       "change": "Stage 2 complete: R-Pi4 (vacuumPolarizationPart_two_lepton_limit) sealed, the epsilon -> 0 limit of the two-loop vacuum polarization with heavy leptons, its convergence to a regulator-free limit Pi_inf as the regulators are removed, and its log-squared growth. All 18 Stage 2 goals sealed and independently audited. Identifying Pi_inf with the Kallen-Sabry function is a separate step of set (a)."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Stage 3a/3b: the set (a) integrability goal (HA0) sealed: every term of the set (a) vertex is a genuine integral at fixed regulators, through all nine diagram classes (one-, two- and three-loop). 14 of the 17 provisional D-58 goals sealed. Independently audited (seal audit: PROVED)."
     }
   ],
   "tracks": [

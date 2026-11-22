@@ -36949,7 +36949,7 @@
         "module": "QED.Provider.ThreeLoop.JointEnergyFirstIntegrableSetA",
         "export": "QED.Provider.ThreeLoop.jointEnergyFirstIntegrable_setA"
       },
-      "state": "DRAFT_SORRY",
+      "state": "SEALED",
       "prefix_sha256": "116b753f23b26db9b5d587a29fe94e54763632cdbdc8bbf794c65049ec3dd6cb",
       "suffix_sha256": "1f9dd69c780fa2146137f9ff8c06409bb93e4adb6dc5711b50152c1c626daca1",
       "draft_allowlist": {
