@@ -1724,6 +1724,10 @@ public import QED.ChainProof.SetCRegDispCtLoBZero
 public import QED.ChainProof.SetCRegDispCtLoBMatch
 public import QED.ChainProof.SetCRegDispCtLoBPow
 public import QED.ChainProof.SetCRegDispCtLoBZeroJ
+public import QED.ChainProof.SetCRegDispCtLoBSpec
+public import QED.ChainProof.SetCRegDispCtLoBCD
+public import QED.ChainProof.SetCRegDispCtLoBCU
+public import QED.ChainProof.SetCRegDispCtLoBCO
 public import QED.ChainProof.SetCRegDispShareVal
 public import QED.ChainProof.SetCRegDispShare
 public import QED.ChainProof.SetCRegDispShellKer
