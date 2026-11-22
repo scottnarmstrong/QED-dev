@@ -1200,6 +1200,9 @@ public import QED.ChainProof.SetCMainBRestLink
 public import QED.ChainProof.SetCMainBPauliPiece
 public import QED.ChainProof.SetCMainBPauliParts
 public import QED.ChainProof.SetCMainBPauli
+public import QED.ChainProof.SetCMainBKKVal
+public import QED.ChainProof.SetCMainBKKTerm
+public import QED.ChainProof.SetCMainBKKLink
 public import QED.ChainProof.SetCUnitLimit
 public import QED.ChainProof.SetCUnitCov
 public import QED.ChainProof.SetCUnitPauli
