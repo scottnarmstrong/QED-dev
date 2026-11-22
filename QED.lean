@@ -769,6 +769,8 @@ public import QED.ChainProof.SetAKSKVPauli
 public import QED.ChainProof.SetAKSKVScale
 public import QED.ChainProof.SetAKSKVLog
 public import QED.ChainProof.SetAKSKVOne
+public import QED.ChainProof.SetAKSKWCm
+public import QED.ChainProof.SetAKSKWLogSq
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
