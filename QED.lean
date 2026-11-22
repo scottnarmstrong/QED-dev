@@ -1617,6 +1617,11 @@ public import QED.ChainProof.SetCRegDispShellIBP
 public import QED.ChainProof.SetCRegDispShellSEPow
 public import QED.ChainProof.SetCRegDispShellSEProd
 public import QED.ChainProof.SetCRegDispShellSEFub
+public import QED.ChainProof.SetCRegDispShellSELim
+public import QED.ChainProof.SetCRegDispShellSELimG
+public import QED.ChainProof.SetCRegDispShellSERad
+public import QED.ChainProof.SetCRegDispShellSESpat
+public import QED.ChainProof.SetCRegDispShellSEQuad
 public import QED.ChainProof.SetCPauliSum
 public import QED.ChainProof.SetCPauliSumReal
 public import QED.ChainProof.SetCPauliSumCB01
