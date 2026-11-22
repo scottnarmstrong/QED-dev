@@ -822,6 +822,9 @@ public import QED.ChainProof.SetCLimCtCD01
 public import QED.ChainProof.SetCLimCtCB
 public import QED.ChainProof.SetCLimCtCB01
 public import QED.ChainProof.SetCLimCtCB01Shape
+public import QED.ChainProof.SetCLimCtCB01Amp
+public import QED.ChainProof.SetCLimCtCB01Num
+public import QED.ChainProof.SetCLimCtCB01Bnd
 public import QED.ChainProof.SetCMainRel
 public import QED.ChainProof.SetCMainDChain
 public import QED.ChainProof.SetCUnitLimit
