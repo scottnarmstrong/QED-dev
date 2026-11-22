@@ -278,6 +278,10 @@ public import QED.ThreeLoopD.SetDMastersI13RemAsy1
 public import QED.ThreeLoopD.SetDMastersI13RemAsy2
 public import QED.ThreeLoopD.SetDMastersI13RemAnalytic
 public import QED.ThreeLoopD.SetDMastersI13RemCoeff
+public import QED.ThreeLoopD.SetDMastersI13RJet
+public import QED.ThreeLoopD.SetDMastersI13RCoef
+public import QED.ThreeLoopD.SetDMastersI13RXi
+public import QED.ThreeLoopD.SetDMastersI13R1
 public import QED.ThreeLoopE.SetEMastersCoeffsA
 public import QED.ThreeLoopE.SetEMastersCoeffsB
 public import QED.ThreeLoopE.SetEMastersLaurent
