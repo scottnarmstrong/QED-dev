@@ -25,14 +25,14 @@ $a_e$ is, why each loop order is harder, and how far the verification has come.
   smaller contributions from muon and tau loops.
 - **Three loops: in progress.** <!-- HQ:tlstatus:start -->
   The target is the exact result of Laporta and Remiddi (1996), which sums 72 Feynman diagrams in
-  five groups. Two groups are proved: the two-loop vacuum-polarization insertion (3 diagrams; the
-  author has yet to approve its exact Lean statement) and the chain of two one-loop bubbles (1
-  diagram). The vacuum-polarization insertion in the two-loop vertex (12 diagrams) is about 81%
-  done, working directly from the model. The light-by-light diagrams (6 diagrams) are about 81%
-  done: most of their final integrals are proved equal to their published values, and the link
-  back to the model is being designed. The diagrams without fermion loops (50 diagrams) are about
-  34% done: their final integrals are being evaluated. Overall, about 56% of the estimated work is
-  done ([meter](#three-loop-effort-meter)).
+  five groups. Two groups are proved: the two-loop vacuum-polarization insertion (3 diagrams) and
+  the chain of two one-loop bubbles (1 diagram). The vacuum-polarization insertion in the two-loop
+  vertex (12 diagrams) is about 82% done, working directly from the model. The light-by-light
+  diagrams (6 diagrams) are about 81% done: their exact Lean statements are frozen, most of their
+  final integrals are proved equal to their published values, and the link back to the model is
+  being built. The diagrams without fermion loops (50 diagrams) are about 34% done: their final
+  integrals are being evaluated. Overall, about 56% of the estimated work is done
+  ([meter](#three-loop-effort-meter)).
   <!-- HQ:tlstatus:end -->
 
 Every theorem is checked by Lean's kernel using only Lean's standard axioms.
@@ -69,7 +69,7 @@ become precise; changes to their scope must be recorded.
 | Higher loops toward five-loop QED | 0/4 | `░░░░░░░░░░` 0% | Planned |
 | Experimental comparison | 0/4 | `░░░░░░░░░░` 0% | Planned |
 
-**Tracked Lean source files:** 3179. **Total lines of Lean code:** 1,079,114.
+**Tracked Lean source files:** 3184. **Total lines of Lean code:** 1,080,795.
 <!-- HQ:progress:end -->
 
 ### Three-loop effort meter
@@ -87,17 +87,17 @@ worker-sessions spent and a range for what is left, and
 | --- | ---: | ---: | ---: | ---: | --- |
 | Set (a) | 53 | 0–0 | 100% | 100–100% | `████████████████████` |
 | Set (b) | 10 | 0–0 | 100% | 100–100% | `████████████████████` |
-| Set (c) | 71 | 10–24 | 81% | 75–88% | `████████████████░░░░` |
+| Set (c) | 72 | 9–22 | 82% | 77–89% | `████████████████░░░░` |
 | Set (d) | 108 | 17–33 | 81% | 77–86% | `████████████████░░░░` |
 | Set (e) | 24 | 27–66 | 34% | 27–47% | `███████░░░░░░░░░░░░░` |
-| Model link and assembly | 3 | 83–163 | 2% | 2–3% | `░░░░░░░░░░░░░░░░░░░░` |
-| **Total** | 269 | 137–286 | **56%** | 48–66% | `███████████░░░░░░░░░` |
+| Model link and assembly | 5 | 83–162 | 4% | 3–6% | `█░░░░░░░░░░░░░░░░░░░` |
+| **Total** | 272 | 136–283 | **56%** | 49–67% | `███████████░░░░░░░░░` |
 
 Open items (remaining range, part, item):
 
 - 3–5 (Set (c)): CBLoEq mass part (hB): L3 bounds + vertex limits landed (0eb51fb); rest of L5, L4 assembly, L6
 - 3–8 (Set (c)): VP-share value identities (hS): SE limit explicit (c7523aa); b4 (sigma0, sigma1) left
-- 4–11 (Set (c)): regulator hReg (a.e. route): crossed sector done; L/S/C reduced to the eight-line simplex; trace integrals, ladder/S/C bounds, assembly
+- 3–9 (Set (c)): regulator hReg (a.e. route): crossed done; ladder reduced, centered bound, charge term; radial link, heavy log, S/C, assembly
 - 2–5 (Set (d)): I2: P1 done (715f1e6); P2
 - 2–5 (Set (d)): I5: K1 primitive P_B proved (33c201c); endpoint limits + FTC, i5RemCoeff_one; c2
 - 1–3 (Set (d)): I12: r3, r4 (face T landed; bulk S: U0-U2 closed forms e00db9d)
@@ -107,7 +107,7 @@ Open items (remaining range, part, item):
 - 11–26 (Set (e)): extra LR masters: I17 done; I10 K_a, K2 linear done, K2 quadratic (~2) + assembly left; I4 P1 (3-4), P2 (3-6); I6 I7 I1 + I3
 - 8–20 (Set (e)): analytic layer per family
 - 8–20 (Set (e)): diagram expressions, projection, counterterms in d dims
-- 1–3 (Model link and assembly): frozen statements: (d) packet drafted and audited (all pass), awaiting author; (e), total drafts
+- 1–2 (Model link and assembly): frozen statements: (d) frozen (D-59); (e) and total drafts, after the pilot
 - 82–160 (Model link and assembly): model link (plan 2026-11-22): one-loop pilot done; LP layer done; two-loop pilot 15-25 (mostly shared generic layers); generic, (d) 20-36, (e) 40-80, total 9-19
 <!-- HQ:threeloop:end -->
 

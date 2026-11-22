@@ -719,6 +719,7 @@ public import QED.ThreeLoopE.SetEMastersI4P1SM
 public import QED.ThreeLoopE.SetEMastersI4P1ST
 public import QED.ThreeLoopE.SetEMastersI4P1SSwap
 public import QED.ThreeLoopE.SetEMastersI4P1SL
+public import QED.ThreeLoopE.SetEMastersI4P1STau
 public import QED.ThreeLoopE.SetECertF3jFamily
 public import QED.ThreeLoopE.SetECertF3jData0
 public import QED.ThreeLoopE.SetECertF3jData1
@@ -748,6 +749,7 @@ public import QED.DimReg.TwoLoopBridgeWick
 public import QED.DimReg.TwoLoopBridgeLPChange
 public import QED.DimReg.TwoLoopBridgeLP
 public import QED.DimReg.OneLoopBridgeNum
+public import QED.DimReg.TwoLoopBridgeGauss
 public import QED.DimReg.MassiveBubble
 public import QED.ThreeLoopD.SetDMastersGammaInt
 public import QED.Algebra.IBPCertPoly
@@ -1849,6 +1851,9 @@ public import QED.ChainProof.SetCRegBndRepeat
 public import QED.ChainProof.SetCRegBndTransport
 public import QED.ChainProof.SetCRegBndPhotonMerge
 public import QED.ChainProof.SetCRegBndLadderRadial
+public import QED.ChainProof.SetCRegBndPhotonFiber
+public import QED.ChainProof.SetCRegBndLadderCenter
+public import QED.ChainProof.SetCRegBndLadderCt
 public import QED.ChainProof.SetCRegFinal
 public import QED.ChainProof.SetCRegPieceE
 public import QED.ChainProof.SetCUnitLimit

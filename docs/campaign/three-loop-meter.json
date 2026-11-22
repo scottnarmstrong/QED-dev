@@ -74,10 +74,10 @@
   },
   {
    "set": "c",
-   "item": "regulator hReg (a.e. route): crossed sector done; L/S/C reduced to the eight-line simplex; trace integrals, ladder/S/C bounds, assembly",
-   "spent": 12,
-   "lo": 4,
-   "hi": 11
+   "item": "regulator hReg (a.e. route): crossed done; ladder reduced, centered bound, charge term; radial link, heavy log, S/C, assembly",
+   "spent": 13,
+   "lo": 3,
+   "hi": 9
   },
   {
    "set": "d",
@@ -172,15 +172,15 @@
   },
   {
    "set": "asm",
-   "item": "frozen statements: (d) packet drafted and audited (all pass), awaiting author; (e), total drafts",
-   "spent": 1,
+   "item": "frozen statements: (d) frozen (D-59); (e) and total drafts, after the pilot",
+   "spent": 2,
    "lo": 1,
-   "hi": 3
+   "hi": 2
   },
   {
    "set": "asm",
    "item": "model link (plan 2026-11-22): one-loop pilot done; LP layer done; two-loop pilot 15-25 (mostly shared generic layers); generic, (d) 20-36, (e) 40-80, total 9-19",
-   "spent": 2,
+   "spent": 3,
    "lo": 82,
    "hi": 160
   },
@@ -197,7 +197,7 @@
   "a": {
    "name": "the two-loop vacuum-polarization insertion",
    "diagrams": 3,
-   "note": "the author has yet to approve its exact Lean statement"
+   "note": ""
   },
   "b": {
    "name": "the chain of two one-loop bubbles",
@@ -213,7 +213,7 @@
   "d": {
    "name": "the light-by-light diagrams",
    "diagrams": 6,
-   "note": ": most of their final integrals are proved equal to their published values, and the link back to the model is being designed",
+   "note": ": their exact Lean statements are frozen, most of their final integrals are proved equal to their published values, and the link back to the model is being built",
    "verb": "are"
   },
   "e": {
