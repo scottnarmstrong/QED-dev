@@ -207,6 +207,12 @@ public import QED.DimReg.ThreeLoopPolyEval
 public import QED.DimReg.ThreeLoopPoly
 public import QED.DimReg.ThreeLoopAnn
 public import QED.DimReg.ThreeLoopPerm
+public import QED.DimReg.ThreeLoopLine
+public import QED.DimReg.ThreeLoopLineVal
+public import QED.DimReg.ThreeLoopLineRel
+public import QED.DimReg.ThreeLoopFace
+public import QED.DimReg.ThreeLoopPrune
+public import QED.DimReg.ThreeLoopFaceTrees
 public import QED.ThreeLoopD.SetDMastersCoeffs
 public import QED.ThreeLoopD.SetDMastersLaurent
 public import QED.ThreeLoopD.SetDMastersPoles
