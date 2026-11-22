@@ -3024,3 +3024,67 @@ equal to the frozen one, the ABI fingerprint `775dc748…` reproduced, every cla
 `RemainingC.ofB` and `classesC_of_remaining` discharged by a proved theorem, standard axioms
 with a forbidden-token scan of the 392-module closure, the quarantine, and that every
 meaning-carrying definition in the statement is a sealed frozen definition.
+
+## D-59. Rulings of 2026-11-22: set (a) approved, set (d) packet frozen (author ruling)
+
+**Rulings.** On 2026-11-22 the author ruled as follows.
+
+1. **Set (a) statements approved.** The ten set (a) entries frozen provisionally under D-58 move
+   from approval version "provisional" to "1", with this decision as their approval reference:
+   (A₁) `IsSetA`, (A₂) `a1SixSetA`, (A₃) `a1SixSetA_bounds`, block K ((A₄) `ksRhoFour`, (A₅)
+   `piHatFour`, (A₇) `integral_piHatFour_eq_a1SixSetA`), the meaning theorems (MA₁)
+   `exists_isSetA` and (MA₂) `not_isSetA_and_isVPChain_two`, (HA₀)
+   `jointEnergyFirstIntegrable_setA` and the headline (HA₆)
+   `isFormFactorPair_vertexSetA_pauli_limit` (state SEALED). Only the `author_approval` fields
+   changed; the frozen bytes, hashes, states and split policies are unchanged. The set (c) entries
+   and the generic `QED.Graded` entries of D-58 ((Gf₁), (Gf₂), (Gs₁)–(Gs₃), (MF₁), (MS₁), (MS₂),
+   (E-G₄)) were not part of this approval and stay provisional. With (HA₆) sealed (commit
+   `68c967b`), milestone L3.SETA is done.
+2. **Set (d) packet frozen as audited.** The Stage 3d packet (session scratch,
+   `packetD/Packet/SetD.lean`) is frozen with the author's approval, one declaration per file
+   under `QED/Frozen/ThreeLoop/`, namespace `QED.ThreeLoop`:
+   - definitions (SEALED, bodies exposed, imported by `QED.lean`): (Sd₁) `IsSetD`, the one-loop
+     vertex skeleton whose external photon sits on a four-photon fermion loop joined to the open
+     line by three photons (AKN Fig. 3 (d), six diagrams, no counterterm graph); (Sd₂)
+     `a1SixSetD`, the Laporta–Remiddi (1991) closed form as printed by Jegerlehner–Nyffeler,
+     p. 32, ≈ 0.3710052921072;
+   - theorem goals (DRAFT_SORRY, body `by sorry`): (Sd₃) `a1SixSetD_bounds`, (MD₁)
+     `exists_isSetD`, (MD₂) `isSetD_disjoint`, (HD₀) `jointEnergyFirstIntegrable_setD` and the
+     headline (HD₆) `isFormFactorPair_vertexSetD_pauli_limit`, which has the binders and
+     quantifier order of (HA₆) with selection `IsOnePI ∧ IsSetD` and target `a1SixSetD`. Each
+     names a provider under `QED.Provider.ThreeLoop` in the D-13 convention; as for D-58, the
+     provider modules are quarantined stubs (imports and a docstring only, no declaration),
+     imported only by their frozen anchors. The root does not import the theorem anchors.
+
+   The frozen text is byte-identical to the audited candidate except for two docstring changes in
+   (Sd₂), both ruled by the author: the Laporta–Remiddi 1991 page is 181, as the reference list of
+   Laporta–Remiddi 1996 prints it (the draft had 182), and Jegerlehner–Nyffeler is cited as the
+   pinned source `jegerlehner-nyffeler-2009`. The redundant hypothesis `hC₁ : IsOnePI C` of
+   (HD₀) is kept (audit question Q-d4), for uniformity with (HS₀); the enumeration shows every
+   (Sd₁) contraction at order 7 is 1PI. The manifest entries (contract prefix
+   `qed_dev.packetS3d`) were computed with the D-58 freezer, whose only change is that it accepts
+   the candidate's `:=` / `sorry` body form. The ABI hashes come from the `frozen_abi.py`
+   method, and the definition closures from the D-58 closure walk.
+
+   Audit (independent, refute-first, 2026-11-22; session scratch `packetD/AUDIT.md`): all seven
+   PASS, no FAIL. The audit enumerated all 4,233,600 seven-gauge contractions. (Sd₁) selects
+   6 · 7! of them: six orbits without automorphisms, all 1PI, with no extra or missing graph.
+   (Sd₂) was checked term by term against the rendered page and to 40 digits. (Sd₃) and (MD₁)
+   are proved in scratch with standard axioms only. (MD₂) is true at every order and grading.
+   (HD₀) differs from the sealed (HS₀) only in the selection. (HD₆) was shown by elaboration to
+   be the (HA₆) shape with the selection and target replaced.
+3. **Source pinned.** F. Jegerlehner and A. Nyffeler, *Phys. Rept.* 477 (2009) 1,
+   arXiv:0902.3360v1, is pinned as `jegerlehner-nyffeler-2009` (2592813 bytes, sha256
+   `285594c721d849dc525523a41f07de1c1aefff0f0887744eec465ca8aeb70651`) in `sources/manifest.json`
+   and [SOURCES.md](../SOURCES.md), where it was a background reference. On 2026-11-22 the hash
+   was re-verified against the session's downloaded copy, which is the hash recorded on
+   2026-11-07. That copy is now also in the ignored `sources/cache/`.
+4. **Model-link pilot.** The model-link pilot continues as planned: the generic layers first, then
+   the X graph, then L and S+C. The pilot is re-sized after X.
+
+**Still drafts.** Set (e) and the total (the value split and the assembly of A₁⁽⁶⁾) remain drafts
+and are not frozen. Before the total's value-split statement (CMP₇-v)
+`familyVertex_seven_eq_sum` is frozen, the auditor recommends adding `hε : 0 < P.ε`. Without
+it, `contractionValue`'s junk value 0 at a non-integrable stage can break additivity in the
+level-1 data. The auditor also suggests considering the (X₀) block and stating `hs` at
+`Φ.openLine` only.

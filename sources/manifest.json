@@ -200,6 +200,17 @@
       "sha256": "ce2b08a15c91be594c6e06780cecaec2b8c54bfb0e01dd23c2a169a45c699f1a",
       "license": "arXiv non-exclusive distribution license; kept in the ignored cache, not committed.",
       "stability": "arXiv version v1; fixed."
+    },
+    {
+      "id": "jegerlehner-nyffeler-2009",
+      "role": "primary, three loops, set (d): the equal-mass closed form of the light-by-light contribution A1(6)(d) (p. 32, the display before eq. (82); numerical value eq. (82)), the closed form of Laporta and Remiddi, Phys. Lett. B 265 (1991) 181; a4 = Li4(1/2) as in (A.14)",
+      "citation": "F. Jegerlehner and A. Nyffeler, 'The muon g-2', Phys. Rept. 477 (2009) 1, arXiv:0902.3360v1",
+      "url": "https://arxiv.org/pdf/0902.3360v1",
+      "retrieved_utc": "2026-11-07T00:00:00Z",
+      "bytes": 2592813,
+      "sha256": "285594c721d849dc525523a41f07de1c1aefff0f0887744eec465ca8aeb70651",
+      "license": "arXiv non-exclusive distribution license; kept in the ignored cache, not committed.",
+      "stability": "arXiv version v1; fixed."
     }
   ]
 }

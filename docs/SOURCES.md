@@ -151,6 +151,7 @@ exact fourth-order results.
 | `barbieri-remiddi-1974` | R. Barbieri and E. Remiddi, "Sixth order electron and muon (g-2)/2 from second order vacuum polarization insertion", CERN preprint TH.1801 (1974); Phys. Lett. B 49 (1974) 468, doi:10.1016/0370-2693(74)90638-8 (CERN scan CM-P00060973, acquired by the author) | set (c): eq. (3) gives the electron value 227/72 + 31/9 ζ(2) − 8 ζ(2) ln 2 − 35/8 ζ(3) + 2 ζ(2)² = −0.150172282…; eq. (1) gives graph-pair partial sums; the rest of the set comes from its refs. 1)–3) | 243310 / `55f3721e9fabb8e26c0d87537303f242e040f0e63957f0139f60055d4750744f` |
 | `balzani-laporta-passera-2022` | E. Balzani, S. Laporta, M. Passera, Phys. Lett. B 834 (2022) 137462, arXiv:2112.05704v3 | set (c) kernel: space-like two-loop massive-photon kernel F⁽⁴⁾, eqs. (20)-(24), (38); with the chain subtraction it reproduces Barbieri–Remiddi eq. (3) to 50 digits | 637932 / `cd190af861de2cbfccd136783f7cc88b715c38dec3f2f22e9a24d335983c6c29` |
 | `kaptari-lashkevich-solovtsova-2025` | L. P. Kaptari, V. I. Lashkevich, O. P. Solovtsova, 'The sixth order QED radiative corrections to lepton anomalies due to the fourth order vacuum polarization insertions within the Mellin-Barnes representation', Phys. Rev. D 112 (2025) 073008, arXiv:2508.05119v1 | set (a): eq. (16) gives the equal-mass value 673/108 − 41/81 π² − 7/270 π⁴ − 4/9 π² ln 2 − 4/9 π² ln² 2 + 4/9 ln⁴ 2 + 32/3 Li₄(1/2) + 13/18 ζ(3) = 0.05287065…, first obtained by Mignaco and Remiddi (1969); eq. (20) the Källén–Sabry spectral function, eqs. (4), (6), (18) the dispersion form, eq. (25) the insertion integral | 370716 / `ce2b08a15c91be594c6e06780cecaec2b8c54bfb0e01dd23c2a169a45c699f1a` |
+| `jegerlehner-nyffeler-2009` | F. Jegerlehner, A. Nyffeler, 'The muon g-2', Phys. Rept. 477 (2009) 1, arXiv:0902.3360v1 (retrieved 2026-11-07; bytes re-verified 2026-11-22) | set (d): p. 32, the display before eq. (82), gives the equal-mass light-by-light value 5/6 ζ(5) − 5/18 π² ζ(3) − 41/540 π⁴ − 2/3 π² ln² 2 + 2/3 ln⁴ 2 + 16 a₄ − 4/3 ζ(3) − 24 π² ln 2 + 931/54 π² + 5/9, the closed form of Laporta and Remiddi, Phys. Lett. B 265 (1991) 181; eq. (82) its value 0.371005293; (A.14) defines a₄ = Li₄(1/2). Pinned by D-59 (formerly a background reference) | 2592813 / `285594c721d849dc525523a41f07de1c1aefff0f0887744eec465ca8aeb70651` |
 
 The earlier analytic results that the 1996 paper builds on (light-by-light, the other sets and
 their master integrals) will be pinned here as they are acquired.
@@ -195,10 +196,9 @@ using it there would be circular. An $\alpha$ from atom-recoil measurements
 - W. Zimmermann, *Commun. Math. Phys.* 11 (1968) 1–8: the absolutely convergent
   Minkowski prescription M2 ([REGULARIZATION.md](REGULARIZATION.md)). Not
   retrieved; pin it before relying on it.
-- F. Jegerlehner and A. Nyffeler, *Phys. Rept.* 477 (2009) 1, arXiv:0902.3360v1
-  (SHA-256 `285594c721d849dc525523a41f07de1c1aefff0f0887744eec465ca8aeb70651`
-  as retrieved 2026-11-07), and B. Lynch, arXiv:hep-ph/0108081v3
+- B. Lynch, arXiv:hep-ph/0108081v3
   (`72675f0a99e35c5e05c42fe4d24917c249ea8cf534c371dac9b99e26930718cc`): checked
-  during selection; useful only for cross-checks.
+  during selection; useful only for cross-checks. (Jegerlehner–Nyffeler, checked at
+  the same time, is now pinned as `jegerlehner-nyffeler-2009` for set (d), D-59.)
 - The remaining [initial candidates](PROJECT-OUTLINE.md#7-initial-source-candidates)
   in the outline concern later phases and the experimental comparison.

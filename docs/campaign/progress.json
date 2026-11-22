@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-19",
+  "updated": "2026-11-22",
   "history": [
     {
       "date": "2026-11-07",
@@ -781,6 +781,10 @@
     {
       "date": "2026-11-22",
       "change": "Stage 3a/3b: the set (c) integrability goal (HS0) sealed: every term of the set (c) vertex is a genuine integral at fixed regulators, through all diagram classes of the set (c) classification. 15 of the 17 provisional D-58 goals sealed. Independently audited (seal audit: PROVED)."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Author rulings (D-59): the set (a) statements approved (the ten set (a) entries of D-58 leave provisional status; frozen bytes unchanged), so L3.SETA is done on the seal of (HA6) in commit 68c967b. The set (d) packet frozen as audited (two definitions sealed, five theorem goals DRAFT_SORRY); Jegerlehner-Nyffeler 2009 pinned as its source. Set (c), set (e) and the total stay as they were."
     }
   ],
   "tracks": [
@@ -883,11 +887,14 @@
         {
           "id": "L3.SETA",
           "title": "Set (a): fourth-order vacuum-polarization insertion, 3 diagrams",
-          "status": "in_progress",
+          "status": "done",
           "evidence": [
             "QED/Chain/SetAValue.lean",
-            "QED/Frozen/ThreeLoop/VertexSetAPauliLimit.lean"
-          ]
+            "QED/Frozen/ThreeLoop/VertexSetAPauliLimit.lean",
+            "QED/Provider/ThreeLoop/VertexSetAPauliLimit.lean",
+            "docs/campaign/DECISIONS.md"
+          ],
+          "validation": "docs/campaign/STATUS.md"
         },
         {
           "id": "L3.SETC",
