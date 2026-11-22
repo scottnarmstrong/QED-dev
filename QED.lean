@@ -553,6 +553,10 @@ public import QED.ChainProof.SetCLinkClassWalk
 public import QED.ChainProof.SetCLinkClassMain
 public import QED.ChainProof.SetCLinkSum
 public import QED.ChainProof.SetCLinkVertex
+public import QED.ChainProof.SetCLinkInt
+public import QED.ChainProof.SetCLinkIntOne
+public import QED.ChainProof.SetCLinkIntCB
+public import QED.ChainProof.SetCLinkIntRem
 public import QED.ChainProof.SetCKLamOutCBd
 public import QED.ChainProof.SetCKLamOutCDecay
 public import QED.ChainProof.SetCKLamOutC
