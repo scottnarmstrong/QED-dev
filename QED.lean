@@ -693,6 +693,8 @@ public import QED.ChainProof.SetCLinkFinal
 public import QED.ChainProof.SetCPauliCond
 public import QED.ChainProof.SetCPauliLink
 public import QED.ChainProof.SetCMirror
+public import QED.ChainProof.SetCCovClasses
+public import QED.ChainProof.SetCLimCtS
 public import QED.ChainProof.SetCLinkClassStd
 public import QED.ChainProof.SetCLinkClassDecB
 public import QED.ChainProof.SetCLinkClassDecD
