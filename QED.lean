@@ -517,6 +517,9 @@ public import QED.ChainProof.SetAKSKBLeib
 public import QED.ChainProof.SetAKSKBQuart
 public import QED.ChainProof.SetAKSKBPos
 public import QED.ChainProof.SetAKSKBVDens
+public import QED.ChainProof.SetAKSKBMassNum
+public import QED.ChainProof.SetAKSKBMassLim
+public import QED.ChainProof.SetAKSKBMassVal
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
