@@ -550,6 +550,12 @@ public import QED.ChainProof.SetAKSKBNAlg
 public import QED.ChainProof.SetAKSKBNSlice
 public import QED.ChainProof.SetAKSKBNVA
 public import QED.ChainProof.SetAKSKBNVC
+public import QED.ChainProof.SetAKSKBNVBTr
+public import QED.ChainProof.SetAKSKBNVBAlg
+public import QED.ChainProof.SetAKSKBNVBSlice
+public import QED.ChainProof.SetAKSKBNVBCW
+public import QED.ChainProof.SetAKSKBNVB
+public import QED.ChainProof.SetAKSKBNVBQ
 public import QED.ChainProof.SetASpecKin
 public import QED.ChainProof.SetASpecPiece
 public import QED.ChainProof.SetASpecDecay
