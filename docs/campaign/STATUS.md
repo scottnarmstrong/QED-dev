@@ -27,12 +27,12 @@ Milestones (see the [ledger](progress.json)):
 ## Reporting fields
 
 ```text
-DRAFT_ANCHORS: 3 — 3 of the 17 Stage 3a/3b goals (D-58, provisional; author approval pending)
-               under QED/Frozen/ThreeLoop/ (VertexSetAPauliLimit, JointEnergyFirstIntegrableSetC,
-               VertexSetCPauliLimit); all Stage 2 goals and all earlier anchors sealed
+DRAFT_ANCHORS: 2 — 2 of the 17 Stage 3a/3b goals (D-58, provisional; author approval pending)
+               under QED/Frozen/ThreeLoop/ (VertexSetAPauliLimit, VertexSetCPauliLimit); all
+               Stage 2 goals and all earlier anchors sealed
 UNREGISTERED_SORRIES: 0 (scripts/check_frozen_anchors.py: FROZEN-ANCHOR GUARD OK)
 DRAFT_IMPORT_VIOLATIONS: 0 (same guard run)
-SEALED_THIS_TURN: 1 — (HA₀) jointEnergyFirstIntegrable_setA (provisional D-58 goal; independent
+SEALED_THIS_TURN: 1 — (HS₀) jointEnergyFirstIntegrable_setC (provisional D-58 goal; independent
                seal audit: PROVED); guard, build, standard axioms, ABI unchanged
 ```
 

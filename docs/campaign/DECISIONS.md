@@ -3005,3 +3005,22 @@ equality with every argument in its own slot, standard axioms across the 56,817-
 `exists_rep_setA` covers every set (a) contraction at graded order 7 by the nine
 representatives, that the kernel-checked criteria are hypotheses actually consumed, and that the
 class hypotheses are exactly the frozen statement's.
+
+**Seal of (HS₀) (2026-11-22; provisional freeze, author approval pending).** The D-58 goal
+`QED.ThreeLoop.jointEnergyFirstIntegrable_setC` is sealed with the provider
+`QED.Provider.ThreeLoop.jointEnergyFirstIntegrable_setC` (D-13 binders), which applies
+`QED.ChainProof.SetCLink.jointEnergyFirstIntegrable_setC_final` (`SetCLinkIntD.lean`). That
+theorem discharges, through `jointEnergyFirstIntegrable_setC_of_remaining` and `RemainingC.ofB`,
+the class obligations of the set (c) classification `exists_rep_setC`: the B family (two-loop
+graphs with the bubble on a photon line), the D family (24 orbits with the δ₃ element, the
+`k·k g` part directly and the `k_μ k_ν` part by internal or one-sided external Ward identities,
+each criterion checked by `decide +kernel`), the counterterm classes CB0, CB1 and the degree-6
+classes CD0, CD1, with the remaining classes proved earlier.
+Checks: the frozen bytes changed only in the proof body and the manifest state; the frozen and
+provider builds exit 0; standard axioms; guard OK; full `frozen_abi.py --check` passes.
+Independent seal audit (refute-first, 2026-11-22): PROVED. It checked the frozen diff (proof
+body and manifest state only; prefix and suffix hashes recomputed), the elaborated provider type
+equal to the frozen one, the ABI fingerprint `775dc748…` reproduced, every class obligation of
+`RemainingC.ofB` and `classesC_of_remaining` discharged by a proved theorem, standard axioms
+with a forbidden-token scan of the 392-module closure, the quarantine, and that every
+meaning-carrying definition in the statement is a sealed frozen definition.
