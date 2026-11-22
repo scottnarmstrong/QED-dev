@@ -1758,6 +1758,10 @@ public import QED.ChainProof.SetCRegKKCov
 public import QED.ChainProof.SetCRegKKSplit
 public import QED.ChainProof.SetCRegKKVtx
 public import QED.ChainProof.SetCRegKKVal
+public import QED.ChainProof.SetCRegKKRad
+public import QED.ChainProof.SetCRegKKFeyn
+public import QED.ChainProof.SetCRegKKLim
+public import QED.ChainProof.SetCRegKKScl
 public import QED.ChainProof.SetCRegXPower
 public import QED.ChainProof.SetCRegXSplit
 public import QED.ChainProof.SetCRegXGeom

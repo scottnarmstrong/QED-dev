@@ -67,10 +67,17 @@
   },
   {
    "set": "c",
+   "item": "longitudinal cancellation IsKKCancelGe (proved)",
+   "spent": 1,
+   "lo": 0,
+   "hi": 0
+  },
+  {
+   "set": "c",
    "item": "regulator hReg (a.e. route): crossed sector done; L/S/C recursive reduction, ladder/S/C bounds, assembly",
    "spent": 11,
-   "lo": 6,
-   "hi": 15
+   "lo": 5,
+   "hi": 13
   },
   {
    "set": "d",
@@ -102,7 +109,7 @@
   },
   {
    "set": "d",
-   "item": "I15: K4",
+   "item": "I15: K4, two weight-4 inner identities (hA1, hA23)",
    "spent": 6,
    "lo": 2,
    "hi": 4
@@ -165,10 +172,10 @@
   },
   {
    "set": "asm",
-   "item": "frozen statements for (d), (e) and the total; author review",
-   "spent": 0,
-   "lo": 2,
-   "hi": 4
+   "item": "frozen statements for (d), (e) and the total: (d) packet drafted, in audit; author review",
+   "spent": 1,
+   "lo": 1,
+   "hi": 3
   },
   {
    "set": "asm",
