@@ -327,6 +327,12 @@ public import QED.ThreeLoopD.SetDMastersI12RSecondD
 public import QED.ThreeLoopD.SetDMastersI12RSecondAsm
 public import QED.ThreeLoopD.SetDMastersI12RSecondEPrim
 public import QED.ThreeLoopD.SetDMastersI12RSecondEVal
+public import QED.ThreeLoopD.SetDMastersI12RSecondT2Prim
+public import QED.ThreeLoopD.SetDMastersI12RSecondT2Inner
+public import QED.ThreeLoopD.SetDMastersI12RSecondT2G
+public import QED.ThreeLoopD.SetDMastersI12RSecondT2Lim
+public import QED.ThreeLoopD.SetDMastersI12RSecondT2
+public import QED.ThreeLoopD.SetDMastersI12RSecondT2Fin
 public import QED.ThreeLoopD.SetDCertFamily
 public import QED.ThreeLoopD.SetDCertPilotData0
 public import QED.ThreeLoopD.SetDCertPilotData1
